@@ -3,7 +3,7 @@
 - **Text, protocols, schedule and figures** in this repository are licensed under
   the Creative Commons Attribution 4.0 International licence (CC BY 4.0).
   https://creativecommons.org/licenses/by/4.0/
-  Attribution: Zindel lab (TizzuLab), ETH Zürich, Blockrophage, https://github.com/TizzuLab/blockrophage.
+  Attribution: Zindel lab (TizzuLab), ETH Zürich, Blockrophage, https://github.com/TizzuLab/blockrophage-course.
 - **Code** (`code/`, `tools/`) is licensed under the MIT licence.
 
 Lecture decks in `slides/` are the lecturer's own material and are covered by the

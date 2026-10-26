@@ -1,4 +1,4 @@
-# Blockrophage
+# Blockrophage course
 
 **Macrophage Biology: in vitro, in vivo, in silico.** Block course, D-BIOL, ETH
 Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
@@ -6,7 +6,7 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 > **Under construction.** This course runs for the first time in spring 2027 and is
 > being built in the open. Interested students are welcome to apply and to give
 > input, through the [contact page](https://zindellab.ch/contact.html) or an
-> [issue](https://github.com/TizzuLab/blockrophage/issues). **Please do not use
+> [issue](https://github.com/TizzuLab/blockrophage-course/issues). **Please do not use
 > these protocols in the lab yet.** Values are unverified until this notice is gone;
 > items marked `[TODO]` are open.
 

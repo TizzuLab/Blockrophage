@@ -272,11 +272,11 @@ def main(xlsx=XLSX, md=MD):
     html_path = Path(md).with_suffix(".html")
     page = ["<!doctype html>", "<html lang=\"en\"><head><meta charset=\"utf-8\">",
             "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">",
-            "<title>Blockrophage schedule</title>",
+            "<title>Blockrophage course: schedule</title>",
             "<style>body{font-family:Arial,Helvetica,sans-serif;margin:16px;color:#1a1a1a;background:#fff}"
             "svg{max-width:100%;height:auto;display:block;margin:0 0 24px}h1{font-size:1.4rem}h2{font-size:1.1rem;margin-top:28px}"
             ".note{border-left:4px solid #8B1E3F;padding:6px 10px;background:#fbf3f5}</style></head><body>",
-            "<h1>Blockrophage: schedule template, FS 2027</h1>",
+            "<h1>Blockrophage course: schedule template, FS 2027</h1>",
             "<p class=\"note\"><b>Under construction.</b> First run spring 2027; this is a template, not a confirmed timetable. "
             "Source: <code>Blockcourse_Gantt_FS2027.xlsx</code> in the course repository; this page is generated.</p>"]
     for title, svg in svgs:

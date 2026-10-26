@@ -1,11 +1,11 @@
-# Blockrophage: macrophage block course (ETH Zürich, FS 2027)
+# Blockrophage course: macrophage block course (ETH Zürich, FS 2027)
 
 > Teaching material for a four-week laboratory block course on macrophage biology:
 > a short script, background reading, step-by-step protocols, a day-by-day schedule
 > and analysis code. Students culture and polarize RAW 264.7 macrophages, challenge
 > them through pattern-recognition receptors, read out cytokines, nitrite and surface
 > phenotype, and compare the in vitro states with tissue macrophages in a published
-> single-cell dataset. Repository: https://github.com/TizzuLab/blockrophage. This file follows the llms.txt convention: it tells a language
+> single-cell dataset. Repository: https://github.com/TizzuLab/blockrophage-course. This file follows the llms.txt convention: it tells a language
 > model what is here and in which order to read it.
 
 ## Status

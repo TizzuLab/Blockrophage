@@ -1,6 +1,6 @@
 # X03 Organ harvest and F4/80 immunohistochemistry (extension)
 
-> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
+> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage-course/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
 > Extension. Requires a mouse (shared with X02), licence coverage for organ harvest
 > `[TODO: confirm]`, cryostat or paraffin access and slide scanner time. Plan with

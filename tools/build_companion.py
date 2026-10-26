@@ -115,12 +115,12 @@ def main():
 
     today = dt.date.today().isoformat()
     head = [
-        "# Blockrophage: companion file",
+        "# Blockrophage course: companion file",
         "",
         f"Built {today} from commit {git_rev()} of the course repository. This single file",
         "contains the complete course material for the ETH Zürich block course",
         "\"Macrophage Biology: in vitro, in vivo, in silico\" (Spring Semester 2027).",
-        "Repository: https://github.com/TizzuLab/blockrophage. It is meant to be given to a language model",
+        "Repository: https://github.com/TizzuLab/blockrophage-course. It is meant to be given to a language model",
         "together with COMPANION_PROMPT.md.",
         "",
         "UNDER CONSTRUCTION: first run spring 2027, built in the open; protocol values are",

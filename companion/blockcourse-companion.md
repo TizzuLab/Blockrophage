@@ -1,9 +1,9 @@
-# Blockrophage: companion file
+# Blockrophage course: companion file
 
-Built 2026-10-26 from commit eefe93a of the course repository. This single file
+Built 2026-10-26 from commit 15d287c of the course repository. This single file
 contains the complete course material for the ETH Zürich block course
 "Macrophage Biology: in vitro, in vivo, in silico" (Spring Semester 2027).
-Repository: https://github.com/TizzuLab/blockrophage. It is meant to be given to a language model
+Repository: https://github.com/TizzuLab/blockrophage-course. It is meant to be given to a language model
 together with COMPANION_PROMPT.md.
 
 UNDER CONSTRUCTION: first run spring 2027, built in the open; protocol values are
@@ -55,14 +55,14 @@ an answer can cite the file. Values marked [TODO] are unconfirmed.
 
 <!-- file: llms.txt -->
 
-## Blockrophage: macrophage block course (ETH Zürich, FS 2027)
+## Blockrophage course: macrophage block course (ETH Zürich, FS 2027)
 
 > Teaching material for a four-week laboratory block course on macrophage biology:
 > a short script, background reading, step-by-step protocols, a day-by-day schedule
 > and analysis code. Students culture and polarize RAW 264.7 macrophages, challenge
 > them through pattern-recognition receptors, read out cytokines, nitrite and surface
 > phenotype, and compare the in vitro states with tissue macrophages in a published
-> single-cell dataset. Repository: https://github.com/TizzuLab/blockrophage. This file follows the llms.txt convention: it tells a language
+> single-cell dataset. Repository: https://github.com/TizzuLab/blockrophage-course. This file follows the llms.txt convention: it tells a language
 > model what is here and in which order to read it.
 
 ### Status
@@ -141,7 +141,7 @@ an answer can cite the file. Values marked [TODO] are unconfirmed.
 
 <!-- file: README.md -->
 
-## Blockrophage
+## Blockrophage course
 
 **Macrophage Biology: in vitro, in vivo, in silico.** Block course, D-BIOL, ETH
 Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
@@ -149,7 +149,7 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 > **Under construction.** This course runs for the first time in spring 2027 and is
 > being built in the open. Interested students are welcome to apply and to give
 > input, through the [contact page](https://zindellab.ch/contact.html) or an
-> [issue](https://github.com/TizzuLab/blockrophage/issues). **Please do not use
+> [issue](https://github.com/TizzuLab/blockrophage-course/issues). **Please do not use
 > these protocols in the lab yet.** Values are unverified until this notice is gone;
 > items marked `[TODO]` are open.
 
@@ -726,7 +726,7 @@ Notes: A full repeat of Exp 2 does not fit in week 4. Rescue path for a failed E
 
 ## Protocols
 
-> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
+> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage-course/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
 One file per protocol, all on the same template (00_TEMPLATE.md): header table,
 purpose, materials, before you start, procedure, controls, checkpoints, known failure
@@ -767,7 +767,7 @@ P-files are the core programme, X-files are extensions from the nerd ladder.
 
 ## P01 RAW 264.7: thaw, expand, growth curve
 
-> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
+> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage-course/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
 | | |
 |---|---|
@@ -879,7 +879,7 @@ the doubling time with the formula used. Note every deviation from this page.
 
 ## P02 RAW 264.7: scrape, count, split, seed
 
-> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
+> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage-course/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
 | | |
 |---|---|
@@ -969,7 +969,7 @@ map is the file every later analysis is joined to.
 
 ## P03 RAW 264.7: freeze and re-thaw your own stock
 
-> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
+> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage-course/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
 | | |
 |---|---|
@@ -1051,7 +1051,7 @@ viability, in the notebook. One line on the poster: viability after freeze and t
 
 ## P04 Polarization of RAW 264.7
 
-> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
+> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage-course/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
 | | |
 |---|---|
@@ -1133,7 +1133,7 @@ photograph of each state after 24 h.
 
 ## P05 PRR challenge
 
-> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
+> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage-course/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
 | | |
 |---|---|
@@ -1220,7 +1220,7 @@ the photograph before harvest.
 
 ## P06 ELISA for IL-6 and TNF
 
-> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
+> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage-course/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
 | | |
 |---|---|
@@ -1297,7 +1297,7 @@ pg/mL; where cell numbers differ between wells, normalise per cell.
 
 ## P07 Griess assay (nitrite)
 
-> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
+> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage-course/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
 | | |
 |---|---|
@@ -1365,7 +1365,7 @@ R template.
 
 ## P08 Flow cytometry of polarized RAW 264.7
 
-> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
+> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage-course/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
 | | |
 |---|---|
@@ -1469,7 +1469,7 @@ gated population statistics as CSV into the notebook. Do not try to gate in R.
 
 ## X01 RNA isolation and qPCR (extension)
 
-> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
+> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage-course/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
 > Extension. Requires the 6 h lysate arm to be planned into Exp 2 at the challenge
 > step, and RNA, cDNA and qPCR kits `[TODO]`. Ask your supervisor before week 3.
@@ -1541,7 +1541,7 @@ state and stimulus.
 
 ## X02 Peritoneal lavage (extension)
 
-> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
+> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage-course/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
 > Extension. Requires mouse availability and licence coverage for post-mortem lavage
 > `[TODO: confirm licence coverage; record genotype per mouse]`. Mice are
@@ -1615,7 +1615,7 @@ the RAW samples.
 
 ## X03 Organ harvest and F4/80 immunohistochemistry (extension)
 
-> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
+> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage-course/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
 > Extension. Requires a mouse (shared with X02), licence coverage for organ harvest
 > `[TODO: confirm]`, cryostat or paraffin access and slide scanner time. Plan with
@@ -1696,7 +1696,7 @@ hypothesis and its outcome on the poster.
 
 ## Background: macrophage biology
 
-> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
+> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage-course/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
 This is the background reading for the course. It condenses the Immunology III
 lecture on tissue macrophages and the tissue repair lectures to what you need for
@@ -2146,7 +2146,7 @@ you need?
 
 ## Reading list
 
-> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
+> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage-course/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
 References for the background chapter and the experiments. Where a DOI or PMID is
 given it has been checked; the others are to be completed and every page range is
@@ -2260,7 +2260,7 @@ reviews used in the lecture `[TODO]`.
 
 ## Slides
 
-> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
+> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage-course/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
 The lectures this course builds on, as presented at ETH Zürich. They are the
 background for the [background reading](../background/macrophage_biology.md), which
@@ -2637,8 +2637,8 @@ platelet aggregation
                                      0.240 s      0.260 s   0.280s
 
                           60
-
 Distance to injury [um]
+
                           40
 
                           20
@@ -3934,9 +3934,7 @@ Severe Injury   https://doi.org/10.1016/j.cell.2018.01.015
              Macrophage Switch: the phenomenon
 
              Focal liver injury
-
 CCR2-RFP
-
 CX3CR1-GFP
 
                                                    https://doi.org/10.1084/jem.20141539
@@ -3944,7 +3942,6 @@ CX3CR1-GFP
                Macrophage Switch: iNKT cells and glycolipid self-antigens
 
              Focal liver injury
-
 Cxcr6GFP/+
 
                https://doi.org/10.1016/j.immuni.2017.09.016
@@ -4561,7 +4558,7 @@ Otto-Stern-Weg 7
 
 ## Code
 
-> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
+> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage-course/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
 Analysis templates for the course. Every template is R unless stated, pinned with
 `renv` `[TODO: lockfile]`. You build the environment on the first day with your
