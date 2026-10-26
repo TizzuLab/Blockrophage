@@ -17,7 +17,11 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: sudo apt-get install -y -qq poppler-utils && python -m pip install openpyxl
+      - name: Install pdftotext and openpyxl
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq poppler-utils
+          python -m pip install openpyxl
       - name: Build companion (refreshes schedule.md)
         run: python tools/build_companion.py --max-tokens 150000
       - name: Upload companion as artifact
