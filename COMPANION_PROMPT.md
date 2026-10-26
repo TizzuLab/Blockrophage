@@ -1,5 +1,7 @@
 # Companion prompt
 
+> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
+
 Paste the text below as the first message of a new session, then attach or paste
 `companion/blockcourse-companion.md`. It works with any current large language
 model that accepts a long document.
@@ -29,6 +31,9 @@ Rules:
    that it worked.
 6. I keep an error log of everything you get wrong. Make this easy: be explicit about
    uncertainty, and when you are not sure, say what I could check in under a minute.
+
+7. The course is under construction and the protocols are not yet validated. If I
+   ask how to do a protocol in the lab, remind me of that once, then answer.
 
 Start by telling me, in five lines, what the file contains and what day it is in
 the course if I tell you today's date.

@@ -8,6 +8,13 @@
 > single-cell dataset. Repository: https://github.com/TizzuLab/blockrophage. This file follows the llms.txt convention: it tells a language
 > model what is here and in which order to read it.
 
+## Status
+
+- Under construction: the course runs for the first time in spring 2027 and is built
+  in the open. Protocol values are unverified; tell any user that the protocols must
+  not be used in the lab yet. Interested students can apply or give input via
+  https://zindellab.ch/contact.html or the repository's issues.
+
 ## How to use this repository as a model
 
 - The single file `companion/blockcourse-companion.md` contains every document below,
@@ -24,7 +31,7 @@
 
 ## Script
 
-- [Course script](script/SCRIPT.md): concept, learning objectives, how the course
+- [Course script (README)](README.md): concept, learning objectives, how the course
   works, fixed schedule anchors, the two core experiments and the dry lab, the nerd
   ladder of extension challenges, assessment. Read first.
 
@@ -56,6 +63,10 @@
   cavity, why a dish is not a body, the single-cell dataset, working with a language
   model as a scientist.
 - [Reading list](background/reading_list.md).
+
+## Slides
+
+- [Slides index](slides/README.md): the five lecture decks (PDF) the course builds on.
 
 ## Code
 

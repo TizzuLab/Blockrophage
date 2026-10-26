@@ -3,7 +3,13 @@
 Generated from `Blockcourse_Gantt_FS2027.xlsx` by `tools/xlsx2md.py`. Do not edit; edit the workbook and rerun.
 Activity blocks in brackets. The fixed layer is drawn by staff; group rows are the groups' own plans.
 
+> **Under construction.** First run spring 2027; this is a template, not a confirmed timetable.
+
 ## Week 1: orientation (Thu 18 - Fri 19 March 2027)
+
+![Week 1: orientation (Thu 18 - Fri 19 March 2027)](week-1.svg)
+
+<details><summary>Text version (what the companion reads)</summary>
 
 ### Thu 18 Mar
 
@@ -29,7 +35,13 @@ Activity blocks in brackets. The fixed layer is drawn by staff; group rows are t
 | Staff (shared) prep and supervision | Dry lab: walk around, unblock installs. Fallback environment ready [TODO]. Collect the group plans at 17:00. | Dry lab: walk around, unblock installs. Fallback environment ready [TODO]. Collect the group plans at 17:00. |
 | Resources (hand-written capacity) | Computer room or own laptops; Wi-Fi; FlowJo seats [TODO: facility] | Computer room or own laptops; Wi-Fi; FlowJo seats [TODO: facility] |
 
+</details>
+
 ## Week 2: Exp 1, establish the line (Mon 22 - Thu 25 March 2027)
+
+![Week 2: Exp 1, establish the line (Mon 22 - Thu 25 March 2027)](week-2.svg)
+
+<details><summary>Text version (what the companion reads)</summary>
 
 ### Mon 22 Mar
 
@@ -81,7 +93,13 @@ Activity blocks in brackets. The fixed layer is drawn by staff; group rows are t
 
 Notes: Exp 1 is a real experiment: four counts give a growth curve and a doubling time against the published value; viability of your own vial on Mon 5 Apr is the second readout. Easter break Fri 26 Mar to Sun 4 Apr: no course, no cultures.
 
+</details>
+
 ## Week 3: Exp 2, polarize and challenge (Mon 5 - Fri 9 April 2027)
+
+![Week 3: Exp 2, polarize and challenge (Mon 5 - Fri 9 April 2027)](week-3.svg)
+
+<details><summary>Text version (what the companion reads)</summary>
 
 ### Mon 5 Apr
 
@@ -145,7 +163,13 @@ Notes: Exp 1 is a real experiment: four counts give a growth curve and a doublin
 
 Notes: One 24 h challenge arm only; the 6 h RNA arm belongs to the qPCR extension X01. A group that starts a step in the morning harvests it the next morning; pairs stay fixed within the week.
 
+</details>
+
 ## Week 4: extensions, writing, poster (Mon 12 - Fri 16 April 2027)
+
+![Week 4: extensions, writing, poster (Mon 12 - Fri 16 April 2027)](week-4.svg)
+
+<details><summary>Text version (what the companion reads)</summary>
 
 ### Mon 12 Apr
 
@@ -208,6 +232,8 @@ Notes: One 24 h challenge arm only; the 6 h RNA arm belongs to the qPCR extensio
 | Resources (hand-written capacity) | Seminar room Wed to Fri. Printer [TODO]. Poster boards. | Seminar room Wed to Fri. Printer [TODO]. Poster boards. |
 
 Notes: A full repeat of Exp 2 does not fit in week 4. Rescue path for a failed Exp 2: staff seed plates Fri 9 Apr, group polarizes Mon, challenges Tue, harvests Wed 08:30, ELISA Thu morning.
+
+</details>
 
 ## Legend, rules and open items
 

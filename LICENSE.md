@@ -6,10 +6,9 @@
   Attribution: Zindel lab (TizzuLab), ETH Zürich, Blockrophage, https://github.com/TizzuLab/blockrophage.
 - **Code** (`code/`, `tools/`) is licensed under the MIT licence.
 
-Lecture slides are not part of this repository because they contain figures from
-the published literature that may not be redistributed. Figure placeholders in the
-background text name their sources; where a published figure is reproduced in the
-course handout, it is reproduced with reference and under the publisher's terms.
+Lecture decks in `slides/` are the lecturer's own material and are covered by the
+CC BY licence, with one exception: figures taken from the published literature are
+cited on the slide, remain the property of their owners, and are not relicensed here.
 
 `[TODO: confirm the licence choice with the department before the repository goes
 public.]`

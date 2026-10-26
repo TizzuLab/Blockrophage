@@ -25,13 +25,15 @@ OUT = ROOT / "companion" / "blockcourse-companion.md"
 # Reading order. Globs are sorted. A tuple (path, title) names a section.
 ORDER = [
     ("llms.txt", "Index (llms.txt)"),
-    ("script/SCRIPT.md", "Course script"),
+    ("README.md", "Course script"),
     ("schedule/schedule.md", "Schedule"),
     ("protocols/README.md", "Protocol index"),
     ("protocols/P*.md", "Core protocols"),
     ("protocols/X*.md", "Extension protocols"),
     ("background/macrophage_biology.md", "Background reading"),
     ("background/reading_list.md", "Reading list"),
+    ("slides/README.md", "Slides index"),
+    ("slides/*.pdf", "Slides: extracted text"),
     ("code/README.md", "Code overview"),
     ("code/**/*.R", "Code: R scripts"),
     ("code/**/*.py", "Code: Python scripts"),
@@ -39,6 +41,7 @@ ORDER = [
 ]
 SKIP_PARTS = {"example_data", "output", "renv", "__pycache__"}
 FENCE = {".R": "r", ".py": "python"}
+PDF_MAX_CHARS = 60_000  # per deck, keeps the bundle inside common context windows
 
 
 def git_rev():
@@ -58,6 +61,19 @@ def files_for(pattern):
 def demote(md: str, levels: int = 1) -> str:
     """Push every ATX heading down so the bundle has one H1."""
     return re.sub(r"^(#{1,5})(\s)", lambda m: "#" * min(6, len(m.group(1)) + levels) + m.group(2), md, flags=re.M)
+
+
+def pdf_text(p: Path) -> str:
+    """Slide text via pdftotext (poppler); empty string if unavailable."""
+    try:
+        out = subprocess.check_output(["pdftotext", "-layout", str(p), "-"], text=True,
+                                      stderr=subprocess.DEVNULL)
+    except Exception:
+        return ""
+    out = re.sub(r"\n{3,}", "\n\n", out).strip()
+    if len(out) > PDF_MAX_CHARS:
+        out = out[:PDF_MAX_CHARS] + "\n[... truncated for the companion; open the PDF for the rest]"
+    return out
 
 
 def est_tokens(text: str) -> int:
@@ -81,8 +97,15 @@ def main():
                 continue
             seen.add(p)
             rel = p.relative_to(ROOT).as_posix()
-            body = p.read_text(encoding="utf-8")
-            if p.suffix in FENCE:
+            if p.suffix == ".pdf":
+                body = pdf_text(p)
+                if not body:
+                    continue
+            else:
+                body = p.read_text(encoding="utf-8")
+            if p.suffix == ".pdf":
+                body = f"```text\n{body}\n```\n"
+            elif p.suffix in FENCE:
                 body = f"```{FENCE[p.suffix]}\n{body.rstrip()}\n```\n"
             else:
                 body = demote(body)
@@ -99,6 +122,9 @@ def main():
         "\"Macrophage Biology: in vitro, in vivo, in silico\" (Spring Semester 2027).",
         "Repository: https://github.com/TizzuLab/blockrophage. It is meant to be given to a language model",
         "together with COMPANION_PROMPT.md.",
+        "",
+        "UNDER CONSTRUCTION: first run spring 2027, built in the open; protocol values are",
+        "unverified and the protocols must not be used in the lab yet.",
         "",
         "Reading order and conventions are in the first section (llms.txt). Each document",
         "starts with a line `<!-- file: path -->` naming its path in the repository, so",

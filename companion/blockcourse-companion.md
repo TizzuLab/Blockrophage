@@ -1,10 +1,13 @@
 # Blockrophage: companion file
 
-Built 2026-10-26 from commit 7608783 of the course repository. This single file
+Built 2026-10-26 from commit a3ecc9a of the course repository. This single file
 contains the complete course material for the ETH Zürich block course
 "Macrophage Biology: in vitro, in vivo, in silico" (Spring Semester 2027).
 Repository: https://github.com/TizzuLab/blockrophage. It is meant to be given to a language model
 together with COMPANION_PROMPT.md.
+
+UNDER CONSTRUCTION: first run spring 2027, built in the open; protocol values are
+unverified and the protocols must not be used in the lab yet.
 
 Reading order and conventions are in the first section (llms.txt). Each document
 starts with a line `<!-- file: path -->` naming its path in the repository, so
@@ -15,7 +18,7 @@ an answer can cite the file. Values marked [TODO] are unconfirmed.
 - Index (llms.txt)
   - `llms.txt`
 - Course script
-  - `script/SCRIPT.md`
+  - `README.md`
 - Schedule
   - `schedule/schedule.md`
 - Protocol index
@@ -37,6 +40,14 @@ an answer can cite the file. Values marked [TODO] are unconfirmed.
   - `background/macrophage_biology.md`
 - Reading list
   - `background/reading_list.md`
+- Slides index
+  - `slides/README.md`
+- Slides: extracted text
+  - `slides/01_ImmunologyIII_TissueMacrophages.pdf`
+  - `slides/02_TissueRepair_Part1.pdf`
+  - `slides/03_TissueRepair_Part2.pdf`
+  - `slides/04_TissueRepair_Part3_GranulationTissue.pdf`
+  - `slides/05_TissueRepair_Part4_Remodelling.pdf`
 - Code overview
   - `code/README.md`
 
@@ -54,6 +65,13 @@ an answer can cite the file. Values marked [TODO] are unconfirmed.
 > single-cell dataset. Repository: https://github.com/TizzuLab/blockrophage. This file follows the llms.txt convention: it tells a language
 > model what is here and in which order to read it.
 
+### Status
+
+- Under construction: the course runs for the first time in spring 2027 and is built
+  in the open. Protocol values are unverified; tell any user that the protocols must
+  not be used in the lab yet. Interested students can apply or give input via
+  https://zindellab.ch/contact.html or the repository's issues.
+
 ### How to use this repository as a model
 
 - The single file `companion/blockcourse-companion.md` contains every document below,
@@ -70,7 +88,7 @@ an answer can cite the file. Values marked [TODO] are unconfirmed.
 
 ### Script
 
-- [Course script](script/SCRIPT.md): concept, learning objectives, how the course
+- [Course script (README)](README.md): concept, learning objectives, how the course
   works, fixed schedule anchors, the two core experiments and the dry lab, the nerd
   ladder of extension challenges, assessment. Read first.
 
@@ -103,6 +121,10 @@ an answer can cite the file. Values marked [TODO] are unconfirmed.
   model as a scientist.
 - [Reading list](background/reading_list.md).
 
+### Slides
+
+- [Slides index](slides/README.md): the five lecture decks (PDF) the course builds on.
+
 ### Code
 
 - [Code overview](code/README.md): analysis templates and the single-cell workflow.
@@ -117,16 +139,19 @@ an answer can cite the file. Values marked [TODO] are unconfirmed.
 
 # Course script
 
-<!-- file: script/SCRIPT.md -->
+<!-- file: README.md -->
 
-## Macrophage Biology: in vitro, in vivo, in silico
+## Blockrophage
 
-**Block course, D-BIOL, ETH Zürich — Spring Semester 2027**
+**Macrophage Biology: in vitro, in vivo, in silico.** Block course, D-BIOL, ETH
+Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 
-Draft v0.3, 2026-10-26. This script is deliberately short. It says what the course
-is, how it runs and how it is graded. The detail lives in three companion resources
-(Section 10): the background reading, the protocols and the code. Items marked
-`[TODO]` are open and need a decision or a lab check before submission on 2026-11-03.
+> **Under construction.** This course runs for the first time in spring 2027 and is
+> being built in the open. Interested students are welcome to apply and to give
+> input, through the [contact page](https://zindellab.ch/contact.html) or an
+> [issue](https://github.com/TizzuLab/blockrophage/issues). **Please do not use
+> these protocols in the lab yet.** Values are unverified until this notice is gone;
+> items marked `[TODO]` are open.
 
 | | |
 |---|---|
@@ -139,6 +164,7 @@ is, how it runs and how it is graded. The detail lives in three companion resour
 | Students | `[TODO: number]`, in groups of 2–3; four groups planned, three possible |
 | Prerequisites | Immunology III (tissue macrophages lecture) or equivalent; no cell culture and no programming experience required |
 | Language | English |
+| Version | 0.3, 2026-10-26 |
 
 ### 1. Concept
 
@@ -147,10 +173,10 @@ In this course you first build that picture with your own hands, in a dish. Then
 take it to real tissue macrophages, in a published single-cell dataset of injured
 peritoneum, and test whether it survives. It will not survive intact. The field made
 the same discovery about ten years ago and rewrote its nomenclature; you make it in
-four weeks.
+four weeks. The [background reading](background/macrophage_biology.md) tells that
+story and condenses the [lectures](slides/) the course builds on.
 
-The course follows the lecture on tissue repair and tissue macrophages and rests on
-three principles.
+The course rests on three principles.
 
 - **Learning by doing.** You run every experiment yourself, including the one that
   goes wrong, and we analyse the failures together.
@@ -212,10 +238,10 @@ Supervisors may fold in experiments the lab needs anyway; those go into the grou
 notebook like any other experiment and may appear on the poster.
 
 **The plan is the first deliverable.** On the first afternoon each group fills its
-own row of the course schedule (Section 4) with its supervisor: which protocol when,
-which PRR axis, which extensions. The plan is submitted on Friday of week 1 and
-revised at the two debriefs. A plan that changes is normal; a plan that nobody wrote
-down is not.
+own row of the [course schedule](schedule/schedule.md) with its supervisor: which
+protocol when, which PRR axis, which extensions. The plan is submitted on Friday of
+week 1 and revised at the two debriefs. A plan that changes is normal; a plan that
+nobody wrote down is not.
 
 **Lab notebook.** One shared electronic notebook per group `[TODO: tool]`. It
 contains the plan, raw data, the analysis, and the LLM error log. The notebook is
@@ -260,14 +286,15 @@ this course and no live animal experiment is performed `[TODO: confirm wording a
 licence coverage with the animal welfare officer]`.
 
 **Open ear.** An anonymous online form is open for the whole course for feedback,
-concerns and ideas. The link is in the course repository.
+concerns and ideas `[TODO: link]`.
 
 ### 4. Schedule
 
-The schedule is a Gantt-style workbook in the course repository
-(`schedule/Blockcourse_Gantt_FS2027.xlsx`, mirrored as `schedule/schedule.md`). It
-has one sheet per week, one row per group, a staff row and a resources row, and a
-cell per hour. Two layers:
+The schedule is a Gantt-style workbook,
+[`schedule/Blockcourse_Gantt_FS2027.xlsx`](schedule/Blockcourse_Gantt_FS2027.xlsx),
+rendered week by week as drawings and text in
+[`schedule/schedule.md`](schedule/schedule.md). It has one sheet per week, one row
+per group, a staff row and a resources row, and a cell per hour. Two layers:
 
 - **Fixed layer**, drawn by the teaching staff: lectures, the facility lecture,
   cytometer slots reserved by the flow cytometry facility, the writing day, the
@@ -290,38 +317,47 @@ The fixed anchors:
 
 ### 5. The experiments
 
-Protocol IDs refer to the protocols folder of the course repository.
+Every method has a [protocol](protocols/README.md) on one template: purpose,
+materials, steps, controls, checkpoints, known failure modes. `P` files are core,
+`X` files are extensions.
 
-**Exp 1, week 2: establish the line.** Thaw a vial of RAW 264.7 (P01), count every
-day, split and seed (P02), and freeze your own vials before the break (P03). The four
-counts give a growth curve and a doubling time to compare with the published value.
-The viability of your own vial when you thaw it on the first day after the break is
-the second readout. Both go on the poster, and either can be your failure-round
-story.
+**Exp 1, week 2: establish the line.** Thaw a vial of RAW 264.7
+([P01](protocols/P01_raw264_thaw_expand.md)), count every day, split and seed
+([P02](protocols/P02_raw264_split_seed.md)), and freeze your own vials before the
+break ([P03](protocols/P03_raw264_freeze.md)). The four counts give a growth curve
+and a doubling time to compare with the published value. The viability of your own
+vial when you thaw it on the first day after the break is the second readout. Both
+go on the poster, and either can be your failure-round story.
 
 **Exp 2, week 3: polarize and challenge.** Seed plates from the staff culture and
-polarize into M(-), M(IFNγ), M(IL-4) and M(IFNγ+LPS) for 24 h (P04). Wash and
-challenge M(-), M(IFNγ) and M(IL-4) with LPS and with the PRR axis your group chose,
-one 24 h arm (P05); M(IFNγ+LPS) is characterised but not re-challenged, because a
-state that has already seen LPS shows endotoxin tolerance. Stain the unchallenged wells with the course antibody panel and acquire them
-in the facility's slot (P08). Harvest supernatants and quantify IL-6 and TNF by
-ELISA (P06) and nitrite by Griess assay (P07). The question each group asks is
-whether polarization changes the response to a danger signal, and in which direction.
+polarize into M(-), M(IFNγ), M(IL-4) and M(IFNγ+LPS) for 24 h
+([P04](protocols/P04_polarization.md)). Wash and challenge M(-), M(IFNγ) and
+M(IL-4) with LPS and with the PRR axis your group chose, one 24 h arm
+([P05](protocols/P05_prr_challenge.md)); M(IFNγ+LPS) is characterised but not
+re-challenged, because a state that has already seen LPS shows endotoxin tolerance.
+Stain the unchallenged wells with the course antibody panel and acquire them in the
+facility's slot ([P08](protocols/P08_flow_cytometry.md)). Harvest supernatants and
+quantify IL-6 and TNF by ELISA ([P06](protocols/P06_elisa.md)) and nitrite by Griess
+assay ([P07](protocols/P07_griess.md)). The question each group asks is whether
+polarization changes the response to a danger signal, and in which direction.
 
-**Dry lab, every day.** Half of every day is at the keyboard. Week 1: clone the
-repository and build the pinned environment with your LLM. Week 2: the analysis
-templates on example data, your growth curve, and the first look at the preprocessed
-single-cell object. Week 3: derive the M(IFNγ+LPS) and M(IL-4) signatures from the
-public bulk RNA-seq dataset of RAW 264.7 cells (GSE113836), score every macrophage of
-the peritoneal injury dataset (GSE186658) against them, and analyse your own flow and
-ELISA data. Week 4: extension analysis and poster figures. The teaching staff
-preprocess both datasets; nobody starts from raw reads. Gaps at any point are filled
-with the poster: write the introduction first, then the significance.
+**Dry lab, every day.** Half of every day is at the keyboard, with the
+[analysis code](code/README.md). Week 1: clone this repository and build the pinned
+environment with your LLM. Week 2: the analysis templates on example data, your
+growth curve, and the first look at the preprocessed single-cell object. Week 3:
+derive the M(IFNγ+LPS) and M(IL-4) signatures from the public bulk RNA-seq dataset
+of RAW 264.7 cells (GSE113836), score every macrophage of the peritoneal injury
+dataset (GSE186658) against them, and analyse your own flow and ELISA data. Week 4:
+extension analysis and poster figures. The teaching staff preprocess both datasets;
+nobody starts from raw reads. Gaps at any point are filled with the poster: write
+the introduction first, then the significance.
 
-**Extensions.** qPCR of outputs and receptors (X01), peritoneal lavage and flow
-cytometry on the shared panel (X02), organ harvest and F4/80 immunohistochemistry
-(X03), and the items of the nerd ladder. Availability of mice, reagents and
-instruments decides which ones run; ask on the planning afternoon.
+**Extensions.** qPCR of outputs and receptors ([X01](protocols/X01_qpcr.md)),
+peritoneal lavage and flow cytometry on the shared panel
+([X02](protocols/X02_peritoneal_lavage.md)), organ harvest and F4/80
+immunohistochemistry ([X03](protocols/X03_organ_harvest_ihc.md)), and the items of
+the nerd ladder. Availability of mice, reagents and instruments decides which ones
+run; ask on the planning afternoon.
 
 ### 6. Up your nerd factor: extension challenges
 
@@ -387,26 +423,14 @@ limits honestly.]`
 `[TODO: biosafety level, chemicals, sharps, after-hours rules, extension-specific
 items (PFA, DAB, animal tissue), and a sentence on the student-organised event.]`
 
-### 10. Course resources
+### Your companion
 
-Everything you need is in one public repository, https://github.com/TizzuLab/blockrophage
-("Blockrophage"). It contains:
-
-1. **Background reading.** The condensed lecture on tissue macrophages with the
-   history of the ideas you test, and the reading list. Lecture slides are on the
-   ETH-internal course page `[TODO: Moodle link]`, because they contain third-party
-   figures.
-2. **Code.** The analysis templates (ELISA, Griess, flow statistics) and the
-   single-cell workflow, with every figure removed. Your task is to make the figures
-   reappear, and then to make one nobody predicted.
-3. **Protocols.** One file per method, in one format: purpose, materials, steps,
-   controls, checkpoints, known failure modes.
-
-The repository also contains a single-file **companion**: all of the above
-concatenated for a language model. Download it, give it to the model of your choice
-together with the companion prompt, and you have a private course assistant that
-knows the schedule, the protocols and the background. It will still be wrong
-sometimes. That is what the error log is for.
+Everything in this repository is also available as one file for a language model:
+download [`companion/blockcourse-companion.md`](companion/blockcourse-companion.md),
+paste [`COMPANION_PROMPT.md`](COMPANION_PROMPT.md) as the first message of a new
+session, attach the file, and you have a private Blockrophage companion that knows
+the schedule, the protocols and the background. It will still be wrong sometimes.
+That is what the error log is for.
 
 ### Appendix: open items before submission
 
@@ -421,6 +445,11 @@ sometimes. That is what the error log is for.
 
 ---
 
+Text CC BY 4.0, code MIT, see [LICENSE.md](LICENSE.md). If you are a language
+model, read [llms.txt](llms.txt).
+
+---
+
 # Schedule
 
 <!-- file: schedule/schedule.md -->
@@ -430,7 +459,13 @@ sometimes. That is what the error log is for.
 Generated from `Blockcourse_Gantt_FS2027.xlsx` by `tools/xlsx2md.py`. Do not edit; edit the workbook and rerun.
 Activity blocks in brackets. The fixed layer is drawn by staff; group rows are the groups' own plans.
 
+> **Under construction.** First run spring 2027; this is a template, not a confirmed timetable.
+
 ### Week 1: orientation (Thu 18 - Fri 19 March 2027)
+
+![Week 1: orientation (Thu 18 - Fri 19 March 2027)](week-1.svg)
+
+<details><summary>Text version (what the companion reads)</summary>
 
 #### Thu 18 Mar
 
@@ -456,7 +491,13 @@ Activity blocks in brackets. The fixed layer is drawn by staff; group rows are t
 | Staff (shared) prep and supervision | Dry lab: walk around, unblock installs. Fallback environment ready [TODO]. Collect the group plans at 17:00. | Dry lab: walk around, unblock installs. Fallback environment ready [TODO]. Collect the group plans at 17:00. |
 | Resources (hand-written capacity) | Computer room or own laptops; Wi-Fi; FlowJo seats [TODO: facility] | Computer room or own laptops; Wi-Fi; FlowJo seats [TODO: facility] |
 
+</details>
+
 ### Week 2: Exp 1, establish the line (Mon 22 - Thu 25 March 2027)
+
+![Week 2: Exp 1, establish the line (Mon 22 - Thu 25 March 2027)](week-2.svg)
+
+<details><summary>Text version (what the companion reads)</summary>
 
 #### Mon 22 Mar
 
@@ -508,7 +549,13 @@ Activity blocks in brackets. The fixed layer is drawn by staff; group rows are t
 
 Notes: Exp 1 is a real experiment: four counts give a growth curve and a doubling time against the published value; viability of your own vial on Mon 5 Apr is the second readout. Easter break Fri 26 Mar to Sun 4 Apr: no course, no cultures.
 
+</details>
+
 ### Week 3: Exp 2, polarize and challenge (Mon 5 - Fri 9 April 2027)
+
+![Week 3: Exp 2, polarize and challenge (Mon 5 - Fri 9 April 2027)](week-3.svg)
+
+<details><summary>Text version (what the companion reads)</summary>
 
 #### Mon 5 Apr
 
@@ -572,7 +619,13 @@ Notes: Exp 1 is a real experiment: four counts give a growth curve and a doublin
 
 Notes: One 24 h challenge arm only; the 6 h RNA arm belongs to the qPCR extension X01. A group that starts a step in the morning harvests it the next morning; pairs stay fixed within the week.
 
+</details>
+
 ### Week 4: extensions, writing, poster (Mon 12 - Fri 16 April 2027)
+
+![Week 4: extensions, writing, poster (Mon 12 - Fri 16 April 2027)](week-4.svg)
+
+<details><summary>Text version (what the companion reads)</summary>
 
 #### Mon 12 Apr
 
@@ -636,6 +689,8 @@ Notes: One 24 h challenge arm only; the 6 h RNA arm belongs to the qPCR extensio
 
 Notes: A full repeat of Exp 2 does not fit in week 4. Rescue path for a failed Exp 2: staff seed plates Fri 9 Apr, group polarizes Mon, challenges Tue, harvests Wed 08:30, ELISA Thu morning.
 
+</details>
+
 ### Legend, rules and open items
 
 - **PLENARY**: Plenary, lecture, debrief (fixed)
@@ -670,6 +725,8 @@ Notes: A full repeat of Exp 2 does not fit in week 4. Rescue path for a failed E
 <!-- file: protocols/README.md -->
 
 ## Protocols
+
+> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
 One file per protocol, all on the same template (00_TEMPLATE.md): header table,
 purpose, materials, before you start, procedure, controls, checkpoints, known failure
@@ -709,6 +766,8 @@ P-files are the core programme, X-files are extensions from the nerd ladder.
 <!-- file: protocols/P01_raw264_thaw_expand.md -->
 
 ## P01 RAW 264.7: thaw, expand, growth curve
+
+> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
 | | |
 |---|---|
@@ -820,6 +879,8 @@ the doubling time with the formula used. Note every deviation from this page.
 
 ## P02 RAW 264.7: scrape, count, split, seed
 
+> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
+
 | | |
 |---|---|
 | ID | P02 |
@@ -908,6 +969,8 @@ map is the file every later analysis is joined to.
 
 ## P03 RAW 264.7: freeze and re-thaw your own stock
 
+> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
+
 | | |
 |---|---|
 | ID | P03 |
@@ -988,6 +1051,8 @@ viability, in the notebook. One line on the poster: viability after freeze and t
 
 ## P04 Polarization of RAW 264.7
 
+> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
+
 | | |
 |---|---|
 | ID | P04 |
@@ -1067,6 +1132,8 @@ photograph of each state after 24 h.
 <!-- file: protocols/P05_prr_challenge.md -->
 
 ## P05 PRR challenge
+
+> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
 | | |
 |---|---|
@@ -1153,6 +1220,8 @@ the photograph before harvest.
 
 ## P06 ELISA for IL-6 and TNF
 
+> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
+
 | | |
 |---|---|
 | ID | P06 |
@@ -1228,6 +1297,8 @@ pg/mL; where cell numbers differ between wells, normalise per cell.
 
 ## P07 Griess assay (nitrite)
 
+> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
+
 | | |
 |---|---|
 | ID | P07 |
@@ -1293,6 +1364,8 @@ R template.
 <!-- file: protocols/P08_flow_cytometry.md -->
 
 ## P08 Flow cytometry of polarized RAW 264.7
+
+> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
 | | |
 |---|---|
@@ -1396,6 +1469,8 @@ gated population statistics as CSV into the notebook. Do not try to gate in R.
 
 ## X01 RNA isolation and qPCR (extension)
 
+> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
+
 > Extension. Requires the 6 h lysate arm to be planned into Exp 2 at the challenge
 > step, and RNA, cDNA and qPCR kits `[TODO]`. Ask your supervisor before week 3.
 
@@ -1465,6 +1540,8 @@ state and stimulus.
 <!-- file: protocols/X02_peritoneal_lavage.md -->
 
 ## X02 Peritoneal lavage (extension)
+
+> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
 > Extension. Requires mouse availability and licence coverage for post-mortem lavage
 > `[TODO: confirm licence coverage; record genotype per mouse]`. Mice are
@@ -1537,6 +1614,8 @@ the RAW samples.
 <!-- file: protocols/X03_organ_harvest_ihc.md -->
 
 ## X03 Organ harvest and F4/80 immunohistochemistry (extension)
+
+> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
 > Extension. Requires a mouse (shared with X02), licence coverage for organ harvest
 > `[TODO: confirm]`, cryostat or paraffin access and slide scanner time. Plan with
@@ -1617,12 +1696,13 @@ hypothesis and its outcome on the poster.
 
 ## Background: macrophage biology
 
+> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
+
 This is the background reading for the course. It condenses the Immunology III
 lecture on tissue macrophages and the tissue repair lectures to what you need for
 the experiments, and it adds the history of the ideas you are going to test. Slide
-numbers refer to the Immunology III lecture of 1 December 2025, available on the
-ETH-internal course page `[TODO: Moodle link]`; the slides are not in the public
-repository because they contain third-party figures. Each subsection ends with
+numbers refer to the Immunology III lecture of 1 December 2025, in the
+[slides folder](../slides/README.md) of this repository. Each subsection ends with
 questions. We will not collect answers, but we will ask them.
 
 ### 5.1 A cell with many names
@@ -2066,6 +2146,8 @@ you need?
 
 ## Reading list
 
+> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
+
 References for the background chapter and the experiments. Where a DOI or PMID is
 given it has been checked; the others are to be completed and every page range is
 to be checked against the PDF before the course `[TODO]`. Add the tissue repair
@@ -2172,11 +2254,2311 @@ reviews used in the lecture `[TODO]`.
 
 ---
 
+# Slides index
+
+<!-- file: slides/README.md -->
+
+## Slides
+
+> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
+
+The lectures this course builds on, as presented at ETH Zürich. They are the
+background for the [background reading](../background/macrophage_biology.md), which
+condenses them to what the experiments need.
+
+| File | Lecture |
+|---|---|
+| [01_ImmunologyIII_TissueMacrophages.pdf](01_ImmunologyIII_TissueMacrophages.pdf) | Immunology III: tissue macrophages (1 December 2025). The slide numbers in the background reading refer to this deck. |
+| [02_TissueRepair_Part1.pdf](02_TissueRepair_Part1.pdf) | Tissue repair, part 1 |
+| [03_TissueRepair_Part2.pdf](03_TissueRepair_Part2.pdf) | Tissue repair, part 2 |
+| [04_TissueRepair_Part3_GranulationTissue.pdf](04_TissueRepair_Part3_GranulationTissue.pdf) | Tissue repair, part 3: granulation tissue |
+| [05_TissueRepair_Part4_Remodelling.pdf](05_TissueRepair_Part4_Remodelling.pdf) | Tissue repair, part 4: remodelling |
+
+Figures taken from the published literature are cited on the slide and remain the
+property of their owners; the CC BY licence of this repository covers the lecturer's
+own material only.
+
+---
+
+# Slides: extracted text
+
+<!-- file: slides/01_ImmunologyIII_TissueMacrophages.pdf -->
+
+```text
+D-BIOL
+
+Tissue Marcophages
+Immunology III HS 2025
+Prof. Dr. Joel Zindel
+Assistenzprofessor
+01. Dezember 2025
+How to read these slides
+
+! Central concepts — exam-relevant
+How we know    In Immunology III, we look at the actual experiments behind key ideas—not just textbook
+summaries. These slides show where the evidence comes from. You don’t need to memorize the details
+but use them to think about how scientists know what they claim and how data shapes our
+understanding.
+
+Slides with black background serve as additional illustration from our own research.
+
+Literature (DOI) these slides are mostly based on:
+• 10.1038/s41586-023-06002-x
+• 10.1016/j.immuni.2016.02.024
+• 10.1016/j.cell.2022.10.007
+• 10.1038/nri3712
+
+               D-BIOL, IMHS                                                                    01.12.2025   2
+ Historical Concepts
+
+• Mechnikov 1892 Discovery of phagocytes                            Ilya (Elie) Mechnikov
+  − Small eaters (microphages, today PMN)                           1892, the father of
+                                                                    cellular immunity
+  − Large eaters (macrophages)
+• Aschoff: «Reticulo Endothelial System» (RES)
+• Late 1960s «Mononuclear Phagocyte System» (MPS) premise
+  that all macrophages derived from monocytes.
+• 1970 Steinman discovery of dendritic cell (DC) which was
+  considered the third cell in the MPS
+• Cells of the MPS initially thought to derive exclusively from blood
+  monocytes, but with more fate-mapping tools available this
+  concept is now obsolete.
+
+                D-BIOL, IMHS                                                                01.12.2025   3
+Learning Objectives
+
+1.   Students can correctly classify/name cells of the Mononuclear Phagocyte System (MPS)
+     1.   First level nomenclature by otogeny
+     2.   Second level nomenclature by tissue/niche
+     3.   Second level nomenclature by functional properties/programs.
+2.   Students understand the Core Functions of macrophages in homeostasis
+     1.   Extracellular milieu: safeguarding tissue structure
+     2.   Cellular fitness: efferocytosis
+     3.   Microorganisms: innate immunity
+     4.   Metabolism
+3.   Students illustrate the role of macrophages in specific disease mechanisms
+     1.   Primary macrophage defects.
+     2.   The role of macrophages in non-primary macrophage diseases.
+
+             D-BIOL, IMHS                                                              01.12.2025   4
+   A decision tree to facilitate nomenclature for mononuclear phagocytes              !
+
+First level nomenclature by ontogeny                            DCs were already
+                                                                covered in separate
+                                                                lecture
+
+                D-BIOL, IMHS           10.1038/nri3712               01.12.2025   5
+                                                                   How we know
+Example of a fate mapping study.
+
+• In this paper they show first
+  that Ms4a3Cre Rosa26LSL
+  tdTomato is specifically and
+
+  transiently expressed by
+  Granulo-Monocyte Progenitors
+  (GMP)
+• Ms4a3Cre-based models fate-
+  map monocytes and
+  granulocytes.
+• Then, they look at many bona
+  fide TRMs over time (without
+  inflammatory challenge).
+• The contribution of monocytes
+  to TRMs is largely tissue-
+  dependent.                                    Green =         Red=
+   https://doi.org/10.1016/j.cell.2019.08.009
+                                                Kupffer cells   Monocyte
+                                                                derived
+                   D-BIOL, IMHS                                  01.12.2025   6
+                                         How we know
+    Example of a fate mapping study.
+
+• These observations
+  are under homeostatic
+  non-inflammatory
+  conditions.
+• Importantly,
+  monocytes contribute
+  signifcantly more
+  under inflammatory
+  challenge (injury)
+
+                 D-BIOL, IMHS          01.12.2025   7
+                                                                                              How we know
+Fate-mapping studies in humans?
+                                                        Liver
+• Mouse paradigm broadly supported in                                                     Lung
+  humans, i.e. presence of long-
+  lived/replicated TRMs that can be replaced                    5 years post-transplant
+  by monocytes, especially under injury.
+• After lung transplant, alveolar macrophages
+  are largely replaced by monocyte-derived
+  cells (Sex-mismatched donors). Note this is
+  controversial! Some authors find no or very
+  late replacement.
+                                                                7 days post-transplant
+• After liver transplant, Kupffer cells are long-
+  live, self-replicating, but also largely replaced
+  over time (HLA-mismatched, Sex-
+  mismatched)
+• Brain microglia stay recipient-derived after
+  bone marrow transplantation (even decades
+  later), but replacement possible after injury.        Signal of Y chromosome (arrow)
+                                                        Anti-CD68 (Kupffer cell marker)
+                 https://doi.org/10.1084/jem.20191236
+                                                                                            01.12.2025   8
+                 DOI 10.1007/s00428-003-0861-8
+      Otogeny: Developmental Origins
+• Using many different fate-mapping
+  tools the different waves of otogeny
+  have been established
+• At E8.5 erythro-myeloid progenitors
+  (EMPs) arise from the yolk sac in a
+  RUNX1-dependent manner and
+  colonize the fetal liver.
+• EMP-derived precursor
+  macrophages (preMAcs) colonize
+  the entire embryo during
+  organogenesis, before the
+  emergence of HSCs
+• Haematopoietic stem cells (HSCs)
+  emerge from the intra-embryonic
+  endothelium and colonize the bone
+  marrow before birth.
+• HSC give rise to erythroid, lymphoid,
+  and myeloid cells (including
+  macrophages) throughout life.
+
+                    D-BIOL, IMHS          01.12.2025   9
+Otogeny: Reduced Complexity Model                                                                                !
+
+                  Is the cell of emrbyonic origin under homeostatic conditions?
+
+                                    Yes                       No
+
+            Embryonic ~                                         Bone marrow derived ~
+            Yolk Sac ~                                          Monocyte Derived ~
+            Fetal Liver ~                                       CCR2-dependent ~
+            EMP                                                 HSC Derived ~
+                                                                GMP Derived Macrophages
+
+            Paradigm: EMP gice rise to tissue resident macrophages (TRM) that self-renew
+            locally, whereas HSC-derived macrophages are short-lived and rely on circulating
+            monocytes and can massively expant.
+
+       D-BIOL, IMHS                                                                            01.12.2025   10
+    A decision tree to facilitate nomenclature for mononuclear phagocytes
+
+                                                                 DCs were already
+                                                                 covered in separate
+                                                                 lecture
+
+Second level nomenclature
+by tissue/niche
+
+                D-BIOL, IMHS                                          01.12.2025   11
+   Level II: Name by Niche (mostly for TRM)                                                                          !
+
+• Second level classification according to
+  niche.
+• Either by historic names such as Kupffer
+  cells, Langerhans cells, Microglia, ect.
+• Or by adding a 2nd level prefix, e.g.
+  Alveolar Macrophage, Peritoneal
+  Macrophage.
+• When we look more closely there are
+  often several distinct niches per organ.
+• The cell populations in these subtissular
+  niches can be of different EMP/MSC
+  origin which can make classification
+  complex.
+
+                  D-BIOL, IMHS                https://www.nature.com/articles/s41577-023-00848-y   01.12.2025   12
+Is the niche shaping the macrophages or the other way arround?
+
+• While preMacs share a core
+  macrophage transcriptional
+  programme (PU.1, cMAF, IRF8),
+  cells start to express niche-
+  specific lineage marker in their
+  respective destination tissue.
+• Cell-intrinsic lineage Determining
+  Factors (LDFs) comprise SALL1,
+  ID3, PPARy, SPI-C, GATA6.
+• At the same time, the macrophages
+  receive niche-specific signals that
+  have been shown to induce LDFs:
+  TGFb, RANKL, Retinoic Acid.
+• The instructive model suggests
+  that the specification process is
+  driven by niche-specific signals,
+  while the stochastic model
+  suggest that it is driven mainly by
+  cell-intrinsic signals.
+
+                D-BIOL, IMHS                                     01.12.2025   13
+   Level II: Name by Niche                                                                             !
+A TRMs niche needs lifelong suvival signals to be
+maintained. These signals are mostly CSF1R and CSF2R
+signaling.
+• CSF1-/- mice: No macrophages except Langerhans
+  cells and Microglia
+• IL34-/- mice: no Langerhans cells and no Microglia.
+• CSF2-/- mice: no lung alveolar macrophages
+• CSF2R-/- in humans: pulmonary alveolar proteinosis
+  (i.e. no alveolar macrophages)
+• Remember this 1234:
+  − CSF1 = M-CSF
+  − CSF2 = GM-CSF
+  − Il34 = CSF1R ligand
+
+                                                        10.1016/j.cell.2022.10.007
+
+                   D-BIOL, IMHS                                                      01.12.2025   14
+    A decision tree to facilitate nomenclature for mononuclear phagocytes
+
+                                                                 DCs were already
+                                                                 covered in separate
+                                                                 lecture
+
+Second level nomenclature
+by function/program
+
+                D-BIOL, IMHS                                          01.12.2025   15
+    LEVEL II – Name by Functional Properties (mostly for BMDM)                                              !
+•   M1/M2 are no longer considered accurate
+    descriptors, historically
+    − M1 «classical»
+    − M2 «alternative»                                (historic) Discrete   Modular Spectrum
+    − DC                                              Polarization Model    Model
+•   This heuristic came mostly from in vitro
+    experiments (Figure left panel).
+•   It is recommended to retire this heuristic when
+    describing in vivo systems and to think of mac
+    activation as a modular spectrum.
+•   The granularity of this spectrum has increased
+    with scRNA-Seq:
+    − Example: Lipid-handling (Trem2+)
+      macrophage core program with disease-
+      and tissue specific modifiers: Fibrosis-
+      associated (FAM), Tumor-associated
+      (TAM), Lipid-associated (LAM), Scar-
+      associated (SAM), NASH-associated
+      (NAM)
+
+                   D-BIOL, IMHS                                                           01.12.2025   16
+     Let’s look at one niche more closely (from our own research)    How we know
+
+                          Pericardium
+   Pleura
+
+Peritoneum
+
+                                   Coelom
+
+                                              Mesothelium ~ Serosa ~ Peritoneum
+Let’s look at one niche more closely (from our own research)   How we know
+
+                                                        Fair Warning
+   Let’s look at one niche more closely (from our own research)                            How we know
+
+                     Peritoneum
+                                  Mesothelial Monolayer
+                                                              Tissue Resdident Macrophages =
+                                                              Large Peritoneal Macrophages=
+                                                              GATA6+ F4/80hi CD102+
+
+                                                          Peritoneum
+Masson     H&E              Anti-Podoplanin   500u
+           D-BIOL, IMHS
+                                              m                                          01.12.2025   19
+                                                                                                         How we know
+           Modulation of macrophage GATA6 expression
+Tissue Resdident Macrophages =
+Large Peritoneal Macrophages=
+GATA6+ F4/80hi CD102+
+                                                      Dietary Vitamin A intake                    Pharmacological
+
+                                  depleted
+                                 Vitamin A depleted       normal
+                                                          Vitamin A normal    enhance
+                                                                             Vitamin A enriched
+
+                                                                              d
+   Let’s look at one niche more closely (from our own research)                             How we know
+
+                     Peritoneum
+
+                             Laser-
+                            induced
+                          focal Injury
+
+                                                https://doi.org/10.1126/science.abe0595
+Masson     H&E                           500u
+           D-BIOL, IMHS
+                                         m                                                01.12.2025   21
+                 Use case: Intravital Microscopy                     How we know
+
+                              Non-alcoholic
+                               beverage
+                                                            Injury
+
+                                              Macrophages
+Courtesy M. Dosch, G. Beldi
+           Students
+                                                                    How we know
+
+Tinevez, J. Y., et al. (2017). "TrackMate: An open and extensible
+platform for single-particle tracking." Methods 115: 80-90.
+                               How we know
+
+Directed or random movement?
+
+    Focal
+    injury
+                                     How we know
+
+Canonical example neutrophils
+Damage     LyzM-GFP
+Collagen
+
+                                Guys there is
+                                free drinks on
+                                F-floor
+                                   How we know
+platelet aggregation
+ Tracking Macrophage recruitment
+                                     Undirected migration
+                                                                                               How we know
+
+                J                                                    K
+
+                                     0.240 s      0.260 s   0.280s
+
+                          60
+Distance to injury [um]
+
+                          40
+
+                          20
+
+                          0
+                               0.0       0.2          0.4    0.6
+                                               time [sec]
+
+                                                                     I really like this random bar,
+                                                                     let’s have a drink here
+                                                               How we know
+                Macrophages act as platelets
+
+In vivo (IVM)
+
+                             LyzCre: Rosa26LSL-GCaMP6f
+
+                            SHG F4/80              SHG F4/80
+                                                                                                                    How we know
+ Let’s look at one niche more closely (from our own research)
+
+                                         Gata6+
+                               Tissue Resident Macrophages             5
+                                                                   1
+                                                                                           Pro-inflammatory cytokine
+                                                                                           release (used to be M1)
+
+ Folr2+Sele nop +
+Repair-associated
+                           7
+
+                      8
+
+                                                                            Repair/Folr2                            Trem2/Spp1
+                                        Intermediate                                                                (lipid/stress)
+                2      6                macrophages
+
+  Monocytes
+
+                                                Trem2 +Spp1 +
+                       3
+                                4
+                                               Sca r-associated                            Il-4 induced (used to be M2)
+                                    lipid-handling, lysosomal, phagocytic
+
+           DC
+
+                    D-BIOL, IMHS                                                                                  01.12.2025   29
+                                                 How we know
+ Discrete Polarization in vitro
+• The M1/M2 heuristic can still be
+  used to describe in vitro               M2                M1
+  polarization.
+• You may find this useful later, so
+  we’ll add the info here (but please
+  don’t memorize this!)
+• First, the source of macrophages
+  should be described (e.g. bone
+  marrow).
+• Second, it is recommended to
+  describe the precise macrophages
+  activation e.g. M(IL-4), or M(IL-10),
+  rather than just the two ends of the
+  spectrum M1/M2.
+• The terms «classical» and
+  «alternative» macrophages are
+  misleading and should not be used
+  anymore.
+
+                D-BIOL, IMHS                   01.12.2025    30
+Learning Objectives
+
+1.   Students can correctly classify/name cells of the Mononuclear Phagocyte System (MPS)
+     1.   First level nomenclature by otogeny
+     2.   Second level nomenclature by tissue/niche
+     3.   Second level nomenclature by functional properties/programs.
+2.   Students understand the Core Functions of macrophages in homeostasis
+     1.   Extracellular milieu: safeguarding tissue structure
+     2.   Cellular fitness: efferocytosis
+     3.   Microorganisms: innate immunity
+     4.   Metabolism
+3.   Students illustrate the role of macrophages in specific disease mechanisms
+     1.   Primary macrophage defects.
+     2.   The role of macrophages in non-primary macrophage diseases.
+
+             D-BIOL, IMHS                                                              01.12.2025   31
+Core Macrophage Functions
+
+        D-BIOL, IMHS        01.12.2025   32
+Microorganisms: Innate Immunity (Repetition of Immunology I & II)                     !
+• Macrophage moderate importance of direct
+  bacterial clearance. Neutrophils are the best
+  bacterial killers.
+• Professional Antigen Presenting Cell (APC),
+  especially Th1/th17, but less potent than
+  Dendritic best APCs)
+• The most important role of macrophages is
+  detection/sensing of danger
+• Therefore, all macrophages express germline-
+  encoded pattern recognition receptors (PRR)
+  − Toll-like receptors
+  − RIG-I-like receptors
+  − NOD-like receptors
+  − AIM2-like receptors
+  − C-type lectin receptors
+
+             D-BIOL, IMHS                                           01.12.2025   33
+                                                                                                     How we know
+Surveillance
+
+• Macrophages constantly probe environment
+• Macrophages are dynamic first reponders to tissue damage.
+• Small injuries can be «cloaked» and repaired without inflammation
+• If injury exceeds a certain threshold, macrophages induce inflammation signified by neutrophil
+  recruitment.
+
+   https://www.cell.com/fulltext/S0092-8674(19)30211-9
+                  D-BIOL, IMHS                                                                     01.12.2025   34
+Extracellular Milieu: Safeguarding Tissue Structure                                               !
+•   Macrophages are a key cell type in defining the set point of a tissue.
+    Mechnikov called them «sensors and healers» and
+•   Medzhitov uses the term «macrophage fibroblast circuits» where a
+    reciprocal regulatory loop (circuit) defines tissue architecture, repair,
+    and steady state.
+•   Tissue provides
+    − Csf1
+    − Instruction for TRM programming
+    − Chemokines (recruitment)
+    − Metabolic cues
+    − Structure
+    Macrophages provide
+    − Structure
+    − Have many sensors and integrate signals (also danger signals)
+    − Production of signals: growth factorts (PDGF, TGFb, IGF), matrix
+      remodelling signals, inflammatory signals, resolution signals.
+    − Production of proteases and protease inhibitors
+
+                   D-BIOL, IMHS                                                 01.12.2025   35
+Cellular Fitness: Efferocytosis                                                !
+
+  •   Daily, billions of cells die in the tissue by
+      undergoing apoptosis, yet apoptotic cells are rarely
+      observed in homeostasis.
+  •   This is due to a process called efferocytosis that
+      efficiently clears apoptotic cells without causing
+      inflammation.
+  •   Efferocytosis is a well-defined molecular event
+      (follow link for review). The following elements are
+      worth memorizing:
+      − Healthy cells express CD47, a «don’t eat me
+        signal» recognized by SIRP1α on phagocytes
+      − Apoptotic cells express «eat me signals» the
+        most important is Phosphatidylserine (PS)
+        which is recognized by TIM4 and many others
+        (Figure)
+  •   The process is anti-inflammatory characterized by
+      the release of TGFb, IL-10, PGE2 and the
+      inhibition of inflammatory cytokines such as TNF,
+      IL1b, IL6
+
+                 D-BIOL, IMHS                                01.12.2025   36
+                                                                                              How we know
+Csf1R-/- in rats
+
+                                                      •   Almost as an incidental finding the authors report
+                                                          significantly reduced visceral fat in this rat.
+                                                      •   Because of the potential therapeutic implications
+                                                          (and market!) this was taken up by others.
+
+           https://doi.org/10.4049/jimmunol.1701783
+
+          D-BIOL, IMHS                                                                      01.12.2025   37
+                                                                                                                         How we know
+    Trem2+ Lipid Associated Macropages (LAM)
+A
+                                                                       (A) A conserved Trem2 signature characterizes obesity-related
+                                                                       macrophages in mice and humans.
+                                                                       (B) Trem2-/- results in adipocyte hypertrophy
+     Normal          High fat diet              Obese
+                                                                       (C) Trem2-/- results in loss of systemic metabolic
+                                                                       homeostasis
+B                                                            C
+
+                                     https://doi.org/10.1016/j.cell.2019.05.054
+              D-BIOL, IMHS                                                                                             01.12.2025   38
+Metabolism                                                                     !
+
+• Csf1R-/- rats: loss of visceral adipose tissue!
+• CCR2-dependent BMDM promote systemic inflammation
+  and insulin resistance in obese animals.
+• But, (other?) CCR2-dependent Trem2 Lipid
+  Associated Macrophages (LAM) prevent adipocyte
+  hypertrophy and help with systemic metabolic
+  homeostasis.
+• Macrophages as «metabolic sensors» that support
+  lipid storage in white adipocytes through the production
+  of PDGF-CC.
+• Fat-resident macrophages can also control energy
+  expenditure by promoting browning of white adipose
+  tissue (produce heat from fat).
+• May represent therapeutic targets!!
+
+              D-BIOL, IMHS                                   01.12.2025   39
+Learning Objectives
+
+1.   Students can correctly classify/name cells of the Mononuclear Phagocyte System (MPS)
+     1.   First level nomenclature by otogeny
+     2.   Second level nomenclature by tissue/niche
+     3.   Second level nomenclature by functional properties/programs.
+2.   Students understand the Core Functions of macrophages in homeostasis
+     1.   Extracellular milieu: safeguarding tissue structure
+     2.   Cellular fitness: efferocytosis
+     3.   Microorganisms: innate immunity
+     4.   Metabolism
+3.   Students illustrate the role of macrophages in specific disease mechanisms
+     1.   Primary macrophage defects.
+     2.   The role of macrophages in non-primary macrophage diseases.
+
+             D-BIOL, IMHS                                                              01.12.2025   40
+    Leukoencephalopathy and Alzheimer                                                                                      !
+• Microglia, the main macrophage subset of the CNS,
+  provide trophic support, may regulate neuronal activity.
+• Growth factors (IGF, NGF, BDNG, neurotropin-3)
+  important for development and survival of neurons and
+  glial cells.
+• Humans with CSF1R mutations present with a spectrum
+  of neurological and skeletal phenotypes.
+• Depending on rest activity of CSF1R can be adult-onset
+  (Figure), but bi-allelic CSF1R loss-of-function results in
+  paediatric-onset leukoencephalopathy with near
+  absence of microglia and death in the first year of life
+  (histology: spheroids).
+• Mutations in TREM2 gene lead to neurodegenerative
+  bone disease with slerosing leukoencephalopathy.
+• Population-wide studies identified TREM2
+  polymorphisms associated with the risk of Alzheimer’s
+  disease.
+                                                               https://www.nature.com/articles/ng.1027
+                   D-BIOL, IMHS                                                                          01.12.2025   41
+Bone osteoclasts, osteopetrosis, and osteoporosis                                                                              !
+                                                                                           Selective estrogen receptor
+• Osteoclasts are a highly specialized form of                                             modulators/hormone
+  multinucleated macrophages reside in the bone                                            therapy: normalize
+  endosteum.                                              RANKL-Antibody                   RANKL/OPG ratio
+• They secrete acid and lytic enzymes such as
+  cathepsin K that dissolve bone.
+• Osteoclasts secrete growth factors (IGF1,
+  TGFβ) for osteoblasts and vice versa (RANKL,
+  CSF1).
+• Loss-of-function mutations in genes that are
+  required for osteoclast formation or function
+  (RANKL, RANK receptor, chloride channels,…)
+  cause osteopetrosis, an extremely rare inherited
+                                                                https://www.nature.com/articles/s41413-018-0019-6
+  disorder whereby bones become harder and
+  denser.
+• Osteoporosis in turn, can be treated by inhibiting   Bisphosphonates (e.g. Clodronate,
+  Osteoclasts (examples in red in the figure)          Alendronate): osteoclast apoptosis
+
+              D-BIOL, IMHS                                                                                   01.12.2025   42
+                                                                                                    How we know
+ From Osteoporosis to Clodronate Liposomes
+
+• A very nerdy link: Clodronate is also a first-gen bisphosphonate which are used to treat osteoporosis.
+  Except for osteoclasts which resorbe bisphosphonates while resorbing bones, bisphosphonates are
+  membrane-impermeable and as such non-toxic.
+• If you pack this in a liposome (which is also not toxic alone) it will be taken up by phagocytes and released
+  into the cytosol by lysosomal phospholipase, reaching high concentrations.
+• Clodronate -> AppCCl2p (ATP analog) -> mitochondria inhibition -> apoptosis
+
+Osteoporosis drug            Clodronate                   Often-used tool for macrophage depletion
+                             Liposomes                    studies
+
+              D-BIOL, IMHS                                                                        01.12.2025   43
+Alveolar proteinosis                                                                                          !
+• Pulmonary Alveolar proteinosis (PAP) is
+  a rare diseease (6-7 per Million)
+• >90% autoimmune PAP: Anti-GM-CSF
+  auto-Antibodies)
+• 5-10% secondary PAP: due to other
+  diseases
+• 2% genetic with mutations in
+  − GM-CSFR mutation of alpha or beta
+    subunit (CSF2RA, CSF2RB).
+  − Other genes involved with surfactant    Link to Otogeny: should genetic PAP patients be transplanted or
+    production and clearance.               not?
+
+                                               https://doi.org/10.1016/j.rmed.2025.108167
+             D-BIOL, IMHS                                                                   01.12.2025   44
+Anti-Tumor Immunity                                                                                                !
+• CD47 is a «don’t eat me» signal
+  overexpressed on cancer cells
+• Blockade of the CD47-SIRPα signaling
+  pathway leads to phagocytosis of tumor cells.
+• CD47-SIRPα blockade plus standard
+  treatment shows promising efficacy.
+• Clinical trials are angoing
+• Safety concerns also macrophage related:
+  CD47 is highly expressed on red blood cells,
+  when you block CD47
+  − You remove «don’t eat me» signal on
+    RBCs
+  − Spleen macrophages sort out old RBCs
+    based on CD47 loss
+                                                  https://doi.org/10.1016/j.iotech.2022.100070
+  − Therefore, in all phase I trials anemia was
+    the most common toxicity
+
+              D-BIOL, IMHS                                                                       01.12.2025   45
+Atherosclerosis/ Cardiovascular Disease                                                                   !
+• Monocyte recruitment after Endothelial
+  activation (VCAM-1), monocytes enter the
+  intima.
+• Differentiation to macrophages. Macrophages
+  take up oxidized LDL through phagocytosis,
+  pinocytosis, scavenger receptors play an
+  important role
+• Foam cell formation. The macrophages «over-
+  eat», lipid-loaded macrophages accumulate,
+  formation of fatty streaks.
+• Necrotic core formation. Impaired efferocytosis
+  leads to cell death and plaque growth.
+• Fibrous cap / instability. The lesion is «walled-
+  off» which can lead to stable ischemic
+  symptoms, but when the smooth muscle cap
+  thins risk of rupture which can lead to sudden
+  vascular occlusion
+                                                      DOI: 10.1016/j.cell.2011.04.005
+             D-BIOL, IMHS                                                               01.12.2025   46
+Macrophages play a role in many more diseases                     !
+
+Rule of thumb
+• TRMs main players
+  during homeostasis
+• Mo-Macs main players
+  during disease
+  pathogenesis.
+
+            D-BIOL, IMHS                        01.12.2025   47
+Prof. Dr. Joel Zindel
+Assistenzprofessor
+joel.zindel@biol.ethz.ch
+
+ETH Zürich
+Institut für Molekulare Gesundheitswissenschaften (IMHS), D-BIOL
+HPL F32.2
+Otto-Stern-Weg 7
+3098 Zürich
+```
+
+---
+
+<!-- file: slides/02_TissueRepair_Part1.pdf -->
+
+```text
+D-BIOL
+
+Tissue Repair Part I:
+Injury
+Prof. Dr. Joel Zindel
+Assistant Professor (TT) for Tissue Repair
+April 14th 2026
+Notes for this lecture
+
+  !   Central concepts — exam-relevant
+
+      How we know: We look at the experimental data behind central paradigms. These slides are
+      epistemologic in nature—how we know what we know—and should not be memorized for the
+      exam.
+
+      Nerd factor: Perspective or fun facts (slides with black background are from our own laboratory).
+      Not to be committed to memory—although sometimes the most random facts stick best.
+
+      Resources:
+      - Zindel & Kubes 2020 Annu Rev Pathol 2020
+
+           D-BIOL, IMHS                                                                      14.04.2026   2
+Agenda – Tissue Repair
+This agenda organises key concepts by when they are discussed — not as strict biological boundaries.
+
+  LECTURE 1                                     LECTURE 2                                      LECTURE 3                                      LECTURE 4
+
+                                                                                               Granulation
+  Injury                                        Inflammation                                                                                  Remodelling
+                                                                                               tissue
+  seconds – minutes                             min – hours – days                             hours – days – weeks                           days – weeks – months
+
+  • Definitions: homeostasis, injury,                                                          • Model A: Macrophage-fibroblast               • MMP/TIMP balance, collagen I/III
+    regeneration, repair, and failure           • Injury detection                               circuits                                     • Myofibroblast resolution
+    modes.                                      • macrophage cloaking and                      • Model B: Stem cell compartments              • Fibrosis vs. regeneration
+  • The molecular basis of injury and             threshold gating                             • Fundamental repair processes
+    injury detection: DAMPs, PAMPs,             • Coagulation and Complement
+    and LAMPs.                                  • Thromboinflammation
+
+                 Phases are overlapping and tissue-dependent — complement, macrophages, and adaptive immunity span multiple lectures and are discussed in context.
+
+                                                                                                                                                                      13.04.2026   3
+Learning Objectives — Lecture 1: Injury
+
+• Students can define homeostasis, injury, repair, and regeneration, and distinguish the failure modes of
+  insufficient repair (leakage/non-healing) and excessive repair (fibrosis/pathological scarring).
+• Students can explain the conceptual basis of the danger/damage model — that the innate immune
+  system detects molecular patterns rather than antigens, and responds to both foreign (PAMPs) and
+  endogenous (DAMPs) danger signals.
+• Students can describe the compartmentalisation principle underlying DAMP recognition — the “wrong
+  neighbourhood principle” (localisation) and the “wrong shape principle” (conformation/modification) —
+  and give one experimental example of each.
+• Students can distinguish between cDAMPs and iDAMPs in terms of mechanism of release, cell state, and
+  functional consequence, and explain why LAMPs do not fit the strict DAMP definition.
+• Students can name representative DAMPs from major molecular categories (nucleic acids, proteins,
+  lipids, metabolites) and describe their cognate receptors.
+
+              D-BIOL, IMHS                                                                      13.04.2026   4
+Definition: Tissue Homeostasis
+                                                                                                       !
+
+                                 Tissue Homeostasis The active maintenance of tissue structure
+                                 and function within a defined set point.
+                                 • Requires continuous energy input — not a passive
+                                   equilibrium.
+                                 • Defined by tissue-resident cells (tissue resident
+                                   macrophages, fibroblasts, epithelium) sensing and
+                                   correcting deviations.
+                                 • Parameters maintained: organ function, barrier integrity,
+                                   cell number, ECM composition, metabolic state.
+                                 • Small deviations are corrected silently and consistently by
+                                   local mechanisms (e.g. macrophage efferocytosis) and are
+                                   a part of homeostasis.
+
+         D-BIOL, IMHS                                                                 13.04.2026   5
+Definition: Injury
+                                                                                                           !
+                         Tissue injury is a deviation from homeostatic set points that exceeds
+                         the capacity of local homeostatic mechanisms to correct. — Medzhitov,
+                         Nature 2008 & Cell 2010.
+                         •   Causes:
+                               •   Physical
+                                       •   Trauma: e.g. surgery, accident
+                                       •   Radiation (UV, Gamma)
+                                       •   Thermal
+                                       •   Sterile particulate (crystals, implants, foreign body)
+                               •   Biochemical
+                                       •   Exogenous toxins: drugs, venoms,
+                                       •   Endogenous toxins: autoimmune efforts, enzymes, ROS,
+                                           bile acids)
+                                       •   Pathogen-driven cell death
+                                       •   Deprivation (lack of oxygen, nutrients, growth factors)
+                         •   Consequences: — Loss of structural integrity — Loss of tissue
+                             function — Loss of homeostatic regulation
+
+          D-BIOL, IMHS                                                                    13.04.2026   6
+Definition: Regeneration*
+                                                                                                                                              !
+                                                         Regeneration is a heroic biological process that restores tissue
+                                                         architecture and function in the face of day-to-day cell loss or the
+                                                         aftershock of injury. Poss & Tanaka, Cell Stem Cell 2024.
+
+                                                         Characteristics:
+                                                         •   Restitutio ad integrum
+                                                         •   Restores both function AND original architecture — layer by layer,
+                                                             cell type by cell type
+                                                         •   Involves morphogenetic programmes — positional identity, tissue
+                                                             patterning, size control
+                                                         •   Slow — quality prioritised over speed
+                                                         •   Rare in adult mammals — default in: gut epithelium, liver (partial),
+                                                             haematopoietic system, skin epidermis, mesothelium
+                                                         •   Retained in lower vertebrates throughout adult life (zebrafish heart,
+                                                             salamander limb)
+*Teaching note—Regeneration: In clinical contexts the term regeneration is used to describe any successful healing, but in developmental biology
+and regenerative medicine this strict definition is the gold standard.
+
+                  D-BIOL, IMHS                                                                                               13.04.2026   7
+Definition: Repair
+                                                                                                         !
+                         Tissue Repair is the restoration of tissue function and structural
+                         continuity following injury, typically resulting in a functional but
+                         architecturally imperfect scar. — Gurtner et al., Nature 2008
+                         Characteristics:
+                         •     Restores function — barrier integrity, mechanical continuity,
+                               organ capacity.
+                         •     Does not fully restore original architecture — collagen scar
+                               replaces original ECM.
+                         •     Speed prioritized over perfection — evolutionary design for acute
+                               survival.
+                         •     Outcome determined by injury type, tissue context, and systemic
+                               factors (age, diabetes, nutrition).
+
+          D-BIOL, IMHS                                                                  13.04.2026   8
+Failure Modes of Repair
+                                                                                                              !
+                                   Failure modes of repair — when the repair programme encounters what
+                                   it was not designed for
+                                   Chronic non-healing wound — repair stalled
+                                   •     Inflammatory phase cannot resolve → DAMPs not cleared
+                                   •     Impaired macrophage switch
+                                   •     Biofilm, ischaemia, neuropathy prevent progression
+                                   Fibrosis — repair that never switches off
+                                   •     Myofibroblasts persist → excess collagen deposition
+                                   •     TGFβ loop not terminated → progressive ECM accumulation
+Chronic   Fibrosis        Cancer   •     Macrophage-fibroblast circuit stuck in activation
+Wound                              Cancer — uncontrolled proliferation
+                                   •     Not strictly a failure mode of repair, but cancer hijacks repair
+                                         machinery and has been likened to “wounds that do not heal" —
+                                         Dvorak, NEJM 1986
+
+           D-BIOL, IMHS                                                                      13.04.2026   9
+Recap: Pattern Recognition
+
+•Innate pattern recognition is germline-encoded — fixed, conserved, present from birth
+•Recognises molecular patterns, not specific antigens — no clonal selection, no memory*
+•Original paradigm: immune system detects foreignness (non-self) — Burnet & Fenner
+•Revised paradigm: immune system detects danger / damage — Matzinger 1994
+•PRRs respond to both PAMPs (pathogen-derived) and DAMPs (host-derived) — same machinery
+•This is why sterile injury triggers inflammation — no pathogen required
+*Nerd factor—Trained Immunity: We now know that innate cells (monocytes, NK cells) can undergo epigenetic reprogramming after exposure to
+certain PAMPs (like β-glucan), leading to a "heightened" response to secondary infections. It isn’t "memory" in the V(D)J recombination sense, but it
+functions similarly.
+
+                   D-BIOL, IMHS                                                                                                  13.04.2026   10
+Recap: Pattern Recognition Receptors (PRR)
+
+                                                 •   Lipopolysaccharide (LPS) is a strong inducer in
+                                                     gram-negative sepsis.
+                                                 •   (Sultzer 1968) C3H/HeJ mice are resistant to LPS.
+                                                 •   C3H/HeN controls, humans, and rats are LPS
+                                                     susceptible.
+                                                 •   (Beutler et al 1998) Positional cloning identified
+                                                     position 712 P -> H (Pro712His) in TLR4 gene.
+                                                        •   Proline: LPS-susceptible, very conserved
+                                                        •   Histidine: LPS-resistant
+   B. Sultzer, Nature 1968, Infect Immun. 1972
+                                                 •   TLR4 = the paradigmatic PAMP receptor
+
+ Poltorak, …, Beutler, Science 1998
+
+                  D-BIOL, IMHS                                                                    13.04.2026   11
+ Damage Associated Molecular Patterns DAMPS
+ The compartmentalization principle
+                                                                                                                                                      !
+
+Localization («wrong neighborhood» principle)                                                  Conformation («wrong shape» principle)
+                    Nucleus
+                                         Cytosol
+
+Mitochondria
+
+                                                                                                                    •   Covalent modifications
+                                                                                                                        (Oxidation, Acetylation,
+                                                                               Hydrophobic          Polar side          Phosphorylation)
+                                                                               core                 chains
+                                                                                                                    •   Proteolytic cleavage
+
+                Ubiquitous tool                                                                                     •   Crystallisation
+                                                                                                                    •   Protein misfolding/
+                                                                                               Hydrophobic              Aggregation
+                                                                                               chains exposed
+
+                Danger signal
+
+                D-BIOL, IMHS   www.britannica.com, Molecular Biology of the Cell, Chapter 3.                                        13.04.2026   12
+cDAMPs and iDAMPs
+                                                                                                    •    (a) Injury => release of constitutively expressed DAMPS
+                                                                                                         (cDAMPs)
+                                                                                                    •    (b) Proposition of lifestyle associated molecular patterns
+                                                                                                         (LAMPs) as alternative initiation event see teaching
+                                                                                                         comment next slide
+                                                                                                    •    (c) Immunostimulatory patterns are recognized by PRRs
+                                                                                                         on both nonimmune cells and specialized immune
+                                                                                                         sentinels. Ligation of PRRs leads to the secretion of
+                                                                                                         proinflammatory cytokines (e.g., TNF-α and IL-1) as well
+                                                                                                         as other inflammatory mediators.
+                                                                                                    •    (d) Proinflammatory signals, such as IL-1 and TNF-α,
+                                                                                                         induce programmed nonapoptotic cell death in
+                                                                                                         parenchymal cells (necroptosis) as well as in leukocytes
+                                                                                                         (referred to as pyroptosis, or NETosis in neutrophils).
+                                                                                                         This leads to the induction and active (noncanonical)
+                                                                                                         secretion of inducible DAMPs (iDAMPs).
+Adapted from Zindel & Kubes 2020 Annu Rev Pathol 2020
+
+                                                        Abbreviations: CIRBP, cold-inducible RNA binding protein; CPPD, calcium pyrophosphate dihydrate; HSP,
+                                                        heat shock protein; HMGB1, high mobility group box 1; IL, interleukin; MSU, monosodium urate; mtDNA, mitochondrial DNA; NET,
+                                                        neutrophil extracellular trap; PRR, pattern recognition receptor; TNF, tumor necrosis factor.
+                    D-BIOL, IMHS                                                                                                                            13.04.2026     13
+              Universal Building Plan
+
+Body cavity
+
+                                  Mesothelium ~ Serosa ~
+                                  Peritoneum
+                  Slippery Surface
+
+                                     Mesothelium ~ Serosa ~
+                                     Peritoneum
+Anti-Podoplanin       500u
+                      m
+A Look Inside
+
+                Fair Warning
+                    Failure modes
+
+                   Regeneration         Scar (Adhesion)
+Leakage              «just right»           «too much
+                                            repair»
+«Not enough
+repair»
+
+                     Repair Spectrum
+
+$$ Health Burden                       $$ Health Burden
+Macrophage Activation
+
+                        Injury
+    Example «wrong neighborhood»: ATP as cDAMP and iDAMP (II)
+
+cDAMP
+
+        Wang and Kubes, Cell 2016 Figure S2
+                                                    Wang and Kubes, Cell 2016 Figure 3
+
+                                                          •   (Fig. S2 C and D) Peritoneal macrophages
+                                                              (F4/80hi CD11b+ cells) are recruited to injuries.
+                                                          •   (Fig 3 B) This recruitment can be inhibited with
+                                                              Apyrase and ATP-receptor antagonists.
+iDAMP
+                                                          •   (Fig 1) Calcium signaling can be induced in
+                                                              macrophages in culture using photo-uncaging of
+                                                              caged IP3 (white box in A and B, red curve in C
+                                                              and D). This induces a Calcium wave in the
+                                                              neighboring cells (black curves in C and D) in an
+                                                              ATP-dependent manner.
+        Zumerle et al. Cell Reports 2019 Figure 1
+
+                     D-BIOL, IMHS                                                              13.04.2026   19
+Calcium signaling
+
+                                                Green: GCaMP6f (Ca2+ wave)
+
+   GCaMP: Calmodulin GFP Fusion Protein
+
+                                                           Injur
+                                                             y
+                                          Red: F4/80 Macrophages, Blue: SHG Collagen
+
+           D-BIOL, IMHS                                                                13.04.2026   20
+Example «wrong shape»: Hyaluronan
+
+                                          •   Hyaluronan (HA), a ubiquitously distributed ECM
+                                              component, is broken down into lower m.w. fragments
+                                              (LMW HA) upon injury.
+                                          •   LMW HA activates innate immune response (MIP-1α =
+                                              CCL3 = pro-inflammatory chemoattractant).
+                                          •   (a and b) Peritoneal Excudate Cells (PEC) from LPS-
+                                              insensitive (TLR4-/-) mice* show pro-inflammatory
+                                              response to LMW HA but not to uncleaved HA.
+                                          •   (c) The response in wild-type dendritic cells (from C57Bl/6
+                                              mice) to LMW HA is substantial, almost as high as LPS.
+                                          •   (d and e) The response does not depend on TLR4 (d) and
+                                              does not depend on CD44 (e).
+                                          •   In the other figures they show that LMW HA activates the
+                                              innate immune response via TLR-2 in a MyD88 NF-κB-
+                                              dependent pathway
+
+                                          *role of TLR4 contested for different HA fragment sizes
+     Scheibner et al., J. Immunol. 2006
+            D-BIOL, IMHS                                                                 13.04.2026   21
+Example: Lifestyle Associated Molecular Patterns LAMPs
+
+Polymers                               Ceramics           Metals
+
+                 These materials were not present during evolution
+    DAMPS Overview (I)
+ Molecular pattern                                Receptor                             Physiological purpose                     Role in disease / treatment
+                                                                                                                                                                                                            !
+ Intracellular DAMPs (cDAMPs)
+
+  Nucleus
+ Double-stranded DNA                              TLR9, AIM2, cGAS → STING             Damage surveillance                       TLR antagonists, DNases; STING inhibitors (clinical trials)
+
+ HMGB1                                            TLR2, TLR4, TLR9, RAGE, CD24         Damage surveillance                       Neutralising antibodies, TLR4 antagonists
+
+ Histones                                         TLR2, TLR4                           Damage surveillance                       TLR antagonists; role in sepsis-DIC
+
+ SAP130                                           CLEC4E (Mincle)                      Damage surveillance                       —
+
+ Self RNA (mRNA, miRNA, Z-RNA)                    MDA5, RIG-I, ZBP1, TLR7, TLR8        Shielded from immune recognition under    Aicardi-Goutières syndrome (ADAR1 deficiency); neurodegeneration;
+                                                                                       homeostasis by RNA-binding proteins and   tumour progression
+                                                                                       modification
+
+  Mitochondria
+ Mitochondrial DNA (mtDNA)                        TLR9, NLRP3, cGAS → STING            Damage surveillance                       TLR antagonists, DNases; STING inhibitors; monocyte tolerance in MI
+
+ Mitochondrial N-formyl peptides                  FPR1                                 DAMP gradient, necrotaxis                 Antibodies, honokiol
+
+ Cytochrome c                                     Unknown                              Damage signal                             Potential marker; γ-tocotrienol
+
+ Cardiolipin                                      NLRP3                                Mitochondrial membrane integrity signal   Barth syndrome; cancer; obesity; Alzheimer's disease
+
+  Cytosol
+ ATP                                              P2 receptors (P2X7, P2Y)             Damage surveillance, DAMP gradient        P2X receptor inhibitors
+
+ S100 calcium-binding proteins                    RAGE                                 Secondary messenger                       Antibodies
+
+ K⁺ ions                                          K⁺ channels → NLRP3                  Secondary messenger                       Inflammasome activation
+
+ CIRBP                                            TLR4–MD2 complex                     Stress signal                             Inflammatory response in shock and sepsis
+
+ Thioredoxin                                      Many                                 Redox signal                              Cancer, viral diseases, aging
+
+Adapted from Zindel & Kubes 2020 Annu Rev Pathol 2020. Abbreviations: cDAMP, constitutively expressed DAMP; iDAMP, inducible DAMP; HMGB1, high-mobility group box-1; CIRBP, cold-inducible
+RNA-binding protein; cGAS, cyclic GMP-AMP synthase; STING, stimulator of interferon genes; FPR1, formyl peptide receptor 1; ECM, extracellular matrix; SHAP, serum-derived hyaluronan-associated
+protein; ARDS, acute respiratory distress syndrome; FPP, farnesyl pyrophosphate; GGPP, geranylgeranyl pyrophosphate; SR-A, scavenger receptor A; TCA, tricarboxylic acid cycle; LAMP, lifestyle-
+associated molecular pattern.
+                                   D-BIOL, IMHS                                                                                                                                          13.04.2026    23
+  DAMPS Overview (II)
+                                                                                                                                                                                                   !
+ Molecular pattern                          Receptor                                   Physiological purpose                   Role in disease / treatment
+
+ Inducible DAMPs (iDAMPs) — secreted upon stress
+
+ Heat shock proteins (hsp60, hsp70,         TLR2, TLR4, CD91, CD14, CD40, CD24         Signal amplification, DAMP gradient     Antibodies; anti-cancer immune response
+ hsp90, gp96, calreticulin)
+
+ Defensins                                  CCR6, TLR4                                 DAMP gradient                           Antagonists, antibodies
+
+ Galectins                                  CD2                                        Signal amplification                    Cancer, fibrosis, chronic inflammation
+
+ IL-1α                                      IL-1R                                      Feedforward amplification               Sepsis; anakinra
+
+ Lysophosphatidylserine (LysoPS)            GPR34                                      Released by apoptotic cells —           Colitis; skin wound repair
+                                                                                       promotes tissue repair
+ Extracellular DAMPs — matrix-derived
+
+ Short-fragment hyaluronan                  CD44–TLR4–MD2, TLR2                        Damage surveillance, DAMP gradient      TLR antagonists, hyaluronidase
+
+ Biglycan                                   TLR2, TLR4                                 Damage surveillance                     —
+
+ Versican                                   TLR2                                       Damage surveillance                     Enhances tumour metastasis
+
+ Heparan sulfate                            TLR4                                       Damage surveillance                     Alzheimer's disease
+
+ ECM fragments / matricryptins              CD14, TLR4, SHAP                           Damage surveillance, DAMP gradient      Autoimmune diseases; potential anti-tumour properties
+ (collagen, elastin, laminin)
+
+Adapted from Zindel & Kubes 2020 Annu Rev Pathol 2020. Abbreviations: cDAMP, constitutively expressed DAMP; iDAMP, inducible DAMP; HMGB1, high-mobility group box-1; CIRBP, cold-inducible
+RNA-binding protein; cGAS, cyclic GMP-AMP synthase; STING, stimulator of interferon genes; FPR1, formyl peptide receptor 1; ECM, extracellular matrix; SHAP, serum-derived hyaluronan-associated
+protein; ARDS, acute respiratory distress syndrome; FPP, farnesyl pyrophosphate; GGPP, geranylgeranyl pyrophosphate; SR-A, scavenger receptor A; TCA, tricarboxylic acid cycle; LAMP, lifestyle-
+associated molecular pattern.
+
+                             D-BIOL, IMHS                                                                                                                                    13.04.2026     24
+    DAMPS Overview (III)                                                                                                                                                                                             !
+Molecular pattern                               Receptor                                       Physiological purpose                       Role in disease / treatment
+
+Inter-organ DAMPs
+
+DAMPs from distal tissues / organs (e.g.        Same PRRs as local DAMPs (TLR9, RAGE,          Trans-organ danger broadcast —              Multi-organ failure, remote ischaemic injury, ARDS after
+circulating mtDNA, HMGB1)                       TLR4)                                          physiological purpose debated               pancreatitis; therapeutic window being defined
+
+Endogenous LAMPs — accumulate with lifestyle / metabolic disease
+
+Cholesterol crystals                            NLRP3, CD36                                    Unclear                                     Atherosclerosis, cardiovascular disease
+
+Uric acid / monosodium urate crystals           NLRP3                                          May physiologically act as a cDAMP          Gout; colchicine, IL-1 blockade (anakinra, canakinumab)
+
+Calcium pyrophosphate dihydrate                 NLRP3                                          Unclear                                     Pseudogout
+crystals
+Oxidized lipoproteins (oxLDL)                   TLR, SR-A, CD36, active component oxPAPC       Unclear                                     Atherosclerosis; statins
+                                                activates non-canonical NLRP3 via CD14
+Prions / prion-like signals (e.g. β-            NLRP3, CD36, RAGE, NF-κB (extracellular)       Physiological iDAMP?                        Alzheimer's disease, Creutzfeldt-Jakob disease
+amyloid)
+Metabolite-derived DAMPs: FPP, GGPP             NLRP3, mTOR / HIF-1α axis                      Unclear — possibly metabolic stress         Inflammaging, trained immunity, atherosclerosis; statins (block
+(mevalonate pathway); succinate,                                                               sensing; may drive trained immunity         FPP/GGPP), mTOR inhibitors, LPS-induced lung injury, airway
+fumarate, citrate (TCA cycle), UPD-                                                                                                        inflammation, sepsis.
+glucose
+Exogenous LAMPs — environmental / iatrogenic exposures
+
+Silica particles, asbestos particles            NLRP3                                          None (no evolutionary design)               Frustrated phagocytosis, granuloma, silicosis, asbestosis
+
+Biomaterials / implants                         Plasma proteins → complement receptors,        None (no evolutionary design)               Foreign-body reaction, fibrous capsule; biomaterial surface
+                                                TLR                                                                                        engineering
+
+Teaching note — LAMP: The term 'LAMP' was proposed in Zindel & Kubes 2020 to distinguish molecules that accumulate due to modern lifestyle or iatrogenic exposure from classical DAMPs released by acute cell
+death. The key distinction: LAMPs cannot be cleared, so they drive chronic sterile inflammation. The term has been cited in ~15–20 papers (Exp Mol Med 2025; Front Immunol 2021) but is NOT yet standard
+nomenclature. Students should understand the concept — not memorise the acronym as settled fact. This is a live example of how scientific vocabulary is proposed and debated.
+
+Teaching note — Inter-organ DAMPs: The concept that circulating DAMPs from a distal organ can drive sterile inflammation elsewhere is well-supported (Zhou et al. 2024) but the physiological purpose remains
+debated. Is this an evolved systemic alarm, or pathological spillover?
+
+                                 D-BIOL, IMHS                                                                                                                                                13.04.2026         25
+Learning Objectives — Lecture 1: Injury
+
+• Students can define homeostasis, injury, repair, and regeneration, and distinguish the failure modes of
+  insufficient repair (leakage/non-healing) and excessive repair (fibrosis/pathological scarring).
+• Students can explain the conceptual basis of the danger/damage model — that the innate immune
+  system detects molecular patterns rather than antigens, and responds to both foreign (PAMPs) and
+  endogenous (DAMPs) danger signals.
+• Students can describe the compartmentalisation principle underlying DAMP recognition — the “wrong
+  neighbourhood principle” (localisation) and the “wrong shape principle” (conformation/modification) —
+  and give one experimental example of each.
+• Students can distinguish between cDAMPs and iDAMPs in terms of mechanism of release, cell state, and
+  functional consequence, and explain why LAMPs do not fit the strict DAMP definition.
+• Students can name representative DAMPs from major molecular categories (nucleic acids, proteins,
+  lipids, metabolites) and describe their cognate receptors.
+
+              D-BIOL, IMHS                                                                      13.04.2026   26
+Prof. Dr. Joel Zindel
+Assistenzprofessor
+Joel.zindel@biol.ethz.ch
+
+ETH Zürich
+Institut für Molekulare Gesundheitswissenschaften (IMHS), D-BIOL
+HPL F32.2
+Otto-Stern-Weg 7
+8098 Zürich
+```
+
+---
+
+<!-- file: slides/03_TissueRepair_Part2.pdf -->
+
+```text
+D-BIOL
+
+Tissue Repair Part II
+
+Prof. Dr. Joel Zindel
+Assistant Professor (TT) for Tissue Repair
+April 14th 2026
+Notes for this lecture
+
+  !   Central concepts — exam-relevant
+
+      How we know: We look at the experimental data behind central paradigms. These slides are
+      epistemologic in nature—how we know what we know—and should not be memorized for the
+      exam.
+
+      Nerd factor: Historical or medical perspective or fun facts (slides with black background are from
+      our own laboratory). Not to be committed to memory—although sometimes the most random
+      facts stick best.
+
+           D-BIOL, IMHS                                                                       14.04.2026   2
+Agenda – Tissue Repair
+This agenda organises key concepts by when they are discussed — not as strict biological boundaries.
+
+  LECTURE 1                                     LECTURE 2                                      LECTURE 3                                      LECTURE 4
+
+                                                                                               Granulation
+  Injury                                        Inflammation                                                                                  Remodelling
+                                                                                               tissue
+  seconds – minutes                             min – hours – days                             hours – days – weeks                           days – weeks – months
+
+  • Definitions: homeostasis, injury,                                                          • Model A: Macrophage-fibroblast               • MMP/TIMP balance, collagen I/III
+    regeneration, repair, and failure           • Injury detection                               circuits                                     • Myofibroblast resolution
+    modes.                                      • macrophage cloaking and                      • Model B: Stem cell compartments              • Fibrosis vs. regeneration
+  • The molecular basis of injury and             threshold gating                             • Fundamental repair processes
+    injury detection: DAMPs, PAMPs,             • Coagulation and Complement
+    and LAMPs.                                  • Thromboinflammation
+
+                 Phases are overlapping and tissue-dependent — complement, macrophages, and adaptive immunity span multiple lectures and are discussed in context.
+
+                                                                                                                                                                      13.04.2026   3
+Learning Objectives — Lecture 2: Inflammation
+
+• Students can explain why tissue-resident macrophages are the primary sensors of sterile injury DAMPs
+  — and why other tissue-resident immune cells (e.g. adaptive TRICs, NK/iNKT, ILCs, mast cells) are not,
+  using the concepts of PRR repertoire breadth and network architecture.
+• Students can describe the concept of macrophage cloaking as an operational definition of threshold
+  gating — explain the experimental evidence from intravital microscopy, and articulate why the molecular
+  basis of the threshold remains incompletely defined.
+• Students can explain how the coagulation and complement cascades each function as DAMP detection
+  systems — identifying the specific DAMP trigger for each pathway and explaining why this qualifies as
+  DAMP logic.
+• Students can distinguish between immunothrombosis and thromboinflammation — define each term,
+  explain how coagulation, complement and cellular innate immunity converge into one integrated
+  intravascular defense, and give examples of physiological output and failure modes.
+• Students can explain why resolution of inflammation is active and programmed rather than passive
+  decay.
+
+              D-BIOL, IMHS                                                                      13.04.2026   4
+Recap: DAMPs                                                                                                        !
+                                                        •   Sensing: Immunostimulatory patterns are
+                                                            recognized by PRRs on both nonimmune cells
+                                                            and specialized immune sentinels. Ligation of
+                                                            PRRs leads to the secretion of proinflammatory
+                                                            cytokines (e.g., TNF-α and IL-1) as well as other
+                                                            inflammatory mediators.
+
+Adapted from Zindel & Kubes 2020 Annu Rev Pathol 2020
+
+                    D-BIOL, IMHS                                                                13.04.2026      5
+  Who detects DAMPs? A systematic look at tissue resident immune cells.                                          !
+                                                     No DAMP sensors by design:
+                                                     • T-cell (TRM), B-cell (BRM): adaptive immunity
+                                                     • NK, iNKT, tr-γδT: killers, not sensors; limited PRR
+                                                       repertoire
+                                                     • ILC: cytokine responders, not primary PRR-expressors
+                                                     Partial DAMP sensors — context-dependent:
+                                                     • MAIT: narrow DAMP PRR repertoire, can be activated
+                                                       TCR-independent, important for repair downstream of
+                                                       macrophages
+                                                     • mast cell: narrow DAMP PRR repertoire, mostly
+                                                       excellent barrier alarm, FcεRI/complement-dominant;
+                                                     Best sensors: Tissue Resident Macrophages (TRM)
+                                                     • Gap-less, body-wide network
+                                                     • Broadest PRR repertoire (TLRs, NLRP3, cGAS-STING,
+Li et al. Signal Transduction and Targeted Therapy     scavenger receptors)
+                                                     • First responder in all sterile injury IVM models
+
+                        D-BIOL, IMHS                                                            13.04.2026   6
+Recap: Efferocytosis                                                                                                            !
+                                                             •   Daily, billions of cells die in the tissue by undergoing
+                                                                 apoptosis, yet apoptotic cells are rarely observed in
+                                                                 homeostasis.
+                                                             •   Efferocytosis that efficiently clears apoptotic cells
+                                                                 without causing inflammation.
+                                                             •   Efferocytosis is a well-defined molecular event:
+                                                                 − Healthy cells express CD47, a «don’t eat me
+                                                                   signal» recognized by SIRP1α on phagocytes
+                                                                 − Apoptotic cells express «eat me signals» the
+                                                                   most important is Phosphatidylserine (PS)
+                                                                   which is recognized by TIM4 and many others
+                                                                   (Figure)
+                                                             •   The process is anti-inflammatory characterized by
+                                                                 the release of TGFb, IL-10, PGE2 and the inhibition
+                                                                 of inflammatory cytokines such as TNF, IL1b, IL6
+
+Injury and Efferocytosis both involve cell death and macrophages — yet one is silent and the other triggers
+full inflammation. What sets the threshold?
+
+             D-BIOL, IMHS                                                                                      14.04.2026   7
+  The threshold question
+
+Uderhardt et al. Cell 2019 (Figure 3)
+• Neutrophil swarming as operational readout of threshold breach — all-or-nothing
+• (A) Tissue Resident Macrophages (TRMs) cloak microlesions within minutes via pseudopod extension — without moving their
+  cell body. +DT = diphtheriae toxin depletion of macrophages.
+• Cloaking is sequentially DAMP-driven: ATP (sensing) → RAGE ligands (convergence)
+• Threshold is lesion-size and TRM-density dependent — not a fixed molecular switch
+• (B) Failure of cloaking → collateral neutrophil damage → secondary monocyte containment
+• molecular basis of the threshold remains incompletely defined — an open and fundamental question
+                   D-BIOL, IMHS                                                                             13.04.2026   8
+ The threshold question
+
+(Movies, content in previous slide explained or check out here!
+
+ Uderhardt et al. Cell 2019
+
+                       D-BIOL, IMHS                               13.04.2026   9
+Transendothelial leukocyte recruitment to sterile injuries                                                                               !
+                                                                                      •   Cloaking failure → threshold breached
+                                                                                      •   Sentinel-derived TNF/IL-1 endothelial
+                                                                                          activation: E/P-selectin upregulation, ICAM-
+                                                                                          1/VCAM-1 expression → chemokine
+                                                                                          presentation (CXCL1/2)
+                                                                                      •   Neutrophils first: transendothelial migration
+                                                                                          (same cascade as classical immunology)
+                                                                                      •   In the tissue: neutrophils follow the DAMP
+                                                                                          gradients (P2R, TLR9, A3R, LTB4R) → reach
+                                                                                          injury site
+                                                                                      •   First neutrophils undergo inflammatory cell
+                                                                                          death (e.g. NETosis) → iDAMP release (ATP,
+       *                                                                                  granule proteins) → feedforward amplification
+                                                                                          of swarming
+                                                                                      •   Monocytes second wave: CCR2hi/CX3CR1lo
+                                                                                          recruited via CCL2 → will convert to
+                                                                                          macrophages (discussed next lecture)
+                                                                                      •   This figure is simplified — additional cells
+                                                 Adapted from Zindel & Kubes              (mast cell degranulation, NK, ILC) contribute
+                                                 2020 Annu Rev Pathol 2020                but are not shown.
+
+           *Nerd factor—Perivascular mast cells: degranulation/TNF to activate endothelium and provide
+                                                                                                                      13.04.2026   10
+           perivascular DAMP relay: bridging of tissue alarm to vascular activation.
+                      Unconventional immune cell recruitment
+Canonical Immune cell migration     Peritoneal Macrophages migrate like
+                                    platelets
+
+           Damage     LyzM-GFP
+           Collagen
+     The coagulation pathway is a DAMP detection system                                               !
+                                                       • Coagulation is constitutively pre-
+                                                         positioned — activates within seconds,
+DAMPs: Exposed collagen, DNA,                            parallel to cellular response
+polyphosphates.                                        • Extrinsic pathway trigger = DAMP by
+                                                         compartmentalization — TF normally
+                                                         hidden behind intact endothelium on
+                                                         subendothelial fibroblasts/pericytes;
+                                                       • Intrinsic/contact pathway trigger =
+                                  DAMP: TF               cDAMPs directly — FXII activated by
+                                  compartimentalized     exposed collagen, extracellular DNA,
+                                                         polyphosphates from necrotic cells
+                                                       • Downstream link to inflammation
+
+                                                                                    13.04.2026   12
+Inflammation → Coagulation                                                                                 !
+                                                               •   Proinflammatory cytokines (IL-6, TNF-
+                                                                   α) → TF upregulation on monocytes and
+                                                                   microparticles from activated
+                                                                   platelets/endothelium → TF:FVIIa →
+                                                                   thrombin → fibrin (shown in mice,
+                                                                   chimpanzees, and humans)
+                                                               •   Simultaneously, natural anticoagulants
+                                                                   are downregulated: TNF-α reduces TFPI,
+                                                                   APC, antithrombin → coagulation is no
+                                                                   longer counterbalanced
+                                                               •   Fibrinolysis is suppressed: TNF-α/IL-
+                                                                   1β → ↑PAI-1, ↓tPA production by
+                                                                   endothelial cells → fibrin persists
+                                                               •   Net result: massive procoagulant shift
+                                                                   — more fibrin generated, less inhibited,
+                                                                   less cleared
+
+                 Choi et al, SWISS MED WKLY 2006;136:139–144
+Coagulation → Inflammation                                                                                     !
+                                                             •   Coagulation proteases activate protease-
+                                                                 activated receptors (PAR-1 to -4) on
+                                                                 mononuclear cells, endothelium, and others
+                                                                 — translating coagulation signals into
+                                                                 inflammatory output
+                                                             •   Thrombin → PAR-1 (best described): ↑IL-6,
+                                                                 IL-8, MCP-1; NF-κB-dependent upregulation
+                                                                 of adhesion molecules → leukocyte adhesion
+                                                             •   FXa/TF-FVIIa complex → PAR-2: pro-
+                                                                 inflammatory effects in macrophages,
+                                                                 neutrophil infiltration, ↑TNF-α and IL-1β
+                                                             •   Fibrin(ogen) and fibrin degradation products
+                                                                 activate macrophages via TLR4. Molecular
+                                                                 mechanism not fully resolved (Smiley et al. J
+                                                                 Immunol 2001)
+               Choi et al, SWISS MED WKLY 2006;136:139–144   •   Creates a self-amplifying feedforward loop:
+                                                                 inflammation drives coagulation drives
+                                                                 inflammation
+       The complement system: a DAMP detection and amplification system                                                            !
+                                                                •   Complement is constitutively expressed in plasma,
+                                                                    activates within seconds, parallel to coagulation and cellular
+                                                                    response.
+Apoptotic cells,         Aberrant              Necrotic cells
+DNA, PS                  Glycocalyx                             •   Three pathways, all detect DAMPs — via different logic:
+                                                                    •     Classical pathway: C1q is a soluble PRR — directly
+                                                                          binds apoptotic cells, exposed DNA and
+                                                                          phosphatidylserine (PS) on damaged cells,
+                                                                          independently of antibody (Nauta et al. Eur J Immunol
+                                                                          2002; Navratil et al. J Immunol 2001)
+                                                                    •     Lectin pathway: MBL and ficolins recognize aberrant
+                                                                          glycocalyx patterns on necrotic and apoptotic cells in
+                                                                          addition to microbial surfaces (Nauta et al. Eur J
+                                                                          Immunol 2003)
+                                                                    •     Alternative pathway: healthy cells constitutively
+                                                                          express CD55, CD59, CD46 → suppress C3 tick-over.
+                                                                          Necrotic cells lose these regulators → complement
+                                                                          proceeds unopposed → missing inhibitory signal =
+                                                                          DAMP logic (Elward & Gasque J Biol Chem 2005)
+
+       Trouw et al. Nature reviews rheumatology, 2017           •   All three pathways converge at C3 → link to inflammation
+
+                           D-BIOL, IMHS                                                                          13.04.2026   15
+   Thromboinflammation*: convergence of three parallel systems                                                                                  !
+      Also: sterile
+      injury                                                                        •   Thromboinflammation* = convergence of coagulation,
+                                                                                        complement and cellular immunity into one integrated
+                                                                                        process.
+                                                                    Also: sterile •     Trigger-agnostic machinery — whether initiated by
+                                                                    injury              PAMPs or DAMPs, the molecular pathways are identical
+                                                                                    •   Monocytes → PRR activation → TF decryption → extrinsic
+                                                                                        pathway (path a) + NLRP3 → IL-1β/IL-18 (path b)
+                                                                                    •   Neutrophils → NETs → FXII activation (path c) → contact
+                                                                                        pathway; NETs bind VWF → platelet recruitment (path d);
+                                                                                        NE/MPO cleave TFPI/thrombomodulin → anticoagulant
+                                                                                        brake removed (path e)
+                                                                                    •   Platelets (Thrombocytes) → activated by C3a/C5a (path f)
+                                                                                        → release PEVs, polyphosphates → feedforward (path g)
+                                                                                    •   Physiological output fibrin-immune cell scaffold
+                                                                                        •      pathogen/debris isolation and killing
+                                                                                        •      Required for repair!
+Bonaventura et al., Nat Rev Immunol 2021
+*Terminology note: Immunothrombosis (Engelmann & Massberg 2013) = the               •   Failure modes:
+physiological process — thrombosis as an active tool of innate immunity.
+                                                                                        •      Disseminated intravascular coagulation, e.g. COVID-
+Thromboinflammation = the pathological deviation when immunothrombosis
+                                                                                               19 coagulopathy
+becomes uncontrolled. This slide shows both: the physiological machinery (figure)
+and its failure mode (red bullet).                                                      •      Aberrant repair
+
+                      D-BIOL, IMHS                                                                                            13.04.2026   16
+                        Thromboinflammation in the peritoneal cavity
+
+Neutrophils (turbidity)                    Cytokines     Macrophages, Fibrin, and later more
+                                                         immune cells
+
+                  www.springermedizin.de
+
+                                                       Vega Perez et al Immunity 2021
+                             Thromboinflammation in the peritoneal cavity
+
+                                                   Fibrin
+
+                    Injury
+
+                      Thromboinflammation:
+                       Fibrin + Immune cells
+
+Hellebrekers 2011
+Fibrin Deposition and Scar Formation
+
+                                  Definition Adhesion/
+                                  Maladaptive fibrotic
+                                  scarring: Irreversible
+                                  fibrotic scar tissue that
+                                  connects two surfaces of
+                                  the body that are usually
+                                  separate.
+
+Hellebrekers 2011
+                 Adhesions are a massive clinical problem
+
+                                                                          #1 Cause of bowel obstruction
+
+                                                                          #1 Cause of infertility
+
+                                                                          3.8%      Re-Operations
+
+                                                                                    Re-Admissions
+                                                                          10%
+                                                                                   More expensive than
+                                                                          CHF      gastric or rectal cancer
+
+                                                                          No cure
+
+Zwicky 2021, Menzies 1990, Beck 2000, Barmparas 2010, Ellis 1999, Sulaiman 2001                         20
+  Lipid mediator class switch: Discovery of resolvins
+
+                                            •   What does the body actually produce during
+                                                resolution? — used unbiased lipidomics of resolving
+                                                exudates
+                                            •   (left panel) During the resolution phase, aspirin-
+                                                treated mice convert DHA (omega-3) → novel
+                                                compounds: 17R-HDHA and its derivatives
+                                                (dominant peak in chromatogram)
+                                            •   These compounds were named resolvins —
+                                                resolution phase interaction products
+                                            •   (right panel) Resolvins suppress pro-inflammatory
+Serhan CN et al. JEM 2002
+                                                cytokine production (IL-1β) at picomolar
+                                                concentrations — IC50 ~50 pM.
+                                            •   Key conceptual insight: aspirin reprograms COX-2
+                                                — same enzyme, same substrate (DHA), but
+                                                acetylation switches the product from pro-
+                                                inflammatory 13-HDHA → pro-resolving 17R-HDHA
+                                            •   Resolution is therefore not passive decay — it is
+                                                actively switched on by a new biosynthetic program
+
+                            D-BIOL, IMHS                                                   13.04.2026   21
+Resolution of Inflammation is active and programmed                                                                                                                                         !
+                          Onset                                               Resolution                                                     Failure modes
+
+                   Minutes → hours                                              Hours → days                                                      If unresolved
+
+ Pro-inflammatory signals                            Lipid mediator class switch                                                  Chronic inflammation
+ Cytokines, chemokines                               PGE₂/LTB₄ → lipoxins, resolvins, protectins (SPMs)                           Resolution failure
+
+ Cell adhesion molecules                             NF-κB / TLR signalling off                                                   Fibrosis
+ E/P-selectin, ICAM-1                                Pro-inflammatory mRNA destabilized (TTP, ZC3H12A)                            Excess fibrin/collagen deposition
+
+ Neutrophil recruitment                              Neutrophil clearance                                                         Adhesions
+ Swarming, NETosis                                   Apoptosis + efferocytosis by macrophages                                     Maladaptive fibrotic scar — next slides
+
+ Anti-inflammatory brakes                            Reverse migration                                                            Thromboinflammation
+ IL-10, TGF-β, cortisol                              Neutrophils re-enter circulation → lung (transient) → bone marrow →          DIC, MI, ARDS, COVID-19
+                                                     apoptosis
+
+ Immunothrombosis
+ Fibrin-immune cell scaffold — required for repair   Macrophage reprogramming
+                                                     Inflammatory → repair/efferocytic phenotype (→ Lecture 3)
+
+                                                     Fibrinolysis
+                                                     moC/LPM-mediated — provisional scaffold removed
+
+                                                                                                                           Adapted from Fullerton & Gilroy, Nat Rev Drug Discov 2016
+
+                          D-BIOL, IMHS                                                                                                                                13.04.2026       22
+Learning Objectives — Lecture 2: Inflammation
+
+• Students can explain why tissue-resident macrophages are the primary sensors of sterile injury DAMPs
+  — and why other tissue-resident immune cells (e.g. adaptive TRICs, NK/iNKT, ILCs, mast cells) are not,
+  using the concepts of PRR repertoire breadth and network architecture.
+• Students can describe the concept of macrophage cloaking as an operational definition of threshold
+  gating — explain the experimental evidence from intravital microscopy, and articulate why the molecular
+  basis of the threshold remains incompletely defined.
+• Students can explain how the coagulation and complement cascades each function as DAMP detection
+  systems — identifying the specific DAMP trigger for each pathway and explaining why this qualifies as
+  DAMP logic.
+• Students can distinguish between immunothrombosis and thromboinflammation — define each term,
+  explain how coagulation, complement and cellular innate immunity converge into one integrated
+  intravascular defense, and give examples of physiological output and failure modes.
+• Students can explain why resolution of inflammation is active and programmed rather than passive
+  decay.
+
+              D-BIOL, IMHS                                                                      13.04.2026   23
+Prof. Dr. Joel Zindel
+Assistenzprofessor
+Joel.zindel@biol.ethz.ch
+
+ETH Zürich
+Institut für Molekulare Gesundheitswissenschaften (IMHS), D-BIOL
+HPL F32.2
+Otto-Stern-Weg 7
+8098 Zürich
+```
+
+---
+
+<!-- file: slides/04_TissueRepair_Part3_GranulationTissue.pdf -->
+
+```text
+D-BIOL
+
+Tissue Repair Part III
+
+Prof. Dr. Joel Zindel
+Assistant Professor (TT) for Tissue Repair
+April 20th 2026
+Notes for this lecture
+
+  !   Central concepts — exam-relevant
+
+      How we know: We look at the experimental data behind central paradigms. These slides are
+      epistemologic in nature—how we know what we know—and should not be memorized for the
+      exam.
+
+      Nerd factor: Historical or medical perspective or fun. Not to be committed to memory—although
+      sometimes the most random facts stick best.
+
+      Resources: Robbins Basic Pathology, Tenth Edition, Chapter TISSUE REPAIR
+
+      Disclaimer on Generalizability: The molecular and cellular paradigms described herein (e.g., the iNKT-
+      mediated macrophage switch and the CSF1-PDGF circuit) represent high-fidelity models of tissue repair.
+      While these 'logic gates' appear conserved across vertebrates, much of the foundational experimental data is
+      derived from specific injury models (predominantly liver and skin). Application to other organ systems should
+      account for tissue-specific niche factors and varying immune cell ontogenies.
+
+            D-BIOL, IMHS, Zindel                                                                         20.04.2026   2
+Agenda – Tissue Repair
+This agenda organises key concepts by when they are discussed — not as strict biological boundaries.
+
+  LECTURE 1                                       LECTURE 2                                    LECTURE 3                                      LECTURE 4
+
+                                                                                               Granulation
+  Injury                                          Inflammation                                                                                Remodelling
+                                                                                               tissue
+  seconds – minutes                               min – hours – days                           hours – days – weeks                           days – weeks – months
+
+  • Definitions: homeostasis, injury,                                                          • The macrophage switch:                       • MMP/TIMP balance, collagen I/III
+    regeneration, repair, and failure             • Injury detection                             macrophages subtypes in repair               • Myofibroblast resolution
+    modes.                                        • macrophage cloaking and                    • Macrophage-fibroblast circuit                • Fibrosis vs. regeneration
+  • The molecular basis of injury and               threshold gating                           • Provisional Matrix
+    injury detection: DAMPs, PAMPs,               • Coagulation and Complement                 • Angiogenesis
+    and LAMPs.                                    • Thromboinflammation                        • Neural regulation of repair
+                                                                                               • Collagen III
+                                                                                               • Failure modes
+
+                 Phases are overlapping and tissue-dependent — complement, macrophages, and adaptive immunity span multiple lectures and are discussed in context.
+
+                           D-BIOL, IMHS, Zindel                                                                                                                       20.04.2026   3
+Learning Objectives — Lecture 3: Granulation Tissue
+
+• Students can describe the macrophage-fibroblast two-cell circuit — key signals, three stable states,
+  separatrix — and explain why injury requires circuit reconstruction from scratch.
+• Students can explain the monocyte-to-macrophage class switch, clarify that CX3CR1 is a maturation not
+  a polarisation marker, and describe the iNKT/CD1d/IL-4 mechanism with its tissue-specific
+  generalisations.
+• Students can distinguish Folr2+ repair macrophages from Trem2+/Spp1+ scar-associated
+  macrophages by phagocytic cargo, signature, and tissue outcome.
+• Students can define the myofibroblast as a phenotype, describe αSMA stress fibre formation, name two
+  precursor sources including MMT, and explain the mechanical positive feedback loop driving persistence.
+• Students can compare the chemical and mechanical views of myofibroblast activation — driver,
+  persistence mechanism, therapeutic target, weakness — and state the synthesis.
+• Students can distinguish Model A (functional repair) from Model B (regeneration) in terms of speed,
+  fidelity, and cellular requirements
+
+              D-BIOL, IMHS, Zindel                                                              20.04.2026   4
+   Recap: Phases of Repair                                              !
+
+Lecture 1 and 2
+                                         Lecture 3
+                                                     Lecture 4
+
+                  D-BIOL, IMHS, Zindel                 20.04.2026   5
+    Model: Macrophage Fibroblast Circuits                                                                                  !
+
+                                                             Teaching Note-link to Prof. Werner lecture: this is
+Severe Injury   https://doi.org/10.1016/j.cell.2018.01.015
+                                                             a classical double paracrine loop
+                D-BIOL, IMHS, Zindel                                                                      20.04.2026   6
+             Macrophage Switch: the phenomenon
+
+             Focal liver injury
+CCR2-RFP
+CX3CR1-GFP
+
+                                                   https://doi.org/10.1084/jem.20141539
+                            D-BIOL, IMHS, Zindel                                          20.04.2026   7
+               Macrophage Switch: iNKT cells and glycolipid self-antigens
+
+             Focal liver injury
+Cxcr6GFP/+
+
+               https://doi.org/10.1016/j.immuni.2017.09.016
+
+                              D-BIOL, IMHS, Zindel                          20.04.2026   8
+Macrophage Switch: iNKT cells and glycolipid self-antigens
+
+https://doi.org/10.1016/j.immuni.2017.09.016
+             D-BIOL, IMHS, Zindel                            20.04.2026   9
+   Macrophage Switch: Overview of signals                                                                                                                                           !
+                                                      Receptor on
+Signal          Source             Tissue context                           Mechanism / output                      Reference
+                                                      macrophage
+Common logic: tissue-resident lymphocytes
+
+                                                                            STAT6 → CCR2→CX3CR1                     Liew et al. Immunity 2017
+IL-4 / IL-13    iNKT cells         Liver              IL-4Rα / IL-13Rα1
+                                                                            conversion                              doi:10.1016/j.immuni.2017.09.016
+
+                                                                            STAT6 → repair gene
+IL-4 / IL-13    ILC2s              Lung, gut, skin    IL-4Rα / IL-13Rα1                                             Bosurgi et al. Science 2017 doi:10.1126/science.aai8132
+                                                                            programme
+
+                                                                            Epithelial repair programme,
+Amphiregulin Tregs                 Muscle             EGFR (?)                                                      Burzyn et al. Cell 2013 doi:10.1016/j.cell.2013.11.010
+                                                                            macrophage reprogramming
+
+IGF-1 /      γδ T cells                                                     Keratinocyte and macrophage
+                                   Skin               IGF-1R / EGFR (?)                                             Jameson et al. Science 2002 doi:10.1126/science.1069639
+Amphiregulin (DETCs)                                                        activation
+
+Universal Signals independent of tissue context
+
+                                                                            TGFβ, IL-10, PGE2 → NF-κB
+PS /            Apoptotic                             TIM4, AXL,
+                                   All tissues                              suppression, anti-inflammatory          Bosurgi et al. Science 2017 doi:10.1126/science.aai8132
+efferocytosis   neutrophils                           MERTK
+                                                                            reprogramming
+
+                Neutrophils,                          ALX/FPR2,      Lipid mediator class switch →                  Serhan & Levy Nat Rev Immunol 2018
+SPMs                               All tissues
+                macrophages                           GPR32, ChemR23 resolution                                     doi:10.1038/nri.2017.103
+
+                         D-BIOL, IMHS, Zindel        Review covering the full table: Minutti et al. Semin Cell Dev Biol 2017 doi:10.1016/j.semcdb.2016.08.006     20.04.2026   10
+   Link to Immunology III: Macrophage Polarization Models                                                                     !
+
+Class Switch                            Historic Binary Polarization Model        How you should think about it
+Literature                                                                        nowadays
+      CCR2hi                                                                   CX3CR1hi = mature macrophage, to know
+      CX3CR1lo                                                                 what that macrophage is doing:
+      (Ly6Chi)                  CSF1 (= MCSF)                  CSF1 (= MCSF)
+      (CCR2hi)                  IFN-γ                          IL-4
+                                                               IL-10
+     CCR2lo
+     CX3CR1hi
+     (Ly6Clo)
+     (CCR2lo)
+                               M1 «classical»              M2 «alternative»
+                               Patogen Killing             Tissue Remodeling
+
+                 D-BIOL, IMHS, Zindel                                                                       20.04.2026   11
+        Link to Immunology III Class Switch                                                                                                                       !
+                                              Gata6+
+                                    Tissue Resident Macrophages             5
+
+                                                                                                 Pro-inflammatory cytokine
+                                                                        1
+
+                                                                                                 release (used to be M1)
+        Folr2+Sele nop +
+       Repair-associated
+                                7
+
+                            8
+
+The fork in
+the road                                     Intermediate                         Repair/Folr2                               Trem2/Spp1
+                        2   6                macrophages                                                                     (lipid/stress)
+         Monocytes
+
+                                                     Trem2 +Spp1 +
+                            3
+                                     4
+                                                    Sca r-associated
+                                         lipid-handling, lysosomal, phagocytic
+                                                                                                 Il-4 induced (used to be M2)
+                   DC
+
+  Feature                                           TREM2 SPP1+ "Fibrotic Cleaner"                        FOLR2 SELENOP+ "Repair Cleaner"
+  Phagocytic Cargo                                  Necrotic debris, oxidized lipids.                     Apoptotic cells (efferocytosis).
+  Core Signature                                    TREM2, GPNMB, CD9, SPP1.                              FOLR2, SELENOP, MRC1, CD163.
+  Tissue Outcome                                    Scarring (Fibrosis).                                  Functional Repair.
+  Vascular Effect?                                  Spp1-driven angiogenesis (tumour context)             Perivascular localisation (function unclear)
+  Emerging in the field?                            Spp1/OPN signaling hub                                Antioxidant protection, survive in «hot» injury zone.
+
+                            D-BIOL, IMHS, Zindel                                                                                                20.04.2026   12
+  Overshooting Tissue Repair in the Adominal Cavity (Adhesion Formation)
+
+1. DAMP                                                       2. Fibrin Clot
+Detection,
+Inflammation
+
+3. Myofibroblast!
+
+               D-BIOL, IMHS, Zindel                                  20.04.2026   13
+Myofibroblasts in adhesions are Mesothelium-derived
+
+                             Green =          Red = Mesothelium   Yellow = Mesothelium
+                             Myofibroblasts   Derived             Derived Myofibroblasts
+
+      D-BIOL, IMHS, Zindel                                                   20.04.2026   14
+Mesothelial to mesenchymal transition (MMT)
+
+                                              MMT
+
+                                              ↑α-SMA
+                                              ↑Proliferation
+  Green =                 Red = Mesothelium   ↑ Migration via disrupted BM
+  proliferating           Derived             ↑ Mobility
+
+          D-BIOL, IMHS, Zindel                                               20.04.2026   15
+                                                                !
+Myofibroblasts
+
+https://doi.org/10.1038/s41580-024-00716-0
+
+                       D-BIOL, IMHS, Zindel   20.04.2026   16
+                                                                                                      !
+Myofibroblast resolution
+
+                                                                        https://doi.org/10.103
+                                                                        8/s41580-024-00716-
+                                                                        0
+
+   Physiological resolution            Pathological persistence
+   TGF-β signal drops                  Persistent TGF-β / stiff ECM
+   Mechanical tension reduces          Fibrotic ECM maintains tension
+   Myofibroblast apoptosis             Resistance to apoptosis
+   → Scar matures, cellularity drops   → Fibrosis
+             D-BIOL, IMHS, Zindel                                                   20.04.2026   17
+Myofibroblast Activation – chemical vs mechanical signalling view
+                                                                                                                                !
+                                     Chemical signalling view            Mechanical signalling view
+                                     Macrophage-derived TGFβ, IL-4,      ECM stiffness sensed via
+      Primary driver
+                                     PDGF                                integrins
+                                     Cytokine release from               Loss of ECM structural integrity /
+      Key initiating event
+                                     inflammatory cells                  fibrin clot mechanics
+                                     Sustained macrophage activation     Self-amplifying stiffness-
+      Persistence mechanism
+                                     / TGFβ loop                         contraction feedback
+      Key transcription factors      SMAD2/3, NF-κB                      YAP/TAZ, MRTFA
+                                     Anti-TGFβ, anti-IL-4Rα,             Anti-integrins, ROCK inhibitors,
+      Therapeutic target
+                                     macrophage re-polarization          matrix softening
+                                     In vivo macrophage depletion,       Tunable hydrogel stiffness,
+      Main evidence base
+                                     cytokine KO models                  atomic force microscopy
+                                     Chronic inflammation →              Stiff fibrotic ECM → irreversible
+      Failure mode explained
+                                     persistent macrophage activation    mechanical memory
+                                     Cytokine blockade rarely reverses Stiffness alone insufficient
+      Weakness
+                                     established fibrosis              without initial cytokine trigger
+
+ B. Hinz: «mechanical stress and TGFβ1 are actually two sides of the myofibroblast differentiation
+ coin» check this for more on mechanical signaling: https://doi.org/10.1038/s41580-024-00716-0
+ .
+              D-BIOL, IMHS, Zindel                                                                            20.04.2026   18
+Model: Macrophage Fibroblast Circuits                                                         !
+
+                                                      Return to stable ON
+
+         https://doi.org/10.1016/j.cell.2018.01.015
+
+         D-BIOL, IMHS, Zindel                                               20.04.2026   19
+                                                 !
+Angiogenesis
+
+        D-BIOL, IMHS, Zindel   20.04.2026   20
+Neural Regulation of Repair
+
+                                10.1101/cshperspect.a041233
+         D-BIOL, IMHS, Zindel                                 20.04.2026   21
+Growth Factors in Repair (Link Lecture Prof. Werner)
+
+         D-BIOL, IMHS, Zindel                          20.04.2026   22
+Regeneration and Stem Cells (Link Lecture Prof. Gehart)
+
+                                     Macrophage fibroblast circuit (Model A)
+                                     • Rapid
+                                     • Robust function
+                                     • Low architectural fidelity
+
+                                      Regeneration (Model B)
+                                      • Slow, costly
+                                      • High architectural fidelity
+                                      • Requires stem cells
+
+         D-BIOL, IMHS, Zindel                                             20.04.2026   23
+Learning Objectives — Lecture 3: Granulation Tissue
+
+• Students can describe the macrophage-fibroblast two-cell circuit — key signals, three stable states,
+  separatrix — and explain why injury requires circuit reconstruction from scratch.
+• Students can explain the monocyte-to-macrophage class switch, clarify that CX3CR1 is a maturation not
+  a polarisation marker, and describe the iNKT/CD1d/IL-4 mechanism with its tissue-specific
+  generalisations.
+• Students can distinguish Folr2+ repair macrophages from Trem2+/Spp1+ scar-associated
+  macrophages by phagocytic cargo, signature, and tissue outcome.
+• Students can define the myofibroblast as a phenotype, describe αSMA stress fibre formation, name two
+  precursor sources including MMT, and explain the mechanical positive feedback loop driving persistence.
+• Students can compare the chemical and mechanical views of myofibroblast activation — driver,
+  persistence mechanism, therapeutic target, weakness — and state the synthesis.
+• Students can distinguish Model A (functional repair) from Model B (regeneration) in terms of speed,
+  fidelity, and cellular requirements
+
+              D-BIOL, IMHS, Zindel                                                              20.04.2026   24
+Prof. Dr. Joel Zindel
+Assistenzprofessor
+Joel.zindel@biol.ethz.ch
+
+ETH Zürich
+Institut für Molekulare Gesundheitswissenschaften (IMHS), D-BIOL
+HPL F32.2
+Otto-Stern-Weg 7
+8098 Zürich
+```
+
+---
+
+<!-- file: slides/05_TissueRepair_Part4_Remodelling.pdf -->
+
+```text
+D-BIOL
+
+Tissue Repair Part IV
+
+Prof. Dr. Joel Zindel
+Assistant Professor (TT) for Tissue Repair
+April 20th 2026
+Notes for this lecture
+
+  !   Central concepts — exam-relevant
+
+      How we know: We look at the experimental data behind central paradigms. These slides are
+      epistemologic in nature—how we know what we know—and should not be memorized for the
+      exam.
+
+      Nerd factor: Historical or medical perspective or fun. Not to be committed to memory—although
+      sometimes the most random facts stick best.
+
+      Resources: Robbins Basic Pathology, Tenth Edition, Chapter TISSUE REPAIR
+
+           D-BIOL, IMHS, Zindel                                                           20.04.2026
+Agenda – Tissue Repair
+This agenda organises key concepts by when they are discussed — not as strict biological boundaries.
+
+  LECTURE 1                                       LECTURE 2                                    LECTURE 3                                      LECTURE 4
+
+                                                                                               Granulation
+  Injury                                          Inflammation                                                                                Remodelling
+                                                                                               tissue
+  seconds – minutes                               min – hours – days                           hours – days – weeks                           days – weeks – months
+
+  • Definitions: homeostasis, injury,                                                          • The macrophage switch:                       •   Pre primam vs. per secundam
+    regeneration, repair, and failure             • Injury detection                             macrophages subtypes in repair               •   Provisional Matrix
+    modes.                                        • macrophage cloaking and                    • Macrophage-fibroblast circuit                •   Collagen III
+  • The molecular basis of injury and               threshold gating                           • Provisional Matrix                           •   MMP/TIMP balance
+    injury detection: DAMPs, PAMPs,               • Coagulation and Complement                 • Angiogenesis                                 •   Collagen I
+    and LAMPs.                                    • Thromboinflammation                        • Neural regulation of repair                  •   Remodeling in different tissues
+                                                                                               • Collagen III                                 •   Failure modes
+                                                                                               • Failure modes
+
+                 Phases are overlapping and tissue-dependent — complement, macrophages, and adaptive immunity span multiple lectures and are discussed in context.
+
+                           D-BIOL, IMHS, Zindel                                                                                                                       20.04.2026
+Learning Objectives — Lecture 4: Remodelling
+
+• Students can distinguish between sanitatio per primam and per secundam intentionem — explaining
+  how gap size, DAMP load, and mechanical stability determine the scale of scaffold formation and
+  remodelling required.
+• Students can describe the sequential matrix composition during remodelling — from fibrin/fibronectin
+  scaffold through collagen III to mature collagen I — and explain what drives each transition.
+• Students can explain how MMP/TIMP balance controls ECM degradation — including the cysteine switch
+  mechanism of proMMP activation and why net ECM remodelling equals expression × activation −
+  inhibition.
+• Students can apply the concept of organ-specific remodelling goals — articulating why the physiological
+  scar differs between bone, liver, lung, heart and skin, and predicting the failure mode when remodelling
+  overshoots in each tissue.
+• Students can explain why fibrosis represents a failure of myofibroblast resolution — identifying TGF-β
+  and persistent DAMP signalling as the common drivers across organs, and giving organ-specific
+  examples (cirrhosis, IPF, cardiac fibrosis, keloid).
+
+              D-BIOL, IMHS, Zindel                                                               20.04.2026
+   Recap: Phases of Repair                                                                  !
+
+Lecture 1 and 2
+                                         Lecture 3
+                                                                             Lecture 4
+                                                     Scaffold/ Provisional
+                                                     Matrix
+
+                  D-BIOL, IMHS, Zindel                                         20.04.2026
+       Sanitatio per primam vs. per secundam                                                                                                       !
+                   Primary intention healing                                                            Secondary intention healing
+         Why: ↓DAMP, ↓ gap → ↓scaffold, ↑mech. stability                                          Why: ↑DAMP, ↑gap → ↑scaffold, ↓mech. stability
+
+                                                                              Skin
+
+Bone
+
+                   D-BIOL, IMHS, Zindel                                                                                               20.04.2026
+                                          https://doi.org/10.1007/978-3-319-92055-9_21, DOI:10.25259/IJMSR_43_2022
+Case study bone
+
+                                                                                                     https://doi.org/10.1007/s43465-020-00320-2
+
+This (valid) example is no treatment
+advice. The treatment chosen varies
+depending on age, comorbidities, and
+fracture pattern and will affect
+primary vs. secondary bone repair.
+             D-BIOL, IMHS, Zindel                                                                                                  20.04.2026
+                                       https://www.orthobullets.com/pediatrics/4019/femoral-shaft-fractures--pediatric
+Case study skin
+                                                                                                            !
+
+Take home: secondary intention healing (repair) can lead to highly functional outcomes → this is the main
+role of remodelling.
+
+             D-BIOL, IMHS, Zindel                                                              20.04.2026
+Remodelling
+                                                                               !
+Overview
+
+                               Schematic based on review of the
+                               literature (not based on
+                               experimental data)
+
+        D-BIOL, IMHS, Zindel                                      20.04.2026
+Provisional matrix
+                                                                      Fibronectin the key player                                      !
+
+  Early Provisional                              Late Provisional
+       Matrix                                         Matrix                                                               Firbillogenesis
+                                                                                                                           and ECM
+                                                                                                                           assembly
+
+                                                                                                                           Mechanical
+                                                                                                                           integrin switch
+
+                                                                                                                         Growth factor
+              Platelets/neutrophils/monocytes                                                                            reservoir
+  Adapted from:
+  https://doi.org/10.1016/j.matbio.2017.04.003
+Teaching note—early provisional matrix =
+thromboinflammation (link to previous
+lecture)
+
+                         D-BIOL, IMHS, Zindel                       https://doi.org/10.1016/j.matbio.2016.07.011   20.04.2026
+Intermediate Matrix (Collagen III) → Final Matrix (Collagen I)
+                                                                                                                                              !
+
+                                                                                                   Schematic
+
+      Property                      Collagen III                                 Collagen I
+      Gene                          COL3A1                                       COL1A1, COL1A2
+      Chain composition [α1(III)]₃ homotrimer                                    [α1(I)]₂α2(I) heterotrimer
+      Fibril diameter               Thin, reticulin (~15–50 nm)                  Thick (100–500 nm)
+      Mechanical
+                                    Flexible, compliant, disulfide-stabilized    High tensile strength, stiff, heavily cross-linked
+      properties
+      Normal tissue                 Blood vessels, gut, fetal skin (~27% adult
+                                                                                 Bone, tendon, skin (~85% of adult skin)
+      distribution                  skin)
+
+             D-BIOL, IMHS, Zindel                                                                                                20.04.2026
+                                                                 M. musculus      A. percivali
+    Species specificity Collagen I and III
+
+Mus musculus                                       Acomys Spp.
+
+                                                                   ↑Scarring      Regeneration
+https://doi.org/10.1038/nature11499                              Dense Collagen    Less Dense
+                                                                  ↑ Collagen I      Collagen
+                            D-BIOL, IMHS, Zindel                                            20.04.2026
+  MMP/TIMP balance (I)
+                                                                                                                !
+
+Many different substrate-specific forms
+Class            Members               Key substrates
+
+Collagenases     MMP-1, -8, -13        Fibrillar collagens I, II, III (¾ + ¼ fragments)
+
+                                       Denatured collagen (gelatin), collagen IV,
+Gelatinases      MMP-2, -9
+                                       fibronectin
+
+                                       Proteoglycans, laminin, fibronectin,
+Stromelysins     MMP-3, -10, -11
+                                       amorphous collagen
+                                       Membrane-anchored; degrade ECM at cell
+                 MMP-14, -15, -16, -
+MT-MMPs                                surface; MT1 (MMP-14) cleaves collagen I
+                 17, -24, -25
+                                       directly
+                                       ECM components, cell surface molecules
+Matrilysins      MMP-7, -26            (Fas-L, TNF-α, E-cadherin) — no Hpx
+                                       domain
+                                       Inhibit all MMPs (1:1 stoichiometry, Ki in the
+Inhibitors       TIMP-1, -2, -3, -4
+                                       picomolar range 10-12M)
+
+                                         Simplified from doi: 10.1161/01.RES.0000070112.80711.3D
+
+                D-BIOL, IMHS, Zindel                                                               20.04.2026
+MMP/TIMP balance (II)
+                                                                                                       !
+
+                                                               Activation:
+
+                                Simplified from doi: 10.1161/01.RES.0000070112.80711.3D
+
+         D-BIOL, IMHS, Zindel                                                             20.04.2026
+Are all collagenases MMPs?
+
+Enzyme                     Class      pH optimum   Key substrate          Key cell
+MMP-1                      MMP        7.4          Collagen I, II, III    Fibroblasts
+MMP-8                      MMP        7.4          Collagen I, II, III    Neutrophils
+MMP-13                     MMP        7.4          Collagen II > I, III   Chondrocytes
+                                                                          Fibroblasts,
+MMP-14                     MMP        7.4          Collagen I, II, III
+                                                                          osteoclasts
+                           Cysteine
+Cathepsin K                           4.5-6        Collagen I, II         Osteoclasts only
+                           protease
+                           Cysteine                                       Macrophages,
+Cathepsin L/B                         4.5-6        Broad collagen
+                           protease                                       lysosomes
+
+              D-BIOL, IMHS, Zindel                                                   20.04.2026
+Bone remodelling                                         Cathepsin K — the main collagenase in                          !
+                                                         osteoclasts (not an MMP), MMP-9 and MMP-
+                                                         14, acid phosphatase (TRAP), Hydrochloric
+                                    Haversian channels
+                                                         acid
+
+  Fracture
+
+                                                                    https://www.nature.com/articles/s41413-018-0019-6
+
+             D-BIOL, IMHS, Zindel                                                                    20.04.2026
+Osteopetrosis – Link to Immunology III                        CSF1/CSF1R mutations,
+                                                              i.e. no osteoclasts
+                                                              Infantile, Severe!!
+                                                                                                Osteoblast gain of function: e.g.
+                                                                                                OPG gain of function mutation
+                                                 Loss of function
+                                                 osteoclast activation, e.g.
+                                                 RANK receptor or RANKL
+
+                                                                               https://www.nature.com/articles/s41413-018-0019-6
+
+                                «At the Moulin
+                                Rouge»               Loss of function resorption, e.g.:
+                                Toulouse-
+                                Lautrec              • CTSK Cathepsin K
+                                                       (Pycnodysostosis, much milder!)
+                                                     • CLCN7 chloride channel (severe!)
+         D-BIOL, IMHS, Zindel                                                                                   20.04.2026
+Osteopenia in MT1-MMP (MMP14) KO
+
+                                                Osteopenia
+                                                and
+                                                Fibrosis
+
+           D-BIOL, IMHS, Zindel    20.04.2026
+Osteoporosis
+                                                                                                      !
+                                                                    Selective estrogen receptor
+                                                                    modulators/hormone therapy:
+                                                                    normalize RANKL/OPG ratio
+                                           RANKL-Antibody
+
+     Osteoporosis
+
+                                                  https://www.nature.com/articles/s41413-018-0019-6
+
+                                Bisphosphonates (e.g. Clodronate,
+                                Alendronate): osteoclast apoptosis
+
+         D-BIOL, IMHS, Zindel                                                      20.04.2026
+Remodelling Goal
+                                                                                                                                                                 !
+                               Key parenchymal
+                    Organ                               Critical ECM architecture                Physiological scar      Failure mode
+                               function
+                                                                                                                         Osteopetrosis (too little
+                                                                                                 Callus → remodelled
+                               Load bearing, locomotion Haversian systems, medullary cavity,                             resorption) / Osteopenia (too little
+                    Bone                                                                         lamellar bone,
+                               haematopoiesis           mineralized collagen I                                           organisation) — as we just saw,
+                                                                                                 restored cortex
+                                                                                                                         Osteoarthritis.
+
+                                                                                                                         Cirrhosis — bridging fibrosis, loss
+                               Metabolism,              Fenestrated sinusoidal endothelium,      Near zero —
+                                                                                                                         of sinusoidal fenestrations,
+                    Liver      detoxification,          space of Disse — minimal interstitial    regeneration
+                                                                                                                         pseudonodules, portal
+                               immunology               collagen                                 preferred over repair
+                                                                                                                         hypertension
+
+                                                                                                                    Pulmonary fibrosis —
+                               Gas exchange (O₂/CO₂     Thin alveolar basement membrane (1- Minimal — walls must honeycombing, fibroblastic foci,
+                    Lung
+                               diffusion)               2 cell layers), elastic recoil      stay thin for diffusion stiff inelastic alveoli, diffusion
+                                                                                                                    block
+
+                                                                                                 Firm focal scar at      Heart failure after Myocardial
+                                                        Aligned cardiomyocytes, minimal
+                                                                                                 infarct site —          infarction, Diffuse interstitial
+                    Heart      Pump function            interstitial ECM, intact electrical
+                                                                                                 necessary, not          fibrosis — stiff ventricle, diastolic
+                                                        pathways
+                                                                                                 optional                dysfunction, arrhythmia
+
+                                                                                                Thin flat pale scar,     Keloid/hypertrophic scar — thick
+                               Barrier, locomotion,     Basket-weave collagen I + elastin, thin
+                    Skin                                                                        partial elastin          disorganized collagen III, no
+                               sensation                dermis
+                                                                                                restoration              elastin, contracture
+
+        D-BIOL, IMHS, Zindel                                                                                                                   20.04.2026
+ Liver – Stellate cells                                                                          Masson Trichrome Staining             !
+Sinusoids: Illustration
+                                                                                                  Healthy: collagen
+                                                                                                 (blue) in portal tract
+
+                                                                                 Stage 1 Fibrosis:
+                                                                                   fibrous portal
+                                                                                     expansion
+
+                                                                Stage 3-4 increasing
+                                                                fibrotic bridges here
+
+Sinusoids: H&E healthy                                           Stage 4 Fibrosis: cirrhosis,
+                                                                    regenerative nodules
+                                                                surrounded by fibrous bands
+
+                                            www.aasld.org/liver-fellow-network
+                     D-BIOL, IMHS, Zindel                                                                                 20.04.2026
+     Lung remodelling                         Failure Mode: Idiopathic Pulmonary Fibrosis
+                                                                                                                        !
+                                                                                            Macrophage Fibroblast Circuit
+ Alveolus: Illustration
+
+Alveoli: H&E healthy
+
+                       D-BIOL, IMHS, Zindel                                                              20.04.2026
+Heart remodelling
+                                                                                                          !
+
+Healthy heart muscle
+                                                                                   Early provisional,
+                                                                                         weak!
+
+                                                                                    Late provisional
+
+                                                                                    Necessary scar
+
+           https://en.wikipedia.org
+
+               D-BIOL, IMHS, Zindel   https://doi.org/10.1038/s41598-019-53351-7             20.04.2026
+Skin
+                                       !
+
+   D-BIOL, IMHS, Zindel   20.04.2026
+Learning Objectives — Lecture 4: Remodelling
+
+• Students can distinguish between sanitatio per primam and per secundam intentionem — explaining
+  how gap size, DAMP load, and mechanical stability determine the scale of scaffold formation and
+  remodelling required.
+• Students can describe the sequential matrix composition during remodelling — from fibrin/fibronectin
+  scaffold through collagen III to mature collagen I — and explain what drives each transition.
+• Students can explain how MMP/TIMP balance controls ECM degradation — including the cysteine switch
+  mechanism of proMMP activation and why net ECM remodelling equals expression × activation −
+  inhibition.
+• Students can apply the concept of organ-specific remodelling goals — articulating why the physiological
+  scar differs between bone, liver, lung, heart and skin, and predicting the failure mode when remodelling
+  overshoots in each tissue.
+• Students can explain why fibrosis represents a failure of myofibroblast resolution — identifying TGF-β
+  and persistent DAMP signalling as the common drivers across organs, and giving organ-specific
+  examples (cirrhosis, IPF, cardiac fibrosis, keloid).
+
+              D-BIOL, IMHS, Zindel                                                               20.04.2026
+Prof. Dr. Joel Zindel
+Assistenzprofessor
+Joel.zindel@biol.ethz.ch
+
+ETH Zürich
+Institut für Molekulare Gesundheitswissenschaften (IMHS), D-BIOL
+HPL F32.2
+Otto-Stern-Weg 7
+8098 Zürich
+```
+
+---
+
 # Code overview
 
 <!-- file: code/README.md -->
 
 ## Code
+
+> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
 Analysis templates for the course. Every template is R unless stated, pinned with
 `renv` `[TODO: lockfile]`. You build the environment on the first day with your

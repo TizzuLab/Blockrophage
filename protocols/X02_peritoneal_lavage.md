@@ -1,5 +1,7 @@
 # X02 Peritoneal lavage (extension)
 
+> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
+
 > Extension. Requires mouse availability and licence coverage for post-mortem lavage
 > `[TODO: confirm licence coverage; record genotype per mouse]`. Mice are
 > breeding-surplus animals euthanised for colony management, of any genotype. No

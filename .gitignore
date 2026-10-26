@@ -1,5 +1,6 @@
-# Never in the public repository
+# Never in the public repository (lecture decks live in slides/ and are allowed)
 *.pdf
+!slides/*.pdf
 *.pptx
 Lectures/
 answer_key/
