@@ -1,6 +1,6 @@
 # Blockrophage: companion file
 
-Built 2026-10-26 from commit uncommitted of the course repository. This single file
+Built 2026-10-26 from commit 7608783 of the course repository. This single file
 contains the complete course material for the ETH Zürich block course
 "Macrophage Biology: in vitro, in vivo, in silico" (Spring Semester 2027).
 Repository: https://github.com/TizzuLab/blockrophage. It is meant to be given to a language model
