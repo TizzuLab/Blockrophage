@@ -1,0 +1,47 @@
+name: Build schedule mirror and companion
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install openpyxl
+      - name: Build companion (refreshes schedule.md)
+        run: python tools/build_companion.py --max-tokens 150000
+      - name: Upload companion as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: blockcourse-companion
+          path: companion/blockcourse-companion.md
+      - name: Commit regenerated files
+        if: github.event_name == 'push'
+        run: |
+          git config user.name "course-bot"
+          git config user.email "course-bot@users.noreply.github.com"
+          git add schedule/schedule.md companion/blockcourse-companion.md
+          git diff --cached --quiet || git commit -m "Regenerate schedule mirror and companion"
+          git push
+
+  release:
+    needs: build
+    if: startsWith(github.ref, 'refs/tags/')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: blockcourse-companion
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: blockcourse-companion.md

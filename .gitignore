@@ -1,0 +1,17 @@
+# Never in the public repository
+*.pdf
+*.pptx
+Lectures/
+answer_key/
+**/example_data/*.fcs
+**/example_data/*.h5
+**/*.rds
+**/*.h5ad
+**/*.h5seurat
+renv/library/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+~$*
+__pycache__/
