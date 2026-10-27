@@ -1,6 +1,6 @@
 # Blockrophage course: companion file
 
-Built 2026-10-27 from commit b026c2e of the course repository. This single file
+Built 2026-10-27 from commit 9de1613 of the course repository. This single file
 contains the complete course material for the ETH Zürich block course
 "Macrophage Biology: in vitro, in vivo, in silico" (Spring Semester 2027).
 Repository: https://github.com/TizzuLab/blockrophage-course. It is meant to be given to a language model
@@ -401,10 +401,6 @@ Weights and format are announced in the welcome session on the first day.
 The poster is made with the ETH scientific poster template, laid out in A3 and
 printed at A0; the [poster guide](poster/README.md) links the template on the ETH
 Corporate Design page and lists what the course expects on the poster.
-
-`[TODO: poster format, template; printing deadline Thu 15 Apr 14:00, printer; talk
-length; writing lecture: building an argument from data, figure design, what a good
-legend does, how to state limits honestly; Apéro catering.]`
 
 ### 9. Safety
 
