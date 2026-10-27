@@ -152,14 +152,10 @@ This log is read and scored.
 on the poster. The ladder is separate from the grade (Section 7). The group with the
 most points wins the prize `[TODO: prize and funding]`.
 
-**Failure round.** On the writing day each group presents one thing that went wrong
-and what it taught them. The best-analysed failure earns nerd points. Nobody loses
+**Failure round.** On the Wednesday of week 4, after the writing lecture and a day
+of poster production, each group presents one thing that went wrong and what it
+taught them. The best-analysed failure earns nerd points. Nobody loses
 points for a failed experiment that is properly analysed.
-
-**Student-organised event.** The students organise one evening event for the whole
-course in week four: a grant pitching challenge, a science slam, a speed journal
-club, a mock editorial board, or something else. The organising work and the event
-count on the nerd ladder.
 
 **Rules of the lab.** The same rules as in every research lab.
 
@@ -190,11 +186,14 @@ The schedule is a Gantt-style workbook,
 [`schedule/Blockcourse_Gantt_FS2027.xlsx`](schedule/Blockcourse_Gantt_FS2027.xlsx),
 rendered week by week as drawings and text in
 [`schedule/schedule.md`](schedule/schedule.md). It has one sheet per week, one row
-per group, a staff row and a resources row, and a cell per hour. Two layers:
+per group, a staff row and a resources row, and a cell per hour. Course hours are
+09:00 to 17:00 with lunch from 12:00 to 13:00. Two layers:
 
-- **Fixed layer**, drawn by the teaching staff: lectures, the facility lecture,
-  cytometer slots reserved by the flow cytometry facility, the writing day, the
-  poster day.
+- **Fixed layer**, drawn by the teaching staff: lectures and journal clubs, the
+  facility lecture, cytometer slots reserved by the flow cytometry facility, the
+  IMHS Lunch Seminar every Monday 12:00–13:00 and the Cutting Edge Immunology
+  Seminar every Tuesday 16:30–17:30 (weeks 2 to 4), the writing lecture, the recap,
+  the poster presentations.
 - **Group layer**, drawn by each group with its supervisor on the planning
   afternoon. The default rhythm is a checkerboard: two groups at the bench in the
   morning and two in the dry lab, swapped after lunch, so that two hoods are always
@@ -206,10 +205,10 @@ The fixed anchors:
 
 | Week | Dates | What is fixed |
 |---|---|---|
-| 1 | Thu 18 – Fri 19 March | Welcome, safety, groups. Lectures: tissue macrophages and nomenclature; the techniques of the course. Planning afternoon. Dry lab setup. Facility lecture on flow cytometry and FlowJo `[TODO: slot]`. Plans submitted. |
-| 2 | Mon 22 – Thu 25 March | Exp 1 (Section 5). Debrief Thursday 16:30. Easter break follows; nothing stays in culture. |
-| 3 | Mon 5 – Fri 9 April | Exp 2 (Section 5). Cytometer slots Wednesday `[TODO: facility]`. Debrief Friday 16:30. |
-| 4 | Mon 12 – Fri 16 April | Mon–Tue extensions or rescue path. Tue evening student event. Wed writing day and failure round. Thu poster production, feedback round, nerd ladder closes 17:00. Fri poster presentations, prize, evaluation, clean-up. |
+| 1 | Thu 18 – Fri 19 March | Thu: welcome, safety, groups 09:00; lecture on tissue macrophages and nomenclature 10:00–12:00; lecture on the techniques of the course 13:00; planning afternoon. Fri: dry lab setup; facility lecture on flow cytometry and FlowJo 13:00 `[TODO: slot]`; lab tour; plans submitted. |
+| 2 | Mon 22 – Thu 25 March | Exp 1 (Section 5). Mon 12:00 IMHS Lunch Seminar. Tue 16:30 Cutting Edge Immunology Seminar. Wed 09:00 lecture: tissue repair I, macrophages in injury and repair. Thu 09:00 journal club 1: the M1/M2 nomenclature revision `[TODO: paper]`. Debrief Thursday 16:00. Easter break follows; nothing stays in culture. |
+| 3 | Mon 5 – Fri 9 April | Exp 2 (Section 5). Mon 12:00 IMHS Lunch Seminar. Tue 09:00 lecture: single-cell transcriptomics for immunologists; Tue 16:30 Cutting Edge Immunology Seminar. Cytometer slots Wednesday `[TODO: facility]`. Thu 09:00 journal club 2: the peritoneal injury single-cell paper behind GSE186658 `[TODO: paper]`. Debrief Friday 16:00. |
+| 4 | Mon 12 – Fri 16 April | Mon–Tue extensions or rescue path; Mon 12:00 IMHS Lunch Seminar; Tue 16:30 Cutting Edge Immunology Seminar. Wed 09:00 lecture on scientific writing, then poster production with your supervisor; 16:00 failure round. Thu poster production; **printing deadline 14:00**: poster PDF committed to the group branch, nerd ladder closes; 14:00–17:00 recap and Q&A with the teaching staff. Fri lab clean-up, notebook and group branch finalised; 11:00 feedback round and course evaluation; 13:00–16:00 poster presentations and prize; 16:00 Apéro. |
 
 ## 5. The experiments
 
@@ -289,7 +288,6 @@ stupid but true, and you may as well learn it now.
 | Atlas contribution | List of accepted atlas entry IDs with a QR code `[TODO: atlas platform]` | 2 each |
 | Best-analysed failure | "What went wrong" box with cause, evidence and fix; jury ranks the boxes | 2 |
 | LLM error log | Box with the number of logged errors and the best example | 1–3 |
-| Student-organised event | One line on the organisers' poster: date, format, participants | 2 |
 | Best grant pitch | "Follow-up project" box: aims in three sentences, one budget line | 2 |
 
 ## 7. Assessment
@@ -308,16 +306,16 @@ The nerd ladder is scored separately, on the poster only, by the rules in Sectio
 When groups end with an equal grade, the nerd points decide `[TODO: what they
 decide]`.
 
-## 8. Writing day, poster and presentation
+## 8. Writing, poster and presentation
 
-`[TODO: poster format, template, printing; talk length; writing day programme:
-building an argument from data, figure design, what a good legend does, how to state
-limits honestly.]`
+`[TODO: poster format, template; printing deadline Thu 15 Apr 14:00, printer; talk
+length; writing lecture: building an argument from data, figure design, what a good
+legend does, how to state limits honestly; Apéro catering.]`
 
 ## 9. Safety
 
 `[TODO: biosafety level, chemicals, sharps, after-hours rules, extension-specific
-items (PFA, DAB, animal tissue), and a sentence on the student-organised event.]`
+items (PFA, DAB, animal tissue).]`
 
 ## Your companion
 
