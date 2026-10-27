@@ -225,7 +225,7 @@ def week_to_svg(ws, legend_items):
         w = cell_w(c1, c2)
         lines = wrap_text(cell.value, w)
         overflow = max(len(ln) for ln in lines) * CHAR_W > w - 2 * PAD
-        rotated = c1 > 1 and w < NARROW_W and (len(lines) > 2 or overflow)
+        rotated = c1 > 1 and ((w < NARROW_W and len(lines) > 2) or (overflow and w < 110))
         size = FONT_SIZE
         if rotated:
             lines, need, size = wrap_rotated(cell.value, w)
@@ -261,8 +261,15 @@ def week_to_svg(ws, legend_items):
             parts.append(f'<rect x="{x:.1f}" y="{y_of[rr]}" width="{w:.1f}" height="{rh}" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>')
             if cell.value is not None:
                 size = 10 if rr == 5 else FONT_SIZE
-                lines = wrap_text(cell.value, w, size)[:1]
-                parts.append(svg_text(x + PAD, y_of[rr] + (rh - (size + 3)) / 2, lines, "1A1A1A", bold=True, size=size))
+                txt = " ".join(str(cell.value).split())
+                if len(txt) * size * 0.56 > w - 2 * PAD:
+                    txt = txt.split()[0]           # "Morning 09:00-12:00" -> "Morning"
+                if len(txt) * size * 0.56 > w - 2 * PAD and size > 9:
+                    size = 9
+                if len(txt) * size * 0.56 > w - 2 * PAD:
+                    txt = ""                        # too narrow: the body cells carry the label
+                if txt:
+                    parts.append(svg_text(x + PAD, y_of[rr] + (rh - (size + 3)) / 2, [txt], "1A1A1A", bold=True, size=size))
     # body
     for (r1, r2, c1, c2, cell) in blocks:
         x, w = x_of(c1), cell_w(c1, c2)
@@ -321,14 +328,29 @@ def week_to_md(ws, legend, svg_name=None):
         labels.append((r, " ".join(str(ws.cell(row=r, column=1).value).split())))
         r += 1
     notes_rows = [r for r, l in labels if l.lower().startswith("notes")]
-    for c0, day in days:
-        lines += [f"### {day}", "", "| | Morning 08:30-12:30 | Afternoon 13:30-17:30 |", "|---|---|---|"]
+    # per-day segments (morning, lunch, afternoon ...) from the merged ranges of row 4
+    seg_of = {}
+    for rng in ws.merged_cells.ranges:
+        if rng.min_row == 4 and rng.min_col >= 2:
+            seg_of.setdefault(rng.min_col, (rng.min_col, rng.max_col, ws.cell(row=4, column=rng.min_col).value))
+    for c in range(2, ws.max_column + 1):
+        if c not in seg_of and ws.cell(row=4, column=c).value and c not in {k for k in seg_of}:
+            if not any(a <= c <= b for a, b, _ in seg_of.values()):
+                seg_of[c] = (c, c, ws.cell(row=4, column=c).value)
+    for i, (c0, day) in enumerate(days):
+        c_end = days[i + 1][0] - 1 if i + 1 < len(days) else ws.max_column
+        segs = sorted(v for k, v in seg_of.items() if c0 <= k <= c_end)
+        hdr = " | ".join(" ".join(str(h).split()) for _, _, h in segs)
+        lines += [f"### {day}", "", f"| | {hdr} |", "|" + "---|" * (len(segs) + 1)]
         for rr, label in labels:
             if rr in notes_rows:
                 continue
-            am = collect(ws, anchor, legend, rr, c0, c0 + 3)
-            pm = collect(ws, anchor, legend, rr, c0 + 4, c0 + 7)
-            lines.append(f"| {label} | {am} | {pm} |")
+            cells, prev = [], None
+            for a, b, _ in segs:
+                txt = collect(ws, anchor, legend, rr, a, b)
+                cells.append("(same as previous column)" if txt != "-" and txt == prev else txt)
+                prev = txt
+            lines.append(f"| {label} | " + " | ".join(cells) + " |")
         lines.append("")
     for rr in notes_rows:
         note = collect(ws, anchor, legend, rr, 2, ws.max_column)
