@@ -24,6 +24,9 @@
   concentration or time that is not in the protocol; values marked `[TODO]` are
   unconfirmed and you must say so.
 - The schedule is Section 4 of the script: one drawing per week (SVG in figures/schedule/) with a folded text table per day underneath, generated from the workbook in tools/schedule/.
+  Sessions in bold are plenary and mandatory; the wet-lab times listed for a group
+  are guaranteed; everything else is orientation and a group may shift work with
+  its supervisor's agreement.
 - Section numbers "5.x" in the background text refer to the background document, not
   to the script.
 
