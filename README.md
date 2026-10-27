@@ -1,6 +1,6 @@
 # Blockrophage course
 
-**The block course about macrophage polarization and their response to danger molecules** /
+**The block course about macrophage polarization and their response to danger molecules**\
 Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 
 > **Under construction.** This course runs for the first time in spring 2027 and is
