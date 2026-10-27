@@ -1,6 +1,6 @@
 # Blockrophage course: companion file
 
-Built 2026-10-27 from commit 06b484a of the course repository. This single file
+Built 2026-10-27 from commit c6d0475 of the course repository. This single file
 contains the complete course material for the ETH Zürich block course
 "Macrophage Biology: in vitro, in vivo, in silico" (Spring Semester 2027).
 Repository: https://github.com/TizzuLab/blockrophage-course. It is meant to be given to a language model
@@ -1962,9 +1962,6 @@ the rest of this chapter.
 
 ![Figure 2a: the decision tree, first level by ontogeny](figures/immIII_slide05.png)
 
-![Figure 2b: the decision tree, second level by tissue or niche](figures/immIII_slide11.png)
-
-![Figure 2c: the decision tree, second level by function or programme](figures/immIII_slide15.png)
 
 *Figure 2. The nomenclature decision tree for mononuclear phagocytes, adapted from Guilliams et al. 2014: (a) first level by ontogeny, (b) second level by tissue or niche, (c) second level by function or programme. (Immunology III, slides 5, 11 and 15.)*
 
