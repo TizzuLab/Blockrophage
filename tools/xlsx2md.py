@@ -79,11 +79,14 @@ def collect(ws, anchor, legend, row, c_from, c_to):
 import html as _html
 import textwrap
 
-LABEL_W, SLOT_W = 200, 64
-HEADER_H = (26, 20, 18)
-ROW_H = {"fixed": 72, "group": 96, "staff": 72, "resources": 60, "notes": 48}
-FONT_SIZE = 11
-CHAR_W = 6.3
+PAGE_W = 1200          # every week is drawn at the same width so GitHub scales them equally
+LABEL_W = 150
+HEADER_H = (26, 22, 18)
+MIN_ROW_H = {"fixed": 40, "group": 44, "staff": 40, "resources": 40, "notes": 36}
+FONT_SIZE = 12
+CHAR_W = FONT_SIZE * 0.56
+LINE_H = FONT_SIZE + 3
+PAD = 6
 
 
 def row_kind(label):
@@ -104,28 +107,66 @@ def font_rgb6(cell):
         return "1A1A1A"
 
 
-def wrap_text(text, width, height):
-    max_chars = max(8, int((width - 8) / CHAR_W))
-    max_lines = max(1, int((height - 6) / (FONT_SIZE + 2)))
-    lines = textwrap.wrap(" ".join(str(text).split()), max_chars)
-    if len(lines) > max_lines:
-        lines = lines[:max_lines]
-        lines[-1] = lines[-1][: max(0, max_chars - 1)] + "…"
-    return lines
+def wrap_text(text, width, size=FONT_SIZE):
+    max_chars = max(6, int((width - 2 * PAD) / (size * 0.56)))
+    out = []
+    for para in str(text).replace("\r", "").split("\n"):
+        para = " ".join(para.split())
+        out += textwrap.wrap(para, max_chars, break_long_words=False, break_on_hyphens=False) if para else []
+    return out or [""]
+
+
+NARROW_W = 70    # blocks narrower than this get rotated text when it does not fit horizontally
+ROT_MAX_H = 280  # rotated text never asks for more than this height; it shrinks, then truncates
+
+
+def wrap_rotated(text, width):
+    """Wrap for text running bottom-to-top in a narrow block. The block width limits
+    the number of lines; returns (lines, needed_height, font_size)."""
+    text = " ".join(str(text).split())
+    for size in (FONT_SIZE, 10):
+        lh, cw = size + 3, size * 0.56
+        max_lines = max(1, int((width - 2 * PAD) / lh))
+        L = max(6, -(-len(text) // max_lines))
+        while True:
+            lines = textwrap.wrap(text, L, break_long_words=False, break_on_hyphens=False) or [""]
+            if len(lines) <= max_lines:
+                break
+            L += 2
+        need = max(len(ln) for ln in lines) * cw + 2 * PAD
+        if need <= ROT_MAX_H:
+            return lines, need, size
+    maxc = int((ROT_MAX_H - 2 * PAD) / cw)
+    lines = [ln if len(ln) <= maxc else ln[: maxc - 1] + "…" for ln in lines]
+    return lines, ROT_MAX_H, size
+
+
+def svg_text_rotated(x, y_bottom, lines, color, bold=False, size=FONT_SIZE):
+    out = []
+    for i, ln in enumerate(lines):
+        tx = x + PAD + (i + 1) * (size + 3) - 3
+        out.append(f'<text x="{tx:.0f}" y="{y_bottom:.0f}" transform="rotate(-90 {tx:.0f} {y_bottom:.0f})" font-size="{size}" '
+                   f'fill="#{color}"{" font-weight=\"bold\"" if bold else ""}>{_html.escape(ln)}</text>')
+    return "\n".join(out)
 
 
 def svg_text(x, y, lines, color, bold=False, size=FONT_SIZE):
     out = []
     for i, ln in enumerate(lines):
-        out.append(f'<text x="{x:.0f}" y="{y + (i + 1) * (size + 2):.0f}" font-size="{size}" '
+        out.append(f'<text x="{x:.0f}" y="{y + (i + 1) * (size + 3) - 3:.0f}" font-size="{size}" '
                    f'fill="#{color}"{" font-weight=\"bold\"" if bold else ""}>{_html.escape(ln)}</text>')
     return "\n".join(out)
 
 
 def week_to_svg(ws, legend_items):
-    """Draw one week sheet as an SVG string. legend_items: [(label, fill hex, font hex)]."""
-    merged = {}
-    inside = set()
+    """Draw one week sheet as an SVG string. legend_items: [(label, fill hex, font hex)].
+
+    Every week is drawn at PAGE_W so the font renders at the same size on GitHub
+    regardless of how many days the week has. Row heights grow to fit the text.
+    Adjacent group rows that hold the same block (same span, text and colour) are
+    merged into one cell so a plenary or a shared plan is written once.
+    """
+    merged, inside = {}, set()
     for rng in ws.merged_cells.ranges:
         merged[(rng.min_row, rng.min_col)] = (rng.max_row, rng.max_col)
         for r in range(rng.min_row, rng.max_row + 1):
@@ -134,62 +175,120 @@ def week_to_svg(ws, legend_items):
                     inside.add((r, c))
     ncols = ws.max_column
     nslots = ncols - 1
-    width = LABEL_W + nslots * SLOT_W
+    slot_w = (PAGE_W - LABEL_W) / nslots
+    width = PAGE_W
+    show_slots = slot_w >= 40          # hourly time row only when it is legible
+
+    def x_of(c):
+        return 0 if c == 1 else LABEL_W + (c - 2) * slot_w
+
+    def cell_w(c1, c2):
+        return (x_of(c2) + (slot_w if c2 > 1 else LABEL_W)) - x_of(c1)
+
     labels = []
     r = HEADER_ROWS + 1
     while ws.cell(row=r, column=1).value:
         labels.append((r, " ".join(str(ws.cell(row=r, column=1).value).split())))
         r += 1
-    heights = {rr: ROW_H[row_kind(l)] for rr, l in labels}
-    y_of = {}
-    y = 0
-    for i, hr in enumerate(HEADER_H):
-        y_of[3 + i] = y; y += hr
-    for rr, _ in labels:
+    kinds = {rr: row_kind(l) for rr, l in labels}
+    body_rows = [rr for rr, _ in labels]
+
+    # blocks: (r1, r2, c1, c2, cell) with vertical merging of identical group cells
+    blocks, taken = [], set()
+    for rr in body_rows:
+        for c in range(1, ncols + 1):
+            if (rr, c) in inside or (rr, c) in taken:
+                continue
+            c2 = merged.get((rr, c), (rr, c))[1]
+            cell = ws.cell(row=rr, column=c)
+            r2 = rr
+            if c > 1 and kinds[rr] == "group" and cell.value is not None:
+                key = (c2, " ".join(str(cell.value).split()), rgb6(cell))
+                nxt = rr + 1
+                while nxt in kinds and kinds[nxt] == "group" and (nxt, c) not in inside:
+                    ncell = ws.cell(row=nxt, column=c)
+                    nc2 = merged.get((nxt, c), (nxt, c))[1]
+                    if ncell.value is None or (nc2, " ".join(str(ncell.value).split()), rgb6(ncell)) != key:
+                        break
+                    r2 = nxt
+                    for cc in range(c, c2 + 1):
+                        taken.add((nxt, cc))
+                    nxt += 1
+            blocks.append((rr, r2, c, c2, cell))
+
+    # row heights: fit the tallest wrapped text in each row (shared across a vertical span)
+    heights = {rr: MIN_ROW_H[kinds[rr]] for rr in body_rows}
+    wrapped = {}
+    for (r1, r2, c1, c2, cell) in blocks:
+        if cell.value is None:
+            continue
+        w = cell_w(c1, c2)
+        lines = wrap_text(cell.value, w)
+        overflow = max(len(ln) for ln in lines) * CHAR_W > w - 2 * PAD
+        rotated = c1 > 1 and w < NARROW_W and (len(lines) > 2 or overflow)
+        size = FONT_SIZE
+        if rotated:
+            lines, need, size = wrap_rotated(cell.value, w)
+        else:
+            need = len(lines) * LINE_H + 2 * PAD
+        wrapped[(r1, c1)] = (lines, rotated, size)
+        span = r2 - r1 + 1
+        per_row = -(-need // span)
+        for rr in range(r1, r2 + 1):
+            heights[rr] = max(heights[rr], per_row)
+
+    header_rows = [3, 4, 5] if show_slots else [3, 4]
+    y_of, y = {}, 0
+    for i, rr in enumerate(header_rows):
+        y_of[rr] = y; y += HEADER_H[rr - 3]
+    for rr in body_rows:
         y_of[rr] = y; y += heights[rr]
     legend_h = 26 + 18 * ((len(legend_items) + 1) // 2)
     height = y + 10 + legend_h
 
-    def x_of(c):
-        return 0 if c == 1 else LABEL_W + (c - 2) * SLOT_W
-
-    def cell_w(c1, c2):
-        return (x_of(c2) + (SLOT_W if c2 > 1 else LABEL_W)) - x_of(c1)
-
     parts = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" width="{width}" height="{height}" '
              f'font-family="Arial, Helvetica, sans-serif">',
              f'<rect x="0" y="0" width="{width}" height="{height}" fill="#ffffff"/>']
-    # header + body cells
-    rows_to_draw = [3, 4, 5] + [rr for rr, _ in labels]
-    for rr in rows_to_draw:
-        rh = HEADER_H[rr - 3] if rr <= 5 else heights[rr]
+    # headers
+    for rr in header_rows:
+        rh = HEADER_H[rr - 3]
         for c in range(1, ncols + 1):
             if (rr, c) in inside:
                 continue
             c2 = merged.get((rr, c), (rr, c))[1]
             cell = ws.cell(row=rr, column=c)
             x, w = x_of(c), cell_w(c, c2)
-            fill = rgb6(cell) or ("F2F2F2" if (rr <= 5 or c == 1) else "FFFFFF")
-            bold = bool(cell.font and cell.font.bold)
-            thick = fill in ("1F4E5F", "8B1E3F")
-            parts.append(f'<rect x="{x}" y="{y_of[rr]}" width="{w}" height="{rh}" fill="#{fill}" '
-                         f'stroke="#{"1A1A1A" if thick else "BFBFBF"}" stroke-width="{2 if thick else 0.8}"/>')
+            parts.append(f'<rect x="{x:.1f}" y="{y_of[rr]}" width="{w:.1f}" height="{rh}" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>')
             if cell.value is not None:
                 size = 10 if rr == 5 else FONT_SIZE
-                lines = wrap_text(cell.value, w, rh)
-                if rr <= 5:
-                    # centred headers
-                    parts.append(svg_text(x + 4, y_of[rr] + (rh - len(lines) * (size + 2)) / 2, lines, "1A1A1A", bold=True, size=size))
-                else:
-                    parts.append(svg_text(x + 4, y_of[rr] + 2, lines, font_rgb6(cell), bold=bold or c == 1))
+                lines = wrap_text(cell.value, w, size)[:1]
+                parts.append(svg_text(x + PAD, y_of[rr] + (rh - (size + 3)) / 2, lines, "1A1A1A", bold=True, size=size))
+    # body
+    for (r1, r2, c1, c2, cell) in blocks:
+        x, w = x_of(c1), cell_w(c1, c2)
+        yy = y_of[r1]
+        h = sum(heights[rr] for rr in range(r1, r2 + 1))
+        fill = rgb6(cell) or ("F2F2F2" if c1 == 1 else "FFFFFF")
+        bold = bool(cell.font and cell.font.bold)
+        thick = fill in ("1F4E5F", "8B1E3F")
+        parts.append(f'<rect x="{x:.1f}" y="{yy}" width="{w:.1f}" height="{h}" fill="#{fill}" '
+                     f'stroke="#{"1A1A1A" if thick else "BFBFBF"}" stroke-width="{2 if thick else 0.8}"/>')
+        if cell.value is not None:
+            lines, rotated, size = wrapped[(r1, c1)]
+            if rotated:
+                tlen = max(len(ln) for ln in lines) * size * 0.56
+                parts.append(svg_text_rotated(x, yy + (h + tlen) / 2, lines, font_rgb6(cell), bold=bold, size=size))
+            else:
+                ty = yy + PAD if r2 == r1 else yy + (h - len(lines) * LINE_H) / 2
+                parts.append(svg_text(x + PAD, ty, lines, font_rgb6(cell), bold=bold or c1 == 1))
     # legend
     ly = y + 10
-    parts.append(f'<text x="4" y="{ly + 14}" font-size="11" font-weight="bold" fill="#1A1A1A">Legend</text>')
+    parts.append(f'<text x="4" y="{ly + 14}" font-size="{FONT_SIZE}" font-weight="bold" fill="#1A1A1A">Legend</text>')
     for i, (label, fh, fc) in enumerate(legend_items):
         col, row = i % 2, i // 2
         lx, lyy = 4 + col * (width // 2), ly + 22 + row * 18
         parts.append(f'<rect x="{lx}" y="{lyy}" width="26" height="13" fill="#{fh}" stroke="#BFBFBF" stroke-width="0.8"/>')
-        parts.append(f'<text x="{lx + 32}" y="{lyy + 11}" font-size="10.5" fill="#1A1A1A">{_html.escape(label)}</text>')
+        parts.append(f'<text x="{lx + 32}" y="{lyy + 11}" font-size="11" fill="#1A1A1A">{_html.escape(label)}</text>')
     parts.append("</svg>")
     return "\n".join(parts)
 
