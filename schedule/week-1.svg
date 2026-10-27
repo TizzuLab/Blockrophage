@@ -8,61 +8,64 @@
 <text x="681" y="18" font-size="12" fill="#1A1A1A" font-weight="bold">Fri 19 Mar</text>
 <rect x="0.0" y="26" width="150.0" height="22" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
 <text x="6" y="42" font-size="12" fill="#1A1A1A" font-weight="bold">Half day</text>
-<rect x="150.0" y="26" width="262.5" height="22" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="156" y="42" font-size="12" fill="#1A1A1A" font-weight="bold">Morning 08:30-12:30</text>
+<rect x="150.0" y="26" width="196.9" height="22" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="156" y="42" font-size="12" fill="#1A1A1A" font-weight="bold">Morning 09:00-12:00</text>
+<rect x="346.9" y="26" width="65.6" height="22" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="353" y="42" font-size="12" fill="#1A1A1A" font-weight="bold">Lunch</text>
 <rect x="412.5" y="26" width="262.5" height="22" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="418" y="42" font-size="12" fill="#1A1A1A" font-weight="bold">Afternoon 13:30-17:30</text>
-<rect x="675.0" y="26" width="262.5" height="22" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="681" y="42" font-size="12" fill="#1A1A1A" font-weight="bold">Morning 08:30-12:30</text>
+<text x="418" y="42" font-size="12" fill="#1A1A1A" font-weight="bold">Afternoon 13:00-17:00</text>
+<rect x="675.0" y="26" width="196.9" height="22" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="681" y="42" font-size="12" fill="#1A1A1A" font-weight="bold">Morning 09:00-12:00</text>
+<rect x="871.9" y="26" width="65.6" height="22" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="878" y="42" font-size="12" fill="#1A1A1A" font-weight="bold">Lunch</text>
 <rect x="937.5" y="26" width="262.5" height="22" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="944" y="42" font-size="12" fill="#1A1A1A" font-weight="bold">Afternoon 13:30-17:30</text>
+<text x="944" y="42" font-size="12" fill="#1A1A1A" font-weight="bold">Afternoon 13:00-17:00</text>
 <rect x="0.0" y="48" width="150.0" height="18" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
 <text x="6" y="60" font-size="10" fill="#1A1A1A" font-weight="bold">Slot</text>
 <rect x="150.0" y="48" width="65.6" height="18" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="156" y="60" font-size="10" fill="#1A1A1A" font-weight="bold">08:30</text>
+<text x="156" y="60" font-size="10" fill="#1A1A1A" font-weight="bold">09:00</text>
 <rect x="215.6" y="48" width="65.6" height="18" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="222" y="60" font-size="10" fill="#1A1A1A" font-weight="bold">09:30</text>
+<text x="222" y="60" font-size="10" fill="#1A1A1A" font-weight="bold">10:00</text>
 <rect x="281.2" y="48" width="65.6" height="18" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="287" y="60" font-size="10" fill="#1A1A1A" font-weight="bold">10:30</text>
+<text x="287" y="60" font-size="10" fill="#1A1A1A" font-weight="bold">11:00</text>
 <rect x="346.9" y="48" width="65.6" height="18" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="353" y="60" font-size="10" fill="#1A1A1A" font-weight="bold">11:30</text>
+<text x="353" y="60" font-size="10" fill="#1A1A1A" font-weight="bold">12:00</text>
 <rect x="412.5" y="48" width="65.6" height="18" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="418" y="60" font-size="10" fill="#1A1A1A" font-weight="bold">13:30</text>
+<text x="418" y="60" font-size="10" fill="#1A1A1A" font-weight="bold">13:00</text>
 <rect x="478.1" y="48" width="65.6" height="18" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="484" y="60" font-size="10" fill="#1A1A1A" font-weight="bold">14:30</text>
+<text x="484" y="60" font-size="10" fill="#1A1A1A" font-weight="bold">14:00</text>
 <rect x="543.8" y="48" width="65.6" height="18" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="550" y="60" font-size="10" fill="#1A1A1A" font-weight="bold">15:30</text>
+<text x="550" y="60" font-size="10" fill="#1A1A1A" font-weight="bold">15:00</text>
 <rect x="609.4" y="48" width="65.6" height="18" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="615" y="60" font-size="10" fill="#1A1A1A" font-weight="bold">16:30</text>
+<text x="615" y="60" font-size="10" fill="#1A1A1A" font-weight="bold">16:00</text>
 <rect x="675.0" y="48" width="65.6" height="18" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="681" y="60" font-size="10" fill="#1A1A1A" font-weight="bold">08:30</text>
+<text x="681" y="60" font-size="10" fill="#1A1A1A" font-weight="bold">09:00</text>
 <rect x="740.6" y="48" width="65.6" height="18" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="747" y="60" font-size="10" fill="#1A1A1A" font-weight="bold">09:30</text>
+<text x="747" y="60" font-size="10" fill="#1A1A1A" font-weight="bold">10:00</text>
 <rect x="806.2" y="48" width="65.6" height="18" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="812" y="60" font-size="10" fill="#1A1A1A" font-weight="bold">10:30</text>
+<text x="812" y="60" font-size="10" fill="#1A1A1A" font-weight="bold">11:00</text>
 <rect x="871.9" y="48" width="65.6" height="18" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="878" y="60" font-size="10" fill="#1A1A1A" font-weight="bold">11:30</text>
+<text x="878" y="60" font-size="10" fill="#1A1A1A" font-weight="bold">12:00</text>
 <rect x="937.5" y="48" width="65.6" height="18" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="944" y="60" font-size="10" fill="#1A1A1A" font-weight="bold">13:30</text>
+<text x="944" y="60" font-size="10" fill="#1A1A1A" font-weight="bold">13:00</text>
 <rect x="1003.1" y="48" width="65.6" height="18" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="1009" y="60" font-size="10" fill="#1A1A1A" font-weight="bold">14:30</text>
+<text x="1009" y="60" font-size="10" fill="#1A1A1A" font-weight="bold">14:00</text>
 <rect x="1068.8" y="48" width="65.6" height="18" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="1075" y="60" font-size="10" fill="#1A1A1A" font-weight="bold">15:30</text>
+<text x="1075" y="60" font-size="10" fill="#1A1A1A" font-weight="bold">15:00</text>
 <rect x="1134.4" y="48" width="65.6" height="18" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="1140" y="60" font-size="10" fill="#1A1A1A" font-weight="bold">16:30</text>
+<text x="1140" y="60" font-size="10" fill="#1A1A1A" font-weight="bold">16:00</text>
 <rect x="0.0" y="66" width="150.0" height="167.0" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
 <text x="6" y="84" font-size="12" fill="#1A1A1A" font-weight="bold">Fixed layer</text>
 <text x="6" y="99" font-size="12" fill="#1A1A1A" font-weight="bold">(lectures, facility)</text>
-<rect x="150.0" y="66" width="131.2" height="167.0" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
-<text x="156" y="84" font-size="12" fill="#FFFFFF" font-weight="bold">Welcome, safety</text>
-<text x="156" y="99" font-size="12" fill="#FFFFFF" font-weight="bold">briefing, group</text>
-<text x="156" y="114" font-size="12" fill="#FFFFFF" font-weight="bold">formation</text>
-<rect x="281.2" y="66" width="131.2" height="167.0" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
-<text x="287" y="84" font-size="12" fill="#FFFFFF" font-weight="bold">Lecture: tissue</text>
-<text x="287" y="99" font-size="12" fill="#FFFFFF" font-weight="bold">macrophages and</text>
-<text x="287" y="114" font-size="12" fill="#FFFFFF" font-weight="bold">nomenclature</text>
-<text x="287" y="129" font-size="12" fill="#FFFFFF" font-weight="bold">(recap of</text>
-<text x="287" y="144" font-size="12" fill="#FFFFFF" font-weight="bold">Immunology III)</text>
+<rect x="150.0" y="66" width="65.6" height="167.0" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
+<text x="168" y="200" transform="rotate(-90 168 200)" font-size="12" fill="#FFFFFF" font-weight="bold">Welcome, safety</text>
+<text x="183" y="200" transform="rotate(-90 183 200)" font-size="12" fill="#FFFFFF" font-weight="bold">briefing, group</text>
+<text x="198" y="200" transform="rotate(-90 198 200)" font-size="12" fill="#FFFFFF" font-weight="bold">formation</text>
+<rect x="215.6" y="66" width="131.2" height="167.0" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
+<text x="222" y="84" font-size="12" fill="#FFFFFF" font-weight="bold">Lecture: tissue</text>
+<text x="222" y="99" font-size="12" fill="#FFFFFF" font-weight="bold">macrophages and</text>
+<text x="222" y="114" font-size="12" fill="#FFFFFF" font-weight="bold">nomenclature</text>
+<rect x="346.9" y="66" width="65.6" height="167.0" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.8"/>
 <rect x="412.5" y="66" width="65.6" height="167.0" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
 <text x="430" y="227" transform="rotate(-90 430 227)" font-size="12" fill="#FFFFFF" font-weight="bold">Lecture: the techniques</text>
 <text x="446" y="227" transform="rotate(-90 446 227)" font-size="12" fill="#FFFFFF" font-weight="bold">of this course, one</text>
@@ -85,8 +88,10 @@
 <rect x="0.0" y="233.0" width="150.0" height="44" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
 <text x="6" y="251" font-size="12" fill="#1A1A1A" font-weight="bold">Group A</text>
 <text x="6" y="266" font-size="12" fill="#1A1A1A" font-weight="bold">supervisor: ________</text>
-<rect x="150.0" y="233.0" width="262.5" height="176" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
+<rect x="150.0" y="233.0" width="196.9" height="176" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
 <text x="156" y="326" font-size="12" fill="#FFFFFF" font-weight="bold">Plenary</text>
+<rect x="346.9" y="233.0" width="65.6" height="176" fill="#EDEDED" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="353" y="326" font-size="12" fill="#5A5A5A">Lunch</text>
 <rect x="412.5" y="233.0" width="65.6" height="176" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
 <text x="418" y="326" font-size="12" fill="#FFFFFF" font-weight="bold">Lecture</text>
 <rect x="478.1" y="233.0" width="196.9" height="176" fill="#FFE699" stroke="#BFBFBF" stroke-width="0.8"/>
@@ -95,11 +100,14 @@
 <text x="484" y="326" font-size="12" fill="#1A1A1A">Gantt (your row), choose</text>
 <text x="484" y="340" font-size="12" fill="#1A1A1A">the PRR axis and the</text>
 <text x="484" y="356" font-size="12" fill="#1A1A1A">extensions</text>
-<rect x="675.0" y="233.0" width="262.5" height="176" fill="#FFE699" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="681" y="303" font-size="12" fill="#1A1A1A">Dry lab setup: clone the course</text>
-<text x="681" y="318" font-size="12" fill="#1A1A1A">repository, build the environment</text>
-<text x="681" y="333" font-size="12" fill="#1A1A1A">with your LLM, run the ELISA template</text>
-<text x="681" y="348" font-size="12" fill="#1A1A1A">on example data</text>
+<rect x="675.0" y="233.0" width="196.9" height="176" fill="#FFE699" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="681" y="296" font-size="12" fill="#1A1A1A">Dry lab setup: clone the</text>
+<text x="681" y="310" font-size="12" fill="#1A1A1A">course repository, build</text>
+<text x="681" y="326" font-size="12" fill="#1A1A1A">the environment with your</text>
+<text x="681" y="340" font-size="12" fill="#1A1A1A">LLM, run the ELISA template</text>
+<text x="681" y="356" font-size="12" fill="#1A1A1A">on example data</text>
+<rect x="871.9" y="233.0" width="65.6" height="176" fill="#EDEDED" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="878" y="326" font-size="12" fill="#5A5A5A">Lunch</text>
 <rect x="937.5" y="233.0" width="131.2" height="176" fill="#8B1E3F" stroke="#1A1A1A" stroke-width="2"/>
 <text x="944" y="326" font-size="12" fill="#FFFFFF" font-weight="bold">Facility lecture</text>
 <rect x="1068.8" y="233.0" width="131.2" height="176" fill="#FFE699" stroke="#BFBFBF" stroke-width="0.8"/>
@@ -121,7 +129,7 @@
 <text x="6" y="442" font-size="12" fill="#1A1A1A" font-weight="bold">prep and supervision</text>
 <rect x="150.0" y="409.0" width="525.0" height="42" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
 <text x="156" y="427" font-size="12" fill="#1A1A1A">Rooms, safety officer, group list. Supervisors sit with their group from</text>
-<text x="156" y="442" font-size="12" fill="#1A1A1A">14:30.</text>
+<text x="156" y="442" font-size="12" fill="#1A1A1A">14:00.</text>
 <rect x="675.0" y="409.0" width="525.0" height="42" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
 <text x="681" y="427" font-size="12" fill="#1A1A1A">Dry lab: walk around, unblock installs. Fallback environment ready [TODO].</text>
 <text x="681" y="442" font-size="12" fill="#1A1A1A">Collect the group plans at 17:00.</text>
