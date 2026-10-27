@@ -30,7 +30,7 @@ ORDER = [
     ("protocols/README.md", "Protocol index"),
     ("protocols/P*.md", "Core protocols"),
     ("protocols/X*.md", "Extension protocols"),
-    ("background/macrophage_biology.md", "Background reading"),
+    ("background/README.md", "Background reading"),
     ("background/reading_list.md", "Reading list"),
     ("slides/README.md", "Slides index"),
     ("slides/*.pdf", "Slides: extracted text"),
