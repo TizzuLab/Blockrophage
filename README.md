@@ -217,21 +217,15 @@ written first, then the significance.
 
 ## 6. Optional experiments
 
-Everything in this section is optional and there to up your nerd factor. The core
-programme is the story of the poster; what is added is your group's choice, made with
-your supervisors on the first afternoon and revised at the debriefs. Availability of
-surplus primary material, reagents and instruments decides what can run. Attempting
-everything does not mean showing everything: whatever is shown needs a figure or
-table, a legend stating n, a one-sentence claim and the method or a repository commit
-hash. How extensions are recognised beyond the poster is still being decided
-`[TODO: recognition of extensions]`.
+The core programme is composed of mainly established experiments, but students are encouraged
+to experiment on their own to complete their story/poster. The availability of surplus primary material, reagents and instruments 
+will be made available on day 1 and each group can define additional experiments they would like to attempt.
 
-Three extensions have protocols: qPCR of outputs and receptors
-([X01](protocols/X01_qpcr.md)), flow cytometry of primary peritoneal cells on the
-shared panel ([X02](protocols/X02_peritoneal_cells_flow.md)) and F4/80
-immunohistochemistry on tissue sections ([X03](protocols/X03_tissue_sections_ihc.md)).
+Some protocols are made available (prefix X... in protocol catalogue), others your group supervisor
+may have established, yet others you may need to establish from the literature. Here are some examples of 
+what you could do, but the list is non-exhaustive.
 
-| Experiment or extension | What goes on the poster |
+| Experiment or extension | What would  |
 |---|---|
 | Pipeline from raw matrices | QC figure from the GEO matrices, not the preprocessed object; commit hash |
 | Macrophages annotated | UMAP with Gata6+, Folr2+ Selenop+ and Trem2+ Spp1+ labelled, marker dot plot, cell counts |
