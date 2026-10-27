@@ -1,6 +1,6 @@
 # Blockrophage course: companion file
 
-Built 2026-10-27 from commit c6d0475 of the course repository. This single file
+Built 2026-10-27 from commit 4ee1926 of the course repository. This single file
 contains the complete course material for the ETH Zürich block course
 "Macrophage Biology: in vitro, in vivo, in silico" (Spring Semester 2027).
 Repository: https://github.com/TizzuLab/blockrophage-course. It is meant to be given to a language model
@@ -2000,10 +2000,6 @@ days in CSF1; they are the closest in vitro relative of a monocyte-derived
 macrophage, and still have never seen a niche. Keep this in mind when you compare
 either of them with a cell from a mouse.
 
-![Figure 3: The waves of macrophage ontogeny: yolk-sac erythro-myeloid progenitors, fetal-liver precursor macrophages and bone-marrow haematopoietic stem cells, and the tissue macrophages each wave supplies](figures/immIII_slide09.png)
-
-*Figure 3. The waves of macrophage ontogeny: yolk-sac erythro-myeloid progenitors, fetal-liver precursor macrophages and bone-marrow haematopoietic stem cells, and the tissue macrophages each wave supplies (Immunology III, slide 9.)*
-
 ![Figure 4: The reduced-complexity model: one question, is the cell of embryonic origin under homeostatic conditions, separates self-renewing tissue-resident macrophages from short-lived monocyte-derived ones](figures/immIII_slide10.png)
 
 *Figure 4. The reduced-complexity model: one question, is the cell of embryonic origin under homeostatic conditions, separates self-renewing tissue-resident macrophages from short-lived monocyte-derived ones (Immunology III, slide 10.)*
@@ -2057,13 +2053,6 @@ extension.
 | Skin epidermis | Langerhans cells | CD207 (langerin), IL-34 dependent | positive |
 | Intestinal lamina propria | gut macrophages | CX3CR1 high, CD64, monocyte-derived | positive |
 
-![Figure 5: Naming by niche: historic names or a tissue prefix, and several distinct niches per organ, sometimes of different origin](figures/immIII_slide12.png)
-
-*Figure 5. Naming by niche: historic names or a tissue prefix, and several distinct niches per organ, sometimes of different origin (Immunology III, slide 12.)*
-
-![Figure 6: The niche model: a shared core programme (PU.1, cMAF, IRF8) and niche-specific lineage-determining factors induced by niche signals such as TGFβ, RANKL and retinoic acid](figures/immIII_slide13.png)
-
-*Figure 6. The niche model: a shared core programme (PU.1, cMAF, IRF8) and niche-specific lineage-determining factors induced by niche signals such as TGFβ, RANKL and retinoic acid (Immunology III, slide 13.)*
 
 ![Figure 7: Survival signals per niche: CSF1 (M-CSF), CSF2 (GM-CSF) and IL-34, the second CSF1R ligand, and the knockout phenotypes behind the rule of 1234](figures/immIII_slide14.png)
 
