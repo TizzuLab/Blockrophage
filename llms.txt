@@ -66,7 +66,7 @@
 
 ## Slides
 
-- [Slides index](slides/README.md): the five lecture decks (PDF) the course builds on.
+- [Slides index](slides/README.md): five lecture decks (PDF), optional further reading; the course has no prerequisites.
 
 ## Code
 
