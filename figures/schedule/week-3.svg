@@ -91,7 +91,8 @@
 <text x="1190" y="320" transform="rotate(-90 1190 320)" font-size="10" fill="#FFFFFF" font-weight="bold">Debrief Exp 2: results, extension choices, res…</text>
 <rect x="0.0" y="328" width="150.0" height="127.0" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
 <text x="6" y="346" font-size="12" fill="#1A1A1A" font-weight="bold">Group A</text>
-<text x="6" y="361" font-size="12" fill="#1A1A1A" font-weight="bold">supervisor: ________</text>
+<text x="6" y="361" font-size="12" fill="#1A1A1A" font-weight="bold">supervisors: ______</text>
+<text x="6" y="376" font-size="12" fill="#1A1A1A" font-weight="bold">/ ______</text>
 <rect x="150.0" y="328" width="78.8" height="254.0" fill="#FFE699" stroke="#BFBFBF" stroke-width="0.8"/>
 <text x="168" y="546" transform="rotate(-90 168 546)" font-size="12" fill="#1A1A1A">Dry lab: scRNA-seq part 2,</text>
 <text x="183" y="546" transform="rotate(-90 183 546)" font-size="12" fill="#1A1A1A">derive M(IFNg+LPS) and</text>
@@ -182,10 +183,12 @@
 <text x="1192" y="586" transform="rotate(-90 1192 586)" font-size="12" fill="#FFFFFF" font-weight="bold">Debrief</text>
 <rect x="0.0" y="455.0" width="150.0" height="127.0" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
 <text x="6" y="473" font-size="12" fill="#1A1A1A" font-weight="bold">Group B</text>
-<text x="6" y="488" font-size="12" fill="#1A1A1A" font-weight="bold">supervisor: ________</text>
+<text x="6" y="488" font-size="12" fill="#1A1A1A" font-weight="bold">supervisors: ______</text>
+<text x="6" y="503" font-size="12" fill="#1A1A1A" font-weight="bold">/ ______</text>
 <rect x="0.0" y="582.0" width="150.0" height="107.0" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
 <text x="6" y="600" font-size="12" fill="#1A1A1A" font-weight="bold">Group C</text>
-<text x="6" y="615" font-size="12" fill="#1A1A1A" font-weight="bold">supervisor: ________</text>
+<text x="6" y="615" font-size="12" fill="#1A1A1A" font-weight="bold">supervisors: ______</text>
+<text x="6" y="630" font-size="12" fill="#1A1A1A" font-weight="bold">/ ______</text>
 <rect x="150.0" y="582.0" width="78.8" height="214.0" fill="#BDD7EE" stroke="#BFBFBF" stroke-width="0.8"/>
 <text x="168" y="783" transform="rotate(-90 168 783)" font-size="12" fill="#1A1A1A">P01 Thaw your own vial</text>
 <text x="183" y="783" transform="rotate(-90 183 783)" font-size="12" fill="#1A1A1A">(viability = Exp 1 readout).</text>
@@ -260,7 +263,8 @@
 <text x="1101" y="738" font-size="12" fill="#1A1A1A">so far</text>
 <rect x="0.0" y="689.0" width="150.0" height="107.0" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
 <text x="6" y="707" font-size="12" fill="#1A1A1A" font-weight="bold">Group D</text>
-<text x="6" y="722" font-size="12" fill="#1A1A1A" font-weight="bold">supervisor: ________</text>
+<text x="6" y="722" font-size="12" fill="#1A1A1A" font-weight="bold">supervisors: ______</text>
+<text x="6" y="737" font-size="12" fill="#1A1A1A" font-weight="bold">/ ______</text>
 <rect x="0.0" y="796.0" width="150.0" height="87" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
 <text x="6" y="814" font-size="12" fill="#1A1A1A" font-weight="bold">Staff (shared)</text>
 <text x="6" y="829" font-size="12" fill="#1A1A1A" font-weight="bold">prep and supervision</text>
