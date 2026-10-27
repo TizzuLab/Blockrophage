@@ -1,31 +1,31 @@
-# X03 Organ harvest and F4/80 immunohistochemistry (extension)
+# X03 F4/80 immunohistochemistry on tissue sections (extension)
 
 > **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage-course/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
-> Extension. Requires a mouse (shared with X02), licence coverage for organ harvest
-> `[TODO: confirm]`, paraffin processing at the histology facility and slide
-> scanner time. Plan with your supervisor in week 1; fixation, embedding and
-> sectioning span several days.
+> Extension. Depends on primary material: we may be able to provide fixed tissue or
+> paraffin blocks that are surplus from ongoing experimental work in the lab. Plan
+> with your supervisor on the first afternoon; processing, embedding and sectioning
+> by the facility span several days, so the tissue has to be committed in week 1.
 
 | | |
 |---|---|
 | ID | X03 |
 | Used in | Extension |
-| Hands-on time | 30 min harvest, 1 h sectioning, 2 × 3 h staining |
-| Wall-clock time | about 5 days (fixation 24 h, processing and embedding by the facility, sectioning, two staining days) |
-| Resources | dissection bench, fume hood, histology facility for processing, embedding and sectioning `[TODO: ETH facility and turnaround]`, pressure cooker, histology bench, slide scanner `[TODO: instrument]` |
-| Depends on | X02 (same mouse) |
+| Hands-on time | 1 h sectioning, 2 × 3 h staining |
+| Wall-clock time | about 5 days (processing and embedding by the facility, sectioning, two staining days) |
+| Resources | fume hood, histology facility for processing, embedding and sectioning `[TODO: ETH facility and turnaround]`, pressure cooker, histology bench, slide scanner `[TODO: instrument]` |
+| Depends on | surplus fixed tissue or paraffin blocks provided by staff |
 | Lab SOP | Zindel lab 011 "IHC staining (Biotin ABC)" (v1.0, 2026-07-16) and 01 "HE staining" (v1.0, 2026-03-18); both paraffin protocols. The SOP wins over this page. |
 
 ## Purpose
 
-Test the hypothesis that every tissue contains F4/80-positive macrophages, in an
-organ of the group's choice, by single-colour immunohistochemistry on paraffin
+Test the hypothesis that every tissue contains F4/80-positive macrophages, in the
+tissue available to your group, by single-colour immunohistochemistry on paraffin
 sections, with an H&E serial section for orientation.
 
 ## Materials
 
-- 4% formaldehyde (PFA) for fixation, 70% ethanol for storage, cassettes
+- Fixed tissue in 70% ethanol or paraffin blocks, as provided; cassettes
 - Paraffin processing, embedding and 3.5 µm sections by the histology facility;
   coated slides
 - Deparaffinisation and dehydration: xylene, 100%, 95% and 70% ethanol, distilled
@@ -46,19 +46,19 @@ sections, with an H&E serial section for orientation.
 
 ## Before you start
 
-- Organ chosen from the open list: liver, spleen, lung, kidney, heart, brain,
-  intestine, skin, adipose tissue, peritoneal wall, lymph node, bone marrow.
-- Spleen harvested as the positive control regardless of the chosen organ.
+- Tissue chosen from what staff can provide; ask for a piece of spleen as the
+  positive control whenever one is available.
+- Record what the staff tell you about the sample: tissue, fixation date, and the
+  experiment it came from.
 - Formaldehyde and xylene handled in the fume hood.
 - Slides labelled with pencil (solvent-proof).
 
 ## Procedure
 
-1. After lavage (X02), harvest the chosen organ and a piece of spleen. Fix in 4%
-   formaldehyde for 24 h at 4 °C, transfer to 70% ethanol, and hand the cassettes to
-   the histology facility for processing, paraffin embedding and 3.5 µm sections.
-   Ask for serial sections: one for F4/80, one for the no-primary control, one for
-   H&E.
+1. The tissue arrives fixed. Transfer to 70% ethanol if it is not already, and hand
+   the cassettes to the histology facility for processing, paraffin embedding and
+   3.5 µm sections. Ask for serial sections: one for F4/80, one for the no-primary
+   control, one for H&E. Blocks that arrive already embedded skip to sectioning.
 2. Deparaffinise: 2 × xylene 3 min, 2 × 100% ethanol 5 min, 95% ethanol 3 min,
    70% ethanol 3 min, distilled water 5 min.
 3. Antigen retrieval in 1× citrate buffer pH 6 in the pressure cooker, 110 °C for
@@ -70,7 +70,7 @@ sections, with an H&E serial section for orientation.
    TBS, 10 min. Rinse TBST 4 min.
 7. Biotinylated secondary 1:200 in diluent, 1 h, room temperature. Rinse TBST 4 min.
 8. ABC-HRP reagent, 30 min, room temperature. Rinse TBST 4 min.
-9. Develop with DAB, watching under the microscope until the spleen red pulp is
+9. Develop with DAB, watching under the microscope until the positive control is
    brown and the no-primary section is still clean; rinse in distilled water.
 10. Counterstain: Mayer's haematoxylin 7 min, rinse in running tap water until
     clear, differentiate with 1–2 dips of HCl-ethanol, blue under running tap water
@@ -84,18 +84,18 @@ sections, with an H&E serial section for orientation.
 ## Controls
 
 - No-primary section: secondary, ABC and DAB background.
-- Spleen: positive control; red-pulp macrophages are bright.
+- Spleen, when available: positive control; red-pulp macrophages are bright.
 
 ## Checkpoints
 
-- Spleen red pulp brown, no-primary section clean: the stain works and the organ
+- Positive control brown, no-primary section clean: the stain works and the tissue
   result can be read.
 
 ## Known failure modes
 
 - Everything brown: endogenous peroxidase not quenched, or DAB developed too long.
-- Nothing brown, spleen included: primary not FFPE-compatible or inactive, retrieval
-  skipped, or wrong secondary species.
+- Nothing brown, positive control included: primary not FFPE-compatible or
+  inactive, retrieval skipped, or wrong secondary species.
 - Sections lifting off: retrieval too harsh or uncoated slides.
 
 ## Reading the result

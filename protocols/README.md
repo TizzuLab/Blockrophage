@@ -23,8 +23,8 @@ P-files are the core programme, X-files are optional extensions (Section 6 of th
 | P07 | Griess assay | Exp 2 | 1 h | 1 h | plate reader |
 | P08 | Flow cytometry of polarized RAW cells | Exp 2 (core), X02 | 2 h stain + 1 h acquisition | half day | hood, cooled plate centrifuge, heating block, cytometer slot, FlowJo seat |
 | X01 | RNA isolation and qPCR | Extension | 1 h + 1.5 days | 6 h arm, then 2 days | hood, −80 °C, RNA bench, NanoDrop, thermal cycler, LightCycler 480 II |
-| X02 | Peritoneal lavage | Extension | 20 min per mouse + staining | half day, with cytometer slot | animal facility, dissection bench, cooled centrifuge, cytometer slot |
-| X03 | Organ harvest and F4/80 IHC | Extension | 30 min + 1 h + 2 × 3 h | about 5 days | dissection bench, histology facility (paraffin), pressure cooker, histology bench, slide scanner |
+| X02 | Peritoneal cells on the shared flow panel | Extension | 30 min + staining | half day, with cytometer slot | surplus peritoneal cell suspension provided by staff, ice, cooled centrifuge, cytometer slot |
+| X03 | F4/80 IHC on tissue sections | Extension | 1 h + 2 × 3 h | about 5 days | surplus fixed tissue or blocks provided by staff, histology facility (paraffin), pressure cooker, histology bench, slide scanner |
 
 ## Dependencies in time
 
@@ -34,7 +34,9 @@ P-files are the core programme, X-files are optional extensions (Section 6 of th
 - P06 and P07 run on the P05 supernatants, the same day or later from frozen aliquots.
 - P03 vials are re-thawed on the Monday after the break; Exp 2 plates come from the
   staff stock.
-- X02 and X03 share a mouse and must land on a cytometer slot.
+- X02 needs a cytometer slot on the day the peritoneal cells are available; X03
+  tissue must reach the facility in week 1. Both depend on surplus primary material
+  from ongoing work in the lab; ask on the first afternoon.
 
 ## Plate formats
 
