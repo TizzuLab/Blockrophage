@@ -189,7 +189,7 @@ go on the poster, and either can be your failure-round story.
 **Exp 2, week 3: polarize and challenge.** Seed plates from the staff culture and
 polarize into M(-), M(IFNγ), M(IL-4) and M(IFNγ+LPS) for 24 h
 ([P04](protocols/P04_polarization.md)). Wash and challenge M(-), M(IFNγ) and
-M(IL-4) with LPS and with the PRR axis your group chose, one 24 h arm
+M(IL-4) with LPS and with the PRR axis your group chose, one overnight (16 h) arm
 ([P05](protocols/P05_prr_challenge.md)); M(IFNγ+LPS) is characterised but not
 re-challenged, because a state that has already seen LPS shows endotoxin tolerance.
 Stain the unchallenged wells with the course antibody panel and acquire them in the

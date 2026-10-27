@@ -7,53 +7,62 @@
 | ID | P05 |
 | Used in | Exp 2 |
 | Hands-on time | 45 min to stimulate, 45 min to harvest |
-| Wall-clock time | 24 h |
-| Resources | hood, incubator shelf, centrifuge, −20 °C freezer |
+| Wall-clock time | 16 h (overnight) |
+| Resources | hood, incubator shelf, plate centrifuge, −20 °C freezer |
 | Depends on | P04 completed and washed |
-| Lab SOP | [TODO: link to the validated lab SOP; the SOP wins over this page] |
+| Lab SOP | Zindel lab "RAW 264.7 polarisation" (v1.0, 2025-12-08), stimulation and harvesting sections. The SOP wins over this page. |
 
 ## Purpose
 
 Ask whether polarization changes the response to a danger signal. Every state is
 challenged with LPS as the technical control shared by all groups, and with one
-further ligand chosen by the group. The readout in the core is the 24 h supernatant
-for ELISA (P06) and Griess (P07). The 6 h RNA arm is an extension (X01).
+further ligand chosen by the group. The readout in the core is the overnight
+supernatant for ELISA (P06) and Griess (P07). The 6 h RNA arm is an extension (X01).
 
 ## Materials
 
 | Stimulus | Receptor | Course role | Working concentration |
 |---|---|---|---|
-| LPS (E. coli O111:B4, ultrapure) | TLR4 | technical control for every group | 100 ng/mL |
+| LPS (E. coli O111:B4, ultrapure), lab stock; tube L1 from P04 | TLR4 | technical control for every group | 100 ng/mL |
 | Pam3CSK4 | TLR1/2 | optional axis | 1 µg/mL |
 | CpG ODN 1826 | TLR9 | optional axis | 1 µM |
 | Zymosan (depleted) | Dectin-1 | optional axis | 10 µg/mL |
 | R848 | TLR7 | optional axis | 1 µg/mL |
 
-Working concentrations `[TODO: confirm in the first run; there is no separate
-pilot]`. Suppliers and catalogue numbers `[TODO]`.
+> **To verify:** only the LPS ladder has been run in the lab (100 ng/mL for 16 h
+> gives about 300 pg/mL IL-6 from 2 × 10^4 cells in 200 µL, see P06). The other
+> working concentrations are literature values; suppliers and catalogue numbers
+> `[TODO]`.
 
 - Complete medium, warm
-- 1.5 mL tubes for supernatant aliquots, labelled
+- 96-well V-bottom plate (Faust 6091901) for clearing the supernatants, or 1.5 mL
+  tubes for the larger formats
+- Labelled tubes or a sealed plate for the frozen aliquots
 
 ## Before you start
 
 - Draw the plate map in the notebook before you pipette anything. Layout rule:
   3 states (M(-), M(IFNγ), M(IL-4)) × 3 conditions (unstimulated, LPS, chosen axis),
-  in triplicate, one time point (24 h). M(IFNγ+LPS) is not re-challenged (P04).
-- One well per state stays unstimulated for P08.
+  in triplicate, one time point. M(IFNγ+LPS) is not re-challenged (P04).
+- One set of wells per state stays unstimulated for P08.
+- Prepare 100× stocks of the stimuli in complete medium as in P04, and one master
+  mix per condition (7 µL of 100× per 700 µL medium). Vortex LPS between steps.
 
 ## Procedure
 
-1. Dilute the stimuli to working concentration in warm complete medium.
-2. Add to the washed wells from P04 according to the plate map. Record the clock
-   time.
-3. Incubate 24 h.
-4. Harvest: transfer the supernatant to a labelled tube, centrifuge 300 × g, 5 min
-   to remove cells and debris, transfer the cleared supernatant to a fresh tube.
-5. Aliquot: at least two aliquots per well (ELISA, Griess), freeze at −20 °C. Avoid
-   repeated freeze-thaw; one aliquot per assay.
-6. Photograph the wells before harvest; the morphology of challenged cells is part
+1. Remove the medium from the washed wells of P04 and add the condition mix
+   according to the plate map: 200 µL per 96-well. Record the clock time.
+2. Incubate 16 h at 37 °C, 5% CO2 (for example 17:00 to 09:00). This is the lab's
+   validated time; the draft of this course said 24 h. Record the real time.
+3. Photograph the wells before harvest; the morphology of challenged cells is part
    of the record.
+4. Harvest: transfer 180 µL supernatant per well into a V-bottom 96-well plate in
+   the same layout. Centrifuge the plate 900 × g, 5 min, to remove cells and debris.
+5. Transfer the cleared supernatant to a fresh plate or tubes without touching the
+   pellet: 100 µL goes onto the ELISA plate if P06 runs the same day (the lab starts
+   coating and blocking the ELISA plate before harvesting), 50 µL to the Griess
+   plate (P07), the rest is frozen at −20 °C as a reserve. Avoid repeated
+   freeze-thaw; one aliquot per assay.
 
 ## Controls
 
@@ -67,16 +76,19 @@ pilot]`. Suppliers and catalogue numbers `[TODO]`.
 ## Checkpoints
 
 - The plate map is in the notebook before the first pipette is touched.
-- After 24 h: LPS wells are visibly activated. If not, do not harvest yet; ask.
+- After 16 h: LPS wells are visibly activated. If not, do not harvest yet; ask.
 
 ## Known failure modes
 
 - Flat response everywhere: LPS inactive (ultrapure LPS loses activity when stored
-  diluted), or endotoxin contamination of the "unstimulated" medium making every
-  well look stimulated. The medium-only control separates the two.
-- Triplicates far apart: uneven seeding (P02) or pipetting order. Record the order.
+  diluted; make the 100× stocks fresh), or endotoxin contamination of the
+  "unstimulated" medium making every well look stimulated. The medium-only control
+  separates the two.
+- Triplicates far apart: uneven seeding (P02), LPS aggregates, or pipetting order.
+  Record the order.
+- Debris in the ELISA: supernatant taken before or without the 900 × g spin.
 
 ## Output
 
-Plate map with stimulation and harvest times, tube labels, freezer position, and
-the photograph before harvest.
+Plate map with stimulation and harvest times, tube or plate labels, freezer
+position, and the photograph before harvest.
