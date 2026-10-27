@@ -60,19 +60,6 @@ ubiquitous access to information of variable quality (Donna Haraway, Elon Musk).
 - **bullshit** exponentially outgrows the availability of substantiated claims (Carl T.
 Bergstrom, Jevin D. West). In order words: information is cheap, validation is not.
 
-
-| Arm | What you do | What it answers |
-|---|---|---|
-| 1. In vitro: reproduce the paradigm | Establish a RAW 264.7 culture and polarize it with the defined stimuli behind the textbook states, M(IFNγ), M(IL-4) and M(IFNγ+LPS). Quantify cytokines, nitric oxide and surface phenotype | Does the M1/M2 picture reproduce in a dish, with your hands, and how clean is it? |
-| 2. In silico: does the paradigm hold in living systems? | Derive the M(IFNγ+LPS) and M(IL-4) signatures from a public RAW 264.7 dataset and score every macrophage of single-cell transcriptomes from living model systems against them: a published dataset of injured mouse peritoneum (GSE186658) and a human dataset of homeostatic peritoneal fluid (GSE228030, preprocessed by the lab's HuMac pipeline) | How much of a real tissue macrophage population the in vitro states explain, and where the paradigm breaks |
-| 3. Challenge: is the heuristic still useful? | A model that is not 100 % true can still be useful. Challenge the polarized states through pattern-recognition receptors, with LPS and with the PRR axis your group chose, and measure how each state responds | Whether the classical states predict behaviour under a danger signal, which is what a heuristic has to do to earn its keep |
-
-Arms 1 and 3 run on the same cells in the same week (Exp 2, Section 5). The
-extensions (Section 6) take the question into tissue, with surplus primary material
-from ongoing work in the lab: flow cytometry of primary peritoneal cells on the same
-antibody panel as your in vitro cells, and F4/80 immunohistochemistry on tissue
-sections.
-
 ## 2. Learning objectives
 
 After this course you can:
@@ -93,34 +80,18 @@ After this course you can:
 
 ## 3. How the course works
 
-**Groups and supervisors.** Four groups of two students, mixed so that every group
-has someone comfortable at the bench and someone comfortable at the keyboard. Each
-group has two supervisors from the teaching staff who travel with it for the whole
-course and share the time between them. Supervisors may fold in experiments the lab
-needs anyway; those go into the group notebook like any other experiment and may
-appear on the poster.
+**Groups and supervisors.** On day 1 we build 3-4 groups of 2-3 students with 1-2 supervisors 
+from the lab.
 
-**Git and group branches.** This repository is the course, and each group works in
-its own branch of it, named by year and group (for example `2027/group-a`). Your
-supervisors own that branch: you push your changes to a branch of your own and open a
-pull request into the group branch, a supervisor reviews and merges. At the end of
-the course every group branch is a pull request into `main`; what was better than
-the original goes into next year's course, with your name on the commit. Nobody
-needs git experience on day one; the first morning covers accounts, cloning and the
-first pull request, and the companion knows the commands.
+**Git and group branches.** This repository **is** the course, and each group works in
+its own branch of it, named by year and group (for example `2027/group-a`). 
 
-**Lab notebook.** One shared electronic notebook per group `[TODO: tool, or the
-group branch itself]`. It contains your experiment plan, raw data and the analysis.
-The notebook is part of the grade.
+**Lab notebook.** grab a paper notebook in the lab or simply add your notes to your git branch.
 
 **Up your nerd factor.** Beyond the core programme there is a menu of optional
-experiments and extensions (Section 6). What your group adds is your choice, agreed
-with your supervisor on the first afternoon and revised at the debriefs. How
-extensions are recognised is still open `[TODO]`.
+experiments and extensions (Section 6). What your group adds is your choice (together with your supervisor)
 
-**Failure round.** On the Wednesday of week 4, after the writing lecture and a day
-of poster production, each group presents one thing that went wrong and what it
-taught them. A failed experiment that is properly analysed is worth as much as one
+**Failure rounds.** A failed experiment that is properly analysed is worth as much as one
 that worked.
 
 **Rules of the lab.** The same rules as in every research lab.
@@ -134,16 +105,12 @@ that worked.
   expensive, some are irreplaceable within the course.
 - If you have a question, ask your supervisor. If you have a problem, ask earlier.
 
-**Attendance.** Attendance on all 16 days is mandatory and a prerequisite to pass.
-An unavoidable absence is announced in writing to the course coordinator and to
-Prof. Zindel before it happens.
+**Attendance.** I have to check with the department whether you need to show up or not, 
+would be nice though we invest a lot of energy in this course.
 
-**Primary material.** The core programme uses the RAW 264.7 cell line only. For the
+**Primary material.** The core programme uses the RAW 264.7 cell line. For the
 extensions we may be able to provide primary tissues or cells that are surplus from
 ongoing experimental work in the lab.
-
-**Open ear.** An anonymous online form is open for the whole course for feedback,
-concerns and ideas `[TODO: link]`.
 
 ## 4. Schedule
 
@@ -151,23 +118,14 @@ Course hours are 09:00 to 17:00, lunch 12:00 to 13:00, Thu 18 March to Fri 16
 April 2027 with the Easter break from Fri 26 March to Sun 4 April (no course, no
 cultures).
 
-**How to read this schedule.** Sessions in **bold** are plenary and mandatory:
-lectures, seminars, journal clubs, debriefs, the failure round, the recap and the
-poster day. The wet-lab times listed for your group are guaranteed: hoods and
-cytometer slots are reserved for you then. Everything else is orientation. If space
-permits, which it usually will, your group can shift work with your supervisor's
-agreement. Nobody submits a timetable; your plan lives in your notebook and changes
-when the experiments do.
+**How to read this schedule.** Sessions in **bold** are plenary and mandatory. 
+Everything else is orientation. If space permits, which it usually will, your group can 
+shift work with your supervisor's agreement.
 
 **Capacity.** Two groups work at the bench per half day, the other two in the dry
 lab, swapped after lunch. Groups A and B form one pair, C and D the other, and the
 pairs stay fixed within a week because the group that starts an overnight step
-harvests it. `[TODO: hoods available per half day]`
-
-The drawings below are generated from the workbook
-`tools/schedule/Blockcourse_Gantt_FS2027.xlsx`: to change the schedule, edit the
-workbook and run `python3 tools/schedule/gantt2readme.py` (CI does it on push). Under
-each drawing is a folded text version, which is what the companion reads.
+harvests it.
 
 <!-- schedule:begin -->
 <!-- Generated from tools/schedule/Blockcourse_Gantt_FS2027.xlsx by tools/schedule/gantt2readme.py. Do not edit by hand: edit the workbook and rerun. -->
