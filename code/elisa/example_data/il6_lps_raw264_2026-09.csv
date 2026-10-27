@@ -1,0 +1,32 @@
+well,plate_row,plate_col,type,condition,lps_ng_ml,standard_pg_ml,replicate,od450,dilution_factor
+A1,A,1,sample,vehicle,0,,1,0.081,1
+A3,A,3,sample,LPS 0.1 ng/mL,0.1,,1,0.0821,1
+A4,A,4,sample,LPS 0.1 ng/mL,0.1,,2,0.0806,1
+A5,A,5,sample,LPS 0.1 ng/mL,0.1,,3,0.086,1
+A9,A,9,standard,standard,,500,1,2.9897,1
+A10,A,10,standard,standard,,500,2,2.8709,1
+B1,B,1,sample,vehicle,0,,2,0.0803,1
+B3,B,3,sample,LPS 1 ng/mL,1,,1,0.2592,1
+B4,B,4,sample,LPS 1 ng/mL,1,,2,0.2722,1
+B5,B,5,sample,LPS 1 ng/mL,1,,3,0.267,1
+B9,B,9,standard,standard,,250,1,1.7099,1
+B10,B,10,standard,standard,,250,2,1.734,1
+C1,C,1,sample,vehicle,0,,3,0.0858,1
+C3,C,3,sample,LPS 10 ng/mL,10,,1,1.1359,1
+C4,C,4,sample,LPS 10 ng/mL,10,,2,0.9616,1
+C5,C,5,sample,LPS 10 ng/mL,10,,3,1.0309,1
+C9,C,9,standard,standard,,125,1,0.9084,1
+C10,C,10,standard,standard,,125,2,0.9361,1
+D3,D,3,sample,LPS 100 ng/mL,100,,1,2.3176,1
+D4,D,4,sample,LPS 100 ng/mL,100,,2,2.2039,1
+D5,D,5,sample,LPS 100 ng/mL,100,,3,1.8516,1
+D9,D,9,standard,standard,,62.5,1,0.4645,1
+D10,D,10,standard,standard,,62.5,2,0.4645,1
+E9,E,9,standard,standard,,31.25,1,0.2617,1
+E10,E,10,standard,standard,,31.25,2,0.2906,1
+F9,F,9,standard,standard,,15.625,1,0.1781,1
+F10,F,10,standard,standard,,15.625,2,0.1756,1
+G9,G,9,standard,standard,,7.8125,1,0.13,1
+G10,G,10,standard,standard,,7.8125,2,0.1307,1
+H9,H,9,standard,standard,,0,1,0.0907,1
+H10,H,10,standard,standard,,0,2,0.0877,1

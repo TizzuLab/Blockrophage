@@ -11,15 +11,16 @@ description of the object.
 
 | Folder | Purpose | Input | Output |
 |---|---|---|---|
-| `elisa/` | Four-parameter logistic standard curve, concentration table, plots by state and stimulus | plate-reader export, plate map | `elisa_results.csv`, figures |
+| `elisa/` | Four-parameter logistic standard curve, concentration table, plots by condition. Written; runs on the lab's IL-6 example data | tidy CSV (one row per well) | `elisa_results.csv`, `elisa_summary.csv`, figure |
 | `griess/` | Linear nitrite standard, concentration table, plots | plate-reader export, plate map | `griess_results.csv`, figures |
 | `flow/` | Reads the population statistics exported from FlowJo and plots them. Gating is done in FlowJo, not in R | FlowJo CSV export | figures |
 | `growth_curve/` | Doubling time from daily counts, with the published value as a reference line | counts table from P01 | figure, doubling time |
 | `scrnaseq/` | The in silico arm, three parts (below) | preprocessed objects shipped by the staff | figures |
 | `qpcr/` | ΔΔCt for the X01 extension | Ct export | figures |
 
-`[TODO: write the templates; each folder gets a README, an `example_data/` subfolder
-and one script that runs end to end on the example data.]`
+`[TODO: write the remaining templates; each folder gets a README, an `example_data/`
+subfolder and one script that runs end to end on the example data. `elisa/` is the
+model.]`
 
 ## The in silico arm, `scrnaseq/`
 
