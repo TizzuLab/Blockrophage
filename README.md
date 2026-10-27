@@ -259,13 +259,12 @@ Corporate Design page and lists what the course expects on the poster.
 
 ## 9. Safety
 
-The [safety sheet](safety/README.md) is two pages: what you should have read
-already (the ETH Zürich biosafety concept, public, and the IMHS safety concept 2026,
-sent by email), and what you need to know for this course: biosafety level,
-protection and conduct, the cabinet, the chemicals of this course with one rule
-each, sharps, waste, incidents and emergency numbers. It ends with the
-confirmation you sign after the briefing on the first morning, which is recorded
-in the lab's biosafety file.
+The [safety sheet](safety/README.md) is two pages and is the whole safety
+instruction for this course: where the rules come from, and what you need to know
+here: biosafety level, protection and conduct, the cabinet, the chemicals of this
+course with one rule each, sharps, waste, incidents and emergency numbers. It ends
+with the confirmation you sign after the briefing on the first morning, which is
+the written record the ETH biosafety concept asks for.
 
 ## Your companion
 

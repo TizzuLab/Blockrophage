@@ -4,26 +4,21 @@
 
 Two pages. Read them before the first day, bring them to the safety briefing on
 Thursday 18 March 2027, 09:00, and sign the last section after the briefing. The
-signed sheet is your admission to the bench.
+signed sheet is your admission to the bench. This sheet and the briefing are your
+safety instruction for the course; there is nothing else to read.
 
-## 1. What you should have read already
+## 1. Where these rules come from
 
-- **The ETH Zürich biosafety concept** for level 1 and 2 laboratories, published by
-  Safety, Security, Health and Environment (SSHE):
-  <https://ethz.ch/content/dam/ethz/associates/services/Service/sicherheit-gesundheit-umwelt/files/biosicherheit_neu/en/Biosafety_concept.pdf>.
-  It is the framework for every lab at ETH. If you have not read it, do it now; the
-  first thirteen pages are the concept, the rest are the annexes you will meet
-  below `[TODO: check the SSHE page for a newer version than January 2017]`.
-- **The IMHS safety concept 2026**, the binding document for the rooms you work in.
-  It is an internal document of the Institute of Molecular Health Sciences and is
-  sent to you by email with your enrolment confirmation. It follows the ETH
-  concept section by section and adds the institute's rules, contacts and waste
-  plan.
-
-Both say the same thing about you: the group leader or a delegate instructs every
-new person in the lab, and the instruction is recorded in writing (ETH concept,
-section 6.3; IMHS concept, sections 3.3.1 and 6.3). The briefing and your
-signature below are that record.
+Every lab at ETH works under the ETH Zürich biosafety concept for level 1 and 2
+laboratories, published by Safety, Security, Health and Environment (SSHE,
+<https://ethz.ch/content/dam/ethz/associates/services/Service/sicherheit-gesundheit-umwelt/files/biosicherheit_neu/en/Biosafety_concept.pdf>),
+and the Institute of Molecular Health Sciences has its own safety concept on top of
+it. Both are written for the people who run labs, not for the people who spend four
+weeks in one. They require that every new person is instructed by the group leader
+or a delegate and that the instruction is recorded in writing. This sheet is that
+instruction, condensed to what applies to you, and your signature in section 3 is
+the record. The section numbers in brackets below point into the IMHS concept for
+anyone who wants the full text; ask the course lead for a copy.
 
 ## 2. Specifically for this course you need to know
 
@@ -92,11 +87,9 @@ first, then the supervisor, then the course lead.
 
 ## 3. Confirmation
 
-I confirm that I have read the ETH Zürich biosafety concept at least once, that I
-have received the IMHS safety concept 2026, that I have read this course safety
-sheet, and that I attended the safety briefing of the Blockrophage course on the
-date below. I will comply with these rules and ask my supervisor whenever I am not
-sure.
+I confirm that I have read this safety sheet, that I attended the safety briefing
+of the Blockrophage course on the date below, that my questions were answered, and
+that I will follow these rules and ask my supervisor whenever I am not sure.
 
 | Name | Date | Signature |
 |---|---|---|
