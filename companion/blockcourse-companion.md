@@ -1,6 +1,6 @@
 # Blockrophage course: companion file
 
-Built 2026-10-27 from commit f9faecb of the course repository. This single file
+Built 2026-10-27 from commit 575217b of the course repository. This single file
 contains the complete course material for the ETH Zürich block course
 "Macrophage Biology: in vitro, in vivo, in silico" (Spring Semester 2027).
 Repository: https://github.com/TizzuLab/blockrophage-course. It is meant to be given to a language model
@@ -154,13 +154,13 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 | | |
 |---|---|
 | Course title | Macrophage Biology: in vitro, in vivo, in silico `[TODO: confirm final title]` |
-| Course number / ECTS | / 6 ECTS |
+| Course number / ECTS | 6 ECTS |
 | Dates | Thu 18 March to Fri 16 April 2027, 16 working days; no course Fri 26 March to Sun 4 April (Easter break) |
 | Lecturer | Prof. Dr. med. Joel Zindel |
-| Teaching staff | Two supervisors per group: Alicia Halbach, Marielle Airoldi, Manuel Prampolini, Agnes Huber, Tea Kocijan, Franzi Ampenberger, John Li Flores Alvarez, Brooke Slade; flow cytometry facility `[TODO: name]` |
-| Location | HPL, F floor `[TODO: seminar room, flow facility]` |
+| Teaching staff | Two supervisors per group: Alicia Halbach, Marielle Airoldi, Manuel Prampolini, Agnes Huber, Tea Kocijan, Franzi Ampenberger, John Li Flores Alvarez, Brooke Slade; flow cytometry facility (PD Dr. Florian Mair) |
+| Location | HPL, F floor |
 | Students | 8, in four groups of two |
-| Prerequisites | None. The course starts from scratch: no prior immunology, no cell culture and no programming experience required. See *What you need for this course* below |
+| Prerequisites | None. The course starts from scratch: no prior immunology, no cell culture and no programming experience required. |
 | Language | English |
 | Version | 0.5, 2026-10-27 |
 
@@ -183,26 +183,24 @@ this repository (Section 3).
 ### 1. Concept
 
 Every student arrives with the textbook picture of macrophages: M1 kills, M2 heals.
-In this course you first build that picture with your own hands, in a dish. Then you
+In this course we first recapitulate the experiments that fostered this paradigm. Then we
 take it to real tissue macrophages, in a published single-cell dataset of injured
-peritoneum, and test whether it survives. It will not survive intact. The field made
-the same discovery about ten years ago and rewrote its nomenclature; you make it in
-four weeks. The [background reading](background/macrophage_biology.md) tells that
+peritoneum, and test whether the M1/M2 heuristic survives (spoiler: it does not). Lastly, 
+we discover how models (such as the M1/M2 heuristic) can be wrong yet useful, for example 
+in explaining how macrophages differ in their response to danger molecules.
+The [background reading](background/macrophage_biology.md) tells that
 story and condenses the optional [lectures](slides/).
 
-The course rests on three principles.
+Teaching principles.
 
-- **Learning by doing.** You run every experiment yourself, including the one that
-  goes wrong, and we analyse the failures together.
-- **Half of what we teach is wrong, and we do not know which half.** The M1/M2 story
-  is the textbook example of knowledge that had to be revised. You reproduce the
-  evidence that forced the revision.
-- **You are a cyborg.** You use large language models to set up software, write and
-  debug analysis code, and read protocols. Information is cheap; verified information
-  is not.
+- **Experiential learning.** direct experience, reflection, and active experimentation (David Kolb).
+- **Fallibilism** We adhere to fallibilism, acknowledging the inherent uncertainty and revisability of knowledge
+(Karl Popper). In order words: half of what we teach is wrong, but we don’t know which half(precise origin unknown).
+- **Humans are cybors** and the blurring boundaries between human and machine facilitate
+ubiquitous access to information of variable quality (Donna Haraway, Elon Musk).
+- **bullshit** exponentially outgrows the availability of substantiated claims (Carl T.
+Bergstrom, Jevin D. West). In order words: information is cheap, validation is not.
 
-One question, three arms. Each arm is one move in an argument about the M1/M2
-paradigm: reproduce it, test it, then ask what it is still good for.
 
 | Arm | What you do | What it answers |
 |---|---|---|
