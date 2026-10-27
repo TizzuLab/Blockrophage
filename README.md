@@ -13,7 +13,7 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 | | |
 |---|---|
 | Course title | Macrophage Biology: in vitro, in vivo, in silico `[TODO: confirm final title]` |
-| Course number / ECTS | `[TODO: number]` / 6 ECTS |
+| Course number / ECTS | / 6 ECTS |
 | Dates | Thu 18 March to Fri 16 April 2027, 16 working days; no course Fri 26 March to Sun 4 April (Easter break) |
 | Lecturer | Prof. Dr. med. Joel Zindel |
 | Teaching staff | Two supervisors per group: Alicia Halbach, Marielle Airoldi, Manuel Prampolini, Agnes Huber, Tea Kocijan, Franzi Ampenberger, John Li Flores Alvarez, Brooke Slade; flow cytometry facility `[TODO: name]` |
