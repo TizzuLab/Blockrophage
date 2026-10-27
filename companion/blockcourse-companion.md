@@ -1,6 +1,6 @@
 # Blockrophage course: companion file
 
-Built 2026-10-27 from commit 4ee1926 of the course repository. This single file
+Built 2026-10-27 from commit e0c3abe of the course repository. This single file
 contains the complete course material for the ETH Zürich block course
 "Macrophage Biology: in vitro, in vivo, in silico" (Spring Semester 2027).
 Repository: https://github.com/TizzuLab/blockrophage-course. It is meant to be given to a language model
@@ -1923,16 +1923,8 @@ hypothesis and its outcome on the poster.
 
 > **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage-course/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
-This is the background reading for the course. It condenses the Immunology III
-lecture on tissue macrophages and the tissue repair lectures to what you need for
-the experiments, and it adds the history of the ideas you are going to test. Slide
-numbers refer to the Immunology III lecture of 1 December 2025, in the
-[slides folder](../slides/README.md) of this repository. Each subsection ends with
-questions. We will not collect answers, but we will ask them.
-
-The figures in this chapter are the lecture slides themselves. Figures taken from
-the published literature are cited on the slide and remain the property of their
-owners; the CC BY licence of this repository covers the lecturer's own material only.
+This is the background reading for the course based on Immunology III (1 December 2025)
+and the tissue repair lectures. It adds the history of the ideas underlying this course. 
 
 ### 5.1 A cell with many names
 
@@ -1948,14 +1940,15 @@ circulation and settled. In 1973 Steinman added the dendritic cell as a third me
 
 *Figure 1. The historical concepts: Mechnikov's phagocytes, Aschoff's reticulo-endothelial system, van Furth's mononuclear phagocyte system and Steinman's dendritic cell (Immunology III, slide 3.)*
 
-The monocyte premise held for forty years and then fell within three. Fate-mapping
-experiments published between 2010 and 2013 showed that most tissue-resident
+The monocyte premise held for forty years but with the availability of fate-mapping
+experiments published between 2010 and 2013, the field showed that most tissue-resident
 macrophages are seeded during embryonic development and maintain themselves by
 local proliferation, with little or no input from blood monocytes in the steady state
-(Schulz et al. 2012; Yona et al. 2013; Hashimoto et al. 2013). This is the first of
-several facts in this chapter that were in every textbook and turned out to be wrong.
+(Schulz et al. 2012; Yona et al. 2013; Hashimoto et al. 2013).
 
-The consequence is that a macrophage's name has to answer three questions: where it
+I think the rise and fall of M1/M2 should go inhere!!!
+ 
+ where it
 came from, where it lives, and what it is doing. The lecture introduced a decision
 tree for this (slides 5, 11, 15; Guilliams et al. 2014), and the three levels structure
 the rest of this chapter.
