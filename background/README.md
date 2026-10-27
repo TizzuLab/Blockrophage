@@ -8,5 +8,7 @@ repair lectures, with the history of the ideas the experiments test and question
 at the end of every section. `reading_list.md` holds the references and the two
 public datasets used in the dry lab.
 
-The lecture decks themselves are in `../slides/`.
-link]`, not in this repository, because they contain third-party figures.
+The lecture decks themselves are in `../slides/`. `figures/` holds the slides cited
+in the text, extracted as PNG and embedded where they are cited; figures taken from
+the published literature are cited on the slide and remain the property of their
+owners.

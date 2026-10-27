@@ -9,6 +9,10 @@ numbers refer to the Immunology III lecture of 1 December 2025, in the
 [slides folder](../slides/README.md) of this repository. Each subsection ends with
 questions. We will not collect answers, but we will ask them.
 
+The figures in this chapter are the lecture slides themselves. Figures taken from
+the published literature are cited on the slide and remain the property of their
+owners; the CC BY licence of this repository covers the lecturer's own material only.
+
 ## 5.1 A cell with many names
 
 In 1892 Ilya Mechnikov described cells that eat: small eaters, which we now call
@@ -18,6 +22,10 @@ van Furth and colleagues replaced that with the mononuclear phagocyte system, bu
 on the premise that every tissue macrophage is a blood monocyte that has left the
 circulation and settled. In 1973 Steinman added the dendritic cell as a third member
 (slide 3).
+
+![Figure 1: The historical concepts: Mechnikov's phagocytes, Aschoff's reticulo-endothelial system, van Furth's mononuclear phagocyte system and Steinman's dendritic cell](figures/immIII_slide03.png)
+
+*Figure 1. The historical concepts: Mechnikov's phagocytes, Aschoff's reticulo-endothelial system, van Furth's mononuclear phagocyte system and Steinman's dendritic cell (Immunology III, slide 3.)*
 
 The monocyte premise held for forty years and then fell within three. Fate-mapping
 experiments published between 2010 and 2013 showed that most tissue-resident
@@ -31,8 +39,13 @@ came from, where it lives, and what it is doing. The lecture introduced a decisi
 tree for this (slides 5, 11, 15; Guilliams et al. 2014), and the three levels structure
 the rest of this chapter.
 
-`[FIGURE 2: the nomenclature decision tree, from lecture slides 5/11/15, adapted from
-Guilliams et al. 2014, Nat Rev Immunol 14:571.]`
+![Figure 2a: the decision tree, first level by ontogeny](figures/immIII_slide05.png)
+
+![Figure 2b: the decision tree, second level by tissue or niche](figures/immIII_slide11.png)
+
+![Figure 2c: the decision tree, second level by function or programme](figures/immIII_slide15.png)
+
+*Figure 2. The nomenclature decision tree for mononuclear phagocytes, adapted from Guilliams et al. 2014: (a) first level by ontogeny, (b) second level by tissue or niche, (c) second level by function or programme. (Immunology III, slides 5, 11 and 15.)*
 
 Questions. Why did it take until 2012 to overturn the monocyte premise, when
 macrophages had been studied for a century? What experiment would you design to
@@ -69,8 +82,13 @@ days in CSF1; they are the closest in vitro relative of a monocyte-derived
 macrophage, and still have never seen a niche. Keep this in mind when you compare
 either of them with a cell from a mouse.
 
-`[FIGURE 3: waves of macrophage ontogeny, from lecture slide 9, or adapted from
-Ginhoux & Guilliams 2016, Immunity 44:439.]`
+![Figure 3: The waves of macrophage ontogeny: yolk-sac erythro-myeloid progenitors, fetal-liver precursor macrophages and bone-marrow haematopoietic stem cells, and the tissue macrophages each wave supplies](figures/immIII_slide09.png)
+
+*Figure 3. The waves of macrophage ontogeny: yolk-sac erythro-myeloid progenitors, fetal-liver precursor macrophages and bone-marrow haematopoietic stem cells, and the tissue macrophages each wave supplies (Immunology III, slide 9.)*
+
+![Figure 4: The reduced-complexity model: one question, is the cell of embryonic origin under homeostatic conditions, separates self-renewing tissue-resident macrophages from short-lived monocyte-derived ones](figures/immIII_slide10.png)
+
+*Figure 4. The reduced-complexity model: one question, is the cell of embryonic origin under homeostatic conditions, separates self-renewing tissue-resident macrophages from short-lived monocyte-derived ones (Immunology III, slide 10.)*
 
 Questions. Which cells in a peritoneal lavage are embryonic in origin, which are
 monocyte-derived, and how would you tell them apart on the flow cytometer? What
@@ -121,8 +139,17 @@ extension.
 | Skin epidermis | Langerhans cells | CD207 (langerin), IL-34 dependent | positive |
 | Intestinal lamina propria | gut macrophages | CX3CR1 high, CD64, monocyte-derived | positive |
 
-`[FIGURE 4: the macrophage niche model, from lecture slide 13 or adapted from
-Guilliams et al. 2020, Immunity 52:434.]`
+![Figure 5: Naming by niche: historic names or a tissue prefix, and several distinct niches per organ, sometimes of different origin](figures/immIII_slide12.png)
+
+*Figure 5. Naming by niche: historic names or a tissue prefix, and several distinct niches per organ, sometimes of different origin (Immunology III, slide 12.)*
+
+![Figure 6: The niche model: a shared core programme (PU.1, cMAF, IRF8) and niche-specific lineage-determining factors induced by niche signals such as TGFβ, RANKL and retinoic acid](figures/immIII_slide13.png)
+
+*Figure 6. The niche model: a shared core programme (PU.1, cMAF, IRF8) and niche-specific lineage-determining factors induced by niche signals such as TGFβ, RANKL and retinoic acid (Immunology III, slide 13.)*
+
+![Figure 7: Survival signals per niche: CSF1 (M-CSF), CSF2 (GM-CSF) and IL-34, the second CSF1R ligand, and the knockout phenotypes behind the rule of 1234](figures/immIII_slide14.png)
+
+*Figure 7. Survival signals per niche: CSF1 (M-CSF), CSF2 (GM-CSF) and IL-34, the second CSF1R ligand, and the knockout phenotypes behind the rule of 1234 (Immunology III, slide 14.)*
 
 Questions. Pick an organ. Which niche or niches does it contain, what is the
 expected F4/80 level, and what would a negative result of F4/80 staining mean? Which survival factor
@@ -165,9 +192,9 @@ of the field's senior authors, published guidelines that retire "classical" and
 exact stimulus, as in M(IFNγ), M(IL-4) or M(LPS+IFNγ) (Murray et al. 2014). Their
 table, reproduced below, is the reference for the states you will generate.
 
-`[FIGURE 1: Murray et al. 2014, Immunity 41:14–20, Figure 1B, reproduced with
-reference. Insert into the Word export; the Markdown converter does not embed
-images.]`
+![Figure 8: Discrete polarization in vitro: the M(stimulus) table of Murray et al. 2014 (Immunity 41:14–20, Figure 1B), the reference for the states you will generate, and why the terms classical and alternative should not be used anymore](figures/immIII_slide30.png)
+
+*Figure 8. Discrete polarization in vitro: the M(stimulus) table of Murray et al. 2014 (Immunity 41:14–20, Figure 1B), the reference for the states you will generate, and why the terms classical and alternative should not be used anymore (Immunology III, slide 30.)*
 
 In this course you will generate four states and characterise them with readouts that
 map onto the rows of that table:
@@ -196,6 +223,10 @@ peritoneal injury dataset you will analyse, the Trem2+ Spp1+ macrophages express
 Arg1 next to Il1b. The lecture calls the replacement a modular spectrum model, and
 the point of the in silico arm is that you see it in the data yourself.
 
+![Figure 9: Naming by functional properties: the historic discrete polarization model next to the modular spectrum model that replaces it](figures/immIII_slide16.png)
+
+*Figure 9. Naming by functional properties: the historic discrete polarization model next to the modular spectrum model that replaces it (Immunology III, slide 16.)*
+
 Questions. Name one gene that is "M1" in mouse and not in human. If a paper calls
 tumour macrophages "M2", what exactly has it measured, and what has it assumed?
 What would you call a RAW cell treated with IL-4 for 24 h, in the Murray
@@ -206,10 +237,18 @@ nomenclature?
 The lecture groups macrophage functions in homeostasis into four (slides 32–39), and
 each of them appears somewhere in this course.
 
+![Figure 10: The four core macrophage functions in homeostasis: microorganisms, extracellular milieu, cellular fitness and metabolism, with the receptors behind each](figures/immIII_slide32.png)
+
+*Figure 10. The four core macrophage functions in homeostasis: microorganisms, extracellular milieu, cellular fitness and metabolism, with the receptors behind each (Immunology III, slide 32.)*
+
 **Sensing danger.** Neutrophils are the better killers and dendritic cells the better
 antigen presenters. The one thing macrophages do best is to detect that something is
 wrong, with germline-encoded pattern-recognition receptors (slide 33). This is the
 subject of the next section and of your challenge experiment.
+
+![Figure 11: Sensing danger: the pattern-recognition receptor families of the macrophage, TLR, CLR, NLR, RLR and ALR, and what they produce](figures/immIII_slide33.png)
+
+*Figure 11. Sensing danger: the pattern-recognition receptor families of the macrophage, TLR, CLR, NLR, RLR and ALR, and what they produce (Immunology III, slide 33.)*
 
 **Safeguarding tissue structure.** Macrophages and fibroblasts form a reciprocal
 circuit: the tissue provides CSF1, instruction and structure, the macrophage provides
@@ -217,6 +256,10 @@ growth factors such as PDGF, TGFβ and IGF1, proteases and their inhibitors, and
 signals for inflammation and its resolution (slide 35; Zhou et al. 2018). Mechnikov
 called macrophages sensors and healers. The tissue repair lectures showed where this
 circuit sits in granulation tissue and remodelling.
+
+![Figure 12: Safeguarding tissue structure: what the tissue provides to the macrophage and what the macrophage provides to the tissue, the reciprocal circuit of Zhou et al. 2018](figures/immIII_slide35.png)
+
+*Figure 12. Safeguarding tissue structure: what the tissue provides to the macrophage and what the macrophage provides to the tissue, the reciprocal circuit of Zhou et al. 2018 (Immunology III, slide 35.)*
 
 **Efferocytosis.** Billions of cells die by apoptosis every day, and apoptotic cells
 are almost never seen in healthy tissue because macrophages remove them without
@@ -226,10 +269,18 @@ others (slide 36). Efferocytosis releases TGFβ, IL-10 and PGE2 and suppresses T
 IL-1β and IL-6. TIM4 is in your flow panel as a marker of resident peritoneal
 macrophages, and an efferocytosis assay is an optional extension.
 
+![Figure 13: Efferocytosis: CD47 as the don't-eat-me signal read by SIRPα, phosphatidylserine as the eat-me signal read by TIM4 and other receptors, and the anti-inflammatory outcome](figures/immIII_slide36.png)
+
+*Figure 13. Efferocytosis: CD47 as the don't-eat-me signal read by SIRPα, phosphatidylserine as the eat-me signal read by TIM4 and other receptors, and the anti-inflammatory outcome (Immunology III, slide 36.)*
+
 **Metabolism.** Macrophages shape adipose tissue, support lipid storage through
 PDGF-CC, control browning of white fat, and, when monocyte-derived and recruited in
 obesity, drive insulin resistance (slide 39). The Trem2+ lipid-associated programme
 from Section 5.4 was first described here.
+
+![Figure 14: Metabolism: macrophages as metabolic sensors in adipose tissue, from the Csf1r-deficient rat to Trem2+ lipid-associated macrophages](figures/immIII_slide39.png)
+
+*Figure 14. Metabolism: macrophages as metabolic sensors in adipose tissue, from the Csf1r-deficient rat to Trem2+ lipid-associated macrophages (Immunology III, slide 39.)*
 
 Questions. Which of the four functions is tested by an LPS challenge? Which one
 is not tested by anything in this course, and how would you add it?
@@ -246,7 +297,7 @@ mutation in Tlr4. The ligands are now called PAMPs when they come from microbes 
 DAMPs when they come from damaged self, and the receptors PRRs. The families you
 need are Toll-like receptors (TLR), C-type lectin receptors (CLR), NOD-like receptors
 (NLR), RIG-I-like receptors (RLR) and AIM2-like receptors, plus the cGAS–STING
-pathway for cytosolic DNA (slide 33).
+pathway for cytosolic DNA (slide 33, Figure 11).
 
 The LPS pathway is the template for all of them. LPS is extracted from the bacterial
 membrane by LPS-binding protein, handed to CD14, and presented to the TLR4–MD-2
@@ -257,7 +308,7 @@ interferon. Pro-IL-1β is a special case: it is only released as mature IL-1β a
 second signal activates an inflammasome, which RAW cells cannot assemble. For that
 reason IL-1β is read by qPCR in the extension, not by ELISA.
 
-`[FIGURE 5: TLR4 signalling from the membrane to NF-κB and IRF3, adapted from a
+`[FIGURE 15: TLR4 signalling from the membrane to NF-κB and IRF3, adapted from a
 review, e.g. Fitzgerald & Kagan 2020, Cell 180:1044.]`
 
 The receptors behind the optional axes work by the same logic with different
@@ -305,6 +356,10 @@ cells. The peritoneal fluid contains a free-floating population of immune cells,
 is why a lavage with a few millilitres of buffer gives you a tissue macrophage
 population without any digestion.
 
+![Figure 16: The serosal cavities: peritoneum, pleura and pericardium, derived from the embryonic coelom and lined by mesothelium, in human and mouse](figures/immIII_slide17.png)
+
+*Figure 16. The serosal cavities: peritoneum, pleura and pericardium, derived from the embryonic coelom and lined by mesothelium, in human and mouse (Immunology III, slide 17.)*
+
 Two macrophage populations live there (Ghosn et al. 2010). Large peritoneal
 macrophages (LPM) are F4/80 high, express ICAM2 (CD102) and TIM4, and depend on the
 transcription factor GATA6, which is induced by retinoic acid produced in the
@@ -325,15 +380,20 @@ disappearance from the fluid was known for decades as the macrophage disappearan
 reaction before intravital microscopy showed where the cells went. After larger
 surgical injury, monocytes are recruited and differentiate into two states, a Folr2+
 Selenop+ repair-associated and a Trem2+ Spp1+ scar-associated macrophage, with
-intermediate cells between them (slide 29). The scar-associated cells drive the
+intermediate cells between them (slide 29, Figure 19). The scar-associated cells drive the
 formation of peritoneal adhesions, the fibrous bands that are the most frequent
 long-term complication of abdominal surgery `[TODO: cite the Spp1 paper once
 published]`. Bacterial contamination of the cavity, modelled by caecal ligation and
 puncture, makes adhesions worse through EGFR signalling in the mesothelium (Zindel
 et al. 2021, Nat Commun); this is the experiment behind the dataset in Section 5.9.
 
-`[FIGURE 6: the peritoneal niche in histology, lecture slide 19 (own material):
-mesothelial monolayer, LPM on the surface, Masson, H&E and podoplanin staining.]`
+![Figure 17: The peritoneal niche in histology: Masson and H&E sections of the abdominal wall with the mesothelial monolayer, podoplanin staining of the mesothelium, and the GATA6+ F4/80 high CD102+ large peritoneal macrophages floating in the cavity](figures/immIII_slide19.png)
+
+*Figure 17. The peritoneal niche in histology: Masson and H&E sections of the abdominal wall with the mesothelial monolayer, podoplanin staining of the mesothelium, and the GATA6+ F4/80 high CD102+ large peritoneal macrophages floating in the cavity (Immunology III, slide 19.)*
+
+![Figure 18: Undirected migration: a large peritoneal macrophage drifting in dynamic shear flow, tethering and adhering, tracked by intravital microscopy](figures/immIII_slide27.png)
+
+*Figure 18. Undirected migration: a large peritoneal macrophage drifting in dynamic shear flow, tethering and adhering, tracked by intravital microscopy (Immunology III, slide 27.)*
 
 Questions. Why is a lavage a better in vivo comparison for your polarized cells
 than a digested organ? What is lost in a digested organ that a lavage keeps? If a
@@ -366,7 +426,7 @@ data are on GEO as Cell Ranger filtered matrices, one per mouse, in the three-fi
 format that Seurat reads directly: a list of barcodes, a list of genes, and a sparse
 count matrix. The published analysis identified Gata6+ resident macrophages, Folr2+
 Selenop+ repair-associated macrophages, Trem2+ Spp1+ scar-associated macrophages,
-intermediate states, monocytes and dendritic cells (slide 29).
+intermediate states, monocytes and dendritic cells (slide 29, Figure 19).
 
 The method, in one paragraph. Tissue is digested into single cells, which are
 captured one per droplet together with a bead carrying a cell barcode and millions of
@@ -412,8 +472,11 @@ lost, which is why the Gata6+ cluster is small in the data and large in a lavage
 And the dataset describes injured tissue at a single time point, so a state that is
 absent at 24 h may dominate at day 7.
 
-`[FIGURE 7: the published UMAP of the dataset, lecture slide 29 (own material).]`
-`[FIGURE 8: the single-cell workflow from tissue to count matrix to clusters,
+![Figure 19: The published UMAP of the peritoneal injury dataset: Gata6+ tissue-resident, Folr2+ Selenop+ repair-associated and Trem2+ Spp1+ scar-associated macrophages, intermediate macrophages, monocytes and dendritic cells, with the old M1 and M2 axes drawn across it](figures/immIII_slide29.png)
+
+*Figure 19. The published UMAP of the peritoneal injury dataset: Gata6+ tissue-resident, Folr2+ Selenop+ repair-associated and Trem2+ Spp1+ scar-associated macrophages, intermediate macrophages, monocytes and dendritic cells, with the old M1 and M2 axes drawn across it (Immunology III, slide 29.)*
+
+`[FIGURE 20: the single-cell workflow from tissue to count matrix to clusters,
 adapted from a review or drawn by the lab.]`
 
 Questions. Why is the Gata6+ cluster small in the sequencing data but large in a
