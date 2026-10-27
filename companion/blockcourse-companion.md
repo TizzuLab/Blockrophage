@@ -1,6 +1,6 @@
 # Blockrophage course: companion file
 
-Built 2026-10-27 from commit bd2552e of the course repository. This single file
+Built 2026-10-27 from commit fa98a22 of the course repository. This single file
 contains the complete course material for the ETH Zürich block course
 "Macrophage Biology: in vitro, in vivo, in silico" (Spring Semester 2027).
 Repository: https://github.com/TizzuLab/blockrophage-course. It is meant to be given to a language model
@@ -143,7 +143,7 @@ an answer can cite the file. Values marked [TODO] are unconfirmed.
 
 ## Blockrophage course
 
-**Macrophage Biology: in vitro, in vivo, in silico.** Block course, D-BIOL, ETH
+**Macrophage Biology: how the M1/M2 heuristic is both wrong and useful** 
 Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 
 > **Under construction.** This course runs for the first time in spring 2027 and is
