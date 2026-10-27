@@ -1,6 +1,6 @@
 # Blockrophage course: companion file
 
-Built 2026-10-27 from commit cd1a29e of the course repository. This single file
+Built 2026-10-27 from commit 2251adb of the course repository. This single file
 contains the complete course material for the ETH Zürich block course
 "Macrophage Biology: in vitro, in vivo, in silico" (Spring Semester 2027).
 Repository: https://github.com/TizzuLab/blockrophage-course. It is meant to be given to a language model
@@ -83,6 +83,9 @@ an answer can cite the file. Values marked [TODO] are unconfirmed.
   concentration or time that is not in the protocol; values marked `[TODO]` are
   unconfirmed and you must say so.
 - The schedule is Section 4 of the script: one drawing per week (SVG in figures/schedule/) with a folded text table per day underneath, generated from the workbook in tools/schedule/.
+  Sessions in bold are plenary and mandatory; the wet-lab times listed for a group
+  are guaranteed; everything else is orientation and a group may shift work with
+  its supervisor's agreement.
 - Section numbers "5.x" in the background text refer to the background document, not
   to the script.
 
