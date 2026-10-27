@@ -34,6 +34,7 @@ ORDER = [
     ("background/reading_list.md", "Reading list"),
     ("slides/README.md", "Slides index"),
     ("slides/*.pdf", "Slides: extracted text"),
+    ("safety/README.md", "Safety sheet"),
     ("poster/README.md", "Poster guide"),
     ("code/README.md", "Code overview"),
     ("code/**/*.R", "Code: R scripts"),
