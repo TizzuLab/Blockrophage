@@ -168,7 +168,7 @@ will have taken this line from vial to vial yourselves. Protocols
 **Experiment 2: can we polarize them?** (week 3) The textbook states were defined by
 what is added: IFNγ, IL-4, or IFNγ with LPS, named M(IFNγ), M(IL-4) and M(IFNγ+LPS)
 after the stimulus since the 2014 nomenclature
-([background](background/macrophage_biology.md#54-level-iii-function-and-the-rise-and-fall-of-m1m2)).
+([background](background/macrophage_biology.md#54-level-iii-function-and-activation-state)).
 Exactly that is added to wells of the same culture, with M(-) as the unstimulated
 reference, and the question is whether the states separate on the three readouts the
 field used to define them: cytokines in the supernatant (IL-6 and TNF by ELISA),
