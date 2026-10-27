@@ -7,10 +7,10 @@
 | ID | P03 |
 | Used in | Exp 1 |
 | Hands-on time | 45 min to freeze; 45 min to re-thaw (as P01) |
-| Wall-clock time | overnight at −80 °C, then liquid nitrogen over the break; re-thaw on Monday of week 3 |
-| Resources | hood, centrifuge, freezing container (isopropanol box or controlled-rate), −80 °C freezer, liquid nitrogen tank slot |
+| Wall-clock time | overnight at −80 °C, then −140 °C over the break; re-thaw on Monday of week 3 |
+| Resources | hood, centrifuge, slow-cooling box (Mr. Frosty), −80 °C freezer, −140 °C freezer slot |
 | Depends on | P01 and P02 (a healthy flask on Thursday of week 2) |
-| Lab SOP | [TODO: link to the validated lab SOP; the SOP wins over this page] |
+| Lab SOP | Zindel lab 0203 "RAW 264.7 – adherent cells" (v1.0, 2025-12-01), freezing section. The SOP wins over this page. |
 
 ## Purpose
 
@@ -21,44 +21,51 @@ stock; Exp 2 runs on it if your vial does not come up.
 
 ## Materials
 
-- Freezing medium: `[TODO: lab standard, e.g. 90% FBS + 10% DMSO, or complete medium
-  + 10% DMSO]`, prepared fresh and cold
-- Cryovials, labelled with cell line, passage, date, group, cell number per vial
-- Freezing container, −80 °C freezer, liquid nitrogen storage
-- Counter, trypan blue
+- Heat-inactivated FCS (Gibco A5256801), cold; DMSO, cell-culture grade
+  `[TODO: lab's DMSO product]`. The lab freezes in FCS with 10% DMSO, added to the
+  tube last.
+- Cryovials, labelled with an ethanol-proof label or lab pen: cell line, passage,
+  date, initials and group, cells per vial
+- Slow-cooling box (Mr. Frosty) at room temperature, −80 °C freezer, −140 °C
+  freezer for storage
+- 50 mL tube, counter, trypan blue
 
 ## Before you start
 
-- Freezing container at room temperature, with fresh isopropanol if applicable.
-- Liquid nitrogen box position assigned by the staff; write it in the notebook.
+- Slow-cooling box at room temperature, with fresh isopropanol if applicable.
+- Freezer position assigned by the staff; write it in the notebook.
 - Cells at 70–80% confluence, medium changed the day before.
 
 ## Procedure
 
 Freezing (Thursday, week 2)
 
-1. Scrape and count as in P02, steps 1–5.
-2. Centrifuge 300 × g, 5 min. Aspirate the medium completely.
-3. Resuspend in cold freezing medium at `[TODO: 1–2 × 10^6 cells/mL, lab standard]`.
-4. Dispense 1 mL per cryovial, at least 3 vials per group. Work quickly; DMSO is
-   toxic at room temperature within minutes.
-5. Place the vials in the freezing container and the container at −80 °C overnight.
-6. Next day (staff, during the break): transfer to liquid nitrogen. Record the
-   position.
-7. Dispose of all remaining cultures. No cultures are kept over the break.
+1. Wash with DPBS, scrape into medium and count as in P02, steps 1–5. Transfer the
+   suspension to a 50 mL tube.
+2. Calculate the number of vials: the lab freezes 2–4 × 10^6 cells per mL, 1 mL per
+   vial, at least 3 vials per group.
+3. Centrifuge 300 × g, 5 min. Aspirate the medium completely.
+4. Resuspend the pellet in cold FCS, 900 µL per vial (for 3 vials: 2.7 mL).
+5. Dispense 900 µL per cryovial, then add 100 µL DMSO to each vial (final 10%), close
+   tightly and mix by inverting several times. Work quickly; DMSO is toxic at room
+   temperature within minutes.
+6. Place the vials in the slow-cooling box and the box at −80 °C overnight.
+7. Next day (staff, during the break): transfer to the −140 °C freezer and record
+   the position. Vials left at −80 °C for weeks lose viability to ice crystals.
+8. Dispose of all remaining cultures. No cultures are kept over the break.
 
 Re-thaw (Monday, week 3)
 
-8. Thaw one vial following P01, steps 1–6, and count. Record viability and the
+9. Thaw one vial following P01, steps 1–7, and count. Record viability and the
    fraction of cells attached the next morning.
-9. Keep this flask as your own stock for extensions. Exp 2 plates are seeded from
-   the staff stock culture (P02), which was thawed during the break so that it is
-   ready on Monday.
+10. Keep this flask as your own stock for extensions. Exp 2 plates are seeded from
+    the staff stock culture (P02), which was thawed during the break so that it is
+    ready on Monday.
 
 ## Controls
 
-- One staff vial frozen in the same container on the same day: separates a bad
-  freezing day from a bad freezing technique.
+- One staff vial frozen in the same box on the same day: separates a bad freezing
+  day from a bad freezing technique.
 
 ## Checkpoints
 
@@ -68,10 +75,10 @@ Re-thaw (Monday, week 3)
 ## Known failure modes
 
 - Low viability: cells too confluent when frozen, DMSO exposure too long before
-  freezing, container not at room temperature, slow transfer to nitrogen.
+  freezing, box not at room temperature, vials left at −80 °C too long.
 - Vial empty: label mix-up. Labels must carry group and date.
 
 ## Output
 
-Number of vials, cells per vial, freezer and nitrogen positions, re-thaw count and
-viability, in the notebook. One line on the poster: viability after freeze and thaw.
+Number of vials, cells per vial, freezer positions, re-thaw count and viability, in
+the notebook. One line on the poster: viability after freeze and thaw.

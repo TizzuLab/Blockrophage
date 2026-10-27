@@ -10,7 +10,7 @@
 | Wall-clock time | 24 h before stimulation |
 | Resources | hood, incubator shelf, centrifuge, counter, microscope |
 | Depends on | P01 flask at 60–80% confluence, or staff stock culture |
-| Lab SOP | [TODO: link to the validated lab SOP; the SOP wins over this page] |
+| Lab SOP | Zindel lab 0203 "RAW 264.7 – adherent cells" (v1.0, 2025-12-01), splitting section, and the lab's RAW 264.7 polarisation protocol (v1.0, 2025-12-08), seeding section. The SOP wins over this page. |
 
 ## Purpose
 
@@ -20,12 +20,13 @@ The same steps serve both.
 
 ## Materials
 
-- Complete medium, warm (as in P01)
-- Sterile PBS
+- Complete medium, warm (recipe in P01)
+- DPBS (Gibco 14190144), warm
 - Cell scraper, one per flask
-- Plates: 12-well for supernatant assays, 6-well for flow cytometry `[TODO: or the
-  lab's standard formats]`; T75 for continued expansion
-- Counter and trypan blue
+- Plates: 96-well flat-bottom for the supernatant assays (ELISA, Griess), 6-well
+  for flow cytometry, 24-well for the RNA extension; T25 or T75 for continued
+  expansion
+- Counter and trypan blue (as in P01)
 
 ## Before you start
 
@@ -36,23 +37,35 @@ The same steps serve both.
 
 ## Procedure
 
-1. Inspect the flask. Record confluence and morphology.
-2. Aspirate the medium. Rinse once gently with 5 mL PBS and aspirate.
-3. Add 5 mL fresh complete medium and scrape the whole surface with steady strokes.
-   RAW 264.7 are passaged by scraping, not trypsin.
-4. Pipette the suspension up and down 3–5 times to break clumps. Transfer to a
-   15 mL tube.
+1. Inspect the flask. Record confluence and morphology. The lab splits at about
+   80% confluence.
+2. Aspirate the medium. Wash once gently with 5 mL warm DPBS and aspirate.
+3. Add 3 mL (T25) or 10 mL (T75) fresh complete medium and scrape the whole
+   surface with steady strokes, including the edges. RAW 264.7 are passaged by
+   scraping, not trypsin.
+4. With a serological pipette, wash the walls of the flask with the medium so that
+   every cell is in suspension, then pipette up and down 3–5 times to break clumps.
+   Transfer to a 15 mL tube.
 5. Count with trypan blue. Record total, live, viability.
-6. Split: seed `[TODO: 1:5 to 1:10, lab standard]` of the suspension into a fresh
-   T75 with `[TODO: 12–15 mL]` complete medium. Keep the passage number below
-   `[TODO]`; record the new passage in the notebook.
-7. Seed for an experiment: dilute to the working density and plate
+6. Split: seed 1:3 to 1:5 of the suspension into a fresh flask (3 mL final in a
+   T25, 10 mL in a T75), the ratio chosen by the growth speed you measured in P01
+   (doubling time 15–24 h). Record the new passage number in the notebook
+   `[TODO: maximum passage the lab accepts for experiments]`.
+7. Seed for an experiment: centrifuge the needed cells (300 × g, 5 min), resuspend
+   in fresh medium at the working density and plate
 
    | Format | Cells per well | Volume per well | Use |
    |---|---|---|---|
-   | 12-well | `[TODO: cells/well]` | 1 mL | supernatant for ELISA and Griess |
-   | 6-well | `[TODO: cells/well]` | 2 mL | flow cytometry |
-   | 96-well | `[TODO: cells/well]` | 200 µL | optional, phagocytosis or viability extensions |
+   | 96-well | 2 × 10^4 | 200 µL | supernatant for ELISA and Griess (lab-validated) |
+   | 24-well | 1.2 × 10^5 | 500 µL | RNA arm, X01 |
+   | 6-well | 6 × 10^5 | 2 mL | flow cytometry, P08 |
+
+   The 96-well density is the lab's. The 24- and 6-well densities are scaled from it
+   by growth area (about 6 × 10^4 cells/cm²).
+
+   > **To verify:** the 24- and 6-well densities are derived, not tested. Check in
+   > the first run that a 6-well seeded this way yields at least 1 × 10^6 cells per
+   > well 48 h later for P08.
 
    Rock the plate gently in a cross pattern to spread the cells. Do not swirl;
    swirling piles cells in the centre.
@@ -67,15 +80,17 @@ The same steps serve both.
 ## Checkpoints
 
 - After scraping: mostly single cells under the microscope, viability above 90%.
-- Next morning: an even monolayer at `[TODO: expected confluence at stimulation]`.
-  Uneven wells are noted in the plate map and excluded from triplicate statistics
-  if they are outliers.
+- Next morning: an even monolayer, about 40–60% confluent in the 96-well
+  `[TODO: confirm expected confluence at stimulation in the first run]`. Uneven
+  wells are noted in the plate map and excluded from triplicate statistics if they
+  are outliers.
 
 ## Known failure modes
 
 - Clumps: scraped too hard or pipetted too little. Pipette more gently, more times.
-- Edge effect in plates: evaporation in outer wells. Fill the outer wells with PBS if
-  the plate map allows it, or seed only inner wells.
+- Edge effect in plates: evaporation in outer wells. Fill the outer wells of a
+  96-well plate with 200 µL DPBS if the plate map allows it, or seed only inner
+  wells.
 - Density wrong next day: counting error or cells not spread. Check the photograph
   from the day before.
 

@@ -8,9 +8,9 @@
 | Used in | Exp 1 |
 | Hands-on time | 45 min on the thaw day, 20 min per day after that |
 | Wall-clock time | 4 days (Mon to Thu) |
-| Resources | hood, incubator shelf (37 °C, 5% CO2), centrifuge, counting chamber or automated counter, microscope |
+| Resources | hood, incubator shelf (37 °C, 5% CO2), centrifuge, Neubauer chamber or Countess III, microscope |
 | Depends on | nothing; first bench step of the course |
-| Lab SOP | [TODO: link to the validated lab SOP; the SOP wins over this page] |
+| Lab SOP | Zindel lab 0203 "RAW 264.7 – adherent cells" (v1.0, 2025-12-01). The SOP wins over this page. |
 
 ## Purpose
 
@@ -21,65 +21,72 @@ compared with the published value. The same flask supplies the cells for P02 and
 
 ## Materials
 
-- RAW 264.7 cryovial, one per group, passage `[TODO: passage number and mycoplasma
-  test date]`
-- Complete medium: DMEM, 10% FBS, 1% penicillin/streptomycin `[TODO: lab standard]`,
-  warmed to 37 °C
-- Sterile PBS
-- T75 flask `[TODO: lab standard; T25 if cell numbers are low]`
-- 15 mL tubes, serological pipettes, cell scraper
-- Trypan blue and counting chamber, or the automated counter `[TODO: instrument]`
+- RAW 264.7 cryovial, one per group, from the staff stock `[TODO: passage number and
+  mycoplasma test date]`
+- Complete medium, 50 mL: 44.5 mL DMEM high glucose with GlutaMAX (Gibco 31966021),
+  5 mL heat-inactivated FCS (Gibco A5256801), 0.5 mL penicillin-streptomycin
+  (Gibco 15140122). Final 10% FCS, 1% P/S. Warm to 37 °C before use.
+- DPBS without calcium and magnesium (Gibco 14190144)
+- T25 flask for the thaw, T75 for expansion
+- 15 mL tubes, serological pipettes (5, 10, 25 mL), 1 mL pipette, cell scraper
+- Trypan blue (Sigma T8154) and a Neubauer chamber, or the Countess III with
+  counting slides (Thermo C10228)
+- Water bath at 37 °C, 70% ethanol
 
 ## Before you start
 
 - Read P02 and P03 as well; the three protocols are one experiment.
-- Medium warmed, hood wiped, waste container ready, flask labelled with cell line,
-  passage, date and group.
-- Water bath at 37 °C.
+- Everything from here on is sterile work in the laminar flow hood.
+- Medium and DPBS warmed, hood wiped, waste container ready. Flask labelled with
+  cell line, passage, date and group; copy every piece of information from the vial
+  label onto the flask.
 - Notebook page prepared with a table: date, time, count, viability, volume, passage.
 
 ## Procedure
 
 Thaw day (Monday)
 
-1. Take the vial from liquid nitrogen in a closed transport container. Thaw in the
-   37 °C water bath until a small ice core remains, about 1–2 min. Do not let the
-   cells sit warm in DMSO.
-2. Wipe the vial with 70% ethanol and transfer the contents dropwise into 10 mL warm
-   complete medium in a 15 mL tube.
-3. Centrifuge 300 × g, 5 min, room temperature `[TODO: lab standard]`. Aspirate the
-   supernatant to remove DMSO.
-4. Resuspend the pellet in 1 mL complete medium by gentle pipetting, take 10 µL for
-   the count (step 5), then add the rest to `[TODO: 12–15 mL]` complete medium in
-   the T75 flask.
-5. Count with trypan blue. Record total cells, live cells and viability. This is the
+1. Prepare a 15 mL tube with 10 mL warm complete medium.
+2. Take the vial from the staff tank in a closed transport container. Spray it with
+   70% ethanol before it goes into the hood.
+3. Thaw by dilution, not in the water bath: add 1 mL warm complete medium to the
+   frozen vial with a 1 mL pipette, take the medium that has thawed off the ice back
+   into the 15 mL tube, and repeat until the vial is empty. Work fast; viability
+   drops with every minute the cells sit in DMSO.
+4. Centrifuge 300 × g, 5 min, room temperature, to remove the DMSO. Aspirate the
+   supernatant.
+5. Resuspend the pellet in 5 mL warm complete medium. If the cells are sticky, break
+   clumps with a 1 mL pipette until you have a single-cell suspension. Take 10 µL for
+   the count (step 6) and transfer the rest to a T25 flask.
+6. Count with trypan blue. Record total cells, live cells and viability. This is the
    first point of the growth curve (t = 0).
-6. Incubate at 37 °C, 5% CO2. Distribute the cells by gently rocking the flask once
+7. Incubate at 37 °C, 5% CO2. Distribute the cells by gently rocking the flask once
    before closing the incubator; do not swirl.
 
 Every day after that (Tuesday to Thursday)
 
-7. Inspect under the microscope before anything else: morphology (round to
+8. Inspect under the microscope before anything else: morphology (round to
    spindle-shaped, adherent), density, debris, signs of contamination (turbidity,
    colour change, particles moving between cells). Photograph one field at 10× for
    the notebook.
-8. Take a count. Scrape a defined area or the whole flask according to P02, or use
-   the lab's counting shortcut `[TODO: lab standard; a full scrape-and-count once a
-   day is acceptable at this scale]`. Record the count and viability at the same time
-   of day every day.
-9. Change the medium on Tuesday, or on any day the medium turns yellow: aspirate,
-   add fresh warm complete medium gently along the side of the flask. RAW cells
-   adhere loosely; do not pipette onto the cell layer.
-10. Split when the flask reaches about 80% confluence, usually Wednesday: follow P02.
-11. Thursday: final count, then freeze according to P03 and seed nothing that would
+9. Take a count. Scrape the whole flask according to P02 and count the suspension,
+   then re-seed it; at this scale a full scrape-and-count once a day is acceptable
+   `[TODO: confirm with the lab that daily scraping is the course standard, or
+   define a counting shortcut]`. Record the count and viability at the same time of
+   day every day.
+10. Change the medium on Tuesday, or on any day the medium turns yellow: aspirate,
+    add fresh warm complete medium gently along the side of the flask. RAW cells
+    adhere loosely; do not pipette onto the cell layer.
+11. Split when the flask reaches about 80% confluence, usually Wednesday: follow
+    P02. Move from the T25 to a T75 at the first split.
+12. Thursday: final count, then freeze according to P03 and seed nothing that would
     survive the break. No cultures are kept over the Easter break.
 
 ## Controls
 
 - Medium-only flask or well, incubated alongside: detects contaminated medium.
-- Published doubling time of RAW 264.7, about 11–20 h depending on source
-  `[TODO: pick the reference value the lab uses]`: your curve should be in that
-  range or you have a reason to find.
+- Published doubling time of RAW 264.7: the lab SOP works with 15–24 h; ATCC gives
+  a similar range. Your curve should be in that range or you have a reason to find.
 
 ## Checkpoints
 
@@ -93,8 +100,9 @@ Every day after that (Tuesday to Thursday)
 ## Known failure modes
 
 - Low viability after thaw: DMSO exposure too long or vial thawed too slowly. Thaw
-  faster, dilute immediately.
-- Cells not attaching: FBS lot or cold medium. Check the medium temperature.
+  by dilution as in step 3, work faster.
+- Cells not attaching: cold medium or an FCS lot problem. Check the medium
+  temperature first.
 - Yellow medium within 24 h: too many cells or contamination. Look under the
   microscope before deciding.
 - Doubling time far outside the published range: counting error is the first

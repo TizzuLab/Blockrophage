@@ -13,7 +13,7 @@
 | Wall-clock time | e.g. 24 h |
 | Resources | hood, incubator shelf, plate reader, cytometer slot ... |
 | Depends on | e.g. P02 completed 24 h earlier |
-| Lab SOP | [TODO: link to the validated lab SOP; the SOP wins over this page] |
+| Lab SOP | Zindel lab SOP number, title, version and date, or `none yet [TODO]`. The SOP wins over this page. |
 
 ## Purpose
 
