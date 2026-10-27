@@ -10,7 +10,7 @@ the lab has a protocol for but has not run in the course format carry a
 protocol names it (lab SOP number, version and date; the SOPs themselves are
 internal documents). Figures live in `figures/`.
 
-P-files are the core programme, X-files are extensions from the nerd ladder.
+P-files are the core programme, X-files are optional extensions (Section 6 of the script).
 
 | ID | Title | Used in | Hands-on time | Wall-clock time | Resources |
 |---|---|---|---|---|---|

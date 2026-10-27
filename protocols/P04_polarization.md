@@ -88,7 +88,7 @@ stimuli, and adds the cytokine states the course needs.
 - M(-) is the reference for every comparison.
 - M(IFNγ+LPS) is characterised but not re-challenged with LPS: a state that has seen
   LPS shows endotoxin tolerance and would confuse the challenge experiment. Seeing
-  tolerance on purpose is an extension (see the nerd ladder).
+  tolerance on purpose is an extension (see Section 6 of the script).
 
 ## Checkpoints
 

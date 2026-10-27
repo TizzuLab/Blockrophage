@@ -50,7 +50,7 @@ Three parts, matched to the dry-lab halves of weeks 2 and 3:
    does either signature explain, and what do cells with both scores high mean for
    the M1/M2 axis.
 
-Nerd-ladder items that start from here: annotate the Gata6+, Folr2+ Selenop+ and
+Optional extensions that start from here: annotate the Gata6+, Folr2+ Selenop+ and
 Trem2+ Spp1+ populations; rerun the pipeline from the GEO matrices; integrate with a
 true in vitro single-cell dataset (Sanin et al. 2022 `[TODO: accession]`).
 
