@@ -225,7 +225,7 @@ Some protocols are made available (prefix X... in protocol catalogue), others yo
 may have established, yet others you may need to establish from the literature. Here are some examples of 
 what you could do, but the list is non-exhaustive.
 
-| Experiment or extension | What would  |
+| Experiment or extension | What it adds to the story |
 |---|---|
 | Pipeline from raw matrices | QC figure from the GEO matrices, not the preprocessed object; commit hash |
 | Macrophages annotated | UMAP with Gata6+, Folr2+ Selenop+ and Trem2+ Spp1+ labelled, marker dot plot, cell counts |
