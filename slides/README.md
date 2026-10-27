@@ -4,7 +4,7 @@
 
 Lectures given at ETH Zürich, as presented, for anyone who wants to read further.
 None of them is a prerequisite: the course starts from scratch. The
-[background reading](../background/macrophage_biology.md) condenses what the
+[background reading](../background/README.md) condenses what the
 experiments need.
 
 | File | Lecture |
