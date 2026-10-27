@@ -9,19 +9,19 @@ companion; the drawings in README Section 4 are the same content. Activity block
 
 | | Morning 09:00-12:00 | Lunch 12:00-13:00 | Afternoon 13:00-17:00 |
 |---|---|---|---|
-| Fixed layer (lectures, facility) | [Plenary, lecture, debrief] Welcome, safety briefing, group formation; [Plenary, lecture, debrief] Lecture: tissue macrophages and nomenclature | - | [Plenary, lecture, debrief] Lecture: the techniques of this course, one slide per method |
-| Group A supervisors: ______ / ______ | [Plenary, lecture, debrief] Plenary | Lunch | [Plenary, lecture, debrief] Lecture; [Dry lab and desk work] Experiment planning with your supervisors: choose your PRR axis and your extensions |
-| Group B supervisors: ______ / ______ | [Plenary, lecture, debrief] Plenary | Lunch | [Plenary, lecture, debrief] Lecture; [Dry lab and desk work] Experiment planning with your supervisors: choose your PRR axis and your extensions |
-| Group C supervisors: ______ / ______ | [Plenary, lecture, debrief] Plenary | Lunch | [Plenary, lecture, debrief] Lecture; [Dry lab and desk work] Experiment planning with your supervisors: choose your PRR axis and your extensions |
-| Group D supervisors: ______ / ______ | [Plenary, lecture, debrief] Plenary | Lunch | [Plenary, lecture, debrief] Lecture; [Dry lab and desk work] Experiment planning with your supervisors: choose your PRR axis and your extensions |
-| Staff (shared) prep and supervision | Rooms, safety officer, group list. Supervisors sit with their group from 14:00. | (same as previous column) | (same as previous column) |
+| Fixed layer (lectures, facility) | [Plenary, lecture, debrief] Welcome and safety briefing (Tea Kocijan); [Plenary, lecture, debrief] Lecture: tissue macrophages and nomenclature (Joel Zindel) | - | [Plenary, lecture, debrief] Lecture: the techniques of this course, one slide per method (Agnes Huber, Brooke Slade); [Plenary, lecture, debrief] Group formation |
+| Group A supervisors: ______ / ______ | [Plenary, lecture, debrief] Plenary | Lunch | [Plenary, lecture, debrief] Lecture; [Dry lab and desk work] Group formation at 14:00, then experiment planning with your supervisors: choose your PRR axis and your extensions |
+| Group B supervisors: ______ / ______ | [Plenary, lecture, debrief] Plenary | Lunch | [Plenary, lecture, debrief] Lecture; [Dry lab and desk work] Group formation at 14:00, then experiment planning with your supervisors: choose your PRR axis and your extensions |
+| Group C supervisors: ______ / ______ | [Plenary, lecture, debrief] Plenary | Lunch | [Plenary, lecture, debrief] Lecture; [Dry lab and desk work] Group formation at 14:00, then experiment planning with your supervisors: choose your PRR axis and your extensions |
+| Group D supervisors: ______ / ______ | [Plenary, lecture, debrief] Plenary | Lunch | [Plenary, lecture, debrief] Lecture; [Dry lab and desk work] Group formation at 14:00, then experiment planning with your supervisors: choose your PRR axis and your extensions |
+| Staff (shared) prep and supervision | Rooms, safety officer. Groups formed at 14:00; supervisors sit with their group from then on. | (same as previous column) | (same as previous column) |
 | Resources (hand-written capacity) | Seminar room all day | (same as previous column) | (same as previous column) |
 
 #### Fri 19 Mar
 
 | | Morning 09:00-12:00 | Lunch 12:00-13:00 | Afternoon 13:00-17:00 |
 |---|---|---|---|
-| Fixed layer (lectures, facility) | - | - | [Facility slot] Facility lecture: flow cytometry and FlowJo [TODO: confirm slot with the facility] |
+| Fixed layer (lectures, facility) | - | - | [Facility slot] Facility lecture: flow cytometry and FlowJo (Florian Mair) [TODO: confirm slot with the facility] |
 | Group A supervisors: ______ / ______ | [Dry lab and desk work] Dry lab setup: clone the course repository, build the environment with your LLM, run the ELISA template on example data | Lunch | [Facility slot] Facility lecture; [Dry lab and desk work] Lab tour. Group plans submitted. Read P01 for Monday. |
 | Group B supervisors: ______ / ______ | [Dry lab and desk work] Dry lab setup: clone the course repository, build the environment with your LLM, run the ELISA template on example data | Lunch | [Facility slot] Facility lecture; [Dry lab and desk work] Lab tour. Group plans submitted. Read P01 for Monday. |
 | Group C supervisors: ______ / ______ | [Dry lab and desk work] Dry lab setup: clone the course repository, build the environment with your LLM, run the ELISA template on example data | Lunch | [Facility slot] Facility lecture; [Dry lab and desk work] Lab tour. Group plans submitted. Read P01 for Monday. |
@@ -35,7 +35,7 @@ companion; the drawings in README Section 4 are the same content. Activity block
 
 | | Morning 09:00-12:00 | Lunch 12:00-13:00 | Afternoon 13:00-17:00 |
 |---|---|---|---|
-| Fixed layer (lectures, facility) | - | [Plenary, lecture, debrief] IMHS Lunch Seminar | - |
+| Fixed layer (lectures, facility) | - | [Plenary, lecture, debrief] IMHS Lunch Seminar (HPL D32/34) | - |
 | Group A supervisors: ______ / ______ | [Wet lab Exp 1] P01 Thaw RAW 264.7, count (T0), seed the flask | [Plenary, lecture, debrief] IMHS Lunch Seminar | [Dry lab and desk work] Dry lab: analysis templates on example data (ELISA, Griess) |
 | Group B supervisors: ______ / ______ | [Wet lab Exp 1] P01 Thaw RAW 264.7, count (T0), seed the flask | [Plenary, lecture, debrief] IMHS Lunch Seminar | [Dry lab and desk work] Dry lab: analysis templates on example data (ELISA, Griess) |
 | Group C supervisors: ______ / ______ | [Dry lab and desk work] Dry lab: analysis templates on example data (ELISA, Griess) | [Plenary, lecture, debrief] IMHS Lunch Seminar | [Wet lab Exp 1] P01 Thaw RAW 264.7, count (T0), seed the flask |
@@ -47,7 +47,7 @@ companion; the drawings in README Section 4 are the same content. Activity block
 
 | | Morning 09:00-12:00 | Lunch 12:00-13:00 | Afternoon 13:00-17:00 |
 |---|---|---|---|
-| Fixed layer (lectures, facility) | - | - | [Plenary, lecture, debrief] Cutting Edge Immunology Seminar 16:30-17:30 |
+| Fixed layer (lectures, facility) | - | - | [Plenary, lecture, debrief] Cutting Edge Immunology Seminar 16:30-17:30 (tbd) |
 | Group A supervisors: ______ / ______ | [Wet lab Exp 1] P01 Inspect, count (T1), medium change | Lunch | [Dry lab and desk work] Dry lab: FlowJo on example data. Poster: draft the introduction; [Plenary, lecture, debrief] Seminar |
 | Group B supervisors: ______ / ______ | [Wet lab Exp 1] P01 Inspect, count (T1), medium change | Lunch | [Dry lab and desk work] Dry lab: FlowJo on example data. Poster: draft the introduction; [Plenary, lecture, debrief] Seminar |
 | Group C supervisors: ______ / ______ | [Dry lab and desk work] Dry lab: FlowJo on example data. Poster: draft the introduction | Lunch | [Wet lab Exp 1] P01 Inspect, count (T1), medium change; [Plenary, lecture, debrief] Seminar |
@@ -59,7 +59,7 @@ companion; the drawings in README Section 4 are the same content. Activity block
 
 | | Morning 09:00-12:00 | Lunch 12:00-13:00 | Afternoon 13:00-17:00 |
 |---|---|---|---|
-| Fixed layer (lectures, facility) | [Plenary, lecture, debrief] Lecture: tissue repair I, macrophages in injury and repair | - | - |
+| Fixed layer (lectures, facility) | [Plenary, lecture, debrief] Lecture: tissue repair I, macrophages in injury and repair (tbd) | - | - |
 | Group A supervisors: ______ / ______ | [Plenary, lecture, debrief] Lecture; [Wet lab Exp 1] P02 Count (T2), scrape, split; seed growth-curve wells | Lunch | [Dry lab and desk work] Dry lab: growth curve and doubling time from your counts. Poster: why does this matter (significance) |
 | Group B supervisors: ______ / ______ | [Plenary, lecture, debrief] Lecture; [Wet lab Exp 1] P02 Count (T2), scrape, split; seed growth-curve wells | Lunch | [Dry lab and desk work] Dry lab: growth curve and doubling time from your counts. Poster: why does this matter (significance) |
 | Group C supervisors: ______ / ______ | [Plenary, lecture, debrief] Lecture; [Dry lab and desk work] Dry lab: growth curve and doubling time from your counts. Poster: why does this matter (significance) | Lunch | [Wet lab Exp 1] P02 Count (T2), scrape, split; seed growth-curve wells |
@@ -71,7 +71,7 @@ companion; the drawings in README Section 4 are the same content. Activity block
 
 | | Morning 09:00-12:00 | Lunch 12:00-13:00 | Afternoon 13:00-17:00 |
 |---|---|---|---|
-| Fixed layer (lectures, facility) | [Plenary, lecture, debrief] Journal club 1: the M1/M2 nomenclature revision [TODO: paper]; one group presents, all read | - | [Plenary, lecture, debrief] Debrief week 2: what worked, plan for Exp 2 |
+| Fixed layer (lectures, facility) | [Plenary, lecture, debrief] Journal club 1 (tbd): the M1/M2 nomenclature revision [TODO: paper]; one group presents, all read | - | [Plenary, lecture, debrief] Debrief week 2: what worked, plan for Exp 2 |
 | Group A supervisors: ______ / ______ | [Plenary, lecture, debrief] Journal club; [Wet lab Exp 1] P01 Count (T3). P03 Freeze your own vials. Clean-up: nothing stays in culture over the break | Lunch | [Dry lab and desk work] Dry lab: scRNA-seq part 1, load the preprocessed object, QC figure; [Plenary, lecture, debrief] Debrief |
 | Group B supervisors: ______ / ______ | [Plenary, lecture, debrief] Journal club; [Wet lab Exp 1] P01 Count (T3). P03 Freeze your own vials. Clean-up: nothing stays in culture over the break | Lunch | [Dry lab and desk work] Dry lab: scRNA-seq part 1, load the preprocessed object, QC figure; [Plenary, lecture, debrief] Debrief |
 | Group C supervisors: ______ / ______ | [Plenary, lecture, debrief] Journal club; [Dry lab and desk work] Dry lab: scRNA-seq part 1, load the preprocessed object, QC figure | Lunch | [Wet lab Exp 1] P01 Count (T3). P03 Freeze your own vials. Clean-up: nothing stays in culture over the break; [Plenary, lecture, debrief] Debrief |
@@ -87,7 +87,7 @@ Notes: Exp 1 is a real experiment: four counts give a growth curve and a doublin
 
 | | Morning 09:00-12:00 | Lunch 12:00-13:00 | Afternoon 13:00-17:00 |
 |---|---|---|---|
-| Fixed layer (lectures, facility) | - | [Plenary, lecture, debrief] IMHS Lunch Seminar | - |
+| Fixed layer (lectures, facility) | - | [Plenary, lecture, debrief] IMHS Lunch Seminar (HPL D32/34) | - |
 | Group A supervisors: ______ / ______ | [Dry lab and desk work] Dry lab: scRNA-seq part 2, derive M(IFNg+LPS) and M(IL-4) signatures from the bulk RAW 264.7 dataset | [Plenary, lecture, debrief] IMHS Lunch Seminar | [Wet lab Exp 2] P01 Thaw your own vial (viability = Exp 1 readout). P02 Seed Exp 2 plates from the staff culture |
 | Group B supervisors: ______ / ______ | [Dry lab and desk work] Dry lab: scRNA-seq part 2, derive M(IFNg+LPS) and M(IL-4) signatures from the bulk RAW 264.7 dataset | [Plenary, lecture, debrief] IMHS Lunch Seminar | [Wet lab Exp 2] P01 Thaw your own vial (viability = Exp 1 readout). P02 Seed Exp 2 plates from the staff culture |
 | Group C supervisors: ______ / ______ | [Wet lab Exp 2] P01 Thaw your own vial (viability = Exp 1 readout). P02 Seed Exp 2 plates from the staff culture | [Plenary, lecture, debrief] IMHS Lunch Seminar | [Dry lab and desk work] Dry lab: scRNA-seq part 2, derive M(IFNg+LPS) and M(IL-4) signatures from the bulk RAW 264.7 dataset |
@@ -99,7 +99,7 @@ Notes: Exp 1 is a real experiment: four counts give a growth curve and a doublin
 
 | | Morning 09:00-12:00 | Lunch 12:00-13:00 | Afternoon 13:00-17:00 |
 |---|---|---|---|
-| Fixed layer (lectures, facility) | [Plenary, lecture, debrief] Lecture: single-cell transcriptomics for immunologists, what a signature score means | - | [Plenary, lecture, debrief] Cutting Edge Immunology Seminar 16:30-17:30 |
+| Fixed layer (lectures, facility) | [Plenary, lecture, debrief] Lecture: single-cell transcriptomics for immunologists, what a signature score means (tbd) | - | [Plenary, lecture, debrief] Cutting Edge Immunology Seminar 16:30-17:30 (tbd) |
 | Group A supervisors: ______ / ______ | [Plenary, lecture, debrief] Lecture; [Dry lab and desk work] Dry lab: scRNA-seq part 3, score the tissue macrophages. Poster: methods | Lunch | [Wet lab Exp 2] P04 Polarize: M(-), M(IFNg), M(IL-4), M(IFNg+LPS), 24 h; [Plenary, lecture, debrief] Seminar |
 | Group B supervisors: ______ / ______ | [Plenary, lecture, debrief] Lecture; [Dry lab and desk work] Dry lab: scRNA-seq part 3, score the tissue macrophages. Poster: methods | Lunch | [Wet lab Exp 2] P04 Polarize: M(-), M(IFNg), M(IL-4), M(IFNg+LPS), 24 h; [Plenary, lecture, debrief] Seminar |
 | Group C supervisors: ______ / ______ | [Plenary, lecture, debrief] Lecture; [Wet lab Exp 2] P04 Polarize: M(-), M(IFNg), M(IL-4), M(IFNg+LPS), 24 h | Lunch | [Dry lab and desk work] Dry lab: scRNA-seq part 3, score the tissue macrophages. Poster: methods; [Plenary, lecture, debrief] Seminar |
@@ -123,7 +123,7 @@ Notes: Exp 1 is a real experiment: four counts give a growth curve and a doublin
 
 | | Morning 09:00-12:00 | Lunch 12:00-13:00 | Afternoon 13:00-17:00 |
 |---|---|---|---|
-| Fixed layer (lectures, facility) | [Plenary, lecture, debrief] Journal club 2: the peritoneal injury single-cell paper behind GSE186658 [TODO: paper]; one group presents, all read | - | - |
+| Fixed layer (lectures, facility) | [Plenary, lecture, debrief] Journal club 2 (tbd): the peritoneal injury single-cell paper behind GSE186658 [TODO: paper]; one group presents, all read | - | - |
 | Group A supervisors: ______ / ______ | [Plenary, lecture, debrief] Journal club; [Dry lab and desk work] Dry lab: flow statistics in R. Poster: figure 1 draft | Lunch | [Wet lab Exp 2] P05 Harvest supernatants. P06 ELISA IL-6 and TNF. P07 Griess |
 | Group B supervisors: ______ / ______ | [Plenary, lecture, debrief] Journal club; [Dry lab and desk work] Dry lab: flow statistics in R. Poster: figure 1 draft | Lunch | [Wet lab Exp 2] P05 Harvest supernatants. P06 ELISA IL-6 and TNF. P07 Griess |
 | Group C supervisors: ______ / ______ | [Plenary, lecture, debrief] Journal club; [Wet lab Exp 2] P05 Harvest supernatants. P06 ELISA IL-6 and TNF. P07 Griess | Lunch | [Dry lab and desk work] Dry lab: flow statistics in R. Poster: figure 1 draft |
@@ -151,7 +151,7 @@ Notes: One overnight challenge arm (about 20 h): challenge as the last step of y
 
 | | Morning 09:00-12:00 | Lunch 12:00-13:00 | Afternoon 13:00-17:00 |
 |---|---|---|---|
-| Fixed layer (lectures, facility) | - | [Plenary, lecture, debrief] IMHS Lunch Seminar | - |
+| Fixed layer (lectures, facility) | - | [Plenary, lecture, debrief] IMHS Lunch Seminar (HPL D32/34) | - |
 | Group A supervisors: ______ / ______ | [Extension / nerd factor] Extension of your choice, or rescue path for Exp 2 (see Legend) | [Plenary, lecture, debrief] IMHS Lunch Seminar | [Dry lab and desk work] Dry lab: analysis of Exp 2. Poster: figures |
 | Group B supervisors: ______ / ______ | [Extension / nerd factor] Extension of your choice, or rescue path for Exp 2 (see Legend) | [Plenary, lecture, debrief] IMHS Lunch Seminar | [Dry lab and desk work] Dry lab: analysis of Exp 2. Poster: figures |
 | Group C supervisors: ______ / ______ | [Dry lab and desk work] Dry lab: analysis of Exp 2. Poster: figures | [Plenary, lecture, debrief] IMHS Lunch Seminar | [Extension / nerd factor] Extension of your choice, or rescue path for Exp 2 (see Legend) |
@@ -163,7 +163,7 @@ Notes: One overnight challenge arm (about 20 h): challenge as the last step of y
 
 | | Morning 09:00-12:00 | Lunch 12:00-13:00 | Afternoon 13:00-17:00 |
 |---|---|---|---|
-| Fixed layer (lectures, facility) | - | - | [Plenary, lecture, debrief] Cutting Edge Immunology Seminar 16:30-17:30 |
+| Fixed layer (lectures, facility) | - | - | [Plenary, lecture, debrief] Cutting Edge Immunology Seminar 16:30-17:30 (tbd) |
 | Group A supervisors: ______ / ______ | [Extension / nerd factor] Extension, continued | Lunch | [Dry lab and desk work] Dry lab: extension analysis. Poster: figures and legends; [Plenary, lecture, debrief] Seminar |
 | Group B supervisors: ______ / ______ | [Extension / nerd factor] Extension, continued | Lunch | [Dry lab and desk work] Dry lab: extension analysis. Poster: figures and legends; [Plenary, lecture, debrief] Seminar |
 | Group C supervisors: ______ / ______ | [Dry lab and desk work] Dry lab: extension analysis. Poster: figures and legends | Lunch | [Extension / nerd factor] Extension, continued; [Plenary, lecture, debrief] Seminar |
@@ -175,7 +175,7 @@ Notes: One overnight challenge arm (about 20 h): challenge as the last step of y
 
 | | Morning 09:00-12:00 | Lunch 12:00-13:00 | Afternoon 13:00-17:00 |
 |---|---|---|---|
-| Fixed layer (lectures, facility) | [Plenary, lecture, debrief] Lecture: scientific writing, from data to argument, poster structure, figure design, honest limits | - | [Plenary, lecture, debrief] Failure round: each group presents one thing that went wrong and what it taught them |
+| Fixed layer (lectures, facility) | [Plenary, lecture, debrief] Lecture: scientific writing, from data to argument, poster structure, figure design, honest limits (tbd) | - | [Plenary, lecture, debrief] Failure round: each group presents one thing that went wrong and what it taught them |
 | Group A supervisors: ______ / ______ | [Plenary, lecture, debrief] Lecture; [Poster and writing] Poster production with your supervisor | Lunch | [Poster and writing] Poster production with your supervisor; [Plenary, lecture, debrief] Failure round |
 | Group B supervisors: ______ / ______ | [Plenary, lecture, debrief] Lecture; [Poster and writing] Poster production with your supervisor | Lunch | [Poster and writing] Poster production with your supervisor; [Plenary, lecture, debrief] Failure round |
 | Group C supervisors: ______ / ______ | [Plenary, lecture, debrief] Lecture; [Poster and writing] Poster production with your supervisor | Lunch | [Poster and writing] Poster production with your supervisor; [Plenary, lecture, debrief] Failure round |
@@ -187,7 +187,7 @@ Notes: One overnight challenge arm (about 20 h): challenge as the last step of y
 
 | | Morning 09:00-12:00 | Lunch 12:00-13:00 | Afternoon 13:00-17:00 |
 |---|---|---|---|
-| Fixed layer (lectures, facility) | - | - | [Plenary, lecture, debrief] Recap and Q&A: the course in one hour, then open questions with the teaching staff |
+| Fixed layer (lectures, facility) | - | - | [Plenary, lecture, debrief] Recap and Q&A (tbd): the course in one hour, then open questions with the teaching staff |
 | Group A supervisors: ______ / ______ | [Poster and writing] Poster production, final figures and legends | Lunch | [Poster and writing] Final checks. Printing deadline 14:00: poster PDF committed to the group branch; [Plenary, lecture, debrief] Recap and Q&A |
 | Group B supervisors: ______ / ______ | [Poster and writing] Poster production, final figures and legends | Lunch | [Poster and writing] Final checks. Printing deadline 14:00: poster PDF committed to the group branch; [Plenary, lecture, debrief] Recap and Q&A |
 | Group C supervisors: ______ / ______ | [Poster and writing] Poster production, final figures and legends | Lunch | [Poster and writing] Final checks. Printing deadline 14:00: poster PDF committed to the group branch; [Plenary, lecture, debrief] Recap and Q&A |
