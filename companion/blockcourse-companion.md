@@ -1,6 +1,6 @@
 # Blockrophage course: companion file
 
-Built 2026-10-27 from commit fa98a22 of the course repository. This single file
+Built 2026-10-27 from commit 51a4fd3 of the course repository. This single file
 contains the complete course material for the ETH Zürich block course
 "Macrophage Biology: in vitro, in vivo, in silico" (Spring Semester 2027).
 Repository: https://github.com/TizzuLab/blockrophage-course. It is meant to be given to a language model
@@ -291,61 +291,91 @@ harvests it.
 
 <!-- schedule:end -->
 
-### 5. The experiments
+### 5. Core experiments
 
-Every method has a [protocol](protocols/README.md) on one template: purpose,
-materials, steps, controls, checkpoints, known failure modes. `P` files are core,
-`X` files are extensions.
+Four experiments, four questions, one argument: reproduce the M1/M2 paradigm in a
+dish, ask whether it holds in living tissue, then ask what it is still good for.
+Every method has a [protocol](protocols/README.md) on one template; this section
+says why, the protocols say how.
 
-**Exp 1, week 2: establish the line.** Thaw a vial of RAW 264.7
-([P01](protocols/P01_raw264_thaw_expand.md)), count every day, split and seed
-([P02](protocols/P02_raw264_split_seed.md)), and freeze your own vials before the
-break ([P03](protocols/P03_raw264_freeze.md)). The four counts give a growth curve
-and a doubling time to compare with the published value. The viability of your own
-vial when you thaw it on the first day after the break is the second readout. Both
-go on the poster, and either can be your failure-round story.
+**Experiment 1: can we culture macrophages in vitro?** (week 2) Primary macrophages
+do not divide in a dish and die within days, so the field works with a model.
+RAW 264.7 is a line established in 1978 from a tumour induced in a BALB/c mouse by
+Abelson leukaemia virus: it divides without growth factor, adheres, responds strongly
+to LPS and IFNγ, and has been in culture for almost fifty years. What that does and
+does not make it is in the
+[background](background/macrophage_biology.md#52-level-i-ontogeny). The question is
+answered with the simplest readouts there are: the microscope, for morphology and
+confluence, and a growth curve from daily counts or an MTT assay
+`[TODO: MTT protocol]`, which gives a doubling time to compare with the published
+value. A culture that doubles at the expected rate, looks right and survives your
+own freeze and thaw is fit for Experiment 2. Protocols
+[P01](protocols/P01_raw264_thaw_expand.md), [P02](protocols/P02_raw264_split_seed.md),
+[P03](protocols/P03_raw264_freeze.md).
 
-**Exp 2, week 3: polarize and challenge.** Seed plates from the staff culture and
-polarize into M(-), M(IFNγ), M(IL-4) and M(IFNγ+LPS) for 24 h
-([P04](protocols/P04_polarization.md)). Wash and challenge M(-), M(IFNγ) and
-M(IL-4) with LPS and with the PRR axis your group chose, one overnight arm of
-about 20 h: challenge as the last step of your half day and harvest as the first
-step of the same half day the next day, so that every group's duration is the same
-([P05](protocols/P05_prr_challenge.md)); M(IFNγ+LPS) is characterised but not
-re-challenged, because a state that has already seen LPS shows endotoxin tolerance.
-Stain the unchallenged wells with the course antibody panel and acquire them in the
-facility's slot ([P08](protocols/P08_flow_cytometry.md)). Harvest supernatants and
-quantify IL-6 and TNF by ELISA ([P06](protocols/P06_elisa.md)) and nitrite by Griess
-assay ([P07](protocols/P07_griess.md)). The question each group asks is whether
-polarization changes the response to a danger signal, and in which direction.
+**Experiment 2: can we polarize them?** (week 3) The textbook states were defined by
+what you add: IFNγ, IL-4, or IFNγ with LPS, named M(IFNγ), M(IL-4) and M(IFNγ+LPS)
+after the stimulus since the 2014 nomenclature
+([background](background/macrophage_biology.md#54-level-iii-function-and-the-rise-and-fall-of-m1m2)).
+You add exactly that to wells of the same culture, with M(-) as the unstimulated
+reference, and ask whether the states separate on the three readouts the field used
+to define them: cytokines in the supernatant (IL-6 and TNF by ELISA), nitric oxide
+(Griess assay) and surface markers (flow cytometry). If they separate, you have
+built the paradigm with your own hands. If they do not, that is a result too, and the
+first thing to analyse is which readout failed. Protocols
+[P04](protocols/P04_polarization.md), [P06](protocols/P06_elisa.md),
+[P07](protocols/P07_griess.md), [P08](protocols/P08_flow_cytometry.md).
+
+**Experiment 3: does the profile hold true in vivo?** (dry lab, weeks 2 and 3) A
+dish has two states because you created two; a tissue did not read the textbook.
+From a public bulk RNA-seq dataset of RAW 264.7 cells under the same stimuli
+(GSE113836) you derive the M(IFNγ+LPS) and M(IL-4) gene signatures, then score every
+macrophage of two single-cell datasets from living systems against them: injured
+mouse peritoneum (GSE186658) and homeostatic human peritoneal fluid (GSE228030). The
+question is descriptive: do tissue macrophages fall into the two states, onto a line
+between them, or somewhere the two axes do not reach? The teaching staff preprocess
+both datasets; nobody starts from raw reads. Background sections on
+[why a dish is not a body](background/macrophage_biology.md#58-why-a-dish-is-not-a-body)
+and [the dataset](background/macrophage_biology.md#59-the-in-silico-dataset-and-how-single-cell-rna-sequencing-works);
+[analysis code](code/README.md).
+
+**Experiment 4: is the heuristic still useful?** (week 3, on the cells of
+Experiment 2) A model that fails the test of Experiment 3 may still predict
+something. The prediction built into M1/M2 is that the state a macrophage is in
+decides how it responds to the next danger signal. You test exactly that: challenge
+M(-), M(IFNγ) and M(IL-4) through a pattern-recognition receptor, with LPS and with
+the PRR axis your group chose
+([background](background/macrophage_biology.md#56-sensing-danger-pattern-recognition-receptors)),
+one overnight arm, and measure the response with the readouts of Experiment 2.
+M(IFNγ+LPS) is characterised but not re-challenged, because a cell that has already
+seen LPS shows endotoxin tolerance, itself a hint that the states are not fixed.
+Whatever you find, keep one fact in mind: after twenty years of the paradigm there is
+no approved therapy that targets macrophage polarization. A heuristic can be useful
+at the bench and still have limits in the body; your data decide where. Protocols
+[P05](protocols/P05_prr_challenge.md), [P06](protocols/P06_elisa.md),
+[P07](protocols/P07_griess.md).
 
 **Dry lab, every day.** Half of every day is at the keyboard, with the
-[analysis code](code/README.md). Week 1: clone this repository and build the pinned
-environment with your LLM. Week 2: the analysis templates on example data, your
-growth curve, and the first look at the preprocessed single-cell object. Week 3:
-derive the M(IFNγ+LPS) and M(IL-4) signatures from the public bulk RNA-seq dataset
-of RAW 264.7 cells (GSE113836), score every macrophage of the peritoneal injury
-dataset (GSE186658) against them, and analyse your own flow and ELISA data. Week 4:
-extension analysis and poster figures. The teaching staff preprocess both datasets;
-nobody starts from raw reads. Gaps at any point are filled with the poster: write
-the introduction first, then the significance.
+[analysis code](code/README.md): week 1 the environment, week 2 the templates on
+example data and your growth curve, week 3 Experiment 3 and your own flow and ELISA
+data, week 4 the poster figures. Gaps are filled with the poster: write the
+introduction first, then the significance.
 
-**Extensions.** qPCR of outputs and receptors ([X01](protocols/X01_qpcr.md)),
-flow cytometry of primary peritoneal cells on the shared panel
-([X02](protocols/X02_peritoneal_cells_flow.md)), F4/80 immunohistochemistry on
-tissue sections ([X03](protocols/X03_tissue_sections_ihc.md)), and the optional
-experiments of Section 6. Availability of surplus primary material, reagents and instruments decides
-which ones run; ask your supervisor on the first afternoon.
+### 6. Optional experiments
 
-### 6. Up your nerd factor: optional experiments and extensions
+Everything in this section is optional and there to up your nerd factor. The core
+programme is the story of the poster; what you add is your group's choice, made with
+your supervisors on the first afternoon and revised at the debriefs. Availability of
+surplus primary material, reagents and instruments decides what can run. Attempting
+everything does not mean showing everything: whatever you show needs a figure or
+table, a legend stating n, a one-sentence claim and the method or a repository commit
+hash. How extensions are recognised beyond the poster is still being decided
+`[TODO: recognition of extensions]`.
 
-Everything in this section is optional. The core programme is the story of the
-poster; what you add here is your group's choice, made with your supervisor on the
-first afternoon and revised at the debriefs. Attempting everything does not mean
-showing everything: choosing what to publish is part of the exercise, and whatever
-you show needs a figure or table, a legend stating n, a one-sentence claim and the
-method or a repository commit hash. How extensions are recognised beyond the poster
-is still being decided `[TODO: recognition of extensions]`.
+Three extensions have protocols: qPCR of outputs and receptors
+([X01](protocols/X01_qpcr.md)), flow cytometry of primary peritoneal cells on the
+shared panel ([X02](protocols/X02_peritoneal_cells_flow.md)) and F4/80
+immunohistochemistry on tissue sections ([X03](protocols/X03_tissue_sections_ihc.md)).
 
 | Experiment or extension | What goes on the poster |
 |---|---|
@@ -372,7 +402,7 @@ the learning objectives `[TODO: confirm with department rules on graded block co
 | Component | Weight |
 |---|---|
 | Poster: question, design, results, interpretation of the dish versus tissue comparison | 40% |
-| Data quality and controls, including Exp 1 | 20% |
+| Data quality and controls, including Experiment 1 | 20% |
 | Presentation and discussion | 20% |
 | Notebook, including the plan and the analysis | 20% |
 
