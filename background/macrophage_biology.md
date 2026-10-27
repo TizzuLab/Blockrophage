@@ -41,9 +41,6 @@ the rest of this chapter.
 
 ![Figure 2a: the decision tree, first level by ontogeny](figures/immIII_slide05.png)
 
-![Figure 2b: the decision tree, second level by tissue or niche](figures/immIII_slide11.png)
-
-![Figure 2c: the decision tree, second level by function or programme](figures/immIII_slide15.png)
 
 *Figure 2. The nomenclature decision tree for mononuclear phagocytes, adapted from Guilliams et al. 2014: (a) first level by ontogeny, (b) second level by tissue or niche, (c) second level by function or programme. (Immunology III, slides 5, 11 and 15.)*
 
