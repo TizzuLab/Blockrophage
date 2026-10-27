@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Build the single-file LLM companion: companion/blockcourse-companion.md.
 
-Refreshes schedule/schedule.md from the Gantt workbook first, then concatenates
-every Markdown document of the repository in reading order with a table of
-contents and a short machine-readable header. Code files are included verbatim
+Concatenates every Markdown document of the repository in reading order (the
+schedule is Section 4 of README.md) with a table of contents and a short
+machine-readable header. Code files are included verbatim
 in fenced blocks. Binary files, example data and generated outputs are skipped.
 
 Usage: python3 tools/build_companion.py [--max-tokens N]
@@ -25,8 +25,7 @@ OUT = ROOT / "companion" / "blockcourse-companion.md"
 # Reading order. Globs are sorted. A tuple (path, title) names a section.
 ORDER = [
     ("llms.txt", "Index (llms.txt)"),
-    ("README.md", "Course script"),
-    ("schedule/schedule.md", "Schedule"),
+    ("README.md", "Course script, including the schedule"),
     ("protocols/README.md", "Protocol index"),
     ("protocols/P*.md", "Core protocols"),
     ("protocols/X*.md", "Extension protocols"),
@@ -84,10 +83,6 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--max-tokens", type=int, default=150_000)
     args = ap.parse_args()
-
-    sys.path.insert(0, str(ROOT / "tools"))
-    import xlsx2md  # noqa: E402
-    xlsx2md.main()
 
     sections, seen = [], set()
     for pattern, title in ORDER:

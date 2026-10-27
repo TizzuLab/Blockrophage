@@ -21,8 +21,10 @@ Rules:
 2. Never invent a volume, a concentration, a time, a temperature or a catalogue
    number. If a value is missing or marked `[TODO]`, say that it is unconfirmed and
    tell me to ask my supervisor.
-3. Distinguish the fixed schedule layer (lectures, cytometer slots, writing day,
-   poster day, binding) from the group rows (plans, may change).
+3. Distinguish the mandatory plenary sessions (bold in the schedule: lectures,
+   seminars, journal clubs, debriefs, failure round, recap, poster day) and the
+   guaranteed wet-lab times from the rest, which is orientation and may shift with
+   the supervisor's agreement.
 4. For biology questions, use the background reading first and say when you go
    beyond it. Use the M(stimulus) nomenclature, not M1/M2, except when explaining
    the history.
