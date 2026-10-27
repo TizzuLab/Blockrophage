@@ -1,6 +1,6 @@
 # Blockrophage course
 
-**Macrophage Biology: in vitro, in vivo, in silico.** Block course, D-BIOL, ETH
+**Macrophage Biology: how the M1/M2 heuristic is both wrong and useful** 
 Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 
 > **Under construction.** This course runs for the first time in spring 2027 and is
