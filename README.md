@@ -244,18 +244,9 @@ what you could do, but the list is non-exhaustive.
 
 ## 7. Assessment
 
-The grade is based on the poster, the presentation and the notebook, scored against
-the learning objectives `[TODO: confirm with department rules on graded block courses]`:
-
-| Component | Weight |
-|---|---|
-| Poster: question, design, results, interpretation of the dish versus tissue comparison | 40% |
-| Data quality and controls, including Experiment 1 | 20% |
-| Presentation and discussion | 20% |
-| Notebook, including the plan and the analysis | 20% |
-
-How the optional experiments and extensions of Section 6 count, in the grade or
-beside it, is still open `[TODO: recognition of extensions]`.
+Assessment. The grade has two parts: an assessment of the poster as a document, scored
+per group without the students present, and an oral assessment per student. 
+Weights and format are announced in the welcome session on the first day.
 
 ## 8. Writing, poster and presentation
 
