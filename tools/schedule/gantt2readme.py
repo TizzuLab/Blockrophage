@@ -315,11 +315,10 @@ def legend_items(wb):
     return items
 
 
-def week_to_md(ws, legend, svg_name=None):
+def week_to_md(ws, legend):
+    """Text tables for one week (one per day), read by the companion, not shown in the README."""
     anchor = merged_lookup(ws)
     lines = [f"### {ws['A1'].value}", ""]
-    if svg_name:
-        lines += [f"![{ws['A1'].value}]({svg_name})", "", "<details><summary>Text version (what the companion reads)</summary>", ""]
     # days from row 3 merged headers
     days = []
     for rng in ws.merged_cells.ranges:
@@ -360,9 +359,10 @@ def week_to_md(ws, legend, svg_name=None):
         note = collect(ws, anchor, legend, rr, 2, ws.max_column)
         if note != "-":
             lines += [f"Notes: {note}", ""]
-    if svg_name:
-        lines += ["</details>", ""]
     return lines
+
+
+TEXT = HERE / "schedule_text.md"
 
 
 def main(xlsx=XLSX, readme=README):
@@ -373,6 +373,9 @@ def main(xlsx=XLSX, readme=README):
     out = [BEGIN,
            f"<!-- Generated from tools/schedule/{Path(xlsx).name} by tools/schedule/gantt2readme.py. "
            "Do not edit by hand: edit the workbook and rerun. -->", ""]
+    text = ["# Schedule, text version", "",
+            f"Generated from `tools/schedule/{Path(xlsx).name}` by `tools/schedule/gantt2readme.py` for the",
+            "companion; the drawings in README Section 4 are the same content. Activity blocks in brackets.", ""]
     n_svg = 0
     for ws in wb.worksheets:
         if ws.title.startswith("Week"):
@@ -382,12 +385,15 @@ def main(xlsx=XLSX, readme=README):
             n_svg += 1
             # content hash in the link: GitHub and browsers cache images by URL
             digest = hashlib.md5(svg.encode("utf-8")).hexdigest()[:8]
-            out += week_to_md(ws, legend, f"figures/schedule/week-{n}.svg?v={digest}")
+            title = str(ws["A1"].value)
+            out += [f"### {title}", "", f"![{title}](figures/schedule/week-{n}.svg?v={digest})", ""]
+            text += week_to_md(ws, legend)
     out.append(END)
-    text = Path(readme).read_text(encoding="utf-8")
-    a, b = text.index(BEGIN), text.index(END) + len(END)
-    Path(readme).write_text(text[:a] + "\n".join(out) + text[b:], encoding="utf-8")
-    print(f"wrote {n_svg} drawings to {FIG_DIR} and the schedule block of {readme}")
+    TEXT.write_text("\n".join(text), encoding="utf-8")
+    readme_text = Path(readme).read_text(encoding="utf-8")
+    a, b = readme_text.index(BEGIN), readme_text.index(END) + len(END)
+    Path(readme).write_text(readme_text[:a] + "\n".join(out) + readme_text[b:], encoding="utf-8")
+    print(f"wrote {n_svg} drawings to {FIG_DIR}, the schedule block of {readme}, and {TEXT}")
 
 
 if __name__ == "__main__":

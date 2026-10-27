@@ -26,6 +26,7 @@ OUT = ROOT / "companion" / "blockcourse-companion.md"
 ORDER = [
     ("llms.txt", "Index (llms.txt)"),
     ("README.md", "Course script, including the schedule"),
+    ("tools/schedule/schedule_text.md", "Schedule, text version of the drawings"),
     ("protocols/README.md", "Protocol index"),
     ("protocols/P*.md", "Core protocols"),
     ("protocols/X*.md", "Extension protocols"),
