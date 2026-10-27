@@ -1,6 +1,6 @@
 # Blockrophage course: companion file
 
-Built 2026-10-27 from commit 4bec79c of the course repository. This single file
+Built 2026-10-27 from commit b026c2e of the course repository. This single file
 contains the complete course material for the ETH Zürich block course
 "Macrophage Biology: in vitro, in vivo, in silico" (Spring Semester 2027).
 Repository: https://github.com/TizzuLab/blockrophage-course. It is meant to be given to a language model
@@ -49,6 +49,8 @@ an answer can cite the file. Values marked [TODO] are unconfirmed.
   - `slides/03_TissueRepair_Part2.pdf`
   - `slides/04_TissueRepair_Part3_GranulationTissue.pdf`
   - `slides/05_TissueRepair_Part4_Remodelling.pdf`
+- Poster guide
+  - `poster/README.md`
 - Code overview
   - `code/README.md`
 - Code: R scripts
@@ -129,6 +131,7 @@ an answer can cite the file. Values marked [TODO] are unconfirmed.
 
 ### Code
 
+- [Poster guide](poster/README.md): ETH scientific poster template (link, not hosted), A3 scaled to A0, what the course expects on the poster.
 - [Code overview](code/README.md): analysis templates and the single-cell workflow.
 
 ### Optional
@@ -394,6 +397,10 @@ per group without the students present, and an oral assessment per student.
 Weights and format are announced in the welcome session on the first day.
 
 ### 8. Writing, poster and presentation
+
+The poster is made with the ETH scientific poster template, laid out in A3 and
+printed at A0; the [poster guide](poster/README.md) links the template on the ETH
+Corporate Design page and lists what the course expects on the poster.
 
 `[TODO: poster format, template; printing deadline Thu 15 Apr 14:00, printer; talk
 length; writing lecture: building an argument from data, figure design, what a good
@@ -5075,6 +5082,50 @@ HPL F32.2
 Otto-Stern-Weg 7
 8098 Zürich
 ```
+
+---
+
+# Poster guide
+
+<!-- file: poster/README.md -->
+
+## Poster
+
+> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage-course/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
+
+One poster per group, in the ETH corporate design, printed for the poster session on
+the last Friday and assessed as a document (Section 7 of the script).
+
+### Template
+
+The poster is made with the **ETH scientific poster template**, provided by ETH
+Zürich Corporate Communications:
+<https://ethz.ch/staffnet/en/service/communication/corporate-design/templates.html#Plakat>
+
+The download is a ZIP with the template for PowerPoint (`.potx`, portrait and
+landscape), for Illustrator (`.ai` and `.ait`) and for LaTeX (`a0poster` class, four
+variants: portrait or landscape, white or coloured background, with a README inside).
+The template is laid out in A3 and scaled to A0 for printing; keep every figure
+vector or at 300 dpi for A0, not for A3.
+
+The template and the ETH logo are ETH's and are intended solely for communication on
+behalf of ETH Zürich. They are not part of this repository and not covered by its
+CC BY licence; every student downloads the template from the ETH page with their
+ETH login, as a member of ETH `[TODO: confirm with Corporate Communications whether
+the course may redistribute the template in this public repository]`.
+
+### What the course expects
+
+- Format: A0, portrait or landscape, one poster per group `[TODO: confirm with the
+  printer]`.
+- Content, in this order: title and group, question, design with controls, results
+  (figures with legends stating n), interpretation of the dish-versus-tissue
+  comparison, limits, extensions if any, methods with protocol IDs and the commit
+  hash of the group branch.
+- The poster PDF is committed to the group branch by the printing deadline, Thu 15
+  April 2027, 14:00 (Section 4). Printing is organised by the staff `[TODO: printer]`.
+- The writing lecture in week 4 covers how to build the argument from the data, figure
+  design, what a good legend does, and how to state limits honestly.
 
 ---
 
