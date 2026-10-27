@@ -124,12 +124,6 @@ has one supervisor from the teaching staff who travels with it for the whole cou
 Supervisors may fold in experiments the lab needs anyway; those go into the group
 notebook like any other experiment and may appear on the poster.
 
-**The plan is the first deliverable.** On the first afternoon each group fills its
-own row of the [course schedule](schedule/schedule.md) with its supervisor: which
-protocol when, which PRR axis, which extensions. The plan is submitted on Friday of
-week 1 and revised at the two debriefs. A plan that changes is normal; a plan that
-nobody wrote down is not.
-
 **Git and group branches.** This repository is the course, and each group works in
 its own branch of it, named by year and group (for example `2027/group-a`). Your
 supervisor owns that branch: you push your changes to a branch of your own and open a
@@ -140,8 +134,8 @@ needs git experience on day one; the first morning covers accounts, cloning and 
 first pull request, and the companion knows the commands.
 
 **Lab notebook.** One shared electronic notebook per group `[TODO: tool, or the
-group branch itself]`. It contains the plan, raw data, the analysis, and the LLM error
-log. The notebook is part of the grade.
+group branch itself]`. It contains your experiment plan, raw data, the analysis, and
+the LLM error log. The notebook is part of the grade.
 
 **LLM error log.** Every time a language model gave you something wrong, record what
 it said, how you noticed, and what the correct answer was. Short entries are fine.
@@ -149,8 +143,8 @@ This log is read and scored.
 
 **Up your nerd factor.** Beyond the core programme there is a menu of optional
 experiments and extensions (Section 6). What your group adds is your choice, agreed
-with your supervisor on the planning afternoon. How extensions are recognised is
-still open `[TODO]`.
+with your supervisor on the first afternoon and revised at the debriefs. How
+extensions are recognised is still open `[TODO]`.
 
 **Failure round.** On the Wednesday of week 4, after the writing lecture and a day
 of poster production, each group presents one thing that went wrong and what it
@@ -182,33 +176,99 @@ concerns and ideas `[TODO: link]`.
 
 ## 4. Schedule
 
-The schedule is a Gantt-style workbook,
-[`schedule/Blockcourse_Gantt_FS2027.xlsx`](schedule/Blockcourse_Gantt_FS2027.xlsx),
-rendered week by week as drawings and text in
-[`schedule/schedule.md`](schedule/schedule.md). It has one sheet per week, one row
-per group, a staff row and a resources row, and a cell per hour. Course hours are
-09:00 to 17:00 with lunch from 12:00 to 13:00. Two layers:
+Course hours are 09:00 to 17:00, lunch 12:00 to 13:00, Thu 18 March to Fri 16
+April 2027 with the Easter break from Fri 26 March to Sun 4 April (no course, no
+cultures).
 
-- **Fixed layer**, drawn by the teaching staff: lectures and journal clubs, the
-  facility lecture, cytometer slots reserved by the flow cytometry facility, the
-  IMHS Lunch Seminar every Monday 12:00–13:00 and the Cutting Edge Immunology
-  Seminar every Tuesday 16:30–17:30 (weeks 2 to 4), the writing lecture, the recap,
-  the poster presentations.
-- **Group layer**, drawn by each group with its supervisor on the planning
-  afternoon. The default rhythm is a checkerboard: two groups at the bench in the
-  morning and two in the dry lab, swapped after lunch, so that two hoods are always
-  enough and the cytometer serves two groups per slot. Pairs stay fixed within a
-  week, because the group that starts a 24 h step harvests it. Groups may deviate
-  from the default if their hood time still fits.
+**How to read this schedule.** Sessions in **bold** are plenary and mandatory:
+lectures, seminars, journal clubs, debriefs, the failure round, the recap and the
+poster day. The wet-lab times listed for your group are guaranteed: hoods and
+cytometer slots are reserved for you then. Everything else is orientation. If space
+permits, which it usually will, your group can shift work with your supervisor's
+agreement. Nobody submits a timetable; your plan lives in your notebook and changes
+when the experiments do.
 
-The fixed anchors:
+**Capacity.** Two groups work at the bench per half day, the other two in the dry
+lab, swapped after lunch. Groups A and B form one pair, C and D the other, and the
+pairs stay fixed within a week because the group that starts an overnight step
+harvests it. `[TODO: hoods available per half day]`
 
-| Week | Dates | What is fixed |
-|---|---|---|
-| 1 | Thu 18 – Fri 19 March | Thu: welcome, safety, groups 09:00; lecture on tissue macrophages and nomenclature 10:00–12:00; lecture on the techniques of the course 13:00; planning afternoon. Fri: dry lab setup; facility lecture on flow cytometry and FlowJo 13:00 `[TODO: slot]`; lab tour; plans submitted. |
-| 2 | Mon 22 – Thu 25 March | Exp 1 (Section 5). Mon 12:00 IMHS Lunch Seminar. Tue 16:30 Cutting Edge Immunology Seminar. Wed 09:00 lecture: tissue repair I, macrophages in injury and repair. Thu 09:00 journal club 1: the M1/M2 nomenclature revision `[TODO: paper]`. Debrief Thursday 16:00. Easter break follows; nothing stays in culture. |
-| 3 | Mon 5 – Fri 9 April | Exp 2 (Section 5). Mon 12:00 IMHS Lunch Seminar. Tue 09:00 lecture: single-cell transcriptomics for immunologists; Tue 16:30 Cutting Edge Immunology Seminar. Cytometer slots Wednesday `[TODO: facility]`. Thu 09:00 journal club 2: the peritoneal injury single-cell paper behind GSE186658 `[TODO: paper]`. Debrief Friday 16:00. |
-| 4 | Mon 12 – Fri 16 April | Mon–Tue extensions or rescue path; Mon 12:00 IMHS Lunch Seminar; Tue 16:30 Cutting Edge Immunology Seminar. Wed 09:00 lecture on scientific writing, then poster production with your supervisor; 16:00 failure round. Thu poster production; **printing deadline 14:00**: poster PDF committed to the group branch; 14:00–17:00 recap and Q&A with the teaching staff. Fri lab clean-up, notebook and group branch finalised; 11:00 feedback round and course evaluation; 13:00–16:00 poster presentations and prize; 16:00 Apéro. |
+### Week 1: orientation (Thu 18 to Fri 19 March)
+
+| Day | Morning 09:00–12:00 | Lunch | Afternoon 13:00–17:00 |
+|---|---|---|---|
+| Thu 18 | **09:00 Welcome, safety briefing, group formation.** **10:00 Lecture: tissue macrophages and nomenclature** | | **13:00 Lecture: the techniques of this course, one slide per method.** 14:00 Experiment planning with your supervisor: choose your PRR axis and your extensions |
+| Fri 19 | Dry lab setup: clone the course repository, build the environment with your LLM, run the ELISA template on example data | | **13:00 Facility lecture: flow cytometry and FlowJo** `[TODO: slot]`. Lab tour. Read P01 for Monday |
+
+### Week 2: Exp 1, establish the line (Mon 22 to Thu 25 March)
+
+| Day | Morning 09:00–12:00 | Lunch | Afternoon 13:00–17:00 |
+|---|---|---|---|
+| Mon 22 | Wet lab (A+B): P01 thaw RAW 264.7, count (T0), seed the flask. Dry lab (C+D): analysis templates on example data (ELISA, Griess) | **IMHS Lunch Seminar** | Wet lab (C+D): P01 thaw, count (T0), seed. Dry lab (A+B): analysis templates |
+| Tue 23 | Wet lab (A+B): P01 inspect, count (T1), medium change. Dry lab (C+D): FlowJo on example data; poster: draft the introduction | | Wet lab (C+D): P01 count (T1), medium change. Dry lab (A+B): FlowJo, introduction. **16:30 Cutting Edge Immunology Seminar** (to 17:30) |
+| Wed 24 | **09:00 Lecture: tissue repair I, macrophages in injury and repair.** 10:00 Wet lab (A+B): P02 count (T2), scrape, split, seed growth-curve wells. Dry lab (C+D): growth curve and doubling time from your counts; poster: significance | | Wet lab (C+D): P02 count (T2), split, seed growth-curve wells. Dry lab (A+B): growth curve, significance |
+| Thu 25 | **09:00 Journal club 1: the M1/M2 nomenclature revision** `[TODO: paper]`, one group presents, all read. 10:00 Wet lab (A+B): P01 count (T3), P03 freeze your own vials, clean-up. Dry lab (C+D): scRNA-seq part 1, load the preprocessed object, QC figure | | Wet lab (C+D): count (T3), P03 freeze, clean-up. Dry lab (A+B): scRNA-seq part 1. **16:00 Debrief week 2: what worked, plan for Exp 2.** Nothing stays in culture over the break |
+
+Exp 1 is a real experiment: four counts give a growth curve and a doubling time
+against the published value, and the viability of your own vial on Mon 5 April is
+the second readout.
+
+### Week 3: Exp 2, polarize and challenge (Mon 5 to Fri 9 April)
+
+| Day | Morning 09:00–12:00 | Lunch | Afternoon 13:00–17:00 |
+|---|---|---|---|
+| Mon 5 | Wet lab (C+D): P01 thaw your own vial (viability = Exp 1 readout), P02 seed Exp 2 plates from the staff culture. Dry lab (A+B): scRNA-seq part 2, derive the M(IFNγ+LPS) and M(IL-4) signatures from the bulk RAW 264.7 dataset | **IMHS Lunch Seminar** | Wet lab (A+B): thaw your own vial, seed Exp 2 plates. Dry lab (C+D): scRNA-seq part 2 |
+| Tue 6 | **09:00 Lecture: single-cell transcriptomics for immunologists, what a signature score means.** 10:00 Wet lab (C+D): P04 polarize M(-), M(IFNγ), M(IL-4), M(IFNγ+LPS). Dry lab (A+B): scRNA-seq part 3, score the tissue macrophages; poster: methods | | Wet lab (A+B): P04 polarize. Dry lab (C+D): scRNA-seq part 3, methods. **16:30 Cutting Edge Immunology Seminar** (to 17:30) |
+| Wed 7 | Wet lab (C+D): P04 wash, P05 challenge with LPS and your axis, P08 stain the unchallenged wells, **cytometer slot C+D 11:00–13:00** `[TODO: facility]` (lunch afterwards). Dry lab (A+B): FlowJo gating of your own data, export statistics | | Wet lab (A+B): wash, challenge, stain, **cytometer slot A+B** `[TODO: facility]`. Dry lab (C+D): FlowJo gating of your own data |
+| Thu 8 | **09:00 Journal club 2: the peritoneal injury single-cell paper behind GSE186658** `[TODO: paper]`. 10:00 Wet lab (C+D): P05 harvest supernatants, P06 ELISA IL-6 and TNF, P07 Griess. Dry lab (A+B): flow statistics in R; poster: figure 1 draft | | Wet lab (A+B): harvest, ELISA, Griess. Dry lab (C+D): flow statistics, figure 1 |
+| Fri 9 | Wet lab (C+D): plate reader runs, repeats where needed, clean-up, check your own-vial culture. Dry lab (A+B): ELISA and Griess analysis; poster: results so far | | Wet lab (A+B): plate reader, repeats, clean-up. Dry lab (C+D): ELISA and Griess analysis. **16:00 Debrief Exp 2: results, extension choices, rescue decisions** |
+
+One overnight challenge arm only; the 6 h RNA arm belongs to the qPCR extension
+X01. `[TODO: challenge duration, 16 h per the lab protocol or 24 h]`
+
+### Week 4: extensions, poster, presentations (Mon 12 to Fri 16 April)
+
+| Day | Morning 09:00–12:00 | Lunch | Afternoon 13:00–17:00 |
+|---|---|---|---|
+| Mon 12 | Wet lab (A+B): extension of your choice, or the rescue path. Dry lab (C+D): analysis of Exp 2; poster: figures | **IMHS Lunch Seminar** | Wet lab (C+D): extension or rescue path. Dry lab (A+B): analysis of Exp 2, figures |
+| Tue 13 | Wet lab (A+B): extension, continued. Dry lab (C+D): extension analysis; poster: figures and legends | | Wet lab (C+D): extension, continued. Dry lab (A+B): extension analysis, figures and legends. **16:30 Cutting Edge Immunology Seminar** (to 17:30) |
+| Wed 14 | **09:00 Lecture: scientific writing, from data to argument, poster structure, figure design, honest limits.** 10:00 Poster production with your supervisor | | Poster production with your supervisor. **16:00 Failure round: each group presents one thing that went wrong and what it taught them** |
+| Thu 15 | Poster production: final figures and legends | | 13:00 Final checks. **Printing deadline 14:00: poster PDF committed to the group branch.** **14:00 Recap and Q&A: the course in one hour, then open questions with the teaching staff** |
+| Fri 16 | Lab clean-up; notebook and group branch finalised. **11:00 Feedback round with the teaching staff; course evaluation** | | **13:00 Poster presentations and discussion; prize.** **16:00 Apéro** |
+
+Hoods are available on Monday and Tuesday only. **Rescue path.** A full repeat of
+Exp 2 does not fit in week 4. A group whose Exp 2 failed takes the rescue path: staff
+seed plates Fri 9 April, the group polarizes Mon 12, challenges Tue 13, harvests Wed
+14 at 09:00 and runs the ELISA Thu 15 morning, so the result is on the poster by the
+printing deadline.
+
+### Staff preparation
+
+- **Week 1.** Rooms, safety officer, group list; supervisors sit with their group
+  from 14:00 on Thursday. Friday: walk around the dry lab and unblock installs;
+  fallback environment ready `[TODO]`. Seminar room both days; computer room or own
+  laptops, Wi-Fi, FlowJo seats `[TODO: facility]`.
+- **Week 2.** Medium warmed, one vial per group at 09:00 and 13:00 on Monday;
+  supervisor at the hood for the thaw. Cultures inspected 08:00 daily; counting
+  chambers or counter, plates and scrapers ready; every split checked before it goes
+  back in the incubator. Thursday: freezing boxes in the −80, all cultures collected
+  at 17:00. Over Easter: thaw backup RAW 264.7 on Wed 31 March, split Fri 2 April, so
+  Exp 2 plates can be seeded Mon 5 April `[TODO: confirm dates with the department]`.
+  One incubator shelf per group; cell counter; 6- or 12-well plates for the growth
+  curve; −80 box and Mr Frosty per group.
+- **Week 3.** Backup culture sufficient to seed four groups; plates and cytokines
+  ready; IFNγ, IL-4 and LPS aliquots at working concentration `[TODO: supplier]`;
+  plate maps checked before anyone pipettes. Wednesday: ligands for every axis,
+  antibody panel and viability dye, two cytometer slots of 2 h booked `[TODO:
+  facility]`, groups escorted to the facility. Thursday: ELISA kits, Griess reagents,
+  plate reader (450 nm, 540 nm) booked, dilution series decided with each group.
+  Friday: −20 space for supernatants; rescue plates seeded for groups that need them.
+- **Week 4.** Reagents for the extensions agreed on Fri 9 April; extension-specific
+  instruments as agreed. Rescue plates: polarize Mon, challenge Tue, harvest Wed
+  09:00, ELISA Thu morning. Poster template distributed and printing booked `[TODO:
+  printer]`; posters printed Thursday after 14:00. Seminar room Wed to Fri, poster
+  boards, jury, prize, evaluation form, clean-up checklist, Apéro ordered `[TODO:
+  catering]`.
 
 ## 5. The experiments
 
@@ -252,13 +312,13 @@ peritoneal lavage and flow cytometry on the shared panel
 ([X02](protocols/X02_peritoneal_lavage.md)), organ harvest and F4/80
 immunohistochemistry ([X03](protocols/X03_organ_harvest_ihc.md)), and the optional
 experiments of Section 6. Availability of mice, reagents and instruments decides
-which ones run; ask on the planning afternoon.
+which ones run; ask your supervisor on the first afternoon.
 
 ## 6. Up your nerd factor: optional experiments and extensions
 
 Everything in this section is optional. The core programme is the story of the
 poster; what you add here is your group's choice, made with your supervisor on the
-planning afternoon and revised at the debriefs. Attempting everything does not mean
+first afternoon and revised at the debriefs. Attempting everything does not mean
 showing everything: choosing what to publish is part of the exercise, and whatever
 you show needs a figure or table, a legend stating n, a one-sentence claim and the
 method or a repository commit hash. How extensions are recognised beyond the poster
@@ -291,7 +351,7 @@ the learning objectives `[TODO: confirm with department rules on graded block co
 | Poster: question, design, results, interpretation of the dish versus tissue comparison | 40% |
 | Data quality and controls, including Exp 1 | 20% |
 | Presentation and discussion | 20% |
-| Notebook, including the plan and the LLM error log | 20% |
+| Notebook, including the LLM error log | 20% |
 
 How the optional experiments and extensions of Section 6 count, in the grade or
 beside it, is still open `[TODO: recognition of extensions]`.
