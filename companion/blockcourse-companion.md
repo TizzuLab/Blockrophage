@@ -1,6 +1,6 @@
 # Blockrophage course: companion file
 
-Built 2026-10-27 from commit eb893a5 of the course repository. This single file
+Built 2026-10-27 from commit b7985d6 of the course repository. This single file
 contains the complete course material for the ETH Zürich block course
 "Macrophage Biology: in vitro, in vivo, in silico" (Spring Semester 2027).
 Repository: https://github.com/TizzuLab/blockrophage-course. It is meant to be given to a language model
@@ -38,7 +38,7 @@ an answer can cite the file. Values marked [TODO] are unconfirmed.
   - `protocols/X02_peritoneal_cells_flow.md`
   - `protocols/X03_tissue_sections_ihc.md`
 - Background reading
-  - `background/macrophage_biology.md`
+  - `background/README.md`
 - Reading list
   - `background/reading_list.md`
 - Slides index
@@ -121,7 +121,7 @@ an answer can cite the file. Values marked [TODO] are unconfirmed.
 
 ### Background
 
-- [Macrophage biology](background/macrophage_biology.md): nomenclature, ontogeny,
+- [Macrophage biology](background/README.md): nomenclature, ontogeny,
   niche, function and activation state, pattern-recognition receptors, the peritoneal
   cavity, why a dish is not a body, the single-cell dataset, working with a language
   model as a scientist.
@@ -199,7 +199,7 @@ take it to real tissue macrophages, in a published single-cell dataset of injure
 peritoneum, and test whether the M1/M2 heuristic survives (spoiler: it does not). Lastly, 
 we discover how models (such as the M1/M2 heuristic) can be wrong yet useful, for example 
 in explaining how macrophages differ in their response to danger molecules.
-The [background reading](background/macrophage_biology.md) tells that
+The [background reading](background/README.md) tells that
 story and condenses the optional [lectures](slides/).
 
 Teaching principles.
@@ -308,7 +308,7 @@ RAW 264.7 is a line established in 1978 from a tumour induced in a BALB/c mouse 
 Abelson leukaemia virus: it divides without growth factor, adheres, responds strongly
 to LPS and IFNγ, and has been in culture for almost fifty years. What that does and
 does not make it is in the
-[background](background/macrophage_biology.md#52-level-i-ontogeny). The question is
+[background](background/README.md#52-level-i-ontogeny). The question is
 answered with the simplest readouts there are: the microscope, for morphology and
 confluence, and a growth curve from daily counts and an MTT assay, from which a
 doubling time is derived and compared with the published value. A culture that doubles at the expected rate, looks right and
@@ -320,7 +320,7 @@ will have taken this line from vial to vial yourselves. Protocols
 **Experiment 2: can we polarize them?** (week 3) The textbook states were defined by
 what is added: IFNγ, IL-4, or IFNγ with LPS, named M(IFNγ), M(IL-4) and M(IFNγ+LPS)
 after the stimulus since the 2014 nomenclature
-([background](background/macrophage_biology.md#54-level-iii-function-and-activation-state)).
+([background](background/README.md#54-level-iii-function-and-activation-state)).
 Exactly that is added to wells of the same culture, with M(-) as the unstimulated
 reference, and the question is whether the states separate on the three readouts the
 field used to define them: cytokines in the supernatant (IL-6 and TNF by ELISA),
@@ -341,8 +341,8 @@ states, onto a line between them, or somewhere the two axes do not reach? Both
 datasets are preprocessed by the teaching staff; nobody starts from raw reads. What
 the picture means is something we will work out together at the debriefs. Background
 sections on
-[why a dish is not a body](background/macrophage_biology.md#58-why-a-dish-is-not-a-body)
-and [the dataset](background/macrophage_biology.md#59-the-in-silico-dataset-and-how-single-cell-rna-sequencing-works);
+[why a dish is not a body](background/README.md#58-why-a-dish-is-not-a-body)
+and [the dataset](background/README.md#59-the-in-silico-dataset-and-how-single-cell-rna-sequencing-works);
 [analysis code](code/README.md).
 
 **Experiment 4: is the heuristic still useful?** (week 3, on the cells of
@@ -351,7 +351,7 @@ something. The prediction built into M1/M2 is that the state a macrophage is in
 decides how it responds to the next danger signal. Exactly that is tested: M(-),
 M(IFNγ) and M(IL-4) are challenged through a pattern-recognition receptor, with LPS
 and with the PRR axis your group chose
-([background](background/macrophage_biology.md#56-sensing-danger-pattern-recognition-receptors)),
+([background](background/README.md#56-sensing-danger-pattern-recognition-receptors)),
 one overnight arm, and the response is measured with the readouts of Experiment 2.
 M(IFNγ+LPS) is characterised but not re-challenged, because a cell that has already
 seen LPS shows endotoxin tolerance, itself a hint that the states are not fixed.
@@ -2154,7 +2154,7 @@ hypothesis and its outcome on the poster.
 
 # Background reading
 
-<!-- file: background/macrophage_biology.md -->
+<!-- file: background/README.md -->
 
 ## Background: macrophage biology
 
@@ -2162,6 +2162,11 @@ hypothesis and its outcome on the poster.
 
 This is the background reading for the course based on Immunology III (1 December 2025)
 and the tissue repair lectures. It adds the history of the ideas underlying this course. 
+
+References and the two public datasets are in [reading_list.md](reading_list.md); the
+lecture decks are in [../slides/](../slides/README.md). The figures are the lecture
+slides themselves, extracted to `figures/`; figures taken from the published
+literature are cited on the slide and remain the property of their owners.
 
 ### 5.1 A cell with many names
 
@@ -2799,7 +2804,7 @@ reviews used in the lecture `[TODO]`.
 
 Lectures given at ETH Zürich, as presented, for anyone who wants to read further.
 None of them is a prerequisite: the course starts from scratch. The
-[background reading](../background/macrophage_biology.md) condenses what the
+[background reading](../background/README.md) condenses what the
 experiments need.
 
 | File | Lecture |
