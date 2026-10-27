@@ -23,23 +23,19 @@
   a step, quote the protocol ID and the step number. Never invent a volume,
   concentration or time that is not in the protocol; values marked `[TODO]` are
   unconfirmed and you must say so.
-- The schedule is a Gantt: per week, per day, morning and afternoon, one row per group
-  plus a staff row and a resources row. Group rows are the groups' own plans and may
-  differ; the fixed layer (lectures, cytometer slots) is binding.
+- The schedule is Section 4 of the script: one table per week, one row per day,
+  morning, lunch and afternoon. Sessions in bold are plenary and mandatory; the
+  wet-lab times listed for a group are guaranteed; everything else is orientation and
+  a group may shift work with its supervisor's agreement.
 - Section numbers "5.x" in the background text refer to the background document, not
   to the script.
 
 ## Script
 
 - [Course script (README)](README.md): concept, learning objectives, how the course
-  works, fixed schedule anchors, the two core experiments and the dry lab, the
-  optional experiments and extensions (nerd factor), assessment. Read first.
-
-## Schedule
-
-- [Schedule mirror](schedule/schedule.md): generated from the Gantt workbook; the
-  text form of the day-by-day plan. Read second.
-- Gantt workbook: `schedule/Blockcourse_Gantt_FS2027.xlsx` (binary, the source).
+  works, the schedule (Section 4, week by week), the two core experiments and the
+  dry lab, the optional experiments and extensions (nerd factor), assessment. Read
+  first.
 
 ## Protocols
 
