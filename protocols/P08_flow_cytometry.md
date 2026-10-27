@@ -5,7 +5,7 @@
 | | |
 |---|---|
 | ID | P08 |
-| Used in | Exp 2 (core: polarized RAW cells); X02 (extension: lavage cells on the same panel) |
+| Used in | Exp 2 (core: polarized RAW cells); X02 (extension: peritoneal cells on the same panel) |
 | Hands-on time | 2 h staining, 1 h acquisition (plus 2.5 h if the intranuclear option is run) |
 | Wall-clock time | half a day; fixed samples can be acquired the next day |
 | Resources | hood, cooled centrifuge with plate rotor, heating block, cytometer slot reserved by the facility `[TODO: instrument, slot dates]`, FlowJo seat |
@@ -15,7 +15,7 @@
 ## Purpose
 
 Phenotype the four in vitro states on the course antibody panel. The panel is shared
-with the lavage extension (X02) so that in vitro and tissue cells can be compared
+with the peritoneal cells extension (X02) so that in vitro and tissue cells can be compared
 directly in the same session. In the core it is run on RAW cells only.
 
 ## Materials
@@ -34,7 +34,7 @@ on peritoneal cells (dilution factors from the lab's panel workbook, titrated wi
 | ICAM2 (CD102) | resident LPM | FITC, clone 3C4 (116129) | 1:200 |
 | Gata6 (intranuclear) | resident LPM transcription factor | PE, clone D61E4 (Cell Signaling 26452S), with isotype control | 1:100 |
 | Ly6C | monocytes | PerCP-Cy5.5, clone HK1.4 (Thermo 45-5932-82) | 1:400 |
-| CD19 | B cells in lavage | Spark Blue 550 (BioLegend 115566) | 1:800 |
+| CD19 | B cells in peritoneal samples | Spark Blue 550 (BioLegend 115566) | 1:800 |
 | CD86 | M(IFNγ) | `[TODO: not in the lab panel; order and titrate]` | |
 | CD206 | M(IL-4) | `[TODO: not in the lab panel for mouse; order and titrate]` | |
 | Tim4 | resident LPM, optional beside Gata6 | `[TODO: not in the lab panel]` | |

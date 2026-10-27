@@ -49,8 +49,8 @@
   [P06 ELISA](protocols/P06_elisa.md), [P07 Griess](protocols/P07_griess.md),
   [P08 flow cytometry](protocols/P08_flow_cytometry.md).
 - Extensions: [X01 qPCR](protocols/X01_qpcr.md),
-  [X02 peritoneal lavage](protocols/X02_peritoneal_lavage.md),
-  [X03 organ harvest and IHC](protocols/X03_organ_harvest_ihc.md).
+  [X02 peritoneal cells on the shared flow panel](protocols/X02_peritoneal_cells_flow.md),
+  [X03 F4/80 IHC on tissue sections](protocols/X03_tissue_sections_ihc.md).
 
 ## Background
 

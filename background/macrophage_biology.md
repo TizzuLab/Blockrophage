@@ -67,7 +67,7 @@ macrophage of yolk-sac or fetal-liver origin that self-renews locally. If no, it
 bone-marrow-derived: a monocyte that entered the tissue in a CCR2-dependent manner,
 is short-lived, and can expand massively when the tissue is injured or infected. Many
 niches are mixed, and the mix shifts with age. The large peritoneal macrophages of
-the peritoneal lavage extension are an example: embryonic at birth, progressively replaced by
+the peritoneal cells extension are an example: embryonic at birth, progressively replaced by
 monocyte-derived cells in adult life, faster in males than in females (Bain et al.
 2016).
 
@@ -119,8 +119,8 @@ Kupffer cells and GATA6 in large peritoneal macrophages. Whether the niche
 instructs the cell or selects among stochastic cell-intrinsic states is still debated.
 Either way, the identity of a tissue macrophage is written by the tissue.
 
-The table lists the niches you are most likely to meet when you pick an organ for
-histology. F4/80, the product of the Adgre1 gene, has been the mouse macrophage
+The table lists the niches you are most likely to meet in the tissue you are given
+for histology. F4/80, the product of the Adgre1 gene, has been the mouse macrophage
 marker since 1981 (Austyn & Gordon 1981). It is expressed by almost every tissue
 macrophage, but at very different levels, and that is the catch in the immunohistochemistry
 extension.
@@ -151,9 +151,9 @@ extension.
 
 *Figure 7. Survival signals per niche: CSF1 (M-CSF), CSF2 (GM-CSF) and IL-34, the second CSF1R ligand, and the knockout phenotypes behind the rule of 1234 (Immunology III, slide 14.)*
 
-Questions. Pick an organ. Which niche or niches does it contain, what is the
+Questions. Pick a tissue. Which niche or niches does it contain, what is the
 expected F4/80 level, and what would a negative result of F4/80 staining mean? Which survival factor
-would you add to the medium if you wanted to keep macrophages from that organ alive
+would you add to the medium if you wanted to keep macrophages from that tissue alive
 in a dish?
 
 ## 5.4 Level III: function, and the rise and fall of M1/M2
@@ -369,7 +369,7 @@ macrophages (SPM) are F4/80 low, MHCII high and monocyte-derived. The rest of th
 lavage is B1 B cells, a few T and NK cells, mast cells and eosinophils. In the flow
 panel, CD19 removes the B cells, F4/80 against MHCII separates the two macrophage
 populations, and TIM4 with ICAM2 confirms the resident identity. No in vitro cell
-will fall into the LPM gate. If you run the peritoneal lavage extension, that is
+will fall into the LPM gate. If you run the peritoneal cells extension, that is
 its first result, before you have looked at a single activation marker.
 
 What do LPMs do? In the steady state they drift through the cavity in undirected
@@ -497,8 +497,7 @@ plausible text now outgrows the availability of verified claims by orders of mag
 Three habits protect you. Run the code and look at the object, not at the model's
 description of the object. Reproduce a known result before you trust a new one, which
 is why the in silico challenge gives you code without figures. And write down every
-error you catch in the LLM error log; the log is scored because the habit is the
-skill.
+error you catch, because the habit is the skill.
 
 Questions. The model tells you that a Seurat function normalises "by default to
 10,000 counts per cell". How do you check in under a minute? A citation the model
