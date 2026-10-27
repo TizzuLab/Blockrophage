@@ -19,9 +19,33 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 | Teaching staff | One supervisor per group `[TODO: names]`; flow cytometry facility `[TODO: name]` |
 | Location | `[TODO: lab, seminar room, flow facility]` |
 | Students | `[TODO: number]`, in groups of 2–3; four groups planned, three possible |
-| Prerequisites | Immunology III (tissue macrophages lecture) or equivalent; no cell culture and no programming experience required |
+| Prerequisites | None. The course starts from scratch: no prior immunology, no cell culture and no programming experience required. See *What you need for this course* below |
 | Language | English |
-| Version | 0.3, 2026-10-26 |
+| Version | 0.4, 2026-10-27 |
+
+## What you need for this course
+
+No prior knowledge. The course starts from scratch. The [lectures](slides/) linked
+from the course website are optional further reading, not a requirement.
+
+1. **A GitHub account.** Free at [github.com](https://github.com). Create it before
+   the first day and send us your username. All course material, your group's work
+   and your own edits live in this repository.
+2. **Your ok to work in public.** This repository is public. Everything you write or
+   change in it, including your name on each change, is visible to anyone. By joining
+   the course you agree to this. If that is a problem for you, talk to us before the
+   course starts.
+3. **A laptop.** Bring your own; any operating system works. The analysis runs in
+   Python, and we install git, Python and the analysis environment together on the
+   first morning.
+4. **Optional: a coach.** Download the [companion package](#your-companion) and drop
+   it into the language model of your choice. It contains the whole course in one
+   file plus a prompt, and will walk you through protocols and analysis step by step.
+   Everything it says is derived from this repository, and the repository, not the
+   model, is the reference.
+
+Each group has a supervisor from the teaching staff who owns the group's branch of
+this repository and reviews what goes into it (Section 3).
 
 ## 1. Concept
 
@@ -31,7 +55,7 @@ take it to real tissue macrophages, in a published single-cell dataset of injure
 peritoneum, and test whether it survives. It will not survive intact. The field made
 the same discovery about ten years ago and rewrote its nomenclature; you make it in
 four weeks. The [background reading](background/macrophage_biology.md) tells that
-story and condenses the [lectures](slides/) the course builds on.
+story and condenses the optional [lectures](slides/).
 
 The course rests on three principles.
 
@@ -45,13 +69,19 @@ The course rests on three principles.
   model was wrong and how you caught it. Information is cheap; verified information
   is not.
 
-One question, two core arms, and a third arm for those who want it:
+One question, three arms. Each arm is one move in an argument about the M1/M2
+paradigm: reproduce it, test it, then ask what it is still good for.
 
 | Arm | What you do | What it answers |
 |---|---|---|
-| In vitro (core) | Establish a RAW 264.7 culture, polarize it with defined stimuli, challenge it through pattern-recognition receptors, quantify cytokines, nitric oxide and surface phenotype | What the in vitro states look like, and how polarization changes the response to danger signals |
-| In silico (core) | Derive the M(IFNγ+LPS) and M(IL-4) signatures from a public RAW 264.7 dataset and score every macrophage of a published single-cell dataset of injured peritoneum (GSE186658) against them | How much of a tissue macrophage population the in vitro states explain |
-| In vivo (extension) | Peritoneal lavage and flow cytometry on the same antibody panel as your in vitro cells; F4/80 immunohistochemistry of an organ of your choice | Whether resident tissue macrophages resemble either in vitro state, and where macrophages live |
+| 1. In vitro: reproduce the paradigm | Establish a RAW 264.7 culture and polarize it with the defined stimuli behind the textbook states, M(IFNγ), M(IL-4) and M(IFNγ+LPS). Quantify cytokines, nitric oxide and surface phenotype | Does the M1/M2 picture reproduce in a dish, with your hands, and how clean is it? |
+| 2. In silico: does the paradigm hold in living systems? | Derive the M(IFNγ+LPS) and M(IL-4) signatures from a public RAW 264.7 dataset and score every macrophage of single-cell transcriptomes from living model systems against them: a published dataset of injured mouse peritoneum (GSE186658) and a human dataset `[TODO: human dataset]` | How much of a real tissue macrophage population the in vitro states explain, and where the paradigm breaks |
+| 3. Challenge: is the heuristic still useful? | A model that is not 100 % true can still be useful. Challenge the polarized states through pattern-recognition receptors, with LPS and with the PRR axis your group chose, and measure how each state responds | Whether the classical states predict behaviour under a danger signal, which is what a heuristic has to do to earn its keep |
+
+Arms 1 and 3 run on the same cells in the same week (Exp 2, Section 5). The
+extensions (Section 6) take the question into tissue: peritoneal lavage and flow
+cytometry on the same antibody panel as your in vitro cells, and F4/80
+immunohistochemistry of an organ of your choice.
 
 ## 2. Learning objectives
 
@@ -100,9 +130,18 @@ protocol when, which PRR axis, which extensions. The plan is submitted on Friday
 week 1 and revised at the two debriefs. A plan that changes is normal; a plan that
 nobody wrote down is not.
 
-**Lab notebook.** One shared electronic notebook per group `[TODO: tool]`. It
-contains the plan, raw data, the analysis, and the LLM error log. The notebook is
-part of the grade.
+**Git and group branches.** This repository is the course, and each group works in
+its own branch of it, named by year and group (for example `2027/group-a`). Your
+supervisor owns that branch: you push your changes to a branch of your own and open a
+pull request into the group branch, your supervisor reviews and merges. At the end of
+the course every group branch is a pull request into `main`; what was better than
+the original goes into next year's course, with your name on the commit. Nobody
+needs git experience on day one; the first morning covers accounts, cloning and the
+first pull request, and the companion knows the commands.
+
+**Lab notebook.** One shared electronic notebook per group `[TODO: tool, or the
+group branch itself]`. It contains the plan, raw data, the analysis, and the LLM error
+log. The notebook is part of the grade.
 
 **LLM error log.** Every time a language model gave you something wrong, record what
 it said, how you noticed, and what the correct answer was. Short entries are fine.
@@ -291,7 +330,12 @@ That is what the error log is for.
 
 ## Appendix: open items before submission
 
-- Final title, course number, ECTS, student number, rooms, supervisor names.
+- Final title (the three arms are now in vitro, in silico, challenge; the working
+  title still says in vivo), course number, ECTS, student number, rooms, supervisor
+  names.
+- Human single-cell dataset for arm 2, and whether it is core or extension.
+- GitHub organisation setup: student accounts, group branches, branch rulesets with
+  the supervisor as required reviewer; a short git training for the supervisors.
 - Flow facility: cytometer slots, facility lecture slot, FlowJo seats and where they run.
 - Hoods available per half day.
 - qPCR: extension (current plan) or core.
