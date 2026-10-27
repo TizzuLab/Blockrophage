@@ -25,8 +25,6 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 
 ## What you need for this course
 
-No prior knowledge; the [lectures](slides/) are optional reading.
-
 1. **A GitHub account**, created at [github.com](https://github.com) before the first
    day; the username is sent to us.
 2. **Your ok to work on a public repository**, where your edits and your name are
@@ -36,12 +34,12 @@ No prior knowledge; the [lectures](slides/) are optional reading.
    this repository, the [companion package](#your-companion), is dropped into a
    session.
 
-Each group is assigned two supervisors from the teaching staff, who own the group's
-branch of this repository (Section 3).
+No prior knowledge; the [lectures](slides/) are optional reading.
 
 ## 1. Concept
 
-Every student arrives with the textbook picture of macrophages: M1 kills, M2 heals.
+Every student arrives with the textbook picture of macrophages (which we will refresh in case
+you forgot): M1 kills, M2 heals.
 In this course we first recapitulate the experiments that fostered this paradigm. Then we
 take it to real tissue macrophages, in a published single-cell dataset of injured
 peritoneum, and test whether the M1/M2 heuristic survives (spoiler: it does not). Lastly, 
