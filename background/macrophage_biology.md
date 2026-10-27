@@ -224,7 +224,7 @@ inflammation. Healthy cells display CD47, a "don't eat me" signal read by SIRPα
 apoptotic cells expose phosphatidylserine, an "eat me" signal read by TIM4 among
 others (slide 36). Efferocytosis releases TGFβ, IL-10 and PGE2 and suppresses TNF,
 IL-1β and IL-6. TIM4 is in your flow panel as a marker of resident peritoneal
-macrophages, and an efferocytosis assay is on the nerd ladder.
+macrophages, and an efferocytosis assay is an optional extension.
 
 **Metabolism.** Macrophages shape adipose tissue, support lipid storage through
 PDGF-CC, control browning of white fat, and, when monocyte-derived and recruited in

@@ -32,8 +32,8 @@
 ## Script
 
 - [Course script (README)](README.md): concept, learning objectives, how the course
-  works, fixed schedule anchors, the two core experiments and the dry lab, the nerd
-  ladder of extension challenges, assessment. Read first.
+  works, fixed schedule anchors, the two core experiments and the dry lab, the
+  optional experiments and extensions (nerd factor), assessment. Read first.
 
 ## Schedule
 
