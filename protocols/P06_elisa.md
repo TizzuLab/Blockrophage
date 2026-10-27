@@ -9,7 +9,7 @@
 | Hands-on time | 3–4 h, with incubation waits, plus coating the day before |
 | Wall-clock time | 2 days (coating overnight) |
 | Resources | plate reader (450 nm; the lab uses a Promega GloMax Discover), multichannel pipette, plate washer or wash bottle, bench space |
-| Depends on | P05 supernatants (16 h arm) |
+| Depends on | P05 supernatants (overnight arm) |
 | Lab SOP | Zindel lab "RAW 264.7 polarisation" (v1.0, 2025-12-08), harvesting section, and the kit insert of the Invitrogen Mouse IL-6 Uncoated ELISA Kit (88-7064-88). The kit insert wins over this page. |
 
 ## Purpose

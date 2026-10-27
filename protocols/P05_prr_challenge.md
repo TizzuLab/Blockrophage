@@ -7,7 +7,7 @@
 | ID | P05 |
 | Used in | Exp 2 |
 | Hands-on time | 45 min to stimulate, 45 min to harvest |
-| Wall-clock time | 16 h (overnight) |
+| Wall-clock time | overnight, about 20 h in the course rhythm (the lab validated 16 h) |
 | Resources | hood, incubator shelf, plate centrifuge, −20 °C freezer |
 | Depends on | P04 completed and washed |
 | Lab SOP | Zindel lab "RAW 264.7 polarisation" (v1.0, 2025-12-08), stimulation and harvesting sections. The SOP wins over this page. |
@@ -52,8 +52,10 @@ supernatant for ELISA (P06) and Griess (P07). The 6 h RNA arm is an extension (X
 
 1. Remove the medium from the washed wells of P04 and add the condition mix
    according to the plate map: 200 µL per 96-well. Record the clock time.
-2. Incubate 16 h at 37 °C, 5% CO2 (for example 17:00 to 09:00). This is the lab's
-   validated time; the draft of this course said 24 h. Record the real time.
+2. Incubate overnight at 37 °C, 5% CO2. In the course the challenge is the last step
+   of your half day and the harvest the first step of the same half day the next
+   day, about 20 h, so that every group's duration is the same; the lab validated
+   16 h (17:00 to 09:00). Record the real time.
 3. Photograph the wells before harvest; the morphology of challenged cells is part
    of the record.
 4. Harvest: transfer 180 µL supernatant per well into a V-bottom 96-well plate in
@@ -76,7 +78,7 @@ supernatant for ELISA (P06) and Griess (P07). The 6 h RNA arm is an extension (X
 ## Checkpoints
 
 - The plate map is in the notebook before the first pipette is touched.
-- After 16 h: LPS wells are visibly activated. If not, do not harvest yet; ask.
+- At harvest: LPS wells are visibly activated. If not, do not harvest yet; ask.
 
 ## Known failure modes
 
