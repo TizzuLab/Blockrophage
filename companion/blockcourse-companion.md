@@ -1,6 +1,6 @@
 # Blockrophage course: companion file
 
-Built 2026-10-27 from commit 612b372 of the course repository. This single file
+Built 2026-10-27 from commit 2992d09 of the course repository. This single file
 contains the complete course material for the ETH Zürich block course
 "Macrophage Biology: in vitro, in vivo, in silico" (Spring Semester 2027).
 Repository: https://github.com/TizzuLab/blockrophage-course. It is meant to be given to a language model
@@ -93,8 +93,8 @@ an answer can cite the file. Values marked [TODO] are unconfirmed.
 ### Script
 
 - [Course script (README)](README.md): concept, learning objectives, how the course
-  works, fixed schedule anchors, the two core experiments and the dry lab, the nerd
-  ladder of extension challenges, assessment. Read first.
+  works, fixed schedule anchors, the two core experiments and the dry lab, the
+  optional experiments and extensions (nerd factor), assessment. Read first.
 
 ### Schedule
 
@@ -294,19 +294,15 @@ log. The notebook is part of the grade.
 it said, how you noticed, and what the correct answer was. Short entries are fine.
 This log is read and scored.
 
-**Nerd ladder.** Beyond the core programme there is a menu of extension challenges
-(Section 6), each worth nerd points. Points are awarded for completed work that is
-on the poster. The ladder is separate from the grade (Section 7). The group with the
-most points wins the prize `[TODO: prize and funding]`.
+**Up your nerd factor.** Beyond the core programme there is a menu of optional
+experiments and extensions (Section 6). What your group adds is your choice, agreed
+with your supervisor on the planning afternoon. How extensions are recognised is
+still open `[TODO]`.
 
-**Failure round.** On the writing day each group presents one thing that went wrong
-and what it taught them. The best-analysed failure earns nerd points. Nobody loses
-points for a failed experiment that is properly analysed.
-
-**Student-organised event.** The students organise one evening event for the whole
-course in week four: a grant pitching challenge, a science slam, a speed journal
-club, a mock editorial board, or something else. The organising work and the event
-count on the nerd ladder.
+**Failure round.** On the Wednesday of week 4, after the writing lecture and a day
+of poster production, each group presents one thing that went wrong and what it
+taught them. A failed experiment that is properly analysed is worth as much as one
+that worked.
 
 **Rules of the lab.** The same rules as in every research lab.
 
@@ -337,11 +333,14 @@ The schedule is a Gantt-style workbook,
 [`schedule/Blockcourse_Gantt_FS2027.xlsx`](schedule/Blockcourse_Gantt_FS2027.xlsx),
 rendered week by week as drawings and text in
 [`schedule/schedule.md`](schedule/schedule.md). It has one sheet per week, one row
-per group, a staff row and a resources row, and a cell per hour. Two layers:
+per group, a staff row and a resources row, and a cell per hour. Course hours are
+09:00 to 17:00 with lunch from 12:00 to 13:00. Two layers:
 
-- **Fixed layer**, drawn by the teaching staff: lectures, the facility lecture,
-  cytometer slots reserved by the flow cytometry facility, the writing day, the
-  poster day.
+- **Fixed layer**, drawn by the teaching staff: lectures and journal clubs, the
+  facility lecture, cytometer slots reserved by the flow cytometry facility, the
+  IMHS Lunch Seminar every Monday 12:00–13:00 and the Cutting Edge Immunology
+  Seminar every Tuesday 16:30–17:30 (weeks 2 to 4), the writing lecture, the recap,
+  the poster presentations.
 - **Group layer**, drawn by each group with its supervisor on the planning
   afternoon. The default rhythm is a checkerboard: two groups at the bench in the
   morning and two in the dry lab, swapped after lunch, so that two hoods are always
@@ -353,10 +352,10 @@ The fixed anchors:
 
 | Week | Dates | What is fixed |
 |---|---|---|
-| 1 | Thu 18 – Fri 19 March | Welcome, safety, groups. Lectures: tissue macrophages and nomenclature; the techniques of the course. Planning afternoon. Dry lab setup. Facility lecture on flow cytometry and FlowJo `[TODO: slot]`. Plans submitted. |
-| 2 | Mon 22 – Thu 25 March | Exp 1 (Section 5). Debrief Thursday 16:30. Easter break follows; nothing stays in culture. |
-| 3 | Mon 5 – Fri 9 April | Exp 2 (Section 5). Cytometer slots Wednesday `[TODO: facility]`. Debrief Friday 16:30. |
-| 4 | Mon 12 – Fri 16 April | Mon–Tue extensions or rescue path. Tue evening student event. Wed writing day and failure round. Thu poster production, feedback round, nerd ladder closes 17:00. Fri poster presentations, prize, evaluation, clean-up. |
+| 1 | Thu 18 – Fri 19 March | Thu: welcome, safety, groups 09:00; lecture on tissue macrophages and nomenclature 10:00–12:00; lecture on the techniques of the course 13:00; planning afternoon. Fri: dry lab setup; facility lecture on flow cytometry and FlowJo 13:00 `[TODO: slot]`; lab tour; plans submitted. |
+| 2 | Mon 22 – Thu 25 March | Exp 1 (Section 5). Mon 12:00 IMHS Lunch Seminar. Tue 16:30 Cutting Edge Immunology Seminar. Wed 09:00 lecture: tissue repair I, macrophages in injury and repair. Thu 09:00 journal club 1: the M1/M2 nomenclature revision `[TODO: paper]`. Debrief Thursday 16:00. Easter break follows; nothing stays in culture. |
+| 3 | Mon 5 – Fri 9 April | Exp 2 (Section 5). Mon 12:00 IMHS Lunch Seminar. Tue 09:00 lecture: single-cell transcriptomics for immunologists; Tue 16:30 Cutting Edge Immunology Seminar. Cytometer slots Wednesday `[TODO: facility]`. Thu 09:00 journal club 2: the peritoneal injury single-cell paper behind GSE186658 `[TODO: paper]`. Debrief Friday 16:00. |
+| 4 | Mon 12 – Fri 16 April | Mon–Tue extensions or rescue path; Mon 12:00 IMHS Lunch Seminar; Tue 16:30 Cutting Edge Immunology Seminar. Wed 09:00 lecture on scientific writing, then poster production with your supervisor; 16:00 failure round. Thu poster production; **printing deadline 14:00**: poster PDF committed to the group branch; 14:00–17:00 recap and Q&A with the teaching staff. Fri lab clean-up, notebook and group branch finalised; 11:00 feedback round and course evaluation; 13:00–16:00 poster presentations and prize; 16:00 Apéro. |
 
 ### 5. The experiments
 
@@ -398,46 +397,36 @@ the introduction first, then the significance.
 **Extensions.** qPCR of outputs and receptors ([X01](protocols/X01_qpcr.md)),
 peritoneal lavage and flow cytometry on the shared panel
 ([X02](protocols/X02_peritoneal_lavage.md)), organ harvest and F4/80
-immunohistochemistry ([X03](protocols/X03_organ_harvest_ihc.md)), and the items of
-the nerd ladder. Availability of mice, reagents and instruments decides which ones
-run; ask on the planning afternoon.
+immunohistochemistry ([X03](protocols/X03_organ_harvest_ihc.md)), and the optional
+experiments of Section 6. Availability of mice, reagents and instruments decides
+which ones run; ask on the planning afternoon.
 
-### 6. Up your nerd factor: extension challenges
+### 6. Up your nerd factor: optional experiments and extensions
 
-Points are awarded only for what is on the poster. This is a rule of academia,
-stupid but true, and you may as well learn it now.
+Everything in this section is optional. The core programme is the story of the
+poster; what you add here is your group's choice, made with your supervisor on the
+planning afternoon and revised at the debriefs. Attempting everything does not mean
+showing everything: choosing what to publish is part of the exercise, and whatever
+you show needs a figure or table, a legend stating n, a one-sentence claim and the
+method or a repository commit hash. How extensions are recognised beyond the poster
+is still being decided `[TODO: recognition of extensions]`.
 
-- Every nerd item is a numbered element inside one marked "Nerd panel" that takes at
-  most a quarter of the poster area. The core science stays the main story.
-- Each item has four parts: a figure or table, a legend stating n, a one-sentence
-  claim, and a one-sentence method or a repository commit hash. If one part is
-  missing, the item scores zero. Scoring is binary per item, except the graded items
-  in the table.
-- A jury member can veto an item if the data shown do not support the claim. Code
-  items are verified by opening the commit; nothing is rerun.
-- Attempting everything does not mean showing everything. Choosing what to publish
-  is part of the exercise.
-
-| Challenge | What must be on the poster | Points |
-|---|---|---|
-| Pipeline from raw matrices | QC figure from the GEO matrices, not the preprocessed object; commit hash | 2 |
-| Macrophages annotated | UMAP with Gata6+, Folr2+ Selenop+ and Trem2+ Spp1+ labelled, marker dot plot, cell counts | 3 |
-| Integration with an in vitro single-cell dataset | Integrated embedding with the accession named; percentage of in vivo macrophages mapping to any in vitro state | 5 |
-| Unpredicted figure, dataset or code | A figure or table not in the answer key, with claim, n and method | 5 |
-| qPCR (X01) | ΔΔCt of outputs and the receptor of your axis across states, with housekeepers named | 3 |
-| Lavage flow on the shared panel (X02) | Lavage cells and polarized RAW cells in one gating figure; frequency of LPM and SPM with n mice | 4 |
-| F4/80 immunohistochemistry (X03) | Image with scale bar, controls named, organ and expected F4/80 level stated | 3 |
-| Ex vivo LPS on lavage cells versus RAW | IL-6 bar plot with unstimulated controls for both cell types; n wells and mice | 2 |
-| Endotoxin tolerance | IL-6 or TNF after re-challenge, M(IFNγ+LPS) versus M(IFNγ), with statistics | 2 |
-| Organ digestion flow | Gating figure and frequency of F4/80+ cells in the organ, with n | 4 |
-| BMDM versus RAW | One figure comparing the two in at least two polarization states | 4 |
-| Phagocytosis or efferocytosis | Percentage of uptake-positive cells per state, with n | 3 |
-| Double immunofluorescence | Two-channel image with scale bar; markers named | 3 |
-| Atlas contribution | List of accepted atlas entry IDs with a QR code `[TODO: atlas platform]` | 2 each |
-| Best-analysed failure | "What went wrong" box with cause, evidence and fix; jury ranks the boxes | 2 |
-| LLM error log | Box with the number of logged errors and the best example | 1–3 |
-| Student-organised event | One line on the organisers' poster: date, format, participants | 2 |
-| Best grant pitch | "Follow-up project" box: aims in three sentences, one budget line | 2 |
+| Experiment or extension | What goes on the poster |
+|---|---|
+| Pipeline from raw matrices | QC figure from the GEO matrices, not the preprocessed object; commit hash |
+| Macrophages annotated | UMAP with Gata6+, Folr2+ Selenop+ and Trem2+ Spp1+ labelled, marker dot plot, cell counts |
+| Integration with an in vitro single-cell dataset | Integrated embedding with the accession named; percentage of in vivo macrophages mapping to any in vitro state |
+| Unpredicted figure, dataset or code | A figure or table not in the answer key, with claim, n and method |
+| qPCR (X01) | ΔΔCt of outputs and the receptor of your axis across states, with housekeepers named |
+| Lavage flow on the shared panel (X02) | Lavage cells and polarized RAW cells in one gating figure; frequency of LPM and SPM with n mice |
+| F4/80 immunohistochemistry (X03) | Image with scale bar, controls named, organ and expected F4/80 level stated |
+| Ex vivo LPS on lavage cells versus RAW | IL-6 bar plot with unstimulated controls for both cell types; n wells and mice |
+| Endotoxin tolerance | IL-6 or TNF after re-challenge, M(IFNγ+LPS) versus M(IFNγ), with statistics |
+| Organ digestion flow | Gating figure and frequency of F4/80+ cells in the organ, with n |
+| BMDM versus RAW | One figure comparing the two in at least two polarization states |
+| Phagocytosis or efferocytosis | Percentage of uptake-positive cells per state, with n |
+| Double immunofluorescence | Two-channel image with scale bar; markers named |
+| Atlas contribution | List of accepted atlas entry IDs with a QR code `[TODO: atlas platform]` |
 
 ### 7. Assessment
 
@@ -451,20 +440,19 @@ the learning objectives `[TODO: confirm with department rules on graded block co
 | Presentation and discussion | 20% |
 | Notebook, including the plan and the LLM error log | 20% |
 
-The nerd ladder is scored separately, on the poster only, by the rules in Section 6.
-When groups end with an equal grade, the nerd points decide `[TODO: what they
-decide]`.
+How the optional experiments and extensions of Section 6 count, in the grade or
+beside it, is still open `[TODO: recognition of extensions]`.
 
-### 8. Writing day, poster and presentation
+### 8. Writing, poster and presentation
 
-`[TODO: poster format, template, printing; talk length; writing day programme:
-building an argument from data, figure design, what a good legend does, how to state
-limits honestly.]`
+`[TODO: poster format, template; printing deadline Thu 15 Apr 14:00, printer; talk
+length; writing lecture: building an argument from data, figure design, what a good
+legend does, how to state limits honestly; Apéro catering.]`
 
 ### 9. Safety
 
 `[TODO: biosafety level, chemicals, sharps, after-hours rules, extension-specific
-items (PFA, DAB, animal tissue), and a sentence on the student-organised event.]`
+items (PFA, DAB, animal tissue).]`
 
 ### Your companion
 
@@ -489,7 +477,8 @@ That is what the error log is for.
 - Datasets: verify GSE113836 contents and preprocess both datasets; answer-key repository.
 - Mouse availability and licence coverage for the extensions.
 - Pinned environment, fallback environment, LLM licensing for students.
-- Atlas platform, prize and funding, grading rules for block courses, poster printing.
+- Recognition of extensions (points or otherwise), atlas platform, prize and funding,
+  grading rules for block courses, poster printing.
 
 ---
 
@@ -509,35 +498,35 @@ Activity blocks in brackets. The fixed layer is drawn by staff; group rows are t
 
 > **Under construction.** First run spring 2027; this is a template, not a confirmed timetable.
 
-### Week 1: orientation (Thu 18 - Fri 19 March 2027)
+### Week 1: orientation (Thu 18 - Fri 19 March 2027), 09:00-17:00
 
-![Week 1: orientation (Thu 18 - Fri 19 March 2027)](week-1.svg)
+![Week 1: orientation (Thu 18 - Fri 19 March 2027), 09:00-17:00](week-1.svg)
 
 <details><summary>Text version (what the companion reads)</summary>
 
 #### Thu 18 Mar
 
-| | Morning 08:30-12:30 | Afternoon 13:30-17:30 |
-|---|---|---|
-| Fixed layer (lectures, facility) | [Plenary, lecture, debrief] Welcome, safety briefing, group formation; [Plenary, lecture, debrief] Lecture: tissue macrophages and nomenclature (recap of Immunology III) | [Plenary, lecture, debrief] Lecture: the techniques of this course, one slide per method |
-| Group A supervisor: ________ | [Plenary, lecture, debrief] Plenary | [Plenary, lecture, debrief] Lecture; [Dry lab and desk work] Experiment planning with your supervisor: fill this Gantt (your row), choose the PRR axis and the extensions |
-| Group B supervisor: ________ | [Plenary, lecture, debrief] Plenary | [Plenary, lecture, debrief] Lecture; [Dry lab and desk work] Experiment planning with your supervisor: fill this Gantt (your row), choose the PRR axis and the extensions |
-| Group C supervisor: ________ | [Plenary, lecture, debrief] Plenary | [Plenary, lecture, debrief] Lecture; [Dry lab and desk work] Experiment planning with your supervisor: fill this Gantt (your row), choose the PRR axis and the extensions |
-| Group D supervisor: ________ | [Plenary, lecture, debrief] Plenary | [Plenary, lecture, debrief] Lecture; [Dry lab and desk work] Experiment planning with your supervisor: fill this Gantt (your row), choose the PRR axis and the extensions |
-| Staff (shared) prep and supervision | Rooms, safety officer, group list. Supervisors sit with their group from 14:30. | Rooms, safety officer, group list. Supervisors sit with their group from 14:30. |
-| Resources (hand-written capacity) | Seminar room all day | Seminar room all day |
+| | Morning 09:00-12:00 | Lunch 12:00-13:00 | Afternoon 13:00-17:00 |
+|---|---|---|---|
+| Fixed layer (lectures, facility) | [Plenary, lecture, debrief] Welcome, safety briefing, group formation; [Plenary, lecture, debrief] Lecture: tissue macrophages and nomenclature | - | [Plenary, lecture, debrief] Lecture: the techniques of this course, one slide per method |
+| Group A supervisor: ________ | [Plenary, lecture, debrief] Plenary | Lunch | [Plenary, lecture, debrief] Lecture; [Dry lab and desk work] Experiment planning with your supervisor: fill this Gantt (your row), choose the PRR axis and the extensions |
+| Group B supervisor: ________ | [Plenary, lecture, debrief] Plenary | Lunch | [Plenary, lecture, debrief] Lecture; [Dry lab and desk work] Experiment planning with your supervisor: fill this Gantt (your row), choose the PRR axis and the extensions |
+| Group C supervisor: ________ | [Plenary, lecture, debrief] Plenary | Lunch | [Plenary, lecture, debrief] Lecture; [Dry lab and desk work] Experiment planning with your supervisor: fill this Gantt (your row), choose the PRR axis and the extensions |
+| Group D supervisor: ________ | [Plenary, lecture, debrief] Plenary | Lunch | [Plenary, lecture, debrief] Lecture; [Dry lab and desk work] Experiment planning with your supervisor: fill this Gantt (your row), choose the PRR axis and the extensions |
+| Staff (shared) prep and supervision | Rooms, safety officer, group list. Supervisors sit with their group from 14:00. | (same as previous column) | (same as previous column) |
+| Resources (hand-written capacity) | Seminar room all day | (same as previous column) | (same as previous column) |
 
 #### Fri 19 Mar
 
-| | Morning 08:30-12:30 | Afternoon 13:30-17:30 |
-|---|---|---|
-| Fixed layer (lectures, facility) | - | [Facility slot] Facility lecture: flow cytometry and FlowJo [TODO: confirm slot with the facility] |
-| Group A supervisor: ________ | [Dry lab and desk work] Dry lab setup: clone the course repository, build the environment with your LLM, run the ELISA template on example data | [Facility slot] Facility lecture; [Dry lab and desk work] Lab tour. Group plans submitted. Read P01 for Monday. |
-| Group B supervisor: ________ | [Dry lab and desk work] Dry lab setup: clone the course repository, build the environment with your LLM, run the ELISA template on example data | [Facility slot] Facility lecture; [Dry lab and desk work] Lab tour. Group plans submitted. Read P01 for Monday. |
-| Group C supervisor: ________ | [Dry lab and desk work] Dry lab setup: clone the course repository, build the environment with your LLM, run the ELISA template on example data | [Facility slot] Facility lecture; [Dry lab and desk work] Lab tour. Group plans submitted. Read P01 for Monday. |
-| Group D supervisor: ________ | [Dry lab and desk work] Dry lab setup: clone the course repository, build the environment with your LLM, run the ELISA template on example data | [Facility slot] Facility lecture; [Dry lab and desk work] Lab tour. Group plans submitted. Read P01 for Monday. |
-| Staff (shared) prep and supervision | Dry lab: walk around, unblock installs. Fallback environment ready [TODO]. Collect the group plans at 17:00. | Dry lab: walk around, unblock installs. Fallback environment ready [TODO]. Collect the group plans at 17:00. |
-| Resources (hand-written capacity) | Computer room or own laptops; Wi-Fi; FlowJo seats [TODO: facility] | Computer room or own laptops; Wi-Fi; FlowJo seats [TODO: facility] |
+| | Morning 09:00-12:00 | Lunch 12:00-13:00 | Afternoon 13:00-17:00 |
+|---|---|---|---|
+| Fixed layer (lectures, facility) | - | - | [Facility slot] Facility lecture: flow cytometry and FlowJo [TODO: confirm slot with the facility] |
+| Group A supervisor: ________ | [Dry lab and desk work] Dry lab setup: clone the course repository, build the environment with your LLM, run the ELISA template on example data | Lunch | [Facility slot] Facility lecture; [Dry lab and desk work] Lab tour. Group plans submitted. Read P01 for Monday. |
+| Group B supervisor: ________ | [Dry lab and desk work] Dry lab setup: clone the course repository, build the environment with your LLM, run the ELISA template on example data | Lunch | [Facility slot] Facility lecture; [Dry lab and desk work] Lab tour. Group plans submitted. Read P01 for Monday. |
+| Group C supervisor: ________ | [Dry lab and desk work] Dry lab setup: clone the course repository, build the environment with your LLM, run the ELISA template on example data | Lunch | [Facility slot] Facility lecture; [Dry lab and desk work] Lab tour. Group plans submitted. Read P01 for Monday. |
+| Group D supervisor: ________ | [Dry lab and desk work] Dry lab setup: clone the course repository, build the environment with your LLM, run the ELISA template on example data | Lunch | [Facility slot] Facility lecture; [Dry lab and desk work] Lab tour. Group plans submitted. Read P01 for Monday. |
+| Staff (shared) prep and supervision | Dry lab: walk around, unblock installs. Fallback environment ready [TODO]. Collect the group plans at 17:00. | (same as previous column) | (same as previous column) |
+| Resources (hand-written capacity) | Computer room or own laptops; Wi-Fi; FlowJo seats [TODO: facility] | (same as previous column) | (same as previous column) |
 
 </details>
 
@@ -549,53 +538,53 @@ Activity blocks in brackets. The fixed layer is drawn by staff; group rows are t
 
 #### Mon 22 Mar
 
-| | Morning 08:30-12:30 | Afternoon 13:30-17:30 |
-|---|---|---|
-| Fixed layer (lectures, facility) | - | - |
-| Group A supervisor: ________ | [Wet lab Exp 1] P01 Thaw RAW 264.7, count (T0), seed the flask | [Dry lab and desk work] Dry lab: analysis templates on example data (ELISA, Griess) |
-| Group B supervisor: ________ | [Wet lab Exp 1] P01 Thaw RAW 264.7, count (T0), seed the flask | [Dry lab and desk work] Dry lab: analysis templates on example data (ELISA, Griess) |
-| Group C supervisor: ________ | [Dry lab and desk work] Dry lab: analysis templates on example data (ELISA, Griess) | [Wet lab Exp 1] P01 Thaw RAW 264.7, count (T0), seed the flask |
-| Group D supervisor: ________ | [Dry lab and desk work] Dry lab: analysis templates on example data (ELISA, Griess) | [Wet lab Exp 1] P01 Thaw RAW 264.7, count (T0), seed the flask |
-| Staff (shared) prep and supervision | Medium warmed, one vial per group at 08:30 and 13:30. Supervisor at the hood with the group for the thaw. | Medium warmed, one vial per group at 08:30 and 13:30. Supervisor at the hood with the group for the thaw. |
-| Resources (hand-written capacity) | Hoods: 2 groups per half day [TODO: hoods available]. Incubator: one shelf per group. Cell counter. | Hoods: 2 groups per half day [TODO: hoods available]. Incubator: one shelf per group. Cell counter. |
+| | Morning 09:00-12:00 | Lunch 12:00-13:00 | Afternoon 13:00-17:00 |
+|---|---|---|---|
+| Fixed layer (lectures, facility) | - | [Plenary, lecture, debrief] IMHS Lunch Seminar | - |
+| Group A supervisor: ________ | [Wet lab Exp 1] P01 Thaw RAW 264.7, count (T0), seed the flask | [Plenary, lecture, debrief] IMHS Lunch Seminar | [Dry lab and desk work] Dry lab: analysis templates on example data (ELISA, Griess) |
+| Group B supervisor: ________ | [Wet lab Exp 1] P01 Thaw RAW 264.7, count (T0), seed the flask | [Plenary, lecture, debrief] IMHS Lunch Seminar | [Dry lab and desk work] Dry lab: analysis templates on example data (ELISA, Griess) |
+| Group C supervisor: ________ | [Dry lab and desk work] Dry lab: analysis templates on example data (ELISA, Griess) | [Plenary, lecture, debrief] IMHS Lunch Seminar | [Wet lab Exp 1] P01 Thaw RAW 264.7, count (T0), seed the flask |
+| Group D supervisor: ________ | [Dry lab and desk work] Dry lab: analysis templates on example data (ELISA, Griess) | [Plenary, lecture, debrief] IMHS Lunch Seminar | [Wet lab Exp 1] P01 Thaw RAW 264.7, count (T0), seed the flask |
+| Staff (shared) prep and supervision | Medium warmed, one vial per group at 09:00 and 13:00. Supervisor at the hood with the group for the thaw. | (same as previous column) | (same as previous column) |
+| Resources (hand-written capacity) | Hoods: 2 groups per half day [TODO: hoods available]. Incubator: one shelf per group. Cell counter. | (same as previous column) | (same as previous column) |
 
 #### Tue 23 Mar
 
-| | Morning 08:30-12:30 | Afternoon 13:30-17:30 |
-|---|---|---|
-| Fixed layer (lectures, facility) | - | - |
-| Group A supervisor: ________ | [Wet lab Exp 1] P01 Inspect, count (T1), medium change | [Dry lab and desk work] Dry lab: FlowJo on example data. Poster: draft the introduction |
-| Group B supervisor: ________ | [Wet lab Exp 1] P01 Inspect, count (T1), medium change | [Dry lab and desk work] Dry lab: FlowJo on example data. Poster: draft the introduction |
-| Group C supervisor: ________ | [Dry lab and desk work] Dry lab: FlowJo on example data. Poster: draft the introduction | [Wet lab Exp 1] P01 Inspect, count (T1), medium change |
-| Group D supervisor: ________ | [Dry lab and desk work] Dry lab: FlowJo on example data. Poster: draft the introduction | [Wet lab Exp 1] P01 Inspect, count (T1), medium change |
-| Staff (shared) prep and supervision | Cultures inspected 08:00. Counting chambers or counter ready. | Cultures inspected 08:00. Counting chambers or counter ready. |
-| Resources (hand-written capacity) | Computer room / laptops; FlowJo seats [TODO] | Computer room / laptops; FlowJo seats [TODO] |
+| | Morning 09:00-12:00 | Lunch 12:00-13:00 | Afternoon 13:00-17:00 |
+|---|---|---|---|
+| Fixed layer (lectures, facility) | - | - | [Plenary, lecture, debrief] Cutting Edge Immunology Seminar 16:30-17:30 |
+| Group A supervisor: ________ | [Wet lab Exp 1] P01 Inspect, count (T1), medium change | Lunch | [Dry lab and desk work] Dry lab: FlowJo on example data. Poster: draft the introduction; [Plenary, lecture, debrief] Seminar |
+| Group B supervisor: ________ | [Wet lab Exp 1] P01 Inspect, count (T1), medium change | Lunch | [Dry lab and desk work] Dry lab: FlowJo on example data. Poster: draft the introduction; [Plenary, lecture, debrief] Seminar |
+| Group C supervisor: ________ | [Dry lab and desk work] Dry lab: FlowJo on example data. Poster: draft the introduction | Lunch | [Wet lab Exp 1] P01 Inspect, count (T1), medium change; [Plenary, lecture, debrief] Seminar |
+| Group D supervisor: ________ | [Dry lab and desk work] Dry lab: FlowJo on example data. Poster: draft the introduction | Lunch | [Wet lab Exp 1] P01 Inspect, count (T1), medium change; [Plenary, lecture, debrief] Seminar |
+| Staff (shared) prep and supervision | Cultures inspected 08:00. Counting chambers or counter ready. | (same as previous column) | (same as previous column) |
+| Resources (hand-written capacity) | Computer room / laptops; FlowJo seats [TODO] | (same as previous column) | (same as previous column) |
 
 #### Wed 24 Mar
 
-| | Morning 08:30-12:30 | Afternoon 13:30-17:30 |
-|---|---|---|
-| Fixed layer (lectures, facility) | - | - |
-| Group A supervisor: ________ | [Wet lab Exp 1] P02 Count (T2), scrape, split; seed growth-curve wells | [Dry lab and desk work] Dry lab: growth curve and doubling time from your counts. Poster: why does this matter (significance) |
-| Group B supervisor: ________ | [Wet lab Exp 1] P02 Count (T2), scrape, split; seed growth-curve wells | [Dry lab and desk work] Dry lab: growth curve and doubling time from your counts. Poster: why does this matter (significance) |
-| Group C supervisor: ________ | [Dry lab and desk work] Dry lab: growth curve and doubling time from your counts. Poster: why does this matter (significance) | [Wet lab Exp 1] P02 Count (T2), scrape, split; seed growth-curve wells |
-| Group D supervisor: ________ | [Dry lab and desk work] Dry lab: growth curve and doubling time from your counts. Poster: why does this matter (significance) | [Wet lab Exp 1] P02 Count (T2), scrape, split; seed growth-curve wells |
-| Staff (shared) prep and supervision | Plates, scrapers. Look at every split before it goes back in the incubator. | Plates, scrapers. Look at every split before it goes back in the incubator. |
-| Resources (hand-written capacity) | Hoods as Mon. Plates: 6-well or 12-well for the growth curve [TODO: lab standard] | Hoods as Mon. Plates: 6-well or 12-well for the growth curve [TODO: lab standard] |
+| | Morning 09:00-12:00 | Lunch 12:00-13:00 | Afternoon 13:00-17:00 |
+|---|---|---|---|
+| Fixed layer (lectures, facility) | [Plenary, lecture, debrief] Lecture: tissue repair I, macrophages in injury and repair | - | - |
+| Group A supervisor: ________ | [Plenary, lecture, debrief] Lecture; [Wet lab Exp 1] P02 Count (T2), scrape, split; seed growth-curve wells | Lunch | [Dry lab and desk work] Dry lab: growth curve and doubling time from your counts. Poster: why does this matter (significance) |
+| Group B supervisor: ________ | [Plenary, lecture, debrief] Lecture; [Wet lab Exp 1] P02 Count (T2), scrape, split; seed growth-curve wells | Lunch | [Dry lab and desk work] Dry lab: growth curve and doubling time from your counts. Poster: why does this matter (significance) |
+| Group C supervisor: ________ | [Plenary, lecture, debrief] Lecture; [Dry lab and desk work] Dry lab: growth curve and doubling time from your counts. Poster: why does this matter (significance) | Lunch | [Wet lab Exp 1] P02 Count (T2), scrape, split; seed growth-curve wells |
+| Group D supervisor: ________ | [Plenary, lecture, debrief] Lecture; [Dry lab and desk work] Dry lab: growth curve and doubling time from your counts. Poster: why does this matter (significance) | Lunch | [Wet lab Exp 1] P02 Count (T2), scrape, split; seed growth-curve wells |
+| Staff (shared) prep and supervision | Plates, scrapers. Look at every split before it goes back in the incubator. | (same as previous column) | (same as previous column) |
+| Resources (hand-written capacity) | Hoods as Mon. Plates: 6-well or 12-well for the growth curve [TODO: lab standard] | (same as previous column) | (same as previous column) |
 
 #### Thu 25 Mar
 
-| | Morning 08:30-12:30 | Afternoon 13:30-17:30 |
-|---|---|---|
-| Fixed layer (lectures, facility) | - | [Plenary, lecture, debrief] Debrief week 2: what worked, plan for Exp 2 |
-| Group A supervisor: ________ | [Wet lab Exp 1] P01 Count (T3). P03 Freeze your own vials. Clean-up: nothing stays in culture over the break | [Dry lab and desk work] Dry lab: scRNA-seq part 1, load the preprocessed object, QC figure; [Plenary, lecture, debrief] Debrief |
-| Group B supervisor: ________ | [Wet lab Exp 1] P01 Count (T3). P03 Freeze your own vials. Clean-up: nothing stays in culture over the break | [Dry lab and desk work] Dry lab: scRNA-seq part 1, load the preprocessed object, QC figure; [Plenary, lecture, debrief] Debrief |
-| Group C supervisor: ________ | [Dry lab and desk work] Dry lab: scRNA-seq part 1, load the preprocessed object, QC figure | [Wet lab Exp 1] P01 Count (T3). P03 Freeze your own vials. Clean-up: nothing stays in culture over the break; [Plenary, lecture, debrief] Debrief |
-| Group D supervisor: ________ | [Dry lab and desk work] Dry lab: scRNA-seq part 1, load the preprocessed object, QC figure | [Wet lab Exp 1] P01 Count (T3). P03 Freeze your own vials. Clean-up: nothing stays in culture over the break; [Plenary, lecture, debrief] Debrief |
-| Staff (shared) prep and supervision | Freezing boxes in the -80. Collect all cultures at 17:00. Easter: thaw backup RAW on Wed 31 Mar, split Fri 2 Apr, so Exp 2 plates can be seeded Mon 5 Apr. | Freezing boxes in the -80. Collect all cultures at 17:00. Easter: thaw backup RAW on Wed 31 Mar, split Fri 2 Apr, so Exp 2 plates can be seeded Mon 5 Apr. |
-| Resources (hand-written capacity) | -80 freezer box per group; Mr Frosty or equivalent [TODO: lab standard] | -80 freezer box per group; Mr Frosty or equivalent [TODO: lab standard] |
+| | Morning 09:00-12:00 | Lunch 12:00-13:00 | Afternoon 13:00-17:00 |
+|---|---|---|---|
+| Fixed layer (lectures, facility) | [Plenary, lecture, debrief] Journal club 1: the M1/M2 nomenclature revision [TODO: paper]; one group presents, all read | - | [Plenary, lecture, debrief] Debrief week 2: what worked, plan for Exp 2 |
+| Group A supervisor: ________ | [Plenary, lecture, debrief] Journal club; [Wet lab Exp 1] P01 Count (T3). P03 Freeze your own vials. Clean-up: nothing stays in culture over the break | Lunch | [Dry lab and desk work] Dry lab: scRNA-seq part 1, load the preprocessed object, QC figure; [Plenary, lecture, debrief] Debrief |
+| Group B supervisor: ________ | [Plenary, lecture, debrief] Journal club; [Wet lab Exp 1] P01 Count (T3). P03 Freeze your own vials. Clean-up: nothing stays in culture over the break | Lunch | [Dry lab and desk work] Dry lab: scRNA-seq part 1, load the preprocessed object, QC figure; [Plenary, lecture, debrief] Debrief |
+| Group C supervisor: ________ | [Plenary, lecture, debrief] Journal club; [Dry lab and desk work] Dry lab: scRNA-seq part 1, load the preprocessed object, QC figure | Lunch | [Wet lab Exp 1] P01 Count (T3). P03 Freeze your own vials. Clean-up: nothing stays in culture over the break; [Plenary, lecture, debrief] Debrief |
+| Group D supervisor: ________ | [Plenary, lecture, debrief] Journal club; [Dry lab and desk work] Dry lab: scRNA-seq part 1, load the preprocessed object, QC figure | Lunch | [Wet lab Exp 1] P01 Count (T3). P03 Freeze your own vials. Clean-up: nothing stays in culture over the break; [Plenary, lecture, debrief] Debrief |
+| Staff (shared) prep and supervision | Freezing boxes in the -80. Collect all cultures at 17:00. Easter: thaw backup RAW on Wed 31 Mar, split Fri 2 Apr, so Exp 2 plates can be seeded Mon 5 Apr. | (same as previous column) | (same as previous column) |
+| Resources (hand-written capacity) | -80 freezer box per group; Mr Frosty or equivalent [TODO: lab standard] | (same as previous column) | (same as previous column) |
 
-Notes: Exp 1 is a real experiment: four counts give a growth curve and a doubling time against the published value; viability of your own vial on Mon 5 Apr is the second readout. Easter break Fri 26 Mar to Sun 4 Apr: no course, no cultures.
+Notes: Exp 1 is a real experiment: four counts give a growth curve and a doubling time against the published value; viability of your own vial on Mon 5 Apr is the second readout. Easter break Fri 26 Mar to Sun 4 Apr: no course, no cultures. Mondays 12:00-13:00: IMHS Lunch Seminar. Tuesdays: Cutting Edge Immunology Seminar runs 16:30-17:30.
 
 </details>
 
@@ -607,135 +596,135 @@ Notes: Exp 1 is a real experiment: four counts give a growth curve and a doublin
 
 #### Mon 5 Apr
 
-| | Morning 08:30-12:30 | Afternoon 13:30-17:30 |
-|---|---|---|
-| Fixed layer (lectures, facility) | - | - |
-| Group A supervisor: ________ | [Dry lab and desk work] Dry lab: scRNA-seq part 2, derive M(IFNg+LPS) and M(IL-4) signatures from the bulk RAW 264.7 dataset | [Wet lab Exp 2] P01 Thaw your own vial (viability = Exp 1 readout). P02 Seed Exp 2 plates from the staff culture |
-| Group B supervisor: ________ | [Dry lab and desk work] Dry lab: scRNA-seq part 2, derive M(IFNg+LPS) and M(IL-4) signatures from the bulk RAW 264.7 dataset | [Wet lab Exp 2] P01 Thaw your own vial (viability = Exp 1 readout). P02 Seed Exp 2 plates from the staff culture |
-| Group C supervisor: ________ | [Wet lab Exp 2] P01 Thaw your own vial (viability = Exp 1 readout). P02 Seed Exp 2 plates from the staff culture | [Dry lab and desk work] Dry lab: scRNA-seq part 2, derive M(IFNg+LPS) and M(IL-4) signatures from the bulk RAW 264.7 dataset |
-| Group D supervisor: ________ | [Wet lab Exp 2] P01 Thaw your own vial (viability = Exp 1 readout). P02 Seed Exp 2 plates from the staff culture | [Dry lab and desk work] Dry lab: scRNA-seq part 2, derive M(IFNg+LPS) and M(IL-4) signatures from the bulk RAW 264.7 dataset |
-| Staff (shared) prep and supervision | Backup RAW thawed Wed 31 Mar, split Fri 2 Apr: enough cells to seed four groups. Plates, cytokines ready. | Backup RAW thawed Wed 31 Mar, split Fri 2 Apr: enough cells to seed four groups. Plates, cytokines ready. |
-| Resources (hand-written capacity) | Hoods: 2 groups per half day. Incubator shelves. | Hoods: 2 groups per half day. Incubator shelves. |
+| | Morning 09:00-12:00 | Lunch 12:00-13:00 | Afternoon 13:00-17:00 |
+|---|---|---|---|
+| Fixed layer (lectures, facility) | - | [Plenary, lecture, debrief] IMHS Lunch Seminar | - |
+| Group A supervisor: ________ | [Dry lab and desk work] Dry lab: scRNA-seq part 2, derive M(IFNg+LPS) and M(IL-4) signatures from the bulk RAW 264.7 dataset | [Plenary, lecture, debrief] IMHS Lunch Seminar | [Wet lab Exp 2] P01 Thaw your own vial (viability = Exp 1 readout). P02 Seed Exp 2 plates from the staff culture |
+| Group B supervisor: ________ | [Dry lab and desk work] Dry lab: scRNA-seq part 2, derive M(IFNg+LPS) and M(IL-4) signatures from the bulk RAW 264.7 dataset | [Plenary, lecture, debrief] IMHS Lunch Seminar | [Wet lab Exp 2] P01 Thaw your own vial (viability = Exp 1 readout). P02 Seed Exp 2 plates from the staff culture |
+| Group C supervisor: ________ | [Wet lab Exp 2] P01 Thaw your own vial (viability = Exp 1 readout). P02 Seed Exp 2 plates from the staff culture | [Plenary, lecture, debrief] IMHS Lunch Seminar | [Dry lab and desk work] Dry lab: scRNA-seq part 2, derive M(IFNg+LPS) and M(IL-4) signatures from the bulk RAW 264.7 dataset |
+| Group D supervisor: ________ | [Wet lab Exp 2] P01 Thaw your own vial (viability = Exp 1 readout). P02 Seed Exp 2 plates from the staff culture | [Plenary, lecture, debrief] IMHS Lunch Seminar | [Dry lab and desk work] Dry lab: scRNA-seq part 2, derive M(IFNg+LPS) and M(IL-4) signatures from the bulk RAW 264.7 dataset |
+| Staff (shared) prep and supervision | Backup RAW thawed Wed 31 Mar, split Fri 2 Apr: enough cells to seed four groups. Plates, cytokines ready. | (same as previous column) | (same as previous column) |
+| Resources (hand-written capacity) | Hoods: 2 groups per half day. Incubator shelves. | (same as previous column) | (same as previous column) |
 
 #### Tue 6 Apr
 
-| | Morning 08:30-12:30 | Afternoon 13:30-17:30 |
-|---|---|---|
-| Fixed layer (lectures, facility) | - | - |
-| Group A supervisor: ________ | [Dry lab and desk work] Dry lab: scRNA-seq part 3, score the tissue macrophages. Poster: methods | [Wet lab Exp 2] P04 Polarize: M(-), M(IFNg), M(IL-4), M(IFNg+LPS), 24 h |
-| Group B supervisor: ________ | [Dry lab and desk work] Dry lab: scRNA-seq part 3, score the tissue macrophages. Poster: methods | [Wet lab Exp 2] P04 Polarize: M(-), M(IFNg), M(IL-4), M(IFNg+LPS), 24 h |
-| Group C supervisor: ________ | [Wet lab Exp 2] P04 Polarize: M(-), M(IFNg), M(IL-4), M(IFNg+LPS), 24 h | [Dry lab and desk work] Dry lab: scRNA-seq part 3, score the tissue macrophages. Poster: methods |
-| Group D supervisor: ________ | [Wet lab Exp 2] P04 Polarize: M(-), M(IFNg), M(IL-4), M(IFNg+LPS), 24 h | [Dry lab and desk work] Dry lab: scRNA-seq part 3, score the tissue macrophages. Poster: methods |
-| Staff (shared) prep and supervision | IFNg, IL-4, LPS aliquots at working concentration. Plate maps checked before anyone pipettes. | IFNg, IL-4, LPS aliquots at working concentration. Plate maps checked before anyone pipettes. |
-| Resources (hand-written capacity) | Hoods. Cytokine stocks [TODO: supplier]. | Hoods. Cytokine stocks [TODO: supplier]. |
+| | Morning 09:00-12:00 | Lunch 12:00-13:00 | Afternoon 13:00-17:00 |
+|---|---|---|---|
+| Fixed layer (lectures, facility) | [Plenary, lecture, debrief] Lecture: single-cell transcriptomics for immunologists, what a signature score means | - | [Plenary, lecture, debrief] Cutting Edge Immunology Seminar 16:30-17:30 |
+| Group A supervisor: ________ | [Plenary, lecture, debrief] Lecture; [Dry lab and desk work] Dry lab: scRNA-seq part 3, score the tissue macrophages. Poster: methods | Lunch | [Wet lab Exp 2] P04 Polarize: M(-), M(IFNg), M(IL-4), M(IFNg+LPS), 24 h; [Plenary, lecture, debrief] Seminar |
+| Group B supervisor: ________ | [Plenary, lecture, debrief] Lecture; [Dry lab and desk work] Dry lab: scRNA-seq part 3, score the tissue macrophages. Poster: methods | Lunch | [Wet lab Exp 2] P04 Polarize: M(-), M(IFNg), M(IL-4), M(IFNg+LPS), 24 h; [Plenary, lecture, debrief] Seminar |
+| Group C supervisor: ________ | [Plenary, lecture, debrief] Lecture; [Wet lab Exp 2] P04 Polarize: M(-), M(IFNg), M(IL-4), M(IFNg+LPS), 24 h | Lunch | [Dry lab and desk work] Dry lab: scRNA-seq part 3, score the tissue macrophages. Poster: methods; [Plenary, lecture, debrief] Seminar |
+| Group D supervisor: ________ | [Plenary, lecture, debrief] Lecture; [Wet lab Exp 2] P04 Polarize: M(-), M(IFNg), M(IL-4), M(IFNg+LPS), 24 h | Lunch | [Dry lab and desk work] Dry lab: scRNA-seq part 3, score the tissue macrophages. Poster: methods; [Plenary, lecture, debrief] Seminar |
+| Staff (shared) prep and supervision | IFNg, IL-4, LPS aliquots at working concentration. Plate maps checked before anyone pipettes. | (same as previous column) | (same as previous column) |
+| Resources (hand-written capacity) | Hoods. Cytokine stocks [TODO: supplier]. | (same as previous column) | (same as previous column) |
 
 #### Wed 7 Apr
 
-| | Morning 08:30-12:30 | Afternoon 13:30-17:30 |
-|---|---|---|
-| Fixed layer (lectures, facility) | [Facility slot] Cytometer slot, groups C+D [TODO: facility reservation] | [Facility slot] Cytometer slot, groups A+B [TODO: facility reservation] |
-| Group A supervisor: ________ | [Dry lab and desk work] Dry lab: FlowJo gating of your own data, export statistics | [Wet lab Exp 2] P04 Wash. P05 Challenge: LPS + your axis, 24 h. P08 Stain the unchallenged wells, acquire in the facility slot |
-| Group B supervisor: ________ | [Dry lab and desk work] Dry lab: FlowJo gating of your own data, export statistics | [Wet lab Exp 2] P04 Wash. P05 Challenge: LPS + your axis, 24 h. P08 Stain the unchallenged wells, acquire in the facility slot |
-| Group C supervisor: ________ | [Wet lab Exp 2] P04 Wash. P05 Challenge: LPS + your axis, 24 h. P08 Stain the unchallenged wells, acquire in the facility slot | [Dry lab and desk work] Dry lab: FlowJo gating of your own data, export statistics |
-| Group D supervisor: ________ | [Wet lab Exp 2] P04 Wash. P05 Challenge: LPS + your axis, 24 h. P08 Stain the unchallenged wells, acquire in the facility slot | [Dry lab and desk work] Dry lab: FlowJo gating of your own data, export statistics |
-| Staff (shared) prep and supervision | Ligands for every axis. Antibody panel and viability dye. Escort the groups to the facility. | Ligands for every axis. Antibody panel and viability dye. Escort the groups to the facility. |
-| Resources (hand-written capacity) | Cytometer: 2 slots of 2 h [TODO: facility]. Hoods. | Cytometer: 2 slots of 2 h [TODO: facility]. Hoods. |
+| | Morning 09:00-12:00 | Lunch 12:00-13:00 | Afternoon 13:00-17:00 |
+|---|---|---|---|
+| Fixed layer (lectures, facility) | [Facility slot] Cytometer slot, groups C+D [TODO: facility reservation] | (same as previous column) | [Facility slot] Cytometer slot, groups A+B [TODO: facility reservation] |
+| Group A supervisor: ________ | [Dry lab and desk work] Dry lab: FlowJo gating of your own data, export statistics | Lunch | [Wet lab Exp 2] P04 Wash. P05 Challenge: LPS + your axis, 24 h. P08 Stain the unchallenged wells, acquire in the facility slot |
+| Group B supervisor: ________ | [Dry lab and desk work] Dry lab: FlowJo gating of your own data, export statistics | Lunch | [Wet lab Exp 2] P04 Wash. P05 Challenge: LPS + your axis, 24 h. P08 Stain the unchallenged wells, acquire in the facility slot |
+| Group C supervisor: ________ | [Wet lab Exp 2] P04 Wash. P05 Challenge: LPS + your axis, 24 h. P08 Stain the unchallenged wells, acquire in the facility slot | (same as previous column) | [Dry lab and desk work] Dry lab: FlowJo gating of your own data, export statistics |
+| Group D supervisor: ________ | [Wet lab Exp 2] P04 Wash. P05 Challenge: LPS + your axis, 24 h. P08 Stain the unchallenged wells, acquire in the facility slot | (same as previous column) | [Dry lab and desk work] Dry lab: FlowJo gating of your own data, export statistics |
+| Staff (shared) prep and supervision | Ligands for every axis. Antibody panel and viability dye. Escort the groups to the facility. | (same as previous column) | (same as previous column) |
+| Resources (hand-written capacity) | Cytometer: 2 slots of 2 h [TODO: facility]. Hoods. | (same as previous column) | (same as previous column) |
 
 #### Thu 8 Apr
 
-| | Morning 08:30-12:30 | Afternoon 13:30-17:30 |
-|---|---|---|
-| Fixed layer (lectures, facility) | - | - |
-| Group A supervisor: ________ | [Dry lab and desk work] Dry lab: flow statistics in R. Poster: figure 1 draft | [Wet lab Exp 2] P05 Harvest supernatants. P06 ELISA IL-6 and TNF. P07 Griess |
-| Group B supervisor: ________ | [Dry lab and desk work] Dry lab: flow statistics in R. Poster: figure 1 draft | [Wet lab Exp 2] P05 Harvest supernatants. P06 ELISA IL-6 and TNF. P07 Griess |
-| Group C supervisor: ________ | [Wet lab Exp 2] P05 Harvest supernatants. P06 ELISA IL-6 and TNF. P07 Griess | [Dry lab and desk work] Dry lab: flow statistics in R. Poster: figure 1 draft |
-| Group D supervisor: ________ | [Wet lab Exp 2] P05 Harvest supernatants. P06 ELISA IL-6 and TNF. P07 Griess | [Dry lab and desk work] Dry lab: flow statistics in R. Poster: figure 1 draft |
-| Staff (shared) prep and supervision | ELISA kits, Griess reagents, plate reader booked. Dilution series decided with each group. | ELISA kits, Griess reagents, plate reader booked. Dilution series decided with each group. |
-| Resources (hand-written capacity) | Plate reader (450 nm, 540 nm). Hoods. | Plate reader (450 nm, 540 nm). Hoods. |
+| | Morning 09:00-12:00 | Lunch 12:00-13:00 | Afternoon 13:00-17:00 |
+|---|---|---|---|
+| Fixed layer (lectures, facility) | [Plenary, lecture, debrief] Journal club 2: the peritoneal injury single-cell paper behind GSE186658 [TODO: paper]; one group presents, all read | - | - |
+| Group A supervisor: ________ | [Plenary, lecture, debrief] Journal club; [Dry lab and desk work] Dry lab: flow statistics in R. Poster: figure 1 draft | Lunch | [Wet lab Exp 2] P05 Harvest supernatants. P06 ELISA IL-6 and TNF. P07 Griess |
+| Group B supervisor: ________ | [Plenary, lecture, debrief] Journal club; [Dry lab and desk work] Dry lab: flow statistics in R. Poster: figure 1 draft | Lunch | [Wet lab Exp 2] P05 Harvest supernatants. P06 ELISA IL-6 and TNF. P07 Griess |
+| Group C supervisor: ________ | [Plenary, lecture, debrief] Journal club; [Wet lab Exp 2] P05 Harvest supernatants. P06 ELISA IL-6 and TNF. P07 Griess | Lunch | [Dry lab and desk work] Dry lab: flow statistics in R. Poster: figure 1 draft |
+| Group D supervisor: ________ | [Plenary, lecture, debrief] Journal club; [Wet lab Exp 2] P05 Harvest supernatants. P06 ELISA IL-6 and TNF. P07 Griess | Lunch | [Dry lab and desk work] Dry lab: flow statistics in R. Poster: figure 1 draft |
+| Staff (shared) prep and supervision | ELISA kits, Griess reagents, plate reader booked. Dilution series decided with each group. | (same as previous column) | (same as previous column) |
+| Resources (hand-written capacity) | Plate reader (450 nm, 540 nm). Hoods. | (same as previous column) | (same as previous column) |
 
 #### Fri 9 Apr
 
-| | Morning 08:30-12:30 | Afternoon 13:30-17:30 |
-|---|---|---|
-| Fixed layer (lectures, facility) | - | [Plenary, lecture, debrief] Debrief Exp 2: results, extension choices, rescue decisions |
-| Group A supervisor: ________ | [Dry lab and desk work] Dry lab: ELISA and Griess analysis. Poster: results so far | [Wet lab Exp 2] Plate reader runs, repeats where needed, clean-up. Check your own-vial culture; [Plenary, lecture, debrief] Debrief |
-| Group B supervisor: ________ | [Dry lab and desk work] Dry lab: ELISA and Griess analysis. Poster: results so far | [Wet lab Exp 2] Plate reader runs, repeats where needed, clean-up. Check your own-vial culture; [Plenary, lecture, debrief] Debrief |
-| Group C supervisor: ________ | [Wet lab Exp 2] Plate reader runs, repeats where needed, clean-up. Check your own-vial culture | [Dry lab and desk work] Dry lab: ELISA and Griess analysis. Poster: results so far; [Plenary, lecture, debrief] Debrief |
-| Group D supervisor: ________ | [Wet lab Exp 2] Plate reader runs, repeats where needed, clean-up. Check your own-vial culture | [Dry lab and desk work] Dry lab: ELISA and Griess analysis. Poster: results so far; [Plenary, lecture, debrief] Debrief |
-| Staff (shared) prep and supervision | Plate reader. -20 space for supernatants. Seed rescue plates Fri PM for groups that need the rescue path (see Legend). | Plate reader. -20 space for supernatants. Seed rescue plates Fri PM for groups that need the rescue path (see Legend). |
-| Resources (hand-written capacity) | Plate reader. Freezer. | Plate reader. Freezer. |
+| | Morning 09:00-12:00 | Lunch 12:00-13:00 | Afternoon 13:00-17:00 |
+|---|---|---|---|
+| Fixed layer (lectures, facility) | - | - | [Plenary, lecture, debrief] Debrief Exp 2: results, extension choices, rescue decisions |
+| Group A supervisor: ________ | [Dry lab and desk work] Dry lab: ELISA and Griess analysis. Poster: results so far | Lunch | [Wet lab Exp 2] Plate reader runs, repeats where needed, clean-up. Check your own-vial culture; [Plenary, lecture, debrief] Debrief |
+| Group B supervisor: ________ | [Dry lab and desk work] Dry lab: ELISA and Griess analysis. Poster: results so far | Lunch | [Wet lab Exp 2] Plate reader runs, repeats where needed, clean-up. Check your own-vial culture; [Plenary, lecture, debrief] Debrief |
+| Group C supervisor: ________ | [Wet lab Exp 2] Plate reader runs, repeats where needed, clean-up. Check your own-vial culture | Lunch | [Dry lab and desk work] Dry lab: ELISA and Griess analysis. Poster: results so far; [Plenary, lecture, debrief] Debrief |
+| Group D supervisor: ________ | [Wet lab Exp 2] Plate reader runs, repeats where needed, clean-up. Check your own-vial culture | Lunch | [Dry lab and desk work] Dry lab: ELISA and Griess analysis. Poster: results so far; [Plenary, lecture, debrief] Debrief |
+| Staff (shared) prep and supervision | Plate reader. -20 space for supernatants. Seed rescue plates Fri PM for groups that need the rescue path (see Legend). | (same as previous column) | (same as previous column) |
+| Resources (hand-written capacity) | Plate reader. Freezer. | (same as previous column) | (same as previous column) |
 
-Notes: One 24 h challenge arm only; the 6 h RNA arm belongs to the qPCR extension X01. A group that starts a step in the morning harvests it the next morning; pairs stay fixed within the week.
+Notes: One 24 h challenge arm only; the 6 h RNA arm belongs to the qPCR extension X01. A group that starts a step in the morning harvests it the next morning; pairs stay fixed within the week. Mondays 12:00-13:00: IMHS Lunch Seminar. Tuesdays: Cutting Edge Immunology Seminar runs 16:30-17:30. Wed: groups C+D keep their cytometer slot (11:00-13:00) and have lunch afterwards.
 
 </details>
 
-### Week 4: extensions, writing, poster (Mon 12 - Fri 16 April 2027)
+### Week 4: extensions, poster, presentations (Mon 12 - Fri 16 April 2027)
 
-![Week 4: extensions, writing, poster (Mon 12 - Fri 16 April 2027)](week-4.svg)
+![Week 4: extensions, poster, presentations (Mon 12 - Fri 16 April 2027)](week-4.svg)
 
 <details><summary>Text version (what the companion reads)</summary>
 
 #### Mon 12 Apr
 
-| | Morning 08:30-12:30 | Afternoon 13:30-17:30 |
-|---|---|---|
-| Fixed layer (lectures, facility) | - | - |
-| Group A supervisor: ________ | [Extension / nerd ladder] Extension of your choice, or rescue path for Exp 2 (see Legend) | [Dry lab and desk work] Dry lab: analysis of Exp 2. Poster: figures |
-| Group B supervisor: ________ | [Extension / nerd ladder] Extension of your choice, or rescue path for Exp 2 (see Legend) | [Dry lab and desk work] Dry lab: analysis of Exp 2. Poster: figures |
-| Group C supervisor: ________ | [Dry lab and desk work] Dry lab: analysis of Exp 2. Poster: figures | [Extension / nerd ladder] Extension of your choice, or rescue path for Exp 2 (see Legend) |
-| Group D supervisor: ________ | [Dry lab and desk work] Dry lab: analysis of Exp 2. Poster: figures | [Extension / nerd ladder] Extension of your choice, or rescue path for Exp 2 (see Legend) |
-| Staff (shared) prep and supervision | Reagents for the extensions agreed on Fri 9 Apr. Rescue plates: polarize Mon. | Reagents for the extensions agreed on Fri 9 Apr. Rescue plates: polarize Mon. |
-| Resources (hand-written capacity) | Hoods Mon and Tue only. Extension-specific instruments as agreed. | Hoods Mon and Tue only. Extension-specific instruments as agreed. |
+| | Morning 09:00-12:00 | Lunch 12:00-13:00 | Afternoon 13:00-17:00 |
+|---|---|---|---|
+| Fixed layer (lectures, facility) | - | [Plenary, lecture, debrief] IMHS Lunch Seminar | - |
+| Group A supervisor: ________ | [Extension / nerd factor] Extension of your choice, or rescue path for Exp 2 (see Legend) | [Plenary, lecture, debrief] IMHS Lunch Seminar | [Dry lab and desk work] Dry lab: analysis of Exp 2. Poster: figures |
+| Group B supervisor: ________ | [Extension / nerd factor] Extension of your choice, or rescue path for Exp 2 (see Legend) | [Plenary, lecture, debrief] IMHS Lunch Seminar | [Dry lab and desk work] Dry lab: analysis of Exp 2. Poster: figures |
+| Group C supervisor: ________ | [Dry lab and desk work] Dry lab: analysis of Exp 2. Poster: figures | [Plenary, lecture, debrief] IMHS Lunch Seminar | [Extension / nerd factor] Extension of your choice, or rescue path for Exp 2 (see Legend) |
+| Group D supervisor: ________ | [Dry lab and desk work] Dry lab: analysis of Exp 2. Poster: figures | [Plenary, lecture, debrief] IMHS Lunch Seminar | [Extension / nerd factor] Extension of your choice, or rescue path for Exp 2 (see Legend) |
+| Staff (shared) prep and supervision | Reagents for the extensions agreed on Fri 9 Apr. Rescue plates: polarize Mon. | (same as previous column) | (same as previous column) |
+| Resources (hand-written capacity) | Hoods Mon and Tue only. Extension-specific instruments as agreed. | (same as previous column) | (same as previous column) |
 
 #### Tue 13 Apr
 
-| | Morning 08:30-12:30 | Afternoon 13:30-17:30 |
-|---|---|---|
-| Fixed layer (lectures, facility) | - | [Plenary, lecture, debrief] Student-organised event (evening, from 17:30) |
-| Group A supervisor: ________ | [Extension / nerd ladder] Extension, continued | [Dry lab and desk work] Dry lab: extension analysis. Poster: figures and legends |
-| Group B supervisor: ________ | [Extension / nerd ladder] Extension, continued | [Dry lab and desk work] Dry lab: extension analysis. Poster: figures and legends |
-| Group C supervisor: ________ | [Dry lab and desk work] Dry lab: extension analysis. Poster: figures and legends | [Extension / nerd ladder] Extension, continued |
-| Group D supervisor: ________ | [Dry lab and desk work] Dry lab: extension analysis. Poster: figures and legends | [Extension / nerd ladder] Extension, continued |
-| Staff (shared) prep and supervision | Event logistics with the organisers. Rescue plates: challenge Tue. | Event logistics with the organisers. Rescue plates: challenge Tue. |
-| Resources (hand-written capacity) | Hoods Mon and Tue only. Extension-specific instruments as agreed. | Hoods Mon and Tue only. Extension-specific instruments as agreed. |
+| | Morning 09:00-12:00 | Lunch 12:00-13:00 | Afternoon 13:00-17:00 |
+|---|---|---|---|
+| Fixed layer (lectures, facility) | - | - | [Plenary, lecture, debrief] Cutting Edge Immunology Seminar 16:30-17:30 |
+| Group A supervisor: ________ | [Extension / nerd factor] Extension, continued | Lunch | [Dry lab and desk work] Dry lab: extension analysis. Poster: figures and legends; [Plenary, lecture, debrief] Seminar |
+| Group B supervisor: ________ | [Extension / nerd factor] Extension, continued | Lunch | [Dry lab and desk work] Dry lab: extension analysis. Poster: figures and legends; [Plenary, lecture, debrief] Seminar |
+| Group C supervisor: ________ | [Dry lab and desk work] Dry lab: extension analysis. Poster: figures and legends | Lunch | [Extension / nerd factor] Extension, continued; [Plenary, lecture, debrief] Seminar |
+| Group D supervisor: ________ | [Dry lab and desk work] Dry lab: extension analysis. Poster: figures and legends | Lunch | [Extension / nerd factor] Extension, continued; [Plenary, lecture, debrief] Seminar |
+| Staff (shared) prep and supervision | Rescue plates: challenge Tue. | (same as previous column) | (same as previous column) |
+| Resources (hand-written capacity) | Hoods Mon and Tue only. Extension-specific instruments as agreed. | (same as previous column) | (same as previous column) |
 
 #### Wed 14 Apr
 
-| | Morning 08:30-12:30 | Afternoon 13:30-17:30 |
-|---|---|---|
-| Fixed layer (lectures, facility) | [Plenary, lecture, debrief] Scientific writing day: from data to argument, poster structure, figure design, honest limits | [Plenary, lecture, debrief] Failure round: each group presents one thing that went wrong and what it taught them |
-| Group A supervisor: ________ | [Plenary, lecture, debrief] Writing day | [Poster and writing] Drafting with your supervisor; [Plenary, lecture, debrief] Failure round |
-| Group B supervisor: ________ | [Plenary, lecture, debrief] Writing day | [Poster and writing] Drafting with your supervisor; [Plenary, lecture, debrief] Failure round |
-| Group C supervisor: ________ | [Plenary, lecture, debrief] Writing day | [Poster and writing] Drafting with your supervisor; [Plenary, lecture, debrief] Failure round |
-| Group D supervisor: ________ | [Plenary, lecture, debrief] Writing day | [Poster and writing] Drafting with your supervisor; [Plenary, lecture, debrief] Failure round |
-| Staff (shared) prep and supervision | Poster template distributed, printing booked [TODO]. Rescue plates: harvest 08:30. | Poster template distributed, printing booked [TODO]. Rescue plates: harvest 08:30. |
-| Resources (hand-written capacity) | Seminar room Wed to Fri. Printer [TODO]. Poster boards. | Seminar room Wed to Fri. Printer [TODO]. Poster boards. |
+| | Morning 09:00-12:00 | Lunch 12:00-13:00 | Afternoon 13:00-17:00 |
+|---|---|---|---|
+| Fixed layer (lectures, facility) | [Plenary, lecture, debrief] Lecture: scientific writing, from data to argument, poster structure, figure design, honest limits | - | [Plenary, lecture, debrief] Failure round: each group presents one thing that went wrong and what it taught them |
+| Group A supervisor: ________ | [Plenary, lecture, debrief] Lecture; [Poster and writing] Poster production with your supervisor | Lunch | [Poster and writing] Poster production with your supervisor; [Plenary, lecture, debrief] Failure round |
+| Group B supervisor: ________ | [Plenary, lecture, debrief] Lecture; [Poster and writing] Poster production with your supervisor | Lunch | [Poster and writing] Poster production with your supervisor; [Plenary, lecture, debrief] Failure round |
+| Group C supervisor: ________ | [Plenary, lecture, debrief] Lecture; [Poster and writing] Poster production with your supervisor | Lunch | [Poster and writing] Poster production with your supervisor; [Plenary, lecture, debrief] Failure round |
+| Group D supervisor: ________ | [Plenary, lecture, debrief] Lecture; [Poster and writing] Poster production with your supervisor | Lunch | [Poster and writing] Poster production with your supervisor; [Plenary, lecture, debrief] Failure round |
+| Staff (shared) prep and supervision | Poster template distributed, printing booked [TODO: printer]. Rescue plates: harvest 09:00. | (same as previous column) | (same as previous column) |
+| Resources (hand-written capacity) | Seminar room Wed to Fri. Printer [TODO]. Poster boards. Apéro room [TODO: catering]. | (same as previous column) | (same as previous column) |
 
 #### Thu 15 Apr
 
-| | Morning 08:30-12:30 | Afternoon 13:30-17:30 |
-|---|---|---|
-| Fixed layer (lectures, facility) | - | [Plenary, lecture, debrief] Feedback round with the teaching staff. Nerd ladder closes 17:00 |
-| Group A supervisor: ________ | [Poster and writing] Poster production | [Poster and writing] Poster production; [Plenary, lecture, debrief] Feedback round |
-| Group B supervisor: ________ | [Poster and writing] Poster production | [Poster and writing] Poster production; [Plenary, lecture, debrief] Feedback round |
-| Group C supervisor: ________ | [Poster and writing] Poster production | [Poster and writing] Poster production; [Plenary, lecture, debrief] Feedback round |
-| Group D supervisor: ________ | [Poster and writing] Poster production | [Poster and writing] Poster production; [Plenary, lecture, debrief] Feedback round |
-| Staff (shared) prep and supervision | Printing. Rescue groups: ELISA in the morning, result on the poster by 17:00. | Printing. Rescue groups: ELISA in the morning, result on the poster by 17:00. |
-| Resources (hand-written capacity) | Seminar room Wed to Fri. Printer [TODO]. Poster boards. | Seminar room Wed to Fri. Printer [TODO]. Poster boards. |
+| | Morning 09:00-12:00 | Lunch 12:00-13:00 | Afternoon 13:00-17:00 |
+|---|---|---|---|
+| Fixed layer (lectures, facility) | - | - | [Plenary, lecture, debrief] Recap and Q&A: the course in one hour, then open questions with the teaching staff |
+| Group A supervisor: ________ | [Poster and writing] Poster production, final figures and legends | Lunch | [Poster and writing] Final checks. Printing deadline 14:00: poster PDF committed to the group branch; [Plenary, lecture, debrief] Recap and Q&A |
+| Group B supervisor: ________ | [Poster and writing] Poster production, final figures and legends | Lunch | [Poster and writing] Final checks. Printing deadline 14:00: poster PDF committed to the group branch; [Plenary, lecture, debrief] Recap and Q&A |
+| Group C supervisor: ________ | [Poster and writing] Poster production, final figures and legends | Lunch | [Poster and writing] Final checks. Printing deadline 14:00: poster PDF committed to the group branch; [Plenary, lecture, debrief] Recap and Q&A |
+| Group D supervisor: ________ | [Poster and writing] Poster production, final figures and legends | Lunch | [Poster and writing] Final checks. Printing deadline 14:00: poster PDF committed to the group branch; [Plenary, lecture, debrief] Recap and Q&A |
+| Staff (shared) prep and supervision | Posters printed Thu after 14:00 [TODO: printer]. Rescue groups: ELISA in the morning, result on the poster by 14:00. | (same as previous column) | (same as previous column) |
+| Resources (hand-written capacity) | Seminar room Wed to Fri. Printer [TODO]. Poster boards. Apéro room [TODO: catering]. | (same as previous column) | (same as previous column) |
 
 #### Fri 16 Apr
 
-| | Morning 08:30-12:30 | Afternoon 13:30-17:30 |
-|---|---|---|
-| Fixed layer (lectures, facility) | [Plenary, lecture, debrief] Poster presentations and discussion | [Plenary, lecture, debrief] Prize, course evaluation, lab clean-up |
-| Group A supervisor: ________ | [Plenary, lecture, debrief] Presentations, prize, evaluation, clean-up | [Plenary, lecture, debrief] Presentations, prize, evaluation, clean-up |
-| Group B supervisor: ________ | [Plenary, lecture, debrief] Presentations, prize, evaluation, clean-up | [Plenary, lecture, debrief] Presentations, prize, evaluation, clean-up |
-| Group C supervisor: ________ | [Plenary, lecture, debrief] Presentations, prize, evaluation, clean-up | [Plenary, lecture, debrief] Presentations, prize, evaluation, clean-up |
-| Group D supervisor: ________ | [Plenary, lecture, debrief] Presentations, prize, evaluation, clean-up | [Plenary, lecture, debrief] Presentations, prize, evaluation, clean-up |
-| Staff (shared) prep and supervision | Jury, prize, evaluation form, clean-up checklist. | Jury, prize, evaluation form, clean-up checklist. |
-| Resources (hand-written capacity) | Seminar room Wed to Fri. Printer [TODO]. Poster boards. | Seminar room Wed to Fri. Printer [TODO]. Poster boards. |
+| | Morning 09:00-12:00 | Lunch 12:00-13:00 | Afternoon 13:00-17:00 |
+|---|---|---|---|
+| Fixed layer (lectures, facility) | [Plenary, lecture, debrief] Feedback round with the teaching staff; course evaluation | - | [Plenary, lecture, debrief] Poster presentations and discussion; prize; [Plenary, lecture, debrief] Apéro |
+| Group A supervisor: ________ | [Dry lab and desk work] Lab clean-up; notebook and group branch finalised; [Plenary, lecture, debrief] Feedback round | Lunch | [Plenary, lecture, debrief] Poster presentations; [Plenary, lecture, debrief] Apéro |
+| Group B supervisor: ________ | [Dry lab and desk work] Lab clean-up; notebook and group branch finalised; [Plenary, lecture, debrief] Feedback round | Lunch | [Plenary, lecture, debrief] Poster presentations; [Plenary, lecture, debrief] Apéro |
+| Group C supervisor: ________ | [Dry lab and desk work] Lab clean-up; notebook and group branch finalised; [Plenary, lecture, debrief] Feedback round | Lunch | [Plenary, lecture, debrief] Poster presentations; [Plenary, lecture, debrief] Apéro |
+| Group D supervisor: ________ | [Dry lab and desk work] Lab clean-up; notebook and group branch finalised; [Plenary, lecture, debrief] Feedback round | Lunch | [Plenary, lecture, debrief] Poster presentations; [Plenary, lecture, debrief] Apéro |
+| Staff (shared) prep and supervision | Jury, prize, evaluation form, clean-up checklist. Apéro ordered [TODO: catering]. | (same as previous column) | (same as previous column) |
+| Resources (hand-written capacity) | Seminar room Wed to Fri. Printer [TODO]. Poster boards. Apéro room [TODO: catering]. | (same as previous column) | (same as previous column) |
 
-Notes: A full repeat of Exp 2 does not fit in week 4. Rescue path for a failed Exp 2: staff seed plates Fri 9 Apr, group polarizes Mon, challenges Tue, harvests Wed 08:30, ELISA Thu morning.
+Notes: A full repeat of Exp 2 does not fit in week 4. Rescue path for a failed Exp 2: staff seed plates Fri 9 Apr, group polarizes Mon, challenges Tue, harvests Wed 09:00, ELISA Thu morning. Printing deadline Thu 14:00. Mondays 12:00-13:00: IMHS Lunch Seminar. Tuesdays: Cutting Edge Immunology Seminar runs 16:30-17:30.
 
 </details>
 
@@ -747,15 +736,15 @@ Notes: A full repeat of Exp 2 does not fit in week 4. Rescue path for a failed E
 - **EXP2**: Wet lab Exp 2: polarize, challenge, read out
 - **DRY**: Dry lab and desk work: setup, analysis, planning
 - **POSTER**: Poster and writing: introduction, significance, figures
-- **EXT**: Extension / nerd ladder (group's choice)
+- **EXT**: Extension / nerd factor (group's choice)
 - **BUFFER**: Buffer / free
-- **How to read it**: One sheet per week. Eight cells per day: four in the morning, four in the afternoon, one per hour. Rows: fixed layer, one row per group, shared staff row, resources, notes.
-- **Fixed layer**: Lecture slots, facility lecture, cytometer slots, writing day, poster day. Drawn by the teaching staff, thick border, locked. Everything else is flexible.
+- **How to read it**: One sheet per week, course hours 09:00-17:00. Eight cells per day, one per hour: three in the morning, lunch 12:00-13:00, four in the afternoon. Rows: fixed layer, one row per group, shared staff row, resources, notes.
+- **Fixed layer**: Lecture slots, journal clubs, facility lecture, cytometer slots, the Monday IMHS Lunch Seminar and the Tuesday Cutting Edge Immunology Seminar (16:30-17:30), writing lecture, recap, presentations. Drawn by the teaching staff, thick border, locked. Everything else is flexible.
 - **Group rows**: Each group fills its own row with its supervisor on the planning day (Thu 18 March, afternoon) and submits the plan on Friday. The plan is the group's first deliverable. The supervisor travels with the group for the whole course and may fold in experiments the lab needs anyway; those go into the group notebook like any other experiment.
 - **Checkerboard default**: Two groups at the bench in the morning and two in the dry lab, swapped after lunch. It is a default, not a rule: it keeps two hoods sufficient and the cytometer at two groups per slot. A group that deviates justifies its hood time against the other three. Pairs stay fixed within a week, because the group that starts a 24 h step harvests it. The morning pair swaps between weeks.
 - **Core experiments**: Exp 1 (week 2): establish the RAW 264.7 line. Thaw, daily counts (growth curve, doubling time), split, seed, freeze your own vials; viability of your vial after the break is the second readout. Exp 2 (week 3): polarize M(-), M(IFNg), M(IL-4), M(IFNg+LPS); challenge with LPS and your PRR axis, 24 h; ELISA, Griess, flow cytometry. Protocol IDs (P01...) refer to protocols/ in the course repository.
 - **Dry lab**: Week 1: environment and templates. Week 2: templates on example data, growth curve, scRNA-seq part 1. Week 3: signatures from the bulk RAW 264.7 dataset, scoring of the tissue macrophages, own flow and ELISA data. Week 4: extension analysis and poster figures. Downtime at any point: poster introduction and significance.
-- **Rescue path**: A full repeat of Exp 2 does not fit in week 4. A group whose Exp 2 failed takes the rescue path: staff seed plates Fri 9 April, polarize Mon 12, challenge Tue 13, harvest Wed 14 at 08:30, ELISA Thu 15 morning.
+- **Rescue path**: A full repeat of Exp 2 does not fit in week 4. A group whose Exp 2 failed takes the rescue path: staff seed plates Fri 9 April, polarize Mon 12, challenge Tue 13, harvest Wed 14 at 09:00, ELISA Thu 15 morning.
 - **Easter break**: Fri 26 March to Sun 4 April. No course, no cultures. Staff thaw backup RAW on Wed 31 March and split Fri 2 April [TODO: confirm dates with the department].
 - [TODO] Cytometer slots: dates and times from the facility (week 3 Wednesday, two slots; extension slots week 4).
 - [TODO] Facility lecture: slot on Fri 19 March.
@@ -764,7 +753,7 @@ Notes: A full repeat of Exp 2 does not fit in week 4. Rescue path for a failed E
 - [TODO] Supervisor names in the group row headers.
 - [TODO] qPCR: extension (current plan) or core.
 - [TODO] Course dates and Easter break: confirm with the department.
-- [TODO] Poster printing: where, deadline.
+- [TODO] Poster printing: printer. Deadline is Thu 15 Apr 14:00 (poster PDF committed to the group branch).
 
 ---
 
@@ -784,7 +773,7 @@ the lab has a protocol for but has not run in the course format carry a
 protocol names it (lab SOP number, version and date; the SOPs themselves are
 internal documents). Figures live in `figures/`.
 
-P-files are the core programme, X-files are extensions from the nerd ladder.
+P-files are the core programme, X-files are optional extensions (Section 6 of the script).
 
 | ID | Title | Used in | Hands-on time | Wall-clock time | Resources |
 |---|---|---|---|---|---|
@@ -1237,7 +1226,7 @@ stimuli, and adds the cytokine states the course needs.
 - M(-) is the reference for every comparison.
 - M(IFNγ+LPS) is characterised but not re-challenged with LPS: a state that has seen
   LPS shows endotoxin tolerance and would confuse the challenge experiment. Seeing
-  tolerance on purpose is an extension (see the nerd ladder).
+  tolerance on purpose is an extension (see Section 6 of the script).
 
 ### Checkpoints
 
@@ -2243,7 +2232,7 @@ inflammation. Healthy cells display CD47, a "don't eat me" signal read by SIRPα
 apoptotic cells expose phosphatidylserine, an "eat me" signal read by TIM4 among
 others (slide 36). Efferocytosis releases TGFβ, IL-10 and PGE2 and suppresses TNF,
 IL-1β and IL-6. TIM4 is in your flow panel as a marker of resident peritoneal
-macrophages, and an efferocytosis assay is on the nerd ladder.
+macrophages, and an efferocytosis assay is an optional extension.
 
 **Metabolism.** Macrophages shape adipose tissue, support lipid storage through
 PDGF-CC, control browning of white fat, and, when monocyte-derived and recruited in
@@ -4935,7 +4924,7 @@ Three parts, matched to the dry-lab halves of weeks 2 and 3:
    does either signature explain, and what do cells with both scores high mean for
    the M1/M2 axis.
 
-Nerd-ladder items that start from here: annotate the Gata6+, Folr2+ Selenop+ and
+Optional extensions that start from here: annotate the Gata6+, Folr2+ Selenop+ and
 Trem2+ Spp1+ populations; rerun the pipeline from the GEO matrices; integrate with a
 true in vitro single-cell dataset (Sanin et al. 2022 `[TODO: accession]`).
 
