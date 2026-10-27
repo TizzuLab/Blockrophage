@@ -254,10 +254,6 @@ The poster is made with the ETH scientific poster template, laid out in A3 and
 printed at A0; the [poster guide](poster/README.md) links the template on the ETH
 Corporate Design page and lists what the course expects on the poster.
 
-`[TODO: poster format, template; printing deadline Thu 15 Apr 14:00, printer; talk
-length; writing lecture: building an argument from data, figure design, what a good
-legend does, how to state limits honestly; Apéro catering.]`
-
 ## 9. Safety
 
 `[TODO: biosafety level, chemicals, sharps, after-hours rules, extension-specific
