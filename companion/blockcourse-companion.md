@@ -1,6 +1,6 @@
 # Blockrophage course: companion file
 
-Built 2026-10-27 from commit ef096dc of the course repository. This single file
+Built 2026-10-27 from commit b616091 of the course repository. This single file
 contains the complete course material for the ETH Zürich block course
 "Macrophage Biology: in vitro, in vivo, in silico" (Spring Semester 2027).
 Repository: https://github.com/TizzuLab/blockrophage-course. It is meant to be given to a language model
@@ -157,7 +157,7 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 
 | | |
 |---|---|
-| Course title | Macrophage Biology: in vitro, in vivo, in silico `[TODO: confirm final title]` |
+| Course title | Blockrophage course: the block course about macrophage polarization and their response to danger molecules |
 | Course number / ECTS | 6 ECTS |
 | Dates | Thu 18 March to Fri 16 April 2027, 16 working days; no course Fri 26 March to Sun 4 April (Easter break) |
 | Lecturer | Prof. Dr. med. Joel Zindel |
