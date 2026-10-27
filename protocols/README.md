@@ -22,12 +22,15 @@ P-files are the core programme, X-files are optional extensions (Section 6 of th
 | P06 | ELISA IL-6 and TNF | Exp 2 | 3–4 h + coating the day before | 2 days | plate reader (450 nm), multichannel pipette |
 | P07 | Griess assay | Exp 2 | 1 h | 1 h | plate reader |
 | P08 | Flow cytometry of polarized RAW cells | Exp 2 (core), X02 | 2 h stain + 1 h acquisition | half day | hood, cooled plate centrifuge, heating block, cytometer slot, FlowJo seat |
+| P09 | MTT assay: metabolic activity as a proxy for cell number | Exp 1 (standard curve, growth curve); optional Exp 2 and 4 | 40 min + 20 min per read day | 3.5 h per read, same day | hood, incubator, plate reader (560 or 570 nm plus reference), multichannel pipette |
 | X01 | RNA isolation and qPCR | Extension | 1 h + 1.5 days | 6 h arm, then 2 days | hood, −80 °C, RNA bench, NanoDrop, thermal cycler, LightCycler 480 II |
 | X02 | Peritoneal cells on the shared flow panel | Extension | 30 min + staining | half day, with cytometer slot | surplus peritoneal cell suspension provided by staff, ice, cooled centrifuge, cytometer slot |
 | X03 | F4/80 IHC on tissue sections | Extension | 1 h + 2 × 3 h | about 5 days | surplus fixed tissue or blocks provided by staff, histology facility (paraffin), pressure cooker, histology bench, slide scanner |
 
 ## Dependencies in time
 
+- P09 plate is seeded on the P01 thaw day from the same suspension and read on four
+  consecutive days; the P01 flask count of the same day is its control.
 - P02 plates are seeded 24 h before P04.
 - P04 runs 24 h, then wash, then P05 runs 16 h overnight; P08 uses the
   unchallenged wells of P04 on the day of the P05 challenge.

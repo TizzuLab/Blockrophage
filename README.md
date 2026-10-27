@@ -158,13 +158,12 @@ to LPS and IFNγ, and has been in culture for almost fifty years. What that does
 does not make it is in the
 [background](background/macrophage_biology.md#52-level-i-ontogeny). The question is
 answered with the simplest readouts there are: the microscope, for morphology and
-confluence, and a growth curve from daily counts or an MTT assay
-`[TODO: MTT protocol]`, from which a doubling time is derived and compared with the
-published value. A culture that doubles at the expected rate, looks right and
+confluence, and a growth curve from daily counts and an MTT assay, from which a
+doubling time is derived and compared with the published value. A culture that doubles at the expected rate, looks right and
 survives its own freeze and thaw is fit for Experiment 2. By the end of week 2 you
 will have taken this line from vial to vial yourselves. Protocols
 [P01](protocols/P01_raw264_thaw_expand.md), [P02](protocols/P02_raw264_split_seed.md),
-[P03](protocols/P03_raw264_freeze.md).
+[P03](protocols/P03_raw264_freeze.md), [P09](protocols/P09_mtt.md).
 
 **Experiment 2: can we polarize them?** (week 3) The textbook states were defined by
 what is added: IFNγ, IL-4, or IFNγ with LPS, named M(IFNγ), M(IL-4) and M(IFNγ+LPS)

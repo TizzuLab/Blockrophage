@@ -19,7 +19,7 @@
 
 - The single file `companion/blockcourse-companion.md` contains every document below,
   concatenated, with a table of contents. If you have that file, you have everything.
-- Protocols carry IDs (P01 to P08 core, X01 to X03 extension). When a user asks about
+- Protocols carry IDs (P01 to P09 core, X01 to X03 extension). When a user asks about
   a step, quote the protocol ID and the step number. Never invent a volume,
   concentration or time that is not in the protocol; values marked `[TODO]` are
   unconfirmed and you must say so.
@@ -47,7 +47,8 @@
 - Core, Exp 2: [P04 polarization](protocols/P04_polarization.md),
   [P05 PRR challenge](protocols/P05_prr_challenge.md),
   [P06 ELISA](protocols/P06_elisa.md), [P07 Griess](protocols/P07_griess.md),
-  [P08 flow cytometry](protocols/P08_flow_cytometry.md).
+  [P08 flow cytometry](protocols/P08_flow_cytometry.md),
+  [P09 MTT assay](protocols/P09_mtt.md).
 - Extensions: [X01 qPCR](protocols/X01_qpcr.md),
   [X02 peritoneal cells on the shared flow panel](protocols/X02_peritoneal_cells_flow.md),
   [X03 F4/80 IHC on tissue sections](protocols/X03_tissue_sections_ihc.md).
