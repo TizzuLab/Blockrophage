@@ -46,7 +46,7 @@
 <rect x="176.2" y="48" width="26.2" height="280" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.8"/>
 <rect x="202.5" y="48" width="26.2" height="280" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.8"/>
 <rect x="228.8" y="48" width="26.2" height="280" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
-<text x="247" y="248" transform="rotate(-90 247 248)" font-size="12" fill="#FFFFFF" font-weight="bold">IMHS Lunch Seminar</text>
+<text x="247" y="292" transform="rotate(-90 247 292)" font-size="12" fill="#FFFFFF" font-weight="bold">IMHS Lunch Seminar (HPL D32/34)</text>
 <rect x="255.0" y="48" width="26.2" height="280" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.8"/>
 <rect x="281.2" y="48" width="26.2" height="280" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.8"/>
 <rect x="307.5" y="48" width="26.2" height="280" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.8"/>
@@ -60,7 +60,7 @@
 <rect x="491.2" y="48" width="26.2" height="280" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.8"/>
 <rect x="517.5" y="48" width="26.2" height="280" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.8"/>
 <rect x="543.8" y="48" width="26.2" height="280" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
-<text x="560" y="308" transform="rotate(-90 560 308)" font-size="10" fill="#FFFFFF" font-weight="bold">Cutting Edge Immunology Seminar 16:30-17:30</text>
+<text x="560" y="320" transform="rotate(-90 560 320)" font-size="10" fill="#FFFFFF" font-weight="bold">Cutting Edge Immunology Seminar 16:30-17:30 (t…</text>
 <rect x="570.0" y="48" width="26.2" height="280" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.8"/>
 <rect x="596.2" y="48" width="26.2" height="280" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.8"/>
 <rect x="622.5" y="48" width="52.5" height="280" fill="#8B1E3F" stroke="#1A1A1A" stroke-width="2"/>
@@ -72,7 +72,7 @@
 <text x="746" y="282" transform="rotate(-90 746 282)" font-size="12" fill="#FFFFFF" font-weight="bold">Cytometer slot, groups A+B</text>
 <text x="760" y="282" transform="rotate(-90 760 282)" font-size="12" fill="#FFFFFF" font-weight="bold">[TODO: facility reservation]</text>
 <rect x="780.0" y="48" width="26.2" height="280" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
-<text x="796" y="320" transform="rotate(-90 796 320)" font-size="10" fill="#FFFFFF" font-weight="bold">Journal club 2: the peritoneal injury single-c…</text>
+<text x="796" y="320" transform="rotate(-90 796 320)" font-size="10" fill="#FFFFFF" font-weight="bold">Journal club 2 (tbd): the peritoneal injury si…</text>
 <rect x="806.2" y="48" width="26.2" height="280" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.8"/>
 <rect x="832.5" y="48" width="26.2" height="280" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.8"/>
 <rect x="858.8" y="48" width="26.2" height="280" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.8"/>

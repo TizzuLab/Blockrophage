@@ -130,19 +130,19 @@ harvests it.
 
 ### Week 1: orientation (Thu 18 - Fri 19 March 2027), 09:00-17:00
 
-![Week 1: orientation (Thu 18 - Fri 19 March 2027), 09:00-17:00](figures/schedule/week-1.svg?v=0ca461ae)
+![Week 1: orientation (Thu 18 - Fri 19 March 2027), 09:00-17:00](figures/schedule/week-1.svg?v=6ad95a49)
 
 ### Week 2: Exp 1, establish the line (Mon 22 - Thu 25 March 2027)
 
-![Week 2: Exp 1, establish the line (Mon 22 - Thu 25 March 2027)](figures/schedule/week-2.svg?v=5a1e72cb)
+![Week 2: Exp 1, establish the line (Mon 22 - Thu 25 March 2027)](figures/schedule/week-2.svg?v=4bbbdf8e)
 
 ### Week 3: Exp 2, polarize and challenge (Mon 5 - Fri 9 April 2027)
 
-![Week 3: Exp 2, polarize and challenge (Mon 5 - Fri 9 April 2027)](figures/schedule/week-3.svg?v=5356033f)
+![Week 3: Exp 2, polarize and challenge (Mon 5 - Fri 9 April 2027)](figures/schedule/week-3.svg?v=04288238)
 
 ### Week 4: extensions, poster, presentations (Mon 12 - Fri 16 April 2027)
 
-![Week 4: extensions, poster, presentations (Mon 12 - Fri 16 April 2027)](figures/schedule/week-4.svg?v=db0352f6)
+![Week 4: extensions, poster, presentations (Mon 12 - Fri 16 April 2027)](figures/schedule/week-4.svg?v=6ed85047)
 
 <!-- schedule:end -->
 

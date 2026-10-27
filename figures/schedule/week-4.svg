@@ -46,7 +46,7 @@
 <rect x="176.2" y="48" width="26.2" height="280" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.8"/>
 <rect x="202.5" y="48" width="26.2" height="280" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.8"/>
 <rect x="228.8" y="48" width="26.2" height="280" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
-<text x="247" y="248" transform="rotate(-90 247 248)" font-size="12" fill="#FFFFFF" font-weight="bold">IMHS Lunch Seminar</text>
+<text x="247" y="292" transform="rotate(-90 247 292)" font-size="12" fill="#FFFFFF" font-weight="bold">IMHS Lunch Seminar (HPL D32/34)</text>
 <rect x="255.0" y="48" width="26.2" height="280" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.8"/>
 <rect x="281.2" y="48" width="26.2" height="280" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.8"/>
 <rect x="307.5" y="48" width="26.2" height="280" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.8"/>
@@ -59,7 +59,7 @@
 <rect x="491.2" y="48" width="26.2" height="280" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.8"/>
 <rect x="517.5" y="48" width="26.2" height="280" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.8"/>
 <rect x="543.8" y="48" width="26.2" height="280" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
-<text x="560" y="308" transform="rotate(-90 560 308)" font-size="10" fill="#FFFFFF" font-weight="bold">Cutting Edge Immunology Seminar 16:30-17:30</text>
+<text x="560" y="320" transform="rotate(-90 560 320)" font-size="10" fill="#FFFFFF" font-weight="bold">Cutting Edge Immunology Seminar 16:30-17:30 (t…</text>
 <rect x="570.0" y="48" width="26.2" height="280" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
 <text x="586" y="320" transform="rotate(-90 586 320)" font-size="10" fill="#FFFFFF" font-weight="bold">Lecture: scientific writing, from data to argu…</text>
 <rect x="596.2" y="48" width="26.2" height="280" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.8"/>
@@ -77,14 +77,16 @@
 <rect x="885.0" y="48" width="26.2" height="280" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.8"/>
 <rect x="911.2" y="48" width="78.8" height="280" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
 <text x="917" y="66" font-size="12" fill="#FFFFFF" font-weight="bold">Recap and</text>
-<text x="917" y="81" font-size="12" fill="#FFFFFF" font-weight="bold">Q&amp;A: the</text>
-<text x="917" y="96" font-size="12" fill="#FFFFFF" font-weight="bold">course in</text>
-<text x="917" y="111" font-size="12" fill="#FFFFFF" font-weight="bold">one hour,</text>
-<text x="917" y="126" font-size="12" fill="#FFFFFF" font-weight="bold">then open</text>
-<text x="917" y="141" font-size="12" fill="#FFFFFF" font-weight="bold">questions</text>
-<text x="917" y="156" font-size="12" fill="#FFFFFF" font-weight="bold">with the</text>
-<text x="917" y="171" font-size="12" fill="#FFFFFF" font-weight="bold">teaching</text>
-<text x="917" y="186" font-size="12" fill="#FFFFFF" font-weight="bold">staff</text>
+<text x="917" y="81" font-size="12" fill="#FFFFFF" font-weight="bold">Q&amp;A</text>
+<text x="917" y="96" font-size="12" fill="#FFFFFF" font-weight="bold">(tbd):</text>
+<text x="917" y="111" font-size="12" fill="#FFFFFF" font-weight="bold">the</text>
+<text x="917" y="126" font-size="12" fill="#FFFFFF" font-weight="bold">course in</text>
+<text x="917" y="141" font-size="12" fill="#FFFFFF" font-weight="bold">one hour,</text>
+<text x="917" y="156" font-size="12" fill="#FFFFFF" font-weight="bold">then open</text>
+<text x="917" y="171" font-size="12" fill="#FFFFFF" font-weight="bold">questions</text>
+<text x="917" y="186" font-size="12" fill="#FFFFFF" font-weight="bold">with the</text>
+<text x="917" y="201" font-size="12" fill="#FFFFFF" font-weight="bold">teaching</text>
+<text x="917" y="216" font-size="12" fill="#FFFFFF" font-weight="bold">staff</text>
 <rect x="990.0" y="48" width="26.2" height="280" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.8"/>
 <rect x="1016.2" y="48" width="26.2" height="280" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.8"/>
 <rect x="1042.5" y="48" width="26.2" height="280" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
