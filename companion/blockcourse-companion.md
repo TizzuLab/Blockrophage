@@ -1,6 +1,6 @@
 # Blockrophage course: companion file
 
-Built 2026-10-27 from commit f275ddf of the course repository. This single file
+Built 2026-10-27 from commit 4bec79c of the course repository. This single file
 contains the complete course material for the ETH Zürich block course
 "Macrophage Biology: in vitro, in vivo, in silico" (Spring Semester 2027).
 Repository: https://github.com/TizzuLab/blockrophage-course. It is meant to be given to a language model
@@ -389,18 +389,9 @@ what you could do, but the list is non-exhaustive.
 
 ### 7. Assessment
 
-The grade is based on the poster, the presentation and the notebook, scored against
-the learning objectives `[TODO: confirm with department rules on graded block courses]`:
-
-| Component | Weight |
-|---|---|
-| Poster: question, design, results, interpretation of the dish versus tissue comparison | 40% |
-| Data quality and controls, including Experiment 1 | 20% |
-| Presentation and discussion | 20% |
-| Notebook, including the plan and the analysis | 20% |
-
-How the optional experiments and extensions of Section 6 count, in the grade or
-beside it, is still open `[TODO: recognition of extensions]`.
+Assessment. The grade has two parts: an assessment of the poster as a document, scored
+per group without the students present, and an oral assessment per student. 
+Weights and format are announced in the welcome session on the first day.
 
 ### 8. Writing, poster and presentation
 
