@@ -176,10 +176,10 @@ Notes: One 24 h challenge arm only; the 6 h RNA arm belongs to the qPCR extensio
 | | Morning 09:00-12:00 | Lunch 12:00-13:00 | Afternoon 13:00-17:00 |
 |---|---|---|---|
 | Fixed layer (lectures, facility) | - | [Plenary, lecture, debrief] IMHS Lunch Seminar | - |
-| Group A supervisor: ________ | [Extension / nerd ladder] Extension of your choice, or rescue path for Exp 2 (see Legend) | [Plenary, lecture, debrief] IMHS Lunch Seminar | [Dry lab and desk work] Dry lab: analysis of Exp 2. Poster: figures |
-| Group B supervisor: ________ | [Extension / nerd ladder] Extension of your choice, or rescue path for Exp 2 (see Legend) | [Plenary, lecture, debrief] IMHS Lunch Seminar | [Dry lab and desk work] Dry lab: analysis of Exp 2. Poster: figures |
-| Group C supervisor: ________ | [Dry lab and desk work] Dry lab: analysis of Exp 2. Poster: figures | [Plenary, lecture, debrief] IMHS Lunch Seminar | [Extension / nerd ladder] Extension of your choice, or rescue path for Exp 2 (see Legend) |
-| Group D supervisor: ________ | [Dry lab and desk work] Dry lab: analysis of Exp 2. Poster: figures | [Plenary, lecture, debrief] IMHS Lunch Seminar | [Extension / nerd ladder] Extension of your choice, or rescue path for Exp 2 (see Legend) |
+| Group A supervisor: ________ | [Extension / nerd factor] Extension of your choice, or rescue path for Exp 2 (see Legend) | [Plenary, lecture, debrief] IMHS Lunch Seminar | [Dry lab and desk work] Dry lab: analysis of Exp 2. Poster: figures |
+| Group B supervisor: ________ | [Extension / nerd factor] Extension of your choice, or rescue path for Exp 2 (see Legend) | [Plenary, lecture, debrief] IMHS Lunch Seminar | [Dry lab and desk work] Dry lab: analysis of Exp 2. Poster: figures |
+| Group C supervisor: ________ | [Dry lab and desk work] Dry lab: analysis of Exp 2. Poster: figures | [Plenary, lecture, debrief] IMHS Lunch Seminar | [Extension / nerd factor] Extension of your choice, or rescue path for Exp 2 (see Legend) |
+| Group D supervisor: ________ | [Dry lab and desk work] Dry lab: analysis of Exp 2. Poster: figures | [Plenary, lecture, debrief] IMHS Lunch Seminar | [Extension / nerd factor] Extension of your choice, or rescue path for Exp 2 (see Legend) |
 | Staff (shared) prep and supervision | Reagents for the extensions agreed on Fri 9 Apr. Rescue plates: polarize Mon. | (same as previous column) | (same as previous column) |
 | Resources (hand-written capacity) | Hoods Mon and Tue only. Extension-specific instruments as agreed. | (same as previous column) | (same as previous column) |
 
@@ -188,10 +188,10 @@ Notes: One 24 h challenge arm only; the 6 h RNA arm belongs to the qPCR extensio
 | | Morning 09:00-12:00 | Lunch 12:00-13:00 | Afternoon 13:00-17:00 |
 |---|---|---|---|
 | Fixed layer (lectures, facility) | - | - | [Plenary, lecture, debrief] Cutting Edge Immunology Seminar 16:30-17:30 |
-| Group A supervisor: ________ | [Extension / nerd ladder] Extension, continued | Lunch | [Dry lab and desk work] Dry lab: extension analysis. Poster: figures and legends; [Plenary, lecture, debrief] Seminar |
-| Group B supervisor: ________ | [Extension / nerd ladder] Extension, continued | Lunch | [Dry lab and desk work] Dry lab: extension analysis. Poster: figures and legends; [Plenary, lecture, debrief] Seminar |
-| Group C supervisor: ________ | [Dry lab and desk work] Dry lab: extension analysis. Poster: figures and legends | Lunch | [Extension / nerd ladder] Extension, continued; [Plenary, lecture, debrief] Seminar |
-| Group D supervisor: ________ | [Dry lab and desk work] Dry lab: extension analysis. Poster: figures and legends | Lunch | [Extension / nerd ladder] Extension, continued; [Plenary, lecture, debrief] Seminar |
+| Group A supervisor: ________ | [Extension / nerd factor] Extension, continued | Lunch | [Dry lab and desk work] Dry lab: extension analysis. Poster: figures and legends; [Plenary, lecture, debrief] Seminar |
+| Group B supervisor: ________ | [Extension / nerd factor] Extension, continued | Lunch | [Dry lab and desk work] Dry lab: extension analysis. Poster: figures and legends; [Plenary, lecture, debrief] Seminar |
+| Group C supervisor: ________ | [Dry lab and desk work] Dry lab: extension analysis. Poster: figures and legends | Lunch | [Extension / nerd factor] Extension, continued; [Plenary, lecture, debrief] Seminar |
+| Group D supervisor: ________ | [Dry lab and desk work] Dry lab: extension analysis. Poster: figures and legends | Lunch | [Extension / nerd factor] Extension, continued; [Plenary, lecture, debrief] Seminar |
 | Staff (shared) prep and supervision | Rescue plates: challenge Tue. | (same as previous column) | (same as previous column) |
 | Resources (hand-written capacity) | Hoods Mon and Tue only. Extension-specific instruments as agreed. | (same as previous column) | (same as previous column) |
 
@@ -212,10 +212,10 @@ Notes: One 24 h challenge arm only; the 6 h RNA arm belongs to the qPCR extensio
 | | Morning 09:00-12:00 | Lunch 12:00-13:00 | Afternoon 13:00-17:00 |
 |---|---|---|---|
 | Fixed layer (lectures, facility) | - | - | [Plenary, lecture, debrief] Recap and Q&A: the course in one hour, then open questions with the teaching staff |
-| Group A supervisor: ________ | [Poster and writing] Poster production, final figures and legends | Lunch | [Poster and writing] Final checks. Printing deadline 14:00: poster PDF committed to the group branch; nerd ladder closes; [Plenary, lecture, debrief] Recap and Q&A |
-| Group B supervisor: ________ | [Poster and writing] Poster production, final figures and legends | Lunch | [Poster and writing] Final checks. Printing deadline 14:00: poster PDF committed to the group branch; nerd ladder closes; [Plenary, lecture, debrief] Recap and Q&A |
-| Group C supervisor: ________ | [Poster and writing] Poster production, final figures and legends | Lunch | [Poster and writing] Final checks. Printing deadline 14:00: poster PDF committed to the group branch; nerd ladder closes; [Plenary, lecture, debrief] Recap and Q&A |
-| Group D supervisor: ________ | [Poster and writing] Poster production, final figures and legends | Lunch | [Poster and writing] Final checks. Printing deadline 14:00: poster PDF committed to the group branch; nerd ladder closes; [Plenary, lecture, debrief] Recap and Q&A |
+| Group A supervisor: ________ | [Poster and writing] Poster production, final figures and legends | Lunch | [Poster and writing] Final checks. Printing deadline 14:00: poster PDF committed to the group branch; [Plenary, lecture, debrief] Recap and Q&A |
+| Group B supervisor: ________ | [Poster and writing] Poster production, final figures and legends | Lunch | [Poster and writing] Final checks. Printing deadline 14:00: poster PDF committed to the group branch; [Plenary, lecture, debrief] Recap and Q&A |
+| Group C supervisor: ________ | [Poster and writing] Poster production, final figures and legends | Lunch | [Poster and writing] Final checks. Printing deadline 14:00: poster PDF committed to the group branch; [Plenary, lecture, debrief] Recap and Q&A |
+| Group D supervisor: ________ | [Poster and writing] Poster production, final figures and legends | Lunch | [Poster and writing] Final checks. Printing deadline 14:00: poster PDF committed to the group branch; [Plenary, lecture, debrief] Recap and Q&A |
 | Staff (shared) prep and supervision | Posters printed Thu after 14:00 [TODO: printer]. Rescue groups: ELISA in the morning, result on the poster by 14:00. | (same as previous column) | (same as previous column) |
 | Resources (hand-written capacity) | Seminar room Wed to Fri. Printer [TODO]. Poster boards. Apéro room [TODO: catering]. | (same as previous column) | (same as previous column) |
 
@@ -243,7 +243,7 @@ Notes: A full repeat of Exp 2 does not fit in week 4. Rescue path for a failed E
 - **EXP2**: Wet lab Exp 2: polarize, challenge, read out
 - **DRY**: Dry lab and desk work: setup, analysis, planning
 - **POSTER**: Poster and writing: introduction, significance, figures
-- **EXT**: Extension / nerd ladder (group's choice)
+- **EXT**: Extension / nerd factor (group's choice)
 - **BUFFER**: Buffer / free
 - **How to read it**: One sheet per week, course hours 09:00-17:00. Eight cells per day, one per hour: three in the morning, lunch 12:00-13:00, four in the afternoon. Rows: fixed layer, one row per group, shared staff row, resources, notes.
 - **Fixed layer**: Lecture slots, journal clubs, facility lecture, cytometer slots, the Monday IMHS Lunch Seminar and the Tuesday Cutting Edge Immunology Seminar (16:30-17:30), writing lecture, recap, presentations. Drawn by the teaching staff, thick border, locked. Everything else is flexible.
