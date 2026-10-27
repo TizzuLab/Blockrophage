@@ -17,6 +17,7 @@ Usage: python3 tools/xlsx2md.py [workbook.xlsx] [schedule.md]
 """
 from __future__ import annotations
 
+import hashlib
 import sys
 from pathlib import Path
 
@@ -377,7 +378,10 @@ def main(xlsx=XLSX, md=MD):
             svg = week_to_svg(ws, items)
             (Path(md).parent / svg_name).write_text(svg, encoding="utf-8")
             svgs.append((str(ws["A1"].value), svg))
-            out += week_to_md(ws, legend, svg_name)
+            # content hash in the link: GitHub and browsers cache images by URL,
+            # so an unchanged path would keep showing the previous drawing
+            digest = hashlib.md5(svg.encode("utf-8")).hexdigest()[:8]
+            out += week_to_md(ws, legend, f"{svg_name}?v={digest}")
     # Legend rules and open items, verbatim
     ws = wb["Legend"]
     out += ["## Legend, rules and open items", ""]

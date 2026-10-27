@@ -7,7 +7,7 @@ Activity blocks in brackets. The fixed layer is drawn by staff; group rows are t
 
 ## Week 1: orientation (Thu 18 - Fri 19 March 2027), 09:00-17:00
 
-![Week 1: orientation (Thu 18 - Fri 19 March 2027), 09:00-17:00](week-1.svg)
+![Week 1: orientation (Thu 18 - Fri 19 March 2027), 09:00-17:00](week-1.svg?v=e93ddc4e)
 
 <details><summary>Text version (what the companion reads)</summary>
 
@@ -39,7 +39,7 @@ Activity blocks in brackets. The fixed layer is drawn by staff; group rows are t
 
 ## Week 2: Exp 1, establish the line (Mon 22 - Thu 25 March 2027)
 
-![Week 2: Exp 1, establish the line (Mon 22 - Thu 25 March 2027)](week-2.svg)
+![Week 2: Exp 1, establish the line (Mon 22 - Thu 25 March 2027)](week-2.svg?v=52298a70)
 
 <details><summary>Text version (what the companion reads)</summary>
 
@@ -97,7 +97,7 @@ Notes: Exp 1 is a real experiment: four counts give a growth curve and a doublin
 
 ## Week 3: Exp 2, polarize and challenge (Mon 5 - Fri 9 April 2027)
 
-![Week 3: Exp 2, polarize and challenge (Mon 5 - Fri 9 April 2027)](week-3.svg)
+![Week 3: Exp 2, polarize and challenge (Mon 5 - Fri 9 April 2027)](week-3.svg?v=e82afa02)
 
 <details><summary>Text version (what the companion reads)</summary>
 
@@ -167,7 +167,7 @@ Notes: One 24 h challenge arm only; the 6 h RNA arm belongs to the qPCR extensio
 
 ## Week 4: extensions, poster, presentations (Mon 12 - Fri 16 April 2027)
 
-![Week 4: extensions, poster, presentations (Mon 12 - Fri 16 April 2027)](week-4.svg)
+![Week 4: extensions, poster, presentations (Mon 12 - Fri 16 April 2027)](week-4.svg?v=529b140d)
 
 <details><summary>Text version (what the companion reads)</summary>
 
