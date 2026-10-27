@@ -37,7 +37,7 @@ jobs:
         run: |
           git config user.name "course-bot"
           git config user.email "course-bot@users.noreply.github.com"
-          git add README.md figures/schedule companion/blockcourse-companion.md
+          git add README.md figures/schedule tools/schedule/schedule_text.md companion/blockcourse-companion.md
           git diff --cached --quiet || git commit -m "Regenerate schedule drawings and companion"
           git push
 
