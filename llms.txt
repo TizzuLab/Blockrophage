@@ -56,7 +56,7 @@
 ## Background
 
 - [Macrophage biology](background/macrophage_biology.md): nomenclature, ontogeny,
-  niche, the rise and fall of M1/M2, pattern-recognition receptors, the peritoneal
+  niche, function and activation state, pattern-recognition receptors, the peritoneal
   cavity, why a dish is not a body, the single-cell dataset, working with a language
   model as a scientist.
 - [Reading list](background/reading_list.md).
