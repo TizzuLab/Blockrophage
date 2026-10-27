@@ -33,6 +33,9 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 4. Optionally, **your favourite LLM as a learning coach**: the LLM-friendly version of
    this repository, the [companion package](#your-companion), is dropped into a
    session.
+5. **The safety sheet**, read before the first day and signed after the briefing on
+   the first morning ([safety](safety/README.md)). The signed sheet is your
+   admission to the bench.
 
 No prior knowledge; the [lectures](slides/) are optional reading.
 
@@ -256,8 +259,12 @@ Corporate Design page and lists what the course expects on the poster.
 
 ## 9. Safety
 
-`[TODO: biosafety level, chemicals, sharps, after-hours rules, extension-specific
-items (PFA, DAB, primary tissue).]`
+The [safety sheet](safety/README.md) is two pages and is the whole safety
+instruction for this course: where the rules come from, and what you need to know
+here: biosafety level, protection and conduct, the cabinet, the chemicals of this
+course with one rule each, sharps, waste, incidents and emergency numbers. It ends
+with the confirmation you sign after the briefing on the first morning, which is
+the written record the ETH biosafety concept asks for.
 
 ## Your companion
 
