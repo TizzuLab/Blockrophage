@@ -99,7 +99,8 @@
 <text x="1192" y="205" transform="rotate(-90 1192 205)" font-size="12" fill="#FFFFFF" font-weight="bold">Apéro</text>
 <rect x="0.0" y="328" width="150.0" height="70" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
 <text x="6" y="346" font-size="12" fill="#1A1A1A" font-weight="bold">Group A</text>
-<text x="6" y="361" font-size="12" fill="#1A1A1A" font-weight="bold">supervisor: ________</text>
+<text x="6" y="361" font-size="12" fill="#1A1A1A" font-weight="bold">supervisors: ______</text>
+<text x="6" y="376" font-size="12" fill="#1A1A1A" font-weight="bold">/ ______</text>
 <rect x="150.0" y="328" width="78.8" height="140" fill="#F8CBAD" stroke="#BFBFBF" stroke-width="0.8"/>
 <text x="156" y="350" font-size="12" fill="#1A1A1A">Extension</text>
 <text x="156" y="365" font-size="12" fill="#1A1A1A">of your</text>
@@ -172,10 +173,12 @@
 <text x="1192" y="485" transform="rotate(-90 1192 485)" font-size="12" fill="#FFFFFF" font-weight="bold">Apéro</text>
 <rect x="0.0" y="398" width="150.0" height="70" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
 <text x="6" y="416" font-size="12" fill="#1A1A1A" font-weight="bold">Group B</text>
-<text x="6" y="431" font-size="12" fill="#1A1A1A" font-weight="bold">supervisor: ________</text>
+<text x="6" y="431" font-size="12" fill="#1A1A1A" font-weight="bold">supervisors: ______</text>
+<text x="6" y="446" font-size="12" fill="#1A1A1A" font-weight="bold">/ ______</text>
 <rect x="0.0" y="468" width="150.0" height="70" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
 <text x="6" y="486" font-size="12" fill="#1A1A1A" font-weight="bold">Group C</text>
-<text x="6" y="501" font-size="12" fill="#1A1A1A" font-weight="bold">supervisor: ________</text>
+<text x="6" y="501" font-size="12" fill="#1A1A1A" font-weight="bold">supervisors: ______</text>
+<text x="6" y="516" font-size="12" fill="#1A1A1A" font-weight="bold">/ ______</text>
 <rect x="150.0" y="468" width="78.8" height="140" fill="#FFE699" stroke="#BFBFBF" stroke-width="0.8"/>
 <text x="156" y="512" font-size="12" fill="#1A1A1A">Dry lab:</text>
 <text x="156" y="528" font-size="12" fill="#1A1A1A">analysis</text>
@@ -202,7 +205,8 @@
 <text x="498" y="572" transform="rotate(-90 498 572)" font-size="12" fill="#1A1A1A">continued</text>
 <rect x="0.0" y="538" width="150.0" height="70" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
 <text x="6" y="556" font-size="12" fill="#1A1A1A" font-weight="bold">Group D</text>
-<text x="6" y="571" font-size="12" fill="#1A1A1A" font-weight="bold">supervisor: ________</text>
+<text x="6" y="571" font-size="12" fill="#1A1A1A" font-weight="bold">supervisors: ______</text>
+<text x="6" y="586" font-size="12" fill="#1A1A1A" font-weight="bold">/ ______</text>
 <rect x="0.0" y="608" width="150.0" height="87" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
 <text x="6" y="626" font-size="12" fill="#1A1A1A" font-weight="bold">Staff (shared)</text>
 <text x="6" y="641" font-size="12" fill="#1A1A1A" font-weight="bold">prep and supervision</text>
