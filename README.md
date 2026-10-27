@@ -27,17 +27,17 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 
 No prior knowledge; the [lectures](slides/) are optional reading.
 
-1. Create **a GitHub account** at [github.com](https://github.com) before the first
-   day and send us your username.
-2. We need **your ok to work on a public repository**, where your edits and your name
-   are visible to anyone. Take this into account when you create your account.
-3. Bring **a laptop**; any operating system works.
-4. You may **optionally deploy your favourite LLM as a learning coach** by dropping
-   the LLM-friendly version of this repository, the
-   [companion package](#your-companion), into a session.
+1. **A GitHub account**, created at [github.com](https://github.com) before the first
+   day; the username is sent to us.
+2. **Your ok to work on a public repository**, where your edits and your name are
+   visible to anyone. This is worth keeping in mind when the account is created.
+3. **A laptop**; any operating system works.
+4. Optionally, **your favourite LLM as a learning coach**: the LLM-friendly version of
+   this repository, the [companion package](#your-companion), is dropped into a
+   session.
 
-Each group has two supervisors from the teaching staff who own the group's branch of
-this repository (Section 3).
+Each group is assigned two supervisors from the teaching staff, who own the group's
+branch of this repository (Section 3).
 
 ## 1. Concept
 
@@ -62,7 +62,7 @@ Bergstrom, Jevin D. West). In order words: information is cheap, validation is n
 
 ## 2. Learning objectives
 
-After this course you can:
+After this course you will be able to:
 
 1. **Classify** macrophages by ontogeny, niche and activation state, use the
    M(stimulus) nomenclature correctly, and explain why the M1/M2 dichotomy was revised.
@@ -96,14 +96,14 @@ that worked.
 
 **Rules of the lab.** The same rules as in every research lab.
 
-- Plan what you will do. Read the protocol the day before, check that reagents are
-  there, design the controls before you pipette anything.
-- Do what you planned, and record what you did, the same day, including every
-  deviation.
-- Label every tube, plate and solution with content, date and group.
-- Keep enzymes, antibodies and cells at the recommended temperature. Reagents are
+- Work is planned: the protocol is read the day before, reagents are checked, and the
+  controls are designed before anything is pipetted.
+- What was planned is done, and what was done is recorded the same day, including
+  every deviation.
+- Every tube, plate and solution is labelled with content, date and group.
+- Enzymes, antibodies and cells are kept at the recommended temperature. Reagents are
   expensive, some are irreplaceable within the course.
-- If you have a question, ask your supervisor. If you have a problem, ask earlier.
+- Questions go to your supervisor. Problems go there earlier.
 
 **Attendance.** I have to check with the department whether you need to show up or not, 
 would be nice though we invest a lot of energy in this course.
@@ -150,9 +150,9 @@ harvests it.
 
 ## 5. Core experiments
 
-Four experiments, four questions, one argument: reproduce the M1/M2 paradigm in a
-dish, ask whether it holds in living tissue, then ask what it is still good for.
-Every method has a [protocol](protocols/README.md) on one template; this section
+Four experiments, four questions, one argument: the M1/M2 paradigm is reproduced in
+a dish, it is asked whether it holds in living tissue, and then what it is still good
+for. Every method has a [protocol](protocols/README.md) on one template; this section
 says why, the protocols say how.
 
 **Experiment 1: can we culture macrophages in vitro?** (week 2) Primary macrophages
@@ -164,34 +164,37 @@ does not make it is in the
 [background](background/macrophage_biology.md#52-level-i-ontogeny). The question is
 answered with the simplest readouts there are: the microscope, for morphology and
 confluence, and a growth curve from daily counts or an MTT assay
-`[TODO: MTT protocol]`, which gives a doubling time to compare with the published
-value. A culture that doubles at the expected rate, looks right and survives your
-own freeze and thaw is fit for Experiment 2. Protocols
+`[TODO: MTT protocol]`, from which a doubling time is derived and compared with the
+published value. A culture that doubles at the expected rate, looks right and
+survives its own freeze and thaw is fit for Experiment 2. By the end of week 2 you
+will have taken this line from vial to vial yourselves. Protocols
 [P01](protocols/P01_raw264_thaw_expand.md), [P02](protocols/P02_raw264_split_seed.md),
 [P03](protocols/P03_raw264_freeze.md).
 
 **Experiment 2: can we polarize them?** (week 3) The textbook states were defined by
-what you add: IFNγ, IL-4, or IFNγ with LPS, named M(IFNγ), M(IL-4) and M(IFNγ+LPS)
+what is added: IFNγ, IL-4, or IFNγ with LPS, named M(IFNγ), M(IL-4) and M(IFNγ+LPS)
 after the stimulus since the 2014 nomenclature
 ([background](background/macrophage_biology.md#54-level-iii-function-and-the-rise-and-fall-of-m1m2)).
-You add exactly that to wells of the same culture, with M(-) as the unstimulated
-reference, and ask whether the states separate on the three readouts the field used
-to define them: cytokines in the supernatant (IL-6 and TNF by ELISA), nitric oxide
-(Griess assay) and surface markers (flow cytometry). If they separate, you have
-built the paradigm with your own hands. If they do not, that is a result too, and the
-first thing to analyse is which readout failed. Protocols
+Exactly that is added to wells of the same culture, with M(-) as the unstimulated
+reference, and the question is whether the states separate on the three readouts the
+field used to define them: cytokines in the supernatant (IL-6 and TNF by ELISA),
+nitric oxide (Griess assay) and surface markers (flow cytometry). If they separate,
+the paradigm has been built with your own hands. If they do not, that is a result
+too, and the first thing analysed is which readout failed. Protocols
 [P04](protocols/P04_polarization.md), [P06](protocols/P06_elisa.md),
 [P07](protocols/P07_griess.md), [P08](protocols/P08_flow_cytometry.md).
 
 **Experiment 3: does the profile hold true in vivo?** (dry lab, weeks 2 and 3) A
-dish has two states because you created two; a tissue did not read the textbook.
+dish has two states because two were created; a tissue did not read the textbook.
 From a public bulk RNA-seq dataset of RAW 264.7 cells under the same stimuli
-(GSE113836) you derive the M(IFNγ+LPS) and M(IL-4) gene signatures, then score every
-macrophage of two single-cell datasets from living systems against them: injured
-mouse peritoneum (GSE186658) and homeostatic human peritoneal fluid (GSE228030). The
-question is descriptive: do tissue macrophages fall into the two states, onto a line
-between them, or somewhere the two axes do not reach? The teaching staff preprocess
-both datasets; nobody starts from raw reads. Background sections on
+(GSE113836) the M(IFNγ+LPS) and M(IL-4) gene signatures are derived, then every
+macrophage of two single-cell datasets from living systems is scored against them:
+injured mouse peritoneum (GSE186658) and homeostatic human peritoneal fluid
+(GSE228030). The question is descriptive: do tissue macrophages fall into the two
+states, onto a line between them, or somewhere the two axes do not reach? Both
+datasets are preprocessed by the teaching staff; nobody starts from raw reads. What
+the picture means is something we will work out together at the debriefs. Background
+sections on
 [why a dish is not a body](background/macrophage_biology.md#58-why-a-dish-is-not-a-body)
 and [the dataset](background/macrophage_biology.md#59-the-in-silico-dataset-and-how-single-cell-rna-sequencing-works);
 [analysis code](code/README.md).
@@ -199,32 +202,34 @@ and [the dataset](background/macrophage_biology.md#59-the-in-silico-dataset-and-
 **Experiment 4: is the heuristic still useful?** (week 3, on the cells of
 Experiment 2) A model that fails the test of Experiment 3 may still predict
 something. The prediction built into M1/M2 is that the state a macrophage is in
-decides how it responds to the next danger signal. You test exactly that: challenge
-M(-), M(IFNγ) and M(IL-4) through a pattern-recognition receptor, with LPS and with
-the PRR axis your group chose
+decides how it responds to the next danger signal. Exactly that is tested: M(-),
+M(IFNγ) and M(IL-4) are challenged through a pattern-recognition receptor, with LPS
+and with the PRR axis your group chose
 ([background](background/macrophage_biology.md#56-sensing-danger-pattern-recognition-receptors)),
-one overnight arm, and measure the response with the readouts of Experiment 2.
+one overnight arm, and the response is measured with the readouts of Experiment 2.
 M(IFNγ+LPS) is characterised but not re-challenged, because a cell that has already
 seen LPS shows endotoxin tolerance, itself a hint that the states are not fixed.
-Whatever you find, keep one fact in mind: after twenty years of the paradigm there is
-no approved therapy that targets macrophage polarization. A heuristic can be useful
-at the bench and still have limits in the body; your data decide where. Protocols
+Whatever is found, one fact is worth keeping in mind: after twenty years of the
+paradigm there is no approved therapy that targets macrophage polarization. A
+heuristic can be useful at the bench and still have limits in the body. Where those
+limits are is something we will think about together, with your data on the table.
+Protocols
 [P05](protocols/P05_prr_challenge.md), [P06](protocols/P06_elisa.md),
 [P07](protocols/P07_griess.md).
 
-**Dry lab, every day.** Half of every day is at the keyboard, with the
+**Dry lab, every day.** Half of every day is spent at the keyboard, with the
 [analysis code](code/README.md): week 1 the environment, week 2 the templates on
 example data and your growth curve, week 3 Experiment 3 and your own flow and ELISA
-data, week 4 the poster figures. Gaps are filled with the poster: write the
-introduction first, then the significance.
+data, week 4 the poster figures. Gaps are filled with the poster: the introduction is
+written first, then the significance.
 
 ## 6. Optional experiments
 
 Everything in this section is optional and there to up your nerd factor. The core
-programme is the story of the poster; what you add is your group's choice, made with
+programme is the story of the poster; what is added is your group's choice, made with
 your supervisors on the first afternoon and revised at the debriefs. Availability of
 surplus primary material, reagents and instruments decides what can run. Attempting
-everything does not mean showing everything: whatever you show needs a figure or
+everything does not mean showing everything: whatever is shown needs a figure or
 table, a legend stating n, a one-sentence claim and the method or a repository commit
 hash. How extensions are recognised beyond the poster is still being decided
 `[TODO: recognition of extensions]`.
@@ -280,11 +285,11 @@ items (PFA, DAB, primary tissue).]`
 ## Your companion
 
 Everything in this repository is also available as one file for a language model:
-download [`companion/blockcourse-companion.md`](companion/blockcourse-companion.md),
-paste [`COMPANION_PROMPT.md`](COMPANION_PROMPT.md) as the first message of a new
-session, attach the file, and you have a private Blockrophage companion that knows
-the schedule, the protocols and the background. It will still be wrong sometimes;
-the repository, not the model, is the reference.
+[`companion/blockcourse-companion.md`](companion/blockcourse-companion.md) is
+downloaded, [`COMPANION_PROMPT.md`](COMPANION_PROMPT.md) is pasted as the first
+message of a new session, the file is attached, and the result is a private
+Blockrophage companion that knows the schedule, the protocols and the background. It
+will still be wrong sometimes; the repository, not the model, is the reference.
 
 ## Appendix: open items before submission
 
