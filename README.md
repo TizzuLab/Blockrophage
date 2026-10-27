@@ -12,7 +12,7 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 
 | | |
 |---|---|
-| Course title | Macrophage Biology: in vitro, in vivo, in silico `[TODO: confirm final title]` |
+| Course title | Blockrophage course: the block course about macrophage polarization and their response to danger molecules |
 | Course number / ECTS | 6 ECTS |
 | Dates | Thu 18 March to Fri 16 April 2027, 16 working days; no course Fri 26 March to Sun 4 April (Easter break) |
 | Lecturer | Prof. Dr. med. Joel Zindel |
