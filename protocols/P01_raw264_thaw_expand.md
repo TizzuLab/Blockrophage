@@ -60,6 +60,9 @@ Thaw day (Monday)
    the count (step 6) and transfer the rest to a T25 flask.
 6. Count with trypan blue. Record total cells, live cells and viability. This is the
    first point of the growth curve (t = 0).
+   If viability is above 80%, about 7 × 10^5 live cells of this suspension seed the
+   P09 plate (standard curve and MTT growth curve); below that, the P09 plate is
+   seeded from the staff stock flask.
 7. Incubate at 37 °C, 5% CO2. Distribute the cells by gently rocking the flask once
    before closing the incubator; do not swirl.
 
@@ -87,6 +90,8 @@ Every day after that (Tuesday to Thursday)
 - Medium-only flask or well, incubated alongside: detects contaminated medium.
 - Published doubling time of RAW 264.7: the lab SOP works with 15–24 h; ATCC gives
   a similar range. Your curve should be in that range or you have a reason to find.
+- The P09 MTT growth curve from the same suspension: a second doubling time by an
+  independent readout.
 
 ## Checkpoints
 
