@@ -70,9 +70,10 @@ paradigm: reproduce it, test it, then ask what it is still good for.
 | 3. Challenge: is the heuristic still useful? | A model that is not 100 % true can still be useful. Challenge the polarized states through pattern-recognition receptors, with LPS and with the PRR axis your group chose, and measure how each state responds | Whether the classical states predict behaviour under a danger signal, which is what a heuristic has to do to earn its keep |
 
 Arms 1 and 3 run on the same cells in the same week (Exp 2, Section 5). The
-extensions (Section 6) take the question into tissue: peritoneal lavage and flow
-cytometry on the same antibody panel as your in vitro cells, and F4/80
-immunohistochemistry of an organ of your choice.
+extensions (Section 6) take the question into tissue, with surplus primary material
+from ongoing work in the lab: flow cytometry of primary peritoneal cells on the same
+antibody panel as your in vitro cells, and F4/80 immunohistochemistry on tissue
+sections.
 
 ## 2. Learning objectives
 
@@ -445,9 +446,9 @@ nobody starts from raw reads. Gaps at any point are filled with the poster: writ
 the introduction first, then the significance.
 
 **Extensions.** qPCR of outputs and receptors ([X01](protocols/X01_qpcr.md)),
-peritoneal lavage and flow cytometry on the shared panel
-([X02](protocols/X02_peritoneal_lavage.md)), organ harvest and F4/80
-immunohistochemistry ([X03](protocols/X03_organ_harvest_ihc.md)), and the optional
+flow cytometry of primary peritoneal cells on the shared panel
+([X02](protocols/X02_peritoneal_cells_flow.md)), F4/80 immunohistochemistry on
+tissue sections ([X03](protocols/X03_tissue_sections_ihc.md)), and the optional
 experiments of Section 6. Availability of surplus primary material, reagents and instruments decides
 which ones run; ask your supervisor on the first afternoon.
 
@@ -468,11 +469,11 @@ is still being decided `[TODO: recognition of extensions]`.
 | Integration with an in vitro single-cell dataset | Integrated embedding with the accession named; percentage of in vivo macrophages mapping to any in vitro state |
 | Unpredicted figure, dataset or code | A figure or table not in the answer key, with claim, n and method |
 | qPCR (X01) | ΔΔCt of outputs and the receptor of your axis across states, with housekeepers named |
-| Lavage flow on the shared panel (X02) | Lavage cells and polarized RAW cells in one gating figure; frequency of LPM and SPM with n samples |
-| F4/80 immunohistochemistry (X03) | Image with scale bar, controls named, organ and expected F4/80 level stated |
-| Ex vivo LPS on lavage cells versus RAW | IL-6 bar plot with unstimulated controls for both cell types; n wells and samples |
+| Primary peritoneal cells on the shared panel (X02) | Primary cells and polarized RAW cells in one gating figure; frequency of LPM and SPM with n samples |
+| F4/80 immunohistochemistry (X03) | Image with scale bar, controls named, tissue and expected F4/80 level stated |
+| Ex vivo LPS on primary peritoneal cells versus RAW | IL-6 bar plot with unstimulated controls for both cell types; n wells and samples |
 | Endotoxin tolerance | IL-6 or TNF after re-challenge, M(IFNγ+LPS) versus M(IFNγ), with statistics |
-| Organ digestion flow | Gating figure and frequency of F4/80+ cells in the organ, with n |
+| Tissue digestion flow | Gating figure and frequency of F4/80+ cells in the tissue, with n |
 | BMDM versus RAW | One figure comparing the two in at least two polarization states |
 | Phagocytosis or efferocytosis | Percentage of uptake-positive cells per state, with n |
 | Double immunofluorescence | Two-channel image with scale bar; markers named |
