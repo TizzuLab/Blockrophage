@@ -150,11 +150,6 @@ harvests it.
 
 ## 5. Core experiments
 
-Four experiments, four questions, one argument: the M1/M2 paradigm is reproduced in
-a dish, it is asked whether it holds in living tissue, and then what it is still good
-for. Every method has a [protocol](protocols/README.md) on one template; this section
-says why, the protocols say how.
-
 **Experiment 1: can we culture macrophages in vitro?** (week 2) Primary macrophages
 do not divide in a dish and die within days, so the field works with a model.
 RAW 264.7 is a line established in 1978 from a tumour induced in a BALB/c mouse by
