@@ -1,6 +1,6 @@
 # Blockrophage course: companion file
 
-Built 2026-10-26 from commit 44ba96e of the course repository. This single file
+Built 2026-10-27 from commit 612b372 of the course repository. This single file
 contains the complete course material for the ETH Zürich block course
 "Macrophage Biology: in vitro, in vivo, in silico" (Spring Semester 2027).
 Repository: https://github.com/TizzuLab/blockrophage-course. It is meant to be given to a language model
@@ -50,6 +50,10 @@ an answer can cite the file. Values marked [TODO] are unconfirmed.
   - `slides/05_TissueRepair_Part4_Remodelling.pdf`
 - Code overview
   - `code/README.md`
+- Code: R scripts
+  - `code/elisa/elisa_standard_curve.R`
+- Code: folder notes
+  - `code/elisa/README.md`
 
 # Index (llms.txt)
 
@@ -123,7 +127,7 @@ an answer can cite the file. Values marked [TODO] are unconfirmed.
 
 ### Slides
 
-- [Slides index](slides/README.md): the five lecture decks (PDF) the course builds on.
+- [Slides index](slides/README.md): five lecture decks (PDF), optional further reading; the course has no prerequisites.
 
 ### Code
 
@@ -162,9 +166,33 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 | Teaching staff | One supervisor per group `[TODO: names]`; flow cytometry facility `[TODO: name]` |
 | Location | `[TODO: lab, seminar room, flow facility]` |
 | Students | `[TODO: number]`, in groups of 2–3; four groups planned, three possible |
-| Prerequisites | Immunology III (tissue macrophages lecture) or equivalent; no cell culture and no programming experience required |
+| Prerequisites | None. The course starts from scratch: no prior immunology, no cell culture and no programming experience required. See *What you need for this course* below |
 | Language | English |
-| Version | 0.3, 2026-10-26 |
+| Version | 0.4, 2026-10-27 |
+
+### What you need for this course
+
+No prior knowledge. The course starts from scratch. The [lectures](slides/) linked
+from the course website are optional further reading, not a requirement.
+
+1. **A GitHub account.** Free at [github.com](https://github.com). Create it before
+   the first day and send us your username. All course material, your group's work
+   and your own edits live in this repository.
+2. **Your ok to work in public.** This repository is public. Everything you write or
+   change in it, including your name on each change, is visible to anyone. By joining
+   the course you agree to this. If that is a problem for you, talk to us before the
+   course starts.
+3. **A laptop.** Bring your own; any operating system works. The analysis runs in
+   Python, and we install git, Python and the analysis environment together on the
+   first morning.
+4. **Optional: a coach.** Download the [companion package](#your-companion) and drop
+   it into the language model of your choice. It contains the whole course in one
+   file plus a prompt, and will walk you through protocols and analysis step by step.
+   Everything it says is derived from this repository, and the repository, not the
+   model, is the reference.
+
+Each group has a supervisor from the teaching staff who owns the group's branch of
+this repository and reviews what goes into it (Section 3).
 
 ### 1. Concept
 
@@ -174,7 +202,7 @@ take it to real tissue macrophages, in a published single-cell dataset of injure
 peritoneum, and test whether it survives. It will not survive intact. The field made
 the same discovery about ten years ago and rewrote its nomenclature; you make it in
 four weeks. The [background reading](background/macrophage_biology.md) tells that
-story and condenses the [lectures](slides/) the course builds on.
+story and condenses the optional [lectures](slides/).
 
 The course rests on three principles.
 
@@ -188,13 +216,19 @@ The course rests on three principles.
   model was wrong and how you caught it. Information is cheap; verified information
   is not.
 
-One question, two core arms, and a third arm for those who want it:
+One question, three arms. Each arm is one move in an argument about the M1/M2
+paradigm: reproduce it, test it, then ask what it is still good for.
 
 | Arm | What you do | What it answers |
 |---|---|---|
-| In vitro (core) | Establish a RAW 264.7 culture, polarize it with defined stimuli, challenge it through pattern-recognition receptors, quantify cytokines, nitric oxide and surface phenotype | What the in vitro states look like, and how polarization changes the response to danger signals |
-| In silico (core) | Derive the M(IFNγ+LPS) and M(IL-4) signatures from a public RAW 264.7 dataset and score every macrophage of a published single-cell dataset of injured peritoneum (GSE186658) against them | How much of a tissue macrophage population the in vitro states explain |
-| In vivo (extension) | Peritoneal lavage and flow cytometry on the same antibody panel as your in vitro cells; F4/80 immunohistochemistry of an organ of your choice | Whether resident tissue macrophages resemble either in vitro state, and where macrophages live |
+| 1. In vitro: reproduce the paradigm | Establish a RAW 264.7 culture and polarize it with the defined stimuli behind the textbook states, M(IFNγ), M(IL-4) and M(IFNγ+LPS). Quantify cytokines, nitric oxide and surface phenotype | Does the M1/M2 picture reproduce in a dish, with your hands, and how clean is it? |
+| 2. In silico: does the paradigm hold in living systems? | Derive the M(IFNγ+LPS) and M(IL-4) signatures from a public RAW 264.7 dataset and score every macrophage of single-cell transcriptomes from living model systems against them: a published dataset of injured mouse peritoneum (GSE186658) and a human dataset `[TODO: human dataset]` | How much of a real tissue macrophage population the in vitro states explain, and where the paradigm breaks |
+| 3. Challenge: is the heuristic still useful? | A model that is not 100 % true can still be useful. Challenge the polarized states through pattern-recognition receptors, with LPS and with the PRR axis your group chose, and measure how each state responds | Whether the classical states predict behaviour under a danger signal, which is what a heuristic has to do to earn its keep |
+
+Arms 1 and 3 run on the same cells in the same week (Exp 2, Section 5). The
+extensions (Section 6) take the question into tissue: peritoneal lavage and flow
+cytometry on the same antibody panel as your in vitro cells, and F4/80
+immunohistochemistry of an organ of your choice.
 
 ### 2. Learning objectives
 
@@ -243,9 +277,18 @@ protocol when, which PRR axis, which extensions. The plan is submitted on Friday
 week 1 and revised at the two debriefs. A plan that changes is normal; a plan that
 nobody wrote down is not.
 
-**Lab notebook.** One shared electronic notebook per group `[TODO: tool]`. It
-contains the plan, raw data, the analysis, and the LLM error log. The notebook is
-part of the grade.
+**Git and group branches.** This repository is the course, and each group works in
+its own branch of it, named by year and group (for example `2027/group-a`). Your
+supervisor owns that branch: you push your changes to a branch of your own and open a
+pull request into the group branch, your supervisor reviews and merges. At the end of
+the course every group branch is a pull request into `main`; what was better than
+the original goes into next year's course, with your name on the commit. Nobody
+needs git experience on day one; the first morning covers accounts, cloning and the
+first pull request, and the companion knows the commands.
+
+**Lab notebook.** One shared electronic notebook per group `[TODO: tool, or the
+group branch itself]`. It contains the plan, raw data, the analysis, and the LLM error
+log. The notebook is part of the grade.
 
 **LLM error log.** Every time a language model gave you something wrong, record what
 it said, how you noticed, and what the correct answer was. Short entries are fine.
@@ -332,7 +375,7 @@ go on the poster, and either can be your failure-round story.
 **Exp 2, week 3: polarize and challenge.** Seed plates from the staff culture and
 polarize into M(-), M(IFNγ), M(IL-4) and M(IFNγ+LPS) for 24 h
 ([P04](protocols/P04_polarization.md)). Wash and challenge M(-), M(IFNγ) and
-M(IL-4) with LPS and with the PRR axis your group chose, one 24 h arm
+M(IL-4) with LPS and with the PRR axis your group chose, one overnight (16 h) arm
 ([P05](protocols/P05_prr_challenge.md)); M(IFNγ+LPS) is characterised but not
 re-challenged, because a state that has already seen LPS shows endotoxin tolerance.
 Stain the unchallenged wells with the course antibody panel and acquire them in the
@@ -434,7 +477,12 @@ That is what the error log is for.
 
 ### Appendix: open items before submission
 
-- Final title, course number, ECTS, student number, rooms, supervisor names.
+- Final title (the three arms are now in vitro, in silico, challenge; the working
+  title still says in vivo), course number, ECTS, student number, rooms, supervisor
+  names.
+- Human single-cell dataset for arm 2, and whether it is core or extension.
+- GitHub organisation setup: student accounts, group branches, branch rulesets with
+  the supervisor as required reviewer; a short git training for the supervisors.
 - Flow facility: cytometer slots, facility lecture slot, FlowJo seats and where they run.
 - Hoods available per half day.
 - qPCR: extension (current plan) or core.
@@ -730,8 +778,11 @@ Notes: A full repeat of Exp 2 does not fit in week 4. Rescue path for a failed E
 
 One file per protocol, all on the same template (00_TEMPLATE.md): header table,
 purpose, materials, before you start, procedure, controls, checkpoints, known failure
-modes, output. Values the lab has not yet confirmed are marked `[TODO]`. Where the
-lab has a validated SOP, the SOP wins and the protocol links to it.
+modes, output. Values the lab has not yet confirmed are marked `[TODO]`; things
+the lab has a protocol for but has not run in the course format carry a
+`> **To verify:**` callout. Where the lab has a validated SOP, the SOP wins and the
+protocol names it (lab SOP number, version and date; the SOPs themselves are
+internal documents). Figures live in `figures/`.
 
 P-files are the core programme, X-files are extensions from the nerd ladder.
 
@@ -740,24 +791,41 @@ P-files are the core programme, X-files are extensions from the nerd ladder.
 | P01 | RAW 264.7: thaw, expand, growth curve | Exp 1 | 45 min day 1, 20 min/day after | 4 days | hood, incubator, centrifuge, counter, microscope |
 | P02 | RAW 264.7: scrape, count, split, seed | Exp 1, Exp 2 | 45 min | 24 h before stimulation | hood, incubator, centrifuge, counter |
 | P03 | RAW 264.7: freeze and re-thaw own stock | Exp 1 | 45 min + 45 min | overnight at −80 °C, nitrogen over the break | hood, centrifuge, freezing container, −80 °C, liquid nitrogen |
-| P04 | Polarization | Exp 2 | 30 min + 30 min wash | 24 h | hood, incubator |
-| P05 | PRR challenge | Exp 2 | 45 min + 45 min harvest | 24 h | hood, incubator, centrifuge, −20 °C |
-| P06 | ELISA IL-6 and TNF | Exp 2 | 3–4 h | 1 day | plate reader, multichannel pipette |
+| P04 | Polarization | Exp 2 | 45 min + 30 min wash | 24 h | hood, incubator, vortex |
+| P05 | PRR challenge | Exp 2 | 45 min + 45 min harvest | 16 h (overnight) | hood, incubator, plate centrifuge, −20 °C |
+| P06 | ELISA IL-6 and TNF | Exp 2 | 3–4 h + coating the day before | 2 days | plate reader (450 nm), multichannel pipette |
 | P07 | Griess assay | Exp 2 | 1 h | 1 h | plate reader |
-| P08 | Flow cytometry of polarized RAW cells | Exp 2 (core), X02 | 2 h stain + 1 h acquisition | half day | hood, centrifuge, cytometer slot, FlowJo seat |
-| X01 | RNA isolation and qPCR | Extension | 1 h + 1.5 days | 6 h arm, then 2 days | hood, −80 °C, RNA bench, qPCR instrument |
-| X02 | Peritoneal lavage | Extension | 1 h per mouse + staining | half day, with cytometer slot | animal facility, dissection bench, centrifuge, cytometer slot |
-| X03 | Organ harvest and F4/80 IHC | Extension | 1 h + 2 h + 2 × 3 h | about 5 days | dissection bench, cryostat, histology bench, slide scanner |
+| P08 | Flow cytometry of polarized RAW cells | Exp 2 (core), X02 | 2 h stain + 1 h acquisition | half day | hood, cooled plate centrifuge, heating block, cytometer slot, FlowJo seat |
+| X01 | RNA isolation and qPCR | Extension | 1 h + 1.5 days | 6 h arm, then 2 days | hood, −80 °C, RNA bench, NanoDrop, thermal cycler, LightCycler 480 II |
+| X02 | Peritoneal lavage | Extension | 20 min per mouse + staining | half day, with cytometer slot | animal facility, dissection bench, cooled centrifuge, cytometer slot |
+| X03 | Organ harvest and F4/80 IHC | Extension | 30 min + 1 h + 2 × 3 h | about 5 days | dissection bench, histology facility (paraffin), pressure cooker, histology bench, slide scanner |
 
 ### Dependencies in time
 
 - P02 plates are seeded 24 h before P04.
-- P04 runs 24 h, then wash, then P05 runs 24 h; P08 uses the unchallenged wells of
-  P04 on the day of the P05 challenge.
+- P04 runs 24 h, then wash, then P05 runs 16 h overnight; P08 uses the
+  unchallenged wells of P04 on the day of the P05 challenge.
 - P06 and P07 run on the P05 supernatants, the same day or later from frozen aliquots.
 - P03 vials are re-thawed on the Monday after the break; Exp 2 plates come from the
   staff stock.
 - X02 and X03 share a mouse and must land on a cytometer slot.
+
+### Plate formats
+
+One seeding density, scaled by growth area (P02): 96-well plates (2 × 10^4 cells,
+200 µL) for everything that ends in a supernatant assay, 6-well plates for flow
+cytometry, 24-well plates for the RNA extension.
+
+### Buffers (lab recipes)
+
+| Buffer | Recipe | Notes |
+|---|---|---|
+| Complete medium (50 mL) | 44.5 mL DMEM high glucose GlutaMAX (Gibco 31966021), 5 mL heat-inactivated FCS (Gibco A5256801), 0.5 mL penicillin-streptomycin (Gibco 15140122) | warm to 37 °C |
+| FACS buffer (500 mL) | 478 mL 1× PBS, 15 mL FCS, 2 mL 0.5 M EDTA, 5 mL 1 M HEPES | 3% FCS, 2 mM EDTA, 10 mM HEPES; the lab calls it MACS buffer |
+| PBS 10× (1 L) | 80 g NaCl, 2 g KCl, 11.5 g Na2HPO4, 2 g KH2PO4, water to 800 mL, pH 7.2–7.4 with HCl, to 1 L | autoclave, 4 °C |
+| EDTA 0.5 M (1 L) | 146.13 g EDTA in 800 mL water, pH 8 with NaOH, to 1 L | autoclave, 4 °C, 1 year |
+| HEPES 1 M (1 L) | 238.3 g HEPES in 800 mL water, pH 8 with NaOH, to 1 L | autoclave, 4 °C, dark |
+| ACK lysis buffer (1 L) | 8.29 g NH4Cl (155 mM), 1 g KHCO3 (10 mM), 200 µL 0.5 M EDTA (0.1 mM), water to 800 mL, pH 7.4, to 1 L | autoclave, room temperature |
 
 ---
 
@@ -775,9 +843,9 @@ P-files are the core programme, X-files are extensions from the nerd ladder.
 | Used in | Exp 1 |
 | Hands-on time | 45 min on the thaw day, 20 min per day after that |
 | Wall-clock time | 4 days (Mon to Thu) |
-| Resources | hood, incubator shelf (37 °C, 5% CO2), centrifuge, counting chamber or automated counter, microscope |
+| Resources | hood, incubator shelf (37 °C, 5% CO2), centrifuge, Neubauer chamber or Countess III, microscope |
 | Depends on | nothing; first bench step of the course |
-| Lab SOP | [TODO: link to the validated lab SOP; the SOP wins over this page] |
+| Lab SOP | Zindel lab 0203 "RAW 264.7 – adherent cells" (v1.0, 2025-12-01). The SOP wins over this page. |
 
 ### Purpose
 
@@ -788,65 +856,72 @@ compared with the published value. The same flask supplies the cells for P02 and
 
 ### Materials
 
-- RAW 264.7 cryovial, one per group, passage `[TODO: passage number and mycoplasma
-  test date]`
-- Complete medium: DMEM, 10% FBS, 1% penicillin/streptomycin `[TODO: lab standard]`,
-  warmed to 37 °C
-- Sterile PBS
-- T75 flask `[TODO: lab standard; T25 if cell numbers are low]`
-- 15 mL tubes, serological pipettes, cell scraper
-- Trypan blue and counting chamber, or the automated counter `[TODO: instrument]`
+- RAW 264.7 cryovial, one per group, from the staff stock `[TODO: passage number and
+  mycoplasma test date]`
+- Complete medium, 50 mL: 44.5 mL DMEM high glucose with GlutaMAX (Gibco 31966021),
+  5 mL heat-inactivated FCS (Gibco A5256801), 0.5 mL penicillin-streptomycin
+  (Gibco 15140122). Final 10% FCS, 1% P/S. Warm to 37 °C before use.
+- DPBS without calcium and magnesium (Gibco 14190144)
+- T25 flask for the thaw, T75 for expansion
+- 15 mL tubes, serological pipettes (5, 10, 25 mL), 1 mL pipette, cell scraper
+- Trypan blue (Sigma T8154) and a Neubauer chamber, or the Countess III with
+  counting slides (Thermo C10228)
+- Water bath at 37 °C, 70% ethanol
 
 ### Before you start
 
 - Read P02 and P03 as well; the three protocols are one experiment.
-- Medium warmed, hood wiped, waste container ready, flask labelled with cell line,
-  passage, date and group.
-- Water bath at 37 °C.
+- Everything from here on is sterile work in the laminar flow hood.
+- Medium and DPBS warmed, hood wiped, waste container ready. Flask labelled with
+  cell line, passage, date and group; copy every piece of information from the vial
+  label onto the flask.
 - Notebook page prepared with a table: date, time, count, viability, volume, passage.
 
 ### Procedure
 
 Thaw day (Monday)
 
-1. Take the vial from liquid nitrogen in a closed transport container. Thaw in the
-   37 °C water bath until a small ice core remains, about 1–2 min. Do not let the
-   cells sit warm in DMSO.
-2. Wipe the vial with 70% ethanol and transfer the contents dropwise into 10 mL warm
-   complete medium in a 15 mL tube.
-3. Centrifuge 300 × g, 5 min, room temperature `[TODO: lab standard]`. Aspirate the
-   supernatant to remove DMSO.
-4. Resuspend the pellet in 1 mL complete medium by gentle pipetting, take 10 µL for
-   the count (step 5), then add the rest to `[TODO: 12–15 mL]` complete medium in
-   the T75 flask.
-5. Count with trypan blue. Record total cells, live cells and viability. This is the
+1. Prepare a 15 mL tube with 10 mL warm complete medium.
+2. Take the vial from the staff tank in a closed transport container. Spray it with
+   70% ethanol before it goes into the hood.
+3. Thaw by dilution, not in the water bath: add 1 mL warm complete medium to the
+   frozen vial with a 1 mL pipette, take the medium that has thawed off the ice back
+   into the 15 mL tube, and repeat until the vial is empty. Work fast; viability
+   drops with every minute the cells sit in DMSO.
+4. Centrifuge 300 × g, 5 min, room temperature, to remove the DMSO. Aspirate the
+   supernatant.
+5. Resuspend the pellet in 5 mL warm complete medium. If the cells are sticky, break
+   clumps with a 1 mL pipette until you have a single-cell suspension. Take 10 µL for
+   the count (step 6) and transfer the rest to a T25 flask.
+6. Count with trypan blue. Record total cells, live cells and viability. This is the
    first point of the growth curve (t = 0).
-6. Incubate at 37 °C, 5% CO2. Distribute the cells by gently rocking the flask once
+7. Incubate at 37 °C, 5% CO2. Distribute the cells by gently rocking the flask once
    before closing the incubator; do not swirl.
 
 Every day after that (Tuesday to Thursday)
 
-7. Inspect under the microscope before anything else: morphology (round to
+8. Inspect under the microscope before anything else: morphology (round to
    spindle-shaped, adherent), density, debris, signs of contamination (turbidity,
    colour change, particles moving between cells). Photograph one field at 10× for
    the notebook.
-8. Take a count. Scrape a defined area or the whole flask according to P02, or use
-   the lab's counting shortcut `[TODO: lab standard; a full scrape-and-count once a
-   day is acceptable at this scale]`. Record the count and viability at the same time
-   of day every day.
-9. Change the medium on Tuesday, or on any day the medium turns yellow: aspirate,
-   add fresh warm complete medium gently along the side of the flask. RAW cells
-   adhere loosely; do not pipette onto the cell layer.
-10. Split when the flask reaches about 80% confluence, usually Wednesday: follow P02.
-11. Thursday: final count, then freeze according to P03 and seed nothing that would
+9. Take a count. Scrape the whole flask according to P02 and count the suspension,
+   then re-seed it; at this scale a full scrape-and-count once a day is acceptable
+   `[TODO: confirm with the lab that daily scraping is the course standard, or
+   define a counting shortcut]`. Record the count and viability at the same time of
+   day every day.
+10. Change the medium on Tuesday, or on any day the medium turns yellow: aspirate,
+    add fresh warm complete medium gently along the side of the flask. RAW cells
+    adhere loosely; do not pipette onto the cell layer.
+11. Split when the flask reaches about 80% confluence, usually Wednesday: follow
+    P02. Move from the T25 to a T75 at the first split.
+12. Thursday: final count, then freeze according to P03 and seed nothing that would
     survive the break. No cultures are kept over the Easter break.
 
 ### Controls
 
 - Medium-only flask or well, incubated alongside: detects contaminated medium.
-- Published doubling time of RAW 264.7, about 11–20 h depending on source
-  `[TODO: pick the reference value the lab uses]`: your curve should be in that
-  range or you have a reason to find.
+- Published doubling time of RAW 264.7: the lab SOP works with 15–24 h; ATCC gives
+  a similar range. Your curve should be in that range or you have a reason to find.
 
 ### Checkpoints
 
@@ -860,8 +935,9 @@ Every day after that (Tuesday to Thursday)
 ### Known failure modes
 
 - Low viability after thaw: DMSO exposure too long or vial thawed too slowly. Thaw
-  faster, dilute immediately.
-- Cells not attaching: FBS lot or cold medium. Check the medium temperature.
+  by dilution as in step 3, work faster.
+- Cells not attaching: cold medium or an FCS lot problem. Check the medium
+  temperature first.
 - Yellow medium within 24 h: too many cells or contamination. Look under the
   microscope before deciding.
 - Doubling time far outside the published range: counting error is the first
@@ -889,7 +965,7 @@ the doubling time with the formula used. Note every deviation from this page.
 | Wall-clock time | 24 h before stimulation |
 | Resources | hood, incubator shelf, centrifuge, counter, microscope |
 | Depends on | P01 flask at 60–80% confluence, or staff stock culture |
-| Lab SOP | [TODO: link to the validated lab SOP; the SOP wins over this page] |
+| Lab SOP | Zindel lab 0203 "RAW 264.7 – adherent cells" (v1.0, 2025-12-01), splitting section, and the lab's RAW 264.7 polarisation protocol (v1.0, 2025-12-08), seeding section. The SOP wins over this page. |
 
 ### Purpose
 
@@ -899,12 +975,13 @@ The same steps serve both.
 
 ### Materials
 
-- Complete medium, warm (as in P01)
-- Sterile PBS
+- Complete medium, warm (recipe in P01)
+- DPBS (Gibco 14190144), warm
 - Cell scraper, one per flask
-- Plates: 12-well for supernatant assays, 6-well for flow cytometry `[TODO: or the
-  lab's standard formats]`; T75 for continued expansion
-- Counter and trypan blue
+- Plates: 96-well flat-bottom for the supernatant assays (ELISA, Griess), 6-well
+  for flow cytometry, 24-well for the RNA extension; T25 or T75 for continued
+  expansion
+- Counter and trypan blue (as in P01)
 
 ### Before you start
 
@@ -915,23 +992,35 @@ The same steps serve both.
 
 ### Procedure
 
-1. Inspect the flask. Record confluence and morphology.
-2. Aspirate the medium. Rinse once gently with 5 mL PBS and aspirate.
-3. Add 5 mL fresh complete medium and scrape the whole surface with steady strokes.
-   RAW 264.7 are passaged by scraping, not trypsin.
-4. Pipette the suspension up and down 3–5 times to break clumps. Transfer to a
-   15 mL tube.
+1. Inspect the flask. Record confluence and morphology. The lab splits at about
+   80% confluence.
+2. Aspirate the medium. Wash once gently with 5 mL warm DPBS and aspirate.
+3. Add 3 mL (T25) or 10 mL (T75) fresh complete medium and scrape the whole
+   surface with steady strokes, including the edges. RAW 264.7 are passaged by
+   scraping, not trypsin.
+4. With a serological pipette, wash the walls of the flask with the medium so that
+   every cell is in suspension, then pipette up and down 3–5 times to break clumps.
+   Transfer to a 15 mL tube.
 5. Count with trypan blue. Record total, live, viability.
-6. Split: seed `[TODO: 1:5 to 1:10, lab standard]` of the suspension into a fresh
-   T75 with `[TODO: 12–15 mL]` complete medium. Keep the passage number below
-   `[TODO]`; record the new passage in the notebook.
-7. Seed for an experiment: dilute to the working density and plate
+6. Split: seed 1:3 to 1:5 of the suspension into a fresh flask (3 mL final in a
+   T25, 10 mL in a T75), the ratio chosen by the growth speed you measured in P01
+   (doubling time 15–24 h). Record the new passage number in the notebook
+   `[TODO: maximum passage the lab accepts for experiments]`.
+7. Seed for an experiment: centrifuge the needed cells (300 × g, 5 min), resuspend
+   in fresh medium at the working density and plate
 
    | Format | Cells per well | Volume per well | Use |
    |---|---|---|---|
-   | 12-well | `[TODO: cells/well]` | 1 mL | supernatant for ELISA and Griess |
-   | 6-well | `[TODO: cells/well]` | 2 mL | flow cytometry |
-   | 96-well | `[TODO: cells/well]` | 200 µL | optional, phagocytosis or viability extensions |
+   | 96-well | 2 × 10^4 | 200 µL | supernatant for ELISA and Griess (lab-validated) |
+   | 24-well | 1.2 × 10^5 | 500 µL | RNA arm, X01 |
+   | 6-well | 6 × 10^5 | 2 mL | flow cytometry, P08 |
+
+   The 96-well density is the lab's. The 24- and 6-well densities are scaled from it
+   by growth area (about 6 × 10^4 cells/cm²).
+
+   > **To verify:** the 24- and 6-well densities are derived, not tested. Check in
+   > the first run that a 6-well seeded this way yields at least 1 × 10^6 cells per
+   > well 48 h later for P08.
 
    Rock the plate gently in a cross pattern to spread the cells. Do not swirl;
    swirling piles cells in the centre.
@@ -946,15 +1035,17 @@ The same steps serve both.
 ### Checkpoints
 
 - After scraping: mostly single cells under the microscope, viability above 90%.
-- Next morning: an even monolayer at `[TODO: expected confluence at stimulation]`.
-  Uneven wells are noted in the plate map and excluded from triplicate statistics
-  if they are outliers.
+- Next morning: an even monolayer, about 40–60% confluent in the 96-well
+  `[TODO: confirm expected confluence at stimulation in the first run]`. Uneven
+  wells are noted in the plate map and excluded from triplicate statistics if they
+  are outliers.
 
 ### Known failure modes
 
 - Clumps: scraped too hard or pipetted too little. Pipette more gently, more times.
-- Edge effect in plates: evaporation in outer wells. Fill the outer wells with PBS if
-  the plate map allows it, or seed only inner wells.
+- Edge effect in plates: evaporation in outer wells. Fill the outer wells of a
+  96-well plate with 200 µL DPBS if the plate map allows it, or seed only inner
+  wells.
 - Density wrong next day: counting error or cells not spread. Check the photograph
   from the day before.
 
@@ -976,10 +1067,10 @@ map is the file every later analysis is joined to.
 | ID | P03 |
 | Used in | Exp 1 |
 | Hands-on time | 45 min to freeze; 45 min to re-thaw (as P01) |
-| Wall-clock time | overnight at −80 °C, then liquid nitrogen over the break; re-thaw on Monday of week 3 |
-| Resources | hood, centrifuge, freezing container (isopropanol box or controlled-rate), −80 °C freezer, liquid nitrogen tank slot |
+| Wall-clock time | overnight at −80 °C, then −140 °C over the break; re-thaw on Monday of week 3 |
+| Resources | hood, centrifuge, slow-cooling box (Mr. Frosty), −80 °C freezer, −140 °C freezer slot |
 | Depends on | P01 and P02 (a healthy flask on Thursday of week 2) |
-| Lab SOP | [TODO: link to the validated lab SOP; the SOP wins over this page] |
+| Lab SOP | Zindel lab 0203 "RAW 264.7 – adherent cells" (v1.0, 2025-12-01), freezing section. The SOP wins over this page. |
 
 ### Purpose
 
@@ -990,44 +1081,51 @@ stock; Exp 2 runs on it if your vial does not come up.
 
 ### Materials
 
-- Freezing medium: `[TODO: lab standard, e.g. 90% FBS + 10% DMSO, or complete medium
-  + 10% DMSO]`, prepared fresh and cold
-- Cryovials, labelled with cell line, passage, date, group, cell number per vial
-- Freezing container, −80 °C freezer, liquid nitrogen storage
-- Counter, trypan blue
+- Heat-inactivated FCS (Gibco A5256801), cold; DMSO, cell-culture grade
+  `[TODO: lab's DMSO product]`. The lab freezes in FCS with 10% DMSO, added to the
+  tube last.
+- Cryovials, labelled with an ethanol-proof label or lab pen: cell line, passage,
+  date, initials and group, cells per vial
+- Slow-cooling box (Mr. Frosty) at room temperature, −80 °C freezer, −140 °C
+  freezer for storage
+- 50 mL tube, counter, trypan blue
 
 ### Before you start
 
-- Freezing container at room temperature, with fresh isopropanol if applicable.
-- Liquid nitrogen box position assigned by the staff; write it in the notebook.
+- Slow-cooling box at room temperature, with fresh isopropanol if applicable.
+- Freezer position assigned by the staff; write it in the notebook.
 - Cells at 70–80% confluence, medium changed the day before.
 
 ### Procedure
 
 Freezing (Thursday, week 2)
 
-1. Scrape and count as in P02, steps 1–5.
-2. Centrifuge 300 × g, 5 min. Aspirate the medium completely.
-3. Resuspend in cold freezing medium at `[TODO: 1–2 × 10^6 cells/mL, lab standard]`.
-4. Dispense 1 mL per cryovial, at least 3 vials per group. Work quickly; DMSO is
-   toxic at room temperature within minutes.
-5. Place the vials in the freezing container and the container at −80 °C overnight.
-6. Next day (staff, during the break): transfer to liquid nitrogen. Record the
-   position.
-7. Dispose of all remaining cultures. No cultures are kept over the break.
+1. Wash with DPBS, scrape into medium and count as in P02, steps 1–5. Transfer the
+   suspension to a 50 mL tube.
+2. Calculate the number of vials: the lab freezes 2–4 × 10^6 cells per mL, 1 mL per
+   vial, at least 3 vials per group.
+3. Centrifuge 300 × g, 5 min. Aspirate the medium completely.
+4. Resuspend the pellet in cold FCS, 900 µL per vial (for 3 vials: 2.7 mL).
+5. Dispense 900 µL per cryovial, then add 100 µL DMSO to each vial (final 10%), close
+   tightly and mix by inverting several times. Work quickly; DMSO is toxic at room
+   temperature within minutes.
+6. Place the vials in the slow-cooling box and the box at −80 °C overnight.
+7. Next day (staff, during the break): transfer to the −140 °C freezer and record
+   the position. Vials left at −80 °C for weeks lose viability to ice crystals.
+8. Dispose of all remaining cultures. No cultures are kept over the break.
 
 Re-thaw (Monday, week 3)
 
-8. Thaw one vial following P01, steps 1–6, and count. Record viability and the
+9. Thaw one vial following P01, steps 1–7, and count. Record viability and the
    fraction of cells attached the next morning.
-9. Keep this flask as your own stock for extensions. Exp 2 plates are seeded from
-   the staff stock culture (P02), which was thawed during the break so that it is
-   ready on Monday.
+10. Keep this flask as your own stock for extensions. Exp 2 plates are seeded from
+    the staff stock culture (P02), which was thawed during the break so that it is
+    ready on Monday.
 
 ### Controls
 
-- One staff vial frozen in the same container on the same day: separates a bad
-  freezing day from a bad freezing technique.
+- One staff vial frozen in the same box on the same day: separates a bad freezing
+  day from a bad freezing technique.
 
 ### Checkpoints
 
@@ -1037,13 +1135,13 @@ Re-thaw (Monday, week 3)
 ### Known failure modes
 
 - Low viability: cells too confluent when frozen, DMSO exposure too long before
-  freezing, container not at room temperature, slow transfer to nitrogen.
+  freezing, box not at room temperature, vials left at −80 °C too long.
 - Vial empty: label mix-up. Labels must carry group and date.
 
 ### Output
 
-Number of vials, cells per vial, freezer and nitrogen positions, re-thaw count and
-viability, in the notebook. One line on the poster: viability after freeze and thaw.
+Number of vials, cells per vial, freezer positions, re-thaw count and viability, in
+the notebook. One line on the poster: viability after freeze and thaw.
 
 ---
 
@@ -1057,11 +1155,11 @@ viability, in the notebook. One line on the poster: viability after freeze and t
 |---|---|
 | ID | P04 |
 | Used in | Exp 2 |
-| Hands-on time | 30 min to stimulate, 30 min to wash |
+| Hands-on time | 45 min to prepare the stimuli and stimulate, 30 min to wash |
 | Wall-clock time | 24 h |
-| Resources | hood, incubator shelf |
-| Depends on | P02 plates seeded 24 h earlier |
-| Lab SOP | [TODO: link to the validated lab SOP; the SOP wins over this page] |
+| Resources | hood, incubator shelf, vortex |
+| Depends on | P02 plates seeded 24 h earlier (96-well for supernatants, 6-well for flow, 24-well for the RNA arm) |
+| Lab SOP | Zindel lab "RAW 264.7 polarisation" (v1.0, 2025-12-08): 96-well format, 100× stimulus stocks, master mixes. The SOP wins over this page. |
 
 ### Purpose
 
@@ -1070,39 +1168,69 @@ M(-), M(IFNγ), M(IL-4) and M(IFNγ+LPS), named after their stimulus as the fiel
 agreed in 2014. The states are then challenged (P05), read by ELISA and Griess
 (P06, P07) and phenotyped on the cytometer (P08).
 
+The lab's own stimulation protocol uses an LPS dose ladder (0.1 to 100 ng/mL) on
+RAW 264.7 in 96-well plates. This page keeps its format and its way of preparing
+stimuli, and adds the cytokine states the course needs.
+
 ### Materials
 
-- Recombinant mouse IFNγ, recombinant mouse IL-4, LPS (E. coli O111:B4, ultrapure)
-  `[TODO: supplier, catalogue number, stock concentrations, aliquot storage]`
-- Complete medium, warm
-- Sterile PBS, warm
+- Recombinant mouse IFNγ, recombinant mouse IL-4 `[TODO: supplier, catalogue
+  number, stock concentration, aliquot storage; the lab has not used these yet]`
+- LPS, E. coli O111:B4, ultrapure, lab stock 2.5 mg/mL `[TODO: supplier and
+  catalogue number of the lab's stock]`
+- Complete medium, warm (recipe in P01); DPBS, warm
+- 1.5 mL tubes for the 100× stocks, 5 mL or 15 mL tubes for the master mixes
+- Vortex
 
 ### Before you start
 
 - Plate map from P02 in front of you. Each state has its challenge wells (P05) and
-  one unchallenged well for flow cytometry (P08).
-- Dilute the stimuli in warm complete medium freshly; do not add stock solutions
-  directly to wells.
+  its unchallenged wells for flow cytometry (P08).
+- Stimuli are added as 100× stocks in complete medium, 1 part in 100, so the medium
+  on the cells is replaced once and every well gets the same volume of additive.
+- Vortex the LPS vial before use and between every dilution step: LPS aggregates.
 
 ### Procedure
 
-1. Prepare 2× working solutions in complete medium so that replacing half the well
-   volume gives the final concentration, or replace the full volume with 1×
-   `[TODO: lab standard]`.
+1. LPS 100× stock. Dilute the lab stock stepwise in complete medium, as the lab SOP
+   does:
 
-   | State | Reagent | Final concentration | Time |
+   | Tube | From | Add | Result | 100× for |
+   |---|---|---|---|---|
+   | L1 | LPS stock (2.5 mg/mL) | 2 µL + 498 µL medium | 10,000 ng/mL | 100 ng/mL |
+   | L2 | L1 | 50 µL + 450 µL medium | 1,000 ng/mL | 10 ng/mL |
+
+   L1 is the tube used here and in P05; the full ladder (L3, L4) is for the
+   dose-response extension.
+
+2. Cytokine 100× stocks: dilute IFNγ and IL-4 to 2 µg/mL in complete medium
+   (100× of 20 ng/mL) `[TODO: check against the supplier's recommended working
+   range]`.
+3. Master mixes, one per state. Per 700 µL of mix add 7 µL of each 100× stock (or
+   7 µL plain medium for M(-)). 700 µL feeds three 96-well wells at 200 µL; scale
+   up for the 24-well (500 µL per well) and 6-well (2 mL per well) plates and add
+   dead volume. Vortex briefly.
+
+   | State | Additive per 700 µL | Final concentration | Time |
    |---|---|---|---|
-   | M(-) | medium | – | 24 h |
-   | M(IFNγ) | recombinant mouse IFNγ | 20 ng/mL | 24 h |
-   | M(IL-4) | recombinant mouse IL-4 | 20 ng/mL | 24 h |
-   | M(IFNγ+LPS) | IFNγ + LPS | 20 ng/mL + 100 ng/mL | 24 h |
+   | M(-) | 7 µL medium | – | 24 h |
+   | M(IFNγ) | 7 µL IFNγ 100× | 20 ng/mL | 24 h |
+   | M(IL-4) | 7 µL IL-4 100× | 20 ng/mL | 24 h |
+   | M(IFNγ+LPS) | 7 µL IFNγ 100× + 7 µL L1 | 20 ng/mL + 100 ng/mL | 24 h |
 
-2. Add the stimuli to the wells according to the plate map. Record the clock time.
-3. Incubate 24 h.
-4. Wash: aspirate, add warm PBS gently along the well wall, aspirate; repeat once.
+4. Remove the old medium from the cells and add the state mix according to the
+   plate map: 200 µL per 96-well, 500 µL per 24-well, 2 mL per 6-well. Record the
+   clock time.
+5. Incubate 24 h at 37 °C, 5% CO2.
+
+   > **To verify:** the lab's validated LPS stimulation runs 16 h, not 24 h. The
+   > 24 h polarization follows the 2014 nomenclature paper; confirm in the first run
+   > that 24 h of IFNγ or IL-4 gives a visible difference in P08.
+
+6. Wash: aspirate, add warm DPBS gently along the well wall, aspirate; repeat once.
    Add fresh warm complete medium. Every state is washed, including M(-).
-5. Hand the plate to P05 (challenge) and keep the unchallenged well of every state
-   for P08.
+7. Hand the plates to P05 (challenge) and keep the unchallenged wells of every
+   state for P08.
 
 ### Controls
 
@@ -1114,18 +1242,21 @@ agreed in 2014. The states are then challenged (P05), read by ELISA and Griess
 ### Checkpoints
 
 - After 24 h: M(IFNγ+LPS) wells look different, cells spread and often larger; M(IL-4)
-  wells look like M(-). If all four wells look identical, check the reagent dilution.
+  wells look like M(-). If all four states look identical, check the stock
+  dilutions.
 
 ### Known failure modes
 
 - No difference between states: cytokine inactive (freeze-thawed aliquot, wrong
   dilution) or cells overgrown at stimulation. Check the plate photograph from P02.
-- Cells detached after washing: PBS added onto the cells instead of along the wall.
+- LPS wells inconsistent: LPS not vortexed, aggregates pipetted unevenly.
+- Cells detached after washing: DPBS added onto the cells instead of along the
+  wall.
 
 ### Output
 
-Plate map with the stimulation and wash times, lot numbers of the stimuli, and the
-photograph of each state after 24 h.
+Plate map with the stimulation and wash times, lot numbers and dilution tubes of the
+stimuli, and the photograph of each state after 24 h.
 
 ---
 
@@ -1140,53 +1271,62 @@ photograph of each state after 24 h.
 | ID | P05 |
 | Used in | Exp 2 |
 | Hands-on time | 45 min to stimulate, 45 min to harvest |
-| Wall-clock time | 24 h |
-| Resources | hood, incubator shelf, centrifuge, −20 °C freezer |
+| Wall-clock time | 16 h (overnight) |
+| Resources | hood, incubator shelf, plate centrifuge, −20 °C freezer |
 | Depends on | P04 completed and washed |
-| Lab SOP | [TODO: link to the validated lab SOP; the SOP wins over this page] |
+| Lab SOP | Zindel lab "RAW 264.7 polarisation" (v1.0, 2025-12-08), stimulation and harvesting sections. The SOP wins over this page. |
 
 ### Purpose
 
 Ask whether polarization changes the response to a danger signal. Every state is
 challenged with LPS as the technical control shared by all groups, and with one
-further ligand chosen by the group. The readout in the core is the 24 h supernatant
-for ELISA (P06) and Griess (P07). The 6 h RNA arm is an extension (X01).
+further ligand chosen by the group. The readout in the core is the overnight
+supernatant for ELISA (P06) and Griess (P07). The 6 h RNA arm is an extension (X01).
 
 ### Materials
 
 | Stimulus | Receptor | Course role | Working concentration |
 |---|---|---|---|
-| LPS (E. coli O111:B4, ultrapure) | TLR4 | technical control for every group | 100 ng/mL |
+| LPS (E. coli O111:B4, ultrapure), lab stock; tube L1 from P04 | TLR4 | technical control for every group | 100 ng/mL |
 | Pam3CSK4 | TLR1/2 | optional axis | 1 µg/mL |
 | CpG ODN 1826 | TLR9 | optional axis | 1 µM |
 | Zymosan (depleted) | Dectin-1 | optional axis | 10 µg/mL |
 | R848 | TLR7 | optional axis | 1 µg/mL |
 
-Working concentrations `[TODO: confirm in the first run; there is no separate
-pilot]`. Suppliers and catalogue numbers `[TODO]`.
+> **To verify:** only the LPS ladder has been run in the lab (100 ng/mL for 16 h
+> gives about 300 pg/mL IL-6 from 2 × 10^4 cells in 200 µL, see P06). The other
+> working concentrations are literature values; suppliers and catalogue numbers
+> `[TODO]`.
 
 - Complete medium, warm
-- 1.5 mL tubes for supernatant aliquots, labelled
+- 96-well V-bottom plate (Faust 6091901) for clearing the supernatants, or 1.5 mL
+  tubes for the larger formats
+- Labelled tubes or a sealed plate for the frozen aliquots
 
 ### Before you start
 
 - Draw the plate map in the notebook before you pipette anything. Layout rule:
   3 states (M(-), M(IFNγ), M(IL-4)) × 3 conditions (unstimulated, LPS, chosen axis),
-  in triplicate, one time point (24 h). M(IFNγ+LPS) is not re-challenged (P04).
-- One well per state stays unstimulated for P08.
+  in triplicate, one time point. M(IFNγ+LPS) is not re-challenged (P04).
+- One set of wells per state stays unstimulated for P08.
+- Prepare 100× stocks of the stimuli in complete medium as in P04, and one master
+  mix per condition (7 µL of 100× per 700 µL medium). Vortex LPS between steps.
 
 ### Procedure
 
-1. Dilute the stimuli to working concentration in warm complete medium.
-2. Add to the washed wells from P04 according to the plate map. Record the clock
-   time.
-3. Incubate 24 h.
-4. Harvest: transfer the supernatant to a labelled tube, centrifuge 300 × g, 5 min
-   to remove cells and debris, transfer the cleared supernatant to a fresh tube.
-5. Aliquot: at least two aliquots per well (ELISA, Griess), freeze at −20 °C. Avoid
-   repeated freeze-thaw; one aliquot per assay.
-6. Photograph the wells before harvest; the morphology of challenged cells is part
+1. Remove the medium from the washed wells of P04 and add the condition mix
+   according to the plate map: 200 µL per 96-well. Record the clock time.
+2. Incubate 16 h at 37 °C, 5% CO2 (for example 17:00 to 09:00). This is the lab's
+   validated time; the draft of this course said 24 h. Record the real time.
+3. Photograph the wells before harvest; the morphology of challenged cells is part
    of the record.
+4. Harvest: transfer 180 µL supernatant per well into a V-bottom 96-well plate in
+   the same layout. Centrifuge the plate 900 × g, 5 min, to remove cells and debris.
+5. Transfer the cleared supernatant to a fresh plate or tubes without touching the
+   pellet: 100 µL goes onto the ELISA plate if P06 runs the same day (the lab starts
+   coating and blocking the ELISA plate before harvesting), 50 µL to the Griess
+   plate (P07), the rest is frozen at −20 °C as a reserve. Avoid repeated
+   freeze-thaw; one aliquot per assay.
 
 ### Controls
 
@@ -1200,19 +1340,22 @@ pilot]`. Suppliers and catalogue numbers `[TODO]`.
 ### Checkpoints
 
 - The plate map is in the notebook before the first pipette is touched.
-- After 24 h: LPS wells are visibly activated. If not, do not harvest yet; ask.
+- After 16 h: LPS wells are visibly activated. If not, do not harvest yet; ask.
 
 ### Known failure modes
 
 - Flat response everywhere: LPS inactive (ultrapure LPS loses activity when stored
-  diluted), or endotoxin contamination of the "unstimulated" medium making every
-  well look stimulated. The medium-only control separates the two.
-- Triplicates far apart: uneven seeding (P02) or pipetting order. Record the order.
+  diluted; make the 100× stocks fresh), or endotoxin contamination of the
+  "unstimulated" medium making every well look stimulated. The medium-only control
+  separates the two.
+- Triplicates far apart: uneven seeding (P02), LPS aggregates, or pipetting order.
+  Record the order.
+- Debris in the ELISA: supernatant taken before or without the 900 × g spin.
 
 ### Output
 
-Plate map with stimulation and harvest times, tube labels, freezer position, and
-the photograph before harvest.
+Plate map with stimulation and harvest times, tube or plate labels, freezer
+position, and the photograph before harvest.
 
 ---
 
@@ -1226,11 +1369,11 @@ the photograph before harvest.
 |---|---|
 | ID | P06 |
 | Used in | Exp 2 |
-| Hands-on time | 3–4 h, with incubation waits |
-| Wall-clock time | 1 day (overnight coating if the kit requires it) |
-| Resources | plate reader, multichannel pipette, plate washer or wash bottle, bench space |
-| Depends on | P05 supernatants (24 h arm) |
-| Lab SOP | [TODO: link to the validated lab SOP; the SOP wins over this page] |
+| Hands-on time | 3–4 h, with incubation waits, plus coating the day before |
+| Wall-clock time | 2 days (coating overnight) |
+| Resources | plate reader (450 nm; the lab uses a Promega GloMax Discover), multichannel pipette, plate washer or wash bottle, bench space |
+| Depends on | P05 supernatants (16 h arm) |
+| Lab SOP | Zindel lab "RAW 264.7 polarisation" (v1.0, 2025-12-08), harvesting section, and the kit insert of the Invitrogen Mouse IL-6 Uncoated ELISA Kit (88-7064-88). The kit insert wins over this page. |
 
 ### Purpose
 
@@ -1240,56 +1383,106 @@ the response.
 
 ### Materials
 
-- Mouse IL-6 and TNF ELISA kits `[TODO: kit, supplier, catalogue number]`
-- Supernatant aliquots from P05, thawed on ice
-- Complete medium for standard dilution and blanks
-- Plate reader at 450 nm (with 570 nm reference) `[TODO: instrument, software]`
+- Mouse IL-6 Uncoated ELISA Kit (Invitrogen 88-7064-88): capture and detection
+  antibodies, standard, coating buffer, assay diluent, streptavidin-HRP, TMB, stop
+  solution. Standard range 7.8 to 500 pg/mL.
+- Mouse TNF ELISA kit `[TODO: the lab has run IL-6 only; choose the matching
+  uncoated TNF kit of the same series]`
+- High-binding 96-well ELISA plates (Nunc MaxiSorp or as the kit recommends)
+- Supernatants from P05, cleared at 900 × g, or thawed aliquots on ice
+- Complete medium for diluting samples where needed
+- Plate reader at 450 nm. The kit recommends subtracting a 570 nm reading; the lab's
+  GloMax Discover reads 450 nm without a reference filter, which worked for the
+  example below.
 
 ### Before you start
 
-- Kit instructions read once completely; coat the night before if required.
-- Plate map for the ELISA plate drawn in the notebook: standard curve in duplicate,
-  blanks, samples, which dilutions.
-- Dilution: supernatants of LPS-stimulated RAW cells are far above the standard
-  range. There is no pilot run; in Exp 2 the first ELISA plate includes each sample
-  at two dilutions `[TODO: e.g. 1:10 and 1:100 for LPS wells, neat and 1:10 for
-  unstimulated]`, and the dilution that lands in the linear range is used for the
-  rest of the plates.
+- Kit insert read once completely. Coat the plate with capture antibody the day
+  before (overnight at 4 °C), block it in the morning while P05 harvests.
+- Plate map for the ELISA plate drawn in the notebook: standard curve in duplicate
+  (7 points, 2-fold from 500 pg/mL, plus blank), samples in the layout of the
+  culture plate, dilutions.
+- Dilution: with the 96-well format of P05 (2 × 10^4 cells, 200 µL, 16 h) the neat
+  supernatant of LPS-challenged M(-) lands inside the standard range (about
+  300 pg/mL at 100 ng/mL LPS in the lab's hands). Run every sample neat on the
+  first plate; add a 1:5 dilution in assay diluent for the M(IFNγ)-primed LPS wells,
+  which may run higher. Use the dilution that lands in range for the rest.
 
 ### Procedure
 
-1. Follow the kit per manufacturer `[TODO: paste the step list of the chosen kit
-   here once ordered]`.
-2. Standard curve: serial dilution in complete medium, duplicate, 7 points plus
-   blank.
-3. Samples at the dilutions from the plate map, in the same medium.
-4. Read at 450 nm, reference 570 nm, within the time the kit specifies after the
-   stop solution.
-5. Export the raw absorbance table as CSV, named with group, date, plate, analyte.
+1. Follow the kit insert step by step. In outline: coat 100 µL capture antibody
+   per well overnight at 4 °C; wash; block 1 h at room temperature; wash; add
+   100 µL standard or sample per well, 2 h at room temperature; wash; detection
+   antibody 1 h; wash; streptavidin-HRP 30 min; wash; TMB about 15 min in the dark;
+   stop solution. Washes are 3 to 5 times with the kit's wash buffer; do not let
+   wells dry.
+2. Standard curve: 2-fold series from 500 pg/mL in assay diluent, duplicate,
+   7 points plus blank (0 pg/mL).
+3. Samples at the dilutions from the plate map.
+4. Read at 450 nm (with 570 nm reference if the reader has it) within the time the
+   kit specifies after the stop solution.
+5. Export the raw absorbance table, named with group, date, plate, analyte, and
+   write a tidy CSV with one row per well (see the worked example for the columns).
 
 ### Controls
 
-- Blank (medium only): background.
+- Blank (0 pg/mL standard): background, subtracted from every well.
 - LPS on M(-): the positive control shared by all groups.
 - Medium-only well from P02 run as a sample: detects reagent contamination.
 
 ### Checkpoints
 
-- The standard curve is monotonic and the top standard is below saturation.
+- The standard curve is monotonic and the top standard is below saturation of the
+  reader (the lab's top standard reads about OD 2.9, close to the ceiling; do not
+  extend the curve upward).
 - At least one dilution of every sample falls inside the standard range; otherwise
   rerun that sample at another dilution.
 
 ### Known failure modes
 
 - Samples above the top standard: dilute more.
-- High blank: insufficient washing or contaminated medium.
+- High blank: insufficient washing or contaminated diluent.
 - Edge wells drifting: evaporation during incubation; cover the plate.
+- Values at or below the lowest standard (unstimulated wells): a real result, not a
+  failure. Report them as "below 7.8 pg/mL".
+
+### Worked example: IL-6 after an LPS dose ladder
+
+In September 2026 the lab stimulated RAW 264.7 (2 × 10^4 cells per 96-well, 200 µL,
+16 h) with vehicle or 0.1, 1, 10 and 100 ng/mL LPS in triplicate, cleared the
+supernatants and ran the IL-6 kit above with a 500 to 7.8 pg/mL standard in
+duplicate, read at 450 nm. The raw ODs are in
+[`code/elisa/example_data/il6_lps_raw264_2026-09.csv`](../code/elisa/example_data/il6_lps_raw264_2026-09.csv)
+and the analysis is [`code/elisa/elisa_standard_curve.R`](../code/elisa/elisa_standard_curve.R).
+
+![IL-6 ELISA worked example: standard curve and IL-6 per LPS dose](figures/P06_il6_worked_example.png)
+
+What you see: the standard curve is close to linear over the kit range and a
+four-parameter logistic fit describes it (R² 0.999). Vehicle and 0.1 ng/mL LPS are
+below the lowest standard, 1 ng/mL gives about 30 pg/mL, 10 ng/mL about 140 pg/mL
+and 100 ng/mL about 320 pg/mL, with triplicate wells within 15%. The 100 ng/mL
+point is the LPS control of P05: a neat supernatant lands in the upper third of the
+curve, which is where you want it.
+
+Run it yourself from the `code/elisa` folder:
+
+```
+Rscript elisa_standard_curve.R                      # example data
+Rscript elisa_standard_curve.R my_plate.csv output  # your own plate
+```
+
+The script subtracts the blank, fits the standard curve (4PL, with a log-log linear
+fallback that it announces), back-calculates every sample with its dilution factor,
+flags wells outside the standard range, and writes `elisa_results.csv`,
+`elisa_summary.csv` and the figure. Your CSV needs the columns `well`, `type`
+(standard or sample), `condition`, `standard_pg_ml`, `replicate`, `od450` and
+`dilution_factor`.
 
 ### Output
 
-Raw CSV, the ELISA plate map, dilution factors per sample. Concentrations are
-calculated in the R template with a four-parameter logistic fit and reported in
-pg/mL; where cell numbers differ between wells, normalise per cell.
+Raw export, the tidy CSV, the ELISA plate map, dilution factors per sample, and the
+results files from the script. Concentrations are reported in pg/mL; where cell
+numbers differ between wells, normalise per cell.
 
 ---
 
@@ -1299,6 +1492,9 @@ pg/mL; where cell numbers differ between wells, normalise per cell.
 
 > **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage-course/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
+> **To verify:** the lab has no Griess SOP yet. This page is a literature protocol
+> and has not been run on course samples.
+
 | | |
 |---|---|
 | ID | P07 |
@@ -1306,8 +1502,8 @@ pg/mL; where cell numbers differ between wells, normalise per cell.
 | Hands-on time | 1 h |
 | Wall-clock time | 1 h |
 | Resources | plate reader (540 nm), multichannel pipette |
-| Depends on | P05 supernatants (24 h arm) |
-| Lab SOP | [TODO: link to the validated lab SOP; the SOP wins over this page] |
+| Depends on | P05 supernatants (16 h arm) |
+| Lab SOP | none yet `[TODO: write and validate a lab SOP, or adopt a commercial kit]` |
 
 ### Purpose
 
@@ -1320,14 +1516,16 @@ assay is informative in mouse cells only.
 - Griess reagent A: 1% sulfanilamide in 5% phosphoric acid
 - Griess reagent B: 0.1% N-(1-naphthyl)ethylenediamine dihydrochloride in water
   `[TODO: supplier, or a commercial Griess kit]`
-- Sodium nitrite standard, 0–100 µM, prepared in complete culture medium
+- Sodium nitrite standard, 0–100 µM, 2-fold series prepared in complete culture
+  medium (the same DMEM with phenol red and FCS as the samples)
 - Clear flat-bottom 96-well plate
 - Plate reader, 540 nm
 
 ### Before you start
 
 - Plate map: standards in duplicate, samples in duplicate, medium blank.
-- Supernatants thawed on ice and briefly spun.
+- Use the 50 µL aliquot set aside at the P05 harvest (cleared at 900 × g), or thaw
+  the reserve aliquot on ice and spin briefly.
 
 ### Procedure
 
@@ -1335,12 +1533,12 @@ assay is informative in mouse cells only.
 2. Add 50 µL reagent A. Incubate 10 min at room temperature in the dark.
 3. Add 50 µL reagent B. Incubate 10 min at room temperature in the dark.
 4. Read absorbance at 540 nm within 30 min.
-5. Export the raw table as CSV.
+5. Export the raw table and write a tidy CSV as in P06.
 
 ### Controls
 
 - Blank: complete medium without cells.
-- Standard curve in the same medium as the samples; phenol red and FBS affect the
+- Standard curve in the same medium as the samples; phenol red and FCS affect the
   background.
 
 ### Checkpoints
@@ -1348,11 +1546,15 @@ assay is informative in mouse cells only.
 - Standards form a pink gradient visible by eye; the blank is pale.
 - M(IFNγ+LPS) wells are visibly pinker than M(-) before the plate is read.
 
+   > **To verify:** with 2 × 10^4 cells in 200 µL for 16 h, nitrite may stay near the
+   > detection limit (about 1–2 µM). If the first run reads flat, the Griess arm
+   > needs the 24-well format or a longer challenge.
+
 ### Known failure modes
 
 - Everything pink: nitrite in the medium or the water used for the reagent.
-- Nothing pink: wrong wavelength, old reagent B (turns brown), or the cells really
-  made no nitric oxide, which M(-) and M(IL-4) should not.
+- Nothing pink: wrong wavelength, old reagent B (turns brown), too few cells, or the
+  cells really made no nitric oxide, which M(-) and M(IL-4) should not.
 
 ### Output
 
@@ -1371,11 +1573,11 @@ R template.
 |---|---|
 | ID | P08 |
 | Used in | Exp 2 (core: polarized RAW cells); X02 (extension: lavage cells on the same panel) |
-| Hands-on time | 2 h staining, 1 h acquisition |
-| Wall-clock time | half a day |
-| Resources | hood, centrifuge, cytometer slot reserved by the facility `[TODO: instrument, slot dates]`, FlowJo seat |
-| Depends on | P04 unchallenged well per state, 24 h after polarization |
-| Lab SOP | [TODO: link to the validated lab SOP; the SOP wins over this page] |
+| Hands-on time | 2 h staining, 1 h acquisition (plus 2.5 h if the intranuclear option is run) |
+| Wall-clock time | half a day; fixed samples can be acquired the next day |
+| Resources | hood, cooled centrifuge with plate rotor, heating block, cytometer slot reserved by the facility `[TODO: instrument, slot dates]`, FlowJo seat |
+| Depends on | P04 unchallenged 6-well per state, 24 h after polarization |
+| Lab SOP | Zindel lab "Flow cytometry" (v2.0, 2026-02-16) and "Flow cytometry antibody titration" (v1.0, 2025-08-22); panels in the lab's panel workbook. The SOP wins over this page. |
 
 ### Purpose
 
@@ -1385,59 +1587,93 @@ directly in the same session. In the core it is run on RAW cells only.
 
 ### Materials
 
-Course panel `[TODO: finalise panel, fluorochromes and clones with the flow
-facility]`:
+Course panel. The rows with a clone are antibodies the lab runs and has titrated
+on peritoneal cells (dilution factors from the lab's panel workbook, titrated with
+1 × 10^6 cells in 50 µL). The others are not in the lab's stock yet.
 
-| Marker | Purpose |
-|---|---|
-| Viability dye | exclude dead cells |
-| CD45 | haematopoietic |
-| CD11b | myeloid |
-| F4/80 | macrophage; hi on LPM, lo on SPM |
-| MHCII (I-A/I-E) | M(IFNγ) in vitro; SPM in vivo |
-| CD86 | M(IFNγ) |
-| CD206 | M(IL-4) |
-| Tim4 | resident LPM |
-| ICAM2 (CD102) | resident LPM |
-| Ly6C | monocytes |
-| CD19 | B cells in lavage |
-| Intracellular Nos2, Arg1 | optional, fixation/permeabilisation |
+| Marker | Purpose | Lab reagent (fluorochrome, clone, catalogue number) | Dilution |
+|---|---|---|---|
+| Viability dye | exclude dead cells | Fixable Viability Dye eFluor 506 (Thermo 65-0866-18) | 1:500–1:700 |
+| CD45 | haematopoietic | BUV496, clone I3/2 (BD 752411) | 1:300 |
+| CD11b | myeloid | APC-Cy7, clone M1/70 (BioLegend 101226) | 1:400 |
+| F4/80 | macrophage; hi on LPM, lo on SPM | BUV395, clone T45-2342 (BD 565614) | 1:150 |
+| MHCII (I-A/I-E) | M(IFNγ) in vitro; SPM in vivo | AF700, clone M5/114 (56-5321-82) | 1:150 |
+| ICAM2 (CD102) | resident LPM | FITC, clone 3C4 (116129) | 1:200 |
+| Gata6 (intranuclear) | resident LPM transcription factor | PE, clone D61E4 (Cell Signaling 26452S), with isotype control | 1:100 |
+| Ly6C | monocytes | PerCP-Cy5.5, clone HK1.4 (Thermo 45-5932-82) | 1:400 |
+| CD19 | B cells in lavage | Spark Blue 550 (BioLegend 115566) | 1:800 |
+| CD86 | M(IFNγ) | `[TODO: not in the lab panel; order and titrate]` | |
+| CD206 | M(IL-4) | `[TODO: not in the lab panel for mouse; order and titrate]` | |
+| Tim4 | resident LPM, optional beside Gata6 | `[TODO: not in the lab panel]` | |
+| Intracellular Nos2, Arg1 | optional | `[TODO: not in the lab panel]` | |
 
-- FACS buffer: PBS, 2% FBS, 2 mM EDTA `[TODO: lab standard]`
-- Fc block (anti-CD16/32) `[TODO]`
-- Fixation/permeabilisation kit for the intracellular option `[TODO]`
-- Single-stain compensation controls (beads or cells), FMO controls
-- FACS tubes or a 96-well V-bottom plate
+> **To verify:** the fluorochrome choices come from a panel built for the lab's
+> 5-laser instrument at Bern (BD LSRII SORP, with a spectral option). Rebuild the
+> panel with the ETH flow facility for the instrument the course gets, and keep the
+> clones. Titrate CD86 and CD206 before the course; the activation readout rests on
+> them.
+
+- FACS buffer (the lab calls it "MACS buffer"), 500 mL: 478 mL PBS, 15 mL FCS
+  (3%), 2 mL 0.5 M EDTA (2 mM), 5 mL 1 M HEPES (10 mM). Buffer recipes are in the
+  protocol index.
+- Fc block: anti-mouse CD16/32 (BioLegend 101302), 1:100
+- UltraComp eBeads compensation beads (Thermo 01-2222-42)
+- eBioscience Foxp3 / Transcription Factor Staining Buffer Set (Thermo 00-5523-00)
+  for the Gata6 and other intranuclear options
+- 96-well V-bottom plate (Faust 6091901), flow tubes with cell-strainer cap
+- Trypan blue (Sigma T8154), Neubauer chamber or Countess III with slides (Thermo
+  C10228)
 
 ### Before you start
 
 - Cytometer slot confirmed; the facility reserves slots for the course, two groups
   per slot.
-- Staining plan in the notebook: samples, single stains, FMOs, unstained.
-- Cells harvested by scraping into cold FACS buffer, counted; `[TODO: 0.5–1 × 10^6
-  cells per stain]`.
+- Staining plan in the notebook: samples, unstained, live/dead control, single
+  stains on beads, FMOs for MHCII, CD86 and CD206.
+- Cells harvested by scraping into cold FACS buffer and counted: at least
+  0.5 × 10^6 cells per stain (the antibodies were titrated with 1 × 10^6).
+- Work on ice or at 4 °C until fixation; heating block at 95 °C for the live/dead
+  control.
 
 ### Procedure
 
-1. Harvest the unchallenged well of each state by scraping into cold FACS buffer.
-   Count.
-2. Fc block 10 min on ice.
-3. Surface stain: antibody cocktail in FACS buffer, 30 min on ice in the dark
-   `[TODO: titrated volumes]`.
-4. Wash twice.
-5. Viability dye according to its instructions (before or after surface stain,
-   depending on the dye).
-6. Optional: fix and permeabilise, intracellular stain for Nos2 and Arg1.
-7. Resuspend in FACS buffer, keep on ice in the dark, acquire within `[TODO]` hours.
-8. Acquire on the facility cytometer `[TODO: instrument]` with compensation controls
-   recorded in the same session. Record at least `[TODO: 10,000]` live events per
-   sample.
-9. Export FCS files named with group, date, sample.
+1. Harvest the unchallenged 6-well of each state by scraping into cold FACS buffer.
+   Count. Centrifuge 300 × g, 5 min, 4 °C.
+2. Resuspend each sample in 200 µL PBS and transfer to the V-bottom plate.
+3. Live/dead control: take 100 µL of one sample into a tube, 95 °C for 5 min, then
+   on ice 5 min, and add it back to the remaining 100 µL of live cells of that
+   well. This well is stained with the viability dye only.
+4. Wash all wells with 200 µL PBS; centrifuge 300 × g, 5 min, 4 °C; flick the plate
+   to discard the supernatant (the same wash from here on).
+5. Viability dye plus Fc block, 50 µL per well in PBS (not in buffer: serum
+   quenches the dye), 20 min, 4 °C, dark. Unstained well gets 50 µL PBS. Wash with
+   PBS.
+6. Surface stain: antibody mix in FACS buffer, 50 µL per well, 20 min, 4 °C, dark.
+   Unstained and live/dead wells get buffer only. FMO wells get the mix minus one
+   antibody.
+7. Single stains for compensation on beads, in parallel: vortex the beads 30 s, one
+   drop (about 30 µL) made up to 400 µL with buffer serves four wells of 100 µL;
+   add 1 µL of one antibody per well, plus one well of beads without antibody.
+   20 min, 4 °C, dark.
+8. Wash all wells twice with FACS buffer.
+9. Optional intranuclear stain (Gata6, Nos2, Arg1): fixation/permeabilisation
+   working solution (1 part concentrate in 4 parts diluent), 50 µL per well, 60 min,
+   4 °C, dark; wash with 1× permeabilisation buffer; intranuclear mix in
+   permeabilisation buffer, 50 µL, 90 min, 4 °C, dark; wash with permeabilisation
+   buffer. Include the isotype control for Gata6.
+10. Resuspend in 200 µL FACS buffer and filter through the strainer cap into flow
+    tubes. Keep on ice in the dark; fixed samples can be acquired the next day.
+11. Acquire on the facility cytometer with the compensation controls recorded in
+    the same session. Record at least 10,000 live single cells per sample
+    `[TODO: confirm with the facility]`.
+12. Export FCS files named with group, date, sample.
 
 ### Controls
 
-- Unstained and single-stain controls for compensation.
+- Unstained and single-stain beads for compensation; the heat-killed live/dead well
+  for the viability gate.
 - FMO for MHCII, CD86 and CD206: the markers that carry the result.
+- Isotype control for Gata6 if the intranuclear option is run.
 - M(-) as the reference state.
 
 ### Checkpoints
@@ -1448,12 +1684,13 @@ facility]`:
 
 ### Known failure modes
 
-- RAW cells clump after scraping: filter through a 40 µm strainer or pipette
-  gently; EDTA in the buffer helps.
+- RAW cells clump after scraping: the EDTA in the buffer helps; filter through the
+  strainer cap and pipette gently.
 - Autofluorescence in activated cells: use the FMOs, not the unstained control, to
   set gates.
-- Tim4 and ICAM2 negative on every RAW sample: expected. No in vitro cell falls into
-  the large-peritoneal-macrophage gate; that is a result.
+- Dim viability stain: dye diluted in buffer instead of PBS.
+- ICAM2 and Gata6 negative on every RAW sample: expected. No in vitro cell falls
+  into the large-peritoneal-macrophage gate; that is a result.
 
 ### Output
 
@@ -1472,7 +1709,8 @@ gated population statistics as CSV into the notebook. Do not try to gate in R.
 > **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage-course/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
 > Extension. Requires the 6 h lysate arm to be planned into Exp 2 at the challenge
-> step, and RNA, cDNA and qPCR kits `[TODO]`. Ask your supervisor before week 3.
+> step, 24-well plates in P02, and the RNA, cDNA and qPCR reagents below. Ask your
+> supervisor before week 3.
 
 | | |
 |---|---|
@@ -1480,9 +1718,9 @@ gated population statistics as CSV into the notebook. Do not try to gate in R.
 | Used in | Extension |
 | Hands-on time | 1 h at challenge (lysates), then about 1.5 days for RNA, cDNA and qPCR |
 | Wall-clock time | 6 h for the lysate arm, then 2 days |
-| Resources | hood, −80 °C freezer, RNA bench, qPCR instrument `[TODO: platform]` |
-| Depends on | P04 and P05; extra wells in the P05 plate map |
-| Lab SOP | [TODO: link to the validated lab SOP; the SOP wins over this page] |
+| Resources | hood, −80 °C freezer, RNA bench with PCR hood, NanoDrop, thermal cycler, Roche LightCycler 480 II |
+| Depends on | P04 and P05; extra 24-well plate in the P05 plate map |
+| Lab SOP | Zindel lab 032 "Nanodrop" (v1.0, 2025-08-11), 033 "Reverse transcription" (iScript version, v1.0, 2025-08-11), 034 "SYBR Green real-time PCR" and 034 "TaqMan real-time PCR" (v1.2, 2025-10-09). The SOP wins over this page. |
 
 ### Purpose
 
@@ -1492,27 +1730,56 @@ the output, or both.
 
 ### Materials
 
-- Lysis buffer (RLT or TRIzol) `[TODO]`, RNA isolation kit `[TODO]`, cDNA kit
-  `[TODO]`, SYBR or probe chemistry `[TODO: platform]`
-- Primers: housekeepers Actb, Hprt. Outputs: Il6, Tnf, Il1b, Nos2, Arg1, Retnla,
-  Chil3, Mrc1. Receptors: Tlr4, Tlr2, Tlr9, Clec7a, Tlr7. Transcription factors:
-  Irf5, Irf4, Socs1, Socs2 `[TODO: sequences or assay IDs]`.
+- Lysis buffer and RNA isolation kit `[TODO: the lab's RNA extraction SOP is not
+  in the protocol collection; name the kit]`
+- NanoDrop, 1.2 µL per measurement, ultrapure water for the blank
+- cDNA: iScript cDNA Synthesis Kit (Bio-Rad 1708890); RNase-free tubes, thermal
+  cycler. (The lab also has an Omniscript protocol with random primers; iScript is
+  the simpler one for the course.)
+- qPCR, SYBR chemistry: SYBR Green master mix `[TODO: the lab's SYBR product]`,
+  primers ordered from Microsynth (0.04 µmol, desalted, dried), 384-well plate
+  (Axygen for LightCycler 480, Merck AXYPCR384LC480WNF) or 96-well, sealing foil
+  (Sarstedt 95.1999), ultrapure water (Thermo 10977035)
+- qPCR, probe chemistry (alternative): FastStart Universal Probe Master with ROX
+  (Merck 4913949001) and TaqMan assays; housekeeper eukaryotic 18S (Thermo 4352930E)
+- Housekeepers the lab uses with SYBR: Gapdh and Rps29. Targets: outputs Il6, Tnf,
+  Il1b, Nos2, Arg1, Retnla, Chil3, Mrc1; receptors Tlr4, Tlr2, Tlr9, Clec7a, Tlr7;
+  transcription factors Irf5, Irf4, Socs1, Socs2 `[TODO: primer sequences from the
+  literature, validated by melting curve]`
+- RNase Zap (Invitrogen AM9780)
 
 ### Before you start
 
-- Add a 6 h arm to the P05 plate map: the same states and conditions, in triplicate,
-  harvested at 6 h instead of 24 h.
-- RNase-free bench and tips.
+- Add a 6 h arm to the P05 plate map on a 24-well plate (1.2 × 10^5 cells per well,
+  P02): the same states and conditions, in triplicate, harvested at 6 h instead of
+  16 h. A 96-well gives too little RNA for 500 ng per cDNA reaction.
+- Clean the bench and the PCR hood with RNase Zap and ethanol; RNase-free tips.
 
 ### Procedure
 
 1. At 6 h after challenge: aspirate the medium, lyse the cells directly in the well
    with lysis buffer, transfer to a tube, freeze at −80 °C.
-2. Isolate RNA per kit; measure concentration and purity.
-3. cDNA per kit with equal RNA input per sample.
-4. qPCR: each group runs the housekeepers, the output genes relevant to its axis,
-   Nos2, Arg1, Tlr4 and the receptor of its axis. Technical duplicates.
-5. Export Ct values as CSV.
+2. Isolate RNA per kit. Measure on the NanoDrop: blank with 1.2 µL ultrapure
+   water, clean the pedestals between samples, 1.2 µL sample. Accept A260/280 of
+   1.8–2.0 (below 1.7 the sample is not used) and A260/230 of 2 or above.
+3. cDNA with iScript, 10 µL per reaction on ice in the PCR hood: 2 µL 5× reaction
+   mix, 0.5 µL reverse transcriptase, 500 ng RNA in at most 7.5 µL, RNase-free water
+   to 10 µL. Cycler: 5 min 25 °C, 20 min 46 °C, 1 min 95 °C, hold 4 °C. Store at
+   −80 °C or use directly.
+4. Dilute the cDNA 1:8 in ultrapure water.
+5. Primer mix per gene: 10 µL forward (100 µM) + 10 µL reverse (100 µM) + 80 µL
+   water.
+6. qPCR plate on ice, SYBR, 384-well: 5 µL master mix + 0.5 µL primer mix + 0.5 µL
+   water per well, then 4 µL diluted cDNA (96-well: 10 + 1 + 1 µL, then 8 µL cDNA).
+   Technical duplicates or triplicates. Seal firmly, press the edges, centrifuge
+   500 × g, 2 min.
+7. LightCycler 480 II: new experiment from the lab's SYBR template, assign
+   replicates and targets in the sample editor, run. Analysis: absolute
+   quantification, second-derivative maximum, check that replicate curves overlap
+   and drop a replicate whose Cp is clearly off; melting curve analysis, one peak
+   per primer pair. Export the Cp table.
+8. Each group runs the housekeepers, the output genes relevant to its axis, Nos2,
+   Arg1, Tlr4 and the receptor of its axis.
 
 ### Controls
 
@@ -1522,18 +1789,21 @@ the output, or both.
 
 ### Checkpoints
 
-- RNA A260/280 about 2.0; housekeeper Ct values within 1 cycle across samples.
+- RNA A260/280 about 2.0; housekeeper Cp values within 1 cycle across samples.
+- One melting peak per primer pair; a second peak means primer dimers or an
+  unspecific product, and the pair is not used.
 
 ### Known failure modes
 
 - Housekeepers drift with stimulation: use the mean of both and report it.
-- Late Ct for receptors in M(IL-4): may be real suppression; the no-RT control says
+- Late Cp for receptors in M(IL-4): may be real suppression; the no-RT control says
   whether the signal is genomic.
+- Plate seal lifting at the edges: evaporation, outlier wells at the border.
 
 ### Output
 
-Ct CSV, plate layout, ΔΔCt against M(-) unstimulated in the R template, plots by
-state and stimulus.
+Cp CSV, plate layout, ΔΔCt against M(-) unstimulated in the R template, plots by
+state and stimulus, housekeepers named.
 
 ---
 
@@ -1552,11 +1822,11 @@ state and stimulus.
 |---|---|
 | ID | X02 |
 | Used in | Extension |
-| Hands-on time | 1 h per mouse, then staining as P08 |
+| Hands-on time | 20 min per mouse, then staining as P08 |
 | Wall-clock time | half a day, coordinated with a cytometer slot |
-| Resources | animal facility access with a supervisor, dissection bench, ice, centrifuge, cytometer slot |
+| Resources | animal facility access with a supervisor, dissection bench, ice, cooled centrifuge, cytometer slot |
 | Depends on | P08 panel and a reserved cytometer slot; polarized RAW cells ready on the same day |
-| Lab SOP | [TODO: link to the validated lab SOP; the SOP wins over this page] |
+| Lab SOP | Zindel lab 0603 "PerCFL lavage from mice" (v1.0, 2025-08-22) and 0605 "Peritoneal and mesothelial cell isolation combined" (preliminary). The SOP wins over this page. The lab SOP's anaesthesia step does not apply: course mice are euthanised by the facility. |
 
 ### Purpose
 
@@ -1567,32 +1837,46 @@ macrophage gate.
 
 ### Materials
 
-- Ice-cold PBS with 2 mM EDTA, 5 mL per mouse
-- Syringe and needle for injection and withdrawal `[TODO: gauge]`
-- Tubes on ice, counter, FACS reagents as in P08
+- FACS buffer, ice-cold: PBS, 3% FCS, 2 mM EDTA, 10 mM HEPES (recipe in P08);
+  15 mL per mouse. The lab's combined SOP alternatively uses DPBS with 2 mM EDTA
+  and collects into a tube with 1 mL FCS.
+- 10 mL syringe and 22G Insyte catheter (BD 381323)
+- 50 mL tubes, labelled, on ice
+- 70% ethanol, scissors, forceps, a board or surgical mat to fix the mouse
+- ACK erythrocyte lysis buffer if the lavage is bloody (recipe in the protocol
+  index)
+- Counter, FACS reagents as in P08
 
 ### Before you start
 
 - Supervisor present for the whole procedure.
-- Genotype and sex of the mouse recorded.
-- P08 staining plan extended with the lavage samples and CD19.
+- Mouse euthanised by the facility's approved method; genotype, sex and age
+  recorded.
+- P08 staining plan extended with the lavage samples, CD19 and Ly6C.
 
 ### Procedure
 
-1. Inject 5 mL ice-cold PBS/EDTA into the peritoneal cavity of the euthanised
-   mouse.
-2. Massage gently for 30 s.
-3. Withdraw the fluid, keep on ice.
-4. Count. Expect a few million cells, of which large peritoneal macrophages are
-   roughly a third.
-5. Stain with the course panel (P08) and acquire in the same session as the
+1. Fix the mouse on its back, wet the fur with 70% ethanol.
+2. Cut the skin across the abdomen at the height of the hind legs and strip it up
+   to the thorax, exposing the intact peritoneal wall. Do not open the peritoneum.
+3. Insert the catheter through the peritoneal wall at the level of the hind leg,
+   slightly left of the midline, away from the bladder and the vena cava. Withdraw
+   the needle, leave the plastic catheter in place.
+4. Inject 5 mL ice-cold buffer, massage the abdomen gently for 30 s, and withdraw
+   the fluid slowly through the same catheter into the 50 mL tube on ice. Repeat
+   three times in total (15 mL).
+5. Centrifuge 300 × g, 5 min, 4 °C. If the pellet is red, resuspend in 1 mL ACK
+   buffer for 2 min at room temperature, top up with buffer and centrifuge again.
+6. Resuspend in buffer and count. Expect a few million cells per mouse, of which
+   large peritoneal macrophages are roughly a third.
+7. Stain with the course panel (P08) and acquire in the same session as the
    polarized RAW cells.
-6. Hand the carcass to X03 if an organ is to be harvested.
+8. Hand the carcass to X03 if an organ is to be harvested.
 
 ### Controls
 
 - CD19 gate removes B cells; F4/80 against MHCII separates large and small
-  peritoneal macrophages; Tim4 with ICAM2 confirms resident identity.
+  peritoneal macrophages; ICAM2 and Gata6 confirm resident identity.
 
 ### Checkpoints
 
@@ -1601,7 +1885,9 @@ macrophage gate.
 
 ### Known failure modes
 
-- Low cell number: fluid lost on withdrawal, or the needle entered the gut.
+- Low cell number: fluid lost on withdrawal, catheter tip against the gut or in
+  the fat; reposition rather than push.
+- Bloody lavage: a vessel was hit on insertion; lyse the erythrocytes and note it.
 - Few LPM: older mouse or prior inflammation; record age and findings.
 
 ### Output
@@ -1618,52 +1904,87 @@ the RAW samples.
 > **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage-course/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
 > Extension. Requires a mouse (shared with X02), licence coverage for organ harvest
-> `[TODO: confirm]`, cryostat or paraffin access and slide scanner time. Plan with
-> your supervisor in week 1; the fixation and sectioning steps span several days.
+> `[TODO: confirm]`, paraffin processing at the histology facility and slide
+> scanner time. Plan with your supervisor in week 1; fixation, embedding and
+> sectioning span several days.
 
 | | |
 |---|---|
 | ID | X03 |
 | Used in | Extension |
-| Hands-on time | 1 h harvest, 2 h sectioning, 2 × 3 h staining |
-| Wall-clock time | about 5 days (fixation 24 h, sucrose overnight, embedding, sectioning, two staining days) |
-| Resources | dissection bench, 4 °C, cryostat `[TODO: or microtome per lab SOP]`, histology bench, slide scanner `[TODO: instrument]` |
+| Hands-on time | 30 min harvest, 1 h sectioning, 2 × 3 h staining |
+| Wall-clock time | about 5 days (fixation 24 h, processing and embedding by the facility, sectioning, two staining days) |
+| Resources | dissection bench, fume hood, histology facility for processing, embedding and sectioning `[TODO: ETH facility and turnaround]`, pressure cooker, histology bench, slide scanner `[TODO: instrument]` |
 | Depends on | X02 (same mouse) |
-| Lab SOP | [TODO: link to the validated lab SOP; the SOP wins over this page] |
+| Lab SOP | Zindel lab 011 "IHC staining (Biotin ABC)" (v1.0, 2026-07-16) and 01 "HE staining" (v1.0, 2026-03-18); both paraffin protocols. The SOP wins over this page. |
 
 ### Purpose
 
 Test the hypothesis that every tissue contains F4/80-positive macrophages, in an
-organ of the group's choice, by single-colour immunohistochemistry.
+organ of the group's choice, by single-colour immunohistochemistry on paraffin
+sections, with an H&E serial section for orientation.
 
 ### Materials
 
-- 4% PFA, 30% sucrose, OCT, cryomolds `[TODO: or paraffin route per lab SOP]`
-- Rat anti-mouse F4/80 `[TODO: clone, e.g. BM8 for cryosections]`, HRP-conjugated
-  anti-rat secondary, DAB, haematoxylin, mounting medium
-- Slides, coverslips
+- 4% formaldehyde (PFA) for fixation, 70% ethanol for storage, cassettes
+- Paraffin processing, embedding and 3.5 µm sections by the histology facility;
+  coated slides
+- Deparaffinisation and dehydration: xylene, 100%, 95% and 70% ethanol, distilled
+  water
+- Antigen retrieval: citrate buffer pH 6 (10× stock diluted to 1× in distilled
+  water, 200 mL), pressure cooker
+- TBS and TBS with Tween 20 (TBST)
+- Protein block and antibody diluent: 3% goat serum, 0.5% casein, 0.025% Tween 20,
+  0.1% sodium azide in TBS
+- Primary antibody: rat anti-mouse F4/80 `[TODO: FFPE-compatible clone and
+  dilution; the lab SOP does not fix the clone]`
+- 3% hydrogen peroxide in TBS (17 mL 35% H2O2 to 200 mL)
+- Biotinylated secondary anti-rat, 1:200 in diluent
+- VECTASTAIN Elite ABC-HRP reagent, ready to use (AdipoGen VC-PK-7100)
+- DAB enhanced liquid substrate (Sigma D3939), 1 drop (30 µL) per 1 mL buffer
+- Mayer's haematoxylin, HCl-ethanol for differentiation, eosin for the H&E slide
+- Eukitt mounting medium, coverslips
 
 ### Before you start
 
 - Organ chosen from the open list: liver, spleen, lung, kidney, heart, brain,
   intestine, skin, adipose tissue, peritoneal wall, lymph node, bone marrow.
 - Spleen harvested as the positive control regardless of the chosen organ.
-- PFA handled in the fume hood.
+- Formaldehyde and xylene handled in the fume hood.
+- Slides labelled with pencil (solvent-proof).
 
 ### Procedure
 
-1. After lavage (X02), harvest the chosen organ and a piece of spleen.
-2. Fix in 4% PFA for 24 h at 4 °C.
-3. Cryoprotect in 30% sucrose overnight at 4 °C.
-4. Embed in OCT, freeze, cut 8–10 µm cryosections, store at −20 °C.
-5. Staining day 1: rehydrate, block endogenous peroxidase, block, primary F4/80
-   `[TODO: dilution]` overnight at 4 °C; one no-primary section.
-6. Staining day 2: HRP secondary, DAB, haematoxylin counterstain, dehydrate, mount.
-7. Image on the slide scanner. Submit the scan and a short legend to the atlas.
+1. After lavage (X02), harvest the chosen organ and a piece of spleen. Fix in 4%
+   formaldehyde for 24 h at 4 °C, transfer to 70% ethanol, and hand the cassettes to
+   the histology facility for processing, paraffin embedding and 3.5 µm sections.
+   Ask for serial sections: one for F4/80, one for the no-primary control, one for
+   H&E.
+2. Deparaffinise: 2 × xylene 3 min, 2 × 100% ethanol 5 min, 95% ethanol 3 min,
+   70% ethanol 3 min, distilled water 5 min.
+3. Antigen retrieval in 1× citrate buffer pH 6 in the pressure cooker, 110 °C for
+   15 min; let cool 25–30 min. Rinse in TBS 4 min.
+4. Block with protein blocking solution, 30 min, room temperature.
+5. Primary F4/80 in antibody diluent, overnight at 4 °C. The no-primary section
+   gets diluent only.
+6. Day 2: rinse in cold TBST 4 min. Quench endogenous peroxidase with 3% H2O2 in
+   TBS, 10 min. Rinse TBST 4 min.
+7. Biotinylated secondary 1:200 in diluent, 1 h, room temperature. Rinse TBST 4 min.
+8. ABC-HRP reagent, 30 min, room temperature. Rinse TBST 4 min.
+9. Develop with DAB, watching under the microscope until the spleen red pulp is
+   brown and the no-primary section is still clean; rinse in distilled water.
+10. Counterstain: Mayer's haematoxylin 7 min, rinse in running tap water until
+    clear, differentiate with 1–2 dips of HCl-ethanol, blue under running tap water
+    10 min.
+11. Dehydrate: 70% ethanol 1 min, 2 × 95% 1 min, 3 × 100% 1 min, ethanol/xylene 1:1
+    1 min, 3 × xylene 1 min. Mount with Eukitt.
+12. H&E on the serial section per the lab SOP: haematoxylin as above, eosin 1 min
+    15 s, 1–3 dips 70% ethanol, dehydrate, mount.
+13. Image on the slide scanner. Submit the scan and a short legend to the atlas.
 
 ### Controls
 
-- No-primary section: secondary and DAB background.
+- No-primary section: secondary, ABC and DAB background.
 - Spleen: positive control; red-pulp macrophages are bright.
 
 ### Checkpoints
@@ -1673,8 +1994,10 @@ organ of the group's choice, by single-colour immunohistochemistry.
 
 ### Known failure modes
 
-- Everything brown: endogenous peroxidase not blocked, or DAB developed too long.
-- Nothing brown, spleen included: primary inactive or wrong secondary species.
+- Everything brown: endogenous peroxidase not quenched, or DAB developed too long.
+- Nothing brown, spleen included: primary not FFPE-compatible or inactive, retrieval
+  skipped, or wrong secondary species.
+- Sections lifting off: retrieval too harsh or uncoated slides.
 
 ### Reading the result
 
@@ -2262,9 +2585,10 @@ reviews used in the lecture `[TODO]`.
 
 > **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage-course/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
-The lectures this course builds on, as presented at ETH Zürich. They are the
-background for the [background reading](../background/macrophage_biology.md), which
-condenses them to what the experiments need.
+Lectures given at ETH Zürich, as presented, for anyone who wants to read further.
+None of them is a prerequisite: the course starts from scratch. The
+[background reading](../background/macrophage_biology.md) condenses what the
+experiments need.
 
 | File | Lecture |
 |---|---|
@@ -4572,15 +4896,16 @@ description of the object.
 
 | Folder | Purpose | Input | Output |
 |---|---|---|---|
-| `elisa/` | Four-parameter logistic standard curve, concentration table, plots by state and stimulus | plate-reader export, plate map | `elisa_results.csv`, figures |
+| `elisa/` | Four-parameter logistic standard curve, concentration table, plots by condition. Written; runs on the lab's IL-6 example data | tidy CSV (one row per well) | `elisa_results.csv`, `elisa_summary.csv`, figure |
 | `griess/` | Linear nitrite standard, concentration table, plots | plate-reader export, plate map | `griess_results.csv`, figures |
 | `flow/` | Reads the population statistics exported from FlowJo and plots them. Gating is done in FlowJo, not in R | FlowJo CSV export | figures |
 | `growth_curve/` | Doubling time from daily counts, with the published value as a reference line | counts table from P01 | figure, doubling time |
 | `scrnaseq/` | The in silico arm, three parts (below) | preprocessed objects shipped by the staff | figures |
 | `qpcr/` | ΔΔCt for the X01 extension | Ct export | figures |
 
-`[TODO: write the templates; each folder gets a README, an `example_data/` subfolder
-and one script that runs end to end on the example data.]`
+`[TODO: write the remaining templates; each folder gets a README, an `example_data/`
+subfolder and one script that runs end to end on the example data. `elisa/` is the
+model.]`
 
 ### The in silico arm, `scrnaseq/`
 
@@ -4616,5 +4941,196 @@ true in vitro single-cell dataset (Sanin et al. 2022 `[TODO: accession]`).
 
 The answer key lives in a separate private repository and is released after the
 course.
+
+---
+
+# Code: R scripts
+
+<!-- file: code/elisa/elisa_standard_curve.R -->
+
+```r
+#!/usr/bin/env Rscript
+# ELISA standard curve and back-calculation.
+#
+# Usage:
+#   Rscript elisa_standard_curve.R [input.csv] [output_dir]
+# Defaults: example_data/il6_lps_raw264_2026-09.csv and ./output
+#
+# Input: one row per well with the columns
+#   well, type ("standard" or "sample"), condition, standard_pg_ml (standards only),
+#   lps_ng_ml (samples; optional), replicate, od450, dilution_factor
+# The 0 pg/mL standard is the blank.
+#
+# Output: output/elisa_results.csv (per well), output/elisa_summary.csv (per
+# condition), output/elisa_figure.png (standard curve + concentrations).
+#
+# Fit: four-parameter logistic (4PL) by nls; if that fails, a log-log linear fit
+# on the non-zero standards. The console says which was used.
+
+suppressPackageStartupMessages(library(ggplot2))
+
+args <- commandArgs(trailingOnly = TRUE)
+input <- if (length(args) >= 1) args[1] else "example_data/il6_lps_raw264_2026-09.csv"
+outdir <- if (length(args) >= 2) args[2] else "output"
+dir.create(outdir, showWarnings = FALSE, recursive = TRUE)
+
+d <- read.csv(input, stringsAsFactors = FALSE)
+stopifnot(all(c("well", "type", "condition", "od450") %in% names(d)))
+if (!"dilution_factor" %in% names(d)) d$dilution_factor <- 1
+d$dilution_factor[is.na(d$dilution_factor)] <- 1
+
+# 1. Blank: mean OD of the 0 pg/mL standard wells.
+std <- d[d$type == "standard", ]
+blank <- mean(std$od450[std$standard_pg_ml == 0])
+d$od_corr <- d$od450 - blank
+std <- d[d$type == "standard", ]
+cat(sprintf("Blank (0 pg/mL standard, n = %d): OD %.4f\n", sum(std$standard_pg_ml == 0), blank))
+
+# 2. Standard curve.
+fit_4pl <- function(x, y) {
+  # a = lower asymptote, d = upper asymptote, c = inflection (pg/mL), b = slope.
+  # Several start sets: a curve that is still linear at the top standard has its
+  # upper asymptote far above the data, and nls needs to be told so.
+  starts <- list(list(a = min(y), d = max(y) * 1.2, c = max(x), b = 1),
+                 list(a = min(y), d = max(y) * 3, c = max(x) * 3, b = 1),
+                 list(a = min(y), d = max(y), c = median(x[x > 0]), b = 1))
+  for (st in starts) {
+    m <- tryCatch(nls(y ~ d + (a - d) / (1 + (x / c)^b), start = st,
+                      control = nls.control(maxiter = 1000, warnOnly = FALSE)),
+                  error = function(e) NULL)
+    if (!is.null(m)) return(m)
+  }
+  NULL
+}
+model <- fit_4pl(std$standard_pg_ml, std$od_corr)
+if (!is.null(model)) {
+  p <- coef(model)
+  method <- "4PL"
+  predict_od <- function(x) p["d"] + (p["a"] - p["d"]) / (1 + (x / p["c"])^p["b"])
+  invert <- function(y) {
+    out <- p["c"] * ((p["a"] - p["d"]) / (y - p["d"]) - 1)^(1 / p["b"])
+    out[y <= p["a"]] <- 0            # at or below the lower asymptote
+    out[y >= p["d"]] <- NA           # at or above the upper asymptote
+    as.numeric(out)
+  }
+  cat(sprintf("Fit: 4PL  a = %.4f  d = %.4f  c = %.1f pg/mL  b = %.3f\n", p["a"], p["d"], p["c"], p["b"]))
+} else {
+  nz <- std[std$standard_pg_ml > 0 & std$od_corr > 0, ]
+  lmfit <- lm(log(od_corr) ~ log(standard_pg_ml), data = nz)
+  k <- coef(lmfit)
+  method <- "log-log linear (4PL failed)"
+  predict_od <- function(x) exp(k[1] + k[2] * log(x))
+  invert <- function(y) { out <- rep(0, length(y)); ok <- y > 0; out[ok] <- exp((log(y[ok]) - k[1]) / k[2]); as.numeric(out) }
+  cat(sprintf("Fit: log-log linear (4PL did not converge)  slope = %.3f\n", k[2]))
+}
+r2 <- 1 - sum((std$od_corr - predict_od(std$standard_pg_ml))^2) / sum((std$od_corr - mean(std$od_corr))^2)
+cat(sprintf("R^2 on standards: %.4f\n", r2))
+
+# 3. Back-calculate samples, apply dilution, flag the range.
+lo <- min(std$od_corr[std$standard_pg_ml > 0]); hi <- max(std$od_corr)
+top_std <- max(std$standard_pg_ml); bottom_std <- min(std$standard_pg_ml[std$standard_pg_ml > 0])
+d$conc_pg_ml <- NA_real_; d$flag <- ""
+s <- d$type == "sample"
+d$conc_pg_ml[s] <- invert(d$od_corr[s]) * d$dilution_factor[s]
+d$flag[s & d$od_corr < lo] <- sprintf("below lowest standard (%g pg/mL)", bottom_std)
+d$flag[s & d$od_corr > hi] <- sprintf("above top standard (%g pg/mL)", top_std)
+d$flag[s & is.na(d$conc_pg_ml)] <- "not calculable (above upper asymptote)"
+d$fit <- method
+write.csv(d, file.path(outdir, "elisa_results.csv"), row.names = FALSE)
+
+samp <- d[s, ]
+samp$condition <- factor(samp$condition, levels = unique(samp$condition))
+summ <- aggregate(conc_pg_ml ~ condition, samp, function(v) c(mean = mean(v), sd = sd(v), n = length(v)))
+summ <- data.frame(condition = summ$condition, mean_pg_ml = summ$conc_pg_ml[, "mean"],
+                   sd_pg_ml = summ$conc_pg_ml[, "sd"], n = summ$conc_pg_ml[, "n"])
+summ$flagged_wells <- sapply(summ$condition, function(cc) sum(samp$flag[samp$condition == cc] != ""))
+write.csv(summ, file.path(outdir, "elisa_summary.csv"), row.names = FALSE)
+cat("\nPer condition (pg/mL):\n"); print(summ, row.names = FALSE, digits = 4)
+
+# 4. Figure: standard curve with samples overlaid; concentration per condition.
+ink <- "#1F2933"; muted <- "#6B7280"; blue <- "#2A6EBB"; grey_pt <- "#9AA3AE"
+theme_course <- theme_minimal(base_size = 11) +
+  theme(panel.grid.minor = element_blank(), panel.grid.major = element_line(colour = "#E5E7EB", linewidth = 0.3),
+        axis.text = element_text(colour = ink), axis.title = element_text(colour = ink),
+        plot.title = element_text(colour = ink, face = "bold", size = 11),
+        plot.subtitle = element_text(colour = muted, size = 9), plot.background = element_rect(fill = "white", colour = NA))
+
+xmin <- bottom_std / 2
+curve <- data.frame(x = exp(seq(log(xmin), log(top_std * 1.2), length.out = 200)))
+curve$y <- predict_od(curve$x)
+std_plot <- std[std$standard_pg_ml > 0, ]
+samp_plot <- samp[!is.na(samp$conc_pg_ml) & samp$conc_pg_ml > 0, ]
+p1 <- ggplot() +
+  geom_line(data = curve, aes(x, y), colour = ink, linewidth = 0.6) +
+  geom_point(data = std_plot, aes(standard_pg_ml, od_corr), shape = 21, fill = "white", colour = ink, size = 2.4, stroke = 0.6) +
+  geom_point(data = samp_plot, aes(conc_pg_ml, od_corr), colour = blue, size = 2.4) +
+  scale_x_log10(breaks = c(10, 30, 100, 300)) +
+  labs(x = "IL-6 standard (pg/mL, log scale)", y = "OD 450 nm, blank-subtracted",
+       title = "Standard curve", subtitle = sprintf("%s fit, R² = %.3f. Open circles: standards. Blue: samples.", method, r2)) +
+  theme_course
+
+summ$x <- as.numeric(summ$condition); samp$x <- as.numeric(samp$condition)
+p2 <- ggplot() +
+  geom_col(data = summ, aes(x = condition, y = mean_pg_ml), fill = NA, colour = blue, width = 0.6, linewidth = 0.6) +
+  geom_errorbar(data = summ, aes(x = condition, ymin = mean_pg_ml - sd_pg_ml, ymax = mean_pg_ml + sd_pg_ml), width = 0.2, colour = blue, linewidth = 0.5) +
+  geom_jitter(data = samp, aes(x = condition, y = conc_pg_ml), width = 0.08, height = 0, colour = blue, size = 2.2, alpha = 0.9) +
+  geom_text(data = summ, aes(x = condition, y = mean_pg_ml + sd_pg_ml, label = sprintf("%.0f", mean_pg_ml)), vjust = -0.6, size = 3.2, colour = ink) +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.12))) +
+  labs(x = NULL, y = "IL-6 (pg/mL)", title = "IL-6 per condition",
+       subtitle = "Bar: mean ± SD of triplicate wells. Points: wells.") +
+  theme_course + theme(axis.text.x = element_text(angle = 20, hjust = 1))
+
+png(file.path(outdir, "elisa_figure.png"), width = 2000, height = 850, res = 200)
+grid::grid.newpage()
+grid::pushViewport(grid::viewport(layout = grid::grid.layout(1, 2)))
+print(p1, vp = grid::viewport(layout.pos.row = 1, layout.pos.col = 1))
+print(p2, vp = grid::viewport(layout.pos.row = 1, layout.pos.col = 2))
+invisible(dev.off())
+cat(sprintf("\nWrote %s, %s and %s\n", file.path(outdir, "elisa_results.csv"), file.path(outdir, "elisa_summary.csv"), file.path(outdir, "elisa_figure.png")))
+```
+
+---
+
+# Code: folder notes
+
+<!-- file: code/elisa/README.md -->
+
+## ELISA: standard curve and concentrations
+
+Template for P06. One script, one example dataset, runs end to end:
+
+```
+Rscript elisa_standard_curve.R                      # example data -> output/
+Rscript elisa_standard_curve.R my_plate.csv output  # your plate
+```
+
+Needs R with `ggplot2`; everything else is base R.
+
+### Input
+
+A tidy CSV with one row per well. Columns: `well`, `type` (`standard` or
+`sample`), `condition`, `standard_pg_ml` (standards; the 0 pg/mL rows are the
+blank), `lps_ng_ml` (optional), `replicate`, `od450`, `dilution_factor`.
+
+`example_data/il6_lps_raw264_2026-09.csv`: RAW 264.7, 2 × 10^4 cells per 96-well,
+LPS 0, 0.1, 1, 10, 100 ng/mL for 16 h in triplicate, mouse IL-6 ELISA (Invitrogen
+uncoated kit), standard 500 to 7.8 pg/mL in duplicate, read at 450 nm without
+reference filter on a Promega GloMax Discover, Zindel lab, September 2026. The
+plate also carried an osteopontin co-stimulation arm, which is not included.
+
+### What the script does
+
+1. Blank: mean OD of the 0 pg/mL standards, subtracted from every well.
+2. Standard curve: four-parameter logistic fit (`nls`), with a log-log linear
+   fallback on the non-zero standards if the 4PL does not converge. The console
+   says which one was used and gives R² on the standards.
+3. Samples: back-calculated from the curve, multiplied by `dilution_factor`,
+   flagged when the OD is below the lowest or above the highest standard.
+4. Output in `output/`: `elisa_results.csv` (per well), `elisa_summary.csv` (mean,
+   SD, n per condition, number of flagged wells), `elisa_figure.png` (standard
+   curve with samples overlaid; concentration per condition).
+
+The `output/` folder is not tracked; the figure for the protocol page is copied to
+`protocols/figures/`.
 
 ---
