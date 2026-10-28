@@ -31,8 +31,8 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
    visible to anyone. This is worth keeping in mind when the account is created.
 3. **A laptop**; any operating system works.
 4. Optionally, **your favourite chatty as a learning coach**. Chatty = LLM = AI tool,
-   e.g. Claude, ChatGPT, Gemini; you paste one link, the
-   [companion](#your-companion), into a session.
+   e.g. Claude, ChatGPT, Gemini; one prompt to paste and one file to attach, the
+   [companion](#your-companion).
 5. **The safety sheet**, read before the first day and signed after the briefing on
    the first morning ([safety](safety/README.md)). The signed sheet is your
    admission to the bench.
@@ -282,20 +282,17 @@ the written record the ETH biosafety concept asks for.
 
 ## Your companion
 
-Everything in this repository is also available as one file for your chatty, with
-its instructions at the top. Open a new session and paste this one line:
-
-```
-https://raw.githubusercontent.com/TizzuLab/blockrophage-course/main/companion/blockcourse-companion.md
-```
-
-That is all: the chatty reads the file and becomes a private Blockrophage companion
-that knows the schedule, the protocols and the background, answers course questions
-straight and coaches you on the science. If your chatty cannot open links, download
-[`companion/blockcourse-companion.md`](companion/blockcourse-companion.md) and attach
-it instead, with [`COMPANION_PROMPT.md`](COMPANION_PROMPT.md) as the first message.
-The companion will still be wrong sometimes; the repository, not the chatty, is the
-reference. The prompt is yours to change on your group's branch.
+Everything in this repository is also available as one file for your chatty. Three
+steps, once per session, spelled out on the [companion prompt page](COMPANION_PROMPT.md):
+copy the prompt from that page, download the
+[companion file](https://raw.githubusercontent.com/TizzuLab/blockrophage-course/main/companion/blockcourse-companion.md),
+then open a new session, paste the prompt as your first message, attach the file,
+send. Your chatty greets you as your Blockrophage companion, knows the schedule, the
+protocols and the background, answers course questions straight and coaches you on
+the science. A link alone is not enough: a model that only fetches the file treats
+it as reading material, and long files get cut off. The companion will still be
+wrong sometimes; the repository, not the chatty, is the reference. The prompt is
+yours to change on your group's branch.
 
 ## Appendix: open items before submission
 
