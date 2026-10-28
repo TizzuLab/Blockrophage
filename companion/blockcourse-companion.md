@@ -1,6 +1,6 @@
 # Blockrophage course: companion file
 
-Built 2026-10-28 from commit 31caf97 of the course repository. This single file
+Built 2026-10-28 from commit cfcecba of the course repository. This single file
 contains the complete course material for the ETH Zürich block course
 "Macrophage Biology: in vitro, in vivo, in silico" (Spring Semester 2027).
 Repository: https://github.com/TizzuLab/blockrophage-course. It is meant to be given to a language model
@@ -247,7 +247,7 @@ experiments and extensions (Section 6). What your group adds is your choice (tog
 **Failure rounds.** A failed experiment that is properly analysed is worth as much as one
 that worked.
 
-**Safety.** The safety rules (Claude add link please) need to be read and signed before experimental
+**Safety.** The [safety rules](safety/README.md) need to be read and signed before experimental
 work can start.
 
 **Attendance.** We have to check with the department whether you need to show up all the time, 
