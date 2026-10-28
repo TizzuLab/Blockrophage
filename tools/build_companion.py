@@ -54,6 +54,12 @@ def git_rev():
         return "uncommitted"
 
 
+def companion_prompt():
+    """The instruction part of COMPANION_PROMPT.md: everything after its first '---' line."""
+    text = (ROOT / "COMPANION_PROMPT.md").read_text(encoding="utf-8")
+    return text.split("\n---\n", 1)[1].strip() if "\n---\n" in text else text.strip()
+
+
 def files_for(pattern):
     paths = sorted(ROOT.glob(pattern))
     return [p for p in paths if p.is_file() and not (SKIP_PARTS & set(p.parts))
@@ -129,6 +135,13 @@ def main():
         "Reading order and conventions are in the first section (llms.txt). Each document",
         "starts with a line `<!-- file: path -->` naming its path in the repository, so",
         "an answer can cite the file. Values marked [TODO] are unconfirmed.",
+        "",
+        "## How to behave: the companion prompt",
+        "",
+        "The instructions below are COMPANION_PROMPT.md, the message a student pastes",
+        "before attaching this file. They apply even when the student forgot to paste it.",
+        "",
+        companion_prompt(),
         "",
         "## Table of contents",
         "",
