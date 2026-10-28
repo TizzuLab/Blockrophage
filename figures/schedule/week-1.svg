@@ -50,12 +50,13 @@
 <text x="90" y="274" font-size="12" fill="#FFFFFF" font-weight="bold">Introduction of the supervisors (what they do and why) and group</text>
 <text x="90" y="289" font-size="12" fill="#FFFFFF" font-weight="bold">formation</text>
 <rect x="642.0" y="256" width="558.0" height="184" fill="#FFE699" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="648" y="315" font-size="12" fill="#1A1A1A">Working with git and RStudio, step by step with the supervisors: GitHub account,</text>
-<text x="648" y="330" font-size="12" fill="#1A1A1A">install R, RStudio and Git if you did not at home, token, clone the course</text>
-<text x="648" y="345" font-size="12" fill="#1A1A1A">repository from RStudio, switch to your group&#x27;s branch, open the ELISA script and</text>
-<text x="648" y="360" font-size="12" fill="#1A1A1A">run it, push one line to the branch. Then build the rest of the environment with</text>
-<text x="648" y="375" font-size="12" fill="#1A1A1A">your chatty. Group plan (the drawing and your menu choices) committed to the</text>
-<text x="648" y="390" font-size="12" fill="#1A1A1A">group branch at 17:00.</text>
+<text x="648" y="308" font-size="12" fill="#1A1A1A">Working with git and RStudio, step by step with the supervisors: GitHub account,</text>
+<text x="648" y="322" font-size="12" fill="#1A1A1A">install R, RStudio and Git if you did not at home, token, clone the course</text>
+<text x="648" y="338" font-size="12" fill="#1A1A1A">repository from RStudio, switch to your group&#x27;s branch, open the ELISA script and</text>
+<text x="648" y="352" font-size="12" fill="#1A1A1A">run it. Then the first commit: a new text file in notebooks/ with your first</text>
+<text x="648" y="368" font-size="12" fill="#1A1A1A">notes, saved under a name you like, committed as &quot;hello world&quot; and pushed to your</text>
+<text x="648" y="382" font-size="12" fill="#1A1A1A">branch. Then the rest of the environment with your chatty. Group plan (the</text>
+<text x="648" y="398" font-size="12" fill="#1A1A1A">drawing and your menu choices) committed to the group branch at 17:00.</text>
 <rect x="84.0" y="302" width="558.0" height="138" fill="#FFE699" stroke="#BFBFBF" stroke-width="0.8"/>
 <text x="90" y="353" font-size="12" fill="#1A1A1A">Experiment planning with your supervisors: hand-draw the pathway you will test</text>
 <text x="90" y="368" font-size="12" fill="#1A1A1A">(ligand, receptor, output, how an inhibitor proves it, where the polarizer acts),</text>

@@ -88,7 +88,9 @@ its own branch of it, named by year and group (for example `2027/group-a`).
 **Groups and supervisors.** On day 1 we build 3-4 groups of 2-3 students with 1-2 supervisors 
 from the lab.
 
-**Lab notebook.** on paper or push your notes to git.
+**Lab notebook.** One text file per person in [`notebooks/`](notebooks/README.md) on
+your group's branch, started with a "hello world" commit on the Friday of week 1 and
+pushed at least once a day; paper notes are photographed into it.
 
 **Up your nerd factor.** Beyond the core programme there is a menu of optional
 experiments and extensions (Section 6). What your group adds is your choice (together with your supervisor).
@@ -124,7 +126,7 @@ F27.2, where each group has its own laminar flow hood reserved all day, every da
 
 ### Week 1: orientation (Thu 18 - Fri 19 March 2027)
 
-![Week 1: orientation (Thu 18 - Fri 19 March 2027)](figures/schedule/week-1.svg?v=54befed3)
+![Week 1: orientation (Thu 18 - Fri 19 March 2027)](figures/schedule/week-1.svg?v=e4d79287)
 
 ### Week 2: polarize and characterize (Tue 23 - Thu 25 March 2027)
 
