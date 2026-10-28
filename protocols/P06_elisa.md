@@ -1,4 +1,4 @@
-# P06 ELISA for IL-6 and TNF
+# P06 ELISA for IL-6 or TNF
 
 > **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage-course/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
@@ -14,9 +14,17 @@
 
 ## Purpose
 
-Quantify IL-6 and TNF in the challenge supernatants. These are the NF-κB outputs of
-the TLR pathway and the main readout of whether polarization primes or suppresses
-the response.
+Quantify IL-6 or TNF in the challenge supernatants. Both are NF-κB outputs of the
+TLR pathway and the main readout of whether polarization primes or suppresses the
+response. Your group chooses one, and the choice is part of the plan:
+
+- IL-6 accumulates over the night and is strongest in the overnight supernatant.
+  It is the cytokine the lab validated (worked example below).
+- TNF peaks 4 to 6 h after the stimulus; the overnight supernatant still contains
+  it, but less. A group that picks TNF either accepts a decayed signal or adds a
+  6 h arm (P04, step 6) and harvests it the same afternoon.
+
+A group that wants robust data picks IL-6.
 
 ## Materials
 

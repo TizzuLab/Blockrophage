@@ -123,7 +123,7 @@ F27.2, where each group has its own laminar flow hood reserved all day, every da
 
 ### Week 1: orientation (Thu 18 - Fri 19 March 2027)
 
-![Week 1: orientation (Thu 18 - Fri 19 March 2027)](figures/schedule/week-1.svg?v=1fbf6b15)
+![Week 1: orientation (Thu 18 - Fri 19 March 2027)](figures/schedule/week-1.svg?v=bdaa4f5f)
 
 ### Week 2: Exp 1, establish the line (Tue 23 - Thu 25 March 2027)
 
@@ -131,11 +131,11 @@ F27.2, where each group has its own laminar flow hood reserved all day, every da
 
 ### Week 3: Exp 2, challenge and read out (Tue 6 - Fri 9 April 2027)
 
-![Week 3: Exp 2, challenge and read out (Tue 6 - Fri 9 April 2027)](figures/schedule/week-3.svg?v=fede3ffe)
+![Week 3: Exp 2, challenge and read out (Tue 6 - Fri 9 April 2027)](figures/schedule/week-3.svg?v=c5b41659)
 
 ### Week 4: extensions, poster, presentations (Tue 13 - Fri 16 April 2027)
 
-![Week 4: extensions, poster, presentations (Tue 13 - Fri 16 April 2027)](figures/schedule/week-4.svg?v=a37f5851)
+![Week 4: extensions, poster, presentations (Tue 13 - Fri 16 April 2027)](figures/schedule/week-4.svg?v=87015b5b)
 
 <!-- schedule:end -->
 
@@ -160,14 +160,21 @@ will have taken this line from vial to vial yourselves. Protocols
 what is added: IFNγ, IL-4, or IFNγ with LPS, named M(IFNγ), M(IL-4) and M(IFNγ+LPS)
 after the stimulus since the 2014 nomenclature
 ([background](background/README.md#54-level-iii-function-and-activation-state)).
-Exactly that is added to wells of the same culture, with M(-) as the unstimulated
-reference, and the question is whether the states separate on the three readouts the
-field used to define them: cytokines in the supernatant (IL-6 and TNF by ELISA),
-nitric oxide (Griess assay) and surface markers (flow cytometry). If they separate,
-the paradigm has been built with your own hands. If they do not, that is a result
-too, and the first thing analysed is which readout failed. Protocols
+Your group picks one polarizer from a menu ([P04](protocols/P04_polarization.md)):
+IFNγ, IL-10, dexamethasone, IL-4, PGE2, or, as the lab's wild card, retinoic acid,
+the signal that gives peritoneal macrophages their identity. It is added to wells of
+the same culture, with M(-) as the unstimulated reference, and the question is
+whether the state separates from M(-) on the two readouts the field used to define
+it: cytokines in the supernatant (IL-6 or TNF by ELISA, your choice) and surface
+markers (flow cytometry), with intracellular Arg1 as a high-risk option for a group
+that wants to learn permeabilization. Only LPS has been validated in the lab; every
+other arm extends the data for the next iteration of the course, and a group that
+wants robust data can stay with LPS and IFNγ. If the state separates, the paradigm
+has been built with your own hands. If it does not, that is a result too, and the
+first thing analysed is which readout failed. Nitric oxide (Griess,
+[P07](protocols/P07_griess.md)) is an extension. Protocols
 [P04](protocols/P04_polarization.md), [P06](protocols/P06_elisa.md),
-[P07](protocols/P07_griess.md), [P08](protocols/P08_flow_cytometry.md).
+[P08](protocols/P08_flow_cytometry.md).
 
 **Experiment 3: does the profile hold true in vivo?** (dry lab, weeks 2 and 3) A
 dish has two states because two were created; a tissue did not read the textbook.
@@ -184,23 +191,28 @@ sections on
 and [the dataset](background/README.md#59-the-in-silico-dataset-and-how-single-cell-rna-sequencing-works);
 [analysis code](code/README.md).
 
-**Experiment 4: is the heuristic still useful?** (week 3, on the cells of
+**Experiment 4: is the heuristic still useful?** (week 3, on the same plate as
 Experiment 2) A model that fails the test of Experiment 3 may still predict
 something. The prediction built into M1/M2 is that the state a macrophage is in
-decides how it responds to the next danger signal. Exactly that is tested: M(-),
-M(IFNγ) and M(IL-4) are challenged through a pattern-recognition receptor, with LPS
-and with the PRR axis your group chose
-([background](background/README.md#56-sensing-danger-pattern-recognition-receptors)),
-one overnight arm, and the response is measured with the readouts of Experiment 2.
-M(IFNγ+LPS) is characterised but not re-challenged, because a cell that has already
-seen LPS shows endotoxin tolerance, itself a hint that the states are not fixed.
-Whatever is found, one fact is worth keeping in mind: after twenty years of the
+decides how it responds to the next danger signal. So on the first afternoon your
+group hand-draws the pathway it is going to test: which ligand, which receptor,
+which adaptor and output, how an inhibitor could prove that it is this receptor and
+not endotoxin in the tube, and where your polarizer should act on the pathway
+([background](background/README.md#56-sensing-danger-pattern-recognition-receptors)).
+The drawing is your group plan; it goes into the group branch and comes back on the
+poster, redrawn in the light of your data. The menu
+([P05](protocols/P05_prr_challenge.md)): PAMPs for TLR2, TLR3, TLR4, TLR7, TLR9 and
+Dectin-1, heat-killed bacteria, one DAMP (a necrotic lysate of your own cells), and
+two inhibitors, TAK-242 against TLR4 and polymyxin B against LPS itself. Polarizer
+and stimulus go on together overnight, with LPS on M(-) as the control every group
+shares, and the response is measured with the readouts of Experiment 2. Every group
+ends up with a different combination and the same schedule. Whatever is found, one fact is worth keeping in mind: after twenty years of the
 paradigm there is no approved therapy that targets macrophage polarization. A
 heuristic can be useful at the bench and still have limits in the body. Where those
 limits are is something we will think about together, with your data on the table.
 Protocols
 [P05](protocols/P05_prr_challenge.md), [P06](protocols/P06_elisa.md),
-[P07](protocols/P07_griess.md).
+[P08](protocols/P08_flow_cytometry.md).
 
 **Dry lab, every day.** Half of every day is spent at the keyboard, with the
 [analysis code](code/README.md): week 1 the environment, week 2 the templates on
@@ -224,7 +236,7 @@ what you could do, but the list is non-exhaustive.
 | Macrophages annotated | UMAP with Gata6+, Folr2+ Selenop+ and Trem2+ Spp1+ labelled, marker dot plot, cell counts |
 | Integration with an in vitro single-cell dataset | Integrated embedding with the accession named; percentage of in vivo macrophages mapping to any in vitro state |
 | Unpredicted figure, dataset or code | A figure or table not in the answer key, with claim, n and method |
-| qPCR (X01) | ΔΔCt of outputs and the receptor of your axis across states, with housekeepers named |
+| qPCR (X01) | ΔΔCt of outputs and the receptor of your pathway across states, with housekeepers named |
 | Primary peritoneal cells on the shared panel (X02) | Primary cells and polarized RAW cells in one gating figure; frequency of LPM and SPM with n samples |
 | F4/80 immunohistochemistry (X03) | Image with scale bar, controls named, tissue and expected F4/80 level stated |
 | Ex vivo LPS on primary peritoneal cells versus RAW | IL-6 bar plot with unstimulated controls for both cell types; n wells and samples |
@@ -237,11 +249,9 @@ what you could do, but the list is non-exhaustive.
 
 ## 7. Assessment
 
-The grade has two parts of equal weight. A written exam on the last Friday at 13:00,
-individual, gives 50% of the points. The other 50% is a group grade from the group
-branch: the poster as a document, scored without the students present, and the way
-there as recorded in the git history, which counts as much as the poster itself.
-Details are announced in the welcome session on the first day.
+Assessment. The grade has two parts: an assessment of the poster as a document, scored
+per group without the students present, and an oral assessment per student. 
+Weights and format are announced in the welcome session on the first day.
 
 ## 8. Writing, poster and presentation
 
@@ -281,7 +291,7 @@ will still be wrong sometimes; the repository, not the chatty, is the reference.
 - Surplus primary material for the extensions.
 - Pinned environment, fallback environment, chatty licensing for students.
 - Recognition of extensions (points or otherwise), atlas platform, prize and funding,
-  grading rules for block courses.
+  grading rules for block courses, poster printing.
 
 ---
 

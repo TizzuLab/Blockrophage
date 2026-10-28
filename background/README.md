@@ -358,7 +358,7 @@ fraction of the TNF and IL-6, while some other genes stay inducible (Biswas &
 Lopez-Collazo 2009). It protects the organism from lethal cytokine release and it
 ruins a naive experiment.
 
-Questions. Draw the plate map for your axis with every control you need, and say
+Questions. Draw the plate map for your pathway with every control you need, and say
 which control detects a contaminated reagent. Your IL-6 is lower in M(IL-4) than in
 M(-). List three different mechanisms that could explain that, and say which readout
 in your hands distinguishes them.
