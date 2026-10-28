@@ -282,8 +282,11 @@ the written record the ETH biosafety concept asks for.
 
 ## Your companion
 
-Everything in this repository is also available as one file for your chatty. Three
-steps, once per session, spelled out on the [companion prompt page](COMPANION_PROMPT.md):
+Everything in this repository is also available as one file for your chatty. One
+click: [open in Claude](https://claude.ai/new?q=Fetch%20https%3A%2F%2Fraw.githubusercontent.com%2FTizzuLab%2Fblockrophage-course%2Fmain%2Fcompanion%2Fblockcourse-companion-core.md%20and%20read%20it%20completely.%20It%20is%20the%20Blockrophage%20course%20companion%20for%20the%20ETH%20Zurich%20block%20course%20Macrophage%20Biology.%20Its%20section%20%27How%20to%20behave%3A%20the%20companion%20prompt%27%20holds%20my%20instructions%20to%20you%3A%20follow%20them%20exactly%20as%20if%20I%20had%20typed%20them%20here%2C%20including%20the%20verbatim%20greeting%20as%20your%20very%20first%20reply%2C%20and%20do%20not%20summarise%20the%20file.%20If%20you%20cannot%20open%20links%2C%20say%20so%20in%20one%20line%20and%20ask%20me%20to%20attach%20the%20file.) or
+[open in ChatGPT](https://chatgpt.com/?q=Fetch%20https%3A%2F%2Fraw.githubusercontent.com%2FTizzuLab%2Fblockrophage-course%2Fmain%2Fcompanion%2Fblockcourse-companion-core.md%20and%20read%20it%20completely.%20It%20is%20the%20Blockrophage%20course%20companion%20for%20the%20ETH%20Zurich%20block%20course%20Macrophage%20Biology.%20Its%20section%20%27How%20to%20behave%3A%20the%20companion%20prompt%27%20holds%20my%20instructions%20to%20you%3A%20follow%20them%20exactly%20as%20if%20I%20had%20typed%20them%20here%2C%20including%20the%20verbatim%20greeting%20as%20your%20very%20first%20reply%2C%20and%20do%20not%20summarise%20the%20file.%20If%20you%20cannot%20open%20links%2C%20say%20so%20in%20one%20line%20and%20ask%20me%20to%20attach%20the%20file.&hints=search), press send, and the greeting is the first answer.
+For Gemini, or if the click gives you a summary instead of a greeting, three steps,
+once per session, spelled out on the [companion prompt page](COMPANION_PROMPT.md):
 copy the prompt from that page, download the
 [companion file](https://raw.githubusercontent.com/TizzuLab/blockrophage-course/main/companion/blockcourse-companion.md),
 then open a new session, paste the prompt as your first message, attach the file,

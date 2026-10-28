@@ -4,7 +4,17 @@
 
 ## How to start your companion
 
-Three steps, once per session:
+One click, if your chatty can open links:
+
+[**Open in Claude**](https://claude.ai/new?q=Fetch%20https%3A%2F%2Fraw.githubusercontent.com%2FTizzuLab%2Fblockrophage-course%2Fmain%2Fcompanion%2Fblockcourse-companion-core.md%20and%20read%20it%20completely.%20It%20is%20the%20Blockrophage%20course%20companion%20for%20the%20ETH%20Zurich%20block%20course%20Macrophage%20Biology.%20Its%20section%20%27How%20to%20behave%3A%20the%20companion%20prompt%27%20holds%20my%20instructions%20to%20you%3A%20follow%20them%20exactly%20as%20if%20I%20had%20typed%20them%20here%2C%20including%20the%20verbatim%20greeting%20as%20your%20very%20first%20reply%2C%20and%20do%20not%20summarise%20the%20file.%20If%20you%20cannot%20open%20links%2C%20say%20so%20in%20one%20line%20and%20ask%20me%20to%20attach%20the%20file.) · [**Open in ChatGPT**](https://chatgpt.com/?q=Fetch%20https%3A%2F%2Fraw.githubusercontent.com%2FTizzuLab%2Fblockrophage-course%2Fmain%2Fcompanion%2Fblockcourse-companion-core.md%20and%20read%20it%20completely.%20It%20is%20the%20Blockrophage%20course%20companion%20for%20the%20ETH%20Zurich%20block%20course%20Macrophage%20Biology.%20Its%20section%20%27How%20to%20behave%3A%20the%20companion%20prompt%27%20holds%20my%20instructions%20to%20you%3A%20follow%20them%20exactly%20as%20if%20I%20had%20typed%20them%20here%2C%20including%20the%20verbatim%20greeting%20as%20your%20very%20first%20reply%2C%20and%20do%20not%20summarise%20the%20file.%20If%20you%20cannot%20open%20links%2C%20say%20so%20in%20one%20line%20and%20ask%20me%20to%20attach%20the%20file.&hints=search)
+
+The button opens a new session with a short message already typed in: fetch the
+core companion file and follow the instructions at its top. Press send, and the
+greeting should be the first answer. Gemini has no such link; use the three steps
+below. If the chatty answers with a summary instead of the greeting, use the three
+steps as well.
+
+Three steps, for any chatty, once per session:
 
 1. Copy the prompt below (the copy button at the top right of the box).
 2. Download the companion file: open
