@@ -500,23 +500,23 @@ lavage? What would a cell with a high M(IFNγ) score and a high M(IL-4) score me
 for the M1/M2 axis? A reviewer says "the two conditions are not integrated". What do
 they mean, and how would you check?
 
-## 5.10 Working with a language model as a scientist
+## 5.10 Working with a chatty as a scientist
 
-You will use a large language model to install software, write and debug analysis
+You will use a chatty to install software, write and debug analysis
 code, and probably to read papers. It will be fast and mostly right, and the mostly is
-the problem. Language models invent functions that do not exist in a package, choose
-default parameters silently, mis-state what a method assumes, and cite papers that
-were never written. They do all of this in confident prose. The availability of
+the problem. A chatty invents functions that do not exist in a package, chooses
+default parameters silently, mis-states what a method assumes, and cites papers that
+were never written. It does all of this in confident prose. The availability of
 plausible text now outgrows the availability of verified claims by orders of magnitude
 (Bergstrom & West 2020), and a scientist's job is to tell the two apart.
 
-Three habits protect you. Run the code and look at the object, not at the model's
+Three habits protect you. Run the code and look at the object, not at the chatty's
 description of the object. Reproduce a known result before you trust a new one, which
 is why the in silico challenge gives you code without figures. And write down every
 error you catch, because the habit is the skill.
 
-Questions. The model tells you that a Seurat function normalises "by default to
-10,000 counts per cell". How do you check in under a minute? A citation the model
+Questions. The chatty tells you that a Seurat function normalises "by default to
+10,000 counts per cell". How do you check in under a minute? A citation the chatty
 gave you has a real journal, a real year and a plausible author list. What else do
 you need?
 
