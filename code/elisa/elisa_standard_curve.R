@@ -104,19 +104,46 @@ theme_course <- theme_minimal(base_size = 11) +
         plot.title = element_text(colour = ink, face = "bold", size = 11),
         plot.subtitle = element_text(colour = muted, size = 9), plot.background = element_rect(fill = "white", colour = NA))
 
-xmin <- bottom_std / 2
-curve <- data.frame(x = exp(seq(log(xmin), log(top_std * 1.2), length.out = 200)))
+# The curve is drawn well beyond the standards so that the whole sigmoid is visible:
+# the kit range usually sits on the lower, nearly linear limb, and the upper plateau
+# of the 4PL often lies above what the reader can measure. The shaded band is the
+# range the standards cover; only samples inside it are trusted.
+if (method == "4PL") {
+  xmin <- min(bottom_std / 10, p["c"] / 300)
+  xmax <- max(top_std * 10, p["c"] * 300)
+} else {
+  xmin <- bottom_std / 10; xmax <- top_std * 10
+}
+curve <- data.frame(x = exp(seq(log(xmin), log(xmax), length.out = 400)))
 curve$y <- predict_od(curve$x)
 std_plot <- std[std$standard_pg_ml > 0, ]
 samp_plot <- samp[!is.na(samp$conc_pg_ml) & samp$conc_pg_ml > 0, ]
+ymax <- if (method == "4PL") max(p["d"], max(std$od_corr)) * 1.05 else max(curve$y) * 1.05
+log_breaks <- 10^seq(floor(log10(xmin)), ceiling(log10(xmax)))
 p1 <- ggplot() +
+  annotate("rect", xmin = bottom_std, xmax = top_std, ymin = -Inf, ymax = Inf, fill = "#E8F0FA", alpha = 0.6) +
+  annotate("text", x = sqrt(bottom_std * top_std), y = ymax * 0.72, label = sprintf("kit range\n%s to %s pg/mL", signif(bottom_std, 3), signif(top_std, 3)),
+           size = 3, colour = muted) +
   geom_line(data = curve, aes(x, y), colour = ink, linewidth = 0.6) +
   geom_point(data = std_plot, aes(standard_pg_ml, od_corr), shape = 21, fill = "white", colour = ink, size = 2.4, stroke = 0.6) +
   geom_point(data = samp_plot, aes(conc_pg_ml, od_corr), colour = blue, size = 2.4) +
-  scale_x_log10(breaks = c(10, 30, 100, 300)) +
-  labs(x = "IL-6 standard (pg/mL, log scale)", y = "OD 450 nm, blank-subtracted",
-       title = "Standard curve", subtitle = sprintf("%s fit, R² = %.3f. Open circles: standards. Blue: samples.", method, r2)) +
+  scale_x_log10(breaks = log_breaks, labels = function(v) format(v, big.mark = ",", scientific = FALSE, trim = TRUE)) +
+  scale_y_continuous(limits = c(0, ymax), expand = expansion(mult = c(0, 0.02))) +
+  labs(x = "IL-6 (pg/mL, log scale)", y = "OD 450 nm, blank-subtracted",
+       title = "Standard curve, drawn to both plateaus",
+       subtitle = sprintf("%s fit, R² = %.3f. Open circles: standards. Blue: samples.", method, r2)) +
   theme_course
+if (method == "4PL") {
+  p1 <- p1 +
+    geom_hline(yintercept = c(p["a"], p["d"]), linetype = "22", colour = muted, linewidth = 0.4) +
+    annotate("text", x = xmax, y = p["d"], label = sprintf("upper plateau, OD %.1f (beyond the reader)", p["d"]),
+             hjust = 1, vjust = 1.5, size = 3, colour = muted) +
+    annotate("text", x = xmax, y = p["a"], label = sprintf("lower plateau, OD %.2f", p["a"]),
+             hjust = 1, vjust = -0.5, size = 3, colour = muted) +
+    geom_vline(xintercept = p["c"], linetype = "22", colour = muted, linewidth = 0.4) +
+    annotate("text", x = p["c"], y = ymax * 0.3, label = sprintf("inflection\nc = %.0f pg/mL", p["c"]),
+             hjust = -0.08, size = 3, colour = muted)
+}
 
 summ$x <- as.numeric(summ$condition); samp$x <- as.numeric(samp$condition)
 p2 <- ggplot() +
