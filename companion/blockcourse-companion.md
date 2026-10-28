@@ -1,6 +1,6 @@
 # Blockrophage course: companion file
 
-Built 2026-10-28 from commit b106917 of the course repository. This single file
+Built 2026-10-28 from commit d0623c4 of the course repository. This single file
 contains the complete course material for the ETH Zürich block course
 "Macrophage Biology: in vitro, in vivo, in silico" (Spring Semester 2027).
 Repository: https://github.com/TizzuLab/blockrophage-course. It is meant to be given to a language model
@@ -274,7 +274,7 @@ F27.2, where each group has its own laminar flow hood reserved all day, every da
 
 #### Week 1: orientation (Thu 18 - Fri 19 March 2027)
 
-![Week 1: orientation (Thu 18 - Fri 19 March 2027)](figures/schedule/week-1.svg?v=1fbf6b15)
+![Week 1: orientation (Thu 18 - Fri 19 March 2027)](figures/schedule/week-1.svg?v=bdaa4f5f)
 
 #### Week 2: Exp 1, establish the line (Tue 23 - Thu 25 March 2027)
 
@@ -282,11 +282,11 @@ F27.2, where each group has its own laminar flow hood reserved all day, every da
 
 #### Week 3: Exp 2, challenge and read out (Tue 6 - Fri 9 April 2027)
 
-![Week 3: Exp 2, challenge and read out (Tue 6 - Fri 9 April 2027)](figures/schedule/week-3.svg?v=fede3ffe)
+![Week 3: Exp 2, challenge and read out (Tue 6 - Fri 9 April 2027)](figures/schedule/week-3.svg?v=c5b41659)
 
 #### Week 4: extensions, poster, presentations (Tue 13 - Fri 16 April 2027)
 
-![Week 4: extensions, poster, presentations (Tue 13 - Fri 16 April 2027)](figures/schedule/week-4.svg?v=ed95abba)
+![Week 4: extensions, poster, presentations (Tue 13 - Fri 16 April 2027)](figures/schedule/week-4.svg?v=87015b5b)
 
 <!-- schedule:end -->
 
@@ -311,14 +311,21 @@ will have taken this line from vial to vial yourselves. Protocols
 what is added: IFNγ, IL-4, or IFNγ with LPS, named M(IFNγ), M(IL-4) and M(IFNγ+LPS)
 after the stimulus since the 2014 nomenclature
 ([background](background/README.md#54-level-iii-function-and-activation-state)).
-Exactly that is added to wells of the same culture, with M(-) as the unstimulated
-reference, and the question is whether the states separate on the three readouts the
-field used to define them: cytokines in the supernatant (IL-6 and TNF by ELISA),
-nitric oxide (Griess assay) and surface markers (flow cytometry). If they separate,
-the paradigm has been built with your own hands. If they do not, that is a result
-too, and the first thing analysed is which readout failed. Protocols
+Your group picks one polarizer from a menu ([P04](protocols/P04_polarization.md)):
+IFNγ, IL-10, dexamethasone, IL-4, PGE2, or, as the lab's wild card, retinoic acid,
+the signal that gives peritoneal macrophages their identity. It is added to wells of
+the same culture, with M(-) as the unstimulated reference, and the question is
+whether the state separates from M(-) on the two readouts the field used to define
+it: cytokines in the supernatant (IL-6 or TNF by ELISA, your choice) and surface
+markers (flow cytometry), with intracellular Arg1 as a high-risk option for a group
+that wants to learn permeabilization. Only LPS has been validated in the lab; every
+other arm extends the data for the next iteration of the course, and a group that
+wants robust data can stay with LPS and IFNγ. If the state separates, the paradigm
+has been built with your own hands. If it does not, that is a result too, and the
+first thing analysed is which readout failed. Nitric oxide (Griess,
+[P07](protocols/P07_griess.md)) is an extension. Protocols
 [P04](protocols/P04_polarization.md), [P06](protocols/P06_elisa.md),
-[P07](protocols/P07_griess.md), [P08](protocols/P08_flow_cytometry.md).
+[P08](protocols/P08_flow_cytometry.md).
 
 **Experiment 3: does the profile hold true in vivo?** (dry lab, weeks 2 and 3) A
 dish has two states because two were created; a tissue did not read the textbook.
@@ -335,23 +342,28 @@ sections on
 and [the dataset](background/README.md#59-the-in-silico-dataset-and-how-single-cell-rna-sequencing-works);
 [analysis code](code/README.md).
 
-**Experiment 4: is the heuristic still useful?** (week 3, on the cells of
+**Experiment 4: is the heuristic still useful?** (week 3, on the same plate as
 Experiment 2) A model that fails the test of Experiment 3 may still predict
 something. The prediction built into M1/M2 is that the state a macrophage is in
-decides how it responds to the next danger signal. Exactly that is tested: M(-),
-M(IFNγ) and M(IL-4) are challenged through a pattern-recognition receptor, with LPS
-and with the PRR axis your group chose
-([background](background/README.md#56-sensing-danger-pattern-recognition-receptors)),
-one overnight arm, and the response is measured with the readouts of Experiment 2.
-M(IFNγ+LPS) is characterised but not re-challenged, because a cell that has already
-seen LPS shows endotoxin tolerance, itself a hint that the states are not fixed.
-Whatever is found, one fact is worth keeping in mind: after twenty years of the
+decides how it responds to the next danger signal. So on the first afternoon your
+group hand-draws the pathway it is going to test: which ligand, which receptor,
+which adaptor and output, how an inhibitor could prove that it is this receptor and
+not endotoxin in the tube, and where your polarizer should act on the pathway
+([background](background/README.md#56-sensing-danger-pattern-recognition-receptors)).
+The drawing is your group plan; it goes into the group branch and comes back on the
+poster, redrawn in the light of your data. The menu
+([P05](protocols/P05_prr_challenge.md)): PAMPs for TLR2, TLR3, TLR4, TLR7, TLR9 and
+Dectin-1, heat-killed bacteria, one DAMP (a necrotic lysate of your own cells), and
+two inhibitors, TAK-242 against TLR4 and polymyxin B against LPS itself. Polarizer
+and stimulus go on together overnight, with LPS on M(-) as the control every group
+shares, and the response is measured with the readouts of Experiment 2. Every group
+ends up with a different combination and the same schedule. Whatever is found, one fact is worth keeping in mind: after twenty years of the
 paradigm there is no approved therapy that targets macrophage polarization. A
 heuristic can be useful at the bench and still have limits in the body. Where those
 limits are is something we will think about together, with your data on the table.
 Protocols
 [P05](protocols/P05_prr_challenge.md), [P06](protocols/P06_elisa.md),
-[P07](protocols/P07_griess.md).
+[P08](protocols/P08_flow_cytometry.md).
 
 **Dry lab, every day.** Half of every day is spent at the keyboard, with the
 [analysis code](code/README.md): week 1 the environment, week 2 the templates on
@@ -375,7 +387,7 @@ what you could do, but the list is non-exhaustive.
 | Macrophages annotated | UMAP with Gata6+, Folr2+ Selenop+ and Trem2+ Spp1+ labelled, marker dot plot, cell counts |
 | Integration with an in vitro single-cell dataset | Integrated embedding with the accession named; percentage of in vivo macrophages mapping to any in vitro state |
 | Unpredicted figure, dataset or code | A figure or table not in the answer key, with claim, n and method |
-| qPCR (X01) | ΔΔCt of outputs and the receptor of your axis across states, with housekeepers named |
+| qPCR (X01) | ΔΔCt of outputs and the receptor of your pathway across states, with housekeepers named |
 | Primary peritoneal cells on the shared panel (X02) | Primary cells and polarized RAW cells in one gating figure; frequency of LPM and SPM with n samples |
 | F4/80 immunohistochemistry (X03) | Image with scale bar, controls named, tissue and expected F4/80 level stated |
 | Ex vivo LPS on primary peritoneal cells versus RAW | IL-6 bar plot with unstimulated controls for both cell types; n wells and samples |
@@ -457,7 +469,7 @@ dark (plenary) blocks are mandatory, everything else is the default plan for all
 - 10:00-12:00: [Plenary, lecture, debrief] Lecture: tissue macrophages and nomenclature (Joel Zindel)
 - 12:00-13:00: Lunch
 - 13:00-14:00: [Plenary, lecture, debrief] Group formation
-- 14:00-17:00: [Dry lab and desk work] Experiment planning with your supervisors: choose your PRR axis and your extension. Read P01, P02 and P09 for Friday and Tuesday.
+- 14:00-17:00: [Dry lab and desk work] Experiment planning with your supervisors: hand-draw the pathway you will test (ligand, receptor, output, how an inhibitor proves it), pick your polarizer, stimulus and cytokine (P04, P05, P06) and your extension. Read P01, P02 and P09 for Friday and Tuesday.
 - Staff: Rooms, safety officer. Groups formed at 13:00; supervisors sit with their group from then on.
 - Resources: Conference room HPL F22 for lectures and dry lab.
 
@@ -465,7 +477,7 @@ dark (plenary) blocks are mandatory, everything else is the default plan for all
 
 - 09:00-12:00: [Wet lab Exp 1] Hands-on introduction to mammalian cell culture with the staff culture: hood and sterile technique, microscope, P02 scrape, count, split and seed, cell counter. Lab tour.
 - 12:00-13:00: Lunch
-- 13:00-17:00: [Dry lab and desk work] Dry lab setup: clone the course repository, build the environment with your chatty, run the ELISA template on example data. Group plan submitted at 17:00.
+- 13:00-17:00: [Dry lab and desk work] Dry lab setup: clone the course repository, build the environment with your chatty, run the ELISA template on example data. Group plan (the drawing and your menu choices) committed to the group branch at 17:00.
 - Staff: Staff culture split and counted, one flask per group at 09:00. Dry lab: walk around, unblock installs. Fallback environment ready [TODO]. Collect the group plans at 17:00.
 - Resources: 4 hoods HPL F27.2, one per group, available at all times. Cell counter. Conference room HPL F22 for lectures and dry lab. Own laptops, Wi-Fi.
 
@@ -507,9 +519,9 @@ dark (plenary) blocks are mandatory, everything else is the default plan for all
 
 - 09:00-12:00: Your other lectures (not course time)
 - 12:00-13:00: Lunch
-- 13:00-16:00: [Wet lab Exp 2] P02 Plate cells from the staff culture, spin the plate down, 2 h to adhere [TODO: confirm before the course that RAW cells adhere in 2 h after a spin]. Meanwhile P01 re-thaw your own vial (viability = Exp 1 readout). Then P05 Challenge overnight with LPS.
+- 13:00-16:00: [Wet lab Exp 2] P02 Plate cells from the staff culture, spin the plate down, 2 h to adhere [TODO: confirm before the course that RAW cells adhere in 2 h after a spin]. Meanwhile P01 re-thaw your own vial (viability = Exp 1 readout). Then P04 and P05 together: your polarizer and your stimulus, with LPS on M(-) as everyone's control, overnight.
 - 16:00-17:00: [Plenary, lecture, debrief] Cutting Edge Immunology Seminar 16:30-17:30 (tbd)
-- Staff: Staff culture split Fri 2 Apr, counted at 12:30: enough cells to plate four groups. Plate maps checked before anyone pipettes. LPS aliquots at working concentration. Supervisor at the hood for the re-thaw.
+- Staff: Staff culture split Fri 2 Apr, counted at 12:30: enough cells to plate four groups. Plate maps checked before anyone pipettes. LPS, polarizers, stimuli and inhibitors at working concentration. Supervisor at the hood for the re-thaw.
 - Resources: 4 hoods HPL F27.2, one per group, available at all times. Plate centrifuge.
 
 ##### Wed 7 Apr
@@ -546,7 +558,7 @@ dark (plenary) blocks are mandatory, everything else is the default plan for all
 
 - 09:00-12:00: Your other lectures (not course time)
 - 12:00-13:00: Lunch
-- 13:00-16:00: [Extension / nerd factor] Extension of your choice (bench steps), or rescue path: repeat Exp 2 (plate, spin, 2 h, LPS challenge overnight)
+- 13:00-16:00: [Extension / nerd factor] Repeat of Exp 2, more in vitro conditions, or something else entirely: your extension, or the rescue path (plate, spin, 2 h, challenge overnight)
 - 16:00-17:00: [Plenary, lecture, debrief] Cutting Edge Immunology Seminar 16:30-17:30 (tbd)
 - Staff: Reagents for the extensions agreed on Fri 9 Apr. Staff culture ready for rescue groups to plate.
 - Resources: 4 hoods HPL F27.2, one per group, available at all times. Extension-specific instruments as agreed.
@@ -606,11 +618,11 @@ P-files are the core programme, X-files are optional extensions (Section 6 of th
 | P01 | RAW 264.7: thaw, expand, growth curve | Exp 1 | 45 min day 1, 20 min/day after | 4 days | hood, incubator, centrifuge, counter, microscope |
 | P02 | RAW 264.7: scrape, count, split, seed | Exp 1, Exp 2 | 45 min | 24 h before stimulation | hood, incubator, centrifuge, counter |
 | P03 | RAW 264.7: freeze and re-thaw own stock | Exp 1 | 45 min + 45 min | overnight at −80 °C, nitrogen over the break | hood, centrifuge, freezing container, −80 °C, liquid nitrogen |
-| P04 | Polarization | Exp 2 | 45 min + 30 min wash | 24 h | hood, incubator, vortex |
-| P05 | PRR challenge | Exp 2 | 45 min + 45 min harvest | 16 h (overnight) | hood, incubator, plate centrifuge, −20 °C |
-| P06 | ELISA IL-6 and TNF | Exp 2 | 3–4 h + coating the day before | 2 days | plate reader (450 nm), multichannel pipette |
-| P07 | Griess assay | Exp 2 | 1 h | 1 h | plate reader |
-| P08 | Flow cytometry of polarized RAW cells | Exp 2 (core), X02 | 2 h stain + 1 h acquisition | half day | hood, cooled plate centrifuge, heating block, cytometer slot, FlowJo seat |
+| P04 | Polarization: the menu | Exp 2, Exp 4 | 45 min | overnight, with P05 | hood, incubator, vortex |
+| P05 | Danger-signal challenge: PAMPs, DAMPs, inhibitors | Exp 2, Exp 4 | 45 min + 45 min harvest | overnight, about 18 h | hood, incubator, plate centrifuge, −20 °C |
+| P06 | ELISA IL-6 or TNF | Exp 2, Exp 4 | 3–4 h + coating the day before | 2 days | plate reader (450 nm), multichannel pipette |
+| P07 | Griess assay | Extension | 1 h | 1 h | plate reader |
+| P08 | Flow cytometry of polarized RAW cells | Exp 2, Exp 4 (core), X02 | 2 h stain + 1 h acquisition | half day | hood, cooled plate centrifuge, heating block, cytometer slot, FlowJo seat |
 | P09 | MTT assay: metabolic activity as a proxy for cell number | Exp 1 (standard curve, growth curve); optional Exp 2 and 4 | 40 min + 20 min per read day | 3.5 h per read, same day | hood, incubator, plate reader (560 or 570 nm plus reference), multichannel pipette |
 | X01 | RNA isolation and qPCR | Extension | 1 h + 1.5 days | 6 h arm, then 2 days | hood, −80 °C, RNA bench, NanoDrop, thermal cycler, LightCycler 480 II |
 | X02 | Peritoneal cells on the shared flow panel | Extension | 30 min + staining | half day, with cytometer slot | surplus peritoneal cell suspension provided by staff, ice, cooled centrifuge, cytometer slot |
@@ -620,10 +632,11 @@ P-files are the core programme, X-files are optional extensions (Section 6 of th
 
 - P09 plate is seeded on the P01 thaw day from the same suspension and read on four
   consecutive days; the P01 flask count of the same day is its control.
-- P02 plates are seeded 24 h before P04.
-- P04 runs 24 h, then wash, then P05 runs 16 h overnight; P08 uses the
-  unchallenged wells of P04 on the day of the P05 challenge.
-- P06 and P07 run on the P05 supernatants, the same day or later from frozen aliquots.
+- P02 plates are seeded on Tuesday 13:00 of week 3, spun down and left 2 h to
+  adhere; P04 and P05 go on together at about 15:00, one overnight step.
+- P05 harvests on Wednesday 09:00; P08 stains the cells the same afternoon.
+- P06 runs on the P05 supernatants on Thursday from frozen aliquots; P07
+  (extension) the same way.
 - P03 vials are re-thawed on the Tuesday after the break; Exp 2 plates come from the
   staff stock.
 - X02 needs a cytometer slot on the day the peritoneal cells are available; X03
@@ -980,35 +993,56 @@ the notebook. One line on the poster: viability after freeze and thaw.
 
 <!-- file: protocols/P04_polarization.md -->
 
-## P04 Polarization of RAW 264.7
+## P04 Polarization of RAW 264.7: the menu
 
 > **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage-course/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
 | | |
 |---|---|
 | ID | P04 |
-| Used in | Exp 2 |
-| Hands-on time | 45 min to prepare the stimuli and stimulate, 30 min to wash |
-| Wall-clock time | 24 h |
+| Used in | Exp 2 and Exp 4, on one plate with P05 |
+| Hands-on time | 45 min to prepare the stimuli and stimulate |
+| Wall-clock time | overnight, about 18 h, together with the P05 challenge |
 | Resources | hood, incubator shelf, vortex |
-| Depends on | P02 plates seeded 24 h earlier (96-well for supernatants, 6-well for flow, 24-well for the RNA arm) |
+| Depends on | P02 plates seeded, spun down and left 2 h to adhere on the same afternoon |
 | Lab SOP | Zindel lab "RAW 264.7 polarisation" (v1.0, 2025-12-08): 96-well format, 100× stimulus stocks, master mixes. The SOP wins over this page. |
 
 ### Purpose
 
-Generate the four in vitro states that the course compares with tissue macrophages:
-M(-), M(IFNγ), M(IL-4) and M(IFNγ+LPS), named after their stimulus as the field
-agreed in 2014. The states are then challenged (P05), read by ELISA and Griess
-(P06, P07) and phenotyped on the cytometer (P08).
+Give your cells one defined signal and ask whether it changes what they are and how
+they answer danger. Your group picks one polarizer from the menu below; M(-), the
+unstimulated culture, is the reference for everything. The polarizer and the challenge
+(P05) go onto the plate together on Tuesday afternoon, one overnight step, which is
+how M(IFNγ+LPS) of the 2014 nomenclature is made and how the suppression by IL-10 or
+glucocorticoids was described. The textbook alternative, 18 h of polarizer first and
+a 6 h challenge on Wednesday, is possible if your supervisor agrees and you accept a
+late Wednesday (step 6).
 
-The lab's own stimulation protocol uses an LPS dose ladder (0.1 to 100 ng/mL) on
-RAW 264.7 in 96-well plates. This page keeps its format and its way of preparing
-stimuli, and adds the cytokine states the course needs.
+### The menu
+
+| Polarizer | Working concentration | What it does in RAW 264.7 | Safe readout | Risk |
+|---|---|---|---|---|
+| IFNγ | 20 ng/mL | MHC-II and CD86 up, iNOS primed, TNF and IL-6 amplified with LPS. This is M(IFNγ) and, with LPS, M(IFNγ+LPS) | flow (MHC-II, CD86) and ELISA | low |
+| IL-10 | 20 ng/mL | TNF and IL-6 suppressed through STAT3 and SOCS3 | ELISA (suppression) | low; no positive surface marker on the panel |
+| Dexamethasone | 100 nM | TNF, IL-6 and NO suppressed through the glucocorticoid receptor; the drug every patient on steroids gets | ELISA (suppression) | low; cheap and stable; needs a vehicle control |
+| IL-4 | 20 ng/mL | Arg1, Chil3, Retnla and Mrc1 mRNA up, LPS response dampened. This is M(IL-4) | qPCR Arg1 (X01); ELISA (suppression) | medium: CD206 by flow is weak in this line; intracellular Arg1 (P08) is the high-risk flow option |
+| PGE2 | 1 µM | IL-10 up and TNF down through cAMP | ELISA | medium; less canonical; vehicle control |
+| ATRA, all-trans retinoic acid | 1 µM, from a DMSO stock, in the dark | In vivo the signal that induces GATA6 and the peritoneal macrophage identity; in vitro it dampens TNF and NO and helps IL-4 induce Arg1. Whether it induces Gata6 in RAW 264.7 is not known | qPCR Gata6, Arg1, Icam2 (X01) | high: the lab's wild card, outcome unknown; for a group that takes the qPCR extension |
+
+> **To verify:** LPS is the only stimulus validated in the lab (100 ng/mL, 16 h,
+> see P06). Every row above is a literature dose; working concentrations, suppliers
+> and catalogue numbers `[TODO]`. A group that wants robust data stays with LPS on
+> M(-) and adds IFNγ. Everything else extends the data for the next iteration of the
+> course, and that is said on the poster.
 
 ### Materials
 
-- Recombinant mouse IFNγ, recombinant mouse IL-4 `[TODO: supplier, catalogue
-  number, stock concentration, aliquot storage; the lab has not used these yet]`
+- Your polarizer `[TODO: supplier, catalogue number, stock concentration, aliquot
+  storage; the lab has not used these yet]`. Recombinant mouse IFNγ, IL-4 and IL-10
+  carrier-free, stocks at 100 µg/mL in PBS with 0.1% BSA, aliquoted at −80 °C; a
+  carrier-free cytokine diluted without BSA sticks to the plastic. Dexamethasone and
+  ATRA as 1 mM stocks in DMSO, PGE2 as 10 mM in ethanol; the vehicle control is the
+  same solvent at the same final dilution (0.1%).
 - LPS, E. coli O111:B4, ultrapure, lab stock 2.5 mg/mL `[TODO: supplier and
   catalogue number of the lab's stock]`
 - Complete medium, warm (recipe in P01); DPBS, warm
@@ -1017,118 +1051,150 @@ stimuli, and adds the cytokine states the course needs.
 
 ### Before you start
 
-- Plate map from P02 in front of you. Each state has its challenge wells (P05) and
-  its unchallenged wells for flow cytometry (P08).
+- The plate map is shared with P05 and is drawn in the notebook before anything is
+  pipetted: the six conditions below in triplicate, plus the inhibitor wells of P05,
+  plus one set of unstimulated and polarized wells on the flow plate for P08.
 - Stimuli are added as 100× stocks in complete medium, 1 part in 100, so the medium
   on the cells is replaced once and every well gets the same volume of additive.
 - Vortex the LPS vial before use and between every dilution step: LPS aggregates.
+- Retinoic acid: keep the stock and the dilutions in the dark, make the 100× stock
+  fresh on the day; serum contains retinoids, so M(-) is not retinoid-free.
 
 ### Procedure
 
 1. LPS 100× stock. Dilute the lab stock stepwise in complete medium, as the lab SOP
    does:
-
    | Tube | From | Add | Result | 100× for |
    |---|---|---|---|---|
    | L1 | LPS stock (2.5 mg/mL) | 2 µL + 498 µL medium | 10,000 ng/mL | 100 ng/mL |
    | L2 | L1 | 50 µL + 450 µL medium | 1,000 ng/mL | 10 ng/mL |
-
    L1 is the tube used here and in P05; the full ladder (L3, L4) is for the
    dose-response extension.
-
-2. Cytokine 100× stocks: dilute IFNγ and IL-4 to 2 µg/mL in complete medium
-   (100× of 20 ng/mL) `[TODO: check against the supplier's recommended working
-   range]`.
-3. Master mixes, one per state. Per 700 µL of mix add 7 µL of each 100× stock (or
-   7 µL plain medium for M(-)). 700 µL feeds three 96-well wells at 200 µL; scale
-   up for the 24-well (500 µL per well) and 6-well (2 mL per well) plates and add
-   dead volume. Vortex briefly.
-
-   | State | Additive per 700 µL | Final concentration | Time |
-   |---|---|---|---|
-   | M(-) | 7 µL medium | – | 24 h |
-   | M(IFNγ) | 7 µL IFNγ 100× | 20 ng/mL | 24 h |
-   | M(IL-4) | 7 µL IL-4 100× | 20 ng/mL | 24 h |
-   | M(IFNγ+LPS) | 7 µL IFNγ 100× + 7 µL L1 | 20 ng/mL + 100 ng/mL | 24 h |
-
-4. Remove the old medium from the cells and add the state mix according to the
-   plate map: 200 µL per 96-well, 500 µL per 24-well, 2 mL per 6-well. Record the
-   clock time.
-5. Incubate 24 h at 37 °C, 5% CO2.
-
-   > **To verify:** the lab's validated LPS stimulation runs 16 h, not 24 h. The
-   > 24 h polarization follows the 2014 nomenclature paper; confirm in the first run
-   > that 24 h of IFNγ or IL-4 gives a visible difference in P08.
-
-6. Wash: aspirate, add warm DPBS gently along the well wall, aspirate; repeat once.
-   Add fresh warm complete medium. Every state is washed, including M(-).
-7. Hand the plates to P05 (challenge) and keep the unchallenged wells of every
-   state for P08.
+2. Polarizer 100× stock in complete medium: IFNγ, IL-4 or IL-10 at 2 µg/mL (100× of
+   20 ng/mL); dexamethasone at 10 µM; PGE2 at 100 µM; ATRA at 100 µM. Vehicle 100×:
+   10% DMSO or ethanol in medium, for a final 0.1% `[TODO: check against the
+   supplier's recommended range]`.
+3. Master mixes, one per condition. Per 700 µL of medium add 7 µL of every 100×
+   stock the condition contains and 7 µL plain medium or vehicle where it does not.
+   700 µL feeds three 96-well wells at 200 µL; scale up for the flow plate (2 mL per
+   6-well) and add dead volume. Vortex briefly.
+   | Condition | Additives | Why |
+   |---|---|---|
+   | M(-) | medium (vehicle) | the reference |
+   | M(-) + LPS | L1 | the control every group shares |
+   | M(pol) | your polarizer | what the polarizer does alone: flow and baseline cytokine |
+   | M(pol) + LPS | polarizer + L1 | does the state change the LPS answer |
+   | M(-) + your stimulus | P05 stimulus | your pathway |
+   | M(pol) + your stimulus | polarizer + P05 stimulus | your pathway in your state |
+   The inhibitor wells of P05 are added to this list where your plan has them.
+4. At 2 h after plating (the spun plate of P02), remove the medium and add the
+   condition mix according to the plate map: 200 µL per 96-well, 2 mL per 6-well.
+   Record the clock time.
+5. Incubate overnight at 37 °C, 5% CO2. Harvest with P05 on Wednesday at 09:00.
+6. Priming alternative, only with your supervisor's agreement: polarizer alone on
+   Tuesday; on Wednesday at 09:00 aspirate, add warm DPBS gently along the well
+   wall, aspirate, repeat once, add the P05 condition mixes, challenge 6 h, harvest
+   at 15:00. TNF is at its peak then and IL-6 well up; the flow staining of that
+   evening starts late.
 
 ### Controls
 
-- M(-) is the reference for every comparison.
-- M(IFNγ+LPS) is characterised but not re-challenged with LPS: a state that has seen
-  LPS shows endotoxin tolerance and would confuse the challenge experiment. Seeing
-  tolerance on purpose is an extension (see Section 6 of the script).
+- M(-) is the reference for every comparison; the vehicle control stands in for it
+  where the polarizer has a solvent.
+- M(-) + LPS is the positive control every group shares; if it is negative, the
+  reagent or the cells are the problem, not your polarizer.
+- Endotoxin tolerance: a cell that has already seen LPS answers the next LPS weakly.
+  Priming with LPS on purpose, and seeing the tolerance, is an extension (Section 6
+  of the script).
 
 ### Checkpoints
 
-- After 24 h: M(IFNγ+LPS) wells look different, cells spread and often larger; M(IL-4)
-  wells look like M(-). If all four states look identical, check the stock
-  dilutions.
+- At harvest: LPS wells look activated, cells spread and often larger; IFNγ wells
+  spread; dexamethasone and IL-10 wells look like M(-) or calmer. If every condition
+  looks identical, check the stock dilutions before you blame the biology.
 
 ### Known failure modes
 
-- No difference between states: cytokine inactive (freeze-thawed aliquot, wrong
-  dilution) or cells overgrown at stimulation. Check the plate photograph from P02.
+- No difference between conditions: cytokine inactive (freeze-thawed aliquot,
+  carrier-free protein diluted without BSA, wrong dilution) or cells overgrown at
+  stimulation. Check the plate photograph from P02.
+- Suppression everywhere, including M(-): vehicle above 0.1%, or the cells were
+  unhappy after the spin.
 - LPS wells inconsistent: LPS not vortexed, aggregates pipetted unevenly.
-- Cells detached after washing: DPBS added onto the cells instead of along the
-  wall.
+- Cells detached after a wash (step 6): DPBS added onto the cells instead of along
+  the wall.
 
 ### Output
 
-Plate map with the stimulation and wash times, lot numbers and dilution tubes of the
-stimuli, and the photograph of each state after 24 h.
+Plate map with the stimulation time, lot numbers and dilution tubes of the stimuli,
+and the photograph of each condition before harvest.
 
 ---
 
 <!-- file: protocols/P05_prr_challenge.md -->
 
-## P05 PRR challenge
+## P05 Danger-signal challenge: PAMPs, DAMPs and inhibitors
 
 > **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage-course/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
 | | |
 |---|---|
 | ID | P05 |
-| Used in | Exp 2 |
+| Used in | Exp 2 and Exp 4, on one plate with P04 |
 | Hands-on time | 45 min to stimulate, 45 min to harvest |
-| Wall-clock time | overnight, about 20 h in the course rhythm (the lab validated 16 h) |
+| Wall-clock time | overnight, about 18 h in the course rhythm (the lab validated 16 h) |
 | Resources | hood, incubator shelf, plate centrifuge, −20 °C freezer |
-| Depends on | P04 completed and washed |
+| Depends on | P02 plates spun down and adhered for 2 h; the P04 master mixes |
 | Lab SOP | Zindel lab "RAW 264.7 polarisation" (v1.0, 2025-12-08), stimulation and harvesting sections. The SOP wins over this page. |
 
 ### Purpose
 
-Ask whether polarization changes the response to a danger signal. Every state is
-challenged with LPS as the technical control shared by all groups, and with one
-further ligand chosen by the group. The readout in the core is the overnight
-supernatant for ELISA (P06) and Griess (P07). The 6 h RNA arm is an extension (X01).
+Test the pathway your group drew on the first afternoon: which ligand, which
+receptor, and how you prove that it is this receptor and not something else in the
+tube. Every group shares LPS on M(-) as the positive control; your group adds one
+stimulus from the menu, optionally one inhibitor, and reads IL-6 or TNF in the
+supernatant (P06) and the surface phenotype of the cells (P08). Together with P04
+this is one plate and one overnight step. The 6 h RNA arm is an extension (X01).
 
-### Materials
+### The menu
 
-| Stimulus | Receptor | Course role | Working concentration |
+PAMPs. All of these are known to work in RAW 264.7, which expresses TLR2, TLR3,
+TLR4, TLR7, TLR9 and Dectin-1.
+
+| Stimulus | Receptor | Working concentration | Note |
 |---|---|---|---|
-| LPS (E. coli O111:B4, ultrapure), lab stock; tube L1 from P04 | TLR4 | technical control for every group | 100 ng/mL |
-| Pam3CSK4 | TLR1/2 | optional axis | 1 µg/mL |
-| CpG ODN 1826 | TLR9 | optional axis | 1 µM |
-| Zymosan (depleted) | Dectin-1 | optional axis | 10 µg/mL |
-| R848 | TLR7 | optional axis | 1 µg/mL |
+| LPS (E. coli O111:B4, ultrapure), lab stock; tube L1 from P04 | TLR4 | 100 ng/mL | validated in the lab; the control every group shares |
+| Pam3CSK4 | TLR1/2 | 1 µg/mL | strong IL-6 and TNF; the control that must survive TAK-242 |
+| Poly(I:C), high molecular weight | TLR3 | 10 µg/mL | strong IFN-β, modest TNF and IL-6; read IL-6 |
+| R848 | TLR7 | 1 µg/mL | strong TNF and IL-6 |
+| CpG ODN 1826 | TLR9 | 1 µM | strong TNF and IL-6 |
+| Zymosan, depleted | Dectin-1 | 10 µg/mL | particulate; TNF and IL-6 moderate |
+| Heat-killed bacteria (HKLM or HKEB) | TLR2 and others | 10^8 cells/mL | the whole-pathogen contrast; cheap and robust |
+
+Not on the menu: flagellin, because RAW 264.7 cells express little TLR5, and MDP
+alone, because NOD2 needs a TLR signal beside it.
+
+DAMPs. The honest situation: most DAMPs speak through IL-1β, which needs priming and
+is not on the ELISA, and recombinant DAMPs are often endotoxin-contaminated. One
+option is in the core, the rest only with qPCR.
+
+| Stimulus | Receptor | Working concentration | Note |
+|---|---|---|---|
+| Necrotic lysate of your own RAW cells | TLR2, TLR4, RAGE and others | lysate of 10^6 cells/mL, three freeze-thaw cycles, cleared, 1:10 | the only DAMP whose signal needs no priming and carries no reagent risk; expect a small IL-6 and TNF signal; test it with polymyxin B |
+| HMGB1, disulfide form, endotoxin-free | TLR4, RAGE | 1 µg/mL | extension with X01 only; small signal, redox-form dependent |
+| ATP, MSU crystals, nigericin | P2X7, NLRP3 | 1 to 5 mM; 100 µg/mL; 10 µM | extension with X01 only; need LPS priming and read IL-1β |
+
+Inhibitors. The part of your drawing that says "and this is how we know".
+
+| Inhibitor | What it does | Working concentration | Use |
+|---|---|---|---|
+| TAK-242 (resatorvid) | blocks TLR4 signalling at the receptor | 1 µM, 1 h before the stimulus; vehicle 0.1% DMSO | proves TLR4: your stimulus loses its signal, Pam3CSK4 keeps it |
+| Polymyxin B | binds lipid A and neutralises LPS itself | 10 µg/mL, mixed with the stimulus 30 min before adding | proves contamination: a "DAMP" or a lab-made reagent that loses its signal with polymyxin B was endotoxin |
 
 > **To verify:** only the LPS ladder has been run in the lab (100 ng/mL for 16 h
-> gives about 300 pg/mL IL-6 from 2 × 10^4 cells in 200 µL, see P06). The other
-> working concentrations are literature values; suppliers and catalogue numbers
+> gives about 300 pg/mL IL-6 from 2 × 10^4 cells in 200 µL, see P06). All other
+> working concentrations are literature values; order PAMPs and inhibitors
+> endotoxin-tested (InvivoGen or equivalent); suppliers and catalogue numbers
 > `[TODO]`.
 
 - Complete medium, warm
@@ -1138,43 +1204,55 @@ supernatant for ELISA (P06) and Griess (P07). The 6 h RNA arm is an extension (X
 
 ### Before you start
 
-- Draw the plate map in the notebook before you pipette anything. Layout rule:
-  3 states (M(-), M(IFNγ), M(IL-4)) × 3 conditions (unstimulated, LPS, chosen axis),
-  in triplicate, one time point. M(IFNγ+LPS) is not re-challenged (P04).
-- One set of wells per state stays unstimulated for P08.
-- Prepare 100× stocks of the stimuli in complete medium as in P04, and one master
-  mix per condition (7 µL of 100× per 700 µL medium). Vortex LPS between steps.
+- Draw the plate map in the notebook before you pipette anything. Layout rule: the
+  six conditions of P04 in triplicate, plus your inhibitor wells, M(-) + your
+  stimulus + inhibitor and M(-) + LPS + inhibitor, plus the vehicle well the
+  inhibitor needs. One time point. One set of M(-) and M(pol) wells on the flow
+  plate stays for P08.
+- Prepare the 100× stocks of the stimuli and inhibitors in complete medium as in
+  P04 and one master mix per condition (7 µL of each 100× per 700 µL medium). Vortex
+  LPS between steps.
+- Necrotic lysate: scrape 10^6 of your own cells into 1 mL medium, freeze at −80 °C
+  and thaw at 37 °C three times, centrifuge 900 × g for 5 min, keep the supernatant
+  on ice and use it the same day at 1:10.
 
 ### Procedure
 
-1. Remove the medium from the washed wells of P04 and add the condition mix
-   according to the plate map: 200 µL per 96-well. Record the clock time.
-2. Incubate overnight at 37 °C, 5% CO2. In the course the challenge is set up on
+1. TAK-242 wells: at 2 h after plating, add the 100× inhibitor or its vehicle to the
+   wells that get it and incubate 1 h. Polymyxin B is mixed into the stimulus master
+   mix 30 min before step 2.
+2. Remove the medium from the adhered wells of P02 and add the condition mixes of P04
+   and of this page according to the plate map: 200 µL per 96-well. Record the clock
+   time.
+3. Incubate overnight at 37 °C, 5% CO2. In the course the challenge is set up on
    Tuesday about 2 h after plating (about 15:00) and harvested on Wednesday at
-   09:00, about 18 h; the lab validated 16 h (17:00 to
-   09:00). Record the real time.
-3. Photograph the wells before harvest; the morphology of challenged cells is part
+   09:00, about 18 h; the lab validated 16 h (17:00 to 09:00). Record the real time.
+4. Photograph the wells before harvest; the morphology of challenged cells is part
    of the record.
-4. Harvest: transfer 180 µL supernatant per well into a V-bottom 96-well plate in
+5. Harvest: transfer 180 µL supernatant per well into a V-bottom 96-well plate in
    the same layout. Centrifuge the plate 900 × g, 5 min, to remove cells and debris.
-5. Transfer the cleared supernatant to a fresh plate or tubes without touching the
-   pellet: 100 µL goes onto the ELISA plate if P06 runs the same day (the lab starts
-   coating and blocking the ELISA plate before harvesting), 50 µL to the Griess
-   plate (P07), the rest is frozen at −20 °C as a reserve. Avoid repeated
-   freeze-thaw; one aliquot per assay.
+6. Transfer the cleared supernatant to a fresh plate or tubes without touching the
+   pellet, in aliquots: one for the ELISA (P06, Thursday), the rest frozen at −20 °C
+   as a reserve. Avoid repeated freeze-thaw; one aliquot per assay.
+7. The cells of the flow plate are harvested and stained the same afternoon (P08).
 
 ### Controls
 
-- Unstimulated well per state: baseline, and the comparison that shows what
-  polarization alone does.
-- LPS on M(-): the positive control that every group shares; if it is negative, the
-  reagent or the cells are the problem, not the axis.
-- Medium-only well from P02: detects a contaminated reagent, which shows as
-  cytokine in a well that never saw cells.
+- Unstimulated M(-): baseline, and M(pol) alone: what polarization does by itself.
+- LPS on M(-): the positive control every group shares; if it is negative, the
+  reagent or the cells are the problem, not your stimulus.
+- Medium-only well from P02: detects a contaminated reagent, which shows as cytokine
+  in a well that never saw cells.
+- Inhibitor vehicle: DMSO at 0.1% on LPS wells.
+- Pam3CSK4 with TAK-242: TLR2 must survive the TLR4 inhibitor, or the inhibitor is
+  toxic rather than specific.
+- LPS with polymyxin B: proves that polymyxin B works before you trust it on your
+  DAMP.
 
 ### Checkpoints
 
-- The plate map is in the notebook before the first pipette is touched.
+- The plate map and the pathway drawing are in the notebook before the first pipette
+  is touched.
 - At harvest: LPS wells are visibly activated. If not, do not harvest yet; ask.
 
 ### Known failure modes
@@ -1183,7 +1261,11 @@ supernatant for ELISA (P06) and Griess (P07). The 6 h RNA arm is an extension (X
   diluted; make the 100× stocks fresh), or endotoxin contamination of the
   "unstimulated" medium making every well look stimulated. The medium-only control
   separates the two.
-- Triplicates far apart: uneven seeding (P02), LPS aggregates, or pipetting order.
+- Your stimulus works but polymyxin B kills it: it was endotoxin. That is a result,
+  and the most common one in the DAMP literature.
+- TAK-242 kills everything including Pam3CSK4: toxicity or vehicle; check the
+  viability on the flow plate.
+- Triplicates far apart: uneven seeding (P02), aggregates, or pipetting order.
   Record the order.
 - Debris in the ELISA: supernatant taken before or without the 900 × g spin.
 
@@ -1196,7 +1278,7 @@ position, and the photograph before harvest.
 
 <!-- file: protocols/P06_elisa.md -->
 
-## P06 ELISA for IL-6 and TNF
+## P06 ELISA for IL-6 or TNF
 
 > **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage-course/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
@@ -1212,9 +1294,17 @@ position, and the photograph before harvest.
 
 ### Purpose
 
-Quantify IL-6 and TNF in the challenge supernatants. These are the NF-κB outputs of
-the TLR pathway and the main readout of whether polarization primes or suppresses
-the response.
+Quantify IL-6 or TNF in the challenge supernatants. Both are NF-κB outputs of the
+TLR pathway and the main readout of whether polarization primes or suppresses the
+response. Your group chooses one, and the choice is part of the plan:
+
+- IL-6 accumulates over the night and is strongest in the overnight supernatant.
+  It is the cytokine the lab validated (worked example below).
+- TNF peaks 4 to 6 h after the stimulus; the overnight supernatant still contains
+  it, but less. A group that picks TNF either accepts a decayed signal or adds a
+  6 h arm (P04, step 6) and harvests it the same afternoon.
+
+A group that wants robust data picks IL-6.
 
 ### Materials
 
@@ -1419,7 +1509,8 @@ R template.
 
 ### Purpose
 
-Phenotype the four in vitro states on the course antibody panel. The panel is shared
+Phenotype the states of your group's design on the course antibody panel: M(-) and
+your polarizer, with and without the challenge. The panel is shared
 with the peritoneal cells extension (X02) so that in vitro and tissue cells can be compared
 directly in the same session. In the core it is run on RAW cells only.
 
@@ -1443,7 +1534,8 @@ on peritoneal cells (dilution factors from the lab's panel workbook, titrated wi
 | CD86 | M(IFNγ) | `[TODO: not in the lab panel; order and titrate]` | |
 | CD206 | M(IL-4) | `[TODO: not in the lab panel for mouse; order and titrate]` | |
 | Tim4 | resident LPM, optional beside Gata6 | `[TODO: not in the lab panel]` | |
-| Intracellular Nos2, Arg1 | optional | `[TODO: not in the lab panel]` | |
+| Arg1 (intracellular) | M(IL-4); optional, high risk | PE or APC, clone A1exF5, with isotype `[TODO: order and titrate]` | |
+| Intracellular Nos2 | optional | `[TODO: not in the lab panel]` | |
 
 > **To verify:** the fluorochrome choices come from a panel built for the lab's
 > 5-laser instrument at Bern (BD LSRII SORP, with a spectral option). Rebuild the
@@ -1506,12 +1598,24 @@ on peritoneal cells (dilution factors from the lab's panel workbook, titrated wi
     `[TODO: confirm with the facility]`.
 12. Export FCS files named with group, date, sample.
 
+#### Optional: intracellular Arg1, the high-risk arm
+
+Arg1 is cytoplasmic, so it is stained after the surface stain and after fixation and
+permeabilization with the Foxp3 buffer set, following the kit insert: fix 30 min,
+wash twice in permeabilization buffer, Fc block, stain Arg1 and its isotype 30 min in
+permeabilization buffer, wash twice, resuspend in FACS buffer. Permeabilization costs
+some surface signal, so the surface markers go on first and the FMOs are run on
+permeabilized cells too. Expect a small shift in M(IL-4) at best: the induction is
+reliable at the mRNA level in RAW 264.7 and modest as protein. The group that takes
+this arm learns fixation and permeabilization, and says on the poster that the arm
+was high risk by design `[TODO: titrate the clone before the course]`.
+
 ### Controls
 
 - Unstained and single-stain beads for compensation; the heat-killed live/dead well
   for the viability gate.
 - FMO for MHCII, CD86 and CD206: the markers that carry the result.
-- Isotype control for Gata6 if the intranuclear option is run.
+- Isotype control and FMO for Gata6 or Arg1 if an intracellular option is run.
 - M(-) as the reference state.
 
 ### Checkpoints
@@ -1519,6 +1623,8 @@ on peritoneal cells (dilution factors from the lab's panel workbook, titrated wi
 - Viability above 80% in M(-); M(IFNγ+LPS) may be lower.
 - MHCII and CD86 higher in M(IFNγ) than M(-), CD206 higher in M(IL-4): if neither
   moves, check the stimulation before the staining.
+- Arg1 by intracellular stain shows at most a small shift in M(IL-4); the FMO and
+  the isotype decide whether it is real. No shift is a result, not a failure.
 
 ### Known failure modes
 
@@ -2453,7 +2559,7 @@ fraction of the TNF and IL-6, while some other genes stay inducible (Biswas &
 Lopez-Collazo 2009). It protects the organism from lethal cytokine release and it
 ruins a naive experiment.
 
-Questions. Draw the plate map for your axis with every control you need, and say
+Questions. Draw the plate map for your pathway with every control you need, and say
 which control detects a contaminated reagent. Your IL-6 is lower in M(IL-4) than in
 M(-). List three different mechanisms that could explain that, and say which readout
 in your hands distinguishes them.
@@ -3115,8 +3221,8 @@ platelet aggregation
                                      0.240 s      0.260 s   0.280s
 
                           60
-
 Distance to injury [um]
+
                           40
 
                           20
@@ -4412,9 +4518,7 @@ Severe Injury   https://doi.org/10.1016/j.cell.2018.01.015
              Macrophage Switch: the phenomenon
 
              Focal liver injury
-
 CCR2-RFP
-
 CX3CR1-GFP
 
                                                    https://doi.org/10.1084/jem.20141539
@@ -4422,7 +4526,6 @@ CX3CR1-GFP
                Macrophage Switch: iNKT cells and glycolipid self-antigens
 
              Focal liver injury
-
 Cxcr6GFP/+
 
                https://doi.org/10.1016/j.immuni.2017.09.016

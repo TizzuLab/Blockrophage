@@ -57,9 +57,10 @@
 <rect x="921.0" y="175" width="279.0" height="46" fill="#EDEDED" stroke="#BFBFBF" stroke-width="0.8"/>
 <text x="927" y="193" font-size="12" fill="#5A5A5A">Lunch</text>
 <rect x="84.0" y="221" width="279.0" height="160" fill="#F8CBAD" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="90" y="290" font-size="12" fill="#1A1A1A">Extension of your choice (bench steps),</text>
-<text x="90" y="306" font-size="12" fill="#1A1A1A">or rescue path: repeat Exp 2 (plate,</text>
-<text x="90" y="320" font-size="12" fill="#1A1A1A">spin, 2 h, LPS challenge overnight)</text>
+<text x="90" y="283" font-size="12" fill="#1A1A1A">Repeat of Exp 2, more in vitro</text>
+<text x="90" y="298" font-size="12" fill="#1A1A1A">conditions, or something else entirely:</text>
+<text x="90" y="313" font-size="12" fill="#1A1A1A">your extension, or the rescue path</text>
+<text x="90" y="328" font-size="12" fill="#1A1A1A">(plate, spin, 2 h, challenge overnight)</text>
 <rect x="363.0" y="221" width="279.0" height="160" fill="#D9C3E9" stroke="#BFBFBF" stroke-width="0.8"/>
 <text x="369" y="283" font-size="12" fill="#1A1A1A">Dry lab: analysis of Exp 2 and the</text>
 <text x="369" y="298" font-size="12" fill="#1A1A1A">extension, scRNA-seq part 3, score the</text>

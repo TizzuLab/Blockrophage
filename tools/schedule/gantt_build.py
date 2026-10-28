@@ -65,8 +65,9 @@ SPEC = [
               (10, 2, "Lecture: tissue macrophages and nomenclature (Joel Zindel)", "PLENARY"),
               LUNCH,
               (13, 1, "Group formation", "PLENARY"),
-              (14, 3, "Experiment planning with your supervisors: choose your PRR axis and your extension. "
-                      "Read P01, P02 and P09 for Friday and Tuesday.", "DRY")],
+              (14, 3, "Experiment planning with your supervisors: hand-draw the pathway you will test (ligand, "
+                      "receptor, output, how an inhibitor proves it), pick your polarizer, stimulus and cytokine "
+                      "(P04, P05, P06) and your extension. Read P01, P02 and P09 for Friday and Tuesday.", "DRY")],
              "Rooms, safety officer. Groups formed at 13:00; supervisors sit with their group from then on.",
              F22),
             ("Fri 19 Mar", False,
@@ -74,7 +75,8 @@ SPEC = [
                      "technique, microscope, P02 scrape, count, split and seed, cell counter. Lab tour.", "EXP1"),
               LUNCH,
               (13, 4, "Dry lab setup: clone the course repository, build the environment with your chatty, run "
-                      "the ELISA template on example data. Group plan submitted at 17:00.", "DRY")],
+                      "the ELISA template on example data. Group plan (the drawing and your menu choices) committed to "
+                      "the group branch at 17:00.", "DRY")],
              "Staff culture split and counted, one flask per group at 09:00. Dry lab: walk around, unblock "
              "installs. Fallback environment ready [TODO]. Collect the group plans at 17:00.",
              HOODS + " Cell counter. " + F22 + " Own laptops, Wi-Fi."),
@@ -126,10 +128,11 @@ SPEC = [
              [OTHER, LUNCH,
               (13, 3, "P02 Plate cells from the staff culture, spin the plate down, 2 h to adhere [TODO: confirm "
                       "before the course that RAW cells adhere in 2 h after a spin]. Meanwhile P01 re-thaw your "
-                      "own vial (viability = Exp 1 readout). Then P05 Challenge overnight with LPS.", "EXP2"),
+                      "own vial (viability = Exp 1 readout). Then P04 and P05 together: your polarizer and your stimulus, "
+                      "with LPS on M(-) as everyone's control, overnight.", "EXP2"),
               CUTTING_EDGE],
              "Staff culture split Fri 2 Apr, counted at 12:30: enough cells to plate four groups. Plate maps "
-             "checked before anyone pipettes. LPS aliquots at working concentration. Supervisor at the hood for "
+             "checked before anyone pipettes. LPS, polarizers, stimuli and inhibitors at working concentration. Supervisor at the hood for "
              "the re-thaw.",
              HOODS + " Plate centrifuge."),
             ("Wed 7 Apr", False,
@@ -173,8 +176,8 @@ SPEC = [
         days=[
             ("Tue 13 Apr", True,
              [OTHER, LUNCH,
-              (13, 3, "Extension of your choice (bench steps), or rescue path: repeat Exp 2 (plate, spin, 2 h, "
-                      "LPS challenge overnight)", "EXT"),
+              (13, 3, "Repeat of Exp 2, more in vitro conditions, or something else entirely: your extension, or "
+                      "the rescue path (plate, spin, 2 h, challenge overnight)", "EXT"),
               CUTTING_EDGE],
              "Reagents for the extensions agreed on Fri 9 Apr. Staff culture ready for rescue groups to plate.",
              HOODS + " Extension-specific instruments as agreed."),
@@ -221,7 +224,7 @@ OVERVIEW = {
                     ("Exp 1: counts 3 and 4, freeze; debrief", "EXP1"), ("Good Friday", "BUFFER")]),
         ("Easter", [("Break 26 Mar - 4 Apr; staff thaw backup cells", "BUFFER"), None, None, None, None]),
         ("Week 3", [("Other lectures", "BUFFER"),
-                    ("Morning: other lectures. 13:00 plate, spin, 2 h, LPS challenge overnight; re-thaw own vial", "EXP2"),
+                    ("Morning: other lectures. 13:00 plate, spin, 2 h, polarizer and challenge overnight; re-thaw own vial", "EXP2"),
                     ("Harvest cells and supernatants; flow staining and fix; ELISA plates coated", "EXP2"),
                     ("Flow acquisition (A+B morning, C+D afternoon); ELISA in the other half", "EXP2"),
                     ("FlowJo session; ELISA analysis; debrief", "EXP2")]),
@@ -259,8 +262,9 @@ LEGEND_TEXT = {
     "B18": "Exp 1 (week 2): establish the RAW 264.7 line. Thaw on Tuesday afternoon, five trypan-blue counts to "
            "Thursday afternoon (growth curve, doubling time), MTT columns as a second readout, freeze your own "
            "vials on Thursday; viability of your vial after the break is the third readout. Exp 2 (week 3): "
-           "plate RAW cells, spin, 2 h adhesion, overnight LPS challenge; readouts flow cytometry and ELISA. "
-           "Polarization (P04) and Griess (P07) are extensions. Protocol IDs (P01...) refer to protocols/ in "
+           "plate RAW cells, spin, 2 h adhesion, then the group's polarizer and stimulus together overnight (menus "
+           "in P04 and P05, inhibitors optional), LPS on M(-) shared by all; readouts flow cytometry and IL-6 or "
+           "TNF ELISA. Griess (P07) is an extension. Protocol IDs (P01...) refer to protocols/ in "
            "the course repository.",
     "B19": "Week 1: environment and templates. Week 2: scRNA-seq part 1 (QC), FlowJo on example data, growth "
            "curve. Week 3: scRNA-seq part 2 (signatures from the bulk RAW 264.7 dataset) during the ELISA "

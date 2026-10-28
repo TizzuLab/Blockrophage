@@ -17,11 +17,11 @@ P-files are the core programme, X-files are optional extensions (Section 6 of th
 | P01 | RAW 264.7: thaw, expand, growth curve | Exp 1 | 45 min day 1, 20 min/day after | 4 days | hood, incubator, centrifuge, counter, microscope |
 | P02 | RAW 264.7: scrape, count, split, seed | Exp 1, Exp 2 | 45 min | 24 h before stimulation | hood, incubator, centrifuge, counter |
 | P03 | RAW 264.7: freeze and re-thaw own stock | Exp 1 | 45 min + 45 min | overnight at −80 °C, nitrogen over the break | hood, centrifuge, freezing container, −80 °C, liquid nitrogen |
-| P04 | Polarization | Exp 2 | 45 min + 30 min wash | 24 h | hood, incubator, vortex |
-| P05 | PRR challenge | Exp 2 | 45 min + 45 min harvest | 16 h (overnight) | hood, incubator, plate centrifuge, −20 °C |
-| P06 | ELISA IL-6 and TNF | Exp 2 | 3–4 h + coating the day before | 2 days | plate reader (450 nm), multichannel pipette |
-| P07 | Griess assay | Exp 2 | 1 h | 1 h | plate reader |
-| P08 | Flow cytometry of polarized RAW cells | Exp 2 (core), X02 | 2 h stain + 1 h acquisition | half day | hood, cooled plate centrifuge, heating block, cytometer slot, FlowJo seat |
+| P04 | Polarization: the menu | Exp 2, Exp 4 | 45 min | overnight, with P05 | hood, incubator, vortex |
+| P05 | Danger-signal challenge: PAMPs, DAMPs, inhibitors | Exp 2, Exp 4 | 45 min + 45 min harvest | overnight, about 18 h | hood, incubator, plate centrifuge, −20 °C |
+| P06 | ELISA IL-6 or TNF | Exp 2, Exp 4 | 3–4 h + coating the day before | 2 days | plate reader (450 nm), multichannel pipette |
+| P07 | Griess assay | Extension | 1 h | 1 h | plate reader |
+| P08 | Flow cytometry of polarized RAW cells | Exp 2, Exp 4 (core), X02 | 2 h stain + 1 h acquisition | half day | hood, cooled plate centrifuge, heating block, cytometer slot, FlowJo seat |
 | P09 | MTT assay: metabolic activity as a proxy for cell number | Exp 1 (standard curve, growth curve); optional Exp 2 and 4 | 40 min + 20 min per read day | 3.5 h per read, same day | hood, incubator, plate reader (560 or 570 nm plus reference), multichannel pipette |
 | X01 | RNA isolation and qPCR | Extension | 1 h + 1.5 days | 6 h arm, then 2 days | hood, −80 °C, RNA bench, NanoDrop, thermal cycler, LightCycler 480 II |
 | X02 | Peritoneal cells on the shared flow panel | Extension | 30 min + staining | half day, with cytometer slot | surplus peritoneal cell suspension provided by staff, ice, cooled centrifuge, cytometer slot |
@@ -31,10 +31,11 @@ P-files are the core programme, X-files are optional extensions (Section 6 of th
 
 - P09 plate is seeded on the P01 thaw day from the same suspension and read on four
   consecutive days; the P01 flask count of the same day is its control.
-- P02 plates are seeded 24 h before P04.
-- P04 runs 24 h, then wash, then P05 runs 16 h overnight; P08 uses the
-  unchallenged wells of P04 on the day of the P05 challenge.
-- P06 and P07 run on the P05 supernatants, the same day or later from frozen aliquots.
+- P02 plates are seeded on Tuesday 13:00 of week 3, spun down and left 2 h to
+  adhere; P04 and P05 go on together at about 15:00, one overnight step.
+- P05 harvests on Wednesday 09:00; P08 stains the cells the same afternoon.
+- P06 runs on the P05 supernatants on Thursday from frozen aliquots; P07
+  (extension) the same way.
 - P03 vials are re-thawed on the Tuesday after the break; Exp 2 plates come from the
   staff stock.
 - X02 needs a cytometer slot on the day the peritoneal cells are available; X03

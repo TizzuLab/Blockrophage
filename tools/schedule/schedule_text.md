@@ -12,7 +12,7 @@ dark (plenary) blocks are mandatory, everything else is the default plan for all
 - 10:00-12:00: [Plenary, lecture, debrief] Lecture: tissue macrophages and nomenclature (Joel Zindel)
 - 12:00-13:00: Lunch
 - 13:00-14:00: [Plenary, lecture, debrief] Group formation
-- 14:00-17:00: [Dry lab and desk work] Experiment planning with your supervisors: choose your PRR axis and your extension. Read P01, P02 and P09 for Friday and Tuesday.
+- 14:00-17:00: [Dry lab and desk work] Experiment planning with your supervisors: hand-draw the pathway you will test (ligand, receptor, output, how an inhibitor proves it), pick your polarizer, stimulus and cytokine (P04, P05, P06) and your extension. Read P01, P02 and P09 for Friday and Tuesday.
 - Staff: Rooms, safety officer. Groups formed at 13:00; supervisors sit with their group from then on.
 - Resources: Conference room HPL F22 for lectures and dry lab.
 
@@ -20,7 +20,7 @@ dark (plenary) blocks are mandatory, everything else is the default plan for all
 
 - 09:00-12:00: [Wet lab Exp 1] Hands-on introduction to mammalian cell culture with the staff culture: hood and sterile technique, microscope, P02 scrape, count, split and seed, cell counter. Lab tour.
 - 12:00-13:00: Lunch
-- 13:00-17:00: [Dry lab and desk work] Dry lab setup: clone the course repository, build the environment with your chatty, run the ELISA template on example data. Group plan submitted at 17:00.
+- 13:00-17:00: [Dry lab and desk work] Dry lab setup: clone the course repository, build the environment with your chatty, run the ELISA template on example data. Group plan (the drawing and your menu choices) committed to the group branch at 17:00.
 - Staff: Staff culture split and counted, one flask per group at 09:00. Dry lab: walk around, unblock installs. Fallback environment ready [TODO]. Collect the group plans at 17:00.
 - Resources: 4 hoods HPL F27.2, one per group, available at all times. Cell counter. Conference room HPL F22 for lectures and dry lab. Own laptops, Wi-Fi.
 
@@ -62,9 +62,9 @@ dark (plenary) blocks are mandatory, everything else is the default plan for all
 
 - 09:00-12:00: Your other lectures (not course time)
 - 12:00-13:00: Lunch
-- 13:00-16:00: [Wet lab Exp 2] P02 Plate cells from the staff culture, spin the plate down, 2 h to adhere [TODO: confirm before the course that RAW cells adhere in 2 h after a spin]. Meanwhile P01 re-thaw your own vial (viability = Exp 1 readout). Then P05 Challenge overnight with LPS.
+- 13:00-16:00: [Wet lab Exp 2] P02 Plate cells from the staff culture, spin the plate down, 2 h to adhere [TODO: confirm before the course that RAW cells adhere in 2 h after a spin]. Meanwhile P01 re-thaw your own vial (viability = Exp 1 readout). Then P04 and P05 together: your polarizer and your stimulus, with LPS on M(-) as everyone's control, overnight.
 - 16:00-17:00: [Plenary, lecture, debrief] Cutting Edge Immunology Seminar 16:30-17:30 (tbd)
-- Staff: Staff culture split Fri 2 Apr, counted at 12:30: enough cells to plate four groups. Plate maps checked before anyone pipettes. LPS aliquots at working concentration. Supervisor at the hood for the re-thaw.
+- Staff: Staff culture split Fri 2 Apr, counted at 12:30: enough cells to plate four groups. Plate maps checked before anyone pipettes. LPS, polarizers, stimuli and inhibitors at working concentration. Supervisor at the hood for the re-thaw.
 - Resources: 4 hoods HPL F27.2, one per group, available at all times. Plate centrifuge.
 
 #### Wed 7 Apr
@@ -101,7 +101,7 @@ dark (plenary) blocks are mandatory, everything else is the default plan for all
 
 - 09:00-12:00: Your other lectures (not course time)
 - 12:00-13:00: Lunch
-- 13:00-16:00: [Extension / nerd factor] Extension of your choice (bench steps), or rescue path: repeat Exp 2 (plate, spin, 2 h, LPS challenge overnight)
+- 13:00-16:00: [Extension / nerd factor] Repeat of Exp 2, more in vitro conditions, or something else entirely: your extension, or the rescue path (plate, spin, 2 h, challenge overnight)
 - 16:00-17:00: [Plenary, lecture, debrief] Cutting Edge Immunology Seminar 16:30-17:30 (tbd)
 - Staff: Reagents for the extensions agreed on Fri 9 Apr. Staff culture ready for rescue groups to plate.
 - Resources: 4 hoods HPL F27.2, one per group, available at all times. Extension-specific instruments as agreed.

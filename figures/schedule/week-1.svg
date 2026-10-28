@@ -41,11 +41,14 @@
 <rect x="84.0" y="210" width="558.0" height="46" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
 <text x="90" y="228" font-size="12" fill="#FFFFFF" font-weight="bold">Group formation</text>
 <rect x="642.0" y="210" width="558.0" height="184" fill="#FFE699" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="648" y="299" font-size="12" fill="#1A1A1A">Dry lab setup: clone the course repository, build the environment with your</text>
-<text x="648" y="314" font-size="12" fill="#1A1A1A">chatty, run the ELISA template on example data. Group plan submitted at 17:00.</text>
+<text x="648" y="292" font-size="12" fill="#1A1A1A">Dry lab setup: clone the course repository, build the environment with your</text>
+<text x="648" y="306" font-size="12" fill="#1A1A1A">chatty, run the ELISA template on example data. Group plan (the drawing and your</text>
+<text x="648" y="322" font-size="12" fill="#1A1A1A">menu choices) committed to the group branch at 17:00.</text>
 <rect x="84.0" y="256" width="558.0" height="138" fill="#FFE699" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="90" y="322" font-size="12" fill="#1A1A1A">Experiment planning with your supervisors: choose your PRR axis and your</text>
-<text x="90" y="337" font-size="12" fill="#1A1A1A">extension. Read P01, P02 and P09 for Friday and Tuesday.</text>
+<text x="90" y="307" font-size="12" fill="#1A1A1A">Experiment planning with your supervisors: hand-draw the pathway you will test</text>
+<text x="90" y="322" font-size="12" fill="#1A1A1A">(ligand, receptor, output, how an inhibitor proves it), pick your polarizer,</text>
+<text x="90" y="337" font-size="12" fill="#1A1A1A">stimulus and cytokine (P04, P05, P06) and your extension. Read P01, P02 and P09</text>
+<text x="90" y="352" font-size="12" fill="#1A1A1A">for Friday and Tuesday.</text>
 <rect x="84.0" y="394" width="558.0" height="57" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
 <text x="90" y="412" font-size="12" fill="#1A1A1A">Rooms, safety officer. Groups formed at 13:00; supervisors sit with their group</text>
 <text x="90" y="427" font-size="12" fill="#1A1A1A">from then on.</text>

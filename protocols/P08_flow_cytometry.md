@@ -14,7 +14,8 @@
 
 ## Purpose
 
-Phenotype the four in vitro states on the course antibody panel. The panel is shared
+Phenotype the states of your group's design on the course antibody panel: M(-) and
+your polarizer, with and without the challenge. The panel is shared
 with the peritoneal cells extension (X02) so that in vitro and tissue cells can be compared
 directly in the same session. In the core it is run on RAW cells only.
 
@@ -38,7 +39,8 @@ on peritoneal cells (dilution factors from the lab's panel workbook, titrated wi
 | CD86 | M(IFNγ) | `[TODO: not in the lab panel; order and titrate]` | |
 | CD206 | M(IL-4) | `[TODO: not in the lab panel for mouse; order and titrate]` | |
 | Tim4 | resident LPM, optional beside Gata6 | `[TODO: not in the lab panel]` | |
-| Intracellular Nos2, Arg1 | optional | `[TODO: not in the lab panel]` | |
+| Arg1 (intracellular) | M(IL-4); optional, high risk | PE or APC, clone A1exF5, with isotype `[TODO: order and titrate]` | |
+| Intracellular Nos2 | optional | `[TODO: not in the lab panel]` | |
 
 > **To verify:** the fluorochrome choices come from a panel built for the lab's
 > 5-laser instrument at Bern (BD LSRII SORP, with a spectral option). Rebuild the
@@ -101,12 +103,24 @@ on peritoneal cells (dilution factors from the lab's panel workbook, titrated wi
     `[TODO: confirm with the facility]`.
 12. Export FCS files named with group, date, sample.
 
+### Optional: intracellular Arg1, the high-risk arm
+
+Arg1 is cytoplasmic, so it is stained after the surface stain and after fixation and
+permeabilization with the Foxp3 buffer set, following the kit insert: fix 30 min,
+wash twice in permeabilization buffer, Fc block, stain Arg1 and its isotype 30 min in
+permeabilization buffer, wash twice, resuspend in FACS buffer. Permeabilization costs
+some surface signal, so the surface markers go on first and the FMOs are run on
+permeabilized cells too. Expect a small shift in M(IL-4) at best: the induction is
+reliable at the mRNA level in RAW 264.7 and modest as protein. The group that takes
+this arm learns fixation and permeabilization, and says on the poster that the arm
+was high risk by design `[TODO: titrate the clone before the course]`.
+
 ## Controls
 
 - Unstained and single-stain beads for compensation; the heat-killed live/dead well
   for the viability gate.
 - FMO for MHCII, CD86 and CD206: the markers that carry the result.
-- Isotype control for Gata6 if the intranuclear option is run.
+- Isotype control and FMO for Gata6 or Arg1 if an intracellular option is run.
 - M(-) as the reference state.
 
 ## Checkpoints
@@ -114,6 +128,8 @@ on peritoneal cells (dilution factors from the lab's panel workbook, titrated wi
 - Viability above 80% in M(-); M(IFNγ+LPS) may be lower.
 - MHCII and CD86 higher in M(IFNγ) than M(-), CD206 higher in M(IL-4): if neither
   moves, check the stimulation before the staining.
+- Arg1 by intracellular stain shows at most a small shift in M(IL-4); the FMO and
+  the isotype decide whether it is real. No shift is a result, not a failure.
 
 ## Known failure modes
 
