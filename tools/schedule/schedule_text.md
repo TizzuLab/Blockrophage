@@ -113,25 +113,26 @@ dark (plenary) blocks are mandatory, everything else is the default plan for all
 - 12:00-13:00: Lunch
 - 13:00-16:00: [Poster and writing] Dry lab: analysis of Exp 2 and the extension, scRNA-seq part 3, score the tissue macrophages. Poster: figures and legends
 - 16:00-17:00: [Plenary, lecture, debrief] Failure round: each group presents one thing that went wrong and what it taught them
-- Staff: Poster template distributed, printing booked [TODO: printer]. Rescue groups: cytometer slot [TODO: facility], ELISA Wed, result on the poster by Thursday.
+- Staff: Poster template distributed. Rescue groups: cytometer slot [TODO: facility], ELISA Wed, result on the poster by Thursday.
 - Resources: 4 hoods HPL F27.2, one per group, available at all times. Conference room HPL F22 for lectures and dry lab.
 
 #### Thu 15 Apr
 
 - 09:00-12:00: [Poster and writing] Poster production with your supervisor: final figures and legends
 - 12:00-13:00: Lunch
-- 13:00-14:00: [Poster and writing] Final checks. Printing deadline 14:00: poster PDF committed to the group branch
+- 13:00-14:00: [Poster and writing] Poster production, continued. Print when you are ready (poster guide); the PDF goes to the group branch first
 - 14:00-15:00: [Plenary, lecture, debrief] Recap and Q&A (tbd): the course in one hour, then open questions with the teaching staff
 - 15:00-17:00: Free: extension analysis, notebook, group branch
-- Staff: Posters printed Thu after 14:00 [TODO: printer].
-- Resources: Conference room HPL F22 for lectures and dry lab. Printer [TODO]. Poster boards.
+- Staff: Printing is each group's own business (signprint.ch, see the poster guide). Poster boards ready.
+- Resources: Conference room HPL F22 for lectures and dry lab. Poster boards.
 
 #### Fri 16 Apr
 
 - 09:00-11:00: [Dry lab and desk work] Lab clean-up; notebook and group branch finalised
 - 11:00-12:00: [Plenary, lecture, debrief] Feedback round with the teaching staff; course evaluation
 - 12:00-13:00: Lunch
-- 13:00-16:00: [Plenary, lecture, debrief] Poster presentations and discussion; prize
+- 13:00-14:00: [Plenary, lecture, debrief] Written exam, individual [TODO: duration and room]
+- 14:00-16:00: [Plenary, lecture, debrief] Poster session: presentations and discussion; prize
 - 16:00-17:00: [Plenary, lecture, debrief] Apéro
-- Staff: Jury, prize, evaluation form, clean-up checklist. Apéro ordered [TODO: catering].
+- Staff: Exam papers, jury, prize, evaluation form, clean-up checklist. Apéro ordered [TODO: catering].
 - Resources: Conference room HPL F22 for lectures and dry lab. Apéro room [TODO: catering].

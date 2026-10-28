@@ -187,25 +187,27 @@ SPEC = [
                       "macrophages. Poster: figures and legends", "POSTER"),
               (16, 1, "Failure round: each group presents one thing that went wrong and what it taught them",
                "PLENARY")],
-             "Poster template distributed, printing booked [TODO: printer]. Rescue groups: cytometer slot [TODO: "
-             "facility], ELISA Wed, result on the poster by Thursday.",
+             "Poster template distributed. Rescue groups: cytometer slot [TODO: facility], ELISA Wed, result on "
+             "the poster by Thursday.",
              HOODS + " " + F22),
             ("Thu 15 Apr", False,
              [(9, 3, "Poster production with your supervisor: final figures and legends", "POSTER"),
               LUNCH,
-              (13, 1, "Final checks. Printing deadline 14:00: poster PDF committed to the group branch", "POSTER"),
+              (13, 1, "Poster production, continued. Print when you are ready (poster guide); the PDF goes to "
+                      "the group branch first", "POSTER"),
               (14, 1, "Recap and Q&A (tbd): the course in one hour, then open questions with the teaching staff",
                "PLENARY"),
               (15, 2, "Free: extension analysis, notebook, group branch", "BUFFER")],
-             "Posters printed Thu after 14:00 [TODO: printer].",
-             F22 + " Printer [TODO]. Poster boards."),
+             "Printing is each group's own business (signprint.ch, see the poster guide). Poster boards ready.",
+             F22 + " Poster boards."),
             ("Fri 16 Apr", False,
              [(9, 2, "Lab clean-up; notebook and group branch finalised", "DRY"),
               (11, 1, "Feedback round with the teaching staff; course evaluation", "PLENARY"),
               LUNCH,
-              (13, 3, "Poster presentations and discussion; prize", "PLENARY"),
+              (13, 1, "Written exam, individual [TODO: duration and room]", "PLENARY"),
+              (14, 2, "Poster session: presentations and discussion; prize", "PLENARY"),
               (16, 1, "Apéro", "PLENARY")],
-             "Jury, prize, evaluation form, clean-up checklist. Apéro ordered [TODO: catering].",
+             "Exam papers, jury, prize, evaluation form, clean-up checklist. Apéro ordered [TODO: catering].",
              F22 + " Apéro room [TODO: catering]."),
         ],
     ),
@@ -228,8 +230,8 @@ OVERVIEW = {
         ("Week 4", [("Other lectures", "BUFFER"),
                     ("Morning: other lectures. 13:00 extensions or rescue path", "EXT"),
                     ("Writing lecture; extensions; poster; failure round", "POSTER"),
-                    ("Poster production; printing deadline 14:00; recap and Q&A", "POSTER"),
-                    ("Clean-up, feedback; poster presentations, prize, Apéro", "PLENARY")]),
+                    ("Poster production; print when ready; recap and Q&A", "POSTER"),
+                    ("Clean-up, feedback; written exam 13:00; poster session, prize, Apéro", "PLENARY")]),
     ],
     "foot": ["Course weeks run Tuesday 13:00 to Friday 17:00; Monday and Tuesday morning are the students' other "
              "lectures. All four groups follow the same plan, each at its own hood; see the week sheets.",
@@ -272,6 +274,9 @@ LEGEND_TEXT = {
     "B24": "[TODO] Cytometer slots: dates and times from the facility (week 3 Thursday 8 April, 10:00-12:00 and "
            "13:00-15:00; rescue and extension slots week 4).",
     "B25": "[TODO] Facility lecture: slot on Wed 24 March 13:00.",
+    "B31": "Poster printing: each group orders its own poster (signprint.ch, see poster/README.md) in time for the "
+           "poster session on Fri 16 April 14:00; the PDF is committed to the group branch first. No deadline on "
+           "the plan.",
     "B27": "Hoods: four in HPL F27.2, one per group, reserved all day every day (settled 2026-10-28). Conference "
            "room HPL F22 reserved for lectures and dry lab.",
 }
