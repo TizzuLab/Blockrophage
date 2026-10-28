@@ -14,8 +14,13 @@
 
 ## Purpose
 
-Phenotype the states of your group's design on the course antibody panel: M(-) and
-your polarizer, with and without the challenge. The panel is shared
+Phenotype your group's polarization on the course antibody panel, in week 2: the
+vehicle control, M(polarizer) and the LPS control, harvested on Wednesday morning
+after about 19 h, stained and fixed the same day, acquired on Thursday morning and
+gated in the FlowJo session on Thursday afternoon. The LPS control must show CD86 and
+scatter up and the vehicle control must not; only then does the polarizer's result
+count. Flow on challenged cells (week 3) is an extension and needs a slot from the
+facility's regular booking calendar. The panel is shared
 with the peritoneal cells extension (X02) so that in vitro and tissue cells can be compared
 directly in the same session. In the core it is run on RAW cells only.
 
@@ -61,8 +66,9 @@ on peritoneal cells (dilution factors from the lab's panel workbook, titrated wi
 
 ## Before you start
 
-- Cytometer slot confirmed; the facility reserves slots for the course, two groups
-  per slot.
+- Cytometer slot confirmed: Thursday 25 March, two batches of 1.5 h, two groups
+  each `[TODO: facility reservation]`. FlowJo session the same afternoon, teaching
+  seats `[TODO: check with Florian Mair]`.
 - Staining plan in the notebook: samples, unstained, live/dead control, single
   stains on beads, FMOs for MHCII, CD86 and CD206.
 - Cells harvested by scraping into cold FACS buffer and counted: at least
@@ -72,7 +78,8 @@ on peritoneal cells (dilution factors from the lab's panel workbook, titrated wi
 
 ## Procedure
 
-1. Harvest the unchallenged 6-well of each state by scraping into cold FACS buffer.
+1. Harvest the 6-well of each condition (vehicle, polarizer, LPS control) by
+   scraping into cold FACS buffer.
    Count. Centrifuge 300 × g, 5 min, 4 °C.
 2. Resuspend each sample in 200 µL PBS and transfer to the V-bottom plate.
 3. Live/dead control: take 100 µL of one sample into a tube, 95 °C for 5 min, then
@@ -125,7 +132,9 @@ was high risk by design `[TODO: titrate the clone before the course]`.
 
 ## Checkpoints
 
-- Viability above 80% in M(-); M(IFNγ+LPS) may be lower.
+- Viability above 80% in the vehicle well; the LPS control may be lower.
+- LPS control: CD86 up, FSC and SSC up, compared with the vehicle well. If not, the
+  staining or the cells failed and the polarizer is not judged on this run.
 - MHCII and CD86 higher in M(IFNγ) than M(-), CD206 higher in M(IL-4): if neither
   moves, check the stimulation before the staining.
 - Arg1 by intracellular stain shows at most a small shift in M(IL-4); the FMO and

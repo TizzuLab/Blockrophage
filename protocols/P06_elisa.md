@@ -9,7 +9,7 @@
 | Hands-on time | 3–4 h, with incubation waits, plus coating the day before |
 | Wall-clock time | 2 days (coating overnight) |
 | Resources | plate reader (450 nm; the lab uses a Promega GloMax Discover), multichannel pipette, plate washer or wash bottle, bench space |
-| Depends on | P05 supernatants (overnight arm) |
+| Depends on | P05 supernatants (overnight default, 6 h alternative); plates coated on Wednesday 16:30 |
 | Lab SOP | Zindel lab "RAW 264.7 polarisation" (v1.0, 2025-12-08), harvesting section, and the kit insert of the Invitrogen Mouse IL-6 Uncoated ELISA Kit (88-7064-88). The kit insert wins over this page. |
 
 ## Purpose
@@ -24,7 +24,13 @@ response. Your group chooses one, and the choice is part of the plan:
   it, but less. A group that picks TNF either accepts a decayed signal or adds a
   6 h arm (P04, step 6) and harvests it the same afternoon.
 
-A group that wants robust data picks IL-6.
+A group that wants robust data picks IL-6. The mouse IL-6 kit is in stock, the TNF kit
+is pre-bought; another cytokine can be ordered if its kit arrives in time.
+
+In the course rhythm the plates are coated on Wednesday at 16:30 of week 3 (30 min at
+the bench, overnight at 4 °C), blocking and samples run on Thursday morning, the
+3.5 h of incubations are used for the next steps and the dry lab, and detection and
+read-out follow from 15:00.
 
 ## Materials
 

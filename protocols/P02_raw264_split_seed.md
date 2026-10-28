@@ -69,7 +69,8 @@ on the staff culture, on the Friday of week 1.
 
    Rock the plate gently in a cross pattern to spread the cells. Do not swirl;
    swirling piles cells in the centre.
-8. Incubate 24 h before stimulation (P04).
+8. Incubate overnight, about 19 h; the polarizer went in with the suspension (P04).
+   Harvest (P08) or challenge (P05) the next morning.
 
 ## Controls
 

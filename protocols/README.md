@@ -14,30 +14,29 @@ P-files are the core programme, X-files are optional extensions (Section 6 of th
 
 | ID | Title | Used in | Hands-on time | Wall-clock time | Resources |
 |---|---|---|---|---|---|
-| P01 | RAW 264.7: thaw, expand, growth curve | Exp 1 | 45 min day 1, 20 min/day after | 4 days | hood, incubator, centrifuge, counter, microscope |
-| P02 | RAW 264.7: scrape, count, split, seed | Exp 1, Exp 2 | 45 min | 24 h before stimulation | hood, incubator, centrifuge, counter |
-| P03 | RAW 264.7: freeze and re-thaw own stock | Exp 1 | 45 min + 45 min | overnight at −80 °C, nitrogen over the break | hood, centrifuge, freezing container, −80 °C, liquid nitrogen |
-| P04 | Polarization: the menu | Exp 2, Exp 4 | 45 min | overnight, with P05 | hood, incubator, vortex |
-| P05 | Danger-signal challenge: PAMPs, DAMPs, inhibitors | Exp 2, Exp 4 | 45 min + 45 min harvest | overnight, about 18 h | hood, incubator, plate centrifuge, −20 °C |
-| P06 | ELISA IL-6 or TNF | Exp 2, Exp 4 | 3–4 h + coating the day before | 2 days | plate reader (450 nm), multichannel pipette |
+| P01 | RAW 264.7: thaw and seed the group's stock flask | week 1 Friday; stock for Exp 1 and 2 | 45 min, then 20 min per split | the whole course | hood, incubator, centrifuge, counter, microscope |
+| P02 | RAW 264.7: scrape, count, split, seed | week 1 hands-on, Exp 1, Exp 2, passaging | 45 min | polarized at seeding, harvested or challenged next morning | hood, incubator, centrifuge, counter |
+| P03 | RAW 264.7: backup vials and the stock over the break (staff) | Thu of week 2, Easter break | 45 min + 20 min per split | overnight at −80 °C, then −140 °C | hood, centrifuge, freezing container, −80 °C, −140 °C |
+| P04 | Polarization: the menu | Exp 1, Exp 2 | 30 min, at seeding | about 19 h, Tue to Wed | hood, incubator, vortex |
+| P05 | Danger-signal challenge: PAMPs, DAMPs, inhibitors | Exp 2 (week 3 Wed) | 45 min + 45 min harvest | 16 h overnight (default) or 6 h | hood, incubator, plate centrifuge, −20 °C, −80 °C |
+| P06 | ELISA IL-6 (default) or TNF | Exp 2 (week 3 Thu) | 3–4 h + coating the day before | 2 days | plate reader (450 nm), multichannel pipette |
 | P07 | Griess assay | Extension | 1 h | 1 h | plate reader |
-| P08 | Flow cytometry of polarized RAW cells | Exp 2, Exp 4 (core), X02 | 2 h stain + 1 h acquisition | half day | hood, cooled plate centrifuge, heating block, cytometer slot, FlowJo seat |
-| P09 | MTT assay: metabolic activity as a proxy for cell number | Exp 1 (standard curve, growth curve); optional Exp 2 and 4 | 40 min + 20 min per read day | 3.5 h per read, same day | hood, incubator, plate reader (560 or 570 nm plus reference), multichannel pipette |
+| P08 | Flow cytometry of polarized RAW cells | Exp 1 (week 2), X02 | 2 h stain + 1 h acquisition | half day | hood, cooled plate centrifuge, heating block, cytometer slot, FlowJo seat |
+| P09 | MTT assay: metabolic activity as a proxy for cell number | optional, extension | 40 min + 20 min per read day | 3.5 h per read, same day | hood, incubator, plate reader (560 or 570 nm plus reference), multichannel pipette |
 | X01 | RNA isolation and qPCR | Extension | 1 h + 1.5 days | 6 h arm, then 2 days | hood, −80 °C, RNA bench, NanoDrop, thermal cycler, LightCycler 480 II |
 | X02 | Peritoneal cells on the shared flow panel | Extension | 30 min + staining | half day, with cytometer slot | surplus peritoneal cell suspension provided by staff, ice, cooled centrifuge, cytometer slot |
 | X03 | F4/80 IHC on tissue sections | Extension | 1 h + 2 × 3 h | about 5 days | surplus fixed tissue or blocks provided by staff, histology facility (paraffin), pressure cooker, histology bench, slide scanner |
 
 ## Dependencies in time
 
-- P09 plate is seeded on the P01 thaw day from the same suspension and read on four
-  consecutive days; the P01 flask count of the same day is its control.
-- P02 plates are seeded on Tuesday 13:00 of week 3, spun down and left 2 h to
-  adhere; P04 and P05 go on together at about 15:00, one overnight step.
-- P05 harvests on Wednesday 09:00; P08 stains the cells the same afternoon.
-- P06 runs on the P05 supernatants on Thursday from frozen aliquots; P07
-  (extension) the same way.
-- P03 vials are re-thawed on the Tuesday after the break; Exp 2 plates come from the
-  staff stock.
+- P01: the group's stock flask is thawed on Friday of week 1 and lives until the
+  end of the course; the staff carry it over the weekend and the break (P03).
+- Exp 1 (week 2): P02 plates on Tuesday 13:00 with the polarizer in the suspension
+  (P04); P08 harvests, stains and fixes on Wednesday, acquires on Thursday morning.
+- Exp 2 (week 3): P02 plates on Tuesday 13:00 with the polarizer (P04); P05
+  challenges on Wednesday 09:00, overnight (default) or 6 h; P06 plates are coated
+  on Wednesday 16:30 and run on Thursday. P07 (extension) runs on the same
+  supernatants.
 - X02 needs a cytometer slot on the day the peritoneal cells are available; X03
   tissue must reach the facility in week 1. Both depend on surplus primary material
   from ongoing work in the lab; ask on the first afternoon.
