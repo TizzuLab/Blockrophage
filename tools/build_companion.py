@@ -88,7 +88,9 @@ def inject_companion_block(core_text):
     a, b = text.find(BLOCK_BEGIN), text.find(BLOCK_END)
     if a < 0 or b < 0:
         return
-    block = BLOCK_BEGIN + "\n````text\n" + core_text.rstrip() + "\n````\n" + BLOCK_END
+    # The block sits inside a blockquote (a GitHub alert box), so every line is prefixed.
+    quoted = "\n".join(("> " + ln) if ln else ">" for ln in core_text.rstrip().splitlines())
+    block = BLOCK_BEGIN + "\n> ````text\n" + quoted + "\n> ````\n> " + BLOCK_END
     readme.write_text(text[:a] + block + text[b + len(BLOCK_END):], encoding="utf-8")
 
 
