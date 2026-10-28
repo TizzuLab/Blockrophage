@@ -6,8 +6,8 @@
 |---|---|
 | ID | P01 |
 | Used in | Exp 1 |
-| Hands-on time | 45 min on the thaw day, 20 min per day after that |
-| Wall-clock time | 4 days (Mon to Thu) |
+| Hands-on time | 45 min on the thaw day, 20 min per count after that |
+| Wall-clock time | Tuesday 13:00 to Thursday 15:00 of week 2, about 50 h |
 | Resources | hood, incubator shelf (37 °C, 5% CO2), centrifuge, Neubauer chamber or Countess III, microscope |
 | Depends on | nothing; first bench step of the course |
 | Lab SOP | Zindel lab 0203 "RAW 264.7 – adherent cells" (v1.0, 2025-12-01). The SOP wins over this page. |
@@ -15,8 +15,8 @@
 ## Purpose
 
 Bring one cryovial of RAW 264.7 cells into culture, expand them in a flask, and
-record one cell count per day from Monday to Thursday. The counts give the growth
-curve and the doubling time of the line in your hands; both go on the poster and are
+record five counts between Tuesday afternoon and Thursday afternoon (about 0, 19,
+25, 43 and 49 h after the thaw). The counts give the growth curve and the doubling time of the line in your hands; both go on the poster and are
 compared with the published value. The same flask supplies the cells for P02 and P03.
 
 ## Materials
@@ -28,6 +28,8 @@ compared with the published value. The same flask supplies the cells for P02 and
   (Gibco 15140122). Final 10% FCS, 1% P/S. Warm to 37 °C before use.
 - DPBS without calcium and magnesium (Gibco 14190144)
 - T25 flask for the thaw, T75 for expansion
+- 12-well plate for the counting wells: one well per count, five wells plus one
+  spare `[TODO: lab standard plate and density]`
 - 15 mL tubes, serological pipettes (5, 10, 25 mL), 1 mL pipette, cell scraper
 - Trypan blue (Sigma T8154) and a Neubauer chamber, or the Countess III with
   counting slides (Thermo C10228)
@@ -44,7 +46,8 @@ compared with the published value. The same flask supplies the cells for P02 and
 
 ## Procedure
 
-Thaw day (Monday)
+Thaw day (Tuesday 23 March, 13:00; every step was practised on the staff culture on
+Friday)
 
 1. Prepare a 15 mL tube with 10 mL warm complete medium.
 2. Take the vial from the staff tank in a closed transport container. Spray it with
@@ -63,27 +66,32 @@ Thaw day (Monday)
    If viability is above 80%, about 7 × 10^5 live cells of this suspension seed the
    P09 plate (standard curve and MTT growth curve); below that, the P09 plate is
    seeded from the staff stock flask.
-7. Incubate at 37 °C, 5% CO2. Distribute the cells by gently rocking the flask once
+7. Seed the counting wells from the same suspension: 5 × 10^4 live cells in 1 mL per
+   well, six wells of a 12-well plate `[TODO: lab standard density]`. Every later
+   count scrapes one whole well, so the flask is only touched for the medium change
+   and the freeze.
+8. Incubate at 37 °C, 5% CO2. Distribute the cells by gently rocking the flask once
    before closing the incubator; do not swirl.
 
-Every day after that (Tuesday to Thursday)
+Counts (Wednesday and Thursday, 09:00 and 15:00)
 
-8. Inspect under the microscope before anything else: morphology (round to
+9. Inspect under the microscope before anything else: morphology (round to
    spindle-shaped, adherent), density, debris, signs of contamination (turbidity,
    colour change, particles moving between cells). Photograph one field at 10× for
    the notebook.
-9. Take a count. Scrape the whole flask according to P02 and count the suspension,
-   then re-seed it; at this scale a full scrape-and-count once a day is acceptable
-   `[TODO: confirm with the lab that daily scraping is the course standard, or
-   define a counting shortcut]`. Record the count and viability at the same time of
-   day every day.
-10. Change the medium on Tuesday, or on any day the medium turns yellow: aspirate,
+10. Take a count: scrape one counting well according to P02, steps 1 to 5, and count
+    the suspension with trypan blue. Record the count, the viability and the real
+    clock time; the five points (thaw, Wed 09:00, Wed 15:00, Thu 09:00, Thu 15:00)
+    are the growth curve `[TODO: confirm with the lab that counting wells are the
+    course standard, or define a counting shortcut]`.
+11. Change the medium of the flask on Wednesday, or whenever the medium turns yellow: aspirate,
     add fresh warm complete medium gently along the side of the flask. RAW cells
     adhere loosely; do not pipette onto the cell layer.
-11. Split when the flask reaches about 80% confluence, usually Wednesday: follow
+12. Split only if the flask reaches about 80% confluence before Thursday: follow
     P02. Move from the T25 to a T75 at the first split.
-12. Thursday: final count, then freeze according to P03 and seed nothing that would
-    survive the break. No cultures are kept over the Easter break.
+13. Thursday: after the 09:00 count, freeze from the flask according to P03 (A+B at
+    11:00, C+D at 13:00). After the 15:00 count, discard the counting wells. No
+    cultures are kept over the Easter break.
 
 ## Controls
 
@@ -96,10 +104,10 @@ Every day after that (Tuesday to Thursday)
 ## Checkpoints
 
 - After the thaw: viability above 80%. Below that, note it, keep going, and plan a
-  second vial from the staff stock if the flask is empty on Tuesday.
-- Tuesday morning: cells attached and spreading. If most cells are floating and
+  second vial from the staff stock if the flask is empty on Wednesday morning.
+- Wednesday morning: cells attached and spreading. If most cells are floating and
   round, they are either dead (trypan blue) or recently divided (fine).
-- Wednesday: 60–80% confluent. Beyond 90%, split immediately; RAW cells change
+- Thursday morning: the flask 60–80% confluent. Beyond 90%, split immediately; RAW cells change
   behaviour when overgrown.
 
 ## Known failure modes

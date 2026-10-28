@@ -5,8 +5,8 @@
 | | |
 |---|---|
 | ID | P09 |
-| Used in | Exp 1 (standard curve on day 0, growth curve Tue to Thu); optional in Exp 2 and 4 as a viability check on wells whose supernatant has been harvested |
-| Hands-on time | 40 min on the seeding day, 20 min per read day |
+| Used in | Exp 1 (growth-curve columns seeded Tuesday, read Wednesday and Thursday; standard curve on Wednesday morning); optional in Exp 2 and 4 as a viability check on wells whose supernatant has been harvested |
+| Hands-on time | 20 min on Tuesday, 40 min on Wednesday (standard curve and read 1), 20 min per read after that |
 | Wall-clock time | 3.5 h per read (3 h MTT, 15 min solubilisation, read), same day |
 | Resources | hood, incubator shelf, plate reader with a 560 or 570 nm filter and a reference filter, multichannel pipette, orbital shaker (optional), microscope |
 | Depends on | a counted live-cell suspension from P01 step 5 (thaw day) or P02 step 5 |
@@ -60,52 +60,62 @@ where they differ, the notebook says which one is trusted and why.
   quarter of a vial; the rest goes into the P01 flask.
 - MTT stock and solubiliser at room temperature. Cold solubiliser does not dissolve
   the crystals.
-- Plate reader booked for 16:00 on every read day, with the filter pair tested on
-  an empty plate once before Monday.
+- Plate reader booked at 12:30, 14:30 and 16:00 on the read days, with the filter
+  pair tested on an empty plate once before Tuesday.
 
 Plate map, 100 µL per well:
 
 | Columns | Rows | Content | Read on |
 |---|---|---|---|
 | 1 and 12 | A to H | DPBS, 200 µL | never |
-| 2, 3, 4 | A to H | standard curve, one column per replicate: A 8 × 10^4, B 4 × 10^4, C 2 × 10^4, D 1 × 10^4, E 5 × 10^3, F 2.5 × 10^3, G 1.25 × 10^3, H medium only | Monday (day 0) |
-| 5, 6, 7 | B to D | 2.5 × 10^3 cells (low density) | Tue, Wed, Thu, one column per day |
-| 5, 6, 7 | E to G | 1 × 10^4 cells (high density) | Tue, Wed, Thu, one column per day |
-| 8, 9, 10 | B to D | medium only, blank for that day | Tue, Wed, Thu, one column per day |
+| 2, 3, 4 | A to H | standard curve, one column per replicate: A 8 × 10^4, B 4 × 10^4, C 2 × 10^4, D 1 × 10^4, E 5 × 10^3, F 2.5 × 10^3, G 1.25 × 10^3, H medium only | Wednesday, seeded 09:00, read 14:30 |
+| 5, 6, 7 | B to D | 2.5 × 10^3 cells (low density) | Wed 09:00, Thu 09:00, Thu 12:30; one column per read |
+| 5, 6, 7 | E to G | 1 × 10^4 cells (high density) | Wed 09:00, Thu 09:00, Thu 12:30; one column per read |
+| 8, 9, 10 | B to D | medium only, blank for that read | with its cell column |
 | 8, 9, 10 | E to G | 1 × 10^4 cells, spare set (repeat or microscope check) | as needed |
 | 5 to 11 | A and H; column 11 B to G | DPBS, 200 µL | never |
 
-The t = 0 points of the growth curve are the 2.5 × 10^3 and 1 × 10^4 wells of the
-standard curve.
+The t = 0 point of the growth curve is the seeded cell number, taken from the P01
+count on Tuesday. The standard curve, seeded on Wednesday morning from the counted
+staff suspension, converts OD into cell number.
 
 ## Procedure
 
-Day 0 (Monday, from the P01 thaw suspension or the staff stock flask)
+Tuesday 13:00 (growth-curve columns, from the P01 thaw suspension or the staff stock
+flask)
 
-1. Prepare 2.6 mL of 8 × 10^5 live cells/mL in complete medium, then a 1:2 series
-   in complete medium down to 1.25 × 10^4 cells/mL (seven tubes, 1.3 mL each is
-   enough). Prepare the two growth-curve suspensions the same way: 2.5 × 10^4
-   cells/mL (1.2 mL) and 1 × 10^5 cells/mL (2.2 mL).
-2. Fill the outer wells with 200 µL DPBS. Plate 100 µL per well according to the
-   map. Rock the plate in a cross pattern; do not swirl.
-3. Incubate 2 h at 37 °C, 5% CO2, so that the cells attach
+1. Prepare the two growth-curve suspensions in complete medium: 2.5 × 10^4 cells/mL
+   (1.2 mL) and 1 × 10^5 cells/mL (2.2 mL).
+2. Fill the outer wells with 200 µL DPBS. Plate 100 µL per well into columns 5 to 7
+   and medium only into columns 8 to 10 according to the map. Rock the plate in a
+   cross pattern; do not swirl. Back into the incubator; nothing is read today.
+
+Wednesday 09:00 (standard curve and read 1)
+
+3. Prepare 2.6 mL of 8 × 10^5 live cells/mL from the counted staff suspension, then
+   a 1:2 series in complete medium down to 1.25 × 10^4 cells/mL (seven tubes, 1.3 mL
+   each is enough). Plate 100 µL per well into columns 2 to 4. Incubate 2 h at
+   37 °C, 5% CO2, so that the cells attach
    `[TODO: confirm 2 h is enough for RAW 264.7 to attach; the source figure used 4 h]`.
-4. Add 10 µL MTT stock to every well of columns 2 to 4, including the medium-only
-   row, straight into the medium. Tap the plate gently. Incubate 3 h at 37 °C in
-   the dark (plate in the incubator is dark enough).
+4. Add 10 µL MTT stock straight into the medium: at 09:00 to every well of columns
+   5 and 8 (read 1), at 11:00 to every well of columns 2 to 4, including the
+   medium-only row. Tap the plate gently. Incubate 3 h at 37 °C in the dark (plate
+   in the incubator is dark enough).
 5. Look at a high-density well under the microscope: purple needle-shaped crystals
    in and around the cells, none in the medium-only wells.
-6. Without removing the medium, add 100 µL acid isopropanol to each well of
-   columns 2 to 4. Cover with foil and shake 15 min on the orbital shaker, or
+6. Without removing the medium, add 100 µL acid isopropanol to each well that
+   received MTT. Cover with foil and shake 15 min on the orbital shaker, or
    pipette up and down ten times per well with the multichannel pipette. Check one
    well under the microscope: no crystals left, uniform purple.
-7. Read within 1 h at 570 nm (or 560 nm) with the reference filter. Export the raw
-   file with the group, date and plate map name in the file name.
+7. Read within 1 h at 570 nm (or 560 nm) with the reference filter: 12:30 for read
+   1, 14:30 for the standard curve. Export the raw file with the group, date and
+   plate map name in the file name.
 
-Tuesday, Wednesday, Thursday (growth curve)
+Thursday (reads 2 and 3)
 
-8. At 13:00, steps 4 to 7 on that day's cell column (5, 6 or 7) and its blank
-   column (8, 9 or 10). Same clock time every day, so the intervals are 24 h.
+8. Steps 4 to 7 on columns 6 and 9 at 09:00 (read 12:30) and on columns 7 and 10 at
+   12:30 (read 16:00). Record the real clock times; the fit uses the hours since
+   seeding, about 19, 43 and 47 h.
 9. Before adding MTT, photograph one high-density and one low-density well at
    10×, and record the colour of the medium. Yellow medium in the high-density
    wells on Thursday is noted, not corrected.
@@ -146,9 +156,9 @@ Optional, Experiments 2 and 4 (viability after supernatant harvest)
   in the next run and record it.
 - Standard curve: linear fit with R² above 0.98 over the range used. If the top
   points fall below the line, cap the usable range there and say so in the legend.
-- Thursday high-density wells: expected 1 to 3 × 10^5 cells per well from a 15 to
-  24 h doubling time; if the OD is at the top of the standard curve, the
-  low-density wells carry the doubling time.
+- Thursday high-density wells: expected 3 to 9 × 10^4 cells per well at 43 to 47 h
+  from a 15 to 24 h doubling time; if the OD is at the top of the standard curve,
+  the low-density wells carry the doubling time.
 
 ## Known failure modes
 
@@ -217,7 +227,7 @@ What was taken from where:
 | Read | within 1 h, 570 nm, reference 630 nm | Mosmann (Abcam kit reads 590 nm) |
 | Reader | GloMax Discover, filters to confirm | lab, P06 |
 | Seeding guidance | 5,000 to 10,000 cells per well for 48 to 72 h | Abcam; Thermo |
-| Course densities | 2.5 × 10^3 and 1 × 10^4 per well | this page: chosen so that the Thursday wells stay below about 3 × 10^5 at a 15 to 24 h doubling time (lab SOP 0203) |
+| Course densities | 2.5 × 10^3 and 1 × 10^4 per well | this page: chosen so that the wells stay well below 3 × 10^5 at 48 h with a 15 to 24 h doubling time (lab SOP 0203) |
 | Standard curve range | 1.25 × 10^3 to 8 × 10^4 per well | this page, inside the Thermo linearity statement |
 | Attachment before day-0 MTT | 2 h | this page, to verify; Thermo figure used 4 h |
 | Phenol red, serum | blanks; acid solvent; phenol-red-free optional | Mosmann; Thermo; Abcam |

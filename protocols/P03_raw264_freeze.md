@@ -7,7 +7,7 @@
 | ID | P03 |
 | Used in | Exp 1 |
 | Hands-on time | 45 min to freeze; 45 min to re-thaw (as P01) |
-| Wall-clock time | overnight at −80 °C, then −140 °C over the break; re-thaw on Monday of week 3 |
+| Wall-clock time | overnight at −80 °C, then −140 °C over the break; re-thaw on Tuesday of week 3 |
 | Resources | hood, centrifuge, slow-cooling box (Mr. Frosty), −80 °C freezer, −140 °C freezer slot |
 | Depends on | P01 and P02 (a healthy flask on Thursday of week 2) |
 | Lab SOP | Zindel lab 0203 "RAW 264.7 – adherent cells" (v1.0, 2025-12-01), freezing section. The SOP wins over this page. |
@@ -15,7 +15,7 @@
 ## Purpose
 
 Freeze the group's own vials before the Easter break and thaw one of them on the
-first Monday after the break. Viability after re-thaw is the last readout of Exp 1
+first Tuesday after the break. Viability after re-thaw is the last readout of Exp 1
 and tells you whether your own stock could carry a project. The staff keep a backup
 stock; Exp 2 runs on it if your vial does not come up.
 
@@ -38,7 +38,7 @@ stock; Exp 2 runs on it if your vial does not come up.
 
 ## Procedure
 
-Freezing (Thursday, week 2)
+Freezing (Thursday of week 2, after the 09:00 count; A+B at 11:00, C+D at 13:00)
 
 1. Wash with DPBS, scrape into medium and count as in P02, steps 1–5. Transfer the
    suspension to a 50 mL tube.
@@ -50,17 +50,17 @@ Freezing (Thursday, week 2)
    tightly and mix by inverting several times. Work quickly; DMSO is toxic at room
    temperature within minutes.
 6. Place the vials in the slow-cooling box and the box at −80 °C overnight.
-7. Next day (staff, during the break): transfer to the −140 °C freezer and record
+7. Next day (staff, Friday 26 March): transfer to the −140 °C freezer and record
    the position. Vials left at −80 °C for weeks lose viability to ice crystals.
 8. Dispose of all remaining cultures. No cultures are kept over the break.
 
-Re-thaw (Monday, week 3)
+Re-thaw (Tuesday, week 3, 13:00)
 
 9. Thaw one vial following P01, steps 1–7, and count. Record viability and the
    fraction of cells attached the next morning.
 10. Keep this flask as your own stock for extensions. Exp 2 plates are seeded from
     the staff stock culture (P02), which was thawed during the break so that it is
-    ready on Monday.
+    ready on Tuesday.
 
 ## Controls
 
