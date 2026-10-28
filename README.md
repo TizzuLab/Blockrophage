@@ -327,9 +327,8 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 >
 > ### 4. Schedule
 >
-> Course days run from 08:00 to 17:00, Tuesdays from 13:00; Monday and Tuesday
-> morning belong to your other lectures, and every full day opens with a self-study
-> hour. Lunch is 12:00 to 13:00. The course runs Thu 18 March to Fri 16 April 2027 with
+> Course days run from 08:00 to 17:00, (08:00-09:00 self-study hour).
+> Lunch is 12:00 to 13:00. The course runs Thu 18 March to Fri 16 April 2027 with
 > the Easter break from Fri 26 March to Sun 4 April, during which the staff look after
 > your stock flasks.
 >
