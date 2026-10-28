@@ -200,8 +200,10 @@ date, say where we are in the schedule.
 
 ### Optional
 
-- [Companion prompt](COMPANION_PROMPT.md): the system prompt students paste before
-  the companion file.
+- [Companion file](https://raw.githubusercontent.com/TizzuLab/blockrophage-course/main/companion/blockcourse-companion.md): the whole repository as one file, with the
+  companion prompt at the top; students paste this link into their chatty.
+- [Companion prompt](COMPANION_PROMPT.md): the instructions, embedded in the file and
+  editable on each group's branch.
 - [Licence](LICENSE.md): CC BY 4.0 for text, MIT for code.
 
 ---
@@ -243,8 +245,8 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
    visible to anyone. This is worth keeping in mind when the account is created.
 3. **A laptop**; any operating system works.
 4. Optionally, **your favourite chatty as a learning coach**. Chatty = LLM = AI tool,
-   e.g. Claude, ChatGPT, Gemini; the chatty-friendly version of this repository, the
-   [companion package](#your-companion), is dropped into a session.
+   e.g. Claude, ChatGPT, Gemini; you paste one link, the
+   [companion](#your-companion), into a session.
 5. **The safety sheet**, read before the first day and signed after the briefing on
    the first morning ([safety](safety/README.md)). The signed sheet is your
    admission to the bench.
@@ -494,12 +496,20 @@ the written record the ETH biosafety concept asks for.
 
 ### Your companion
 
-Everything in this repository is also available as one file for your chatty:
-[`companion/blockcourse-companion.md`](companion/blockcourse-companion.md) is
-downloaded, [`COMPANION_PROMPT.md`](COMPANION_PROMPT.md) is pasted as the first
-message of a new session, the file is attached, and the result is a private
-Blockrophage companion that knows the schedule, the protocols and the background. It
-will still be wrong sometimes; the repository, not the chatty, is the reference.
+Everything in this repository is also available as one file for your chatty, with
+its instructions at the top. Open a new session and paste this one line:
+
+```
+https://raw.githubusercontent.com/TizzuLab/blockrophage-course/main/companion/blockcourse-companion.md
+```
+
+That is all: the chatty reads the file and becomes a private Blockrophage companion
+that knows the schedule, the protocols and the background, answers course questions
+straight and coaches you on the science. If your chatty cannot open links, download
+[`companion/blockcourse-companion.md`](companion/blockcourse-companion.md) and attach
+it instead, with [`COMPANION_PROMPT.md`](COMPANION_PROMPT.md) as the first message.
+The companion will still be wrong sometimes; the repository, not the chatty, is the
+reference. The prompt is yours to change on your group's branch.
 
 ### Appendix: open items before submission
 
@@ -3290,8 +3300,8 @@ platelet aggregation
                                      0.240 s      0.260 s   0.280s
 
                           60
-
 Distance to injury [um]
+
                           40
 
                           20
@@ -4587,9 +4597,7 @@ Severe Injury   https://doi.org/10.1016/j.cell.2018.01.015
              Macrophage Switch: the phenomenon
 
              Focal liver injury
-
 CCR2-RFP
-
 CX3CR1-GFP
 
                                                    https://doi.org/10.1084/jem.20141539
@@ -4597,7 +4605,6 @@ CX3CR1-GFP
                Macrophage Switch: iNKT cells and glycolipid self-antigens
 
              Focal liver injury
-
 Cxcr6GFP/+
 
                https://doi.org/10.1016/j.immuni.2017.09.016

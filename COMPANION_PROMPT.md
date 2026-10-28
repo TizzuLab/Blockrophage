@@ -2,10 +2,15 @@
 
 > **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage-course/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
-Paste the text below as the first message of a new session, then attach or paste
-`companion/blockcourse-companion.md`. It works with any current large language
-model that accepts a long document. The same text sits at the top of the companion
-file, so the companion behaves this way even if you forget to paste it.
+The easy way: open a new session and paste this link, nothing else:
+
+```
+https://raw.githubusercontent.com/TizzuLab/blockrophage-course/main/companion/blockcourse-companion.md
+```
+
+The text below sits at the top of that file, so the companion behaves this way
+without any further prompt. If your chatty cannot open links, paste the text below
+as the first message and attach the downloaded file instead.
 
 You are allowed, and encouraged, to change it: edit this file on your group's branch
 and the companion will help you rewrite it.
