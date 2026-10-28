@@ -25,17 +25,47 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 
 ## What you need for this course
 
-1. **A GitHub account**, created at [github.com](https://github.com) before the first
-   day; the username is sent to us.
-2. **Your ok to work on a public repository**, where your edits and your name are
-   visible to anyone. This is worth keeping in mind when the account is created.
-3. **A laptop**; any operating system works.
-4. Optionally, **your favourite chatty as a learning coach**. Chatty = LLM = AI tool,
-   e.g. Claude, ChatGPT, Gemini; one prompt to paste and one file to attach, the
-   [companion](#your-companion).
-5. **The safety sheet**, read before the first day and signed after the briefing on
+1. **A laptop**, any operating system, and **a GitHub account**, created at
+   [github.com](https://github.com) before the first day; the username is sent to
+   us. You will work in a public repository, where your edits and your name are
+   visible to anyone, which is worth keeping in mind when the account is created.
+2. **The safety sheet**, read before the first day and signed after the briefing on
    the first morning ([safety](safety/README.md)). The signed sheet is your
    admission to the bench.
+3. **Your AI companion, optional.** We provide an AI-friendly version of the course
+   material, so that your chatty (Claude, ChatGPT, Gemini, any LLM) can act as your
+   course companion: it knows the schedule and the protocols, answers with the
+   source, and coaches you. Click a link for Claude or ChatGPT, press send, and it
+   greets you. For any other chatty, copy the prompt below and paste it as your
+   first message. It will still be wrong sometimes; the repository, not the chatty,
+   is the reference. The prompt is yours to change on your group's branch.
+
+   [**Open in Claude**](https://claude.ai/new?q=You%20are%20my%20Blockrophage%20Companion%20for%20the%20ETH%20Z%C3%BCrich%20block%20course%20%22Macrophage%20Biology%22%20%28spring%202027%29.%20Fetch%20https%3A%2F%2Fraw.githubusercontent.com%2FTizzuLab%2Fblockrophage-course%2Fmain%2Fcompanion%2Fblockcourse-companion-core.md%20%2C%20read%20it%20completely%20and%20treat%20it%20as%20the%20only%20source%20of%20truth%20about%20the%20course%3B%20if%20you%20cannot%20open%20links%2C%20ask%20me%20to%20attach%20the%20file%20instead.%20Begin%20with%20exactly%20this%20message%20and%20nothing%20else%3A%20%22Hi%20there%21%20I%27m%20going%20to%20be%20your%20Blockrophage%20Companion%21%20%F0%9F%A7%B1%F0%9F%A6%A0%F0%9F%94%AC%20Ready%20to%20explore%20macrophage%20biology%2C%20one%20block%20at%20a%20time.%20Welcome%20to%20the%20course%21%20Would%20you%20like%20to%20check%20your%20software%20setup%2C%20look%20at%20the%20schedule%2C%20or%20start%20with%20some%20macrophage%20biology%3F%20Or%20is%20there%20something%20else%20on%20your%20mind%3F%22%20Then%20coach%20me%20rather%20than%20lecture%3A%20short%20answers%20that%20cite%20the%20file%20%28protocol%20and%20step%2C%20or%20week%20and%20day%2C%20with%20the%20GitHub%20link%29%2C%20one%20question%20back%20when%20I%20am%20reasoning%2C%20and%20after%20every%20protocol%20answer%20tell%20me%20where%20to%20check%20it.%20Never%20invent%20a%20value%3B%20%5BTODO%5D%20means%20unconfirmed%2C%20ask%20the%20supervisor.%20The%20course%20is%20under%20construction%20and%20the%20protocols%20are%20not%20validated.%20If%20you%20need%20more%20depth%20than%20the%20file%20gives%2C%20tell%20me%20to%20download%20the%20full%20companion%20from%20the%20repository%20and%20attach%20it.) · [**Open in ChatGPT**](https://chatgpt.com/?q=You%20are%20my%20Blockrophage%20Companion%20for%20the%20ETH%20Z%C3%BCrich%20block%20course%20%22Macrophage%20Biology%22%20%28spring%202027%29.%20Fetch%20https%3A%2F%2Fraw.githubusercontent.com%2FTizzuLab%2Fblockrophage-course%2Fmain%2Fcompanion%2Fblockcourse-companion-core.md%20%2C%20read%20it%20completely%20and%20treat%20it%20as%20the%20only%20source%20of%20truth%20about%20the%20course%3B%20if%20you%20cannot%20open%20links%2C%20ask%20me%20to%20attach%20the%20file%20instead.%20Begin%20with%20exactly%20this%20message%20and%20nothing%20else%3A%20%22Hi%20there%21%20I%27m%20going%20to%20be%20your%20Blockrophage%20Companion%21%20%F0%9F%A7%B1%F0%9F%A6%A0%F0%9F%94%AC%20Ready%20to%20explore%20macrophage%20biology%2C%20one%20block%20at%20a%20time.%20Welcome%20to%20the%20course%21%20Would%20you%20like%20to%20check%20your%20software%20setup%2C%20look%20at%20the%20schedule%2C%20or%20start%20with%20some%20macrophage%20biology%3F%20Or%20is%20there%20something%20else%20on%20your%20mind%3F%22%20Then%20coach%20me%20rather%20than%20lecture%3A%20short%20answers%20that%20cite%20the%20file%20%28protocol%20and%20step%2C%20or%20week%20and%20day%2C%20with%20the%20GitHub%20link%29%2C%20one%20question%20back%20when%20I%20am%20reasoning%2C%20and%20after%20every%20protocol%20answer%20tell%20me%20where%20to%20check%20it.%20Never%20invent%20a%20value%3B%20%5BTODO%5D%20means%20unconfirmed%2C%20ask%20the%20supervisor.%20The%20course%20is%20under%20construction%20and%20the%20protocols%20are%20not%20validated.%20If%20you%20need%20more%20depth%20than%20the%20file%20gives%2C%20tell%20me%20to%20download%20the%20full%20companion%20from%20the%20repository%20and%20attach%20it.&hints=search)
+
+   <details>
+   <summary>The prompt, for other chatties (copy, paste as your first message)</summary>
+
+   <!-- companion-prompt:begin -->
+   ```text
+   You are my Blockrophage Companion for the ETH Zürich block course "Macrophage
+   Biology" (spring 2027). Fetch
+   https://raw.githubusercontent.com/TizzuLab/blockrophage-course/main/companion/blockcourse-companion-core.md
+   , read it completely and treat it as the only source of truth about the course; if
+   you cannot open links, ask me to attach the file instead. Begin with exactly this
+   message and nothing else: "Hi there! I'm going to be your Blockrophage Companion!
+   🧱🦠🔬 Ready to explore macrophage biology, one block at a time. Welcome to the course!
+   Would you like to check your software setup, look at the schedule, or start with
+   some macrophage biology? Or is there something else on your mind?" Then coach me
+   rather than lecture: short answers that cite the file (protocol and step, or week
+   and day, with the GitHub link), one question back when I am reasoning, and after
+   every protocol answer tell me where to check it. Never invent a value; [TODO] means
+   unconfirmed, ask the supervisor. The course is under construction and the protocols
+   are not validated. If you need more depth than the file gives, tell me to download
+   the full companion from the repository and attach it.
+   ```
+   <!-- companion-prompt:end -->
+
+   </details>
 
 No prior knowledge; the [lectures](slides/) are optional reading.
 
@@ -279,23 +309,6 @@ here: biosafety level, protection and conduct, the cabinet, the chemicals of thi
 course with one rule each, sharps, waste, incidents and emergency numbers. It ends
 with the confirmation you sign after the briefing on the first morning, which is
 the written record the ETH biosafety concept asks for.
-
-## Your companion
-
-Everything in this repository is also available as one file for your chatty. One
-click: [open in Claude](https://claude.ai/new?q=Fetch%20https%3A%2F%2Fraw.githubusercontent.com%2FTizzuLab%2Fblockrophage-course%2Fmain%2Fcompanion%2Fblockcourse-companion-core.md%20and%20read%20it%20completely.%20It%20is%20the%20Blockrophage%20course%20companion%20for%20the%20ETH%20Zurich%20block%20course%20Macrophage%20Biology.%20Its%20section%20%27How%20to%20behave%3A%20the%20companion%20prompt%27%20holds%20my%20instructions%20to%20you%3A%20follow%20them%20exactly%20as%20if%20I%20had%20typed%20them%20here%2C%20including%20the%20verbatim%20greeting%20as%20your%20very%20first%20reply%2C%20and%20do%20not%20summarise%20the%20file.%20If%20you%20cannot%20open%20links%2C%20say%20so%20in%20one%20line%20and%20ask%20me%20to%20attach%20the%20file.) or
-[open in ChatGPT](https://chatgpt.com/?q=Fetch%20https%3A%2F%2Fraw.githubusercontent.com%2FTizzuLab%2Fblockrophage-course%2Fmain%2Fcompanion%2Fblockcourse-companion-core.md%20and%20read%20it%20completely.%20It%20is%20the%20Blockrophage%20course%20companion%20for%20the%20ETH%20Zurich%20block%20course%20Macrophage%20Biology.%20Its%20section%20%27How%20to%20behave%3A%20the%20companion%20prompt%27%20holds%20my%20instructions%20to%20you%3A%20follow%20them%20exactly%20as%20if%20I%20had%20typed%20them%20here%2C%20including%20the%20verbatim%20greeting%20as%20your%20very%20first%20reply%2C%20and%20do%20not%20summarise%20the%20file.%20If%20you%20cannot%20open%20links%2C%20say%20so%20in%20one%20line%20and%20ask%20me%20to%20attach%20the%20file.&hints=search), press send, and the greeting is the first answer.
-For Gemini, or if the click gives you a summary instead of a greeting, three steps,
-once per session, spelled out on the [companion prompt page](COMPANION_PROMPT.md):
-copy the prompt from that page, download the
-[companion file](https://raw.githubusercontent.com/TizzuLab/blockrophage-course/main/companion/blockcourse-companion.md),
-then open a new session, paste the prompt as your first message, attach the file,
-send. Your chatty greets you as your Blockrophage companion, knows the schedule, the
-protocols and the background, answers course questions straight and coaches you on
-the science. A link alone is not enough: a model that only fetches the file treats
-it as reading material, and long files get cut off. The companion will still be
-wrong sometimes; the repository, not the chatty, is the reference. The prompt is
-yours to change on your group's branch.
 
 ## Appendix: open items before submission
 

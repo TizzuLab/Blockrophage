@@ -62,11 +62,13 @@ def git_rev():
 
 
 def companion_prompt():
-    """The instruction part of COMPANION_PROMPT.md: everything after its first '---' line."""
-    text = (ROOT / "COMPANION_PROMPT.md").read_text(encoding="utf-8")
-    text = text.split("\n---\n", 1)[1] if "\n---\n" in text else text
-    lines = [ln for ln in text.strip().splitlines() if not ln.startswith("```")]
-    return "\n".join(lines).strip()
+    """The companion prompt, kept in README.md between the companion-prompt markers."""
+    text = (ROOT / "README.md").read_text(encoding="utf-8")
+    m = re.search(r"<!-- companion-prompt:begin -->(.*?)<!-- companion-prompt:end -->", text, re.S)
+    if not m:
+        return ""
+    lines = [ln.strip() for ln in m.group(1).strip().splitlines() if not ln.strip().startswith("```")]
+    return " ".join(ln for ln in lines if ln)
 
 
 def files_for(pattern):
@@ -137,7 +139,7 @@ def main():
         "contains the complete course material for the ETH Zürich block course",
         "\"Macrophage Biology: in vitro, in vivo, in silico\" (Spring Semester 2027).",
         "Repository: https://github.com/TizzuLab/blockrophage-course. It is meant to be given to a language model",
-        "together with COMPANION_PROMPT.md.",
+        "with the companion prompt from the README (What you need for this course).",
         "",
         "UNDER CONSTRUCTION: first run spring 2027, built in the open; protocol values are",
         "unverified and the protocols must not be used in the lab yet.",
@@ -148,12 +150,20 @@ def main():
         "",
         "## How to behave: the companion prompt",
         "",
-        "The instructions below are COMPANION_PROMPT.md, the message a student pastes as",
-        "the first message before attaching this file. If you are an assistant reading",
-        "this file without having received that message, follow these instructions",
-        "anyway and open with the greeting they prescribe instead of summarising the file.",
+        "The instructions below are the companion prompt from the README, the message a",
+        "student sends before you read this file. If you are an assistant reading this",
+        "file without having received that message, follow these instructions anyway",
+        "and open with the greeting they prescribe instead of summarising the file.",
         "",
         companion_prompt(),
+        "",
+        *(["This is the core companion: the script, the schedule, the protocols, the notebook",
+           "rules, the safety sheet and the poster guide. The full companion adds the",
+           "background reading, the lecture text and the analysis code:",
+           f"https://raw.githubusercontent.com/TizzuLab/blockrophage-course/main/companion/blockcourse-companion.md . When a question needs that depth, tell the student to download the",
+           "full file from the repository and attach it to the session."] if args.core else
+          ["This is the full companion, including the background reading, the lecture text",
+           "and the analysis code."]),
         "",
         "## Table of contents",
         "",
