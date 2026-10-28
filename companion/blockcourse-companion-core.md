@@ -161,7 +161,7 @@ full file from the repository and attach it to the session.
 
 - [Companion prompt](companion/prompt.md): the instructions at the top of the
   companion files. The student copies the core companion from the collapsible block
-  in the README and pastes it into a new session of their chatty.
+  in the README and pastes it into a new session of their AI tool.
 - [Companion file](https://raw.githubusercontent.com/TizzuLab/blockrophage-course/main/companion/blockcourse-companion.md): the whole repository as one file.
 - [Core companion](https://raw.githubusercontent.com/TizzuLab/blockrophage-course/main/companion/blockcourse-companion-core.md): script, schedule and protocols only, for sessions that
   have to start from a link.
@@ -208,7 +208,7 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
    the first morning ([safety](safety/README.md)). The signed sheet is your
    admission to the bench.
 > [!TIP]
-> **Your AI companion for the course.** Copy this prompt to your chatty (AI-tool).
+> **Your AI companion for the course.** Copy this prompt to your AI tool.
 >
 > <details>
 > <summary>The prompt (open, press the copy button at the top right of the box, close again)</summary>
@@ -249,8 +249,8 @@ After this course, students will be able to:
    M(stimulus) nomenclature correctly, and explain why the M1/M2 dichotomy was revised.
 2. **Culture** a mammalian cell line: thaw, count, seed at a defined density,
    stimulate and harvest adherent cells, and keep a stock going.
-3. **Set up** a reproducible analysis environment from a code repository with a chatty
-   as assistant, and verify or refute what the chatty produces.
+3. **Set up** a reproducible analysis environment from a code repository with an AI tool
+   as assistant, and verify or refute what the AI tool produces.
 4. **Establish** a scRNA-Seq analysis workflow for a published data set from an
    example, and score the identified myeloid populations against an in-vitro-derived
    M1/M2 gene signature.
@@ -306,19 +306,19 @@ F27.2, where each group has its own laminar flow hood reserved all day, every da
 
 #### Week 1: orientation (Thu 18 - Fri 19 March 2027)
 
-![Week 1: orientation (Thu 18 - Fri 19 March 2027)](figures/schedule/week-1.svg?v=e4d79287)
+![Week 1: orientation (Thu 18 - Fri 19 March 2027)](figures/schedule/week-1.svg?v=4be57bd7)
 
 #### Week 2: polarize and characterize (Tue 23 - Thu 25 March 2027)
 
-![Week 2: polarize and characterize (Tue 23 - Thu 25 March 2027)](figures/schedule/week-2.svg?v=de244d44)
+![Week 2: polarize and characterize (Tue 23 - Thu 25 March 2027)](figures/schedule/week-2.svg?v=5c993004)
 
 #### Week 3: polarize and challenge (Tue 6 - Fri 9 April 2027)
 
-![Week 3: polarize and challenge (Tue 6 - Fri 9 April 2027)](figures/schedule/week-3.svg?v=501ea09d)
+![Week 3: polarize and challenge (Tue 6 - Fri 9 April 2027)](figures/schedule/week-3.svg?v=aab2d8c0)
 
 #### Week 4: close the story (Tue 13 - Fri 16 April 2027)
 
-![Week 4: close the story (Tue 13 - Fri 16 April 2027)](figures/schedule/week-4.svg?v=77b65fe8)
+![Week 4: close the story (Tue 13 - Fri 16 April 2027)](figures/schedule/week-4.svg?v=abda94d4)
 
 <!-- schedule:end -->
 
@@ -493,7 +493,7 @@ the written record the ETH biosafety concept asks for.
 - qPCR: extension (current plan) or core.
 - Datasets: verify GSE113836 contents and preprocess both datasets; answer-key repository.
 - Surplus primary material for the extensions.
-- Pinned environment, fallback environment, chatty licensing for students.
+- Pinned environment, fallback environment, AI tool licensing for students.
 - Recognition of extensions (points or otherwise), atlas platform, prize and funding,
   grading rules for block courses; exam duration and room.
 - Cytometer slots and FlowJo teaching seats for Thu 25 March, facility lecture slot
@@ -540,7 +540,7 @@ dark (plenary) blocks are mandatory, everything else is the default plan for all
 - 08:00-09:00: Self-study: reading for the day, notebook, group branch
 - 09:00-12:00: [Wet lab Exp 1] Hands-on cell culture with the staff culture: hood and sterile technique, microscope, P02 scrape, count, split and seed, cell counter. Then P01: thaw and seed your group's stock flask (course passage 0). Lab tour.
 - 12:00-13:00: Lunch
-- 13:00-17:00: [Dry lab and desk work] Working with git and RStudio, step by step with the supervisors: GitHub account, install R, RStudio and Git if you did not at home, token, clone the course repository from RStudio, switch to your group's branch, open the ELISA script and run it. Then the first commit: a new text file in notebooks/ with your first notes, saved under a name you like, committed as "hello world" and pushed to your branch. Then the rest of the environment with your chatty. Group plan (the drawing and your menu choices) committed to the group branch at 17:00.
+- 13:00-17:00: [Dry lab and desk work] Working with git and RStudio, step by step with the supervisors: GitHub account, install R, RStudio and Git if you did not at home, token, clone the course repository from RStudio, switch to your group's branch, open the ELISA script and run it. Then the first commit: a new text file in notebooks/ with your first notes, saved under a name you like, committed as "hello world" and pushed to your branch. Then the rest of the environment with your AI tool. Group plan (the drawing and your menu choices) committed to the group branch at 17:00.
 - Staff: One low-passage vial per group. Supervisors carry the stock flasks over the weekend and the break: split every 2 to 3 days, course passage counted from this thaw. Afternoon: one supervisor per two laptops; the 08:00 slot is the installation help desk for latecomers. Collect the plans at 17:00.
 - Resources: 4 hoods HPL F27.2, one per group, available at all times. Cell counter. Conference room HPL F22 for lectures and dry lab. Own laptops, Wi-Fi.
 
@@ -2481,9 +2481,9 @@ the course may redistribute the template in this public repository]`.
 
 Analysis templates for the course. Every template is R unless stated, pinned with
 `renv` `[TODO: lockfile]`. You build the environment on the first day with your
-chatty; a prebuilt fallback exists `[TODO: where]`.
+AI tool; a prebuilt fallback exists `[TODO: where]`.
 
-The rule for all of it: run the code and look at the object, not at the chatty's
+The rule for all of it: run the code and look at the object, not at the AI tool's
 description of the object.
 
 | Folder | Purpose | Input | Output |

@@ -1,7 +1,7 @@
 # Companion prompt
 
 The text below is placed at the top of both companion files by `tools/build_companion.py`.
-It is what makes a chatty behave as the course companion when a student pastes the
+It is what makes an AI tool behave as the course companion when a student pastes the
 file into a new session. Change it on your group's branch if you want your companion
 to behave differently; the companion will help you rewrite it.
 

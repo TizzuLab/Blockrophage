@@ -77,7 +77,7 @@
 
 - [Companion prompt](companion/prompt.md): the instructions at the top of the
   companion files. The student copies the core companion from the collapsible block
-  in the README and pastes it into a new session of their chatty.
+  in the README and pastes it into a new session of their AI tool.
 - [Companion file](https://raw.githubusercontent.com/TizzuLab/blockrophage-course/main/companion/blockcourse-companion.md): the whole repository as one file.
 - [Core companion](https://raw.githubusercontent.com/TizzuLab/blockrophage-course/main/companion/blockcourse-companion-core.md): script, schedule and protocols only, for sessions that
   have to start from a link.

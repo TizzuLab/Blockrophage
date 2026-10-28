@@ -4,9 +4,9 @@
 
 Analysis templates for the course. Every template is R unless stated, pinned with
 `renv` `[TODO: lockfile]`. You build the environment on the first day with your
-chatty; a prebuilt fallback exists `[TODO: where]`.
+AI tool; a prebuilt fallback exists `[TODO: where]`.
 
-The rule for all of it: run the code and look at the object, not at the chatty's
+The rule for all of it: run the code and look at the object, not at the AI tool's
 description of the object.
 
 | Folder | Purpose | Input | Output |

@@ -55,7 +55,7 @@
 <text x="648" y="338" font-size="12" fill="#1A1A1A">repository from RStudio, switch to your group&#x27;s branch, open the ELISA script and</text>
 <text x="648" y="352" font-size="12" fill="#1A1A1A">run it. Then the first commit: a new text file in notebooks/ with your first</text>
 <text x="648" y="368" font-size="12" fill="#1A1A1A">notes, saved under a name you like, committed as &quot;hello world&quot; and pushed to your</text>
-<text x="648" y="382" font-size="12" fill="#1A1A1A">branch. Then the rest of the environment with your chatty. Group plan (the</text>
+<text x="648" y="382" font-size="12" fill="#1A1A1A">branch. Then the rest of the environment with your AI tool. Group plan (the</text>
 <text x="648" y="398" font-size="12" fill="#1A1A1A">drawing and your menu choices) committed to the group branch at 17:00.</text>
 <rect x="84.0" y="302" width="558.0" height="138" fill="#FFE699" stroke="#BFBFBF" stroke-width="0.8"/>
 <text x="90" y="353" font-size="12" fill="#1A1A1A">Experiment planning with your supervisors: hand-draw the pathway you will test</text>
