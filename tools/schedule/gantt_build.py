@@ -60,12 +60,14 @@ F22 = "Conference room HPL F22 for lectures and dry lab."
 # days: (header, tuesday?, blocks, staff, resources); blocks: (start hour, span, text, kind).
 SPEC = [
  dict(n=1, title="Week 1: orientation (Thu 18 - Fri 19 March 2027)", days=[
-  ("Thu 18 Mar", False, [(9,1,"Welcome and safety briefing (Tea Kocijan)","PLENARY"),(10,2,"Lecture: tissue macrophages and nomenclature (Joel Zindel)","PLENARY"),LUNCH,(13,1,"Group formation","PLENARY"),
-   (14,3,"Experiment planning with your supervisors: hand-draw the pathway you will test (ligand, receptor, output, how an inhibitor proves it, where the polarizer acts), pick your polarizer, stimulus and cytokine (P04, P05, P06). Read P01, P02 and P08 for Friday and Tuesday.","DRY")],
-   "Rooms, safety officer. Groups formed at 13:00; supervisors sit with their group from then on.", F22),
+  ("Thu 18 Mar", False, [(9,2,"Welcome address and introductory lecture: macrophages, why they matter, why we do what we do (Joel Zindel), 09:00-10:15","PLENARY"),
+   (11,1,"Working in the lab and biosafety (Tea Kocijan), 10:30-12:00: Q&A, then the safety sheet is signed","PLENARY"),LUNCH,
+   (13,1,"Introduction of the supervisors (what they do and why) and group formation","PLENARY"),
+   (14,3,"Experiment planning with your supervisors: hand-draw the pathway you will test (ligand, receptor, output, how an inhibitor proves it, where the polarizer acts), pick your polarizer, stimulus and cytokine (P04, P05, P06) and your extension. Read P01, P02 and P08 for Friday and Tuesday.","DRY")],
+   "Rooms, safety officer. Signed safety sheets collected at 12:00. Supervisors sit with their group from 14:00.", F22),
   ("Fri 19 Mar", False, [(9,3,"Hands-on cell culture with the staff culture: hood and sterile technique, microscope, P02 scrape, count, split and seed, cell counter. Then P01: thaw and seed your group's stock flask (course passage 0). Lab tour.","EXP1"),LUNCH,
-   (13,4,"Dry lab setup: clone the course repository, build the environment with your chatty, run the ELISA template on example data. Group plan (the drawing and your menu choices) committed to the group branch at 17:00.","DRY")],
-   "One low-passage vial per group. Supervisors carry the stock flasks over the weekend and the break: split every 2 to 3 days, course passage counted from this thaw. Dry lab: unblock installs; fallback environment ready [TODO]. Collect the plans at 17:00.",
+   (13,4,"Working with git and RStudio, step by step with the supervisors: GitHub account, install R, RStudio and Git if you did not at home, token, clone the course repository from RStudio, switch to your group's branch, open the ELISA script and run it, push one line to the branch. Then build the rest of the environment with your chatty. Group plan (the drawing and your menu choices) committed to the group branch at 17:00.","DRY")],
+   "One low-passage vial per group. Supervisors carry the stock flasks over the weekend and the break: split every 2 to 3 days, course passage counted from this thaw. Afternoon: one supervisor per two laptops; the 08:00 slot is the installation help desk for latecomers. Collect the plans at 17:00.",
    HOODS+" Cell counter. "+F22+" Own laptops, Wi-Fi.")]),
  dict(n=2, title="Week 2: polarize and characterize (Tue 23 - Thu 25 March 2027)", days=[
   ("Tue 23 Mar", True, [OTHER,LUNCH,(13,2,"P02 and P04: plate cells from your stock with the polarizer already in the seeding suspension. Vehicle control, M(pol) and LPS control on the flow plate (6- or 12-well). Plate-and-polarize in one step, about 19 h. Wet-lab goal: plate at a defined density with a stimulus.","EXP1"),(15,2,"Dry lab: scRNA-seq part 1, load the preprocessed object, QC figure. If the bench runs over, the dry lab moves home.","DRY")],
@@ -102,8 +104,8 @@ SPEC = [
 OVERVIEW = {
     "title": "Overview: the four weeks at a glance (default plan)",
     "rows": [  # (label, [(Mon..Fri text, kind or None)])
-        ("Week 1", [None, None, None, ("Welcome, lecture, group formation; the pathway drawing and the menu choices", "PLENARY"),
-                    ("Hands-on cell culture; thaw and seed the group's stock flask; dry lab setup; plan committed", "EXP1")]),
+        ("Week 1", [None, None, None, ("Welcome and introductory lecture; lab and biosafety; supervisors and groups; the pathway drawing and the menu choices", "PLENARY"),
+                    ("Hands-on cell culture; thaw and seed the group's stock flask; git and RStudio from scratch; plan committed", "EXP1")]),
         ("Week 2", [("Other lectures", "BUFFER"), ("Morning: other lectures. 13:00 plate with the polarizer; dry lab", "EXP1"),
                     ("Facility lecture; harvest, stain, fix", "EXP1"),
                     ("Flow acquisition; FlowJo session; journal club and debrief: stick or pivot", "FACILITY"), ("Good Friday", "BUFFER")]),

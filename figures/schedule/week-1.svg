@@ -32,37 +32,43 @@
 <text x="90" y="44" font-size="12" fill="#5A5A5A">Self-study: reading for the day, notebook, group branch</text>
 <rect x="642.0" y="26" width="558.0" height="46" fill="#EDEDED" stroke="#BFBFBF" stroke-width="0.8"/>
 <text x="648" y="44" font-size="12" fill="#5A5A5A">Self-study: reading for the day, notebook, group branch</text>
-<rect x="84.0" y="72" width="558.0" height="46" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
-<text x="90" y="90" font-size="12" fill="#FFFFFF" font-weight="bold">Welcome and safety briefing (Tea Kocijan)</text>
+<rect x="84.0" y="72" width="558.0" height="92" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
+<text x="90" y="115" font-size="12" fill="#FFFFFF" font-weight="bold">Welcome address and introductory lecture: macrophages, why they matter,</text>
+<text x="90" y="130" font-size="12" fill="#FFFFFF" font-weight="bold">why we do what we do (Joel Zindel), 09:00-10:15</text>
 <rect x="642.0" y="72" width="558.0" height="138" fill="#C6E0B4" stroke="#BFBFBF" stroke-width="0.8"/>
 <text x="648" y="130" font-size="12" fill="#1A1A1A">Hands-on cell culture with the staff culture: hood and sterile technique,</text>
 <text x="648" y="146" font-size="12" fill="#1A1A1A">microscope, P02 scrape, count, split and seed, cell counter. Then P01: thaw and</text>
 <text x="648" y="160" font-size="12" fill="#1A1A1A">seed your group&#x27;s stock flask (course passage 0). Lab tour.</text>
-<rect x="84.0" y="118" width="558.0" height="92" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
-<text x="90" y="168" font-size="12" fill="#FFFFFF" font-weight="bold">Lecture: tissue macrophages and nomenclature (Joel Zindel)</text>
+<rect x="84.0" y="164" width="558.0" height="46" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
+<text x="90" y="182" font-size="12" fill="#FFFFFF" font-weight="bold">Working in the lab and biosafety (Tea Kocijan), 10:30-12:00: Q&amp;A, then</text>
+<text x="90" y="197" font-size="12" fill="#FFFFFF" font-weight="bold">the safety sheet is signed</text>
 <rect x="84.0" y="210" width="558.0" height="46" fill="#EDEDED" stroke="#BFBFBF" stroke-width="0.8"/>
 <text x="90" y="228" font-size="12" fill="#5A5A5A">Lunch</text>
 <rect x="642.0" y="210" width="558.0" height="46" fill="#EDEDED" stroke="#BFBFBF" stroke-width="0.8"/>
 <text x="648" y="228" font-size="12" fill="#5A5A5A">Lunch</text>
 <rect x="84.0" y="256" width="558.0" height="46" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
-<text x="90" y="274" font-size="12" fill="#FFFFFF" font-weight="bold">Group formation</text>
+<text x="90" y="274" font-size="12" fill="#FFFFFF" font-weight="bold">Introduction of the supervisors (what they do and why) and group</text>
+<text x="90" y="289" font-size="12" fill="#FFFFFF" font-weight="bold">formation</text>
 <rect x="642.0" y="256" width="558.0" height="184" fill="#FFE699" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="648" y="338" font-size="12" fill="#1A1A1A">Dry lab setup: clone the course repository, build the environment with your</text>
-<text x="648" y="352" font-size="12" fill="#1A1A1A">chatty, run the ELISA template on example data. Group plan (the drawing and your</text>
-<text x="648" y="368" font-size="12" fill="#1A1A1A">menu choices) committed to the group branch at 17:00.</text>
+<text x="648" y="315" font-size="12" fill="#1A1A1A">Working with git and RStudio, step by step with the supervisors: GitHub account,</text>
+<text x="648" y="330" font-size="12" fill="#1A1A1A">install R, RStudio and Git if you did not at home, token, clone the course</text>
+<text x="648" y="345" font-size="12" fill="#1A1A1A">repository from RStudio, switch to your group&#x27;s branch, open the ELISA script and</text>
+<text x="648" y="360" font-size="12" fill="#1A1A1A">run it, push one line to the branch. Then build the rest of the environment with</text>
+<text x="648" y="375" font-size="12" fill="#1A1A1A">your chatty. Group plan (the drawing and your menu choices) committed to the</text>
+<text x="648" y="390" font-size="12" fill="#1A1A1A">group branch at 17:00.</text>
 <rect x="84.0" y="302" width="558.0" height="138" fill="#FFE699" stroke="#BFBFBF" stroke-width="0.8"/>
 <text x="90" y="353" font-size="12" fill="#1A1A1A">Experiment planning with your supervisors: hand-draw the pathway you will test</text>
 <text x="90" y="368" font-size="12" fill="#1A1A1A">(ligand, receptor, output, how an inhibitor proves it, where the polarizer acts),</text>
-<text x="90" y="383" font-size="12" fill="#1A1A1A">pick your polarizer, stimulus and cytokine (P04, P05, P06). Read P01, P02 and P08</text>
-<text x="90" y="398" font-size="12" fill="#1A1A1A">for Friday and Tuesday.</text>
+<text x="90" y="383" font-size="12" fill="#1A1A1A">pick your polarizer, stimulus and cytokine (P04, P05, P06) and your extension.</text>
+<text x="90" y="398" font-size="12" fill="#1A1A1A">Read P01, P02 and P08 for Friday and Tuesday.</text>
 <rect x="84.0" y="440" width="558.0" height="72" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="90" y="458" font-size="12" fill="#1A1A1A">Rooms, safety officer. Groups formed at 13:00; supervisors sit with their group</text>
-<text x="90" y="473" font-size="12" fill="#1A1A1A">from then on.</text>
+<text x="90" y="458" font-size="12" fill="#1A1A1A">Rooms, safety officer. Signed safety sheets collected at 12:00. Supervisors sit</text>
+<text x="90" y="473" font-size="12" fill="#1A1A1A">with their group from 14:00.</text>
 <rect x="642.0" y="440" width="558.0" height="72" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
 <text x="648" y="458" font-size="12" fill="#1A1A1A">One low-passage vial per group. Supervisors carry the stock flasks over the</text>
 <text x="648" y="473" font-size="12" fill="#1A1A1A">weekend and the break: split every 2 to 3 days, course passage counted from this</text>
-<text x="648" y="488" font-size="12" fill="#1A1A1A">thaw. Dry lab: unblock installs; fallback environment ready [TODO]. Collect the</text>
-<text x="648" y="503" font-size="12" fill="#1A1A1A">plans at 17:00.</text>
+<text x="648" y="488" font-size="12" fill="#1A1A1A">thaw. Afternoon: one supervisor per two laptops; the 08:00 slot is the</text>
+<text x="648" y="503" font-size="12" fill="#1A1A1A">installation help desk for latecomers. Collect the plans at 17:00.</text>
 <rect x="84.0" y="512" width="558.0" height="42" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
 <text x="90" y="530" font-size="12" fill="#1A1A1A">Conference room HPL F22 for lectures and dry lab.</text>
 <rect x="642.0" y="512" width="558.0" height="42" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>

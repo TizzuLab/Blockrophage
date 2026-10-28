@@ -124,7 +124,7 @@ F27.2, where each group has its own laminar flow hood reserved all day, every da
 
 ### Week 1: orientation (Thu 18 - Fri 19 March 2027)
 
-![Week 1: orientation (Thu 18 - Fri 19 March 2027)](figures/schedule/week-1.svg?v=72015e94)
+![Week 1: orientation (Thu 18 - Fri 19 March 2027)](figures/schedule/week-1.svg?v=54befed3)
 
 ### Week 2: polarize and characterize (Tue 23 - Thu 25 March 2027)
 
@@ -306,6 +306,10 @@ will still be wrong sometimes; the repository, not the chatty, is the reference.
   Wed 24 March 09:00 (Florian Mair).
 - Plate-and-polarize in one step and the polarizer doses: run once on the course
   stock before March.
+- February email to the enrolled students: install R, RStudio and Git, create a
+  GitHub account and send the username, read the safety sheet, confirm the public
+  repository. Assume some will not have done it; Friday afternoon of week 1 starts
+  from scratch.
 
 ---
 

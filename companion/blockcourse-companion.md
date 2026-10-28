@@ -1,6 +1,6 @@
 # Blockrophage course: companion file
 
-Built 2026-10-28 from commit 6163e12 of the course repository. This single file
+Built 2026-10-28 from commit 1b04bba of the course repository. This single file
 contains the complete course material for the ETH Zürich block course
 "Macrophage Biology: in vitro, in vivo, in silico" (Spring Semester 2027).
 Repository: https://github.com/TizzuLab/blockrophage-course. It is meant to be given to a language model
@@ -275,7 +275,7 @@ F27.2, where each group has its own laminar flow hood reserved all day, every da
 
 #### Week 1: orientation (Thu 18 - Fri 19 March 2027)
 
-![Week 1: orientation (Thu 18 - Fri 19 March 2027)](figures/schedule/week-1.svg?v=72015e94)
+![Week 1: orientation (Thu 18 - Fri 19 March 2027)](figures/schedule/week-1.svg?v=54befed3)
 
 #### Week 2: polarize and characterize (Tue 23 - Thu 25 March 2027)
 
@@ -457,6 +457,10 @@ will still be wrong sometimes; the repository, not the chatty, is the reference.
   Wed 24 March 09:00 (Florian Mair).
 - Plate-and-polarize in one step and the polarizer doses: run once on the course
   stock before March.
+- February email to the enrolled students: install R, RStudio and Git, create a
+  GitHub account and send the username, read the safety sheet, confirm the public
+  repository. Assume some will not have done it; Friday afternoon of week 1 starts
+  from scratch.
 
 ---
 
@@ -480,12 +484,12 @@ dark (plenary) blocks are mandatory, everything else is the default plan for all
 ##### Thu 18 Mar
 
 - 08:00-09:00: Self-study: reading for the day, notebook, group branch
-- 09:00-10:00: [Plenary, lecture, debrief] Welcome and safety briefing (Tea Kocijan)
-- 10:00-12:00: [Plenary, lecture, debrief] Lecture: tissue macrophages and nomenclature (Joel Zindel)
+- 09:00-11:00: [Plenary, lecture, debrief] Welcome address and introductory lecture: macrophages, why they matter, why we do what we do (Joel Zindel), 09:00-10:15
+- 11:00-12:00: [Plenary, lecture, debrief] Working in the lab and biosafety (Tea Kocijan), 10:30-12:00: Q&A, then the safety sheet is signed
 - 12:00-13:00: Lunch
-- 13:00-14:00: [Plenary, lecture, debrief] Group formation
-- 14:00-17:00: [Dry lab and desk work] Experiment planning with your supervisors: hand-draw the pathway you will test (ligand, receptor, output, how an inhibitor proves it, where the polarizer acts), pick your polarizer, stimulus and cytokine (P04, P05, P06). Read P01, P02 and P08 for Friday and Tuesday.
-- Staff: Rooms, safety officer. Groups formed at 13:00; supervisors sit with their group from then on.
+- 13:00-14:00: [Plenary, lecture, debrief] Introduction of the supervisors (what they do and why) and group formation
+- 14:00-17:00: [Dry lab and desk work] Experiment planning with your supervisors: hand-draw the pathway you will test (ligand, receptor, output, how an inhibitor proves it, where the polarizer acts), pick your polarizer, stimulus and cytokine (P04, P05, P06) and your extension. Read P01, P02 and P08 for Friday and Tuesday.
+- Staff: Rooms, safety officer. Signed safety sheets collected at 12:00. Supervisors sit with their group from 14:00.
 - Resources: Conference room HPL F22 for lectures and dry lab.
 
 ##### Fri 19 Mar
@@ -493,8 +497,8 @@ dark (plenary) blocks are mandatory, everything else is the default plan for all
 - 08:00-09:00: Self-study: reading for the day, notebook, group branch
 - 09:00-12:00: [Wet lab Exp 1] Hands-on cell culture with the staff culture: hood and sterile technique, microscope, P02 scrape, count, split and seed, cell counter. Then P01: thaw and seed your group's stock flask (course passage 0). Lab tour.
 - 12:00-13:00: Lunch
-- 13:00-17:00: [Dry lab and desk work] Dry lab setup: clone the course repository, build the environment with your chatty, run the ELISA template on example data. Group plan (the drawing and your menu choices) committed to the group branch at 17:00.
-- Staff: One low-passage vial per group. Supervisors carry the stock flasks over the weekend and the break: split every 2 to 3 days, course passage counted from this thaw. Dry lab: unblock installs; fallback environment ready [TODO]. Collect the plans at 17:00.
+- 13:00-17:00: [Dry lab and desk work] Working with git and RStudio, step by step with the supervisors: GitHub account, install R, RStudio and Git if you did not at home, token, clone the course repository from RStudio, switch to your group's branch, open the ELISA script and run it, push one line to the branch. Then build the rest of the environment with your chatty. Group plan (the drawing and your menu choices) committed to the group branch at 17:00.
+- Staff: One low-passage vial per group. Supervisors carry the stock flasks over the weekend and the break: split every 2 to 3 days, course passage counted from this thaw. Afternoon: one supervisor per two laptops; the 08:00 slot is the installation help desk for latecomers. Collect the plans at 17:00.
 - Resources: 4 hoods HPL F27.2, one per group, available at all times. Cell counter. Conference room HPL F22 for lectures and dry lab. Own laptops, Wi-Fi.
 
 #### Week 2: polarize and characterize (Tue 23 - Thu 25 March 2027)
@@ -3223,8 +3227,8 @@ platelet aggregation
                                      0.240 s      0.260 s   0.280s
 
                           60
-
 Distance to injury [um]
+
                           40
 
                           20
@@ -4520,9 +4524,7 @@ Severe Injury   https://doi.org/10.1016/j.cell.2018.01.015
              Macrophage Switch: the phenomenon
 
              Focal liver injury
-
 CCR2-RFP
-
 CX3CR1-GFP
 
                                                    https://doi.org/10.1084/jem.20141539
@@ -4530,7 +4532,6 @@ CX3CR1-GFP
                Macrophage Switch: iNKT cells and glycolipid self-antigens
 
              Focal liver injury
-
 Cxcr6GFP/+
 
                https://doi.org/10.1016/j.immuni.2017.09.016
