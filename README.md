@@ -82,37 +82,26 @@ After this course, students will be able to:
 
 ## 3. How the course works
 
-**Groups and supervisors.** On day 1 we build 3-4 groups of 2-3 students with 1-2 supervisors 
-from the lab.
-
 **Git and group branches.** This repository **is** the course, and each group works in
 its own branch of it, named by year and group (for example `2027/group-a`). 
 
-**Lab notebook.** grab a paper notebook in the lab or simply add your notes to your git branch.
+**Groups and supervisors.** On day 1 we build 3-4 groups of 2-3 students with 1-2 supervisors 
+from the lab.
+
+**Lab notebook.** on paper or push your notes to git.
 
 **Up your nerd factor.** Beyond the core programme there is a menu of optional
-experiments and extensions (Section 6). What your group adds is your choice (together with your supervisor)
+experiments and extensions (Section 6). What your group adds is your choice (together with your supervisor).
 
 **Failure rounds.** A failed experiment that is properly analysed is worth as much as one
 that worked.
 
-**Rules of the lab.** The same rules as in every research lab.
+**Safety.** The safety rules (Claude add link please) need to be read and signed before experimental
+work can start.
 
-- Work is planned: the protocol is read the day before, reagents are checked, and the
-  controls are designed before anything is pipetted.
-- What was planned is done, and what was done is recorded the same day, including
-  every deviation.
-- Every tube, plate and solution is labelled with content, date and group.
-- Enzymes, antibodies and cells are kept at the recommended temperature. Reagents are
-  expensive, some are irreplaceable within the course.
-- Questions go to your supervisor. Problems go there earlier.
-
-**Attendance.** I have to check with the department whether you need to show up or not, 
+**Attendance.** We have to check with the department whether you need to show up all the time, 
 would be nice though we invest a lot of energy in this course.
 
-**Primary material.** The core programme uses the RAW 264.7 cell line. For the
-extensions we may be able to provide primary tissues or cells that are surplus from
-ongoing experimental work in the lab.
 
 ## 4. Schedule
 
