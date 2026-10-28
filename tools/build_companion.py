@@ -68,6 +68,30 @@ def companion_prompt():
     return "\n".join(ln for ln in text.strip().splitlines() if not ln.startswith("```")).strip()
 
 
+BLOCK_BEGIN = "<!-- companion:begin -->"
+BLOCK_END = "<!-- companion:end -->"
+BLOCK_NOTE = "(On GitHub this spot holds the core companion itself, in a collapsible block with a copy button.)"
+
+
+def strip_companion_block(text):
+    """The README carries the core companion in a block; the companion must not contain itself."""
+    a, b = text.find(BLOCK_BEGIN), text.find(BLOCK_END)
+    if a < 0 or b < 0:
+        return text
+    return text[:a] + BLOCK_NOTE + text[b + len(BLOCK_END):]
+
+
+def inject_companion_block(core_text):
+    """Write the core companion into the README between the markers, as a copyable code block."""
+    readme = ROOT / "README.md"
+    text = readme.read_text(encoding="utf-8")
+    a, b = text.find(BLOCK_BEGIN), text.find(BLOCK_END)
+    if a < 0 or b < 0:
+        return
+    block = BLOCK_BEGIN + "\n````text\n" + core_text.rstrip() + "\n````\n" + BLOCK_END
+    readme.write_text(text[:a] + block + text[b + len(BLOCK_END):], encoding="utf-8")
+
+
 def files_for(pattern):
     paths = sorted(ROOT.glob(pattern))
     return [p for p in paths if p.is_file() and not (SKIP_PARTS & set(p.parts))
@@ -116,6 +140,8 @@ def main():
                     continue
             else:
                 body = p.read_text(encoding="utf-8")
+                if rel == "README.md":
+                    body = strip_companion_block(body)
             if p.suffix == ".pdf":
                 body = f"```text\n{body}\n```\n"
             elif p.suffix in FENCE:
@@ -179,6 +205,8 @@ def main():
     out = CORE_OUT if args.core else OUT
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(text, encoding="utf-8")
+    if args.core:
+        inject_companion_block(text)
     n = est_tokens(text)
     print(f"wrote {out} ({len(text):,} chars, ~{n:,} tokens, {len(seen)} files)")
     if n > args.max_tokens:

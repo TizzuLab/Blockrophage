@@ -171,7 +171,8 @@ and the analysis code.
 ### Optional
 
 - [Companion prompt](companion/prompt.md): the instructions at the top of the
-  companion files; the student pastes a companion file into a new session.
+  companion files. The student copies the core companion from the collapsible block
+  in the README and pastes it into a new session of their chatty.
 - [Companion file](https://raw.githubusercontent.com/TizzuLab/blockrophage-course/main/companion/blockcourse-companion.md): the whole repository as one file.
 - [Core companion](https://raw.githubusercontent.com/TizzuLab/blockrophage-course/main/companion/blockcourse-companion-core.md): script, schedule and protocols only, for sessions that
   have to start from a link.
@@ -217,19 +218,14 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 2. **The safety sheet**, read before the first day and signed after the briefing on
    the first morning ([safety](safety/README.md)). The signed sheet is your
    admission to the bench.
-3. **Your AI companion, optional.** We provide an AI-friendly version of the course
-   material: one text file that turns your chatty (Claude, ChatGPT, Gemini, any LLM)
-   into your course companion, which knows the schedule and the protocols, answers
-   with the source, and coaches you. Open
-   [the companion file](companion/blockcourse-companion-core.md), press **Copy raw
-   file** (the two-squares icon at the top right of the file view), paste it into a
-   new session of your chatty, send. It greets you as your companion; if it asks
-   whether that is the role it should play, say yes. It will still be wrong
-   sometimes; the repository, not the chatty, is the reference. For more depth the
-   [full companion](companion/blockcourse-companion.md), with the background reading,
-   the lectures and the code, works the same way in a chatty that takes a file of
-   that size. The instructions at the top of the file are in
-   [`companion/prompt.md`](companion/prompt.md); change them on your group's branch.
+**Your AI companion for the course: copy this prompt to your chatty (AI-tool).**
+
+<details>
+<summary>The prompt (open, press the copy button at the top right of the box, close again)</summary>
+
+(On GitHub this spot holds the core companion itself, in a collapsible block with a copy button.)
+
+</details>
 
 No prior knowledge; the [lectures](slides/) are optional reading.
 
