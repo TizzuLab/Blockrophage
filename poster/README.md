@@ -31,7 +31,10 @@ the course may redistribute the template in this public repository]`.
   (figures with legends stating n), interpretation of the dish-versus-tissue
   comparison, limits, extensions if any, methods with protocol IDs and the commit
   hash of the group branch.
-- The poster PDF is committed to the group branch by the printing deadline, Thu 15
-  April 2027, 14:00 (Section 4). Printing is organised by the staff `[TODO: printer]`.
+- Printing is your group's own business. When the poster is ready, commit the PDF to
+  the group branch and order the print at [Signprint](https://signprint.ch/#about)
+  `[TODO: confirm format, turnaround and who pays]`, in time for the poster session
+  on Friday 16 April 2027 at 14:00. There is no printing deadline on the plan; plan
+  backwards from the turnaround time.
 - The writing lecture in week 4 covers how to build the argument from the data, figure
   design, what a good legend does, and how to state limits honestly.

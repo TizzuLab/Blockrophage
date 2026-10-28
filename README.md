@@ -135,7 +135,7 @@ F27.2, where each group has its own laminar flow hood reserved all day, every da
 
 ### Week 4: extensions, poster, presentations (Tue 13 - Fri 16 April 2027)
 
-![Week 4: extensions, poster, presentations (Tue 13 - Fri 16 April 2027)](figures/schedule/week-4.svg?v=ed95abba)
+![Week 4: extensions, poster, presentations (Tue 13 - Fri 16 April 2027)](figures/schedule/week-4.svg?v=a37f5851)
 
 <!-- schedule:end -->
 
@@ -237,9 +237,11 @@ what you could do, but the list is non-exhaustive.
 
 ## 7. Assessment
 
-Assessment. The grade has two parts: an assessment of the poster as a document, scored
-per group without the students present, and an oral assessment per student. 
-Weights and format are announced in the welcome session on the first day.
+The grade has two parts of equal weight. A written exam on the last Friday at 13:00,
+individual, gives 50% of the points. The other 50% is a group grade from the group
+branch: the poster as a document, scored without the students present, and the way
+there as recorded in the git history, which counts as much as the poster itself.
+Details are announced in the welcome session on the first day.
 
 ## 8. Writing, poster and presentation
 
@@ -279,7 +281,7 @@ will still be wrong sometimes; the repository, not the chatty, is the reference.
 - Surplus primary material for the extensions.
 - Pinned environment, fallback environment, chatty licensing for students.
 - Recognition of extensions (points or otherwise), atlas platform, prize and funding,
-  grading rules for block courses, poster printing.
+  grading rules for block courses.
 
 ---
 
