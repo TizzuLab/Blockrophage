@@ -3,9 +3,9 @@ name: Build companion
 # Generated files (schedule drawings, the README schedule block and companion
 # block, schedule_text.md, the companion files) are rebuilt by this job.
 # On a pull request it only builds, so the author sees that the sources build.
-# After a merge to main it rebuilds and, if anything changed, pushes one commit
-# to main as github-actions[bot], authenticated with the admin's token
-# COURSE_BOT_TOKEN, which the ruleset lets through.
+# After a merge to main it rebuilds and, if anything changed, opens (or updates)
+# a pull request named "Regenerate" from the branch regenerate/main. Nobody and
+# nothing pushes to main directly; the owner merges that pull request.
 
 on:
   push:
@@ -16,6 +16,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   build:
@@ -40,14 +41,10 @@ jobs:
         with:
           name: blockcourse-companion
           path: companion/blockcourse-companion.md
-      - name: Commit regenerated files to main
-        # Pushes with COURSE_BOT_TOKEN, a fine-grained token of the repository
-        # admin limited to this repository (Contents: read and write). The push
-        # counts as the admin, whom the ruleset lets through. The token is used
-        # for this push only; a missing token breaks nothing else.
+      - name: Open a pull request with the regenerated files
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         env:
-          COURSE_BOT_TOKEN: ${{ secrets.COURSE_BOT_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -56,12 +53,16 @@ jobs:
             echo "Nothing to regenerate."
             exit 0
           fi
+          git checkout -B regenerate/main
           git commit -m "Regenerate schedule drawings and companion"
-          if [ -z "$COURSE_BOT_TOKEN" ]; then
-            echo "::error::The secret COURSE_BOT_TOKEN is not set; the regenerated files could not be pushed to main."
-            exit 1
+          git push --force origin regenerate/main
+          if gh pr list --head regenerate/main --state open --json number --jq 'length' | grep -q '^0$'; then
+            gh pr create --base main --head regenerate/main \
+              --title "Regenerate schedule drawings and companion" \
+              --body "Generated files rebuilt after the last merge to main. Merge to bring main up to date; nothing to review."
+          else
+            echo "The regenerate pull request is already open and now carries the new commit."
           fi
-          git push "https://x-access-token:${COURSE_BOT_TOKEN}@github.com/${{ github.repository }}.git" HEAD:main
 
   release:
     needs: build
