@@ -1,6 +1,6 @@
 # Blockrophage course: companion file
 
-Built 2026-10-28 from commit 4bb921a of the course repository. This single file
+Built 2026-10-28 from commit 2e41201 of the course repository. This single file
 contains the complete course material for the ETH Zürich block course
 "Macrophage Biology: in vitro, in vivo, in silico" (Spring Semester 2027).
 Repository: https://github.com/TizzuLab/blockrophage-course. It is meant to be given to a language model
@@ -214,7 +214,7 @@ Bergstrom, Jevin D. West). In order words: information is cheap, validation is n
 
 ### 2. Learning objectives
 
-After this course you will be able to:
+After this course, students will be able to:
 
 1. **Classify** macrophages by ontogeny, niche and activation state, use the
    M(stimulus) nomenclature correctly, and explain why the M1/M2 dichotomy was revised.
