@@ -29,7 +29,7 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
    [github.com](https://github.com) before the first day; the username is sent to
    us. You will work in a public repository, where your edits and your name are
    visible to anyone, which is worth keeping in mind when the account is created.
-2. **The safety sheet**, read before the first day and signed after the briefing on
+2. **The safety sheet**, please read before the first day and signed after the briefing on
    the first morning ([safety](safety/README.md)). The signed sheet is your
    admission to the bench.
 > [!TIP]
