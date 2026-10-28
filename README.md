@@ -21,7 +21,7 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 | Students | 8, in four groups of two |
 | Prerequisites | None. The course starts from scratch: no prior immunology, no cell culture and no programming experience required. |
 | Language | English |
-| Version | 0.5, 2026-10-27 |
+| Version | 0.6, 2026-10-28 |
 
 ## What you need for this course
 
