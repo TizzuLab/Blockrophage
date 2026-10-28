@@ -205,14 +205,15 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 2. **The safety sheet**, read before the first day and signed after the briefing on
    the first morning ([safety](safety/README.md)). The signed sheet is your
    admission to the bench.
-3. **Your AI companion for the course** Copy this prompt to your chatty (AI-tool)
-
-<details>
-<summary>The prompt (open, press the copy button at the top right of the box, close again)</summary>
-
-(On GitHub this spot holds the core companion itself, in a collapsible block with a copy button.)
-
-</details>
+> [!TIP]
+> **Your AI companion for the course.** Copy this prompt to your chatty (AI-tool).
+>
+> <details>
+> <summary>The prompt (open, press the copy button at the top right of the box, close again)</summary>
+>
+> (On GitHub this spot holds the core companion itself, in a collapsible block with a copy button.)
+>
+> </details>
 
 No prior knowledge; the [lectures](slides/) are optional reading.
 

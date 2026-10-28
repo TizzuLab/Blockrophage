@@ -218,14 +218,15 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 2. **The safety sheet**, read before the first day and signed after the briefing on
    the first morning ([safety](safety/README.md)). The signed sheet is your
    admission to the bench.
-3. **Your AI companion for the course** Copy this prompt to your chatty (AI-tool)
-
-<details>
-<summary>The prompt (open, press the copy button at the top right of the box, close again)</summary>
-
-(On GitHub this spot holds the core companion itself, in a collapsible block with a copy button.)
-
-</details>
+> [!TIP]
+> **Your AI companion for the course.** Copy this prompt to your chatty (AI-tool).
+>
+> <details>
+> <summary>The prompt (open, press the copy button at the top right of the box, close again)</summary>
+>
+> (On GitHub this spot holds the core companion itself, in a collapsible block with a copy button.)
+>
+> </details>
 
 No prior knowledge; the [lectures](slides/) are optional reading.
 
@@ -3297,8 +3298,8 @@ platelet aggregation
                                      0.240 s      0.260 s   0.280s
 
                           60
-
 Distance to injury [um]
+
                           40
 
                           20
@@ -4594,9 +4595,7 @@ Severe Injury   https://doi.org/10.1016/j.cell.2018.01.015
              Macrophage Switch: the phenomenon
 
              Focal liver injury
-
 CCR2-RFP
-
 CX3CR1-GFP
 
                                                    https://doi.org/10.1084/jem.20141539
@@ -4604,7 +4603,6 @@ CX3CR1-GFP
                Macrophage Switch: iNKT cells and glycolipid self-antigens
 
              Focal liver injury
-
 Cxcr6GFP/+
 
                https://doi.org/10.1016/j.immuni.2017.09.016
