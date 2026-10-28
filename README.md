@@ -69,14 +69,15 @@ After this course you will be able to:
    M(stimulus) nomenclature correctly, and explain why the M1/M2 dichotomy was revised.
 2. **Culture** a mammalian cell line from vial to vial: thaw, count, split, seed,
    freeze, and document a growth curve and a viability.
-3. **Polarize and challenge** macrophages in vitro and quantify the response by
-   ELISA, Griess assay and flow cytometry, with the controls that make the result
-   interpretable.
-4. **Score** single cells against a gene signature, explain what the score means and
-   what it does not, and state the limits of comparing a dish with a tissue.
-5. **Set up** a reproducible analysis environment from a code repository with a large
+3. **Set up** a reproducible analysis environment from a code repository with a large
    language model as assistant, and verify or refute what the assistant produces.
-6. **Communicate** results as a poster and a short talk, including an honest account of
+4. **Establish** a scRNA-Seq analysis workflow for a published data set from an
+   example, and score the identified myeloid populations against an in-vitro-derived
+   M1/M2 gene signature.
+5. **Polarize** macrophages in vitro and validate the resulting cellular phenotype.
+6. **Explain** canonical LPS–TLR4 danger signaling, or another danger signaling
+   pathway, in depth and validate it experimentally.
+7. **Communicate** results as a poster and a short talk, including an honest account of
    what went wrong and what it taught you.
 
 ## 3. How the course works
