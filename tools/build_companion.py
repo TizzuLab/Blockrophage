@@ -175,7 +175,7 @@ def main():
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(text, encoding="utf-8")
     n = est_tokens(text)
-    print(f"wrote {OUT} ({len(text):,} chars, ~{n:,} tokens, {len(seen)} files)")
+    print(f"wrote {out} ({len(text):,} chars, ~{n:,} tokens, {len(seen)} files)")
     if n > args.max_tokens:
         print(f"ERROR: bundle exceeds {args.max_tokens:,} tokens", file=sys.stderr)
         sys.exit(1)
