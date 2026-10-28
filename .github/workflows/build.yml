@@ -1,8 +1,14 @@
 name: Build companion
 
+# Generated files (schedule drawings, the README schedule block, schedule_text.md,
+# the companion) are regenerated on pull-request branches and committed there.
+# On main the job only verifies that nothing is stale: main is protected and
+# nobody, including this workflow, pushes to it directly.
+
 on:
   push:
     branches: [main]
+    tags: ["*"]
   pull_request:
   workflow_dispatch:
 
@@ -14,6 +20,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'pull_request' && github.head_ref || github.ref }}
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -32,14 +40,22 @@ jobs:
         with:
           name: blockcourse-companion
           path: companion/blockcourse-companion.md
-      - name: Commit regenerated files
-        if: github.event_name == 'push'
+      - name: Commit regenerated files to the pull-request branch
+        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
         run: |
           git config user.name "course-bot"
           git config user.email "course-bot@users.noreply.github.com"
           git add README.md figures/schedule tools/schedule/schedule_text.md companion/blockcourse-companion.md
           git diff --cached --quiet || git commit -m "Regenerate schedule drawings and companion"
           git push
+      - name: Verify that main is not stale
+        if: github.event_name != 'pull_request'
+        run: |
+          if ! git diff --quiet -- README.md figures/schedule tools/schedule/schedule_text.md companion/blockcourse-companion.md; then
+            echo "Generated files on main are stale. Regenerate on a branch and open a pull request."
+            git status --short
+            exit 1
+          fi
 
   release:
     needs: build
