@@ -4,8 +4,8 @@ name: Build companion
 # block, schedule_text.md, the companion files) are rebuilt by this job.
 # On a pull request it only builds, so the author sees that the sources build.
 # After a merge to main it rebuilds and, if anything changed, pushes one commit
-# to main as github-actions[bot]; the ruleset lets this job bypass the
-# pull-request requirement for that push alone.
+# to main as github-actions[bot] over the course-bot deploy key, which the
+# ruleset lets bypass the pull-request requirement.
 
 on:
   push:
@@ -22,6 +22,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # The course-bot deploy key: its push to main bypasses the pull-request rule.
+          ssh-key: ${{ secrets.COURSE_BOT_KEY }}
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
