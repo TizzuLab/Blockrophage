@@ -22,9 +22,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          # The course-bot deploy key: its push to main bypasses the pull-request rule.
-          ssh-key: ${{ secrets.COURSE_BOT_KEY }}
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -44,13 +41,31 @@ jobs:
           name: blockcourse-companion
           path: companion/blockcourse-companion.md
       - name: Commit regenerated files to main
+        # Pushes over the course-bot deploy key (secret COURSE_BOT_KEY), the one
+        # identity the ruleset lets through. The key is used for this push only, so
+        # a missing or unregistered key breaks nothing else.
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        env:
+          COURSE_BOT_KEY: ${{ secrets.COURSE_BOT_KEY }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add README.md figures/schedule tools/schedule/schedule_text.md companion/
-          git diff --cached --quiet || git commit -m "Regenerate schedule drawings and companion"
-          git push
+          if git diff --cached --quiet; then
+            echo "Nothing to regenerate."
+            exit 0
+          fi
+          git commit -m "Regenerate schedule drawings and companion"
+          if [ -z "$COURSE_BOT_KEY" ]; then
+            echo "::error::COURSE_BOT_KEY is not set; the regenerated files could not be pushed to main."
+            exit 1
+          fi
+          mkdir -p ~/.ssh
+          printf '%s\n' "$COURSE_BOT_KEY" > ~/.ssh/course_bot
+          chmod 600 ~/.ssh/course_bot
+          ssh-keyscan -t ed25519 github.com >> ~/.ssh/known_hosts 2>/dev/null
+          git remote set-url origin "git@github.com:${{ github.repository }}.git"
+          GIT_SSH_COMMAND="ssh -i ~/.ssh/course_bot -o IdentitiesOnly=yes" git push origin HEAD:main
 
   release:
     needs: build
