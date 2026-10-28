@@ -123,19 +123,19 @@ F27.2, where each group has its own laminar flow hood reserved all day, every da
 
 ### Week 1: orientation (Thu 18 - Fri 19 March 2027)
 
-![Week 1: orientation (Thu 18 - Fri 19 March 2027)](figures/schedule/week-1.svg?v=1fbf6b15)
+![Week 1: orientation (Thu 18 - Fri 19 March 2027)](figures/schedule/week-1.svg?v=72015e94)
 
-### Week 2: Exp 1, establish the line (Tue 23 - Thu 25 March 2027)
+### Week 2: polarize and characterize (Tue 23 - Thu 25 March 2027)
 
-![Week 2: Exp 1, establish the line (Tue 23 - Thu 25 March 2027)](figures/schedule/week-2.svg?v=edb366ce)
+![Week 2: polarize and characterize (Tue 23 - Thu 25 March 2027)](figures/schedule/week-2.svg?v=de244d44)
 
-### Week 3: Exp 2, challenge and read out (Tue 6 - Fri 9 April 2027)
+### Week 3: polarize and challenge (Tue 6 - Fri 9 April 2027)
 
-![Week 3: Exp 2, challenge and read out (Tue 6 - Fri 9 April 2027)](figures/schedule/week-3.svg?v=fede3ffe)
+![Week 3: polarize and challenge (Tue 6 - Fri 9 April 2027)](figures/schedule/week-3.svg?v=501ea09d)
 
-### Week 4: extensions, poster, presentations (Tue 13 - Fri 16 April 2027)
+### Week 4: close the story (Tue 13 - Fri 16 April 2027)
 
-![Week 4: extensions, poster, presentations (Tue 13 - Fri 16 April 2027)](figures/schedule/week-4.svg?v=ed95abba)
+![Week 4: close the story (Tue 13 - Fri 16 April 2027)](figures/schedule/week-4.svg?v=77b65fe8)
 
 <!-- schedule:end -->
 

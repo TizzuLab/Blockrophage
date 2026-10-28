@@ -1,32 +1,59 @@
-# P04 Polarization of RAW 264.7
+# P04 Polarization of RAW 264.7: the menu
 
 > **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage-course/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
 | | |
 |---|---|
 | ID | P04 |
-| Used in | Exp 2 |
-| Hands-on time | 45 min to prepare the stimuli and stimulate, 30 min to wash |
-| Wall-clock time | 24 h |
+| Used in | Exp 1 (week 2, polarize and characterize) and Exp 2 (week 3, polarize and challenge) |
+| Hands-on time | 30 min to prepare the stimuli; the plating itself is P02 |
+| Wall-clock time | about 19 h, Tuesday 14:00 to Wednesday 09:00, in both weeks |
 | Resources | hood, incubator shelf, vortex |
-| Depends on | P02 plates seeded 24 h earlier (96-well for supernatants, 6-well for flow, 24-well for the RNA arm) |
+| Depends on | the group's stock flask (P01) at 60 to 80% confluence, counted |
 | Lab SOP | Zindel lab "RAW 264.7 polarisation" (v1.0, 2025-12-08): 96-well format, 100× stimulus stocks, master mixes. The SOP wins over this page. |
 
 ## Purpose
 
-Generate the four in vitro states that the course compares with tissue macrophages:
-M(-), M(IFNγ), M(IL-4) and M(IFNγ+LPS), named after their stimulus as the field
-agreed in 2014. The states are then challenged (P05), read by ELISA and Griess
-(P06, P07) and phenotyped on the cytometer (P08).
+Give your cells one defined signal and ask whether it changes what they are (week 2,
+read by flow cytometry, P08) and how they answer danger (week 3, read by ELISA after
+the challenge of P05). Your group picks one polarizer from the menu below. The
+polarizer goes into the seeding suspension: plate and polarize in one step on Tuesday
+afternoon, harvest or challenge on Wednesday morning. LPS is not a polarizer in this
+course; it is the technical positive control on every plate, beside the vehicle
+control, so that a polarizer that does nothing can be told from a staining or cell
+problem.
 
-The lab's own stimulation protocol uses an LPS dose ladder (0.1 to 100 ng/mL) on
-RAW 264.7 in 96-well plates. This page keeps its format and its way of preparing
-stimuli, and adds the cytokine states the course needs.
+## The menu
+
+| Polarizer | Working concentration | What it does in RAW 264.7 | Safe readout | Risk |
+|---|---|---|---|---|
+| IFNγ | 20 ng/mL | MHC-II and CD86 up, iNOS primed, TNF and IL-6 amplified with LPS. This is M(IFNγ) | flow (MHC-II, CD86) and ELISA | low |
+| IL-10 | 20 ng/mL | TNF and IL-6 suppressed through STAT3 and SOCS3 | ELISA (suppression, week 3) | low; nothing to see by flow, by design |
+| Dexamethasone | 100 nM | TNF, IL-6 and NO suppressed through the glucocorticoid receptor; the drug every patient on steroids gets | ELISA (suppression, week 3) | low; cheap and stable; needs a vehicle control |
+| IL-4 | 20 ng/mL | Arg1, Chil3, Retnla and Mrc1 mRNA up, LPS response dampened. This is M(IL-4) | qPCR Arg1 (X01); ELISA (suppression) | medium: CD206 by flow is weak in this line; intracellular Arg1 (P08) is the high-risk flow option |
+| PGE2 | 1 µM | IL-10 up and TNF down through cAMP | ELISA | medium; less canonical; vehicle control |
+| ATRA, all-trans retinoic acid | 1 µM, from a DMSO stock, in the dark | In vivo the signal that induces GATA6 and the peritoneal macrophage identity; in vitro it dampens TNF and NO and helps IL-4 induce Arg1. Whether it induces Gata6 in RAW 264.7 is not known | qPCR Gata6, Arg1, Icam2 (X01) | high: the lab's wild card, outcome unknown; for a group that takes the qPCR extension |
+
+What to expect in week 2, by flow: IFNγ shows, IL-4 shows weakly at best, ATRA is
+unknown, and IL-10, dexamethasone and PGE2 show nothing by design, because their
+readout is the suppressed cytokine response in week 3. "No change and good viability"
+is the expected week 2 result for a dampener, not a reason to pivot.
+
+> **To verify:** LPS is the only stimulus validated in the lab (100 ng/mL, 16 h, on
+> the current stock, see P06). Every row above is a literature dose; working
+> concentrations, suppliers and catalogue numbers `[TODO]`. A group that wants
+> robust data takes IFNγ. Everything else extends the data for the next iteration of
+> the course, and that is said on the poster.
 
 ## Materials
 
-- Recombinant mouse IFNγ, recombinant mouse IL-4 `[TODO: supplier, catalogue
-  number, stock concentration, aliquot storage; the lab has not used these yet]`
+- Your polarizer `[TODO: supplier, catalogue number, stock concentration, aliquot
+  storage; the lab has not used these yet]`. Recombinant mouse IFNγ, IL-4 and IL-10
+  carrier-free, stocks at 100 µg/mL in PBS with 0.1% BSA, aliquoted at −80 °C; a
+  carrier-free cytokine diluted without BSA sticks to the plastic. Dexamethasone and
+  ATRA as 1 mM stocks in DMSO, PGE2 as 10 mM in ethanol; the vehicle control is the
+  same solvent at the same final dilution (0.1%). For the cytokines, vehicle and M(-)
+  are the same well.
 - LPS, E. coli O111:B4, ultrapure, lab stock 2.5 mg/mL `[TODO: supplier and
   catalogue number of the lab's stock]`
 - Complete medium, warm (recipe in P01); DPBS, warm
@@ -35,76 +62,67 @@ stimuli, and adds the cytokine states the course needs.
 
 ## Before you start
 
-- Plate map from P02 in front of you. Each state has its challenge wells (P05) and
-  its unchallenged wells for flow cytometry (P08).
-- Stimuli are added as 100× stocks in complete medium, 1 part in 100, so the medium
-  on the cells is replaced once and every well gets the same volume of additive.
+- The plate map is drawn in the notebook before anything is pipetted. Week 2 (flow
+  plate, 6- or 12-well): vehicle, M(pol), LPS control, one well each, a second set if
+  you run intracellular Arg1. Week 3 (96-well, P05): the six conditions of the
+  challenge in triplicate plus the inhibitor wells.
+- Stimuli are added as 100× stocks to the seeding suspension, 1 part in 100, so
+  every well gets the same volume of additive and no medium change is needed.
 - Vortex the LPS vial before use and between every dilution step: LPS aggregates.
+- Retinoic acid: keep the stock and the dilutions in the dark, make the 100× stock
+  fresh on the day; serum contains retinoids, so M(-) is not retinoid-free.
 
 ## Procedure
 
 1. LPS 100× stock. Dilute the lab stock stepwise in complete medium, as the lab SOP
    does:
-
    | Tube | From | Add | Result | 100× for |
    |---|---|---|---|---|
    | L1 | LPS stock (2.5 mg/mL) | 2 µL + 498 µL medium | 10,000 ng/mL | 100 ng/mL |
    | L2 | L1 | 50 µL + 450 µL medium | 1,000 ng/mL | 10 ng/mL |
-
    L1 is the tube used here and in P05; the full ladder (L3, L4) is for the
    dose-response extension.
-
-2. Cytokine 100× stocks: dilute IFNγ and IL-4 to 2 µg/mL in complete medium
-   (100× of 20 ng/mL) `[TODO: check against the supplier's recommended working
-   range]`.
-3. Master mixes, one per state. Per 700 µL of mix add 7 µL of each 100× stock (or
-   7 µL plain medium for M(-)). 700 µL feeds three 96-well wells at 200 µL; scale
-   up for the 24-well (500 µL per well) and 6-well (2 mL per well) plates and add
-   dead volume. Vortex briefly.
-
-   | State | Additive per 700 µL | Final concentration | Time |
-   |---|---|---|---|
-   | M(-) | 7 µL medium | – | 24 h |
-   | M(IFNγ) | 7 µL IFNγ 100× | 20 ng/mL | 24 h |
-   | M(IL-4) | 7 µL IL-4 100× | 20 ng/mL | 24 h |
-   | M(IFNγ+LPS) | 7 µL IFNγ 100× + 7 µL L1 | 20 ng/mL + 100 ng/mL | 24 h |
-
-4. Remove the old medium from the cells and add the state mix according to the
-   plate map: 200 µL per 96-well, 500 µL per 24-well, 2 mL per 6-well. Record the
-   clock time.
-5. Incubate 24 h at 37 °C, 5% CO2.
-
-   > **To verify:** the lab's validated LPS stimulation runs 16 h, not 24 h. The
-   > 24 h polarization follows the 2014 nomenclature paper; confirm in the first run
-   > that 24 h of IFNγ or IL-4 gives a visible difference in P08.
-
-6. Wash: aspirate, add warm DPBS gently along the well wall, aspirate; repeat once.
-   Add fresh warm complete medium. Every state is washed, including M(-).
-7. Hand the plates to P05 (challenge) and keep the unchallenged wells of every
-   state for P08.
+2. Polarizer 100× stock in complete medium: IFNγ, IL-4 or IL-10 at 2 µg/mL (100× of
+   20 ng/mL); dexamethasone at 10 µM; PGE2 at 100 µM; ATRA at 100 µM. Vehicle 100×:
+   10% DMSO or ethanol in medium, for a final 0.1% `[TODO: check against the
+   supplier's recommended range]`.
+3. Seeding suspensions, one per condition: count the stock flask (P02, steps 1 to
+   5), dilute to the working density of the plate format (P02, step 7), and add
+   10 µL of 100× stock per mL of suspension (polarizer, LPS, or vehicle). Mix by
+   inverting; do not vortex cells.
+4. Plate according to the map (P02, step 7). Record the clock time: this is the start
+   of the polarization. Rock the plate in a cross pattern; do not swirl.
+5. Incubate overnight at 37 °C, 5% CO2, about 19 h.
+6. Wednesday 09:00, week 2: harvest for flow cytometry (P08). Week 3: the challenge
+   goes onto the polarized cells (P05); the polarizer stays in the well.
 
 ## Controls
 
-- M(-) is the reference for every comparison.
-- M(IFNγ+LPS) is characterised but not re-challenged with LPS: a state that has seen
-  LPS shows endotoxin tolerance and would confuse the challenge experiment. Seeing
-  tolerance on purpose is an extension (see Section 6 of the script).
+- M(-) or vehicle is the reference for every comparison.
+- LPS control: must show CD86 and scatter up by flow (week 2) and cytokine in the
+  supernatant (week 3); if it does not, the reagent, the cells or the staining is the
+  problem, not your polarizer.
+- Endotoxin tolerance: a cell that has already seen LPS answers the next LPS weakly;
+  that is why LPS stays out of the polarization and why the LPS control wells are
+  never challenged again.
 
 ## Checkpoints
 
-- After 24 h: M(IFNγ+LPS) wells look different, cells spread and often larger; M(IL-4)
-  wells look like M(-). If all four states look identical, check the stock
-  dilutions.
+- Wednesday 09:00: LPS wells look activated, cells spread and often larger; IFNγ
+  wells spread; dexamethasone and IL-10 wells look like M(-) or calmer. If every
+  condition looks identical, check the stock dilutions before you blame the biology.
 
 ## Known failure modes
 
-- No difference between states: cytokine inactive (freeze-thawed aliquot, wrong
-  dilution) or cells overgrown at stimulation. Check the plate photograph from P02.
+- No difference between conditions: cytokine inactive (freeze-thawed aliquot,
+  carrier-free protein diluted without BSA, wrong dilution) or the flask overgrown
+  before plating. Check the photograph from the morning of the plating day.
+- Suppression everywhere, including M(-): vehicle above 0.1%.
 - LPS wells inconsistent: LPS not vortexed, aggregates pipetted unevenly.
-- Cells detached after washing: DPBS added onto the cells instead of along the
-  wall.
+- Cells not attached by Wednesday: plated too cold, or the suspension sat too long
+  before plating.
 
 ## Output
 
-Plate map with the stimulation and wash times, lot numbers and dilution tubes of the
-stimuli, and the photograph of each state after 24 h.
+Plate map with the plating time, lot numbers and dilution tubes of the stimuli, and
+the photograph of each condition on Wednesday morning.
