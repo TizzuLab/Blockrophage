@@ -5,7 +5,7 @@
 | | |
 |---|---|
 | ID | P04 |
-| Used in | Exp 1 (week 2, polarize and characterize) and Exp 2 (week 3, polarize and challenge) |
+| Used in | Exp 1 (week 2, polarize and characterize) and Exp 3 (week 3, polarize and challenge) |
 | Hands-on time | 30 min to prepare the stimuli; the plating itself is P02 |
 | Wall-clock time | about 19 h, Tuesday 14:00 to Wednesday 09:00, in both weeks |
 | Resources | hood, incubator shelf, vortex |

@@ -5,7 +5,7 @@
 | | |
 |---|---|
 | ID | P05 |
-| Used in | Exp 2 (week 3, Wednesday), on the cells polarized the day before (P04) |
+| Used in | Exp 3 (week 3, Wednesday), on the cells polarized the day before (P04) |
 | Hands-on time | 45 min to challenge, 45 min to harvest |
 | Wall-clock time | overnight, about 16 h (default, IL-6 readout) or 6 h (alternative, TNF readout) |
 | Resources | hood, incubator shelf, plate centrifuge, −20 °C and −80 °C freezers |

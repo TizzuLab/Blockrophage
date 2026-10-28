@@ -83,7 +83,7 @@
 <rect x="4" y="604" width="26" height="13" fill="#C6E0B4" stroke="#BFBFBF" stroke-width="0.8"/>
 <text x="36" y="615" font-size="11" fill="#1A1A1A">Wet lab Exp 1: polarize and characterize (plate with the polarizer, harvest, stain, acquire)</text>
 <rect x="604" y="604" width="26" height="13" fill="#BDD7EE" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="636" y="615" font-size="11" fill="#1A1A1A">Wet lab Exp 2: polarize and challenge (plate, stimulate, harvest, ELISA)</text>
+<text x="636" y="615" font-size="11" fill="#1A1A1A">Wet lab Exp 3: polarize and challenge (plate, stimulate, harvest, ELISA)</text>
 <rect x="4" y="622" width="26" height="13" fill="#FFE699" stroke="#BFBFBF" stroke-width="0.8"/>
 <text x="36" y="633" font-size="11" fill="#1A1A1A">Dry lab and desk work: setup, analysis, planning</text>
 <rect x="604" y="622" width="26" height="13" fill="#D9C3E9" stroke="#BFBFBF" stroke-width="0.8"/>

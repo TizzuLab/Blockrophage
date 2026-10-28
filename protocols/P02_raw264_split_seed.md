@@ -5,7 +5,7 @@
 | | |
 |---|---|
 | ID | P02 |
-| Used in | Week 1 hands-on; Exp 1 and Exp 2 plating; passaging the stock |
+| Used in | Week 1 hands-on; Exp 1 and Exp 3 plating; passaging the stock |
 | Hands-on time | 45 min |
 | Wall-clock time | the plate is polarized at seeding (P04) and harvested or challenged the next morning |
 | Resources | hood, incubator shelf, centrifuge, counter, microscope |

@@ -5,7 +5,7 @@
 | | |
 |---|---|
 | ID | P08 |
-| Used in | Exp 2 (core: polarized RAW cells); X02 (extension: peritoneal cells on the same panel) |
+| Used in | Exp 1 (core: polarized RAW cells, week 2); X02 (extension: peritoneal cells on the same panel) |
 | Hands-on time | 2 h staining, 1 h acquisition (plus 2.5 h if the intranuclear option is run) |
 | Wall-clock time | half a day; fixed samples can be acquired the next day |
 | Resources | hood, cooled centrifuge with plate rotor, heating block, cytometer slot reserved by the facility `[TODO: instrument, slot dates]`, FlowJo seat |

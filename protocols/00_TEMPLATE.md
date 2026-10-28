@@ -8,7 +8,7 @@
 | | |
 |---|---|
 | ID | P00 |
-| Used in | Exp 1 / Exp 2 / Extension |
+| Used in | Exp 1 / Exp 3 / Extension |
 | Hands-on time | e.g. 1 h |
 | Wall-clock time | e.g. 24 h |
 | Resources | hood, incubator shelf, plate reader, cytometer slot ... |

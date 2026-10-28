@@ -8,7 +8,7 @@
 | | |
 |---|---|
 | ID | P07 |
-| Used in | Exp 2 |
+| Used in | Exp 3 (extension, on the P05 supernatants) |
 | Hands-on time | 1 h |
 | Wall-clock time | 1 h |
 | Resources | plate reader (540 nm), multichannel pipette |

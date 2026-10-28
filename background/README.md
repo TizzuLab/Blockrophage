@@ -59,7 +59,7 @@ M1 kills, M2 heals. Depending on the disease, M2 were the good guys (wound heali
 resolution of inflammation) or the bad guys (tumours, fibrosis), and M1 the other
 way round, so every field could use it.
 
-***Spoiler alert: if you read on, the outcome of Experiment 3 will no longer
+***Spoiler alert: if you read on, the outcome of Experiment 2 will no longer
 surprise you.*** M1/M2 turned out to be an oversimplification. The first cracks were
 between species: human macrophages make almost no nitric oxide, and several mouse
 "M2" genes have no human counterpart (Murray & Wynn 2011). Then the methods caught
@@ -68,7 +68,7 @@ M2 markers together; Xue and colleagues stimulated human macrophages with 29
 different conditions and found not two states but a spectrum of modules (Xue et al.
 2014); and single-cell RNA sequencing of injured, fibrotic, atherosclerotic, obese or
 tumour-bearing tissue found states that co-express genes from both ends of the old
-axis, among them the dataset of Experiment 3 (Sections 5.4 and 5.9). The two poles
+axis, among them the dataset of Experiment 2 (Sections 5.4 and 5.9). The two poles
 exist in a dish because someone created them; a tissue did not read the textbook.
 
 What replaced the labels is a nomenclature proposed by Guilliams and colleagues in
@@ -184,7 +184,7 @@ in a dish?
 ## 5.4 Level III: function and activation state
 
 The M1/M2 scheme of Section 5.1 is mechanistically true in a dish, which is why it
-can be reproduced in Experiment 2. In the textbook version, M1, classically
+can be reproduced in Experiment 1. In the textbook version, M1, classically
 activated by IFNγ and LPS, kills microbes and tumour cells with nitric oxide, TNF,
 IL-6 and IL-1β; M2, alternatively activated by IL-4 and IL-13, expresses Arg1,
 CD206, RELMα (Retnla) and Ym1 (Chil3), and heals wounds; by 2008 Mosser and Edwards

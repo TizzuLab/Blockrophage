@@ -2,7 +2,7 @@
 
 > **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage-course/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
-> Extension. Requires the 6 h lysate arm to be planned into Exp 2 at the challenge
+> Extension. Requires the 6 h lysate arm to be planned into Exp 3 at the challenge
 > step, 24-well plates in P02, and the RNA, cDNA and qPCR reagents below. Ask your
 > supervisor before week 3.
 
