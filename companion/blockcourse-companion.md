@@ -1,6 +1,6 @@
 # Blockrophage course: companion file
 
-Built 2026-10-28 from commit e089744 of the course repository. This single file
+Built 2026-10-28 from commit 6795c6d of the course repository. This single file
 contains the complete course material for the ETH Zürich block course
 "Macrophage Biology: in vitro, in vivo, in silico" (Spring Semester 2027).
 Repository: https://github.com/TizzuLab/blockrophage-course. It is meant to be given to a language model
@@ -3157,8 +3157,8 @@ platelet aggregation
                                      0.240 s      0.260 s   0.280s
 
                           60
-Distance to injury [um]
 
+Distance to injury [um]
                           40
 
                           20
@@ -4454,7 +4454,9 @@ Severe Injury   https://doi.org/10.1016/j.cell.2018.01.015
              Macrophage Switch: the phenomenon
 
              Focal liver injury
+
 CCR2-RFP
+
 CX3CR1-GFP
 
                                                    https://doi.org/10.1084/jem.20141539
@@ -4462,6 +4464,7 @@ CX3CR1-GFP
                Macrophage Switch: iNKT cells and glycolipid self-antigens
 
              Focal liver injury
+
 Cxcr6GFP/+
 
                https://doi.org/10.1016/j.immuni.2017.09.016
