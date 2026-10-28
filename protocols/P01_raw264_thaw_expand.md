@@ -5,7 +5,7 @@
 | | |
 |---|---|
 | ID | P01 |
-| Used in | Week 1 Friday; the flask is the stock for Exp 1 and Exp 2 |
+| Used in | Week 1 Friday; the flask is the stock for Exp 1 and Exp 3 |
 | Hands-on time | 45 min |
 | Wall-clock time | the flask lives until the end of the course; the staff carry it when you are away |
 | Resources | hood, incubator shelf (37 °C, 5% CO2), centrifuge, Neubauer chamber or Countess III, microscope |

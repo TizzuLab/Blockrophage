@@ -33,22 +33,24 @@
 ## Script
 
 - [Course script (README)](README.md): concept, learning objectives, how the course
-  works, the schedule (Section 4, week by week), the two core experiments and the
-  dry lab, the optional experiments and extensions (nerd factor), assessment. Read
-  first.
+  works, the schedule (Section 4, week by week), the three experiments (Section 5:
+  polarization, the in vitro versus in vivo comparison in silico, the danger-signal
+  challenge) with the extensions (nerd factor), assessment. Read first.
 
 ## Protocols
 
 - [Protocol index](protocols/README.md): table of all protocols with hands-on time,
   wall-clock time and resources.
-- Core, Exp 1: [P01 thaw and expand](protocols/P01_raw264_thaw_expand.md),
+- Core, cell culture for Exp 1 and Exp 3:
+  [P01 thaw and expand](protocols/P01_raw264_thaw_expand.md),
   [P02 split and seed](protocols/P02_raw264_split_seed.md),
   [P03 freeze](protocols/P03_raw264_freeze.md).
-- Core, Exp 2: [P04 polarization](protocols/P04_polarization.md),
-  [P05 PRR challenge](protocols/P05_prr_challenge.md),
+- Core, Exp 1 (polarization): [P04 polarization](protocols/P04_polarization.md),
+  [P08 flow cytometry](protocols/P08_flow_cytometry.md).
+- Core, Exp 3 (challenge): [P05 PRR challenge](protocols/P05_prr_challenge.md),
   [P06 ELISA](protocols/P06_elisa.md), [P07 Griess](protocols/P07_griess.md),
-  [P08 flow cytometry](protocols/P08_flow_cytometry.md),
   [P09 MTT assay](protocols/P09_mtt.md).
+- Exp 2 (in vitro versus in vivo comparison) is dry lab: see Code below.
 - Extensions: [X01 qPCR](protocols/X01_qpcr.md),
   [X02 peritoneal cells on the shared flow panel](protocols/X02_peritoneal_cells_flow.md),
   [X03 F4/80 IHC on tissue sections](protocols/X03_tissue_sections_ihc.md).

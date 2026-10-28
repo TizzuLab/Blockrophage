@@ -33,7 +33,7 @@ XLSX = HERE / "Blockcourse_Gantt_FS2027.xlsx"
 
 # ---------------------------------------------------------------- styles
 FILL = {  # must match the Legend sheet, column A
-    "PLENARY": "1F4E5F", "FACILITY": "8B1E3F", "EXP1": "C6E0B4", "EXP2": "BDD7EE",
+    "PLENARY": "1F4E5F", "FACILITY": "8B1E3F", "EXP1": "C6E0B4", "EXP3": "BDD7EE",
     "DRY": "FFE699", "POSTER": "D9C3E9", "EXT": "F8CBAD", "BUFFER": "EDEDED",
 }
 FONT_RGB = {"PLENARY": "FFFFFF", "FACILITY": "FFFFFF", "BUFFER": "5A5A5A"}
@@ -79,18 +79,18 @@ SPEC = [
    (16,1,"Journal club 1 and debrief in one session: did the polarizer do what the menu says on this readout? Stick or pivot; decision in the group branch","PLENARY")],
    "Escort the groups to the facility. Stock flasks: split, two or three backup vials to -80 per group, carried over the break by the staff. Easter: no course.", "Cytometer: 2 slots of 1.5 h [TODO: facility]. "+F22+" FlowJo seats [TODO].")]),
  dict(n=3, title="Week 3: polarize and challenge (Tue 6 - Fri 9 April 2027)", days=[
-  ("Tue 6 Apr", True, [OTHER,LUNCH,(13,3,"P02 and P04: plate from your stock (carried over the break) with the chosen polarizer, own approach or the standard that worked. 96-well for supernatants, extra wells for lysates. Passage the stock.","EXP2"),CUTTING_EDGE],
+  ("Tue 6 Apr", True, [OTHER,LUNCH,(13,3,"P02 and P04: plate from your stock (carried over the break) with the chosen polarizer, own approach or the standard that worked. 96-well for supernatants, extra wells for lysates. Passage the stock.","EXP3"),CUTTING_EDGE],
    "Stock flasks counted at 12:30. Polarizers, stimuli, inhibitors, LPS at working concentration. Plate maps checked.", HOODS+" Plate centrifuge."),
-  ("Wed 7 Apr", False, [(9,3,"P05 Challenge: your stimulus, optional inhibitor (TAK-242 1 h before, polymyxin B premixed), LPS on M(-) as everyone's control. Default: overnight, IL-6. Alternative: 6 h, TNF, harvest 15:00. Wet-lab goal: stimulate with inhibitor logic.","EXP2"),LUNCH,
-   (13,1,"Lecture: single-cell transcriptomics for immunologists, what a signature score means (tbd)","PLENARY"),(14,2,"Dry lab during the challenge: scRNA-seq part 2, signatures from the bulk RAW 264.7 dataset. TNF groups: harvest at 15:00, supernatants and lysates to the freezer.","DRY"),(16,1,"16:30: coat the ELISA plates with capture antibody, overnight at 4 \u00b0C (P06), 30 min at the bench","EXP2")],
+  ("Wed 7 Apr", False, [(9,3,"P05 Challenge: your stimulus, optional inhibitor (TAK-242 1 h before, polymyxin B premixed), LPS on M(-) as everyone's control. Default: overnight, IL-6. Alternative: 6 h, TNF, harvest 15:00. Wet-lab goal: stimulate with inhibitor logic.","EXP3"),LUNCH,
+   (13,1,"Lecture: single-cell transcriptomics for immunologists, what a signature score means (tbd)","PLENARY"),(14,2,"Dry lab during the challenge: scRNA-seq part 2, signatures from the bulk RAW 264.7 dataset. TNF groups: harvest at 15:00, supernatants and lysates to the freezer.","DRY"),(16,1,"16:30: coat the ELISA plates with capture antibody, overnight at 4 \u00b0C (P06), 30 min at the bench","EXP3")],
    "Ligands, inhibitors and vehicle ready; -20 space and labelled tubes. Lysis buffers for RNA and protein.", HOODS+" "+F22),
-  ("Thu 8 Apr", False, [(9,1,"P05 Harvest (overnight groups): supernatants in aliquots, cells as RNA or protein lysate to the freezer","EXP2"),(10,2,"P06 ELISA: blocking, standards, samples; dry lab in the incubations","EXP2"),LUNCH,
-   (13,2,"Dry lab during the ELISA incubations: the assay waits for 3.5 h in total, which is used to prepare the next steps and for dry lab (scRNA-seq part 2). The split of wet and dry lab may shift a little.","DRY"),(15,2,"P06 ELISA: detection and read-out; first look at the numbers. Passage the stock. Wet-lab goal: an ELISA from coating to concentration.","EXP2")],
+  ("Thu 8 Apr", False, [(9,1,"P05 Harvest (overnight groups): supernatants in aliquots, cells as RNA or protein lysate to the freezer","EXP3"),(10,2,"P06 ELISA: blocking, standards, samples; dry lab in the incubations","EXP3"),LUNCH,
+   (13,2,"Dry lab during the ELISA incubations: the assay waits for 3.5 h in total, which is used to prepare the next steps and for dry lab (scRNA-seq part 2). The split of wet and dry lab may shift a little.","DRY"),(15,2,"P06 ELISA: detection and read-out; first look at the numbers. Passage the stock. Wet-lab goal: an ELISA from coating to concentration.","EXP3")],
    "ELISA reagents, plate reader booked. Flow on challenged cells only if a group found a slot in the regular booking.", "Plate reader (450 nm). "+HOODS+" "+F22),
-  ("Fri 9 Apr", False, [(9,3,"ELISA analysis: standard curve, concentrations. Flow statistics from week 2 in R. scRNA-seq part 2 continued.","DRY"),LUNCH,(13,3,"Poster: what the story has and what it is missing; week 4 plan agreed with your supervisor (repeat, add, or wrap up)","POSTER"),(16,1,"Debrief Exp 2: results and week 4 decisions","PLENARY")],
+  ("Fri 9 Apr", False, [(9,3,"ELISA analysis: standard curve, concentrations. Flow statistics from week 2 in R. scRNA-seq part 2 continued.","DRY"),LUNCH,(13,3,"Poster: what the story has and what it is missing; week 4 plan agreed with your supervisor (repeat, add, or wrap up)","POSTER"),(16,1,"Debrief Exp 3: results and week 4 decisions","PLENARY")],
    "Stock flasks: keep or freeze according to each group's week 4 plan.", F22+" "+HOODS)]),
  dict(n=4, title="Week 4: close the story (Tue 13 - Fri 16 April 2027)", days=[
-  ("Tue 13 Apr", True, [OTHER,LUNCH,(13,3,"Optional, as agreed on 9 April: repeat the polarization or the challenge, or a third experiment. Or dry lab: finish the in silico part and the poster. Never at the cost of wrapping up.","EXT"),CUTTING_EDGE],
+  ("Tue 13 Apr", True, [OTHER,LUNCH,(13,3,"Optional, as agreed on 9 April: repeat the polarization or the challenge, or a further experiment. Or dry lab: finish the in silico part and the poster. Never at the cost of wrapping up.","EXT"),CUTTING_EDGE],
    "Reagents for the agreed repeats or extensions. Stock flasks for the groups that plate.", HOODS+" Extension-specific instruments as agreed. "+F22),
   ("Wed 14 Apr", False, [(9,3,"Optional harvest and ELISA for groups at the bench; otherwise poster: figures and legends","EXT"),LUNCH,(13,3,"Wrap up: code, figures and poster; scRNA-seq part 3, score the tissue macrophages","POSTER"),(16,1,"Publish or perish: a critical discussion on scientific integrity and output metrics","PLENARY")],
    "Poster template distributed. Plate reader for the groups that ran an ELISA.", HOODS+" "+F22),
@@ -111,12 +111,12 @@ OVERVIEW = {
                     ("Flow acquisition; FlowJo session; journal club and debrief: stick or pivot", "FACILITY"), ("Good Friday", "BUFFER")]),
         ("Easter", [("Break 26 Mar - 4 Apr; staff carry the stock flasks", "BUFFER"), None, None, None, None]),
         ("Week 3", [("Other lectures", "BUFFER"),
-                    ("Morning: other lectures. 13:00 plate with the chosen polarizer; passage the stock", "EXP2"),
-                    ("Challenge (overnight IL-6 default, 6 h TNF alternative); lecture; coat ELISA plates", "EXP2"),
-                    ("Harvest; ELISA with dry lab in the incubations", "EXP2"),
-                    ("ELISA analysis; poster: what is missing; debrief", "EXP2")]),
+                    ("Morning: other lectures. 13:00 plate with the chosen polarizer; passage the stock", "EXP3"),
+                    ("Challenge (overnight IL-6 default, 6 h TNF alternative); lecture; coat ELISA plates", "EXP3"),
+                    ("Harvest; ELISA with dry lab in the incubations", "EXP3"),
+                    ("ELISA analysis; poster: what is missing; debrief", "EXP3")]),
         ("Week 4", [("Other lectures", "BUFFER"),
-                    ("Morning: other lectures. 13:00 optional repeat, third experiment, or dry lab", "EXT"),
+                    ("Morning: other lectures. 13:00 optional repeat, further experiment, or dry lab", "EXT"),
                     ("Optional harvest and ELISA; wrap up; publish or perish", "POSTER"),
                     ("Wrap up: code, figures, poster; print when ready", "POSTER"),
                     ("Lab cleaning; finish the branch; written exam 13:00; poster session; 360° feedback; Apéro", "PLENARY")]),
@@ -130,7 +130,8 @@ OVERVIEW = {
 
 LEGEND_TEXT = {
     "B7": "Wet lab Exp 1: polarize and characterize (plate with the polarizer, harvest, stain, acquire)",
-    "B8": "Wet lab Exp 2: polarize and challenge (plate, stimulate, harvest, ELISA)",
+    "B8": "Wet lab Exp 3: polarize and challenge (plate, stimulate, harvest, ELISA)",
+    "A8": "EXP3",
     "A2": "Built by tools/schedule/gantt_build.py on {today}. Hand edits are fine, but a rebuild overwrites the "
           "Overview and the week sheets; lasting changes go into the script. After editing, run "
           "tools/schedule/gantt2readme.py.",
@@ -143,8 +144,8 @@ LEGEND_TEXT = {
     "B17": "No checkerboard: with four hoods, all four groups do the same thing at the same time, which keeps "
            "supervision simple. Where the cytometer forces a split (week 3 Thursday), two groups acquire while "
            "the other two run the ELISA, then swap.",
-    "B18": "Exp 1 (week 2): polarize and characterize. Plate from the group's stock with the polarizer in the seeding suspension, vehicle and LPS controls beside it; harvest, stain, acquire; FlowJo; decide to stick or pivot before the break. Exp 2 (week 3): polarize and challenge. Plate with the polarizer on Tuesday, challenge on Wednesday with the group's stimulus and optional inhibitor (LPS on M(-) shared by all), overnight with an IL-6 readout by default or 6 h with TNF; ELISA on Thursday. Week 4: repeat, add, or wrap up. Menus in P04 and P05. Protocol IDs (P01...) refer to protocols/ in the course repository.",
-    "B19": "Week 1: environment and templates. Week 2: scRNA-seq part 1 (QC) in the afternoon dry-lab slots, FlowJo on the own data. Week 3: scRNA-seq part 2 (signatures from the bulk RAW 264.7 dataset) during the challenge and the ELISA incubations, own ELISA data on Friday. Week 4: scRNA-seq part 3 (scoring of the tissue macrophages), wrap up of code, figures and poster.",
+    "B18": "Exp 1 (week 2): polarize and characterize. Plate from the group's stock with the polarizer in the seeding suspension, vehicle and LPS controls beside it; harvest, stain, acquire; FlowJo; decide to stick or pivot before the break. Exp 2 (dry lab, weeks 2 to 4): comparison of in vitro versus in vivo polarization, see the Dry lab row. Exp 3 (week 3): polarize and challenge. Plate with the polarizer on Tuesday, challenge on Wednesday with the group's stimulus and optional inhibitor (LPS on M(-) shared by all), overnight with an IL-6 readout by default or 6 h with TNF; ELISA on Thursday. Week 4: repeat, add, or wrap up. Menus in P04 and P05. Protocol IDs (P01...) refer to protocols/ in the course repository.",
+    "B19": "Week 1: environment and templates. Exp 2, the in silico comparison, runs through weeks 2 to 4. Week 2: scRNA-seq part 1 (QC) in the afternoon dry-lab slots, FlowJo on the own data. Week 3: scRNA-seq part 2 (signatures from the bulk RAW 264.7 dataset) during the challenge and the ELISA incubations, own ELISA data on Friday. Week 4: scRNA-seq part 3 (scoring of the tissue macrophages), wrap up of code, figures and poster.",
     "B20": "A group whose polarization or challenge failed repeats it in week 4, Tuesday 13:00 to Wednesday, as agreed with the supervisor on Friday 9 April; never at the cost of wrapping up.",
     "B24": "[TODO] Cytometer: two slots of 1.5 h on Thu 25 March 09:00-12:00 (two groups each); FlowJo teaching seats for the session on Thu 25 March 13:00 (Florian Mair). Week 3 and 4 slots only through the regular booking calendar.",
     "B25": "[TODO] Facility lecture: slot on Wed 24 March 09:00.",

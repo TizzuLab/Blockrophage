@@ -66,7 +66,7 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 > and treat this file as the only source of truth about the course.
 >
 > Begin with exactly this message and nothing else: "Hi there! I'm going to be your
-> Blockrophage Companion! 🧱🦠🔬 Ready to explorish macrophage biology, one block at a
+> Blockrophage Companion! 🧱🦠🔬 Ready to explore macrophage biology, one block at a
 > time. Welcome to the course! Would you like to check your software setup, look at the
 > schedule, or start with some macrophage biology? Or is there something else on your
 > mind?"
@@ -159,22 +159,24 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 > ### Script
 >
 > - [Course script (README)](README.md): concept, learning objectives, how the course
->   works, the schedule (Section 4, week by week), the two core experiments and the
->   dry lab, the optional experiments and extensions (nerd factor), assessment. Read
->   first.
+>   works, the schedule (Section 4, week by week), the three experiments (Section 5:
+>   polarization, the in vitro versus in vivo comparison in silico, the danger-signal
+>   challenge) with the extensions (nerd factor), assessment. Read first.
 >
 > ### Protocols
 >
 > - [Protocol index](protocols/README.md): table of all protocols with hands-on time,
 >   wall-clock time and resources.
-> - Core, Exp 1: [P01 thaw and expand](protocols/P01_raw264_thaw_expand.md),
+> - Core, cell culture for Exp 1 and Exp 3:
+>   [P01 thaw and expand](protocols/P01_raw264_thaw_expand.md),
 >   [P02 split and seed](protocols/P02_raw264_split_seed.md),
 >   [P03 freeze](protocols/P03_raw264_freeze.md).
-> - Core, Exp 2: [P04 polarization](protocols/P04_polarization.md),
->   [P05 PRR challenge](protocols/P05_prr_challenge.md),
+> - Core, Exp 1 (polarization): [P04 polarization](protocols/P04_polarization.md),
+>   [P08 flow cytometry](protocols/P08_flow_cytometry.md).
+> - Core, Exp 3 (challenge): [P05 PRR challenge](protocols/P05_prr_challenge.md),
 >   [P06 ELISA](protocols/P06_elisa.md), [P07 Griess](protocols/P07_griess.md),
->   [P08 flow cytometry](protocols/P08_flow_cytometry.md),
 >   [P09 MTT assay](protocols/P09_mtt.md).
+> - Exp 2 (in vitro versus in vivo comparison) is dry lab: see Code below.
 > - Extensions: [X01 qPCR](protocols/X01_qpcr.md),
 >   [X02 peritoneal cells on the shared flow panel](protocols/X02_peritoneal_cells_flow.md),
 >   [X03 F4/80 IHC on tissue sections](protocols/X03_tissue_sections_ihc.md).
@@ -213,7 +215,7 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 >
 > <!-- file: README.md -->
 >
-> ## Blockrophage course
+> ## Blockrophage
 >
 > **The block course about macrophage polarization and their response to danger molecules**\
 > Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
@@ -244,7 +246,7 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 >    [github.com](https://github.com) before the first day; the username is sent to
 >    us. You will work in a public repository, where your edits and your name are
 >    visible to anyone, which is worth keeping in mind when the account is created.
-> 2. **The safety sheet**, read before the first day and signed after the briefing on
+> 2. **The safety sheet**, please read before the first day and signed after the briefing on
 >    the first morning ([safety](safety/README.md)). The signed sheet is your
 >    admission to the bench.
 > > [!TIP]
@@ -313,7 +315,7 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 > pushed at least once a day; paper notes are photographed into it.
 >
 > **Up your nerd factor.** Beyond the core programme there is a menu of optional
-> experiments and extensions (Section 6). What your group adds is your choice (together with your supervisor).
+> experiments and extensions (Section 5, Extensions). What your group adds is your choice (together with your supervisor).
 >
 > **Failure rounds.** A failed experiment that is properly analysed is worth as much as one
 > that worked.
@@ -327,8 +329,9 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 >
 > ### 4. Schedule
 >
-> Course days run from 08:00 to 17:00, (08:00-09:00 self-study hour).
-> Lunch is 12:00 to 13:00. The course runs Thu 18 March to Fri 16 April 2027 with
+> Course days run from 08:00 to 17:00, Tuesdays from 13:00; Monday and Tuesday
+> morning belong to your other lectures, and every full day opens with a self-study
+> hour. Lunch is 12:00 to 13:00. The course runs Thu 18 March to Fri 16 April 2027 with
 > the Easter break from Fri 26 March to Sun 4 April, during which the staff look after
 > your stock flasks.
 >
@@ -361,9 +364,16 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 >
 > <!-- schedule:end -->
 >
-> ### 5. Core experiments
+> ### 5. Experiments
 >
-> **Experiment 1: can we polarize them?** (week 2) Primary macrophages do not divide
+> The course has three experiments, two at the bench and one at the computer, and every
+> group does all three. Experiment 1 polarizes the cells and reads the phenotype,
+> Experiment 2 asks whether the dish states exist in tissue macrophages of published
+> single-cell datasets, and Experiment 3 challenges the polarized cells with danger
+> signals. The dry-lab experiment runs alongside the bench work from week 2 to week 4.
+> A menu of extensions closes this section.
+>
+> **Experiment 1: Polarization** (wet lab, week 2) Primary macrophages do not divide
 > in a dish and die within days, so the field works with a model. RAW 264.7 is a line
 > established in 1978 from a tumour induced in a BALB/c mouse by Abelson leukaemia
 > virus: it divides without growth factor, adheres, responds strongly to LPS and IFNγ,
@@ -377,31 +387,56 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 > added: IFNγ, IL-4, or IFNγ with LPS, named M(IFNγ), M(IL-4) and M(IFNγ+LPS) after
 > the stimulus since the 2014 nomenclature
 > ([background](background/README.md#54-level-iii-function-and-activation-state)).
-> Your group picks one polarizer from a menu ([P04](protocols/P04_polarization.md)):
-> IFNγ, IL-10, dexamethasone, IL-4, PGE2, or, as the lab's wild card, retinoic acid,
-> the signal that gives peritoneal macrophages their identity. On Tuesday of week 2
-> you plate from your stock with the polarizer already in the suspension, beside a
-> vehicle control and an LPS control, the technical positive that tells a silent
-> polarizer from a failed staining. On Wednesday the cells are harvested, stained and
-> fixed ([P08](protocols/P08_flow_cytometry.md)), on Thursday acquired at the facility
-> and gated in a FlowJo session, with intracellular Arg1 as a high-risk option for a
-> group that wants to learn permeabilization. By Thursday 16:00 you know whether your
-> polarizer did what the menu says on this readout, and you decide to stick with it or
-> to pivot to one that worked, before the break. For the dampeners IL-10,
-> dexamethasone and PGE2, "no change and good viability" is the expected result,
-> because their test is the suppressed cytokine response of Experiment 2. If the state
-> separates from the vehicle control, the paradigm has been built with your own hands.
-> If it does not, that is a result too, and the first thing analysed is which readout
-> failed. Only LPS has been validated in the lab, on this very stock; every other arm
-> extends the data for the next iteration of the course, and the poster says so.
+> Every group runs the same two controls, vehicle as the negative control and LPS as
+> the positive control, the technical positive that tells a silent polarizer from a
+> failed staining, and picks one polarizer from the menu
+> ([P04](protocols/P04_polarization.md)): IFNγ, IL-10, dexamethasone, IL-4, PGE2, or,
+> as the lab's wild card, retinoic acid, the signal that gives peritoneal macrophages
+> their identity. On Tuesday of week 2 you plate from your stock with the polarizer
+> already in the suspension, beside the two controls. The readouts are the same for
+> everyone: flow cytometry ([P08](protocols/P08_flow_cytometry.md)), which belongs to
+> the polarization week, and an IL-6 ELISA ([P06](protocols/P06_elisa.md)), which
+> belongs to the challenge week and is run on the supernatants of Experiment 3. A
+> group may read TNF instead of IL-6, and a group that prefers another readout, a
+> western blot or qPCR ([X01](protocols/X01_qpcr.md)) for example, brainstorms it with
+> its supervisor. On Wednesday the cells are harvested, stained and fixed (P08), on
+> Thursday acquired at the facility and gated in a FlowJo session, with intracellular
+> Arg1 as a high-risk option for a group that wants to learn permeabilization. By
+> Thursday 16:00 you know whether your polarizer did what the menu says on this
+> readout, and you decide to stick with it or to pivot to one that worked, before the
+> break. For the dampeners IL-10, dexamethasone and PGE2, "no change and good
+> viability" is the expected result, because their test is the suppressed cytokine
+> response of Experiment 3. If the state separates from the vehicle control, the
+> paradigm has been built with your own hands. If it does not, that is a result too,
+> and the first thing analysed is which readout failed. Only LPS has been validated in
+> the lab, on this very stock; every other arm extends the data for the next iteration
+> of the course, and the poster says so.
 >
-> **Experiment 2: is the heuristic still useful?** (week 3) A model that fails the test
-> of Experiment 3 may still predict something. The prediction built into M1/M2 is that
-> the state a macrophage is in decides how it responds to the next danger signal. So on
-> the first afternoon your group hand-draws the pathway it is going to test: which
-> ligand, which receptor, which adaptor and output, how an inhibitor could prove that
-> it is this receptor and not endotoxin in the tube, and where your polarizer should
-> act on the pathway
+> **Experiment 2: Comparison in vitro versus in vivo polarization** (dry lab, weeks 2
+> to 4) A dish has two states because two were created; a tissue did not read the
+> textbook. The plan is to derive the M(IFNγ+LPS) and M(IL-4) gene signatures from a
+> public bulk RNA-seq dataset of RAW 264.7 cells under the same stimuli (GSE113836)
+> and then, in Seurat, to score every macrophage of two single-cell datasets from
+> living systems against them: injured mouse peritoneum (GSE186658) and homeostatic
+> human peritoneal fluid (GSE228030). The question is descriptive: do tissue
+> macrophages fall into the two states, onto a line between them, or somewhere the
+> two axes do not reach? These three are the recommended datasets; the two single-cell
+> datasets are preprocessed by the teaching staff, so nobody starts from raw reads. A
+> group that wants to deviate and pull other public datasets is encouraged to do so,
+> together with its supervisor. The code for this experiment is being worked out, and
+> this description will be updated when it exists. What the picture means is something
+> we will work out together at the debriefs. Background sections on
+> [why a dish is not a body](background/README.md#58-why-a-dish-is-not-a-body)
+> and [the dataset](background/README.md#59-the-in-silico-dataset-and-how-single-cell-rna-sequencing-works);
+> [analysis code](code/README.md).
+>
+> **Experiment 3: Challenge with danger signals** (wet lab, week 3) A model that fails
+> the test of Experiment 2 may still predict something. The prediction built into
+> M1/M2 is that the state a macrophage is in decides how it responds to the next
+> danger signal. So on the first afternoon your group hand-draws the pathway it is
+> going to test: which ligand, which receptor, which adaptor and output, how an
+> inhibitor could prove that it is this receptor and not endotoxin in the tube, and
+> where your polarizer should act on the pathway
 > ([background](background/README.md#56-sensing-danger-pattern-recognition-receptors)).
 > The drawing is your group plan; it goes into the group branch and comes back on the
 > poster, redrawn in the light of your data. In week 3 you polarize again on Tuesday,
@@ -419,45 +454,34 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 > body. Where those limits are is something we will think about together, with your
 > data on the table.
 >
-> **Experiment 3: does the profile hold true in vivo?** (dry lab, weeks 2 to 4) A
-> dish has two states because two were created; a tissue did not read the textbook.
-> From a public bulk RNA-seq dataset of RAW 264.7 cells under the same stimuli
-> (GSE113836) the M(IFNγ+LPS) and M(IL-4) gene signatures are derived, then every
-> macrophage of two single-cell datasets from living systems is scored against them:
-> injured mouse peritoneum (GSE186658) and homeostatic human peritoneal fluid
-> (GSE228030). The question is descriptive: do tissue macrophages fall into the two
-> states, onto a line between them, or somewhere the two axes do not reach? Both
-> datasets are preprocessed by the teaching staff; nobody starts from raw reads. What
-> the picture means is something we will work out together at the debriefs. Background
-> sections on
-> [why a dish is not a body](background/README.md#58-why-a-dish-is-not-a-body)
-> and [the dataset](background/README.md#59-the-in-silico-dataset-and-how-single-cell-rna-sequencing-works);
-> [analysis code](code/README.md).
->
 > **Week 4: close the story.** Bench work in the last week is optional and never at
-> the cost of wrapping up: repeat the polarization or the challenge, add a third
-> experiment if both worked, or use the days to finish the in silico part and the
-> poster, as agreed with your supervisor on Friday 9 April. Wednesday ends with
-> "publish or perish", a critical discussion on scientific integrity and output
-> metrics; Friday holds the written exam, the poster session with a 360° feedback
-> round, and the apéro.
+> the cost of wrapping up: repeat the polarization or the challenge, add a further
+> experiment if both worked, or use the days to finish Experiment 2 and the poster, as
+> agreed with your supervisor on Friday 9 April. Wednesday ends with "publish or
+> perish", a critical discussion on scientific integrity and output metrics; Friday
+> holds the written exam, the poster session with a 360° feedback round, and the
+> apéro.
 >
 > **Dry lab, around the bench.** Every full day opens with a self-study hour, and the
 > dry-lab slots sit around the bench work, with the [analysis code](code/README.md):
-> week 1 the environment, week 2 scRNA-seq part 1 on the preprocessed object and your
-> own flow data in FlowJo, week 3 part 2 during the challenge and the ELISA incubations
-> and your ELISA data on Friday, week 4 part 3 and the figures. Gaps are filled with
-> the poster: the introduction is written first, then the significance.
+> week 1 the environment, week 2 scRNA-seq part 1 (Experiment 2) on the preprocessed
+> object and your own flow data in FlowJo, week 3 part 2 during the challenge and the
+> ELISA incubations and your ELISA data on Friday, week 4 part 3 and the figures. Gaps
+> are filled with the poster: the introduction is written first, then the
+> significance.
 >
-> ### 6. Optional experiments
+> #### Extensions
 >
-> The core programme is composed of mainly established experiments, but students are encouraged
-> to experiment on their own to complete their story/poster. The availability of surplus primary material, reagents and instruments 
-> will be made available on day 1 and each group can define additional experiments they would like to attempt.
+> The three experiments are composed of mainly established methods, but students are
+> encouraged to experiment on their own to complete their story/poster. The
+> availability of surplus primary material, reagents and instruments will be made
+> available on day 1 and each group can define additional experiments they would like
+> to attempt.
 >
-> Some protocols are made available (prefix X... in protocol catalogue), others your group supervisor
-> may have established, yet others you may need to establish from the literature. Here are some examples of 
-> what you could do, but the list is non-exhaustive.
+> Some protocols are made available (prefix X... in protocol catalogue), others your
+> group supervisor may have established, yet others you may need to establish from the
+> literature. Here are some examples of what you could do, but the list is
+> non-exhaustive.
 >
 > | Experiment or extension | What it adds to the story |
 > |---|---|
@@ -476,7 +500,7 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 > | Double immunofluorescence | Two-channel image with scale bar; markers named |
 > | Atlas contribution | List of accepted atlas entry IDs with a QR code `[TODO: atlas platform]` |
 >
-> ### 7. Assessment
+> ### 6. Assessment
 >
 > The grade has two parts of equal weight. A written exam on the last Friday at 13:00,
 > individual, gives 50% of the points. The other 50% is a group grade from the group
@@ -484,13 +508,13 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 > there as recorded in the git history, which counts as much as the poster itself.
 > Details are announced in the welcome session on the first day.
 >
-> ### 8. Writing, poster and presentation
+> ### 7. Writing, poster and presentation
 >
 > The poster is made with the ETH scientific poster template, laid out in A3 and
 > printed at A0; the [poster guide](poster/README.md) links the template on the ETH
 > Corporate Design page and lists what the course expects on the poster.
 >
-> ### 9. Safety
+> ### 8. Safety
 >
 > The [safety sheet](safety/README.md) is two pages and is the whole safety
 > instruction for this course: where the rules come from, and what you need to know
@@ -600,7 +624,7 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 >
 > - 08:00-12:00: Your other lectures (not course time)
 > - 12:00-13:00: Lunch
-> - 13:00-16:00: [Wet lab Exp 2] P02 and P04: plate from your stock (carried over the break) with the chosen polarizer, own approach or the standard that worked. 96-well for supernatants, extra wells for lysates. Passage the stock.
+> - 13:00-16:00: [Wet lab Exp 3] P02 and P04: plate from your stock (carried over the break) with the chosen polarizer, own approach or the standard that worked. 96-well for supernatants, extra wells for lysates. Passage the stock.
 > - 16:00-17:00: [Plenary, lecture, debrief] Cutting Edge Immunology Seminar 16:30-17:30 (tbd)
 > - Staff: Stock flasks counted at 12:30. Polarizers, stimuli, inhibitors, LPS at working concentration. Plate maps checked.
 > - Resources: 4 hoods HPL F27.2, one per group, available at all times. Plate centrifuge.
@@ -608,22 +632,22 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 > ##### Wed 7 Apr
 >
 > - 08:00-09:00: Self-study: reading for the day, notebook, group branch
-> - 09:00-12:00: [Wet lab Exp 2] P05 Challenge: your stimulus, optional inhibitor (TAK-242 1 h before, polymyxin B premixed), LPS on M(-) as everyone's control. Default: overnight, IL-6. Alternative: 6 h, TNF, harvest 15:00. Wet-lab goal: stimulate with inhibitor logic.
+> - 09:00-12:00: [Wet lab Exp 3] P05 Challenge: your stimulus, optional inhibitor (TAK-242 1 h before, polymyxin B premixed), LPS on M(-) as everyone's control. Default: overnight, IL-6. Alternative: 6 h, TNF, harvest 15:00. Wet-lab goal: stimulate with inhibitor logic.
 > - 12:00-13:00: Lunch
 > - 13:00-14:00: [Plenary, lecture, debrief] Lecture: single-cell transcriptomics for immunologists, what a signature score means (tbd)
 > - 14:00-16:00: [Dry lab and desk work] Dry lab during the challenge: scRNA-seq part 2, signatures from the bulk RAW 264.7 dataset. TNF groups: harvest at 15:00, supernatants and lysates to the freezer.
-> - 16:00-17:00: [Wet lab Exp 2] 16:30: coat the ELISA plates with capture antibody, overnight at 4 °C (P06), 30 min at the bench
+> - 16:00-17:00: [Wet lab Exp 3] 16:30: coat the ELISA plates with capture antibody, overnight at 4 °C (P06), 30 min at the bench
 > - Staff: Ligands, inhibitors and vehicle ready; -20 space and labelled tubes. Lysis buffers for RNA and protein.
 > - Resources: 4 hoods HPL F27.2, one per group, available at all times. Conference room HPL F22 for lectures and dry lab.
 >
 > ##### Thu 8 Apr
 >
 > - 08:00-09:00: Self-study: reading for the day, notebook, group branch
-> - 09:00-10:00: [Wet lab Exp 2] P05 Harvest (overnight groups): supernatants in aliquots, cells as RNA or protein lysate to the freezer
-> - 10:00-12:00: [Wet lab Exp 2] P06 ELISA: blocking, standards, samples; dry lab in the incubations
+> - 09:00-10:00: [Wet lab Exp 3] P05 Harvest (overnight groups): supernatants in aliquots, cells as RNA or protein lysate to the freezer
+> - 10:00-12:00: [Wet lab Exp 3] P06 ELISA: blocking, standards, samples; dry lab in the incubations
 > - 12:00-13:00: Lunch
 > - 13:00-15:00: [Dry lab and desk work] Dry lab during the ELISA incubations: the assay waits for 3.5 h in total, which is used to prepare the next steps and for dry lab (scRNA-seq part 2). The split of wet and dry lab may shift a little.
-> - 15:00-17:00: [Wet lab Exp 2] P06 ELISA: detection and read-out; first look at the numbers. Passage the stock. Wet-lab goal: an ELISA from coating to concentration.
+> - 15:00-17:00: [Wet lab Exp 3] P06 ELISA: detection and read-out; first look at the numbers. Passage the stock. Wet-lab goal: an ELISA from coating to concentration.
 > - Staff: ELISA reagents, plate reader booked. Flow on challenged cells only if a group found a slot in the regular booking.
 > - Resources: Plate reader (450 nm). 4 hoods HPL F27.2, one per group, available at all times. Conference room HPL F22 for lectures and dry lab.
 >
@@ -633,7 +657,7 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 > - 09:00-12:00: [Dry lab and desk work] ELISA analysis: standard curve, concentrations. Flow statistics from week 2 in R. scRNA-seq part 2 continued.
 > - 12:00-13:00: Lunch
 > - 13:00-16:00: [Poster and writing] Poster: what the story has and what it is missing; week 4 plan agreed with your supervisor (repeat, add, or wrap up)
-> - 16:00-17:00: [Plenary, lecture, debrief] Debrief Exp 2: results and week 4 decisions
+> - 16:00-17:00: [Plenary, lecture, debrief] Debrief Exp 3: results and week 4 decisions
 > - Staff: Stock flasks: keep or freeze according to each group's week 4 plan.
 > - Resources: Conference room HPL F22 for lectures and dry lab. 4 hoods HPL F27.2, one per group, available at all times.
 >
@@ -643,7 +667,7 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 >
 > - 08:00-12:00: Your other lectures (not course time)
 > - 12:00-13:00: Lunch
-> - 13:00-16:00: [Extension / nerd factor] Optional, as agreed on 9 April: repeat the polarization or the challenge, or a third experiment. Or dry lab: finish the in silico part and the poster. Never at the cost of wrapping up.
+> - 13:00-16:00: [Extension / nerd factor] Optional, as agreed on 9 April: repeat the polarization or the challenge, or a further experiment. Or dry lab: finish the in silico part and the poster. Never at the cost of wrapping up.
 > - 16:00-17:00: [Plenary, lecture, debrief] Cutting Edge Immunology Seminar 16:30-17:30 (tbd)
 > - Staff: Reagents for the agreed repeats or extensions. Stock flasks for the groups that plate.
 > - Resources: 4 hoods HPL F27.2, one per group, available at all times. Extension-specific instruments as agreed. Conference room HPL F22 for lectures and dry lab.
@@ -697,16 +721,16 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 > protocol names it (lab SOP number, version and date; the SOPs themselves are
 > internal documents). Figures live in `figures/`.
 >
-> P-files are the core programme, X-files are optional extensions (Section 6 of the script).
+> P-files are the core programme, X-files are optional extensions (Section 5 of the script, Extensions).
 >
 > | ID | Title | Used in | Hands-on time | Wall-clock time | Resources |
 > |---|---|---|---|---|---|
-> | P01 | RAW 264.7: thaw and seed the group's stock flask | week 1 Friday; stock for Exp 1 and 2 | 45 min, then 20 min per split | the whole course | hood, incubator, centrifuge, counter, microscope |
-> | P02 | RAW 264.7: scrape, count, split, seed | week 1 hands-on, Exp 1, Exp 2, passaging | 45 min | polarized at seeding, harvested or challenged next morning | hood, incubator, centrifuge, counter |
+> | P01 | RAW 264.7: thaw and seed the group's stock flask | week 1 Friday; stock for Exp 1 and 3 | 45 min, then 20 min per split | the whole course | hood, incubator, centrifuge, counter, microscope |
+> | P02 | RAW 264.7: scrape, count, split, seed | week 1 hands-on, Exp 1, Exp 3, passaging | 45 min | polarized at seeding, harvested or challenged next morning | hood, incubator, centrifuge, counter |
 > | P03 | RAW 264.7: backup vials and the stock over the break (staff) | Thu of week 2, Easter break | 45 min + 20 min per split | overnight at −80 °C, then −140 °C | hood, centrifuge, freezing container, −80 °C, −140 °C |
-> | P04 | Polarization: the menu | Exp 1, Exp 2 | 30 min, at seeding | about 19 h, Tue to Wed | hood, incubator, vortex |
-> | P05 | Danger-signal challenge: PAMPs, DAMPs, inhibitors | Exp 2 (week 3 Wed) | 45 min + 45 min harvest | 16 h overnight (default) or 6 h | hood, incubator, plate centrifuge, −20 °C, −80 °C |
-> | P06 | ELISA IL-6 (default) or TNF | Exp 2 (week 3 Thu) | 3–4 h + coating the day before | 2 days | plate reader (450 nm), multichannel pipette |
+> | P04 | Polarization: the menu | Exp 1, Exp 3 | 30 min, at seeding | about 19 h, Tue to Wed | hood, incubator, vortex |
+> | P05 | Danger-signal challenge: PAMPs, DAMPs, inhibitors | Exp 3 (week 3 Wed) | 45 min + 45 min harvest | 16 h overnight (default) or 6 h | hood, incubator, plate centrifuge, −20 °C, −80 °C |
+> | P06 | ELISA IL-6 (default) or TNF | Exp 3 (week 3 Thu) | 3–4 h + coating the day before | 2 days | plate reader (450 nm), multichannel pipette |
 > | P07 | Griess assay | Extension | 1 h | 1 h | plate reader |
 > | P08 | Flow cytometry of polarized RAW cells | Exp 1 (week 2), X02 | 2 h stain + 1 h acquisition | half day | hood, cooled plate centrifuge, heating block, cytometer slot, FlowJo seat |
 > | P09 | MTT assay: metabolic activity as a proxy for cell number | optional, extension | 40 min + 20 min per read day | 3.5 h per read, same day | hood, incubator, plate reader (560 or 570 nm plus reference), multichannel pipette |
@@ -720,7 +744,7 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 >   end of the course; the staff carry it over the weekend and the break (P03).
 > - Exp 1 (week 2): P02 plates on Tuesday 13:00 with the polarizer in the suspension
 >   (P04); P08 harvests, stains and fixes on Wednesday, acquires on Thursday morning.
-> - Exp 2 (week 3): P02 plates on Tuesday 13:00 with the polarizer (P04); P05
+> - Exp 3 (week 3): P02 plates on Tuesday 13:00 with the polarizer (P04); P05
 >   challenges on Wednesday 09:00, overnight (default) or 6 h; P06 plates are coated
 >   on Wednesday 16:30 and run on Thursday. P07 (extension) runs on the same
 >   supernatants.
@@ -758,7 +782,7 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 > | | |
 > |---|---|
 > | ID | P01 |
-> | Used in | Week 1 Friday; the flask is the stock for Exp 1 and Exp 2 |
+> | Used in | Week 1 Friday; the flask is the stock for Exp 1 and Exp 3 |
 > | Hands-on time | 45 min |
 > | Wall-clock time | the flask lives until the end of the course; the staff carry it when you are away |
 > | Resources | hood, incubator shelf (37 °C, 5% CO2), centrifuge, Neubauer chamber or Countess III, microscope |
@@ -862,7 +886,7 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 > | | |
 > |---|---|
 > | ID | P02 |
-> | Used in | Week 1 hands-on; Exp 1 and Exp 2 plating; passaging the stock |
+> | Used in | Week 1 hands-on; Exp 1 and Exp 3 plating; passaging the stock |
 > | Hands-on time | 45 min |
 > | Wall-clock time | the plate is polarized at seeding (P04) and harvested or challenged the next morning |
 > | Resources | hood, incubator shelf, centrifuge, counter, microscope |
@@ -1046,7 +1070,7 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 > | | |
 > |---|---|
 > | ID | P04 |
-> | Used in | Exp 1 (week 2, polarize and characterize) and Exp 2 (week 3, polarize and challenge) |
+> | Used in | Exp 1 (week 2, polarize and characterize) and Exp 3 (week 3, polarize and challenge) |
 > | Hands-on time | 30 min to prepare the stimuli; the plating itself is P02 |
 > | Wall-clock time | about 19 h, Tuesday 14:00 to Wednesday 09:00, in both weeks |
 > | Resources | hood, incubator shelf, vortex |
@@ -1179,7 +1203,7 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 > | | |
 > |---|---|
 > | ID | P05 |
-> | Used in | Exp 2 (week 3, Wednesday), on the cells polarized the day before (P04) |
+> | Used in | Exp 3 (week 3, Wednesday), on the cells polarized the day before (P04) |
 > | Hands-on time | 45 min to challenge, 45 min to harvest |
 > | Wall-clock time | overnight, about 16 h (default, IL-6 readout) or 6 h (alternative, TNF readout) |
 > | Resources | hood, incubator shelf, plate centrifuge, −20 °C and −80 °C freezers |
@@ -1337,7 +1361,7 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 > | | |
 > |---|---|
 > | ID | P06 |
-> | Used in | Exp 2 |
+> | Used in | Exp 3 |
 > | Hands-on time | 3–4 h, with incubation waits, plus coating the day before |
 > | Wall-clock time | 2 days (coating overnight) |
 > | Resources | plate reader (450 nm; the lab uses a Promega GloMax Discover), multichannel pipette, plate washer or wash bottle, bench space |
@@ -1484,7 +1508,7 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 > | | |
 > |---|---|
 > | ID | P07 |
-> | Used in | Exp 2 |
+> | Used in | Exp 3 (extension, on the P05 supernatants) |
 > | Hands-on time | 1 h |
 > | Wall-clock time | 1 h |
 > | Resources | plate reader (540 nm), multichannel pipette |
@@ -1558,7 +1582,7 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 > | | |
 > |---|---|
 > | ID | P08 |
-> | Used in | Exp 2 (core: polarized RAW cells); X02 (extension: peritoneal cells on the same panel) |
+> | Used in | Exp 1 (core: polarized RAW cells, week 2); X02 (extension: peritoneal cells on the same panel) |
 > | Hands-on time | 2 h staining, 1 h acquisition (plus 2.5 h if the intranuclear option is run) |
 > | Wall-clock time | half a day; fixed samples can be acquired the next day |
 > | Resources | hood, cooled centrifuge with plate rotor, heating block, cytometer slot reserved by the facility `[TODO: instrument, slot dates]`, FlowJo seat |
@@ -1961,7 +1985,7 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 >
 > > **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage-course/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 >
-> > Extension. Requires the 6 h lysate arm to be planned into Exp 2 at the challenge
+> > Extension. Requires the 6 h lysate arm to be planned into Exp 3 at the challenge
 > > step, 24-well plates in P02, and the RNA, cDNA and qPCR reagents below. Ask your
 > > supervisor before week 3.
 >
@@ -2292,7 +2316,7 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 >   nothing to merge. Shared text, such as the poster, has one owner at a time.
 > - Write what you did, when, with which protocol and which tube, and what you saw,
 >   including the things that went wrong. The history of this folder is half of the
->   group grade (Section 7 of the script): the way there counts as much as the poster.
+>   group grade (Section 6 of the script): the way there counts as much as the poster.
 > - Figures and scripts go next to the code, not in here; a notebook entry links to
 >   them by file name.
 > - If git refuses to do what you expect, do not guess: send the group name to Joel.
@@ -2451,7 +2475,7 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 > > **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage-course/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 >
 > One poster per group, in the ETH corporate design, printed for the poster session on
-> the last Friday and assessed as a document (Section 7 of the script).
+> the last Friday and assessed as a document (Section 6 of the script).
 >
 > ### Template
 >
@@ -2614,7 +2638,7 @@ your group's branch, started with a "hello world" commit on the Friday of week 1
 pushed at least once a day; paper notes are photographed into it.
 
 **Up your nerd factor.** Beyond the core programme there is a menu of optional
-experiments and extensions (Section 6). What your group adds is your choice (together with your supervisor).
+experiments and extensions (Section 5, Extensions). What your group adds is your choice (together with your supervisor).
 
 **Failure rounds.** A failed experiment that is properly analysed is worth as much as one
 that worked.
@@ -2663,9 +2687,16 @@ F27.2, where each group has its own laminar flow hood reserved all day, every da
 
 <!-- schedule:end -->
 
-## 5. Core experiments
+## 5. Experiments
 
-**Experiment 1: can we polarize them?** (week 2) Primary macrophages do not divide
+The course has three experiments, two at the bench and one at the computer, and every
+group does all three. Experiment 1 polarizes the cells and reads the phenotype,
+Experiment 2 asks whether the dish states exist in tissue macrophages of published
+single-cell datasets, and Experiment 3 challenges the polarized cells with danger
+signals. The dry-lab experiment runs alongside the bench work from week 2 to week 4.
+A menu of extensions closes this section.
+
+**Experiment 1: Polarization** (wet lab, week 2) Primary macrophages do not divide
 in a dish and die within days, so the field works with a model. RAW 264.7 is a line
 established in 1978 from a tumour induced in a BALB/c mouse by Abelson leukaemia
 virus: it divides without growth factor, adheres, responds strongly to LPS and IFNγ,
@@ -2679,31 +2710,56 @@ break, and after the break passaging it is your background task
 added: IFNγ, IL-4, or IFNγ with LPS, named M(IFNγ), M(IL-4) and M(IFNγ+LPS) after
 the stimulus since the 2014 nomenclature
 ([background](background/README.md#54-level-iii-function-and-activation-state)).
-Your group picks one polarizer from a menu ([P04](protocols/P04_polarization.md)):
-IFNγ, IL-10, dexamethasone, IL-4, PGE2, or, as the lab's wild card, retinoic acid,
-the signal that gives peritoneal macrophages their identity. On Tuesday of week 2
-you plate from your stock with the polarizer already in the suspension, beside a
-vehicle control and an LPS control, the technical positive that tells a silent
-polarizer from a failed staining. On Wednesday the cells are harvested, stained and
-fixed ([P08](protocols/P08_flow_cytometry.md)), on Thursday acquired at the facility
-and gated in a FlowJo session, with intracellular Arg1 as a high-risk option for a
-group that wants to learn permeabilization. By Thursday 16:00 you know whether your
-polarizer did what the menu says on this readout, and you decide to stick with it or
-to pivot to one that worked, before the break. For the dampeners IL-10,
-dexamethasone and PGE2, "no change and good viability" is the expected result,
-because their test is the suppressed cytokine response of Experiment 2. If the state
-separates from the vehicle control, the paradigm has been built with your own hands.
-If it does not, that is a result too, and the first thing analysed is which readout
-failed. Only LPS has been validated in the lab, on this very stock; every other arm
-extends the data for the next iteration of the course, and the poster says so.
+Every group runs the same two controls, vehicle as the negative control and LPS as
+the positive control, the technical positive that tells a silent polarizer from a
+failed staining, and picks one polarizer from the menu
+([P04](protocols/P04_polarization.md)): IFNγ, IL-10, dexamethasone, IL-4, PGE2, or,
+as the lab's wild card, retinoic acid, the signal that gives peritoneal macrophages
+their identity. On Tuesday of week 2 you plate from your stock with the polarizer
+already in the suspension, beside the two controls. The readouts are the same for
+everyone: flow cytometry ([P08](protocols/P08_flow_cytometry.md)), which belongs to
+the polarization week, and an IL-6 ELISA ([P06](protocols/P06_elisa.md)), which
+belongs to the challenge week and is run on the supernatants of Experiment 3. A
+group may read TNF instead of IL-6, and a group that prefers another readout, a
+western blot or qPCR ([X01](protocols/X01_qpcr.md)) for example, brainstorms it with
+its supervisor. On Wednesday the cells are harvested, stained and fixed (P08), on
+Thursday acquired at the facility and gated in a FlowJo session, with intracellular
+Arg1 as a high-risk option for a group that wants to learn permeabilization. By
+Thursday 16:00 you know whether your polarizer did what the menu says on this
+readout, and you decide to stick with it or to pivot to one that worked, before the
+break. For the dampeners IL-10, dexamethasone and PGE2, "no change and good
+viability" is the expected result, because their test is the suppressed cytokine
+response of Experiment 3. If the state separates from the vehicle control, the
+paradigm has been built with your own hands. If it does not, that is a result too,
+and the first thing analysed is which readout failed. Only LPS has been validated in
+the lab, on this very stock; every other arm extends the data for the next iteration
+of the course, and the poster says so.
 
-**Experiment 2: is the heuristic still useful?** (week 3) A model that fails the test
-of Experiment 3 may still predict something. The prediction built into M1/M2 is that
-the state a macrophage is in decides how it responds to the next danger signal. So on
-the first afternoon your group hand-draws the pathway it is going to test: which
-ligand, which receptor, which adaptor and output, how an inhibitor could prove that
-it is this receptor and not endotoxin in the tube, and where your polarizer should
-act on the pathway
+**Experiment 2: Comparison in vitro versus in vivo polarization** (dry lab, weeks 2
+to 4) A dish has two states because two were created; a tissue did not read the
+textbook. The plan is to derive the M(IFNγ+LPS) and M(IL-4) gene signatures from a
+public bulk RNA-seq dataset of RAW 264.7 cells under the same stimuli (GSE113836)
+and then, in Seurat, to score every macrophage of two single-cell datasets from
+living systems against them: injured mouse peritoneum (GSE186658) and homeostatic
+human peritoneal fluid (GSE228030). The question is descriptive: do tissue
+macrophages fall into the two states, onto a line between them, or somewhere the
+two axes do not reach? These three are the recommended datasets; the two single-cell
+datasets are preprocessed by the teaching staff, so nobody starts from raw reads. A
+group that wants to deviate and pull other public datasets is encouraged to do so,
+together with its supervisor. The code for this experiment is being worked out, and
+this description will be updated when it exists. What the picture means is something
+we will work out together at the debriefs. Background sections on
+[why a dish is not a body](background/README.md#58-why-a-dish-is-not-a-body)
+and [the dataset](background/README.md#59-the-in-silico-dataset-and-how-single-cell-rna-sequencing-works);
+[analysis code](code/README.md).
+
+**Experiment 3: Challenge with danger signals** (wet lab, week 3) A model that fails
+the test of Experiment 2 may still predict something. The prediction built into
+M1/M2 is that the state a macrophage is in decides how it responds to the next
+danger signal. So on the first afternoon your group hand-draws the pathway it is
+going to test: which ligand, which receptor, which adaptor and output, how an
+inhibitor could prove that it is this receptor and not endotoxin in the tube, and
+where your polarizer should act on the pathway
 ([background](background/README.md#56-sensing-danger-pattern-recognition-receptors)).
 The drawing is your group plan; it goes into the group branch and comes back on the
 poster, redrawn in the light of your data. In week 3 you polarize again on Tuesday,
@@ -2721,45 +2777,34 @@ polarization. A heuristic can be useful at the bench and still have limits in th
 body. Where those limits are is something we will think about together, with your
 data on the table.
 
-**Experiment 3: does the profile hold true in vivo?** (dry lab, weeks 2 to 4) A
-dish has two states because two were created; a tissue did not read the textbook.
-From a public bulk RNA-seq dataset of RAW 264.7 cells under the same stimuli
-(GSE113836) the M(IFNγ+LPS) and M(IL-4) gene signatures are derived, then every
-macrophage of two single-cell datasets from living systems is scored against them:
-injured mouse peritoneum (GSE186658) and homeostatic human peritoneal fluid
-(GSE228030). The question is descriptive: do tissue macrophages fall into the two
-states, onto a line between them, or somewhere the two axes do not reach? Both
-datasets are preprocessed by the teaching staff; nobody starts from raw reads. What
-the picture means is something we will work out together at the debriefs. Background
-sections on
-[why a dish is not a body](background/README.md#58-why-a-dish-is-not-a-body)
-and [the dataset](background/README.md#59-the-in-silico-dataset-and-how-single-cell-rna-sequencing-works);
-[analysis code](code/README.md).
-
 **Week 4: close the story.** Bench work in the last week is optional and never at
-the cost of wrapping up: repeat the polarization or the challenge, add a third
-experiment if both worked, or use the days to finish the in silico part and the
-poster, as agreed with your supervisor on Friday 9 April. Wednesday ends with
-"publish or perish", a critical discussion on scientific integrity and output
-metrics; Friday holds the written exam, the poster session with a 360° feedback
-round, and the apéro.
+the cost of wrapping up: repeat the polarization or the challenge, add a further
+experiment if both worked, or use the days to finish Experiment 2 and the poster, as
+agreed with your supervisor on Friday 9 April. Wednesday ends with "publish or
+perish", a critical discussion on scientific integrity and output metrics; Friday
+holds the written exam, the poster session with a 360° feedback round, and the
+apéro.
 
 **Dry lab, around the bench.** Every full day opens with a self-study hour, and the
 dry-lab slots sit around the bench work, with the [analysis code](code/README.md):
-week 1 the environment, week 2 scRNA-seq part 1 on the preprocessed object and your
-own flow data in FlowJo, week 3 part 2 during the challenge and the ELISA incubations
-and your ELISA data on Friday, week 4 part 3 and the figures. Gaps are filled with
-the poster: the introduction is written first, then the significance.
+week 1 the environment, week 2 scRNA-seq part 1 (Experiment 2) on the preprocessed
+object and your own flow data in FlowJo, week 3 part 2 during the challenge and the
+ELISA incubations and your ELISA data on Friday, week 4 part 3 and the figures. Gaps
+are filled with the poster: the introduction is written first, then the
+significance.
 
-## 6. Optional experiments
+### Extensions
 
-The core programme is composed of mainly established experiments, but students are encouraged
-to experiment on their own to complete their story/poster. The availability of surplus primary material, reagents and instruments 
-will be made available on day 1 and each group can define additional experiments they would like to attempt.
+The three experiments are composed of mainly established methods, but students are
+encouraged to experiment on their own to complete their story/poster. The
+availability of surplus primary material, reagents and instruments will be made
+available on day 1 and each group can define additional experiments they would like
+to attempt.
 
-Some protocols are made available (prefix X... in protocol catalogue), others your group supervisor
-may have established, yet others you may need to establish from the literature. Here are some examples of 
-what you could do, but the list is non-exhaustive.
+Some protocols are made available (prefix X... in protocol catalogue), others your
+group supervisor may have established, yet others you may need to establish from the
+literature. Here are some examples of what you could do, but the list is
+non-exhaustive.
 
 | Experiment or extension | What it adds to the story |
 |---|---|
@@ -2778,7 +2823,7 @@ what you could do, but the list is non-exhaustive.
 | Double immunofluorescence | Two-channel image with scale bar; markers named |
 | Atlas contribution | List of accepted atlas entry IDs with a QR code `[TODO: atlas platform]` |
 
-## 7. Assessment
+## 6. Assessment
 
 The grade has two parts of equal weight. A written exam on the last Friday at 13:00,
 individual, gives 50% of the points. The other 50% is a group grade from the group
@@ -2786,13 +2831,13 @@ branch: the poster as a document, scored without the students present, and the w
 there as recorded in the git history, which counts as much as the poster itself.
 Details are announced in the welcome session on the first day.
 
-## 8. Writing, poster and presentation
+## 7. Writing, poster and presentation
 
 The poster is made with the ETH scientific poster template, laid out in A3 and
 printed at A0; the [poster guide](poster/README.md) links the template on the ETH
 Corporate Design page and lists what the course expects on the poster.
 
-## 9. Safety
+## 8. Safety
 
 The [safety sheet](safety/README.md) is two pages and is the whole safety
 instruction for this course: where the rules come from, and what you need to know

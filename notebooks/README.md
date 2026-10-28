@@ -24,7 +24,7 @@ this folder holds only this page.
   nothing to merge. Shared text, such as the poster, has one owner at a time.
 - Write what you did, when, with which protocol and which tube, and what you saw,
   including the things that went wrong. The history of this folder is half of the
-  group grade (Section 7 of the script): the way there counts as much as the poster.
+  group grade (Section 6 of the script): the way there counts as much as the poster.
 - Figures and scripts go next to the code, not in here; a notebook entry links to
   them by file name.
 - If git refuses to do what you expect, do not guess: send the group name to Joel.

@@ -64,7 +64,7 @@ dark (plenary) blocks are mandatory, everything else is the default plan for all
 
 - 08:00-12:00: Your other lectures (not course time)
 - 12:00-13:00: Lunch
-- 13:00-16:00: [Wet lab Exp 2] P02 and P04: plate from your stock (carried over the break) with the chosen polarizer, own approach or the standard that worked. 96-well for supernatants, extra wells for lysates. Passage the stock.
+- 13:00-16:00: [Wet lab Exp 3] P02 and P04: plate from your stock (carried over the break) with the chosen polarizer, own approach or the standard that worked. 96-well for supernatants, extra wells for lysates. Passage the stock.
 - 16:00-17:00: [Plenary, lecture, debrief] Cutting Edge Immunology Seminar 16:30-17:30 (tbd)
 - Staff: Stock flasks counted at 12:30. Polarizers, stimuli, inhibitors, LPS at working concentration. Plate maps checked.
 - Resources: 4 hoods HPL F27.2, one per group, available at all times. Plate centrifuge.
@@ -72,22 +72,22 @@ dark (plenary) blocks are mandatory, everything else is the default plan for all
 #### Wed 7 Apr
 
 - 08:00-09:00: Self-study: reading for the day, notebook, group branch
-- 09:00-12:00: [Wet lab Exp 2] P05 Challenge: your stimulus, optional inhibitor (TAK-242 1 h before, polymyxin B premixed), LPS on M(-) as everyone's control. Default: overnight, IL-6. Alternative: 6 h, TNF, harvest 15:00. Wet-lab goal: stimulate with inhibitor logic.
+- 09:00-12:00: [Wet lab Exp 3] P05 Challenge: your stimulus, optional inhibitor (TAK-242 1 h before, polymyxin B premixed), LPS on M(-) as everyone's control. Default: overnight, IL-6. Alternative: 6 h, TNF, harvest 15:00. Wet-lab goal: stimulate with inhibitor logic.
 - 12:00-13:00: Lunch
 - 13:00-14:00: [Plenary, lecture, debrief] Lecture: single-cell transcriptomics for immunologists, what a signature score means (tbd)
 - 14:00-16:00: [Dry lab and desk work] Dry lab during the challenge: scRNA-seq part 2, signatures from the bulk RAW 264.7 dataset. TNF groups: harvest at 15:00, supernatants and lysates to the freezer.
-- 16:00-17:00: [Wet lab Exp 2] 16:30: coat the ELISA plates with capture antibody, overnight at 4 °C (P06), 30 min at the bench
+- 16:00-17:00: [Wet lab Exp 3] 16:30: coat the ELISA plates with capture antibody, overnight at 4 °C (P06), 30 min at the bench
 - Staff: Ligands, inhibitors and vehicle ready; -20 space and labelled tubes. Lysis buffers for RNA and protein.
 - Resources: 4 hoods HPL F27.2, one per group, available at all times. Conference room HPL F22 for lectures and dry lab.
 
 #### Thu 8 Apr
 
 - 08:00-09:00: Self-study: reading for the day, notebook, group branch
-- 09:00-10:00: [Wet lab Exp 2] P05 Harvest (overnight groups): supernatants in aliquots, cells as RNA or protein lysate to the freezer
-- 10:00-12:00: [Wet lab Exp 2] P06 ELISA: blocking, standards, samples; dry lab in the incubations
+- 09:00-10:00: [Wet lab Exp 3] P05 Harvest (overnight groups): supernatants in aliquots, cells as RNA or protein lysate to the freezer
+- 10:00-12:00: [Wet lab Exp 3] P06 ELISA: blocking, standards, samples; dry lab in the incubations
 - 12:00-13:00: Lunch
 - 13:00-15:00: [Dry lab and desk work] Dry lab during the ELISA incubations: the assay waits for 3.5 h in total, which is used to prepare the next steps and for dry lab (scRNA-seq part 2). The split of wet and dry lab may shift a little.
-- 15:00-17:00: [Wet lab Exp 2] P06 ELISA: detection and read-out; first look at the numbers. Passage the stock. Wet-lab goal: an ELISA from coating to concentration.
+- 15:00-17:00: [Wet lab Exp 3] P06 ELISA: detection and read-out; first look at the numbers. Passage the stock. Wet-lab goal: an ELISA from coating to concentration.
 - Staff: ELISA reagents, plate reader booked. Flow on challenged cells only if a group found a slot in the regular booking.
 - Resources: Plate reader (450 nm). 4 hoods HPL F27.2, one per group, available at all times. Conference room HPL F22 for lectures and dry lab.
 
@@ -97,7 +97,7 @@ dark (plenary) blocks are mandatory, everything else is the default plan for all
 - 09:00-12:00: [Dry lab and desk work] ELISA analysis: standard curve, concentrations. Flow statistics from week 2 in R. scRNA-seq part 2 continued.
 - 12:00-13:00: Lunch
 - 13:00-16:00: [Poster and writing] Poster: what the story has and what it is missing; week 4 plan agreed with your supervisor (repeat, add, or wrap up)
-- 16:00-17:00: [Plenary, lecture, debrief] Debrief Exp 2: results and week 4 decisions
+- 16:00-17:00: [Plenary, lecture, debrief] Debrief Exp 3: results and week 4 decisions
 - Staff: Stock flasks: keep or freeze according to each group's week 4 plan.
 - Resources: Conference room HPL F22 for lectures and dry lab. 4 hoods HPL F27.2, one per group, available at all times.
 
@@ -107,7 +107,7 @@ dark (plenary) blocks are mandatory, everything else is the default plan for all
 
 - 08:00-12:00: Your other lectures (not course time)
 - 12:00-13:00: Lunch
-- 13:00-16:00: [Extension / nerd factor] Optional, as agreed on 9 April: repeat the polarization or the challenge, or a third experiment. Or dry lab: finish the in silico part and the poster. Never at the cost of wrapping up.
+- 13:00-16:00: [Extension / nerd factor] Optional, as agreed on 9 April: repeat the polarization or the challenge, or a further experiment. Or dry lab: finish the in silico part and the poster. Never at the cost of wrapping up.
 - 16:00-17:00: [Plenary, lecture, debrief] Cutting Edge Immunology Seminar 16:30-17:30 (tbd)
 - Staff: Reagents for the agreed repeats or extensions. Stock flasks for the groups that plate.
 - Resources: 4 hoods HPL F27.2, one per group, available at all times. Extension-specific instruments as agreed. Conference room HPL F22 for lectures and dry lab.

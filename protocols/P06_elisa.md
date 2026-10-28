@@ -5,7 +5,7 @@
 | | |
 |---|---|
 | ID | P06 |
-| Used in | Exp 2 |
+| Used in | Exp 3 |
 | Hands-on time | 3–4 h, with incubation waits, plus coating the day before |
 | Wall-clock time | 2 days (coating overnight) |
 | Resources | plate reader (450 nm; the lab uses a Promega GloMax Discover), multichannel pipette, plate washer or wash bottle, bench space |
