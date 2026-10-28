@@ -38,7 +38,7 @@ stock; Exp 2 runs on it if your vial does not come up.
 
 ## Procedure
 
-Freezing (Thursday of week 2, after the 09:00 count; A+B at 11:00, C+D at 13:00)
+Freezing (Thursday of week 2, 11:00, after the 09:00 count)
 
 1. Wash with DPBS, scrape into medium and count as in P02, steps 1–5. Transfer the
    suspension to a 50 mL tube.

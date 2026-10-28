@@ -53,8 +53,8 @@ supernatant for ELISA (P06) and Griess (P07). The 6 h RNA arm is an extension (X
 1. Remove the medium from the washed wells of P04 and add the condition mix
    according to the plate map: 200 µL per 96-well. Record the clock time.
 2. Incubate overnight at 37 °C, 5% CO2. In the course the challenge is set up on
-   Tuesday about 2 h after plating (A+B about 15:00, C+D about 15:30) and harvested
-   on Wednesday at 09:00 and 09:30, about 18 h; the lab validated 16 h (17:00 to
+   Tuesday about 2 h after plating (about 15:00) and harvested on Wednesday at
+   09:00, about 18 h; the lab validated 16 h (17:00 to
    09:00). Record the real time.
 3. Photograph the wells before harvest; the morphology of challenged cells is part
    of the record.

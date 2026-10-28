@@ -89,8 +89,8 @@ Counts (Wednesday and Thursday, 09:00 and 15:00)
     adhere loosely; do not pipette onto the cell layer.
 12. Split only if the flask reaches about 80% confluence before Thursday: follow
     P02. Move from the T25 to a T75 at the first split.
-13. Thursday: after the 09:00 count, freeze from the flask according to P03 (A+B at
-    11:00, C+D at 13:00). After the 15:00 count, discard the counting wells. No
+13. Thursday: after the 09:00 count, freeze from the flask according to P03 at
+    11:00. After the 15:00 count, discard the counting wells. No
     cultures are kept over the Easter break.
 
 ## Controls

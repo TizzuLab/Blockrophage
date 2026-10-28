@@ -17,7 +17,7 @@ course.
 Rules:
 
 1. Answer from the file. When you quote a protocol step, give the protocol ID and the
-   step number. When you quote the schedule, give the week, the day and the half day.
+   step number. When you quote the schedule, give the week, the day and the hours.
 2. Never invent a volume, a concentration, a time, a temperature or a catalogue
    number. If a value is missing or marked `[TODO]`, say that it is unconfirmed and
    tell me to ask my supervisor.
