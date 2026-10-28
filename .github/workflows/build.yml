@@ -4,8 +4,8 @@ name: Build companion
 # block, schedule_text.md, the companion files) are rebuilt by this job.
 # On a pull request it only builds, so the author sees that the sources build.
 # After a merge to main it rebuilds and, if anything changed, pushes one commit
-# to main as github-actions[bot] over the course-bot deploy key, which the
-# ruleset lets bypass the pull-request requirement.
+# to main as github-actions[bot], authenticated with the admin's token
+# COURSE_BOT_TOKEN, which the ruleset lets through.
 
 on:
   push:
@@ -41,12 +41,13 @@ jobs:
           name: blockcourse-companion
           path: companion/blockcourse-companion.md
       - name: Commit regenerated files to main
-        # Pushes over the course-bot deploy key (secret COURSE_BOT_KEY), the one
-        # identity the ruleset lets through. The key is used for this push only, so
-        # a missing or unregistered key breaks nothing else.
+        # Pushes with COURSE_BOT_TOKEN, a fine-grained token of the repository
+        # admin limited to this repository (Contents: read and write). The push
+        # counts as the admin, whom the ruleset lets through. The token is used
+        # for this push only; a missing token breaks nothing else.
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         env:
-          COURSE_BOT_KEY: ${{ secrets.COURSE_BOT_KEY }}
+          COURSE_BOT_TOKEN: ${{ secrets.COURSE_BOT_TOKEN }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -56,16 +57,11 @@ jobs:
             exit 0
           fi
           git commit -m "Regenerate schedule drawings and companion"
-          if [ -z "$COURSE_BOT_KEY" ]; then
-            echo "::error::COURSE_BOT_KEY is not set; the regenerated files could not be pushed to main."
+          if [ -z "$COURSE_BOT_TOKEN" ]; then
+            echo "::error::The secret COURSE_BOT_TOKEN is not set; the regenerated files could not be pushed to main."
             exit 1
           fi
-          mkdir -p ~/.ssh
-          printf '%s\n' "$COURSE_BOT_KEY" > ~/.ssh/course_bot
-          chmod 600 ~/.ssh/course_bot
-          ssh-keyscan -t ed25519 github.com >> ~/.ssh/known_hosts 2>/dev/null
-          git remote set-url origin "git@github.com:${{ github.repository }}.git"
-          GIT_SSH_COMMAND="ssh -i ~/.ssh/course_bot -o IdentitiesOnly=yes" git push origin HEAD:main
+          git push "https://x-access-token:${COURSE_BOT_TOKEN}@github.com/${{ github.repository }}.git" HEAD:main
 
   release:
     needs: build
