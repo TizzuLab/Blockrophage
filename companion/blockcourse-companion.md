@@ -1,6 +1,6 @@
 # Blockrophage course: companion file
 
-Built 2026-10-28 from commit 8111107 of the course repository. This single file
+Built from the course repository by tools/build_companion.py. This single file
 contains the complete course material for the ETH Zürich block course
 "Macrophage Biology: in vitro, in vivo, in silico" (Spring Semester 2027).
 Repository: https://github.com/TizzuLab/blockrophage-course. It is meant to be given to a language model
@@ -239,7 +239,9 @@ its own branch of it, named by year and group (for example `2027/group-a`).
 **Groups and supervisors.** On day 1 we build 3-4 groups of 2-3 students with 1-2 supervisors 
 from the lab.
 
-**Lab notebook.** on paper or push your notes to git.
+**Lab notebook.** One text file per person in [`notebooks/`](notebooks/README.md) on
+your group's branch, started with a "hello world" commit on the Friday of week 1 and
+pushed at least once a day; paper notes are photographed into it.
 
 **Up your nerd factor.** Beyond the core programme there is a menu of optional
 experiments and extensions (Section 6). What your group adds is your choice (together with your supervisor).
@@ -275,7 +277,7 @@ F27.2, where each group has its own laminar flow hood reserved all day, every da
 
 #### Week 1: orientation (Thu 18 - Fri 19 March 2027)
 
-![Week 1: orientation (Thu 18 - Fri 19 March 2027)](figures/schedule/week-1.svg?v=54befed3)
+![Week 1: orientation (Thu 18 - Fri 19 March 2027)](figures/schedule/week-1.svg?v=e4d79287)
 
 #### Week 2: polarize and characterize (Tue 23 - Thu 25 March 2027)
 
@@ -497,7 +499,7 @@ dark (plenary) blocks are mandatory, everything else is the default plan for all
 - 08:00-09:00: Self-study: reading for the day, notebook, group branch
 - 09:00-12:00: [Wet lab Exp 1] Hands-on cell culture with the staff culture: hood and sterile technique, microscope, P02 scrape, count, split and seed, cell counter. Then P01: thaw and seed your group's stock flask (course passage 0). Lab tour.
 - 12:00-13:00: Lunch
-- 13:00-17:00: [Dry lab and desk work] Working with git and RStudio, step by step with the supervisors: GitHub account, install R, RStudio and Git if you did not at home, token, clone the course repository from RStudio, switch to your group's branch, open the ELISA script and run it, push one line to the branch. Then build the rest of the environment with your chatty. Group plan (the drawing and your menu choices) committed to the group branch at 17:00.
+- 13:00-17:00: [Dry lab and desk work] Working with git and RStudio, step by step with the supervisors: GitHub account, install R, RStudio and Git if you did not at home, token, clone the course repository from RStudio, switch to your group's branch, open the ELISA script and run it. Then the first commit: a new text file in notebooks/ with your first notes, saved under a name you like, committed as "hello world" and pushed to your branch. Then the rest of the environment with your chatty. Group plan (the drawing and your menu choices) committed to the group branch at 17:00.
 - Staff: One low-passage vial per group. Supervisors carry the stock flasks over the weekend and the break: split every 2 to 3 days, course passage counted from this thaw. Afternoon: one supervisor per two laptops; the 08:00 slot is the installation help desk for latecomers. Collect the plans at 17:00.
 - Resources: 4 hoods HPL F27.2, one per group, available at all times. Cell counter. Conference room HPL F22 for lectures and dry lab. Own laptops, Wi-Fi.
 
