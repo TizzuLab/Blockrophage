@@ -73,6 +73,9 @@
 
 ## Optional
 
-- [Companion prompt](COMPANION_PROMPT.md): the system prompt students paste before
-  the companion file.
+- [Companion prompt](COMPANION_PROMPT.md): how to start the companion (paste the
+  prompt, attach the file) and the prompt itself, editable on each group's branch.
+- [Companion file](https://raw.githubusercontent.com/TizzuLab/blockrophage-course/main/companion/blockcourse-companion.md): the whole repository as one file.
+- [Core companion](https://raw.githubusercontent.com/TizzuLab/blockrophage-course/main/companion/blockcourse-companion-core.md): script, schedule and protocols only, for sessions that
+  have to start from a link.
 - [Licence](LICENSE.md): CC BY 4.0 for text, MIT for code.
