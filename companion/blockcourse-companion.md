@@ -1,6 +1,6 @@
 # Blockrophage course: companion file
 
-Built 2026-10-28 from commit b106917 of the course repository. This single file
+Built 2026-10-28 from commit d0623c4 of the course repository. This single file
 contains the complete course material for the ETH Zürich block course
 "Macrophage Biology: in vitro, in vivo, in silico" (Spring Semester 2027).
 Repository: https://github.com/TizzuLab/blockrophage-course. It is meant to be given to a language model
@@ -286,7 +286,7 @@ F27.2, where each group has its own laminar flow hood reserved all day, every da
 
 #### Week 4: extensions, poster, presentations (Tue 13 - Fri 16 April 2027)
 
-![Week 4: extensions, poster, presentations (Tue 13 - Fri 16 April 2027)](figures/schedule/week-4.svg?v=ed95abba)
+![Week 4: extensions, poster, presentations (Tue 13 - Fri 16 April 2027)](figures/schedule/week-4.svg?v=a37f5851)
 
 <!-- schedule:end -->
 
@@ -388,9 +388,11 @@ what you could do, but the list is non-exhaustive.
 
 ### 7. Assessment
 
-Assessment. The grade has two parts: an assessment of the poster as a document, scored
-per group without the students present, and an oral assessment per student. 
-Weights and format are announced in the welcome session on the first day.
+The grade has two parts of equal weight. A written exam on the last Friday at 13:00,
+individual, gives 50% of the points. The other 50% is a group grade from the group
+branch: the poster as a document, scored without the students present, and the way
+there as recorded in the git history, which counts as much as the poster itself.
+Details are announced in the welcome session on the first day.
 
 ### 8. Writing, poster and presentation
 
@@ -430,7 +432,7 @@ will still be wrong sometimes; the repository, not the chatty, is the reference.
 - Surplus primary material for the extensions.
 - Pinned environment, fallback environment, chatty licensing for students.
 - Recognition of extensions (points or otherwise), atlas platform, prize and funding,
-  grading rules for block courses, poster printing.
+  grading rules for block courses.
 
 ---
 
@@ -558,27 +560,28 @@ dark (plenary) blocks are mandatory, everything else is the default plan for all
 - 12:00-13:00: Lunch
 - 13:00-16:00: [Poster and writing] Dry lab: analysis of Exp 2 and the extension, scRNA-seq part 3, score the tissue macrophages. Poster: figures and legends
 - 16:00-17:00: [Plenary, lecture, debrief] Failure round: each group presents one thing that went wrong and what it taught them
-- Staff: Poster template distributed, printing booked [TODO: printer]. Rescue groups: cytometer slot [TODO: facility], ELISA Wed, result on the poster by Thursday.
+- Staff: Poster template distributed. Rescue groups: cytometer slot [TODO: facility], ELISA Wed, result on the poster by Thursday.
 - Resources: 4 hoods HPL F27.2, one per group, available at all times. Conference room HPL F22 for lectures and dry lab.
 
 ##### Thu 15 Apr
 
 - 09:00-12:00: [Poster and writing] Poster production with your supervisor: final figures and legends
 - 12:00-13:00: Lunch
-- 13:00-14:00: [Poster and writing] Final checks. Printing deadline 14:00: poster PDF committed to the group branch
+- 13:00-14:00: [Poster and writing] Poster production, continued. Print when you are ready (poster guide); the PDF goes to the group branch first
 - 14:00-15:00: [Plenary, lecture, debrief] Recap and Q&A (tbd): the course in one hour, then open questions with the teaching staff
 - 15:00-17:00: Free: extension analysis, notebook, group branch
-- Staff: Posters printed Thu after 14:00 [TODO: printer].
-- Resources: Conference room HPL F22 for lectures and dry lab. Printer [TODO]. Poster boards.
+- Staff: Printing is each group's own business (signprint.ch, see the poster guide). Poster boards ready.
+- Resources: Conference room HPL F22 for lectures and dry lab. Poster boards.
 
 ##### Fri 16 Apr
 
 - 09:00-11:00: [Dry lab and desk work] Lab clean-up; notebook and group branch finalised
 - 11:00-12:00: [Plenary, lecture, debrief] Feedback round with the teaching staff; course evaluation
 - 12:00-13:00: Lunch
-- 13:00-16:00: [Plenary, lecture, debrief] Poster presentations and discussion; prize
+- 13:00-14:00: [Plenary, lecture, debrief] Written exam, individual [TODO: duration and room]
+- 14:00-16:00: [Plenary, lecture, debrief] Poster session: presentations and discussion; prize
 - 16:00-17:00: [Plenary, lecture, debrief] Apéro
-- Staff: Jury, prize, evaluation form, clean-up checklist. Apéro ordered [TODO: catering].
+- Staff: Exam papers, jury, prize, evaluation form, clean-up checklist. Apéro ordered [TODO: catering].
 - Resources: Conference room HPL F22 for lectures and dry lab. Apéro room [TODO: catering].
 
 ---
@@ -3115,8 +3118,8 @@ platelet aggregation
                                      0.240 s      0.260 s   0.280s
 
                           60
-
 Distance to injury [um]
+
                           40
 
                           20
@@ -4412,9 +4415,7 @@ Severe Injury   https://doi.org/10.1016/j.cell.2018.01.015
              Macrophage Switch: the phenomenon
 
              Focal liver injury
-
 CCR2-RFP
-
 CX3CR1-GFP
 
                                                    https://doi.org/10.1084/jem.20141539
@@ -4422,7 +4423,6 @@ CX3CR1-GFP
                Macrophage Switch: iNKT cells and glycolipid self-antigens
 
              Focal liver injury
-
 Cxcr6GFP/+
 
                https://doi.org/10.1016/j.immuni.2017.09.016
@@ -5212,8 +5212,11 @@ the course may redistribute the template in this public repository]`.
   (figures with legends stating n), interpretation of the dish-versus-tissue
   comparison, limits, extensions if any, methods with protocol IDs and the commit
   hash of the group branch.
-- The poster PDF is committed to the group branch by the printing deadline, Thu 15
-  April 2027, 14:00 (Section 4). Printing is organised by the staff `[TODO: printer]`.
+- Printing is your group's own business. When the poster is ready, commit the PDF to
+  the group branch and order the print at [Signprint](https://signprint.ch/#about)
+  `[TODO: confirm format, turnaround and who pays]`, in time for the poster session
+  on Friday 16 April 2027 at 14:00. There is no printing deadline on the plan; plan
+  backwards from the turnaround time.
 - The writing lecture in week 4 covers how to build the argument from the data, figure
   design, what a good legend does, and how to state limits honestly.
 
