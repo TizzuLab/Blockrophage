@@ -1,28 +1,34 @@
 name: Build companion
 
-# Generated files (schedule drawings, the README schedule block and companion
-# block, schedule_text.md, the companion files) are rebuilt by this job.
-# On a pull request it only builds, so the author sees that the sources build.
-# After a merge to main it rebuilds and, if anything changed, opens (or updates)
-# a pull request named "Regenerate" from the branch regenerate/main. Nobody and
-# nothing pushes to main directly; the owner merges that pull request.
+# Branch model (since 2026-10-28):
+# - dev is the workshop, unprotected. On every push to dev this job rebuilds the
+#   generated files (schedule drawings, README schedule and companion blocks,
+#   schedule_text.md, both companion files) and commits them back to dev.
+# - main is the published, student-facing branch, protected: changes arrive only
+#   through a pull request (normally dev -> main) and this job must pass. On a
+#   pull request and on main the job only verifies that nothing is stale.
 
 on:
   push:
-    branches: [main]
+    branches: [main, dev]
     tags: ["*"]
   pull_request:
   workflow_dispatch:
 
 permissions:
   contents: write
-  pull-requests: write
+
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.ref }}
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -41,10 +47,8 @@ jobs:
         with:
           name: blockcourse-companion
           path: companion/blockcourse-companion.md
-      - name: Open a pull request with the regenerated files
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        env:
-          GH_TOKEN: ${{ github.token }}
+      - name: Commit regenerated files to dev
+        if: github.event_name == 'push' && github.ref == 'refs/heads/dev'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -53,15 +57,16 @@ jobs:
             echo "Nothing to regenerate."
             exit 0
           fi
-          git checkout -B regenerate/main
           git commit -m "Regenerate schedule drawings and companion"
-          git push --force origin regenerate/main
-          if gh pr list --head regenerate/main --state open --json number --jq 'length' | grep -q '^0$'; then
-            gh pr create --base main --head regenerate/main \
-              --title "Regenerate schedule drawings and companion" \
-              --body "Generated files rebuilt after the last merge to main. Merge to bring main up to date; nothing to review."
-          else
-            echo "The regenerate pull request is already open and now carries the new commit."
+          git pull --rebase origin dev
+          git push origin HEAD:dev
+      - name: Verify that nothing is stale
+        if: github.event_name == 'pull_request' || github.ref == 'refs/heads/main'
+        run: |
+          if ! git diff --quiet -- README.md figures/schedule tools/schedule/schedule_text.md companion/; then
+            echo "::error::Generated files are stale. Push to dev, wait about a minute for the regeneration commit, then the pull request updates itself."
+            git status --short
+            exit 1
           fi
 
   release:
