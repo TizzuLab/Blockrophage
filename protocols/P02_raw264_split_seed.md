@@ -5,27 +5,28 @@
 | | |
 |---|---|
 | ID | P02 |
-| Used in | Exp 1, Exp 2 |
+| Used in | Week 1 hands-on; Exp 1 and Exp 2 plating; passaging the stock |
 | Hands-on time | 45 min |
-| Wall-clock time | 24 h before stimulation |
+| Wall-clock time | the plate is polarized at seeding (P04) and harvested or challenged the next morning |
 | Resources | hood, incubator shelf, centrifuge, counter, microscope |
-| Depends on | P01 flask at 60–80% confluence, or staff stock culture |
+| Depends on | the group's stock flask (P01) at 60–80% confluence |
 | Lab SOP | Zindel lab 0203 "RAW 264.7 – adherent cells" (v1.0, 2025-12-01), splitting section, and the lab's RAW 264.7 polarisation protocol (v1.0, 2025-12-08), seeding section. The SOP wins over this page. |
 
 ## Purpose
 
 Detach, count and re-seed RAW 264.7 cells, either to keep the flask growing (split)
-or to seed plates for an experiment at a defined density 24 h before stimulation.
-The same steps serve both.
+or to seed plates for an experiment at a defined density, with the polarizer already
+in the suspension (P04). The same steps serve both, and the first time you do them is
+on the staff culture, on the Friday of week 1.
 
 ## Materials
 
 - Complete medium, warm (recipe in P01)
 - DPBS (Gibco 14190144), warm
 - Cell scraper, one per flask
-- Plates: 96-well flat-bottom for the supernatant assays (ELISA, Griess), 6-well
-  for flow cytometry, 24-well for the RNA extension; T25 or T75 for continued
-  expansion
+- Plates: 6-well or 12-well for flow cytometry (week 2), 96-well flat-bottom for
+  the supernatants (week 3), 24-well for the RNA extension; T25 or T75 for the
+  stock
 - Counter and trypan blue (as in P01)
 
 ## Before you start
@@ -48,15 +49,14 @@ The same steps serve both.
    Transfer to a 15 mL tube.
 5. Count with trypan blue. Record total, live, viability.
 6. Split: seed 1:3 to 1:5 of the suspension into a fresh flask (3 mL final in a
-   T25, 10 mL in a T75), the ratio chosen by the growth speed you measured in P01
-   (doubling time 15–24 h). Record the new passage number in the notebook
-   `[TODO: maximum passage the lab accepts for experiments]`.
+   T25, 10 mL in a T75); RAW 264.7 double every 15–24 h (lab SOP). Record the
+   split with the date and the course passage count, counted from the Friday thaw.
 7. Seed for an experiment: centrifuge the needed cells (300 × g, 5 min), resuspend
    in fresh medium at the working density and plate
 
    | Format | Cells per well | Volume per well | Use |
    |---|---|---|---|
-   | 96-well | 2 × 10^4 | 200 µL | supernatant for ELISA and Griess (lab-validated) |
+   | 96-well | 2 × 10^4 | 200 µL | supernatant for ELISA (lab-validated) |
    | 24-well | 1.2 × 10^5 | 500 µL | RNA arm, X01 |
    | 6-well | 6 × 10^5 | 2 mL | flow cytometry, P08 |
 
@@ -69,7 +69,8 @@ The same steps serve both.
 
    Rock the plate gently in a cross pattern to spread the cells. Do not swirl;
    swirling piles cells in the centre.
-8. Incubate 24 h before stimulation (P04).
+8. Incubate overnight, about 19 h; the polarizer went in with the suspension (P04).
+   Harvest (P08) or challenge (P05) the next morning.
 
 ## Controls
 

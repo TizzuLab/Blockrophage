@@ -5,8 +5,8 @@
 | | |
 |---|---|
 | ID | P09 |
-| Used in | Exp 1 (growth-curve columns seeded Tuesday, read Wednesday and Thursday; standard curve on Wednesday morning); optional in Exp 2 and 4 as a viability check on wells whose supernatant has been harvested |
-| Hands-on time | 20 min on Tuesday, 40 min on Wednesday (standard curve and read 1), 20 min per read after that |
+| Used in | Optional, extension: a growth curve of the stock, or a viability check on wells whose supernatant has been harvested. Not part of the core since the 2026-10-28 revision |
+| Hands-on time | 20 min to seed, 40 min for the standard curve and the first read, 20 min per read after that |
 | Wall-clock time | 3.5 h per read (3 h MTT, 15 min solubilisation, read), same day |
 | Resources | hood, incubator shelf, plate reader with a 560 or 570 nm filter and a reference filter, multichannel pipette, orbital shaker (optional), microscope |
 | Depends on | a counted live-cell suspension from P01 step 5 (thaw day) or P02 step 5 |

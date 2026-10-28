@@ -6,8 +6,9 @@ draws it into the README and the companion. This script writes the Overview shee
 and the four week sheets from the SPEC and keeps the Legend sheet (colours, texts)
 of the existing file, updating only its text cells listed in LEGEND_TEXT.
 
-Layout of a week sheet (calendar): one column per day, one row per hour, 09:00 to
-16:00 (a Tuesday has 13:00 to 16:00; its morning is the students' other lectures).
+Layout of a week sheet (calendar): one column per day, one row per hour, 08:00 to
+16:00 (a Tuesday has 13:00 to 16:00; its morning is the students' other lectures;
+every full day opens with a self-study hour).
 All four groups follow the same plan, each at its own hood. Below the hour grid: a
 Staff row and a Resources row, one cell per day.
 
@@ -40,7 +41,7 @@ BOLD = {"PLENARY", "FACILITY"}
 HEADER_FILL, META_FILL = "F2F2F2", "FAFAFA"
 THIN = Side(style="thin", color="BFBFBF")
 BORDER = Border(left=THIN, right=THIN, top=THIN, bottom=THIN)
-HOURS = [9, 10, 11, 12, 13, 14, 15, 16]
+HOURS = [8, 9, 10, 11, 12, 13, 14, 15, 16]
 HEADER_ROWS = 3          # title, subtitle, day header
 FIRST_HOUR_ROW = HEADER_ROWS + 1
 
@@ -49,7 +50,8 @@ SUBTITLE = ("Dark cells in bold are plenary and mandatory. Everything else is th
             "supervisors' agreement. Lectures and dry lab: conference room HPL F22. Bench: HPL F27.2.")
 
 LUNCH = (12, 1, "Lunch", "BUFFER")
-OTHER = (9, 3, "Your other lectures (not course time)", "BUFFER")
+OTHER = (8, 4, "Your other lectures (not course time)", "BUFFER")
+SELF_STUDY = (8, 1, "Self-study: reading for the day, notebook, group branch", "BUFFER")
 CUTTING_EDGE = (16, 1, "Cutting Edge Immunology Seminar 16:30-17:30 (tbd)", "PLENARY")
 HOODS = "4 hoods HPL F27.2, one per group, available at all times."
 F22 = "Conference room HPL F22 for lectures and dry lab."
@@ -57,200 +59,81 @@ F22 = "Conference room HPL F22 for lectures and dry lab."
 # ---------------------------------------------------------------- spec
 # days: (header, tuesday?, blocks, staff, resources); blocks: (start hour, span, text, kind).
 SPEC = [
-    dict(
-        n=1, title="Week 1: orientation (Thu 18 - Fri 19 March 2027)",
-        days=[
-            ("Thu 18 Mar", False,
-             [(9, 1, "Welcome and safety briefing (Tea Kocijan)", "PLENARY"),
-              (10, 2, "Lecture: tissue macrophages and nomenclature (Joel Zindel)", "PLENARY"),
-              LUNCH,
-              (13, 1, "Group formation", "PLENARY"),
-              (14, 3, "Experiment planning with your supervisors: choose your PRR axis and your extension. "
-                      "Read P01, P02 and P09 for Friday and Tuesday.", "DRY")],
-             "Rooms, safety officer. Groups formed at 13:00; supervisors sit with their group from then on.",
-             F22),
-            ("Fri 19 Mar", False,
-             [(9, 3, "Hands-on introduction to mammalian cell culture with the staff culture: hood and sterile "
-                     "technique, microscope, P02 scrape, count, split and seed, cell counter. Lab tour.", "EXP1"),
-              LUNCH,
-              (13, 4, "Dry lab setup: clone the course repository, build the environment with your chatty, run "
-                      "the ELISA template on example data. Group plan submitted at 17:00.", "DRY")],
-             "Staff culture split and counted, one flask per group at 09:00. Dry lab: walk around, unblock "
-             "installs. Fallback environment ready [TODO]. Collect the group plans at 17:00.",
-             HOODS + " Cell counter. " + F22 + " Own laptops, Wi-Fi."),
-        ],
-    ),
-    dict(
-        n=2, title="Week 2: Exp 1, establish the line (Tue 23 - Thu 25 March 2027)",
-        days=[
-            ("Tue 23 Mar", True,
-             [OTHER, LUNCH,
-              (13, 4, "P01 Thaw your own vial, count (T0), seed the flask and the counting wells. P09 Seed the "
-                      "MTT growth-curve columns.", "EXP1")],
-             "Medium warmed, one vial per group at 13:00. Supervisor at the hood with each group for the thaw. "
-             "Counting plates and MTT plates ready.",
-             HOODS + " Cell counter."),
-            ("Wed 24 Mar", False,
-             [(9, 1, "P01 Count 1. P09 Seed the standard curve, MTT on column 1", "EXP1"),
-              (10, 2, "Inspect the flask, medium change. P09 MTT on the standard curve at 11:00; reads at 12:30 "
-                      "and 14:30", "EXP1"),
-              LUNCH,
-              (13, 1, "Facility lecture: flow cytometry and FlowJo (Florian Mair) [TODO: confirm slot with the "
-                      "facility]", "FACILITY"),
-              (14, 3, "Dry lab: scRNA-seq part 1, load the preprocessed object, QC figure. Poster: draft the "
-                      "introduction. P01 Count 2 at 15:00", "DRY")],
-             "Cultures inspected 08:00. Counted staff suspension for the standard curves at 09:00. Plate reader "
-             "12:30 (column 1) and 14:30 (standard curve).",
-             HOODS + " Plate reader. " + F22 + " FlowJo seats [TODO]."),
-            ("Thu 25 Mar", False,
-             [(9, 1, "P01 Count 3. P09 MTT on column 2 (read 12:30)", "EXP1"),
-              (10, 1, "Journal club 1 (tbd): the M1/M2 nomenclature revision [TODO: paper]; one group presents, "
-                      "all read", "PLENARY"),
-              (11, 1, "P03 Freeze your own vials from the flask. Clean-up", "EXP1"),
-              LUNCH,
-              (13, 2, "Dry lab: FlowJo on example data. Growth curve and doubling time from your counts. Poster: "
-                      "why does this matter (significance). P09 MTT on column 3 at 12:30, read 16:00", "DRY"),
-              (15, 1, "P01 Count 4, the last point. Discard the counting wells; nothing stays in culture over "
-                      "the break", "EXP1"),
-              (16, 1, "Debrief week 2: what worked, plan for Exp 2", "PLENARY")],
-             "Freezing boxes in the -80. Plate reader 12:30 and 16:00. Collect all cultures at 17:00. Easter: "
-             "vials to -140 on Fri 26 Mar; thaw backup RAW on Wed 31 Mar, split Fri 2 Apr: enough cells to plate "
-             "four groups on Tue 6 Apr.",
-             HOODS + " -80 box per group; Mr Frosty or equivalent [TODO: lab standard]. Plate reader. " + F22),
-        ],
-    ),
-    dict(
-        n=3, title="Week 3: Exp 2, challenge and read out (Tue 6 - Fri 9 April 2027)",
-        days=[
-            ("Tue 6 Apr", True,
-             [OTHER, LUNCH,
-              (13, 3, "P02 Plate cells from the staff culture, spin the plate down, 2 h to adhere [TODO: confirm "
-                      "before the course that RAW cells adhere in 2 h after a spin]. Meanwhile P01 re-thaw your "
-                      "own vial (viability = Exp 1 readout). Then P05 Challenge overnight with LPS.", "EXP2"),
-              CUTTING_EDGE],
-             "Staff culture split Fri 2 Apr, counted at 12:30: enough cells to plate four groups. Plate maps "
-             "checked before anyone pipettes. LPS aliquots at working concentration. Supervisor at the hood for "
-             "the re-thaw.",
-             HOODS + " Plate centrifuge."),
-            ("Wed 7 Apr", False,
-             [(9, 3, "P05 Harvest: supernatants to -20 in aliquots for the ELISA, cells for flow cytometry "
-                     "(P08).", "EXP2"),
-              LUNCH,
-              (13, 1, "Lecture: single-cell transcriptomics for immunologists, what a signature score means "
-                      "(tbd)", "PLENARY"),
-              (14, 3, "P08 Flow staining of the harvested cells, fix the stained cells (4 °C until "
-                      "acquisition). P06 Coat the ELISA plates with capture antibody, overnight at 4 °C "
-                      "[TODO: check the ELISA protocol]", "EXP2")],
-             "Tubes labelled, -20 space for supernatants. Antibody panel, viability dye, fixation buffer. ELISA "
-             "plates and capture antibody.",
-             HOODS + " Cooled centrifuge. Fridge for the fixed cells and the coated plates. " + F22),
-            ("Thu 8 Apr", False,
-             [(9, 1, "Journal club 2 (tbd): the peritoneal injury single-cell paper behind GSE186658 [TODO: "
-                     "paper]; one group presents, all read", "PLENARY"),
-              (10, 2, "Cytometer slot, groups A+B: P08 Acquire [TODO: facility reservation]. Groups C+D: P06 "
-                      "ELISA, blocking and samples [TODO: timing against the protocol]; scRNA-seq part 2 during "
-                      "the incubations", "FACILITY"),
-              LUNCH,
-              (13, 3, "Cytometer slot, groups C+D: P08 Acquire [TODO: facility reservation]. Groups A+B: P06 "
-                      "ELISA, blocking and samples [TODO: timing against the protocol]; scRNA-seq part 2 during "
-                      "the incubations", "FACILITY"),
-              (16, 1, "ELISA: finish the detection steps or set the overnight step [TODO: protocol]", "EXP2")],
-             "Escort the groups to the facility. ELISA reagents, plate reader booked.",
-             "Cytometer: 2 slots of 2 h [TODO: facility]. Plate reader (450 nm). " + HOODS + " " + F22),
-            ("Fri 9 Apr", False,
-             [(9, 3, "FlowJo session: gating of your own data, export statistics (with the facility, tbd)", "DRY"),
-              LUNCH,
-              (13, 3, "ELISA analysis: plate read if outstanding, standard curve, concentrations. Flow statistics "
-                      "in R. scRNA-seq part 2 continued. Poster: results so far", "DRY"),
-              (16, 1, "Debrief Exp 2: results, extension choices, rescue decisions", "PLENARY")],
-             "FlowJo seats [TODO]. Plate reader. Staff culture kept for groups that need the rescue path (a "
-             "repeat of Exp 2 in week 4).",
-             F22 + " FlowJo seats [TODO]. Plate reader. " + HOODS),
-        ],
-    ),
-    dict(
-        n=4, title="Week 4: extensions, poster, presentations (Tue 13 - Fri 16 April 2027)",
-        days=[
-            ("Tue 13 Apr", True,
-             [OTHER, LUNCH,
-              (13, 3, "Extension of your choice (bench steps), or rescue path: repeat Exp 2 (plate, spin, 2 h, "
-                      "LPS challenge overnight)", "EXT"),
-              CUTTING_EDGE],
-             "Reagents for the extensions agreed on Fri 9 Apr. Staff culture ready for rescue groups to plate.",
-             HOODS + " Extension-specific instruments as agreed."),
-            ("Wed 14 Apr", False,
-             [(9, 1, "Lecture: scientific writing, from data to argument, poster structure, figure design, honest "
-                     "limits (tbd)", "PLENARY"),
-              (10, 2, "Extension, continued, or rescue path: harvest, flow staining, ELISA", "EXT"),
-              LUNCH,
-              (13, 3, "Dry lab: analysis of Exp 2 and the extension, scRNA-seq part 3, score the tissue "
-                      "macrophages. Poster: figures and legends", "POSTER"),
-              (16, 1, "Failure round: each group presents one thing that went wrong and what it taught them",
-               "PLENARY")],
-             "Poster template distributed. Rescue groups: cytometer slot [TODO: facility], ELISA Wed, result on "
-             "the poster by Thursday.",
-             HOODS + " " + F22),
-            ("Thu 15 Apr", False,
-             [(9, 3, "Poster production with your supervisor: final figures and legends", "POSTER"),
-              LUNCH,
-              (13, 1, "Poster production, continued. Print when you are ready (poster guide); the PDF goes to "
-                      "the group branch first", "POSTER"),
-              (14, 1, "Recap and Q&A (tbd): the course in one hour, then open questions with the teaching staff",
-               "PLENARY"),
-              (15, 2, "Free: extension analysis, notebook, group branch", "BUFFER")],
-             "Printing is each group's own business (signprint.ch, see the poster guide). Poster boards ready.",
-             F22 + " Poster boards."),
-            ("Fri 16 Apr", False,
-             [(9, 2, "Lab clean-up; notebook and group branch finalised", "DRY"),
-              (11, 1, "Feedback round with the teaching staff; course evaluation", "PLENARY"),
-              LUNCH,
-              (13, 1, "Written exam, individual [TODO: duration and room]", "PLENARY"),
-              (14, 2, "Poster session: presentations and discussion; prize", "PLENARY"),
-              (16, 1, "Apéro", "PLENARY")],
-             "Exam papers, jury, prize, evaluation form, clean-up checklist. Apéro ordered [TODO: catering].",
-             F22 + " Apéro room [TODO: catering]."),
-        ],
-    ),
+ dict(n=1, title="Week 1: orientation (Thu 18 - Fri 19 March 2027)", days=[
+  ("Thu 18 Mar", False, [(9,1,"Welcome and safety briefing (Tea Kocijan)","PLENARY"),(10,2,"Lecture: tissue macrophages and nomenclature (Joel Zindel)","PLENARY"),LUNCH,(13,1,"Group formation","PLENARY"),
+   (14,3,"Experiment planning with your supervisors: hand-draw the pathway you will test (ligand, receptor, output, how an inhibitor proves it, where the polarizer acts), pick your polarizer, stimulus and cytokine (P04, P05, P06). Read P01, P02 and P08 for Friday and Tuesday.","DRY")],
+   "Rooms, safety officer. Groups formed at 13:00; supervisors sit with their group from then on.", F22),
+  ("Fri 19 Mar", False, [(9,3,"Hands-on cell culture with the staff culture: hood and sterile technique, microscope, P02 scrape, count, split and seed, cell counter. Then P01: thaw and seed your group's stock flask (course passage 0). Lab tour.","EXP1"),LUNCH,
+   (13,4,"Dry lab setup: clone the course repository, build the environment with your chatty, run the ELISA template on example data. Group plan (the drawing and your menu choices) committed to the group branch at 17:00.","DRY")],
+   "One low-passage vial per group. Supervisors carry the stock flasks over the weekend and the break: split every 2 to 3 days, course passage counted from this thaw. Dry lab: unblock installs; fallback environment ready [TODO]. Collect the plans at 17:00.",
+   HOODS+" Cell counter. "+F22+" Own laptops, Wi-Fi.")]),
+ dict(n=2, title="Week 2: polarize and characterize (Tue 23 - Thu 25 March 2027)", days=[
+  ("Tue 23 Mar", True, [OTHER,LUNCH,(13,2,"P02 and P04: plate cells from your stock with the polarizer already in the seeding suspension. Vehicle control, M(pol) and LPS control on the flow plate (6- or 12-well). Plate-and-polarize in one step, about 19 h. Wet-lab goal: plate at a defined density with a stimulus.","EXP1"),(15,2,"Dry lab: scRNA-seq part 1, load the preprocessed object, QC figure. If the bench runs over, the dry lab moves home.","DRY")],
+   "Stock flasks counted per group at 12:30. Polarizers, vehicle and LPS at working concentration; plate maps checked before anyone pipettes.", HOODS+" Cell counter."),
+  ("Wed 24 Mar", False, [(9,1,"Facility lecture: flow cytometry and FlowJo (Florian Mair) [TODO: confirm slot]","FACILITY"),(10,2,"P08 Harvest the adherent cells, count, viability dye, Fc block, surface stain","EXP1"),LUNCH,
+   (13,2,"P08 continued: optional Arg1 fix and perm, fix, store at 4 °C until acquisition. Wet-lab goal: harvest, staining, fixation. Staining plan and FMOs in the notebook.","EXP1"),(15,2,"Dry lab: scRNA-seq part 1 continued; poster: draft the introduction. If the bench runs over, the dry lab moves home.","DRY")],
+   "Antibody panel, viability dye, fix/perm buffers, compensation beads. Nothing in the incubator but the stock flasks.", HOODS+" Cooled centrifuge. Fridge. "+F22),
+  ("Thu 25 Mar", False, [(9,3,"P08 Acquisition at the facility, two batches of 1.5 h, two groups each [TODO: reservation]","FACILITY"),LUNCH,(13,3,"FlowJo session: gating, FMOs, export statistics; the first figure [TODO: check with Florian Mair the available teaching seats]. Wet-lab goal: acquisition and gating.","FACILITY"),
+   (16,1,"Journal club 1 and debrief in one session: did the polarizer do what the menu says on this readout? Stick or pivot; decision in the group branch","PLENARY")],
+   "Escort the groups to the facility. Stock flasks: split, two or three backup vials to -80 per group, carried over the break by the staff. Easter: no course.", "Cytometer: 2 slots of 1.5 h [TODO: facility]. "+F22+" FlowJo seats [TODO].")]),
+ dict(n=3, title="Week 3: polarize and challenge (Tue 6 - Fri 9 April 2027)", days=[
+  ("Tue 6 Apr", True, [OTHER,LUNCH,(13,3,"P02 and P04: plate from your stock (carried over the break) with the chosen polarizer, own approach or the standard that worked. 96-well for supernatants, extra wells for lysates. Passage the stock.","EXP2"),CUTTING_EDGE],
+   "Stock flasks counted at 12:30. Polarizers, stimuli, inhibitors, LPS at working concentration. Plate maps checked.", HOODS+" Plate centrifuge."),
+  ("Wed 7 Apr", False, [(9,3,"P05 Challenge: your stimulus, optional inhibitor (TAK-242 1 h before, polymyxin B premixed), LPS on M(-) as everyone's control. Default: overnight, IL-6. Alternative: 6 h, TNF, harvest 15:00. Wet-lab goal: stimulate with inhibitor logic.","EXP2"),LUNCH,
+   (13,1,"Lecture: single-cell transcriptomics for immunologists, what a signature score means (tbd)","PLENARY"),(14,2,"Dry lab during the challenge: scRNA-seq part 2, signatures from the bulk RAW 264.7 dataset. TNF groups: harvest at 15:00, supernatants and lysates to the freezer.","DRY"),(16,1,"16:30: coat the ELISA plates with capture antibody, overnight at 4 \u00b0C (P06), 30 min at the bench","EXP2")],
+   "Ligands, inhibitors and vehicle ready; -20 space and labelled tubes. Lysis buffers for RNA and protein.", HOODS+" "+F22),
+  ("Thu 8 Apr", False, [(9,1,"P05 Harvest (overnight groups): supernatants in aliquots, cells as RNA or protein lysate to the freezer","EXP2"),(10,2,"P06 ELISA: blocking, standards, samples; dry lab in the incubations","EXP2"),LUNCH,
+   (13,2,"Dry lab during the ELISA incubations: the assay waits for 3.5 h in total, which is used to prepare the next steps and for dry lab (scRNA-seq part 2). The split of wet and dry lab may shift a little.","DRY"),(15,2,"P06 ELISA: detection and read-out; first look at the numbers. Passage the stock. Wet-lab goal: an ELISA from coating to concentration.","EXP2")],
+   "ELISA reagents, plate reader booked. Flow on challenged cells only if a group found a slot in the regular booking.", "Plate reader (450 nm). "+HOODS+" "+F22),
+  ("Fri 9 Apr", False, [(9,3,"ELISA analysis: standard curve, concentrations. Flow statistics from week 2 in R. scRNA-seq part 2 continued.","DRY"),LUNCH,(13,3,"Poster: what the story has and what it is missing; week 4 plan agreed with your supervisor (repeat, add, or wrap up)","POSTER"),(16,1,"Debrief Exp 2: results and week 4 decisions","PLENARY")],
+   "Stock flasks: keep or freeze according to each group's week 4 plan.", F22+" "+HOODS)]),
+ dict(n=4, title="Week 4: close the story (Tue 13 - Fri 16 April 2027)", days=[
+  ("Tue 13 Apr", True, [OTHER,LUNCH,(13,3,"Optional, as agreed on 9 April: repeat the polarization or the challenge, or a third experiment. Or dry lab: finish the in silico part and the poster. Never at the cost of wrapping up.","EXT"),CUTTING_EDGE],
+   "Reagents for the agreed repeats or extensions. Stock flasks for the groups that plate.", HOODS+" Extension-specific instruments as agreed. "+F22),
+  ("Wed 14 Apr", False, [(9,3,"Optional harvest and ELISA for groups at the bench; otherwise poster: figures and legends","EXT"),LUNCH,(13,3,"Wrap up: code, figures and poster; scRNA-seq part 3, score the tissue macrophages","POSTER"),(16,1,"Publish or perish: a critical discussion on scientific integrity and output metrics","PLENARY")],
+   "Poster template distributed. Plate reader for the groups that ran an ELISA.", HOODS+" "+F22),
+  ("Thu 15 Apr", False, [(9,3,"Wrap up: code, figures and poster, with your supervisor. Print when ready (signprint.ch); the PDF goes to the group branch first","POSTER"),LUNCH,(13,4,"Wrap up, continued: code, figures, poster, group branch. Stock flask frozen or discarded.","POSTER")],
+   "Poster boards ready. Exam papers printed. Course evaluation goes out as a written survey.", F22+" Poster boards."),
+  ("Fri 16 Apr", False, [(9,1,"Lab cleaning","DRY"),(10,2,"Finish the group branch; poster pickup, self-service","DRY"),LUNCH,(13,1,"Written exam, individual [TODO: duration and room]","PLENARY"),
+   (14,2,"Poster session: presentations and discussion; prize","PLENARY"),(16,1,"Open 360° feedback round: closes the poster session and opens the apéro","PLENARY")],
+   "Exam papers, jury, prize, clean-up checklist. Apéro ordered [TODO: catering]; evaluation survey sent after the course.", F22+" Apéro room [TODO: catering].")]),
 ]
 
 OVERVIEW = {
     "title": "Overview: the four weeks at a glance (default plan)",
     "rows": [  # (label, [(Mon..Fri text, kind or None)])
-        ("Week 1", [None, None, None, ("Welcome, lectures, group formation, planning with supervisor", "PLENARY"),
-                    ("Hands-on cell-culture introduction on the staff culture; dry lab setup; plans submitted", "EXP1")]),
-        ("Week 2", [("Other lectures", "BUFFER"), ("Morning: other lectures. 13:00 Exp 1: thaw, T0, seed", "EXP1"),
-                    ("Exp 1: counts 1 and 2, MTT, medium change; flow lecture", "EXP1"),
-                    ("Exp 1: counts 3 and 4, freeze; debrief", "EXP1"), ("Good Friday", "BUFFER")]),
-        ("Easter", [("Break 26 Mar - 4 Apr; staff thaw backup cells", "BUFFER"), None, None, None, None]),
+        ("Week 1", [None, None, None, ("Welcome, lecture, group formation; the pathway drawing and the menu choices", "PLENARY"),
+                    ("Hands-on cell culture; thaw and seed the group's stock flask; dry lab setup; plan committed", "EXP1")]),
+        ("Week 2", [("Other lectures", "BUFFER"), ("Morning: other lectures. 13:00 plate with the polarizer; dry lab", "EXP1"),
+                    ("Facility lecture; harvest, stain, fix", "EXP1"),
+                    ("Flow acquisition; FlowJo session; journal club and debrief: stick or pivot", "FACILITY"), ("Good Friday", "BUFFER")]),
+        ("Easter", [("Break 26 Mar - 4 Apr; staff carry the stock flasks", "BUFFER"), None, None, None, None]),
         ("Week 3", [("Other lectures", "BUFFER"),
-                    ("Morning: other lectures. 13:00 plate, spin, 2 h, LPS challenge overnight; re-thaw own vial", "EXP2"),
-                    ("Harvest cells and supernatants; flow staining and fix; ELISA plates coated", "EXP2"),
-                    ("Flow acquisition (A+B morning, C+D afternoon); ELISA in the other half", "EXP2"),
-                    ("FlowJo session; ELISA analysis; debrief", "EXP2")]),
+                    ("Morning: other lectures. 13:00 plate with the chosen polarizer; passage the stock", "EXP2"),
+                    ("Challenge (overnight IL-6 default, 6 h TNF alternative); lecture; coat ELISA plates", "EXP2"),
+                    ("Harvest; ELISA with dry lab in the incubations", "EXP2"),
+                    ("ELISA analysis; poster: what is missing; debrief", "EXP2")]),
         ("Week 4", [("Other lectures", "BUFFER"),
-                    ("Morning: other lectures. 13:00 extensions or rescue path", "EXT"),
-                    ("Writing lecture; extensions; poster; failure round", "POSTER"),
-                    ("Poster production; print when ready; recap and Q&A", "POSTER"),
-                    ("Clean-up, feedback; written exam 13:00; poster session, prize, Apéro", "PLENARY")]),
+                    ("Morning: other lectures. 13:00 optional repeat, third experiment, or dry lab", "EXT"),
+                    ("Optional harvest and ELISA; wrap up; publish or perish", "POSTER"),
+                    ("Wrap up: code, figures, poster; print when ready", "POSTER"),
+                    ("Lab cleaning; finish the branch; written exam 13:00; poster session; 360° feedback; Apéro", "PLENARY")]),
     ],
-    "foot": ["Course weeks run Tuesday 13:00 to Friday 17:00; Monday and Tuesday morning are the students' other "
-             "lectures. All four groups follow the same plan, each at its own hood; see the week sheets.",
-             "Course hours Tue 13:00-17:00, Wed-Fri 09:00-17:00, lunch 12:00-13:00. Lectures and dry lab in "
-             "conference room HPL F22, bench in HPL F27.2. Cutting Edge Immunology Seminar Tue 16:30-17:30 in "
-             "weeks 3 and 4."],
+    "foot": ["Course days run 08:00 to 17:00, Tuesdays from 13:00; Monday and Tuesday morning are the students' other "
+             "lectures. Every full day opens with a self-study hour. All four groups follow the same plan, each at its "
+             "own hood; see the week sheets.",
+             "Lectures and dry lab in conference room HPL F22, bench in HPL F27.2. Cutting Edge Immunology Seminar "
+             "Tue 16:30-17:30 in weeks 3 and 4."],
 }
 
 LEGEND_TEXT = {
-    "B8": "Wet lab Exp 2: challenge, read out (flow cytometry, ELISA)",
+    "B7": "Wet lab Exp 1: polarize and characterize (plate with the polarizer, harvest, stain, acquire)",
+    "B8": "Wet lab Exp 2: polarize and challenge (plate, stimulate, harvest, ELISA)",
     "A2": "Built by tools/schedule/gantt_build.py on {today}. Hand edits are fine, but a rebuild overwrites the "
           "Overview and the week sheets; lasting changes go into the script. After editing, run "
           "tools/schedule/gantt2readme.py.",
-    "B14": "One sheet per week: one column per day, one row per hour. Course hours Tue 13:00-17:00 and Wed-Fri "
-           "09:00-17:00; Monday and Tuesday morning are the students' other lectures. Below the hour grid: a "
-           "staff row and a resources row, one cell per day.",
-    "B15": "Lecture slots, journal clubs, facility lecture, cytometer slots, the Tuesday Cutting Edge Immunology "
-           "Seminar (16:30-17:30) in weeks 3 and 4, writing lecture, recap, presentations. Drawn by the teaching "
-           "staff, dark cells, thick border, locked. Everything else is flexible.",
+    "B14": "One sheet per week: one column per day, one row per hour, 08:00 to 17:00 (Tuesdays from 13:00; Monday and Tuesday morning are the students' other lectures). Every full day opens with a self-study hour. Below the hour grid: a staff row and a resources row, one cell per day.",
+    "B15": "Lecture slots, the facility lecture, cytometer slots and the FlowJo session, journal club, the Tuesday Cutting Edge Immunology Seminar (16:30-17:30) in weeks 3 and 4, the publish-or-perish discussion, exam, poster session. Drawn by the teaching staff, dark cells, thick border, locked. Everything else is flexible.",
     "B16": "Plenary sessions (dark cells, bold) are mandatory. All four groups follow the same plan. Each group "
            "has its own laminar flow hood in HPL F27.2, reserved all day every day, so bench work may shift with "
            "the supervisors' agreement. Lectures and dry lab in conference room HPL F22. Nobody submits a "
@@ -258,25 +141,12 @@ LEGEND_TEXT = {
     "B17": "No checkerboard: with four hoods, all four groups do the same thing at the same time, which keeps "
            "supervision simple. Where the cytometer forces a split (week 3 Thursday), two groups acquire while "
            "the other two run the ELISA, then swap.",
-    "B18": "Exp 1 (week 2): establish the RAW 264.7 line. Thaw on Tuesday afternoon, five trypan-blue counts to "
-           "Thursday afternoon (growth curve, doubling time), MTT columns as a second readout, freeze your own "
-           "vials on Thursday; viability of your vial after the break is the third readout. Exp 2 (week 3): "
-           "plate RAW cells, spin, 2 h adhesion, overnight LPS challenge; readouts flow cytometry and ELISA. "
-           "Polarization (P04) and Griess (P07) are extensions. Protocol IDs (P01...) refer to protocols/ in "
-           "the course repository.",
-    "B19": "Week 1: environment and templates. Week 2: scRNA-seq part 1 (QC), FlowJo on example data, growth "
-           "curve. Week 3: scRNA-seq part 2 (signatures from the bulk RAW 264.7 dataset) during the ELISA "
-           "incubations, own flow and ELISA data on Friday. Week 4: scRNA-seq part 3 (scoring of the tissue "
-           "macrophages), extension analysis and poster figures. Downtime at any point: poster introduction and "
-           "significance.",
-    "B20": "A group whose Exp 2 failed repeats it in week 4: plate, spin and challenge Tue 13 April at 13:00, "
-           "harvest and stain Wed 14 at 09:00, ELISA Wed 14, acquisition in a week-4 cytometer slot [TODO: facility].",
-    "B24": "[TODO] Cytometer slots: dates and times from the facility (week 3 Thursday 8 April, 10:00-12:00 and "
-           "13:00-15:00; rescue and extension slots week 4).",
-    "B25": "[TODO] Facility lecture: slot on Wed 24 March 13:00.",
-    "B31": "Poster printing: each group orders its own poster (signprint.ch, see poster/README.md) in time for the "
-           "poster session on Fri 16 April 14:00; the PDF is committed to the group branch first. No deadline on "
-           "the plan.",
+    "B18": "Exp 1 (week 2): polarize and characterize. Plate from the group's stock with the polarizer in the seeding suspension, vehicle and LPS controls beside it; harvest, stain, acquire; FlowJo; decide to stick or pivot before the break. Exp 2 (week 3): polarize and challenge. Plate with the polarizer on Tuesday, challenge on Wednesday with the group's stimulus and optional inhibitor (LPS on M(-) shared by all), overnight with an IL-6 readout by default or 6 h with TNF; ELISA on Thursday. Week 4: repeat, add, or wrap up. Menus in P04 and P05. Protocol IDs (P01...) refer to protocols/ in the course repository.",
+    "B19": "Week 1: environment and templates. Week 2: scRNA-seq part 1 (QC) in the afternoon dry-lab slots, FlowJo on the own data. Week 3: scRNA-seq part 2 (signatures from the bulk RAW 264.7 dataset) during the challenge and the ELISA incubations, own ELISA data on Friday. Week 4: scRNA-seq part 3 (scoring of the tissue macrophages), wrap up of code, figures and poster.",
+    "B20": "A group whose polarization or challenge failed repeats it in week 4, Tuesday 13:00 to Wednesday, as agreed with the supervisor on Friday 9 April; never at the cost of wrapping up.",
+    "B24": "[TODO] Cytometer: two slots of 1.5 h on Thu 25 March 09:00-12:00 (two groups each); FlowJo teaching seats for the session on Thu 25 March 13:00 (Florian Mair). Week 3 and 4 slots only through the regular booking calendar.",
+    "B25": "[TODO] Facility lecture: slot on Wed 24 March 09:00.",
+    "B21": "Fri 26 March to Sun 4 April. No course. The staff carry the groups' stock flasks over the break (split every 2 to 3 days, backup vials frozen on Thu 25 March).",
     "B27": "Hoods: four in HPL F27.2, one per group, reserved all day every day (settled 2026-10-28). Conference "
            "room HPL F22 reserved for lectures and dry lab.",
 }
@@ -331,9 +201,11 @@ def build_week(wb, spec):
     ws.row_dimensions[staff_row].height = 90
     ws.row_dimensions[res_row].height = 64
 
-    for d, (hdr, _tuesday, blocks, staff, resources) in enumerate(spec["days"]):
+    for d, (hdr, tuesday, blocks, staff, resources) in enumerate(spec["days"]):
         c = 2 + d
         put(ws, 3, c, hdr, bold=True, fill=HEADER_FILL, valign="center")
+        if not tuesday:
+            blocks = [SELF_STUDY] + list(blocks)
         for h, span, text, kind in blocks:
             put(ws, row_of[h], c, text, kind, r2=row_of[h] + span - 1)
         put(ws, staff_row, c, staff, fill=META_FILL)

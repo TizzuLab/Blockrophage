@@ -67,8 +67,8 @@ After this course, students will be able to:
 
 1. **Classify** macrophages by ontogeny, niche and activation state, use the
    M(stimulus) nomenclature correctly, and explain why the M1/M2 dichotomy was revised.
-2. **Culture** a mammalian cell line from vial to vial: thaw, count, split, seed,
-   freeze, and document a growth curve and a viability.
+2. **Culture** a mammalian cell line: thaw, count, seed at a defined density,
+   stimulate and harvest adherent cells, and keep a stock going.
 3. **Set up** a reproducible analysis environment from a code repository with a chatty
    as assistant, and verify or refute what the chatty produces.
 4. **Establish** a scRNA-Seq analysis workflow for a published data set from an
@@ -105,10 +105,11 @@ would be nice though we invest a lot of energy in this course.
 
 ## 4. Schedule
 
-Course weeks run from Tuesday 13:00 to Friday 17:00; Monday and Tuesday morning
-belong to your other lectures. Lunch is 12:00 to 13:00. The course runs Thu 18 March
-to Fri 16 April 2027 with the Easter break from Fri 26 March to Sun 4 April (no
-course, no cultures).
+Course days run from 08:00 to 17:00, Tuesdays from 13:00; Monday and Tuesday
+morning belong to your other lectures, and every full day opens with a self-study
+hour. Lunch is 12:00 to 13:00. The course runs Thu 18 March to Fri 16 April 2027 with
+the Easter break from Fri 26 March to Sun 4 April, during which the staff look after
+your stock flasks.
 
 **How to read this schedule.** Days are columns, hours are rows. Dark sessions in
 **bold** are plenary and mandatory. Everything else is the default plan, the same for
@@ -123,53 +124,81 @@ F27.2, where each group has its own laminar flow hood reserved all day, every da
 
 ### Week 1: orientation (Thu 18 - Fri 19 March 2027)
 
-![Week 1: orientation (Thu 18 - Fri 19 March 2027)](figures/schedule/week-1.svg?v=1fbf6b15)
+![Week 1: orientation (Thu 18 - Fri 19 March 2027)](figures/schedule/week-1.svg?v=72015e94)
 
-### Week 2: Exp 1, establish the line (Tue 23 - Thu 25 March 2027)
+### Week 2: polarize and characterize (Tue 23 - Thu 25 March 2027)
 
-![Week 2: Exp 1, establish the line (Tue 23 - Thu 25 March 2027)](figures/schedule/week-2.svg?v=edb366ce)
+![Week 2: polarize and characterize (Tue 23 - Thu 25 March 2027)](figures/schedule/week-2.svg?v=de244d44)
 
-### Week 3: Exp 2, challenge and read out (Tue 6 - Fri 9 April 2027)
+### Week 3: polarize and challenge (Tue 6 - Fri 9 April 2027)
 
-![Week 3: Exp 2, challenge and read out (Tue 6 - Fri 9 April 2027)](figures/schedule/week-3.svg?v=fede3ffe)
+![Week 3: polarize and challenge (Tue 6 - Fri 9 April 2027)](figures/schedule/week-3.svg?v=501ea09d)
 
-### Week 4: extensions, poster, presentations (Tue 13 - Fri 16 April 2027)
+### Week 4: close the story (Tue 13 - Fri 16 April 2027)
 
-![Week 4: extensions, poster, presentations (Tue 13 - Fri 16 April 2027)](figures/schedule/week-4.svg?v=a37f5851)
+![Week 4: close the story (Tue 13 - Fri 16 April 2027)](figures/schedule/week-4.svg?v=77b65fe8)
 
 <!-- schedule:end -->
 
 ## 5. Core experiments
 
-**Experiment 1: can we culture macrophages in vitro?** (week 2) Primary macrophages
-do not divide in a dish and die within days, so the field works with a model.
-RAW 264.7 is a line established in 1978 from a tumour induced in a BALB/c mouse by
-Abelson leukaemia virus: it divides without growth factor, adheres, responds strongly
-to LPS and IFNγ, and has been in culture for almost fifty years. What that does and
-does not make it is in the
-[background](background/README.md#52-level-i-ontogeny). The question is
-answered with the simplest readouts there are: the microscope, for morphology and
-confluence, and a growth curve from daily counts and an MTT assay, from which a
-doubling time is derived and compared with the published value. A culture that doubles at the expected rate, looks right and
-survives its own freeze and thaw is fit for Experiment 2. By the end of week 2 you
-will have taken this line from vial to vial yourselves. Protocols
-[P01](protocols/P01_raw264_thaw_expand.md), [P02](protocols/P02_raw264_split_seed.md),
-[P03](protocols/P03_raw264_freeze.md), [P09](protocols/P09_mtt.md).
-
-**Experiment 2: can we polarize them?** (week 3) The textbook states were defined by
-what is added: IFNγ, IL-4, or IFNγ with LPS, named M(IFNγ), M(IL-4) and M(IFNγ+LPS)
-after the stimulus since the 2014 nomenclature
+**Experiment 1: can we polarize them?** (week 2) Primary macrophages do not divide
+in a dish and die within days, so the field works with a model. RAW 264.7 is a line
+established in 1978 from a tumour induced in a BALB/c mouse by Abelson leukaemia
+virus: it divides without growth factor, adheres, responds strongly to LPS and IFNγ,
+and has been in culture for almost fifty years. What that does and does not make it
+is in the [background](background/README.md#52-level-i-ontogeny). On the Friday of
+week 1 your group thaws its own stock flask from a provided vial, and that flask
+carries the whole course: the staff look after it over the weekend and the Easter
+break, and after the break passaging it is your background task
+([P01](protocols/P01_raw264_thaw_expand.md), [P02](protocols/P02_raw264_split_seed.md),
+[P03](protocols/P03_raw264_freeze.md)). The textbook states were defined by what is
+added: IFNγ, IL-4, or IFNγ with LPS, named M(IFNγ), M(IL-4) and M(IFNγ+LPS) after
+the stimulus since the 2014 nomenclature
 ([background](background/README.md#54-level-iii-function-and-activation-state)).
-Exactly that is added to wells of the same culture, with M(-) as the unstimulated
-reference, and the question is whether the states separate on the three readouts the
-field used to define them: cytokines in the supernatant (IL-6 and TNF by ELISA),
-nitric oxide (Griess assay) and surface markers (flow cytometry). If they separate,
-the paradigm has been built with your own hands. If they do not, that is a result
-too, and the first thing analysed is which readout failed. Protocols
-[P04](protocols/P04_polarization.md), [P06](protocols/P06_elisa.md),
-[P07](protocols/P07_griess.md), [P08](protocols/P08_flow_cytometry.md).
+Your group picks one polarizer from a menu ([P04](protocols/P04_polarization.md)):
+IFNγ, IL-10, dexamethasone, IL-4, PGE2, or, as the lab's wild card, retinoic acid,
+the signal that gives peritoneal macrophages their identity. On Tuesday of week 2
+you plate from your stock with the polarizer already in the suspension, beside a
+vehicle control and an LPS control, the technical positive that tells a silent
+polarizer from a failed staining. On Wednesday the cells are harvested, stained and
+fixed ([P08](protocols/P08_flow_cytometry.md)), on Thursday acquired at the facility
+and gated in a FlowJo session, with intracellular Arg1 as a high-risk option for a
+group that wants to learn permeabilization. By Thursday 16:00 you know whether your
+polarizer did what the menu says on this readout, and you decide to stick with it or
+to pivot to one that worked, before the break. For the dampeners IL-10,
+dexamethasone and PGE2, "no change and good viability" is the expected result,
+because their test is the suppressed cytokine response of Experiment 2. If the state
+separates from the vehicle control, the paradigm has been built with your own hands.
+If it does not, that is a result too, and the first thing analysed is which readout
+failed. Only LPS has been validated in the lab, on this very stock; every other arm
+extends the data for the next iteration of the course, and the poster says so.
 
-**Experiment 3: does the profile hold true in vivo?** (dry lab, weeks 2 and 3) A
+**Experiment 2: is the heuristic still useful?** (week 3) A model that fails the test
+of Experiment 3 may still predict something. The prediction built into M1/M2 is that
+the state a macrophage is in decides how it responds to the next danger signal. So on
+the first afternoon your group hand-draws the pathway it is going to test: which
+ligand, which receptor, which adaptor and output, how an inhibitor could prove that
+it is this receptor and not endotoxin in the tube, and where your polarizer should
+act on the pathway
+([background](background/README.md#56-sensing-danger-pattern-recognition-receptors)).
+The drawing is your group plan; it goes into the group branch and comes back on the
+poster, redrawn in the light of your data. In week 3 you polarize again on Tuesday,
+with your own approach or the standard that worked, and challenge on Wednesday from
+the menu of [P05](protocols/P05_prr_challenge.md): PAMPs for TLR2, TLR3, TLR4, TLR7,
+TLR9 and Dectin-1, heat-killed bacteria, one DAMP (a necrotic lysate of your own
+cells), and two inhibitors, TAK-242 against TLR4 and polymyxin B against LPS itself,
+with LPS on M(-) as the control every group shares. The readout is IL-6 after an
+overnight challenge by default, or TNF after 6 h ([P06](protocols/P06_elisa.md)); the
+cells go to the freezer as lysates for the extensions. By Friday 9 April every group
+knows what its story still lacks. Every group ends up with a different combination
+and the same schedule. Whatever is found, one fact is worth keeping in mind: after
+twenty years of the paradigm there is no approved therapy that targets macrophage
+polarization. A heuristic can be useful at the bench and still have limits in the
+body. Where those limits are is something we will think about together, with your
+data on the table.
+
+**Experiment 3: does the profile hold true in vivo?** (dry lab, weeks 2 to 4) A
 dish has two states because two were created; a tissue did not read the textbook.
 From a public bulk RNA-seq dataset of RAW 264.7 cells under the same stimuli
 (GSE113836) the M(IFNγ+LPS) and M(IL-4) gene signatures are derived, then every
@@ -184,29 +213,20 @@ sections on
 and [the dataset](background/README.md#59-the-in-silico-dataset-and-how-single-cell-rna-sequencing-works);
 [analysis code](code/README.md).
 
-**Experiment 4: is the heuristic still useful?** (week 3, on the cells of
-Experiment 2) A model that fails the test of Experiment 3 may still predict
-something. The prediction built into M1/M2 is that the state a macrophage is in
-decides how it responds to the next danger signal. Exactly that is tested: M(-),
-M(IFNγ) and M(IL-4) are challenged through a pattern-recognition receptor, with LPS
-and with the PRR axis your group chose
-([background](background/README.md#56-sensing-danger-pattern-recognition-receptors)),
-one overnight arm, and the response is measured with the readouts of Experiment 2.
-M(IFNγ+LPS) is characterised but not re-challenged, because a cell that has already
-seen LPS shows endotoxin tolerance, itself a hint that the states are not fixed.
-Whatever is found, one fact is worth keeping in mind: after twenty years of the
-paradigm there is no approved therapy that targets macrophage polarization. A
-heuristic can be useful at the bench and still have limits in the body. Where those
-limits are is something we will think about together, with your data on the table.
-Protocols
-[P05](protocols/P05_prr_challenge.md), [P06](protocols/P06_elisa.md),
-[P07](protocols/P07_griess.md).
+**Week 4: close the story.** Bench work in the last week is optional and never at
+the cost of wrapping up: repeat the polarization or the challenge, add a third
+experiment if both worked, or use the days to finish the in silico part and the
+poster, as agreed with your supervisor on Friday 9 April. Wednesday ends with
+"publish or perish", a critical discussion on scientific integrity and output
+metrics; Friday holds the written exam, the poster session with a 360° feedback
+round, and the apéro.
 
-**Dry lab, every day.** Half of every day is spent at the keyboard, with the
-[analysis code](code/README.md): week 1 the environment, week 2 the templates on
-example data and your growth curve, week 3 Experiment 3 and your own flow and ELISA
-data, week 4 the poster figures. Gaps are filled with the poster: the introduction is
-written first, then the significance.
+**Dry lab, around the bench.** Every full day opens with a self-study hour, and the
+dry-lab slots sit around the bench work, with the [analysis code](code/README.md):
+week 1 the environment, week 2 scRNA-seq part 1 on the preprocessed object and your
+own flow data in FlowJo, week 3 part 2 during the challenge and the ELISA incubations
+and your ELISA data on Friday, week 4 part 3 and the figures. Gaps are filled with
+the poster: the introduction is written first, then the significance.
 
 ## 6. Optional experiments
 
@@ -224,7 +244,7 @@ what you could do, but the list is non-exhaustive.
 | Macrophages annotated | UMAP with Gata6+, Folr2+ Selenop+ and Trem2+ Spp1+ labelled, marker dot plot, cell counts |
 | Integration with an in vitro single-cell dataset | Integrated embedding with the accession named; percentage of in vivo macrophages mapping to any in vitro state |
 | Unpredicted figure, dataset or code | A figure or table not in the answer key, with claim, n and method |
-| qPCR (X01) | ΔΔCt of outputs and the receptor of your axis across states, with housekeepers named |
+| qPCR (X01) | ΔΔCt of outputs and the receptor of your pathway across states, with housekeepers named |
 | Primary peritoneal cells on the shared panel (X02) | Primary cells and polarized RAW cells in one gating figure; frequency of LPM and SPM with n samples |
 | F4/80 immunohistochemistry (X03) | Image with scale bar, controls named, tissue and expected F4/80 level stated |
 | Ex vivo LPS on primary peritoneal cells versus RAW | IL-6 bar plot with unstimulated controls for both cell types; n wells and samples |
@@ -281,7 +301,11 @@ will still be wrong sometimes; the repository, not the chatty, is the reference.
 - Surplus primary material for the extensions.
 - Pinned environment, fallback environment, chatty licensing for students.
 - Recognition of extensions (points or otherwise), atlas platform, prize and funding,
-  grading rules for block courses.
+  grading rules for block courses; exam duration and room.
+- Cytometer slots and FlowJo teaching seats for Thu 25 March, facility lecture slot
+  Wed 24 March 09:00 (Florian Mair).
+- Plate-and-polarize in one step and the polarizer doses: run once on the course
+  stock before March.
 
 ---
 

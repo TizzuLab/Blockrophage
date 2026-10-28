@@ -8,131 +8,137 @@ dark (plenary) blocks are mandatory, everything else is the default plan for all
 
 #### Thu 18 Mar
 
+- 08:00-09:00: Self-study: reading for the day, notebook, group branch
 - 09:00-10:00: [Plenary, lecture, debrief] Welcome and safety briefing (Tea Kocijan)
 - 10:00-12:00: [Plenary, lecture, debrief] Lecture: tissue macrophages and nomenclature (Joel Zindel)
 - 12:00-13:00: Lunch
 - 13:00-14:00: [Plenary, lecture, debrief] Group formation
-- 14:00-17:00: [Dry lab and desk work] Experiment planning with your supervisors: choose your PRR axis and your extension. Read P01, P02 and P09 for Friday and Tuesday.
+- 14:00-17:00: [Dry lab and desk work] Experiment planning with your supervisors: hand-draw the pathway you will test (ligand, receptor, output, how an inhibitor proves it, where the polarizer acts), pick your polarizer, stimulus and cytokine (P04, P05, P06). Read P01, P02 and P08 for Friday and Tuesday.
 - Staff: Rooms, safety officer. Groups formed at 13:00; supervisors sit with their group from then on.
 - Resources: Conference room HPL F22 for lectures and dry lab.
 
 #### Fri 19 Mar
 
-- 09:00-12:00: [Wet lab Exp 1] Hands-on introduction to mammalian cell culture with the staff culture: hood and sterile technique, microscope, P02 scrape, count, split and seed, cell counter. Lab tour.
+- 08:00-09:00: Self-study: reading for the day, notebook, group branch
+- 09:00-12:00: [Wet lab Exp 1] Hands-on cell culture with the staff culture: hood and sterile technique, microscope, P02 scrape, count, split and seed, cell counter. Then P01: thaw and seed your group's stock flask (course passage 0). Lab tour.
 - 12:00-13:00: Lunch
-- 13:00-17:00: [Dry lab and desk work] Dry lab setup: clone the course repository, build the environment with your chatty, run the ELISA template on example data. Group plan submitted at 17:00.
-- Staff: Staff culture split and counted, one flask per group at 09:00. Dry lab: walk around, unblock installs. Fallback environment ready [TODO]. Collect the group plans at 17:00.
+- 13:00-17:00: [Dry lab and desk work] Dry lab setup: clone the course repository, build the environment with your chatty, run the ELISA template on example data. Group plan (the drawing and your menu choices) committed to the group branch at 17:00.
+- Staff: One low-passage vial per group. Supervisors carry the stock flasks over the weekend and the break: split every 2 to 3 days, course passage counted from this thaw. Dry lab: unblock installs; fallback environment ready [TODO]. Collect the plans at 17:00.
 - Resources: 4 hoods HPL F27.2, one per group, available at all times. Cell counter. Conference room HPL F22 for lectures and dry lab. Own laptops, Wi-Fi.
 
-### Week 2: Exp 1, establish the line (Tue 23 - Thu 25 March 2027)
+### Week 2: polarize and characterize (Tue 23 - Thu 25 March 2027)
 
 #### Tue 23 Mar
 
-- 09:00-12:00: Your other lectures (not course time)
+- 08:00-12:00: Your other lectures (not course time)
 - 12:00-13:00: Lunch
-- 13:00-17:00: [Wet lab Exp 1] P01 Thaw your own vial, count (T0), seed the flask and the counting wells. P09 Seed the MTT growth-curve columns.
-- Staff: Medium warmed, one vial per group at 13:00. Supervisor at the hood with each group for the thaw. Counting plates and MTT plates ready.
+- 13:00-15:00: [Wet lab Exp 1] P02 and P04: plate cells from your stock with the polarizer already in the seeding suspension. Vehicle control, M(pol) and LPS control on the flow plate (6- or 12-well). Plate-and-polarize in one step, about 19 h. Wet-lab goal: plate at a defined density with a stimulus.
+- 15:00-17:00: [Dry lab and desk work] Dry lab: scRNA-seq part 1, load the preprocessed object, QC figure. If the bench runs over, the dry lab moves home.
+- Staff: Stock flasks counted per group at 12:30. Polarizers, vehicle and LPS at working concentration; plate maps checked before anyone pipettes.
 - Resources: 4 hoods HPL F27.2, one per group, available at all times. Cell counter.
 
 #### Wed 24 Mar
 
-- 09:00-10:00: [Wet lab Exp 1] P01 Count 1. P09 Seed the standard curve, MTT on column 1
-- 10:00-12:00: [Wet lab Exp 1] Inspect the flask, medium change. P09 MTT on the standard curve at 11:00; reads at 12:30 and 14:30
+- 08:00-09:00: Self-study: reading for the day, notebook, group branch
+- 09:00-10:00: [Facility slot] Facility lecture: flow cytometry and FlowJo (Florian Mair) [TODO: confirm slot]
+- 10:00-12:00: [Wet lab Exp 1] P08 Harvest the adherent cells, count, viability dye, Fc block, surface stain
 - 12:00-13:00: Lunch
-- 13:00-14:00: [Facility slot] Facility lecture: flow cytometry and FlowJo (Florian Mair) [TODO: confirm slot with the facility]
-- 14:00-17:00: [Dry lab and desk work] Dry lab: scRNA-seq part 1, load the preprocessed object, QC figure. Poster: draft the introduction. P01 Count 2 at 15:00
-- Staff: Cultures inspected 08:00. Counted staff suspension for the standard curves at 09:00. Plate reader 12:30 (column 1) and 14:30 (standard curve).
-- Resources: 4 hoods HPL F27.2, one per group, available at all times. Plate reader. Conference room HPL F22 for lectures and dry lab. FlowJo seats [TODO].
+- 13:00-15:00: [Wet lab Exp 1] P08 continued: optional Arg1 fix and perm, fix, store at 4 °C until acquisition. Wet-lab goal: harvest, staining, fixation. Staining plan and FMOs in the notebook.
+- 15:00-17:00: [Dry lab and desk work] Dry lab: scRNA-seq part 1 continued; poster: draft the introduction. If the bench runs over, the dry lab moves home.
+- Staff: Antibody panel, viability dye, fix/perm buffers, compensation beads. Nothing in the incubator but the stock flasks.
+- Resources: 4 hoods HPL F27.2, one per group, available at all times. Cooled centrifuge. Fridge. Conference room HPL F22 for lectures and dry lab.
 
 #### Thu 25 Mar
 
-- 09:00-10:00: [Wet lab Exp 1] P01 Count 3. P09 MTT on column 2 (read 12:30)
-- 10:00-11:00: [Plenary, lecture, debrief] Journal club 1 (tbd): the M1/M2 nomenclature revision [TODO: paper]; one group presents, all read
-- 11:00-12:00: [Wet lab Exp 1] P03 Freeze your own vials from the flask. Clean-up
+- 08:00-09:00: Self-study: reading for the day, notebook, group branch
+- 09:00-12:00: [Facility slot] P08 Acquisition at the facility, two batches of 1.5 h, two groups each [TODO: reservation]
 - 12:00-13:00: Lunch
-- 13:00-15:00: [Dry lab and desk work] Dry lab: FlowJo on example data. Growth curve and doubling time from your counts. Poster: why does this matter (significance). P09 MTT on column 3 at 12:30, read 16:00
-- 15:00-16:00: [Wet lab Exp 1] P01 Count 4, the last point. Discard the counting wells; nothing stays in culture over the break
-- 16:00-17:00: [Plenary, lecture, debrief] Debrief week 2: what worked, plan for Exp 2
-- Staff: Freezing boxes in the -80. Plate reader 12:30 and 16:00. Collect all cultures at 17:00. Easter: vials to -140 on Fri 26 Mar; thaw backup RAW on Wed 31 Mar, split Fri 2 Apr: enough cells to plate four groups on Tue 6 Apr.
-- Resources: 4 hoods HPL F27.2, one per group, available at all times. -80 box per group; Mr Frosty or equivalent [TODO: lab standard]. Plate reader. Conference room HPL F22 for lectures and dry lab.
+- 13:00-16:00: [Facility slot] FlowJo session: gating, FMOs, export statistics; the first figure [TODO: check with Florian Mair the available teaching seats]. Wet-lab goal: acquisition and gating.
+- 16:00-17:00: [Plenary, lecture, debrief] Journal club 1 and debrief in one session: did the polarizer do what the menu says on this readout? Stick or pivot; decision in the group branch
+- Staff: Escort the groups to the facility. Stock flasks: split, two or three backup vials to -80 per group, carried over the break by the staff. Easter: no course.
+- Resources: Cytometer: 2 slots of 1.5 h [TODO: facility]. Conference room HPL F22 for lectures and dry lab. FlowJo seats [TODO].
 
-### Week 3: Exp 2, challenge and read out (Tue 6 - Fri 9 April 2027)
+### Week 3: polarize and challenge (Tue 6 - Fri 9 April 2027)
 
 #### Tue 6 Apr
 
-- 09:00-12:00: Your other lectures (not course time)
+- 08:00-12:00: Your other lectures (not course time)
 - 12:00-13:00: Lunch
-- 13:00-16:00: [Wet lab Exp 2] P02 Plate cells from the staff culture, spin the plate down, 2 h to adhere [TODO: confirm before the course that RAW cells adhere in 2 h after a spin]. Meanwhile P01 re-thaw your own vial (viability = Exp 1 readout). Then P05 Challenge overnight with LPS.
+- 13:00-16:00: [Wet lab Exp 2] P02 and P04: plate from your stock (carried over the break) with the chosen polarizer, own approach or the standard that worked. 96-well for supernatants, extra wells for lysates. Passage the stock.
 - 16:00-17:00: [Plenary, lecture, debrief] Cutting Edge Immunology Seminar 16:30-17:30 (tbd)
-- Staff: Staff culture split Fri 2 Apr, counted at 12:30: enough cells to plate four groups. Plate maps checked before anyone pipettes. LPS aliquots at working concentration. Supervisor at the hood for the re-thaw.
+- Staff: Stock flasks counted at 12:30. Polarizers, stimuli, inhibitors, LPS at working concentration. Plate maps checked.
 - Resources: 4 hoods HPL F27.2, one per group, available at all times. Plate centrifuge.
 
 #### Wed 7 Apr
 
-- 09:00-12:00: [Wet lab Exp 2] P05 Harvest: supernatants to -20 in aliquots for the ELISA, cells for flow cytometry (P08).
+- 08:00-09:00: Self-study: reading for the day, notebook, group branch
+- 09:00-12:00: [Wet lab Exp 2] P05 Challenge: your stimulus, optional inhibitor (TAK-242 1 h before, polymyxin B premixed), LPS on M(-) as everyone's control. Default: overnight, IL-6. Alternative: 6 h, TNF, harvest 15:00. Wet-lab goal: stimulate with inhibitor logic.
 - 12:00-13:00: Lunch
 - 13:00-14:00: [Plenary, lecture, debrief] Lecture: single-cell transcriptomics for immunologists, what a signature score means (tbd)
-- 14:00-17:00: [Wet lab Exp 2] P08 Flow staining of the harvested cells, fix the stained cells (4 °C until acquisition). P06 Coat the ELISA plates with capture antibody, overnight at 4 °C [TODO: check the ELISA protocol]
-- Staff: Tubes labelled, -20 space for supernatants. Antibody panel, viability dye, fixation buffer. ELISA plates and capture antibody.
-- Resources: 4 hoods HPL F27.2, one per group, available at all times. Cooled centrifuge. Fridge for the fixed cells and the coated plates. Conference room HPL F22 for lectures and dry lab.
+- 14:00-16:00: [Dry lab and desk work] Dry lab during the challenge: scRNA-seq part 2, signatures from the bulk RAW 264.7 dataset. TNF groups: harvest at 15:00, supernatants and lysates to the freezer.
+- 16:00-17:00: [Wet lab Exp 2] 16:30: coat the ELISA plates with capture antibody, overnight at 4 °C (P06), 30 min at the bench
+- Staff: Ligands, inhibitors and vehicle ready; -20 space and labelled tubes. Lysis buffers for RNA and protein.
+- Resources: 4 hoods HPL F27.2, one per group, available at all times. Conference room HPL F22 for lectures and dry lab.
 
 #### Thu 8 Apr
 
-- 09:00-10:00: [Plenary, lecture, debrief] Journal club 2 (tbd): the peritoneal injury single-cell paper behind GSE186658 [TODO: paper]; one group presents, all read
-- 10:00-12:00: [Facility slot] Cytometer slot, groups A+B: P08 Acquire [TODO: facility reservation]. Groups C+D: P06 ELISA, blocking and samples [TODO: timing against the protocol]; scRNA-seq part 2 during the incubations
+- 08:00-09:00: Self-study: reading for the day, notebook, group branch
+- 09:00-10:00: [Wet lab Exp 2] P05 Harvest (overnight groups): supernatants in aliquots, cells as RNA or protein lysate to the freezer
+- 10:00-12:00: [Wet lab Exp 2] P06 ELISA: blocking, standards, samples; dry lab in the incubations
 - 12:00-13:00: Lunch
-- 13:00-16:00: [Facility slot] Cytometer slot, groups C+D: P08 Acquire [TODO: facility reservation]. Groups A+B: P06 ELISA, blocking and samples [TODO: timing against the protocol]; scRNA-seq part 2 during the incubations
-- 16:00-17:00: [Wet lab Exp 2] ELISA: finish the detection steps or set the overnight step [TODO: protocol]
-- Staff: Escort the groups to the facility. ELISA reagents, plate reader booked.
-- Resources: Cytometer: 2 slots of 2 h [TODO: facility]. Plate reader (450 nm). 4 hoods HPL F27.2, one per group, available at all times. Conference room HPL F22 for lectures and dry lab.
+- 13:00-15:00: [Dry lab and desk work] Dry lab during the ELISA incubations: the assay waits for 3.5 h in total, which is used to prepare the next steps and for dry lab (scRNA-seq part 2). The split of wet and dry lab may shift a little.
+- 15:00-17:00: [Wet lab Exp 2] P06 ELISA: detection and read-out; first look at the numbers. Passage the stock. Wet-lab goal: an ELISA from coating to concentration.
+- Staff: ELISA reagents, plate reader booked. Flow on challenged cells only if a group found a slot in the regular booking.
+- Resources: Plate reader (450 nm). 4 hoods HPL F27.2, one per group, available at all times. Conference room HPL F22 for lectures and dry lab.
 
 #### Fri 9 Apr
 
-- 09:00-12:00: [Dry lab and desk work] FlowJo session: gating of your own data, export statistics (with the facility, tbd)
+- 08:00-09:00: Self-study: reading for the day, notebook, group branch
+- 09:00-12:00: [Dry lab and desk work] ELISA analysis: standard curve, concentrations. Flow statistics from week 2 in R. scRNA-seq part 2 continued.
 - 12:00-13:00: Lunch
-- 13:00-16:00: [Dry lab and desk work] ELISA analysis: plate read if outstanding, standard curve, concentrations. Flow statistics in R. scRNA-seq part 2 continued. Poster: results so far
-- 16:00-17:00: [Plenary, lecture, debrief] Debrief Exp 2: results, extension choices, rescue decisions
-- Staff: FlowJo seats [TODO]. Plate reader. Staff culture kept for groups that need the rescue path (a repeat of Exp 2 in week 4).
-- Resources: Conference room HPL F22 for lectures and dry lab. FlowJo seats [TODO]. Plate reader. 4 hoods HPL F27.2, one per group, available at all times.
+- 13:00-16:00: [Poster and writing] Poster: what the story has and what it is missing; week 4 plan agreed with your supervisor (repeat, add, or wrap up)
+- 16:00-17:00: [Plenary, lecture, debrief] Debrief Exp 2: results and week 4 decisions
+- Staff: Stock flasks: keep or freeze according to each group's week 4 plan.
+- Resources: Conference room HPL F22 for lectures and dry lab. 4 hoods HPL F27.2, one per group, available at all times.
 
-### Week 4: extensions, poster, presentations (Tue 13 - Fri 16 April 2027)
+### Week 4: close the story (Tue 13 - Fri 16 April 2027)
 
 #### Tue 13 Apr
 
-- 09:00-12:00: Your other lectures (not course time)
+- 08:00-12:00: Your other lectures (not course time)
 - 12:00-13:00: Lunch
-- 13:00-16:00: [Extension / nerd factor] Extension of your choice (bench steps), or rescue path: repeat Exp 2 (plate, spin, 2 h, LPS challenge overnight)
+- 13:00-16:00: [Extension / nerd factor] Optional, as agreed on 9 April: repeat the polarization or the challenge, or a third experiment. Or dry lab: finish the in silico part and the poster. Never at the cost of wrapping up.
 - 16:00-17:00: [Plenary, lecture, debrief] Cutting Edge Immunology Seminar 16:30-17:30 (tbd)
-- Staff: Reagents for the extensions agreed on Fri 9 Apr. Staff culture ready for rescue groups to plate.
-- Resources: 4 hoods HPL F27.2, one per group, available at all times. Extension-specific instruments as agreed.
+- Staff: Reagents for the agreed repeats or extensions. Stock flasks for the groups that plate.
+- Resources: 4 hoods HPL F27.2, one per group, available at all times. Extension-specific instruments as agreed. Conference room HPL F22 for lectures and dry lab.
 
 #### Wed 14 Apr
 
-- 09:00-10:00: [Plenary, lecture, debrief] Lecture: scientific writing, from data to argument, poster structure, figure design, honest limits (tbd)
-- 10:00-12:00: [Extension / nerd factor] Extension, continued, or rescue path: harvest, flow staining, ELISA
+- 08:00-09:00: Self-study: reading for the day, notebook, group branch
+- 09:00-12:00: [Extension / nerd factor] Optional harvest and ELISA for groups at the bench; otherwise poster: figures and legends
 - 12:00-13:00: Lunch
-- 13:00-16:00: [Poster and writing] Dry lab: analysis of Exp 2 and the extension, scRNA-seq part 3, score the tissue macrophages. Poster: figures and legends
-- 16:00-17:00: [Plenary, lecture, debrief] Failure round: each group presents one thing that went wrong and what it taught them
-- Staff: Poster template distributed. Rescue groups: cytometer slot [TODO: facility], ELISA Wed, result on the poster by Thursday.
+- 13:00-16:00: [Poster and writing] Wrap up: code, figures and poster; scRNA-seq part 3, score the tissue macrophages
+- 16:00-17:00: [Plenary, lecture, debrief] Publish or perish: a critical discussion on scientific integrity and output metrics
+- Staff: Poster template distributed. Plate reader for the groups that ran an ELISA.
 - Resources: 4 hoods HPL F27.2, one per group, available at all times. Conference room HPL F22 for lectures and dry lab.
 
 #### Thu 15 Apr
 
-- 09:00-12:00: [Poster and writing] Poster production with your supervisor: final figures and legends
+- 08:00-09:00: Self-study: reading for the day, notebook, group branch
+- 09:00-12:00: [Poster and writing] Wrap up: code, figures and poster, with your supervisor. Print when ready (signprint.ch); the PDF goes to the group branch first
 - 12:00-13:00: Lunch
-- 13:00-14:00: [Poster and writing] Poster production, continued. Print when you are ready (poster guide); the PDF goes to the group branch first
-- 14:00-15:00: [Plenary, lecture, debrief] Recap and Q&A (tbd): the course in one hour, then open questions with the teaching staff
-- 15:00-17:00: Free: extension analysis, notebook, group branch
-- Staff: Printing is each group's own business (signprint.ch, see the poster guide). Poster boards ready.
+- 13:00-17:00: [Poster and writing] Wrap up, continued: code, figures, poster, group branch. Stock flask frozen or discarded.
+- Staff: Poster boards ready. Exam papers printed. Course evaluation goes out as a written survey.
 - Resources: Conference room HPL F22 for lectures and dry lab. Poster boards.
 
 #### Fri 16 Apr
 
-- 09:00-11:00: [Dry lab and desk work] Lab clean-up; notebook and group branch finalised
-- 11:00-12:00: [Plenary, lecture, debrief] Feedback round with the teaching staff; course evaluation
+- 08:00-09:00: Self-study: reading for the day, notebook, group branch
+- 09:00-10:00: [Dry lab and desk work] Lab cleaning
+- 10:00-12:00: [Dry lab and desk work] Finish the group branch; poster pickup, self-service
 - 12:00-13:00: Lunch
 - 13:00-14:00: [Plenary, lecture, debrief] Written exam, individual [TODO: duration and room]
 - 14:00-16:00: [Plenary, lecture, debrief] Poster session: presentations and discussion; prize
-- 16:00-17:00: [Plenary, lecture, debrief] Apéro
-- Staff: Exam papers, jury, prize, evaluation form, clean-up checklist. Apéro ordered [TODO: catering].
+- 16:00-17:00: [Plenary, lecture, debrief] Open 360° feedback round: closes the poster session and opens the apéro
+- Staff: Exam papers, jury, prize, clean-up checklist. Apéro ordered [TODO: catering]; evaluation survey sent after the course.
 - Resources: Conference room HPL F22 for lectures and dry lab. Apéro room [TODO: catering].

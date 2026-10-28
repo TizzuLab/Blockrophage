@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 690" width="1200" height="690" font-family="Arial, Helvetica, sans-serif">
-<rect x="0" y="0" width="1200" height="690" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 718" width="1200" height="718" font-family="Arial, Helvetica, sans-serif">
+<rect x="0" y="0" width="1200" height="718" fill="#ffffff"/>
 <rect x="0" y="0" width="84" height="26" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
 <text x="6" y="18" font-size="12" fill="#1A1A1A" font-weight="bold">Time</text>
 <rect x="84.0" y="0" width="279.0" height="26" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
@@ -10,135 +10,141 @@
 <text x="648" y="18" font-size="12" fill="#1A1A1A" font-weight="bold">Thu 15 Apr</text>
 <rect x="921.0" y="0" width="279.0" height="26" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
 <text x="927" y="18" font-size="12" fill="#1A1A1A" font-weight="bold">Fri 16 Apr</text>
-<rect x="0" y="26" width="84" height="57" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="6" y="44" font-size="12" fill="#1A1A1A" font-weight="bold">09:00</text>
-<rect x="0" y="83" width="84" height="46" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="6" y="101" font-size="12" fill="#1A1A1A" font-weight="bold">10:00</text>
-<rect x="0" y="129" width="84" height="46" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="6" y="147" font-size="12" fill="#1A1A1A" font-weight="bold">11:00</text>
-<rect x="0" y="175" width="84" height="46" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="6" y="193" font-size="12" fill="#1A1A1A" font-weight="bold">12:00</text>
-<rect x="0" y="221" width="84" height="57" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="6" y="239" font-size="12" fill="#1A1A1A" font-weight="bold">13:00</text>
-<rect x="0" y="278" width="84" height="57" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="6" y="296" font-size="12" fill="#1A1A1A" font-weight="bold">14:00</text>
-<rect x="0" y="335" width="84" height="46" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="6" y="353" font-size="12" fill="#1A1A1A" font-weight="bold">15:00</text>
-<rect x="0" y="381" width="84" height="57" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="6" y="399" font-size="12" fill="#1A1A1A" font-weight="bold">16:00</text>
-<rect x="0" y="438" width="84" height="72" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="6" y="456" font-size="12" fill="#1A1A1A" font-weight="bold">Staff</text>
-<rect x="0" y="510" width="84" height="72" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="6" y="528" font-size="12" fill="#1A1A1A" font-weight="bold">Resources</text>
-<rect x="84.0" y="26" width="279.0" height="149" fill="#EDEDED" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="90" y="105" font-size="12" fill="#5A5A5A">Your other lectures (not course time)</text>
-<rect x="363.0" y="26" width="279.0" height="57" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
-<text x="369" y="44" font-size="12" fill="#FFFFFF" font-weight="bold">Lecture: scientific writing, from</text>
-<text x="369" y="59" font-size="12" fill="#FFFFFF" font-weight="bold">data to argument, poster structure,</text>
-<text x="369" y="74" font-size="12" fill="#FFFFFF" font-weight="bold">figure design, honest limits (tbd)</text>
-<rect x="642.0" y="26" width="279.0" height="149" fill="#D9C3E9" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="648" y="98" font-size="12" fill="#1A1A1A">Poster production with your supervisor:</text>
-<text x="648" y="112" font-size="12" fill="#1A1A1A">final figures and legends</text>
-<rect x="921.0" y="26" width="279.0" height="103" fill="#FFE699" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="927" y="74" font-size="12" fill="#1A1A1A">Lab clean-up; notebook and group branch</text>
-<text x="927" y="90" font-size="12" fill="#1A1A1A">finalised</text>
-<rect x="363.0" y="83" width="279.0" height="92" fill="#F8CBAD" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="369" y="126" font-size="12" fill="#1A1A1A">Extension, continued, or rescue path:</text>
-<text x="369" y="141" font-size="12" fill="#1A1A1A">harvest, flow staining, ELISA</text>
-<rect x="921.0" y="129" width="279.0" height="46" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
-<text x="927" y="147" font-size="12" fill="#FFFFFF" font-weight="bold">Feedback round with the teaching</text>
-<text x="927" y="162" font-size="12" fill="#FFFFFF" font-weight="bold">staff; course evaluation</text>
-<rect x="84.0" y="175" width="279.0" height="46" fill="#EDEDED" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="90" y="193" font-size="12" fill="#5A5A5A">Lunch</text>
-<rect x="363.0" y="175" width="279.0" height="46" fill="#EDEDED" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="369" y="193" font-size="12" fill="#5A5A5A">Lunch</text>
-<rect x="642.0" y="175" width="279.0" height="46" fill="#EDEDED" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="648" y="193" font-size="12" fill="#5A5A5A">Lunch</text>
-<rect x="921.0" y="175" width="279.0" height="46" fill="#EDEDED" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="927" y="193" font-size="12" fill="#5A5A5A">Lunch</text>
-<rect x="84.0" y="221" width="279.0" height="160" fill="#F8CBAD" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="90" y="290" font-size="12" fill="#1A1A1A">Extension of your choice (bench steps),</text>
-<text x="90" y="306" font-size="12" fill="#1A1A1A">or rescue path: repeat Exp 2 (plate,</text>
-<text x="90" y="320" font-size="12" fill="#1A1A1A">spin, 2 h, LPS challenge overnight)</text>
-<rect x="363.0" y="221" width="279.0" height="160" fill="#D9C3E9" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="369" y="283" font-size="12" fill="#1A1A1A">Dry lab: analysis of Exp 2 and the</text>
-<text x="369" y="298" font-size="12" fill="#1A1A1A">extension, scRNA-seq part 3, score the</text>
-<text x="369" y="313" font-size="12" fill="#1A1A1A">tissue macrophages. Poster: figures and</text>
-<text x="369" y="328" font-size="12" fill="#1A1A1A">legends</text>
-<rect x="642.0" y="221" width="279.0" height="57" fill="#D9C3E9" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="648" y="239" font-size="12" fill="#1A1A1A">Poster production, continued. Print</text>
-<text x="648" y="254" font-size="12" fill="#1A1A1A">when you are ready (poster guide); the</text>
-<text x="648" y="269" font-size="12" fill="#1A1A1A">PDF goes to the group branch first</text>
-<rect x="921.0" y="221" width="279.0" height="57" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
-<text x="927" y="239" font-size="12" fill="#FFFFFF" font-weight="bold">Written exam, individual [TODO:</text>
-<text x="927" y="254" font-size="12" fill="#FFFFFF" font-weight="bold">duration and room]</text>
-<rect x="642.0" y="278" width="279.0" height="57" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
-<text x="648" y="296" font-size="12" fill="#FFFFFF" font-weight="bold">Recap and Q&amp;A (tbd): the course in</text>
-<text x="648" y="311" font-size="12" fill="#FFFFFF" font-weight="bold">one hour, then open questions with</text>
-<text x="648" y="326" font-size="12" fill="#FFFFFF" font-weight="bold">the teaching staff</text>
-<rect x="921.0" y="278" width="279.0" height="103" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
-<text x="927" y="326" font-size="12" fill="#FFFFFF" font-weight="bold">Poster session: presentations and</text>
-<text x="927" y="342" font-size="12" fill="#FFFFFF" font-weight="bold">discussion; prize</text>
-<rect x="642.0" y="335" width="279.0" height="103" fill="#EDEDED" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="648" y="384" font-size="12" fill="#5A5A5A">Free: extension analysis, notebook,</text>
-<text x="648" y="398" font-size="12" fill="#5A5A5A">group branch</text>
-<rect x="84.0" y="381" width="279.0" height="57" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
-<text x="90" y="399" font-size="12" fill="#FFFFFF" font-weight="bold">Cutting Edge Immunology Seminar</text>
-<text x="90" y="414" font-size="12" fill="#FFFFFF" font-weight="bold">16:30-17:30 (tbd)</text>
-<rect x="363.0" y="381" width="279.0" height="57" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
-<text x="369" y="399" font-size="12" fill="#FFFFFF" font-weight="bold">Failure round: each group presents</text>
-<text x="369" y="414" font-size="12" fill="#FFFFFF" font-weight="bold">one thing that went wrong and what</text>
-<text x="369" y="429" font-size="12" fill="#FFFFFF" font-weight="bold">it taught them</text>
-<rect x="921.0" y="381" width="279.0" height="57" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
-<text x="927" y="399" font-size="12" fill="#FFFFFF" font-weight="bold">Apéro</text>
-<rect x="84.0" y="438" width="279.0" height="72" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="90" y="456" font-size="12" fill="#1A1A1A">Reagents for the extensions agreed on</text>
-<text x="90" y="471" font-size="12" fill="#1A1A1A">Fri 9 Apr. Staff culture ready for</text>
-<text x="90" y="486" font-size="12" fill="#1A1A1A">rescue groups to plate.</text>
-<rect x="363.0" y="438" width="279.0" height="72" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="369" y="456" font-size="12" fill="#1A1A1A">Poster template distributed. Rescue</text>
-<text x="369" y="471" font-size="12" fill="#1A1A1A">groups: cytometer slot [TODO:</text>
-<text x="369" y="486" font-size="12" fill="#1A1A1A">facility], ELISA Wed, result on the</text>
-<text x="369" y="501" font-size="12" fill="#1A1A1A">poster by Thursday.</text>
-<rect x="642.0" y="438" width="279.0" height="72" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="648" y="456" font-size="12" fill="#1A1A1A">Printing is each group&#x27;s own business</text>
-<text x="648" y="471" font-size="12" fill="#1A1A1A">(signprint.ch, see the poster guide).</text>
-<text x="648" y="486" font-size="12" fill="#1A1A1A">Poster boards ready.</text>
-<rect x="921.0" y="438" width="279.0" height="72" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="927" y="456" font-size="12" fill="#1A1A1A">Exam papers, jury, prize, evaluation</text>
-<text x="927" y="471" font-size="12" fill="#1A1A1A">form, clean-up checklist. Apéro ordered</text>
-<text x="927" y="486" font-size="12" fill="#1A1A1A">[TODO: catering].</text>
-<rect x="84.0" y="510" width="279.0" height="72" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="90" y="528" font-size="12" fill="#1A1A1A">4 hoods HPL F27.2, one per group,</text>
-<text x="90" y="543" font-size="12" fill="#1A1A1A">available at all times.</text>
-<text x="90" y="558" font-size="12" fill="#1A1A1A">Extension-specific instruments as</text>
-<text x="90" y="573" font-size="12" fill="#1A1A1A">agreed.</text>
-<rect x="363.0" y="510" width="279.0" height="72" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="369" y="528" font-size="12" fill="#1A1A1A">4 hoods HPL F27.2, one per group,</text>
-<text x="369" y="543" font-size="12" fill="#1A1A1A">available at all times. Conference room</text>
-<text x="369" y="558" font-size="12" fill="#1A1A1A">HPL F22 for lectures and dry lab.</text>
-<rect x="642.0" y="510" width="279.0" height="72" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="648" y="528" font-size="12" fill="#1A1A1A">Conference room HPL F22 for lectures</text>
-<text x="648" y="543" font-size="12" fill="#1A1A1A">and dry lab. Poster boards.</text>
-<rect x="921.0" y="510" width="279.0" height="72" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="927" y="528" font-size="12" fill="#1A1A1A">Conference room HPL F22 for lectures</text>
-<text x="927" y="543" font-size="12" fill="#1A1A1A">and dry lab. Apéro room [TODO:</text>
-<text x="927" y="558" font-size="12" fill="#1A1A1A">catering].</text>
-<text x="4" y="606" font-size="12" font-weight="bold" fill="#1A1A1A">Legend</text>
-<rect x="4" y="614" width="26" height="13" fill="#1F4E5F" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="36" y="625" font-size="11" fill="#1A1A1A">Plenary, lecture, debrief (fixed)</text>
-<rect x="604" y="614" width="26" height="13" fill="#8B1E3F" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="636" y="625" font-size="11" fill="#1A1A1A">Facility slot: cytometer, facility lecture (fixed, reserved)</text>
-<rect x="4" y="632" width="26" height="13" fill="#C6E0B4" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="36" y="643" font-size="11" fill="#1A1A1A">Wet lab Exp 1: establish the line (growth curve, freeze, re-thaw)</text>
-<rect x="604" y="632" width="26" height="13" fill="#BDD7EE" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="636" y="643" font-size="11" fill="#1A1A1A">Wet lab Exp 2: challenge, read out (flow cytometry, ELISA)</text>
-<rect x="4" y="650" width="26" height="13" fill="#FFE699" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="36" y="661" font-size="11" fill="#1A1A1A">Dry lab and desk work: setup, analysis, planning</text>
-<rect x="604" y="650" width="26" height="13" fill="#D9C3E9" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="636" y="661" font-size="11" fill="#1A1A1A">Poster and writing: introduction, significance, figures</text>
-<rect x="4" y="668" width="26" height="13" fill="#F8CBAD" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="36" y="679" font-size="11" fill="#1A1A1A">Extension / nerd factor (group&#x27;s choice)</text>
-<rect x="604" y="668" width="26" height="13" fill="#EDEDED" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="636" y="679" font-size="11" fill="#1A1A1A">Buffer / free</text>
+<rect x="0" y="26" width="84" height="46" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="6" y="44" font-size="12" fill="#1A1A1A" font-weight="bold">08:00</text>
+<rect x="0" y="72" width="84" height="46" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="6" y="90" font-size="12" fill="#1A1A1A" font-weight="bold">09:00</text>
+<rect x="0" y="118" width="84" height="46" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="6" y="136" font-size="12" fill="#1A1A1A" font-weight="bold">10:00</text>
+<rect x="0" y="164" width="84" height="46" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="6" y="182" font-size="12" fill="#1A1A1A" font-weight="bold">11:00</text>
+<rect x="0" y="210" width="84" height="46" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="6" y="228" font-size="12" fill="#1A1A1A" font-weight="bold">12:00</text>
+<rect x="0" y="256" width="84" height="46" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="6" y="274" font-size="12" fill="#1A1A1A" font-weight="bold">13:00</text>
+<rect x="0" y="302" width="84" height="46" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="6" y="320" font-size="12" fill="#1A1A1A" font-weight="bold">14:00</text>
+<rect x="0" y="348" width="84" height="46" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="6" y="366" font-size="12" fill="#1A1A1A" font-weight="bold">15:00</text>
+<rect x="0" y="394" width="84" height="57" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="6" y="412" font-size="12" fill="#1A1A1A" font-weight="bold">16:00</text>
+<rect x="0" y="451" width="84" height="72" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="6" y="469" font-size="12" fill="#1A1A1A" font-weight="bold">Staff</text>
+<rect x="0" y="523" width="84" height="87" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="6" y="541" font-size="12" fill="#1A1A1A" font-weight="bold">Resources</text>
+<rect x="84.0" y="26" width="279.0" height="184" fill="#EDEDED" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="90" y="122" font-size="12" fill="#5A5A5A">Your other lectures (not course time)</text>
+<rect x="363.0" y="26" width="279.0" height="46" fill="#EDEDED" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="369" y="44" font-size="12" fill="#5A5A5A">Self-study: reading for the day,</text>
+<text x="369" y="59" font-size="12" fill="#5A5A5A">notebook, group branch</text>
+<rect x="642.0" y="26" width="279.0" height="46" fill="#EDEDED" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="648" y="44" font-size="12" fill="#5A5A5A">Self-study: reading for the day,</text>
+<text x="648" y="59" font-size="12" fill="#5A5A5A">notebook, group branch</text>
+<rect x="921.0" y="26" width="279.0" height="46" fill="#EDEDED" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="927" y="44" font-size="12" fill="#5A5A5A">Self-study: reading for the day,</text>
+<text x="927" y="59" font-size="12" fill="#5A5A5A">notebook, group branch</text>
+<rect x="363.0" y="72" width="279.0" height="138" fill="#F8CBAD" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="369" y="130" font-size="12" fill="#1A1A1A">Optional harvest and ELISA for groups</text>
+<text x="369" y="146" font-size="12" fill="#1A1A1A">at the bench; otherwise poster: figures</text>
+<text x="369" y="160" font-size="12" fill="#1A1A1A">and legends</text>
+<rect x="642.0" y="72" width="279.0" height="138" fill="#D9C3E9" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="648" y="123" font-size="12" fill="#1A1A1A">Wrap up: code, figures and poster, with</text>
+<text x="648" y="138" font-size="12" fill="#1A1A1A">your supervisor. Print when ready</text>
+<text x="648" y="153" font-size="12" fill="#1A1A1A">(signprint.ch); the PDF goes to the</text>
+<text x="648" y="168" font-size="12" fill="#1A1A1A">group branch first</text>
+<rect x="921.0" y="72" width="279.0" height="46" fill="#FFE699" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="927" y="90" font-size="12" fill="#1A1A1A">Lab cleaning</text>
+<rect x="921.0" y="118" width="279.0" height="92" fill="#FFE699" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="927" y="161" font-size="12" fill="#1A1A1A">Finish the group branch; poster pickup,</text>
+<text x="927" y="176" font-size="12" fill="#1A1A1A">self-service</text>
+<rect x="84.0" y="210" width="279.0" height="46" fill="#EDEDED" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="90" y="228" font-size="12" fill="#5A5A5A">Lunch</text>
+<rect x="363.0" y="210" width="279.0" height="46" fill="#EDEDED" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="369" y="228" font-size="12" fill="#5A5A5A">Lunch</text>
+<rect x="642.0" y="210" width="279.0" height="46" fill="#EDEDED" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="648" y="228" font-size="12" fill="#5A5A5A">Lunch</text>
+<rect x="921.0" y="210" width="279.0" height="46" fill="#EDEDED" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="927" y="228" font-size="12" fill="#5A5A5A">Lunch</text>
+<rect x="84.0" y="256" width="279.0" height="138" fill="#F8CBAD" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="90" y="300" font-size="12" fill="#1A1A1A">Optional, as agreed on 9 April: repeat</text>
+<text x="90" y="314" font-size="12" fill="#1A1A1A">the polarization or the challenge, or a</text>
+<text x="90" y="330" font-size="12" fill="#1A1A1A">third experiment. Or dry lab: finish</text>
+<text x="90" y="344" font-size="12" fill="#1A1A1A">the in silico part and the poster.</text>
+<text x="90" y="360" font-size="12" fill="#1A1A1A">Never at the cost of wrapping up.</text>
+<rect x="363.0" y="256" width="279.0" height="138" fill="#D9C3E9" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="369" y="314" font-size="12" fill="#1A1A1A">Wrap up: code, figures and poster;</text>
+<text x="369" y="330" font-size="12" fill="#1A1A1A">scRNA-seq part 3, score the tissue</text>
+<text x="369" y="344" font-size="12" fill="#1A1A1A">macrophages</text>
+<rect x="642.0" y="256" width="279.0" height="195" fill="#D9C3E9" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="648" y="343" font-size="12" fill="#1A1A1A">Wrap up, continued: code, figures,</text>
+<text x="648" y="358" font-size="12" fill="#1A1A1A">poster, group branch. Stock flask</text>
+<text x="648" y="373" font-size="12" fill="#1A1A1A">frozen or discarded.</text>
+<rect x="921.0" y="256" width="279.0" height="46" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
+<text x="927" y="274" font-size="12" fill="#FFFFFF" font-weight="bold">Written exam, individual [TODO:</text>
+<text x="927" y="289" font-size="12" fill="#FFFFFF" font-weight="bold">duration and room]</text>
+<rect x="921.0" y="302" width="279.0" height="92" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
+<text x="927" y="345" font-size="12" fill="#FFFFFF" font-weight="bold">Poster session: presentations and</text>
+<text x="927" y="360" font-size="12" fill="#FFFFFF" font-weight="bold">discussion; prize</text>
+<rect x="84.0" y="394" width="279.0" height="57" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
+<text x="90" y="412" font-size="12" fill="#FFFFFF" font-weight="bold">Cutting Edge Immunology Seminar</text>
+<text x="90" y="427" font-size="12" fill="#FFFFFF" font-weight="bold">16:30-17:30 (tbd)</text>
+<rect x="363.0" y="394" width="279.0" height="57" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
+<text x="369" y="412" font-size="12" fill="#FFFFFF" font-weight="bold">Publish or perish: a critical</text>
+<text x="369" y="427" font-size="12" fill="#FFFFFF" font-weight="bold">discussion on scientific integrity</text>
+<text x="369" y="442" font-size="12" fill="#FFFFFF" font-weight="bold">and output metrics</text>
+<rect x="921.0" y="394" width="279.0" height="57" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
+<text x="927" y="412" font-size="12" fill="#FFFFFF" font-weight="bold">Open 360° feedback round: closes</text>
+<text x="927" y="427" font-size="12" fill="#FFFFFF" font-weight="bold">the poster session and opens the</text>
+<text x="927" y="442" font-size="12" fill="#FFFFFF" font-weight="bold">apéro</text>
+<rect x="84.0" y="451" width="279.0" height="72" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="90" y="469" font-size="12" fill="#1A1A1A">Reagents for the agreed repeats or</text>
+<text x="90" y="484" font-size="12" fill="#1A1A1A">extensions. Stock flasks for the groups</text>
+<text x="90" y="499" font-size="12" fill="#1A1A1A">that plate.</text>
+<rect x="363.0" y="451" width="279.0" height="72" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="369" y="469" font-size="12" fill="#1A1A1A">Poster template distributed. Plate</text>
+<text x="369" y="484" font-size="12" fill="#1A1A1A">reader for the groups that ran an</text>
+<text x="369" y="499" font-size="12" fill="#1A1A1A">ELISA.</text>
+<rect x="642.0" y="451" width="279.0" height="72" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="648" y="469" font-size="12" fill="#1A1A1A">Poster boards ready. Exam papers</text>
+<text x="648" y="484" font-size="12" fill="#1A1A1A">printed. Course evaluation goes out as</text>
+<text x="648" y="499" font-size="12" fill="#1A1A1A">a written survey.</text>
+<rect x="921.0" y="451" width="279.0" height="72" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="927" y="469" font-size="12" fill="#1A1A1A">Exam papers, jury, prize, clean-up</text>
+<text x="927" y="484" font-size="12" fill="#1A1A1A">checklist. Apéro ordered [TODO:</text>
+<text x="927" y="499" font-size="12" fill="#1A1A1A">catering]; evaluation survey sent after</text>
+<text x="927" y="514" font-size="12" fill="#1A1A1A">the course.</text>
+<rect x="84.0" y="523" width="279.0" height="87" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="90" y="541" font-size="12" fill="#1A1A1A">4 hoods HPL F27.2, one per group,</text>
+<text x="90" y="556" font-size="12" fill="#1A1A1A">available at all times.</text>
+<text x="90" y="571" font-size="12" fill="#1A1A1A">Extension-specific instruments as</text>
+<text x="90" y="586" font-size="12" fill="#1A1A1A">agreed. Conference room HPL F22 for</text>
+<text x="90" y="601" font-size="12" fill="#1A1A1A">lectures and dry lab.</text>
+<rect x="363.0" y="523" width="279.0" height="87" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="369" y="541" font-size="12" fill="#1A1A1A">4 hoods HPL F27.2, one per group,</text>
+<text x="369" y="556" font-size="12" fill="#1A1A1A">available at all times. Conference room</text>
+<text x="369" y="571" font-size="12" fill="#1A1A1A">HPL F22 for lectures and dry lab.</text>
+<rect x="642.0" y="523" width="279.0" height="87" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="648" y="541" font-size="12" fill="#1A1A1A">Conference room HPL F22 for lectures</text>
+<text x="648" y="556" font-size="12" fill="#1A1A1A">and dry lab. Poster boards.</text>
+<rect x="921.0" y="523" width="279.0" height="87" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="927" y="541" font-size="12" fill="#1A1A1A">Conference room HPL F22 for lectures</text>
+<text x="927" y="556" font-size="12" fill="#1A1A1A">and dry lab. Apéro room [TODO:</text>
+<text x="927" y="571" font-size="12" fill="#1A1A1A">catering].</text>
+<text x="4" y="634" font-size="12" font-weight="bold" fill="#1A1A1A">Legend</text>
+<rect x="4" y="642" width="26" height="13" fill="#1F4E5F" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="36" y="653" font-size="11" fill="#1A1A1A">Plenary, lecture, debrief (fixed)</text>
+<rect x="604" y="642" width="26" height="13" fill="#8B1E3F" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="636" y="653" font-size="11" fill="#1A1A1A">Facility slot: cytometer, facility lecture (fixed, reserved)</text>
+<rect x="4" y="660" width="26" height="13" fill="#C6E0B4" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="36" y="671" font-size="11" fill="#1A1A1A">Wet lab Exp 1: polarize and characterize (plate with the polarizer, harvest, stain, acquire)</text>
+<rect x="604" y="660" width="26" height="13" fill="#BDD7EE" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="636" y="671" font-size="11" fill="#1A1A1A">Wet lab Exp 2: polarize and challenge (plate, stimulate, harvest, ELISA)</text>
+<rect x="4" y="678" width="26" height="13" fill="#FFE699" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="36" y="689" font-size="11" fill="#1A1A1A">Dry lab and desk work: setup, analysis, planning</text>
+<rect x="604" y="678" width="26" height="13" fill="#D9C3E9" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="636" y="689" font-size="11" fill="#1A1A1A">Poster and writing: introduction, significance, figures</text>
+<rect x="4" y="696" width="26" height="13" fill="#F8CBAD" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="36" y="707" font-size="11" fill="#1A1A1A">Extension / nerd factor (group&#x27;s choice)</text>
+<rect x="604" y="696" width="26" height="13" fill="#EDEDED" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="636" y="707" font-size="11" fill="#1A1A1A">Buffer / free</text>
 </svg>

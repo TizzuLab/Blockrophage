@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 683" width="1200" height="683" font-family="Arial, Helvetica, sans-serif">
-<rect x="0" y="0" width="1200" height="683" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 713" width="1200" height="713" font-family="Arial, Helvetica, sans-serif">
+<rect x="0" y="0" width="1200" height="713" fill="#ffffff"/>
 <rect x="0" y="0" width="84" height="26" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
 <text x="6" y="18" font-size="12" fill="#1A1A1A" font-weight="bold">Time</text>
 <rect x="84.0" y="0" width="372.0" height="26" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
@@ -9,110 +9,119 @@
 <rect x="828.0" y="0" width="372.0" height="26" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
 <text x="834" y="18" font-size="12" fill="#1A1A1A" font-weight="bold">Thu 25 Mar</text>
 <rect x="0" y="26" width="84" height="46" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="6" y="44" font-size="12" fill="#1A1A1A" font-weight="bold">09:00</text>
-<rect x="0" y="72" width="84" height="57" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="6" y="90" font-size="12" fill="#1A1A1A" font-weight="bold">10:00</text>
-<rect x="0" y="129" width="84" height="46" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="6" y="147" font-size="12" fill="#1A1A1A" font-weight="bold">11:00</text>
-<rect x="0" y="175" width="84" height="46" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="6" y="193" font-size="12" fill="#1A1A1A" font-weight="bold">12:00</text>
-<rect x="0" y="221" width="84" height="57" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="6" y="239" font-size="12" fill="#1A1A1A" font-weight="bold">13:00</text>
-<rect x="0" y="278" width="84" height="46" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="6" y="296" font-size="12" fill="#1A1A1A" font-weight="bold">14:00</text>
-<rect x="0" y="324" width="84" height="46" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="6" y="342" font-size="12" fill="#1A1A1A" font-weight="bold">15:00</text>
-<rect x="0" y="370" width="84" height="46" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="6" y="388" font-size="12" fill="#1A1A1A" font-weight="bold">16:00</text>
-<rect x="0" y="416" width="84" height="87" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="6" y="434" font-size="12" fill="#1A1A1A" font-weight="bold">Staff</text>
-<rect x="0" y="503" width="84" height="72" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="6" y="521" font-size="12" fill="#1A1A1A" font-weight="bold">Resources</text>
-<rect x="84.0" y="26" width="372.0" height="149" fill="#EDEDED" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="90" y="105" font-size="12" fill="#5A5A5A">Your other lectures (not course time)</text>
-<rect x="456.0" y="26" width="372.0" height="46" fill="#C6E0B4" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="462" y="44" font-size="12" fill="#1A1A1A">P01 Count 1. P09 Seed the standard curve, MTT on</text>
-<text x="462" y="59" font-size="12" fill="#1A1A1A">column 1</text>
-<rect x="828.0" y="26" width="372.0" height="46" fill="#C6E0B4" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="834" y="44" font-size="12" fill="#1A1A1A">P01 Count 3. P09 MTT on column 2 (read 12:30)</text>
-<rect x="456.0" y="72" width="372.0" height="103" fill="#C6E0B4" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="462" y="120" font-size="12" fill="#1A1A1A">Inspect the flask, medium change. P09 MTT on the</text>
-<text x="462" y="136" font-size="12" fill="#1A1A1A">standard curve at 11:00; reads at 12:30 and 14:30</text>
-<rect x="828.0" y="72" width="372.0" height="57" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
-<text x="834" y="90" font-size="12" fill="#FFFFFF" font-weight="bold">Journal club 1 (tbd): the M1/M2 nomenclature</text>
-<text x="834" y="105" font-size="12" fill="#FFFFFF" font-weight="bold">revision [TODO: paper]; one group presents, all</text>
-<text x="834" y="120" font-size="12" fill="#FFFFFF" font-weight="bold">read</text>
-<rect x="828.0" y="129" width="372.0" height="46" fill="#C6E0B4" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="834" y="147" font-size="12" fill="#1A1A1A">P03 Freeze your own vials from the flask. Clean-up</text>
-<rect x="84.0" y="175" width="372.0" height="46" fill="#EDEDED" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="90" y="193" font-size="12" fill="#5A5A5A">Lunch</text>
-<rect x="456.0" y="175" width="372.0" height="46" fill="#EDEDED" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="462" y="193" font-size="12" fill="#5A5A5A">Lunch</text>
-<rect x="828.0" y="175" width="372.0" height="46" fill="#EDEDED" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="834" y="193" font-size="12" fill="#5A5A5A">Lunch</text>
-<rect x="84.0" y="221" width="372.0" height="195" fill="#C6E0B4" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="90" y="308" font-size="12" fill="#1A1A1A">P01 Thaw your own vial, count (T0), seed the flask</text>
-<text x="90" y="323" font-size="12" fill="#1A1A1A">and the counting wells. P09 Seed the MTT growth-curve</text>
-<text x="90" y="338" font-size="12" fill="#1A1A1A">columns.</text>
-<rect x="456.0" y="221" width="372.0" height="57" fill="#8B1E3F" stroke="#1A1A1A" stroke-width="2"/>
-<text x="462" y="239" font-size="12" fill="#FFFFFF" font-weight="bold">Facility lecture: flow cytometry and FlowJo</text>
-<text x="462" y="254" font-size="12" fill="#FFFFFF" font-weight="bold">(Florian Mair) [TODO: confirm slot with the</text>
-<text x="462" y="269" font-size="12" fill="#FFFFFF" font-weight="bold">facility]</text>
-<rect x="828.0" y="221" width="372.0" height="103" fill="#FFE699" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="834" y="254" font-size="12" fill="#1A1A1A">Dry lab: FlowJo on example data. Growth curve and</text>
-<text x="834" y="270" font-size="12" fill="#1A1A1A">doubling time from your counts. Poster: why does this</text>
-<text x="834" y="284" font-size="12" fill="#1A1A1A">matter (significance). P09 MTT on column 3 at 12:30,</text>
-<text x="834" y="300" font-size="12" fill="#1A1A1A">read 16:00</text>
-<rect x="456.0" y="278" width="372.0" height="138" fill="#FFE699" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="462" y="336" font-size="12" fill="#1A1A1A">Dry lab: scRNA-seq part 1, load the preprocessed</text>
-<text x="462" y="352" font-size="12" fill="#1A1A1A">object, QC figure. Poster: draft the introduction.</text>
-<text x="462" y="366" font-size="12" fill="#1A1A1A">P01 Count 2 at 15:00</text>
-<rect x="828.0" y="324" width="372.0" height="46" fill="#C6E0B4" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="834" y="342" font-size="12" fill="#1A1A1A">P01 Count 4, the last point. Discard the counting</text>
-<text x="834" y="357" font-size="12" fill="#1A1A1A">wells; nothing stays in culture over the break</text>
-<rect x="828.0" y="370" width="372.0" height="46" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
-<text x="834" y="388" font-size="12" fill="#FFFFFF" font-weight="bold">Debrief week 2: what worked, plan for Exp 2</text>
-<rect x="84.0" y="416" width="372.0" height="87" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="90" y="434" font-size="12" fill="#1A1A1A">Medium warmed, one vial per group at 13:00.</text>
-<text x="90" y="449" font-size="12" fill="#1A1A1A">Supervisor at the hood with each group for the thaw.</text>
-<text x="90" y="464" font-size="12" fill="#1A1A1A">Counting plates and MTT plates ready.</text>
-<rect x="456.0" y="416" width="372.0" height="87" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="462" y="434" font-size="12" fill="#1A1A1A">Cultures inspected 08:00. Counted staff suspension</text>
-<text x="462" y="449" font-size="12" fill="#1A1A1A">for the standard curves at 09:00. Plate reader 12:30</text>
-<text x="462" y="464" font-size="12" fill="#1A1A1A">(column 1) and 14:30 (standard curve).</text>
-<rect x="828.0" y="416" width="372.0" height="87" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="834" y="434" font-size="12" fill="#1A1A1A">Freezing boxes in the -80. Plate reader 12:30 and</text>
-<text x="834" y="449" font-size="12" fill="#1A1A1A">16:00. Collect all cultures at 17:00. Easter: vials</text>
-<text x="834" y="464" font-size="12" fill="#1A1A1A">to -140 on Fri 26 Mar; thaw backup RAW on Wed 31 Mar,</text>
-<text x="834" y="479" font-size="12" fill="#1A1A1A">split Fri 2 Apr: enough cells to plate four groups on</text>
-<text x="834" y="494" font-size="12" fill="#1A1A1A">Tue 6 Apr.</text>
-<rect x="84.0" y="503" width="372.0" height="72" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="90" y="521" font-size="12" fill="#1A1A1A">4 hoods HPL F27.2, one per group, available at all</text>
-<text x="90" y="536" font-size="12" fill="#1A1A1A">times. Cell counter.</text>
-<rect x="456.0" y="503" width="372.0" height="72" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="462" y="521" font-size="12" fill="#1A1A1A">4 hoods HPL F27.2, one per group, available at all</text>
-<text x="462" y="536" font-size="12" fill="#1A1A1A">times. Plate reader. Conference room HPL F22 for</text>
-<text x="462" y="551" font-size="12" fill="#1A1A1A">lectures and dry lab. FlowJo seats [TODO].</text>
-<rect x="828.0" y="503" width="372.0" height="72" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="834" y="521" font-size="12" fill="#1A1A1A">4 hoods HPL F27.2, one per group, available at all</text>
-<text x="834" y="536" font-size="12" fill="#1A1A1A">times. -80 box per group; Mr Frosty or equivalent</text>
-<text x="834" y="551" font-size="12" fill="#1A1A1A">[TODO: lab standard]. Plate reader. Conference room</text>
-<text x="834" y="566" font-size="12" fill="#1A1A1A">HPL F22 for lectures and dry lab.</text>
-<text x="4" y="599" font-size="12" font-weight="bold" fill="#1A1A1A">Legend</text>
-<rect x="4" y="607" width="26" height="13" fill="#1F4E5F" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="36" y="618" font-size="11" fill="#1A1A1A">Plenary, lecture, debrief (fixed)</text>
-<rect x="604" y="607" width="26" height="13" fill="#8B1E3F" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="636" y="618" font-size="11" fill="#1A1A1A">Facility slot: cytometer, facility lecture (fixed, reserved)</text>
-<rect x="4" y="625" width="26" height="13" fill="#C6E0B4" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="36" y="636" font-size="11" fill="#1A1A1A">Wet lab Exp 1: establish the line (growth curve, freeze, re-thaw)</text>
-<rect x="604" y="625" width="26" height="13" fill="#BDD7EE" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="636" y="636" font-size="11" fill="#1A1A1A">Wet lab Exp 2: challenge, read out (flow cytometry, ELISA)</text>
-<rect x="4" y="643" width="26" height="13" fill="#FFE699" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="36" y="654" font-size="11" fill="#1A1A1A">Dry lab and desk work: setup, analysis, planning</text>
-<rect x="604" y="643" width="26" height="13" fill="#D9C3E9" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="636" y="654" font-size="11" fill="#1A1A1A">Poster and writing: introduction, significance, figures</text>
-<rect x="4" y="661" width="26" height="13" fill="#F8CBAD" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="36" y="672" font-size="11" fill="#1A1A1A">Extension / nerd factor (group&#x27;s choice)</text>
-<rect x="604" y="661" width="26" height="13" fill="#EDEDED" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="636" y="672" font-size="11" fill="#1A1A1A">Buffer / free</text>
+<text x="6" y="44" font-size="12" fill="#1A1A1A" font-weight="bold">08:00</text>
+<rect x="0" y="72" width="84" height="46" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="6" y="90" font-size="12" fill="#1A1A1A" font-weight="bold">09:00</text>
+<rect x="0" y="118" width="84" height="46" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="6" y="136" font-size="12" fill="#1A1A1A" font-weight="bold">10:00</text>
+<rect x="0" y="164" width="84" height="46" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="6" y="182" font-size="12" fill="#1A1A1A" font-weight="bold">11:00</text>
+<rect x="0" y="210" width="84" height="46" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="6" y="228" font-size="12" fill="#1A1A1A" font-weight="bold">12:00</text>
+<rect x="0" y="256" width="84" height="51" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="6" y="274" font-size="12" fill="#1A1A1A" font-weight="bold">13:00</text>
+<rect x="0" y="307" width="84" height="51" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="6" y="325" font-size="12" fill="#1A1A1A" font-weight="bold">14:00</text>
+<rect x="0" y="358" width="84" height="46" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="6" y="376" font-size="12" fill="#1A1A1A" font-weight="bold">15:00</text>
+<rect x="0" y="404" width="84" height="72" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="6" y="422" font-size="12" fill="#1A1A1A" font-weight="bold">16:00</text>
+<rect x="0" y="476" width="84" height="72" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="6" y="494" font-size="12" fill="#1A1A1A" font-weight="bold">Staff</text>
+<rect x="0" y="548" width="84" height="57" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="6" y="566" font-size="12" fill="#1A1A1A" font-weight="bold">Resources</text>
+<rect x="84.0" y="26" width="372.0" height="184" fill="#EDEDED" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="90" y="122" font-size="12" fill="#5A5A5A">Your other lectures (not course time)</text>
+<rect x="456.0" y="26" width="372.0" height="46" fill="#EDEDED" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="462" y="44" font-size="12" fill="#5A5A5A">Self-study: reading for the day, notebook, group</text>
+<text x="462" y="59" font-size="12" fill="#5A5A5A">branch</text>
+<rect x="828.0" y="26" width="372.0" height="46" fill="#EDEDED" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="834" y="44" font-size="12" fill="#5A5A5A">Self-study: reading for the day, notebook, group</text>
+<text x="834" y="59" font-size="12" fill="#5A5A5A">branch</text>
+<rect x="456.0" y="72" width="372.0" height="46" fill="#8B1E3F" stroke="#1A1A1A" stroke-width="2"/>
+<text x="462" y="90" font-size="12" fill="#FFFFFF" font-weight="bold">Facility lecture: flow cytometry and FlowJo</text>
+<text x="462" y="105" font-size="12" fill="#FFFFFF" font-weight="bold">(Florian Mair) [TODO: confirm slot]</text>
+<rect x="828.0" y="72" width="372.0" height="138" fill="#8B1E3F" stroke="#1A1A1A" stroke-width="2"/>
+<text x="834" y="138" font-size="12" fill="#FFFFFF" font-weight="bold">P08 Acquisition at the facility, two batches of</text>
+<text x="834" y="153" font-size="12" fill="#FFFFFF" font-weight="bold">1.5 h, two groups each [TODO: reservation]</text>
+<rect x="456.0" y="118" width="372.0" height="92" fill="#C6E0B4" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="462" y="161" font-size="12" fill="#1A1A1A">P08 Harvest the adherent cells, count, viability dye,</text>
+<text x="462" y="176" font-size="12" fill="#1A1A1A">Fc block, surface stain</text>
+<rect x="84.0" y="210" width="372.0" height="46" fill="#EDEDED" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="90" y="228" font-size="12" fill="#5A5A5A">Lunch</text>
+<rect x="456.0" y="210" width="372.0" height="46" fill="#EDEDED" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="462" y="228" font-size="12" fill="#5A5A5A">Lunch</text>
+<rect x="828.0" y="210" width="372.0" height="46" fill="#EDEDED" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="834" y="228" font-size="12" fill="#5A5A5A">Lunch</text>
+<rect x="84.0" y="256" width="372.0" height="102" fill="#C6E0B4" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="90" y="274" font-size="12" fill="#1A1A1A">P02 and P04: plate cells from your stock with the</text>
+<text x="90" y="289" font-size="12" fill="#1A1A1A">polarizer already in the seeding suspension. Vehicle</text>
+<text x="90" y="304" font-size="12" fill="#1A1A1A">control, M(pol) and LPS control on the flow plate (6-</text>
+<text x="90" y="319" font-size="12" fill="#1A1A1A">or 12-well). Plate-and-polarize in one step, about 19</text>
+<text x="90" y="334" font-size="12" fill="#1A1A1A">h. Wet-lab goal: plate at a defined density with a</text>
+<text x="90" y="349" font-size="12" fill="#1A1A1A">stimulus.</text>
+<rect x="456.0" y="256" width="372.0" height="102" fill="#C6E0B4" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="462" y="289" font-size="12" fill="#1A1A1A">P08 continued: optional Arg1 fix and perm, fix, store</text>
+<text x="462" y="304" font-size="12" fill="#1A1A1A">at 4 °C until acquisition. Wet-lab goal: harvest,</text>
+<text x="462" y="319" font-size="12" fill="#1A1A1A">staining, fixation. Staining plan and FMOs in the</text>
+<text x="462" y="334" font-size="12" fill="#1A1A1A">notebook.</text>
+<rect x="828.0" y="256" width="372.0" height="148" fill="#8B1E3F" stroke="#1A1A1A" stroke-width="2"/>
+<text x="834" y="312" font-size="12" fill="#FFFFFF" font-weight="bold">FlowJo session: gating, FMOs, export statistics;</text>
+<text x="834" y="327" font-size="12" fill="#FFFFFF" font-weight="bold">the first figure [TODO: check with Florian Mair</text>
+<text x="834" y="342" font-size="12" fill="#FFFFFF" font-weight="bold">the available teaching seats]. Wet-lab goal:</text>
+<text x="834" y="357" font-size="12" fill="#FFFFFF" font-weight="bold">acquisition and gating.</text>
+<rect x="84.0" y="358" width="372.0" height="118" fill="#FFE699" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="90" y="406" font-size="12" fill="#1A1A1A">Dry lab: scRNA-seq part 1, load the preprocessed</text>
+<text x="90" y="422" font-size="12" fill="#1A1A1A">object, QC figure. If the bench runs over, the dry</text>
+<text x="90" y="436" font-size="12" fill="#1A1A1A">lab moves home.</text>
+<rect x="456.0" y="358" width="372.0" height="118" fill="#FFE699" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="462" y="406" font-size="12" fill="#1A1A1A">Dry lab: scRNA-seq part 1 continued; poster: draft</text>
+<text x="462" y="422" font-size="12" fill="#1A1A1A">the introduction. If the bench runs over, the dry lab</text>
+<text x="462" y="436" font-size="12" fill="#1A1A1A">moves home.</text>
+<rect x="828.0" y="404" width="372.0" height="72" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
+<text x="834" y="422" font-size="12" fill="#FFFFFF" font-weight="bold">Journal club 1 and debrief in one session: did</text>
+<text x="834" y="437" font-size="12" fill="#FFFFFF" font-weight="bold">the polarizer do what the menu says on this</text>
+<text x="834" y="452" font-size="12" fill="#FFFFFF" font-weight="bold">readout? Stick or pivot; decision in the group</text>
+<text x="834" y="467" font-size="12" fill="#FFFFFF" font-weight="bold">branch</text>
+<rect x="84.0" y="476" width="372.0" height="72" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="90" y="494" font-size="12" fill="#1A1A1A">Stock flasks counted per group at 12:30. Polarizers,</text>
+<text x="90" y="509" font-size="12" fill="#1A1A1A">vehicle and LPS at working concentration; plate maps</text>
+<text x="90" y="524" font-size="12" fill="#1A1A1A">checked before anyone pipettes.</text>
+<rect x="456.0" y="476" width="372.0" height="72" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="462" y="494" font-size="12" fill="#1A1A1A">Antibody panel, viability dye, fix/perm buffers,</text>
+<text x="462" y="509" font-size="12" fill="#1A1A1A">compensation beads. Nothing in the incubator but the</text>
+<text x="462" y="524" font-size="12" fill="#1A1A1A">stock flasks.</text>
+<rect x="828.0" y="476" width="372.0" height="72" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="834" y="494" font-size="12" fill="#1A1A1A">Escort the groups to the facility. Stock flasks:</text>
+<text x="834" y="509" font-size="12" fill="#1A1A1A">split, two or three backup vials to -80 per group,</text>
+<text x="834" y="524" font-size="12" fill="#1A1A1A">carried over the break by the staff. Easter: no</text>
+<text x="834" y="539" font-size="12" fill="#1A1A1A">course.</text>
+<rect x="84.0" y="548" width="372.0" height="57" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="90" y="566" font-size="12" fill="#1A1A1A">4 hoods HPL F27.2, one per group, available at all</text>
+<text x="90" y="581" font-size="12" fill="#1A1A1A">times. Cell counter.</text>
+<rect x="456.0" y="548" width="372.0" height="57" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="462" y="566" font-size="12" fill="#1A1A1A">4 hoods HPL F27.2, one per group, available at all</text>
+<text x="462" y="581" font-size="12" fill="#1A1A1A">times. Cooled centrifuge. Fridge. Conference room HPL</text>
+<text x="462" y="596" font-size="12" fill="#1A1A1A">F22 for lectures and dry lab.</text>
+<rect x="828.0" y="548" width="372.0" height="57" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="834" y="566" font-size="12" fill="#1A1A1A">Cytometer: 2 slots of 1.5 h [TODO: facility].</text>
+<text x="834" y="581" font-size="12" fill="#1A1A1A">Conference room HPL F22 for lectures and dry lab.</text>
+<text x="834" y="596" font-size="12" fill="#1A1A1A">FlowJo seats [TODO].</text>
+<text x="4" y="629" font-size="12" font-weight="bold" fill="#1A1A1A">Legend</text>
+<rect x="4" y="637" width="26" height="13" fill="#1F4E5F" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="36" y="648" font-size="11" fill="#1A1A1A">Plenary, lecture, debrief (fixed)</text>
+<rect x="604" y="637" width="26" height="13" fill="#8B1E3F" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="636" y="648" font-size="11" fill="#1A1A1A">Facility slot: cytometer, facility lecture (fixed, reserved)</text>
+<rect x="4" y="655" width="26" height="13" fill="#C6E0B4" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="36" y="666" font-size="11" fill="#1A1A1A">Wet lab Exp 1: polarize and characterize (plate with the polarizer, harvest, stain, acquire)</text>
+<rect x="604" y="655" width="26" height="13" fill="#BDD7EE" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="636" y="666" font-size="11" fill="#1A1A1A">Wet lab Exp 2: polarize and challenge (plate, stimulate, harvest, ELISA)</text>
+<rect x="4" y="673" width="26" height="13" fill="#FFE699" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="36" y="684" font-size="11" fill="#1A1A1A">Dry lab and desk work: setup, analysis, planning</text>
+<rect x="604" y="673" width="26" height="13" fill="#D9C3E9" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="636" y="684" font-size="11" fill="#1A1A1A">Poster and writing: introduction, significance, figures</text>
+<rect x="4" y="691" width="26" height="13" fill="#F8CBAD" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="36" y="702" font-size="11" fill="#1A1A1A">Extension / nerd factor (group&#x27;s choice)</text>
+<rect x="604" y="691" width="26" height="13" fill="#EDEDED" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="636" y="702" font-size="11" fill="#1A1A1A">Buffer / free</text>
 </svg>

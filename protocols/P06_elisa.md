@@ -1,4 +1,4 @@
-# P06 ELISA for IL-6 and TNF
+# P06 ELISA for IL-6 or TNF
 
 > **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage-course/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
@@ -9,14 +9,28 @@
 | Hands-on time | 3–4 h, with incubation waits, plus coating the day before |
 | Wall-clock time | 2 days (coating overnight) |
 | Resources | plate reader (450 nm; the lab uses a Promega GloMax Discover), multichannel pipette, plate washer or wash bottle, bench space |
-| Depends on | P05 supernatants (overnight arm) |
+| Depends on | P05 supernatants (overnight default, 6 h alternative); plates coated on Wednesday 16:30 |
 | Lab SOP | Zindel lab "RAW 264.7 polarisation" (v1.0, 2025-12-08), harvesting section, and the kit insert of the Invitrogen Mouse IL-6 Uncoated ELISA Kit (88-7064-88). The kit insert wins over this page. |
 
 ## Purpose
 
-Quantify IL-6 and TNF in the challenge supernatants. These are the NF-κB outputs of
-the TLR pathway and the main readout of whether polarization primes or suppresses
-the response.
+Quantify IL-6 or TNF in the challenge supernatants. Both are NF-κB outputs of the
+TLR pathway and the main readout of whether polarization primes or suppresses the
+response. Your group chooses one, and the choice is part of the plan:
+
+- IL-6 accumulates over the night and is strongest in the overnight supernatant.
+  It is the cytokine the lab validated (worked example below).
+- TNF peaks 4 to 6 h after the stimulus; the overnight supernatant still contains
+  it, but less. A group that picks TNF either accepts a decayed signal or adds a
+  6 h arm (P04, step 6) and harvests it the same afternoon.
+
+A group that wants robust data picks IL-6. The mouse IL-6 kit is in stock, the TNF kit
+is pre-bought; another cytokine can be ordered if its kit arrives in time.
+
+In the course rhythm the plates are coated on Wednesday at 16:30 of week 3 (30 min at
+the bench, overnight at 4 °C), blocking and samples run on Thursday morning, the
+3.5 h of incubations are used for the next steps and the dry lab, and detection and
+read-out follow from 15:00.
 
 ## Materials
 
