@@ -342,19 +342,19 @@ F27.2, where each group has its own laminar flow hood reserved all day, every da
 <!-- schedule:begin -->
 <!-- Generated from tools/schedule/Blockcourse_Gantt_FS2027.xlsx by tools/schedule/gantt2readme.py. Do not edit by hand: edit the workbook and rerun. -->
 
-### Week 1: orientation (Thu 18 - Fri 19 March 2027)
+#### Week 1: orientation (Thu 18 - Fri 19 March 2027)
 
 ![Week 1: orientation (Thu 18 - Fri 19 March 2027)](figures/schedule/week-1.svg?v=e4d79287)
 
-### Week 2: polarize and characterize (Tue 23 - Thu 25 March 2027)
+#### Week 2: polarize and characterize (Tue 23 - Thu 25 March 2027)
 
 ![Week 2: polarize and characterize (Tue 23 - Thu 25 March 2027)](figures/schedule/week-2.svg?v=de244d44)
 
-### Week 3: polarize and challenge (Tue 6 - Fri 9 April 2027)
+#### Week 3: polarize and challenge (Tue 6 - Fri 9 April 2027)
 
 ![Week 3: polarize and challenge (Tue 6 - Fri 9 April 2027)](figures/schedule/week-3.svg?v=501ea09d)
 
-### Week 4: close the story (Tue 13 - Fri 16 April 2027)
+#### Week 4: close the story (Tue 13 - Fri 16 April 2027)
 
 ![Week 4: close the story (Tue 13 - Fri 16 April 2027)](figures/schedule/week-4.svg?v=77b65fe8)
 
