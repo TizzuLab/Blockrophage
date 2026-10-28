@@ -96,7 +96,7 @@ experiments and extensions (Section 6). What your group adds is your choice (tog
 **Failure rounds.** A failed experiment that is properly analysed is worth as much as one
 that worked.
 
-**Safety.** The safety rules (Claude add link please) need to be read and signed before experimental
+**Safety.** The [safety rules](safety/README.md) need to be read and signed before experimental
 work can start.
 
 **Attendance.** We have to check with the department whether you need to show up all the time, 
