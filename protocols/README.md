@@ -35,7 +35,7 @@ P-files are the core programme, X-files are optional extensions (Section 6 of th
 - P04 runs 24 h, then wash, then P05 runs 16 h overnight; P08 uses the
   unchallenged wells of P04 on the day of the P05 challenge.
 - P06 and P07 run on the P05 supernatants, the same day or later from frozen aliquots.
-- P03 vials are re-thawed on the Monday after the break; Exp 2 plates come from the
+- P03 vials are re-thawed on the Tuesday after the break; Exp 2 plates come from the
   staff stock.
 - X02 needs a cytometer slot on the day the peritoneal cells are available; X03
   tissue must reach the facility in week 1. Both depend on surplus primary material

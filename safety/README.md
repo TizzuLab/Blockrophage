@@ -22,7 +22,8 @@ anyone who wants the full text; ask the course lead for a copy.
 
 ## 2. Specifically for this course you need to know
 
-**Where and when.** HPL, F floor. Course hours 09:00 to 17:00; there is no work in
+**Where and when.** HPL, F floor. Course hours Tue 13:00 to 17:00 and Wed to
+Fri 09:00 to 17:00; there is no work in
 the lab outside these hours and no overnight presence; overnight steps run in the
 incubator without you. The briefing walks you through the escape routes and the
 assembly point `[TODO: assembly point]`, the eyewash and emergency shower, the

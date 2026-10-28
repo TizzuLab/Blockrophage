@@ -30,9 +30,9 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 2. **Your ok to work on a public repository**, where your edits and your name are
    visible to anyone. This is worth keeping in mind when the account is created.
 3. **A laptop**; any operating system works.
-4. Optionally, **your favourite LLM as a learning coach**: the LLM-friendly version of
-   this repository, the [companion package](#your-companion), is dropped into a
-   session.
+4. Optionally, **your favourite chatty as a learning coach**. Chatty = LLM = AI tool,
+   e.g. Claude, ChatGPT, Gemini; the chatty-friendly version of this repository, the
+   [companion package](#your-companion), is dropped into a session.
 5. **The safety sheet**, read before the first day and signed after the briefing on
    the first morning ([safety](safety/README.md)). The signed sheet is your
    admission to the bench.
@@ -69,8 +69,8 @@ After this course, students will be able to:
    M(stimulus) nomenclature correctly, and explain why the M1/M2 dichotomy was revised.
 2. **Culture** a mammalian cell line from vial to vial: thaw, count, split, seed,
    freeze, and document a growth curve and a viability.
-3. **Set up** a reproducible analysis environment from a code repository with a large
-   language model as assistant, and verify or refute what the assistant produces.
+3. **Set up** a reproducible analysis environment from a code repository with a chatty
+   as assistant, and verify or refute what the chatty produces.
 4. **Establish** a scRNA-Seq analysis workflow for a published data set from an
    example, and score the identified myeloid populations against an in-vitro-derived
    M1/M2 gene signature.
@@ -105,37 +105,39 @@ would be nice though we invest a lot of energy in this course.
 
 ## 4. Schedule
 
-Course hours are 09:00 to 17:00, lunch 12:00 to 13:00, Thu 18 March to Fri 16
-April 2027 with the Easter break from Fri 26 March to Sun 4 April (no course, no
-cultures).
+Course weeks run from Tuesday 13:00 to Friday 17:00; Monday and Tuesday morning
+belong to your other lectures. Lunch is 12:00 to 13:00. The course runs Thu 18 March
+to Fri 16 April 2027 with the Easter break from Fri 26 March to Sun 4 April (no
+course, no cultures).
 
 **How to read this schedule.** Sessions in **bold** are plenary and mandatory. 
 Everything else is orientation. If space permits, which it usually will, your group can 
 shift work with your supervisor's agreement.
 
-**Capacity.** Two groups work at the bench per half day, the other two in the dry
-lab, swapped after lunch. Groups A and B form one pair, C and D the other, and the
-pairs stay fixed within a week because the group that starts an overnight step
-harvests it.
+**Capacity.** On Wednesdays and Thursdays two groups work at the bench per half day,
+the other two in the dry lab, swapped after lunch. Tuesday afternoons, and the harvest
+on the Friday of week 3, are all-bench in two hood shifts. Groups A and B form one
+pair, C and D the other, and the pairs stay fixed within a week because the group
+that starts an overnight step harvests it.
 
 <!-- schedule:begin -->
 <!-- Generated from tools/schedule/Blockcourse_Gantt_FS2027.xlsx by tools/schedule/gantt2readme.py. Do not edit by hand: edit the workbook and rerun. -->
 
 ### Week 1: orientation (Thu 18 - Fri 19 March 2027), 09:00-17:00
 
-![Week 1: orientation (Thu 18 - Fri 19 March 2027), 09:00-17:00](figures/schedule/week-1.svg?v=6ad95a49)
+![Week 1: orientation (Thu 18 - Fri 19 March 2027), 09:00-17:00](figures/schedule/week-1.svg?v=34f7aa3f)
 
-### Week 2: Exp 1, establish the line (Mon 22 - Thu 25 March 2027)
+### Week 2: Exp 1, establish the line (Tue 23 - Thu 25 March 2027)
 
-![Week 2: Exp 1, establish the line (Mon 22 - Thu 25 March 2027)](figures/schedule/week-2.svg?v=4bbbdf8e)
+![Week 2: Exp 1, establish the line (Tue 23 - Thu 25 March 2027)](figures/schedule/week-2.svg?v=6bc70831)
 
-### Week 3: Exp 2, polarize and challenge (Mon 5 - Fri 9 April 2027)
+### Week 3: Exp 2, challenge and read out (Tue 6 - Fri 9 April 2027)
 
-![Week 3: Exp 2, polarize and challenge (Mon 5 - Fri 9 April 2027)](figures/schedule/week-3.svg?v=04288238)
+![Week 3: Exp 2, challenge and read out (Tue 6 - Fri 9 April 2027)](figures/schedule/week-3.svg?v=5cc77052)
 
-### Week 4: extensions, poster, presentations (Mon 12 - Fri 16 April 2027)
+### Week 4: extensions, poster, presentations (Tue 13 - Fri 16 April 2027)
 
-![Week 4: extensions, poster, presentations (Mon 12 - Fri 16 April 2027)](figures/schedule/week-4.svg?v=6ed85047)
+![Week 4: extensions, poster, presentations (Tue 13 - Fri 16 April 2027)](figures/schedule/week-4.svg?v=12aebf32)
 
 <!-- schedule:end -->
 
@@ -258,12 +260,12 @@ the written record the ETH biosafety concept asks for.
 
 ## Your companion
 
-Everything in this repository is also available as one file for a language model:
+Everything in this repository is also available as one file for your chatty:
 [`companion/blockcourse-companion.md`](companion/blockcourse-companion.md) is
 downloaded, [`COMPANION_PROMPT.md`](COMPANION_PROMPT.md) is pasted as the first
 message of a new session, the file is attached, and the result is a private
 Blockrophage companion that knows the schedule, the protocols and the background. It
-will still be wrong sometimes; the repository, not the model, is the reference.
+will still be wrong sometimes; the repository, not the chatty, is the reference.
 
 ## Appendix: open items before submission
 
@@ -278,7 +280,7 @@ will still be wrong sometimes; the repository, not the model, is the reference.
 - qPCR: extension (current plan) or core.
 - Datasets: verify GSE113836 contents and preprocess both datasets; answer-key repository.
 - Surplus primary material for the extensions.
-- Pinned environment, fallback environment, LLM licensing for students.
+- Pinned environment, fallback environment, chatty licensing for students.
 - Recognition of extensions (points or otherwise), atlas platform, prize and funding,
   grading rules for block courses, poster printing.
 

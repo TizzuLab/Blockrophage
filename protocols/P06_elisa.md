@@ -94,8 +94,11 @@ and the analysis is [`code/elisa/elisa_standard_curve.R`](../code/elisa/elisa_st
 
 ![IL-6 ELISA worked example: standard curve and IL-6 per LPS dose](figures/P06_il6_worked_example.png)
 
-What you see: the standard curve is close to linear over the kit range and a
-four-parameter logistic fit describes it (R² 0.999). Vehicle and 0.1 ng/mL LPS are
+What you see: the curve is drawn far beyond the standards so that the whole S of the
+four-parameter logistic fit is visible (R² 0.999). The kit range, shaded, sits on the
+lower limb, which is why it looks close to linear on this log axis; the inflection is
+at about 630 pg/mL and the upper plateau at OD 6.6 is beyond what the reader can
+measure, so a sample above the top standard cannot be back-calculated, only diluted. Vehicle and 0.1 ng/mL LPS are
 below the lowest standard, 1 ng/mL gives about 30 pg/mL, 10 ng/mL about 140 pg/mL
 and 100 ng/mL about 320 pg/mL, with triplicate wells within 15%. The 100 ng/mL
 point is the LPS control of P05: a neat supernatant lands in the upper third of the
