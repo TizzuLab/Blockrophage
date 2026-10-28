@@ -63,7 +63,7 @@ Bergstrom, Jevin D. West). In order words: information is cheap, validation is n
 
 ## 2. Learning objectives
 
-After this course you will be able to:
+After this course, students will be able to:
 
 1. **Classify** macrophages by ontogeny, niche and activation state, use the
    M(stimulus) nomenclature correctly, and explain why the M1/M2 dichotomy was revised.
