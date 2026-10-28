@@ -73,8 +73,8 @@
 
 ## Optional
 
-- [Companion](README.md#what-you-need-for-this-course): the links and the prompt that
-  turn a chatty into the course companion; the prompt is in the README.
+- [Companion prompt](companion/prompt.md): the instructions at the top of the
+  companion files; the student pastes a companion file into a new session.
 - [Companion file](https://raw.githubusercontent.com/TizzuLab/blockrophage-course/main/companion/blockcourse-companion.md): the whole repository as one file.
 - [Core companion](https://raw.githubusercontent.com/TizzuLab/blockrophage-course/main/companion/blockcourse-companion-core.md): script, schedule and protocols only, for sessions that
   have to start from a link.

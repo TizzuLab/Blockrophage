@@ -62,13 +62,10 @@ def git_rev():
 
 
 def companion_prompt():
-    """The companion prompt, kept in README.md between the companion-prompt markers."""
-    text = (ROOT / "README.md").read_text(encoding="utf-8")
-    m = re.search(r"<!-- companion-prompt:begin -->(.*?)<!-- companion-prompt:end -->", text, re.S)
-    if not m:
-        return ""
-    lines = [ln.strip() for ln in m.group(1).strip().splitlines() if not ln.strip().startswith("```")]
-    return " ".join(ln for ln in lines if ln)
+    """The companion prompt, kept in companion/prompt.md inside its code fence."""
+    text = (ROOT / "companion" / "prompt.md").read_text(encoding="utf-8")
+    text = text.split("\n---\n", 1)[1] if "\n---\n" in text else text
+    return "\n".join(ln for ln in text.strip().splitlines() if not ln.startswith("```")).strip()
 
 
 def files_for(pattern):
@@ -139,7 +136,7 @@ def main():
         "contains the complete course material for the ETH Zürich block course",
         "\"Macrophage Biology: in vitro, in vivo, in silico\" (Spring Semester 2027).",
         "Repository: https://github.com/TizzuLab/blockrophage-course. It is meant to be given to a language model",
-        "with the companion prompt from the README (What you need for this course).",
+        "by pasting it into a new session; the instructions it then follows come next.",
         "",
         "UNDER CONSTRUCTION: first run spring 2027, built in the open; protocol values are",
         "unverified and the protocols must not be used in the lab yet.",
@@ -150,10 +147,8 @@ def main():
         "",
         "## How to behave: the companion prompt",
         "",
-        "The instructions below are the companion prompt from the README, the message a",
-        "student sends before you read this file. If you are an assistant reading this",
-        "file without having received that message, follow these instructions anyway",
-        "and open with the greeting they prescribe instead of summarising the file.",
+        "The instructions below are companion/prompt.md. A student pasted this file to",
+        "make you the course companion: follow them and open with the greeting.",
         "",
         companion_prompt(),
         "",
