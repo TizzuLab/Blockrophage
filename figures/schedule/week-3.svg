@@ -1,292 +1,164 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1335" width="1200" height="1335" font-family="Arial, Helvetica, sans-serif">
-<rect x="0" y="0" width="1200" height="1335" fill="#ffffff"/>
-<rect x="0.0" y="0" width="150.0" height="26" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="6" y="18" font-size="12" fill="#1A1A1A" font-weight="bold">Day</text>
-<rect x="150.0" y="0" width="150.0" height="26" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="156" y="18" font-size="12" fill="#1A1A1A" font-weight="bold">Tue 6 Apr</text>
-<rect x="300.0" y="0" width="300.0" height="26" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="306" y="18" font-size="12" fill="#1A1A1A" font-weight="bold">Wed 7 Apr</text>
-<rect x="600.0" y="0" width="300.0" height="26" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="606" y="18" font-size="12" fill="#1A1A1A" font-weight="bold">Thu 8 Apr</text>
-<rect x="900.0" y="0" width="300.0" height="26" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="906" y="18" font-size="12" fill="#1A1A1A" font-weight="bold">Fri 9 Apr</text>
-<rect x="0.0" y="26" width="150.0" height="22" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="6" y="42" font-size="12" fill="#1A1A1A" font-weight="bold">Half day</text>
-<rect x="150.0" y="26" width="150.0" height="22" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="156" y="42" font-size="12" fill="#1A1A1A" font-weight="bold">Afternoon</text>
-<rect x="300.0" y="26" width="112.5" height="22" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="306" y="42" font-size="12" fill="#1A1A1A" font-weight="bold">Morning</text>
-<rect x="412.5" y="26" width="37.5" height="22" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="418" y="40" font-size="9" fill="#1A1A1A" font-weight="bold">Lunch</text>
-<rect x="450.0" y="26" width="150.0" height="22" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="456" y="42" font-size="12" fill="#1A1A1A" font-weight="bold">Afternoon</text>
-<rect x="600.0" y="26" width="112.5" height="22" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="606" y="42" font-size="12" fill="#1A1A1A" font-weight="bold">Morning</text>
-<rect x="712.5" y="26" width="37.5" height="22" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="718" y="40" font-size="9" fill="#1A1A1A" font-weight="bold">Lunch</text>
-<rect x="750.0" y="26" width="150.0" height="22" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="756" y="42" font-size="12" fill="#1A1A1A" font-weight="bold">Afternoon</text>
-<rect x="900.0" y="26" width="112.5" height="22" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="906" y="42" font-size="12" fill="#1A1A1A" font-weight="bold">Morning</text>
-<rect x="1012.5" y="26" width="37.5" height="22" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="1018" y="40" font-size="9" fill="#1A1A1A" font-weight="bold">Lunch</text>
-<rect x="1050.0" y="26" width="150.0" height="22" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="1056" y="42" font-size="12" fill="#1A1A1A" font-weight="bold">Afternoon</text>
-<rect x="0.0" y="48" width="150.0" height="280" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="6" y="66" font-size="12" fill="#1A1A1A" font-weight="bold">Fixed layer</text>
-<text x="6" y="81" font-size="12" fill="#1A1A1A" font-weight="bold">(lectures, facility)</text>
-<rect x="150.0" y="48" width="37.5" height="280" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.8"/>
-<rect x="187.5" y="48" width="37.5" height="280" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.8"/>
-<rect x="225.0" y="48" width="37.5" height="280" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.8"/>
-<rect x="262.5" y="48" width="37.5" height="280" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
-<text x="278" y="320" transform="rotate(-90 278 320)" font-size="10" fill="#FFFFFF" font-weight="bold">Cutting Edge Immunology Seminar 16:30-17:30 (t…</text>
-<rect x="300.0" y="48" width="37.5" height="280" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.8"/>
-<rect x="337.5" y="48" width="37.5" height="280" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.8"/>
-<rect x="375.0" y="48" width="37.5" height="280" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.8"/>
-<rect x="412.5" y="48" width="37.5" height="280" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.8"/>
-<rect x="450.0" y="48" width="37.5" height="280" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
-<text x="466" y="320" transform="rotate(-90 466 320)" font-size="10" fill="#FFFFFF" font-weight="bold">Lecture: single-cell transcriptomics for immun…</text>
-<rect x="487.5" y="48" width="37.5" height="280" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.8"/>
-<rect x="525.0" y="48" width="37.5" height="280" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.8"/>
-<rect x="562.5" y="48" width="37.5" height="280" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.8"/>
-<rect x="600.0" y="48" width="37.5" height="280" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
-<text x="616" y="320" transform="rotate(-90 616 320)" font-size="10" fill="#FFFFFF" font-weight="bold">Journal club 2 (tbd): the peritoneal injury si…</text>
-<rect x="637.5" y="48" width="75.0" height="280" fill="#8B1E3F" stroke="#1A1A1A" stroke-width="2"/>
-<text x="656" y="238" transform="rotate(-90 656 238)" font-size="12" fill="#FFFFFF" font-weight="bold">Cytometer slot,</text>
-<text x="670" y="238" transform="rotate(-90 670 238)" font-size="12" fill="#FFFFFF" font-weight="bold">groups A+B</text>
-<text x="686" y="238" transform="rotate(-90 686 238)" font-size="12" fill="#FFFFFF" font-weight="bold">[TODO: facility</text>
-<text x="700" y="238" transform="rotate(-90 700 238)" font-size="12" fill="#FFFFFF" font-weight="bold">reservation]</text>
-<rect x="712.5" y="48" width="37.5" height="280" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.8"/>
-<rect x="750.0" y="48" width="75.0" height="280" fill="#8B1E3F" stroke="#1A1A1A" stroke-width="2"/>
-<text x="768" y="238" transform="rotate(-90 768 238)" font-size="12" fill="#FFFFFF" font-weight="bold">Cytometer slot,</text>
-<text x="783" y="238" transform="rotate(-90 783 238)" font-size="12" fill="#FFFFFF" font-weight="bold">groups C+D</text>
-<text x="798" y="238" transform="rotate(-90 798 238)" font-size="12" fill="#FFFFFF" font-weight="bold">[TODO: facility</text>
-<text x="813" y="238" transform="rotate(-90 813 238)" font-size="12" fill="#FFFFFF" font-weight="bold">reservation]</text>
-<rect x="825.0" y="48" width="37.5" height="280" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.8"/>
-<rect x="862.5" y="48" width="37.5" height="280" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.8"/>
-<rect x="900.0" y="48" width="37.5" height="280" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.8"/>
-<rect x="937.5" y="48" width="37.5" height="280" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.8"/>
-<rect x="975.0" y="48" width="37.5" height="280" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.8"/>
-<rect x="1012.5" y="48" width="37.5" height="280" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.8"/>
-<rect x="1050.0" y="48" width="37.5" height="280" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.8"/>
-<rect x="1087.5" y="48" width="37.5" height="280" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.8"/>
-<rect x="1125.0" y="48" width="37.5" height="280" fill="#FFFFFF" stroke="#BFBFBF" stroke-width="0.8"/>
-<rect x="1162.5" y="48" width="37.5" height="280" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
-<text x="1178" y="320" transform="rotate(-90 1178 320)" font-size="10" fill="#FFFFFF" font-weight="bold">Debrief Exp 2: results, extension choices, res…</text>
-<rect x="0.0" y="328" width="150.0" height="134" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="6" y="346" font-size="12" fill="#1A1A1A" font-weight="bold">Group A</text>
-<text x="6" y="361" font-size="12" fill="#1A1A1A" font-weight="bold">supervisors: ______</text>
-<text x="6" y="376" font-size="12" fill="#1A1A1A" font-weight="bold">/ ______</text>
-<rect x="150.0" y="328" width="112.5" height="548" fill="#BDD7EE" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="156" y="442" font-size="12" fill="#1A1A1A">P02 Plate</text>
-<text x="156" y="456" font-size="12" fill="#1A1A1A">cells from the</text>
-<text x="156" y="472" font-size="12" fill="#1A1A1A">staff culture,</text>
-<text x="156" y="486" font-size="12" fill="#1A1A1A">spin the plate</text>
-<text x="156" y="502" font-size="12" fill="#1A1A1A">down, 2 h to</text>
-<text x="156" y="516" font-size="12" fill="#1A1A1A">adhere [TODO:</text>
-<text x="156" y="532" font-size="12" fill="#1A1A1A">confirm before</text>
-<text x="156" y="546" font-size="12" fill="#1A1A1A">the course</text>
-<text x="156" y="562" font-size="12" fill="#1A1A1A">that RAW cells</text>
-<text x="156" y="576" font-size="12" fill="#1A1A1A">adhere in 2 h</text>
-<text x="156" y="592" font-size="12" fill="#1A1A1A">after a spin].</text>
-<text x="156" y="606" font-size="12" fill="#1A1A1A">Meanwhile P01</text>
-<text x="156" y="622" font-size="12" fill="#1A1A1A">re-thaw your</text>
-<text x="156" y="636" font-size="12" fill="#1A1A1A">own vial</text>
-<text x="156" y="652" font-size="12" fill="#1A1A1A">(viability =</text>
-<text x="156" y="666" font-size="12" fill="#1A1A1A">Exp 1</text>
-<text x="156" y="682" font-size="12" fill="#1A1A1A">readout). Then</text>
-<text x="156" y="696" font-size="12" fill="#1A1A1A">P05 Challenge</text>
-<text x="156" y="712" font-size="12" fill="#1A1A1A">overnight with</text>
-<text x="156" y="726" font-size="12" fill="#1A1A1A">LPS. Hood</text>
-<text x="156" y="742" font-size="12" fill="#1A1A1A">shifts: A+B</text>
-<text x="156" y="756" font-size="12" fill="#1A1A1A">13:00, C+D</text>
-<text x="156" y="772" font-size="12" fill="#1A1A1A">13:30</text>
-<rect x="262.5" y="328" width="37.5" height="548" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
-<text x="280" y="626" transform="rotate(-90 280 626)" font-size="12" fill="#FFFFFF" font-weight="bold">Seminar</text>
-<rect x="300.0" y="328" width="112.5" height="548" fill="#BDD7EE" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="306" y="532" font-size="12" fill="#1A1A1A">P05 Harvest:</text>
-<text x="306" y="546" font-size="12" fill="#1A1A1A">supernatants</text>
-<text x="306" y="562" font-size="12" fill="#1A1A1A">to -20 in</text>
-<text x="306" y="576" font-size="12" fill="#1A1A1A">aliquots for</text>
-<text x="306" y="592" font-size="12" fill="#1A1A1A">the ELISA,</text>
-<text x="306" y="606" font-size="12" fill="#1A1A1A">cells for flow</text>
-<text x="306" y="622" font-size="12" fill="#1A1A1A">cytometry</text>
-<text x="306" y="636" font-size="12" fill="#1A1A1A">(P08). Hood</text>
-<text x="306" y="652" font-size="12" fill="#1A1A1A">shifts: A+B</text>
-<text x="306" y="666" font-size="12" fill="#1A1A1A">09:00, C+D</text>
-<text x="306" y="682" font-size="12" fill="#1A1A1A">09:30</text>
-<rect x="412.5" y="328" width="37.5" height="548" fill="#EDEDED" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="430" y="619" transform="rotate(-90 430 619)" font-size="12" fill="#5A5A5A">Lunch</text>
-<rect x="450.0" y="328" width="37.5" height="548" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
-<text x="468" y="626" transform="rotate(-90 468 626)" font-size="12" fill="#FFFFFF" font-weight="bold">Lecture</text>
-<rect x="487.5" y="328" width="112.5" height="548" fill="#BDD7EE" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="494" y="494" font-size="12" fill="#1A1A1A">P08 Flow</text>
-<text x="494" y="509" font-size="12" fill="#1A1A1A">staining of</text>
-<text x="494" y="524" font-size="12" fill="#1A1A1A">the harvested</text>
-<text x="494" y="539" font-size="12" fill="#1A1A1A">cells, fix the</text>
-<text x="494" y="554" font-size="12" fill="#1A1A1A">stained cells</text>
-<text x="494" y="569" font-size="12" fill="#1A1A1A">(4 °C until</text>
-<text x="494" y="584" font-size="12" fill="#1A1A1A">acquisition).</text>
-<text x="494" y="599" font-size="12" fill="#1A1A1A">P06 Coat the</text>
-<text x="494" y="614" font-size="12" fill="#1A1A1A">ELISA plates</text>
-<text x="494" y="629" font-size="12" fill="#1A1A1A">with capture</text>
-<text x="494" y="644" font-size="12" fill="#1A1A1A">antibody,</text>
-<text x="494" y="659" font-size="12" fill="#1A1A1A">overnight at 4</text>
-<text x="494" y="674" font-size="12" fill="#1A1A1A">°C [TODO:</text>
-<text x="494" y="689" font-size="12" fill="#1A1A1A">check the</text>
-<text x="494" y="704" font-size="12" fill="#1A1A1A">ELISA</text>
-<text x="494" y="719" font-size="12" fill="#1A1A1A">protocol]</text>
-<rect x="600.0" y="328" width="37.5" height="548" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
-<text x="618" y="642" transform="rotate(-90 618 642)" font-size="12" fill="#FFFFFF" font-weight="bold">Journal club</text>
-<rect x="637.5" y="328" width="75.0" height="268" fill="#8B1E3F" stroke="#1A1A1A" stroke-width="2"/>
-<text x="656" y="509" transform="rotate(-90 656 509)" font-size="12" fill="#FFFFFF" font-weight="bold">P08 Acquire at</text>
-<text x="670" y="509" transform="rotate(-90 670 509)" font-size="12" fill="#FFFFFF" font-weight="bold">the facility</text>
-<text x="686" y="509" transform="rotate(-90 686 509)" font-size="12" fill="#FFFFFF" font-weight="bold">(cytometer</text>
-<text x="700" y="509" transform="rotate(-90 700 509)" font-size="12" fill="#FFFFFF" font-weight="bold">slot)</text>
-<rect x="712.5" y="328" width="37.5" height="548" fill="#EDEDED" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="730" y="619" transform="rotate(-90 730 619)" font-size="12" fill="#5A5A5A">Lunch</text>
-<rect x="750.0" y="328" width="112.5" height="268" fill="#BDD7EE" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="756" y="346" font-size="12" fill="#1A1A1A">P06 ELISA IL-6</text>
-<text x="756" y="362" font-size="12" fill="#1A1A1A">and TNF on the</text>
-<text x="756" y="376" font-size="12" fill="#1A1A1A">supernatants:</text>
-<text x="756" y="392" font-size="12" fill="#1A1A1A">blocking,</text>
-<text x="756" y="406" font-size="12" fill="#1A1A1A">samples,</text>
-<text x="756" y="422" font-size="12" fill="#1A1A1A">detection</text>
-<text x="756" y="436" font-size="12" fill="#1A1A1A">[TODO: timing</text>
-<text x="756" y="452" font-size="12" fill="#1A1A1A">against the</text>
-<text x="756" y="466" font-size="12" fill="#1A1A1A">protocol].</text>
-<text x="756" y="482" font-size="12" fill="#1A1A1A">During</text>
-<text x="756" y="496" font-size="12" fill="#1A1A1A">incubations:</text>
-<text x="756" y="512" font-size="12" fill="#1A1A1A">scRNA-seq part</text>
-<text x="756" y="526" font-size="12" fill="#1A1A1A">2, derive the</text>
-<text x="756" y="542" font-size="12" fill="#1A1A1A">signatures</text>
-<text x="756" y="556" font-size="12" fill="#1A1A1A">from the bulk</text>
-<text x="756" y="572" font-size="12" fill="#1A1A1A">RAW 264.7</text>
-<text x="756" y="586" font-size="12" fill="#1A1A1A">dataset</text>
-<rect x="862.5" y="328" width="37.5" height="548" fill="#BDD7EE" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="878" y="734" transform="rotate(-90 878 734)" font-size="10" fill="#1A1A1A">ELISA: finish the detection steps or set the o…</text>
-<rect x="900.0" y="328" width="112.5" height="548" fill="#FFE699" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="906" y="554" font-size="12" fill="#1A1A1A">FlowJo</text>
-<text x="906" y="569" font-size="12" fill="#1A1A1A">session:</text>
-<text x="906" y="584" font-size="12" fill="#1A1A1A">gating of your</text>
-<text x="906" y="599" font-size="12" fill="#1A1A1A">own data,</text>
-<text x="906" y="614" font-size="12" fill="#1A1A1A">export</text>
-<text x="906" y="629" font-size="12" fill="#1A1A1A">statistics</text>
-<text x="906" y="644" font-size="12" fill="#1A1A1A">(with the</text>
-<text x="906" y="659" font-size="12" fill="#1A1A1A">facility, tbd)</text>
-<rect x="1012.5" y="328" width="37.5" height="548" fill="#EDEDED" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="1030" y="619" transform="rotate(-90 1030 619)" font-size="12" fill="#5A5A5A">Lunch</text>
-<rect x="1050.0" y="328" width="112.5" height="548" fill="#FFE699" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="1056" y="509" font-size="12" fill="#1A1A1A">ELISA</text>
-<text x="1056" y="524" font-size="12" fill="#1A1A1A">analysis:</text>
-<text x="1056" y="539" font-size="12" fill="#1A1A1A">plate read if</text>
-<text x="1056" y="554" font-size="12" fill="#1A1A1A">outstanding,</text>
-<text x="1056" y="569" font-size="12" fill="#1A1A1A">standard</text>
-<text x="1056" y="584" font-size="12" fill="#1A1A1A">curve,</text>
-<text x="1056" y="599" font-size="12" fill="#1A1A1A">concentrations.</text>
-<text x="1056" y="614" font-size="12" fill="#1A1A1A">Flow</text>
-<text x="1056" y="629" font-size="12" fill="#1A1A1A">statistics in</text>
-<text x="1056" y="644" font-size="12" fill="#1A1A1A">R. scRNA-seq</text>
-<text x="1056" y="659" font-size="12" fill="#1A1A1A">part 2</text>
-<text x="1056" y="674" font-size="12" fill="#1A1A1A">continued.</text>
-<text x="1056" y="689" font-size="12" fill="#1A1A1A">Poster:</text>
-<text x="1056" y="704" font-size="12" fill="#1A1A1A">results so far</text>
-<rect x="1162.5" y="328" width="37.5" height="548" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
-<text x="1180" y="626" transform="rotate(-90 1180 626)" font-size="12" fill="#FFFFFF" font-weight="bold">Debrief</text>
-<rect x="0.0" y="462" width="150.0" height="134" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="6" y="480" font-size="12" fill="#1A1A1A" font-weight="bold">Group B</text>
-<text x="6" y="495" font-size="12" fill="#1A1A1A" font-weight="bold">supervisors: ______</text>
-<text x="6" y="510" font-size="12" fill="#1A1A1A" font-weight="bold">/ ______</text>
-<rect x="0.0" y="596" width="150.0" height="140" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="6" y="614" font-size="12" fill="#1A1A1A" font-weight="bold">Group C</text>
-<text x="6" y="629" font-size="12" fill="#1A1A1A" font-weight="bold">supervisors: ______</text>
-<text x="6" y="644" font-size="12" fill="#1A1A1A" font-weight="bold">/ ______</text>
-<rect x="637.5" y="596" width="75.0" height="280" fill="#BDD7EE" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="654" y="868" transform="rotate(-90 654 868)" font-size="10" fill="#1A1A1A">P06 ELISA IL-6 and TNF on the supernatants: bl…</text>
-<text x="666" y="868" transform="rotate(-90 666 868)" font-size="10" fill="#1A1A1A">samples, detection [TODO: timing against the</text>
-<text x="680" y="868" transform="rotate(-90 680 868)" font-size="10" fill="#1A1A1A">protocol]. During incubations: scRNA-seq part …</text>
-<text x="692" y="868" transform="rotate(-90 692 868)" font-size="10" fill="#1A1A1A">derive the signatures from the bulk RAW 264.7 …</text>
-<rect x="750.0" y="596" width="112.5" height="280" fill="#8B1E3F" stroke="#1A1A1A" stroke-width="2"/>
-<text x="756" y="696" font-size="12" fill="#FFFFFF" font-weight="bold">P08 Acquire at</text>
-<text x="756" y="710" font-size="12" fill="#FFFFFF" font-weight="bold">the facility</text>
-<text x="756" y="726" font-size="12" fill="#FFFFFF" font-weight="bold">(cytometer</text>
-<text x="756" y="740" font-size="12" fill="#FFFFFF" font-weight="bold">slot), then</text>
-<text x="756" y="756" font-size="12" fill="#FFFFFF" font-weight="bold">ELISA</text>
-<text x="756" y="770" font-size="12" fill="#FFFFFF" font-weight="bold">detection</text>
-<text x="756" y="786" font-size="12" fill="#FFFFFF" font-weight="bold">steps</text>
-<rect x="0.0" y="736" width="150.0" height="140" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="6" y="754" font-size="12" fill="#1A1A1A" font-weight="bold">Group D</text>
-<text x="6" y="769" font-size="12" fill="#1A1A1A" font-weight="bold">supervisors: ______</text>
-<text x="6" y="784" font-size="12" fill="#1A1A1A" font-weight="bold">/ ______</text>
-<rect x="0.0" y="876" width="150.0" height="192" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="6" y="894" font-size="12" fill="#1A1A1A" font-weight="bold">Staff (shared)</text>
-<text x="6" y="909" font-size="12" fill="#1A1A1A" font-weight="bold">prep and supervision</text>
-<rect x="150.0" y="876" width="150.0" height="192" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="156" y="894" font-size="12" fill="#1A1A1A">Staff culture split</text>
-<text x="156" y="909" font-size="12" fill="#1A1A1A">Fri 2 Apr, counted</text>
-<text x="156" y="924" font-size="12" fill="#1A1A1A">at 12:30: enough</text>
-<text x="156" y="939" font-size="12" fill="#1A1A1A">cells to plate four</text>
-<text x="156" y="954" font-size="12" fill="#1A1A1A">groups. Plate maps</text>
-<text x="156" y="969" font-size="12" fill="#1A1A1A">checked before</text>
-<text x="156" y="984" font-size="12" fill="#1A1A1A">anyone pipettes. LPS</text>
-<text x="156" y="999" font-size="12" fill="#1A1A1A">aliquots at working</text>
-<text x="156" y="1014" font-size="12" fill="#1A1A1A">concentration.</text>
-<text x="156" y="1029" font-size="12" fill="#1A1A1A">Supervisor at the</text>
-<text x="156" y="1044" font-size="12" fill="#1A1A1A">hood for the</text>
-<text x="156" y="1059" font-size="12" fill="#1A1A1A">re-thaw.</text>
-<rect x="300.0" y="876" width="300.0" height="192" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="306" y="894" font-size="12" fill="#1A1A1A">Tubes labelled, -20 space for</text>
-<text x="306" y="909" font-size="12" fill="#1A1A1A">supernatants. Antibody panel, viability</text>
-<text x="306" y="924" font-size="12" fill="#1A1A1A">dye, fixation buffer. ELISA plates and</text>
-<text x="306" y="939" font-size="12" fill="#1A1A1A">capture antibody.</text>
-<rect x="600.0" y="876" width="300.0" height="192" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="606" y="894" font-size="12" fill="#1A1A1A">Escort the groups to the facility. ELISA</text>
-<text x="606" y="909" font-size="12" fill="#1A1A1A">reagents, plate reader booked.</text>
-<rect x="900.0" y="876" width="300.0" height="192" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="906" y="894" font-size="12" fill="#1A1A1A">FlowJo seats [TODO]. Plate reader. Staff</text>
-<text x="906" y="909" font-size="12" fill="#1A1A1A">culture kept for groups that need the</text>
-<text x="906" y="924" font-size="12" fill="#1A1A1A">rescue path (see Notes).</text>
-<rect x="0.0" y="1068" width="150.0" height="87" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="6" y="1086" font-size="12" fill="#1A1A1A" font-weight="bold">Resources</text>
-<text x="6" y="1101" font-size="12" fill="#1A1A1A" font-weight="bold">(hand-written</text>
-<text x="6" y="1116" font-size="12" fill="#1A1A1A" font-weight="bold">capacity)</text>
-<rect x="150.0" y="1068" width="150.0" height="87" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="156" y="1086" font-size="12" fill="#1A1A1A">Hoods: all four</text>
-<text x="156" y="1101" font-size="12" fill="#1A1A1A">groups in two</text>
-<text x="156" y="1116" font-size="12" fill="#1A1A1A">shifts. Plate</text>
-<text x="156" y="1131" font-size="12" fill="#1A1A1A">centrifuge.</text>
-<text x="156" y="1146" font-size="12" fill="#1A1A1A">Incubator shelves.</text>
-<rect x="300.0" y="1068" width="300.0" height="87" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="306" y="1086" font-size="12" fill="#1A1A1A">Hoods. Cooled centrifuge. Fridge for the</text>
-<text x="306" y="1101" font-size="12" fill="#1A1A1A">fixed cells and the coated plates.</text>
-<rect x="600.0" y="1068" width="300.0" height="87" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="606" y="1086" font-size="12" fill="#1A1A1A">Cytometer: 2 slots of 2 h [TODO:</text>
-<text x="606" y="1101" font-size="12" fill="#1A1A1A">facility]. Plate reader (450 nm).</text>
-<rect x="900.0" y="1068" width="300.0" height="87" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="906" y="1086" font-size="12" fill="#1A1A1A">FlowJo seats [TODO]. Plate reader.</text>
-<text x="906" y="1101" font-size="12" fill="#1A1A1A">Computer room / laptops.</text>
-<rect x="0.0" y="1155" width="150.0" height="72" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="6" y="1173" font-size="12" fill="#1A1A1A" font-weight="bold">Notes</text>
-<rect x="150.0" y="1155" width="1050.0" height="72" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="156" y="1173" font-size="12" fill="#1A1A1A">Core readouts of Exp 2: flow cytometry and ELISA. One overnight LPS challenge (about 18 h, Tuesday 15:00 to Wednesday 09:00); record the real time.</text>
-<text x="156" y="1188" font-size="12" fill="#1A1A1A">Adhesion in 2 h after a spin is to be confirmed before the course [TODO]. ELISA timing is to be checked against the protocol: the capture antibody coats</text>
-<text x="156" y="1203" font-size="12" fill="#1A1A1A">overnight Wed to Thu; blocking or sample incubation may run during the cytometer slot or overnight [TODO]. The definitive cytometer slots need the</text>
-<text x="156" y="1218" font-size="12" fill="#1A1A1A">facility. Goal: all data by Thursday evening, Friday for analysis. Polarization (P04) and Griess (P07) are extensions.</text>
-<text x="4" y="1251" font-size="12" font-weight="bold" fill="#1A1A1A">Legend</text>
-<rect x="4" y="1259" width="26" height="13" fill="#1F4E5F" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="36" y="1270" font-size="11" fill="#1A1A1A">Plenary, lecture, debrief (fixed)</text>
-<rect x="604" y="1259" width="26" height="13" fill="#8B1E3F" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="636" y="1270" font-size="11" fill="#1A1A1A">Facility slot: cytometer, facility lecture (fixed, reserved)</text>
-<rect x="4" y="1277" width="26" height="13" fill="#C6E0B4" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="36" y="1288" font-size="11" fill="#1A1A1A">Wet lab Exp 1: establish the line (growth curve, freeze, re-thaw)</text>
-<rect x="604" y="1277" width="26" height="13" fill="#BDD7EE" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="636" y="1288" font-size="11" fill="#1A1A1A">Wet lab Exp 2: challenge, read out (flow cytometry, ELISA)</text>
-<rect x="4" y="1295" width="26" height="13" fill="#FFE699" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="36" y="1306" font-size="11" fill="#1A1A1A">Dry lab and desk work: setup, analysis, planning</text>
-<rect x="604" y="1295" width="26" height="13" fill="#D9C3E9" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="636" y="1306" font-size="11" fill="#1A1A1A">Poster and writing: introduction, significance, figures</text>
-<rect x="4" y="1313" width="26" height="13" fill="#F8CBAD" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="36" y="1324" font-size="11" fill="#1A1A1A">Extension / nerd factor (group&#x27;s choice)</text>
-<rect x="604" y="1313" width="26" height="13" fill="#EDEDED" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="636" y="1324" font-size="11" fill="#1A1A1A">Buffer / free</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 754" width="1200" height="754" font-family="Arial, Helvetica, sans-serif">
+<rect x="0" y="0" width="1200" height="754" fill="#ffffff"/>
+<rect x="0" y="0" width="84" height="26" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="6" y="18" font-size="12" fill="#1A1A1A" font-weight="bold">Time</text>
+<rect x="84.0" y="0" width="279.0" height="26" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="90" y="18" font-size="12" fill="#1A1A1A" font-weight="bold">Tue 6 Apr</text>
+<rect x="363.0" y="0" width="279.0" height="26" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="369" y="18" font-size="12" fill="#1A1A1A" font-weight="bold">Wed 7 Apr</text>
+<rect x="642.0" y="0" width="279.0" height="26" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="648" y="18" font-size="12" fill="#1A1A1A" font-weight="bold">Thu 8 Apr</text>
+<rect x="921.0" y="0" width="279.0" height="26" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="927" y="18" font-size="12" fill="#1A1A1A" font-weight="bold">Fri 9 Apr</text>
+<rect x="0" y="26" width="84" height="72" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="6" y="44" font-size="12" fill="#1A1A1A" font-weight="bold">09:00</text>
+<rect x="0" y="98" width="84" height="59" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="6" y="116" font-size="12" fill="#1A1A1A" font-weight="bold">10:00</text>
+<rect x="0" y="157" width="84" height="59" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="6" y="175" font-size="12" fill="#1A1A1A" font-weight="bold">11:00</text>
+<rect x="0" y="216" width="84" height="46" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="6" y="234" font-size="12" fill="#1A1A1A" font-weight="bold">12:00</text>
+<rect x="0" y="262" width="84" height="57" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="6" y="280" font-size="12" fill="#1A1A1A" font-weight="bold">13:00</text>
+<rect x="0" y="319" width="84" height="46" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="6" y="337" font-size="12" fill="#1A1A1A" font-weight="bold">14:00</text>
+<rect x="0" y="365" width="84" height="46" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="6" y="383" font-size="12" fill="#1A1A1A" font-weight="bold">15:00</text>
+<rect x="0" y="411" width="84" height="46" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="6" y="429" font-size="12" fill="#1A1A1A" font-weight="bold">16:00</text>
+<rect x="0" y="457" width="84" height="102" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="6" y="475" font-size="12" fill="#1A1A1A" font-weight="bold">Staff</text>
+<rect x="0" y="559" width="84" height="87" fill="#F2F2F2" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="6" y="577" font-size="12" fill="#1A1A1A" font-weight="bold">Resources</text>
+<rect x="84.0" y="26" width="279.0" height="190" fill="#EDEDED" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="90" y="126" font-size="12" fill="#5A5A5A">Your other lectures (not course time)</text>
+<rect x="363.0" y="26" width="279.0" height="190" fill="#BDD7EE" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="369" y="110" font-size="12" fill="#1A1A1A">P05 Harvest: supernatants to -20 in</text>
+<text x="369" y="126" font-size="12" fill="#1A1A1A">aliquots for the ELISA, cells for flow</text>
+<text x="369" y="140" font-size="12" fill="#1A1A1A">cytometry (P08).</text>
+<rect x="642.0" y="26" width="279.0" height="72" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
+<text x="648" y="44" font-size="12" fill="#FFFFFF" font-weight="bold">Journal club 2 (tbd): the</text>
+<text x="648" y="59" font-size="12" fill="#FFFFFF" font-weight="bold">peritoneal injury single-cell paper</text>
+<text x="648" y="74" font-size="12" fill="#FFFFFF" font-weight="bold">behind GSE186658 [TODO: paper]; one</text>
+<text x="648" y="89" font-size="12" fill="#FFFFFF" font-weight="bold">group presents, all read</text>
+<rect x="921.0" y="26" width="279.0" height="190" fill="#FFE699" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="927" y="110" font-size="12" fill="#1A1A1A">FlowJo session: gating of your own</text>
+<text x="927" y="126" font-size="12" fill="#1A1A1A">data, export statistics (with the</text>
+<text x="927" y="140" font-size="12" fill="#1A1A1A">facility, tbd)</text>
+<rect x="642.0" y="98" width="279.0" height="118" fill="#8B1E3F" stroke="#1A1A1A" stroke-width="2"/>
+<text x="648" y="116" font-size="12" fill="#FFFFFF" font-weight="bold">Cytometer slot, groups A+B: P08</text>
+<text x="648" y="132" font-size="12" fill="#FFFFFF" font-weight="bold">Acquire [TODO: facility</text>
+<text x="648" y="146" font-size="12" fill="#FFFFFF" font-weight="bold">reservation]. Groups C+D: P06</text>
+<text x="648" y="162" font-size="12" fill="#FFFFFF" font-weight="bold">ELISA, blocking and samples [TODO:</text>
+<text x="648" y="176" font-size="12" fill="#FFFFFF" font-weight="bold">timing against the protocol];</text>
+<text x="648" y="192" font-size="12" fill="#FFFFFF" font-weight="bold">scRNA-seq part 2 during the</text>
+<text x="648" y="206" font-size="12" fill="#FFFFFF" font-weight="bold">incubations</text>
+<rect x="84.0" y="216" width="279.0" height="46" fill="#EDEDED" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="90" y="234" font-size="12" fill="#5A5A5A">Lunch</text>
+<rect x="363.0" y="216" width="279.0" height="46" fill="#EDEDED" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="369" y="234" font-size="12" fill="#5A5A5A">Lunch</text>
+<rect x="642.0" y="216" width="279.0" height="46" fill="#EDEDED" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="648" y="234" font-size="12" fill="#5A5A5A">Lunch</text>
+<rect x="921.0" y="216" width="279.0" height="46" fill="#EDEDED" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="927" y="234" font-size="12" fill="#5A5A5A">Lunch</text>
+<rect x="84.0" y="262" width="279.0" height="149" fill="#BDD7EE" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="90" y="296" font-size="12" fill="#1A1A1A">P02 Plate cells from the staff culture,</text>
+<text x="90" y="311" font-size="12" fill="#1A1A1A">spin the plate down, 2 h to adhere</text>
+<text x="90" y="326" font-size="12" fill="#1A1A1A">[TODO: confirm before the course that</text>
+<text x="90" y="341" font-size="12" fill="#1A1A1A">RAW cells adhere in 2 h after a spin].</text>
+<text x="90" y="356" font-size="12" fill="#1A1A1A">Meanwhile P01 re-thaw your own vial</text>
+<text x="90" y="371" font-size="12" fill="#1A1A1A">(viability = Exp 1 readout). Then P05</text>
+<text x="90" y="386" font-size="12" fill="#1A1A1A">Challenge overnight with LPS.</text>
+<rect x="363.0" y="262" width="279.0" height="57" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
+<text x="369" y="280" font-size="12" fill="#FFFFFF" font-weight="bold">Lecture: single-cell</text>
+<text x="369" y="295" font-size="12" fill="#FFFFFF" font-weight="bold">transcriptomics for immunologists,</text>
+<text x="369" y="310" font-size="12" fill="#FFFFFF" font-weight="bold">what a signature score means (tbd)</text>
+<rect x="642.0" y="262" width="279.0" height="149" fill="#8B1E3F" stroke="#1A1A1A" stroke-width="2"/>
+<text x="648" y="296" font-size="12" fill="#FFFFFF" font-weight="bold">Cytometer slot, groups C+D: P08</text>
+<text x="648" y="311" font-size="12" fill="#FFFFFF" font-weight="bold">Acquire [TODO: facility</text>
+<text x="648" y="326" font-size="12" fill="#FFFFFF" font-weight="bold">reservation]. Groups A+B: P06</text>
+<text x="648" y="341" font-size="12" fill="#FFFFFF" font-weight="bold">ELISA, blocking and samples [TODO:</text>
+<text x="648" y="356" font-size="12" fill="#FFFFFF" font-weight="bold">timing against the protocol];</text>
+<text x="648" y="371" font-size="12" fill="#FFFFFF" font-weight="bold">scRNA-seq part 2 during the</text>
+<text x="648" y="386" font-size="12" fill="#FFFFFF" font-weight="bold">incubations</text>
+<rect x="921.0" y="262" width="279.0" height="149" fill="#FFE699" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="927" y="311" font-size="12" fill="#1A1A1A">ELISA analysis: plate read if</text>
+<text x="927" y="326" font-size="12" fill="#1A1A1A">outstanding, standard curve,</text>
+<text x="927" y="341" font-size="12" fill="#1A1A1A">concentrations. Flow statistics in R.</text>
+<text x="927" y="356" font-size="12" fill="#1A1A1A">scRNA-seq part 2 continued. Poster:</text>
+<text x="927" y="371" font-size="12" fill="#1A1A1A">results so far</text>
+<rect x="363.0" y="319" width="279.0" height="138" fill="#BDD7EE" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="369" y="355" font-size="12" fill="#1A1A1A">P08 Flow staining of the harvested</text>
+<text x="369" y="370" font-size="12" fill="#1A1A1A">cells, fix the stained cells (4 °C</text>
+<text x="369" y="385" font-size="12" fill="#1A1A1A">until acquisition). P06 Coat the ELISA</text>
+<text x="369" y="400" font-size="12" fill="#1A1A1A">plates with capture antibody, overnight</text>
+<text x="369" y="415" font-size="12" fill="#1A1A1A">at 4 °C [TODO: check the ELISA</text>
+<text x="369" y="430" font-size="12" fill="#1A1A1A">protocol]</text>
+<rect x="84.0" y="411" width="279.0" height="46" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
+<text x="90" y="429" font-size="12" fill="#FFFFFF" font-weight="bold">Cutting Edge Immunology Seminar</text>
+<text x="90" y="444" font-size="12" fill="#FFFFFF" font-weight="bold">16:30-17:30 (tbd)</text>
+<rect x="642.0" y="411" width="279.0" height="46" fill="#BDD7EE" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="648" y="429" font-size="12" fill="#1A1A1A">ELISA: finish the detection steps or</text>
+<text x="648" y="444" font-size="12" fill="#1A1A1A">set the overnight step [TODO: protocol]</text>
+<rect x="921.0" y="411" width="279.0" height="46" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
+<text x="927" y="429" font-size="12" fill="#FFFFFF" font-weight="bold">Debrief Exp 2: results, extension</text>
+<text x="927" y="444" font-size="12" fill="#FFFFFF" font-weight="bold">choices, rescue decisions</text>
+<rect x="84.0" y="457" width="279.0" height="102" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="90" y="475" font-size="12" fill="#1A1A1A">Staff culture split Fri 2 Apr, counted</text>
+<text x="90" y="490" font-size="12" fill="#1A1A1A">at 12:30: enough cells to plate four</text>
+<text x="90" y="505" font-size="12" fill="#1A1A1A">groups. Plate maps checked before</text>
+<text x="90" y="520" font-size="12" fill="#1A1A1A">anyone pipettes. LPS aliquots at</text>
+<text x="90" y="535" font-size="12" fill="#1A1A1A">working concentration. Supervisor at</text>
+<text x="90" y="550" font-size="12" fill="#1A1A1A">the hood for the re-thaw.</text>
+<rect x="363.0" y="457" width="279.0" height="102" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="369" y="475" font-size="12" fill="#1A1A1A">Tubes labelled, -20 space for</text>
+<text x="369" y="490" font-size="12" fill="#1A1A1A">supernatants. Antibody panel, viability</text>
+<text x="369" y="505" font-size="12" fill="#1A1A1A">dye, fixation buffer. ELISA plates and</text>
+<text x="369" y="520" font-size="12" fill="#1A1A1A">capture antibody.</text>
+<rect x="642.0" y="457" width="279.0" height="102" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="648" y="475" font-size="12" fill="#1A1A1A">Escort the groups to the facility.</text>
+<text x="648" y="490" font-size="12" fill="#1A1A1A">ELISA reagents, plate reader booked.</text>
+<rect x="921.0" y="457" width="279.0" height="102" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="927" y="475" font-size="12" fill="#1A1A1A">FlowJo seats [TODO]. Plate reader.</text>
+<text x="927" y="490" font-size="12" fill="#1A1A1A">Staff culture kept for groups that need</text>
+<text x="927" y="505" font-size="12" fill="#1A1A1A">the rescue path (a repeat of Exp 2 in</text>
+<text x="927" y="520" font-size="12" fill="#1A1A1A">week 4).</text>
+<rect x="84.0" y="559" width="279.0" height="87" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="90" y="577" font-size="12" fill="#1A1A1A">4 hoods HPL F27.2, one per group,</text>
+<text x="90" y="592" font-size="12" fill="#1A1A1A">available at all times. Plate</text>
+<text x="90" y="607" font-size="12" fill="#1A1A1A">centrifuge.</text>
+<rect x="363.0" y="559" width="279.0" height="87" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="369" y="577" font-size="12" fill="#1A1A1A">4 hoods HPL F27.2, one per group,</text>
+<text x="369" y="592" font-size="12" fill="#1A1A1A">available at all times. Cooled</text>
+<text x="369" y="607" font-size="12" fill="#1A1A1A">centrifuge. Fridge for the fixed cells</text>
+<text x="369" y="622" font-size="12" fill="#1A1A1A">and the coated plates. Conference room</text>
+<text x="369" y="637" font-size="12" fill="#1A1A1A">HPL F22 for lectures and dry lab.</text>
+<rect x="642.0" y="559" width="279.0" height="87" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="648" y="577" font-size="12" fill="#1A1A1A">Cytometer: 2 slots of 2 h [TODO:</text>
+<text x="648" y="592" font-size="12" fill="#1A1A1A">facility]. Plate reader (450 nm). 4</text>
+<text x="648" y="607" font-size="12" fill="#1A1A1A">hoods HPL F27.2, one per group,</text>
+<text x="648" y="622" font-size="12" fill="#1A1A1A">available at all times. Conference room</text>
+<text x="648" y="637" font-size="12" fill="#1A1A1A">HPL F22 for lectures and dry lab.</text>
+<rect x="921.0" y="559" width="279.0" height="87" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="927" y="577" font-size="12" fill="#1A1A1A">Conference room HPL F22 for lectures</text>
+<text x="927" y="592" font-size="12" fill="#1A1A1A">and dry lab. FlowJo seats [TODO]. Plate</text>
+<text x="927" y="607" font-size="12" fill="#1A1A1A">reader. 4 hoods HPL F27.2, one per</text>
+<text x="927" y="622" font-size="12" fill="#1A1A1A">group, available at all times.</text>
+<text x="4" y="670" font-size="12" font-weight="bold" fill="#1A1A1A">Legend</text>
+<rect x="4" y="678" width="26" height="13" fill="#1F4E5F" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="36" y="689" font-size="11" fill="#1A1A1A">Plenary, lecture, debrief (fixed)</text>
+<rect x="604" y="678" width="26" height="13" fill="#8B1E3F" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="636" y="689" font-size="11" fill="#1A1A1A">Facility slot: cytometer, facility lecture (fixed, reserved)</text>
+<rect x="4" y="696" width="26" height="13" fill="#C6E0B4" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="36" y="707" font-size="11" fill="#1A1A1A">Wet lab Exp 1: establish the line (growth curve, freeze, re-thaw)</text>
+<rect x="604" y="696" width="26" height="13" fill="#BDD7EE" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="636" y="707" font-size="11" fill="#1A1A1A">Wet lab Exp 2: challenge, read out (flow cytometry, ELISA)</text>
+<rect x="4" y="714" width="26" height="13" fill="#FFE699" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="36" y="725" font-size="11" fill="#1A1A1A">Dry lab and desk work: setup, analysis, planning</text>
+<rect x="604" y="714" width="26" height="13" fill="#D9C3E9" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="636" y="725" font-size="11" fill="#1A1A1A">Poster and writing: introduction, significance, figures</text>
+<rect x="4" y="732" width="26" height="13" fill="#F8CBAD" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="36" y="743" font-size="11" fill="#1A1A1A">Extension / nerd factor (group&#x27;s choice)</text>
+<rect x="604" y="732" width="26" height="13" fill="#EDEDED" stroke="#BFBFBF" stroke-width="0.8"/>
+<text x="636" y="743" font-size="11" fill="#1A1A1A">Buffer / free</text>
 </svg>
