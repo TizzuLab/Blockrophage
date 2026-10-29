@@ -1,7 +1,5 @@
 # ELISA: standard curve and back-calculation of the samples.
 #
-# Open in RStudio and press Source. Paths are built with here() from the repository
-# folder.
 #
 # Input: one row per well with the columns
 #   well, type ("standard" or "sample"), condition, standard_pg_ml (standards only),
@@ -18,7 +16,7 @@ library(patchwork)
 library(here)
 
 # input
-# replace csv file name with your data
+# replace csv file name with your data (path)
 input <- here("code", "elisa", "example_data", "il6_lps_raw264_2026-09.csv")
 
 # output
@@ -27,7 +25,9 @@ dir.create(outdir, showWarnings = FALSE)
 
 plate <- read.csv(input)
 
-# 1. Blank: mean OD of the 0 pg/mL standard wells, subtracted from every well.
+# 1. Blank: mean OD of the 0 pg/mL standard wells is subtracted from every well.
+# change if you have other/additional blanks
+
 blank <- mean(plate$od450[plate$type == "standard" & plate$standard_pg_ml == 0])
 plate$od_corr <- plate$od450 - blank
 std <- plate[plate$type == "standard", ]
@@ -52,8 +52,7 @@ od_to_conc <- function(od) {
 }
 
 # Questions:
-# - How do you check that the curve fits the standards well? (R² is not a good
-#   measure for a non-linear fit.)
+# - How do you check that the curve fits the standards well?
 # - How would you compare two models to decide which one fits better?
 # - Can you think of another approach than a 4PL model? (Hint: log-log.)
 
