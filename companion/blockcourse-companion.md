@@ -88,8 +88,13 @@ and the analysis code.
   - `code/README.md`
 - Code: R scripts
   - `code/elisa/elisa_standard_curve.R`
+  - `code/scrnaseq/01_load_and_qc.R`
+  - `code/scrnaseq/02_cluster.R`
+  - `code/setup/install.R`
 - Code: folder notes
   - `code/elisa/README.md`
+  - `code/scrnaseq/README.md`
+  - `code/setup/README.md`
 
 # Index (llms.txt)
 
@@ -390,8 +395,10 @@ and then, in Seurat, to score every macrophage of two single-cell datasets from
 living systems against them: injured mouse peritoneum (GSE186658) and homeostatic
 human peritoneal fluid (GSE228030). The question is descriptive: do tissue
 macrophages fall into the two states, onto a line between them, or somewhere the
-two axes do not reach? These three are the recommended datasets; the two single-cell
-datasets are preprocessed by the teaching staff, so nobody starts from raw reads. A
+two axes do not reach? These three are the recommended datasets. The mouse single-cell
+data run from the GEO count matrices on your laptop in about a minute and a half,
+with the scripts in [`code/scrnaseq`](code/scrnaseq/README.md); nobody starts from
+raw reads `[TODO: the same route for the human dataset]`. A
 group that wants to deviate and pull other public datasets is encouraged to do so,
 together with its supervisor. The code for this experiment is being worked out, and
 this description will be updated when it exists. What the picture means is something
@@ -434,8 +441,8 @@ apéro.
 
 **Dry lab, around the bench.** Every full day opens with a self-study hour, and the
 dry-lab slots sit around the bench work, with the [analysis code](code/README.md):
-week 1 the environment, week 2 scRNA-seq part 1 (Experiment 2) on the preprocessed
-object and your own flow data in FlowJo, week 3 part 2 during the challenge and the
+week 1 the environment, week 2 scRNA-seq part 1 (Experiment 2) from the GEO
+matrices and your own flow data in FlowJo, week 3 part 2 during the challenge and the
 ELISA incubations and your ELISA data on Friday, week 4 part 3 and the figures. Gaps
 are filled with the poster: the introduction is written first, then the
 significance.
@@ -455,7 +462,6 @@ non-exhaustive.
 
 | Experiment or extension | What it adds to the story |
 |---|---|
-| Pipeline from raw matrices | QC figure from the GEO matrices, not the preprocessed object; commit hash |
 | Macrophages annotated | UMAP with Gata6+, Folr2+ Selenop+ and Trem2+ Spp1+ labelled, marker dot plot, cell counts |
 | Integration with an in vitro single-cell dataset | Integrated embedding with the accession named; percentage of in vivo macrophages mapping to any in vitro state |
 | Unpredicted figure, dataset or code | A figure or table not in the answer key, with claim, n and method |
@@ -5525,9 +5531,9 @@ the course may redistribute the template in this public repository]`.
 
 > **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/Blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
-Analysis templates for the course. Every template is R unless stated, pinned with
-`renv` `[TODO: lockfile]`. You build the environment on the first day with your
-AI tool; a prebuilt fallback exists `[TODO: where]`.
+Analysis templates for the course. Every template is R. The packages are installed
+once on the first Friday with [`setup/install.R`](setup/README.md): a fixed list
+from a dated package snapshot, ready-built for Windows, macOS and Linux.
 
 The rule for all of it: run the code and look at the object, not at the AI tool's
 description of the object.
@@ -5538,7 +5544,7 @@ description of the object.
 | `griess/` | Linear nitrite standard, concentration table, plots | plate-reader export, plate map | `griess_results.csv`, figures |
 | `flow/` | Reads the population statistics exported from FlowJo and plots them. Gating is done in FlowJo, not in R | FlowJo CSV export | figures |
 | `growth_curve/` | Optional (extension, X05): doubling time from counts, with the published value as a reference line | counts table | figure, doubling time |
-| `scrnaseq/` | The in silico arm, three parts (below) | preprocessed objects shipped by the staff | figures |
+| `scrnaseq/` | The in silico arm, three parts (below). Parts 1a and 1b written; run from GEO in about 1.5 min | GEO matrices, downloaded by the script | figures, Seurat objects |
 | `qpcr/` | ΔΔCt for the X01 extension | Ct export | figures |
 
 `[TODO: write the remaining templates; each folder gets a README, an `example_data/`
@@ -5547,22 +5553,24 @@ model.]`
 
 ### The in silico arm, `scrnaseq/`
 
-The teaching staff preprocess two datasets and ship small objects, so nobody starts
-from raw reads:
+Two datasets; nobody starts from raw reads:
 
-- `GSE186658`: single-cell RNA-seq of mouse peritoneal injury sites, two conditions,
-  two mice each (Zindel et al. 2021, Nat Commun). Shipped as a Seurat object with
-  quality control, normalisation, clustering and a coarse cell-type annotation
-  already done; the macrophage subclusters are **not** annotated.
+- `GSE186658`: single-cell RNA-seq of mouse peritoneal injury sites, sterile or
+  contaminated (CLP), two mice each (Zindel et al. 2021, Nat Commun). The scripts
+  download the filtered count matrices from GEO and run quality control,
+  normalisation, clustering and the macrophage markers themselves, on a laptop, in
+  about a minute and a half ([`scrnaseq/`](scrnaseq/README.md)); the macrophage
+  subclusters are **not** annotated.
 - `GSE113836`: bulk RNA-seq of RAW 264.7 and bone marrow macrophages stimulated with
   LPS plus IFNγ or with IL-4 `[TODO: verify contents, replicates and raw counts]`.
   Shipped as a count matrix with a sample sheet.
 
 Three parts, matched to the dry-lab halves of weeks 2 and 3:
 
-1. **Load and look** (week 2). Open the single-cell object, reproduce the QC figure
-   (cells per sample before and after filtering), find the macrophages by `Adgre1`,
-   `Cd68`, `Csf1r`, `Fcgr1` and `Mertk`.
+1. **Load and look** (week 2). Download and load the data, make the QC figure
+   (cells per sample before and after filtering), cluster, and find the macrophages
+   by `Adgre1`, `Cd68`, `Csf1r`, `Fcgr1` and `Mertk` (`01_load_and_qc.R`,
+   `02_cluster.R`).
 2. **Derive the signatures** (week 3). Differential expression in the bulk data,
    M(IFNγ+LPS) versus M(-) and M(IL-4) versus M(-), in RAW 264.7 cells; take the top
    genes by a stated rule; compare with the Murray et al. 2014 table and with the
@@ -5756,6 +5764,172 @@ cat(sprintf("\nWrote %s, %s and %s\n", file.path(outdir, "elisa_results.csv"), f
 
 ---
 
+<!-- file: code/scrnaseq/01_load_and_qc.R -->
+
+```r
+#!/usr/bin/env Rscript
+# Part 1a: download, load and quality-control the single-cell data.
+#
+# Usage (from this folder, or Source in RStudio with this folder as working directory):
+#   Rscript 01_load_and_qc.R
+#
+# Data: GSE186658 (Zindel et al. 2021, Nat Commun), mouse peritoneal injury sites
+# ("buttons") 24 h after surgery, sterile (B24h) or with microbial contamination by
+# cecal ligation and puncture (BCLP24h), two mice each, 10x Genomics. GEO holds the
+# filtered count matrices, 110 MB; they are downloaded once into data/.
+#
+# Output: output/qc_violins.png, output/qc_cells_per_sample.csv,
+#         output/after_qc.rds (the filtered object for 02_cluster.R)
+
+suppressPackageStartupMessages({
+  library(Seurat)
+  library(ggplot2)
+})
+
+dir.create("data", showWarnings = FALSE)
+dir.create("output", showWarnings = FALSE)
+
+# 1. Download once and check that the file is complete.
+tar_file <- "data/GSE186658_RAW.tar"
+url <- "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE186nnn/GSE186658/suppl/GSE186658_RAW.tar"
+if (!file.exists(tar_file)) {
+  options(timeout = 600)
+  download.file(url, tar_file, mode = "wb")
+}
+stopifnot(tools::md5sum(tar_file) == "f63ee50eaeccb04c07502c55d8d49a31")
+if (length(list.files("data", pattern = "matrix.mtx.gz$")) < 4) {
+  untar(tar_file, exdir = "data", tar = "internal")
+}
+
+# 2. One Seurat object per sample, then merged into one.
+samples <- c("GSM5658643_B24h1", "GSM5658644_B24h2",
+             "GSM5658645_BCLP24h1", "GSM5658646_BCLP24h2")
+objects <- lapply(samples, function(s) {
+  counts <- ReadMtx(mtx      = file.path("data", paste0(s, "_matrix.mtx.gz")),
+                    cells    = file.path("data", paste0(s, "_barcodes.tsv.gz")),
+                    features = file.path("data", paste0(s, "_features.tsv.gz")))
+  CreateSeuratObject(counts, project = sub("^GSM[0-9]+_", "", s), min.cells = 3)
+})
+cells <- merge(objects[[1]], objects[-1], add.cell.ids = sub("^GSM[0-9]+_", "", samples))
+cells <- JoinLayers(cells)
+cells$sample <- cells$orig.ident
+cells$condition <- ifelse(grepl("CLP", cells$sample), "contaminated (CLP)", "sterile")
+
+# 3. Quality metrics: genes and molecules per cell, and the share of mitochondrial
+# reads (high in dying cells).
+cells[["percent_mt"]] <- PercentageFeatureSet(cells, pattern = "^mt-")
+
+p <- VlnPlot(cells, features = c("nFeature_RNA", "nCount_RNA", "percent_mt"),
+             group.by = "sample", pt.size = 0, ncol = 3)
+ggsave("output/qc_violins.png", p, width = 12, height = 4.5)
+
+# 4. Filter. Look at qc_violins.png first: these thresholds are a starting point,
+# and the choice goes into your notebook with the reason.
+min_genes <- 200
+max_genes <- 6000
+max_mt <- 10
+before <- table(cells$sample)
+cells <- subset(cells, nFeature_RNA > min_genes & nFeature_RNA < max_genes & percent_mt < max_mt)
+after <- table(cells$sample)
+
+qc <- data.frame(sample = names(before), before = as.vector(before), after = as.vector(after[names(before)]))
+write.csv(qc, "output/qc_cells_per_sample.csv", row.names = FALSE)
+print(qc)
+
+saveRDS(cells, "output/after_qc.rds")
+cat("Kept", ncol(cells), "cells. Next: 02_cluster.R\n")
+```
+
+---
+
+<!-- file: code/scrnaseq/02_cluster.R -->
+
+```r
+#!/usr/bin/env Rscript
+# Part 1b: normalise, cluster, and find the macrophages.
+#
+# Usage (from this folder): Rscript 02_cluster.R
+# Input:  output/after_qc.rds from 01_load_and_qc.R
+# Output: output/umap_clusters.png, output/umap_condition.png,
+#         output/macrophage_markers.png, output/clustered.rds
+
+suppressPackageStartupMessages({
+  library(Seurat)
+  library(ggplot2)
+  library(patchwork)
+})
+
+cells <- readRDS("output/after_qc.rds")
+
+# 1. The standard Seurat steps. Each one is a choice; the defaults are stated.
+cells <- NormalizeData(cells)                          # counts per cell scaled to 10,000, log
+cells <- FindVariableFeatures(cells, nfeatures = 2000) # the 2,000 most variable genes
+cells <- ScaleData(cells)                              # each gene centred and scaled
+cells <- RunPCA(cells, npcs = 30)
+dims <- 1:20                                           # check ElbowPlot(cells) and say why
+cells <- FindNeighbors(cells, dims = dims)
+cells <- FindClusters(cells, resolution = 0.5)        # higher resolution, more clusters
+cells <- RunUMAP(cells, dims = dims)
+
+ggsave("output/umap_clusters.png",
+       DimPlot(cells, label = TRUE) + NoLegend(), width = 6, height = 5.5)
+ggsave("output/umap_condition.png",
+       DimPlot(cells, group.by = "condition"), width = 7, height = 5.5)
+
+# 2. Where are the macrophages? Five markers that together mark them in the mouse.
+markers <- c("Adgre1", "Cd68", "Csf1r", "Fcgr1", "Mertk")
+p <- FeaturePlot(cells, features = markers, ncol = 3) /
+  DotPlot(cells, features = markers) + RotatedAxis()
+ggsave("output/macrophage_markers.png", p, width = 12, height = 12)
+
+saveRDS(cells, "output/clustered.rds")
+cat("Clusters:", nlevels(cells$seurat_clusters),
+    ". Decide which clusters are macrophages from macrophage_markers.png.\n")
+```
+
+---
+
+<!-- file: code/setup/install.R -->
+
+```r
+# Install the R packages for the course, once, on the first Friday.
+# Run in RStudio: open this file and press Source, or in the console:
+#   source("code/setup/install.R")
+#
+# Packages come from a dated snapshot of the Posit Package Manager, so everyone
+# gets the same versions, as ready-built binaries for Windows, macOS and Linux
+# (nothing is compiled on your laptop). Change the date only between course years.
+
+snapshot <- "2026-10-01"
+
+repo <- paste0("https://packagemanager.posit.co/cran/", snapshot)
+if (Sys.info()[["sysname"]] == "Linux") {
+  codename <- system("lsb_release -cs", intern = TRUE)  # e.g. noble
+  repo <- paste0("https://packagemanager.posit.co/cran/__linux__/", codename, "/", snapshot)
+  # Linux binaries are only served when R names its version and platform.
+  options(HTTPUserAgent = sprintf("R/%s R (%s)", getRversion(),
+    paste(getRversion(), R.version$platform, R.version$arch, R.version$os)))
+}
+options(repos = c(CRAN = repo))
+
+packages <- c(
+  "Seurat",     # single-cell analysis (in silico arm)
+  "ggplot2",    # figures
+  "dplyr",      # tables
+  "readr",      # reading CSV files
+  "patchwork"   # putting figures side by side
+)
+
+install.packages(packages)
+
+# Check: every package loads, and print the versions for your notebook.
+for (p in packages) library(p, character.only = TRUE)
+cat("\nAll packages loaded. R", R.version$major, ".", R.version$minor, "\n", sep = "")
+print(sapply(packages, function(p) as.character(packageVersion(p))))
+```
+
+---
+
 # Code: folder notes
 
 <!-- file: code/elisa/README.md -->
@@ -5797,5 +5971,62 @@ plate also carried an osteopontin co-stimulation arm, which is not included.
 
 The `output/` folder is not tracked; the figure for the protocol page is copied to
 `protocols/figures/`.
+
+---
+
+<!-- file: code/scrnaseq/README.md -->
+
+## Single-cell RNA-seq: the in silico arm
+
+Run from this folder, in order. Each script reads the output of the one before.
+
+```
+Rscript 01_load_and_qc.R   # download from GEO, load, QC, filter   (~35 s)
+Rscript 02_cluster.R       # normalise, PCA, clusters, UMAP, macrophage markers   (~50 s)
+```
+
+Needs the packages from [`code/setup`](../setup/README.md). Times and memory
+(peak about 3.5 GB) measured on a laptop-class machine.
+
+### Data
+
+GSE186658 (Zindel et al. 2021, Nat Commun): mouse peritoneal injury sites
+("buttons") 24 h after surgery, sterile (`B24h1`, `B24h2`) or with microbial
+contamination by cecal ligation and puncture (`BCLP24h1`, `BCLP24h2`), female
+C57BL/6, 10x Genomics. GEO holds the filtered count matrices (110 MB, 13,657 cells);
+`01_load_and_qc.R` downloads them once into `data/` and checks the MD5 sum.
+`data/` and `output/` are not tracked by git.
+
+### What you decide, and write into your notebook
+
+- QC thresholds (`01`): look at `output/qc_violins.png` first. The defaults
+  (200 to 6,000 genes, less than 10% mitochondrial reads) keep 11,730 cells.
+- Number of principal components and the clustering resolution (`02`): check
+  `ElbowPlot(cells)`; the defaults (20 PCs, resolution 0.5) give 14 clusters.
+- Which clusters are macrophages (`02`): from `output/macrophage_markers.png`,
+  with the reason.
+
+---
+
+<!-- file: code/setup/README.md -->
+
+## Setup: the R packages for the course
+
+Install R and RStudio first (February email). Then, once, on the first Friday:
+
+```r
+source("code/setup/install.R")
+```
+
+It installs Seurat, ggplot2, dplyr, readr and patchwork from a dated snapshot of the
+Posit Package Manager: the same versions for everyone, as ready-built binaries for
+Windows, macOS and Linux, so nothing is compiled on your laptop. It takes about a
+minute (tested: 144 packages, 415 MB) and ends by printing the versions; copy them
+into your notebook.
+
+Linux only: Seurat's clustering needs one system library, installed once with
+`sudo apt install libglpk40` (Ubuntu/Debian). Windows and macOS need nothing else.
+
+Laptop: 8 GB of memory is enough; the single-cell pipeline peaks at about 3.5 GB.
 
 ---
