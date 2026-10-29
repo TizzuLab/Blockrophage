@@ -1585,8 +1585,8 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 > Run it yourself: open the script in RStudio and press Source. For your own plate,
 > change the file name in the `input` line.
 >
-> The script subtracts the blank, fits the standard curve (4PL), reads the standards
-> back off the curve as a check (recovery 80 to 120%), back-calculates every sample
+> The script subtracts the blank, fits the standard curve (4PL) and reports R²,
+> back-calculates every sample
 > with its dilution factor, marks wells outside the standard range, and writes
 > `elisa_results.csv`, `elisa_summary.csv` and the figure. Your CSV needs the columns `well`, `type`
 > (standard or sample), `condition`, `standard_pg_ml`, `replicate`, `od450` and

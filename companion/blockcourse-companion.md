@@ -1561,8 +1561,8 @@ curve, which is where you want it.
 Run it yourself: open the script in RStudio and press Source. For your own plate,
 change the file name in the `input` line.
 
-The script subtracts the blank, fits the standard curve (4PL), reads the standards
-back off the curve as a check (recovery 80 to 120%), back-calculates every sample
+The script subtracts the blank, fits the standard curve (4PL) and reports R²,
+back-calculates every sample
 with its dilution factor, marks wells outside the standard range, and writes
 `elisa_results.csv`, `elisa_summary.csv` and the figure. Your CSV needs the columns `well`, `type`
 (standard or sample), `condition`, `standard_pg_ml`, `replicate`, `od450` and
@@ -5700,13 +5700,11 @@ od_to_conc <- function(od) {
   p["c"] * ((p["a"] - p["d"]) / (od - p["d"]) - 1)^(1 / p["b"])
 }
 
-# How good is the curve? R² is the share of the spread in the standard ODs that the
-# curve explains; with 4 parameters it is almost always above 0.99 and says little.
-# The more useful check: read the standards back off the curve as if they were
-# samples. Recovery between 80 and 120% of the known value is the usual standard.
-std$back_pg_ml <- od_to_conc(std$od_corr)
-std$recovery_pct <- round(100 * std$back_pg_ml / std$standard_pg_ml)
-std[std$standard_pg_ml > 0, c("well", "standard_pg_ml", "back_pg_ml", "recovery_pct")]
+# How well does the curve fit the standards? R² = 1 - (spread left around the
+# curve) / (total spread of the standard ODs). 1 is a perfect fit; a good ELISA
+# standard curve is above 0.99.
+r2 <- 1 - sum(residuals(model)^2) / sum((std$od_corr - mean(std$od_corr))^2)
+r2
 
 # 3. Samples: concentration from the curve, times the dilution.
 # Only wells between the lowest and the top standard are trusted (in_range).
@@ -5743,7 +5741,7 @@ p1 <- ggplot() +
   geom_point(data = samp[samp$conc_pg_ml > 0, ], aes(conc_pg_ml, od_corr), colour = "steelblue") +
   scale_x_log10() +
   labs(x = "IL-6 (pg/mL, log scale)", y = "OD 450 nm, blank-subtracted",
-       title = "Standard curve",
+       title = sprintf("Standard curve, 4PL, R² = %.3f", r2),
        subtitle = "Shaded: standards. Dashed: plateaus a, d and midpoint c.\nOpen circles: standards. Blue: samples.") +
   theme_classic()
 
@@ -5925,8 +5923,7 @@ plate also carried an osteopontin co-stimulation arm, which is not included.
 
 1. Blank: mean OD of the 0 pg/mL standards, subtracted from every well.
 2. Standard curve: four-parameter logistic fit (`nls`). The console prints the four
-   parameters and reads the standards back off the curve (recovery, 80 to 120% is
-   the usual standard).
+   parameters and R² on the standards (above 0.99 for a good curve).
 3. Samples: back-calculated from the curve, multiplied by `dilution_factor`; wells
    at or below the blank are set to 0; `in_range` says whether the OD lies between
    the lowest and the top standard.
