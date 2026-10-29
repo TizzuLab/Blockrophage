@@ -3387,8 +3387,8 @@ platelet aggregation
                                      0.240 s      0.260 s   0.280s
 
                           60
-
 Distance to injury [um]
+
                           40
 
                           20
@@ -4684,9 +4684,7 @@ Severe Injury   https://doi.org/10.1016/j.cell.2018.01.015
              Macrophage Switch: the phenomenon
 
              Focal liver injury
-
 CCR2-RFP
-
 CX3CR1-GFP
 
                                                    https://doi.org/10.1084/jem.20141539
@@ -4694,7 +4692,6 @@ CX3CR1-GFP
                Macrophage Switch: iNKT cells and glycolipid self-antigens
 
              Focal liver injury
-
 Cxcr6GFP/+
 
                https://doi.org/10.1016/j.immuni.2017.09.016
@@ -5876,10 +5873,10 @@ cells <- RunUMAP(cells, dims = dims)
 
 # To discuss once you compare with the other groups: same data, same script, but
 # your clusters or UMAP may not look exactly like your neighbour's. PCA, clustering
-# and UMAP all start from random numbers. Seurat fixes them by default (the seed.use
-# and random.seed arguments), yet package versions and computers still differ. What does set.seed() do,
-# where would you put it, and what does it mean if a cluster only exists with one
-# seed?
+# and UMAP all start from random numbers. Seurat fixes them by default (the
+# seed.use and random.seed arguments), yet package versions and computers still
+# differ. What does set.seed() do, where would you put it, and what does it mean
+# if a cluster only exists with one seed?
 
 ggsave(file.path(out_dir, "umap_clusters.png"),
        DimPlot(cells, label = TRUE) + NoLegend(), width = 6, height = 5.5)
