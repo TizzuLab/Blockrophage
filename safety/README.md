@@ -12,40 +12,28 @@ instruction for the course) and what happens with the data you produce (section 
 
 Every lab at ETH works under the ETH Zürich biosafety concept for level 1 and 2
 laboratories, published by Safety, Security, Health and Environment (SSHE,
-<https://ethz.ch/content/dam/ethz/associates/services/Service/sicherheit-gesundheit-umwelt/files/biosicherheit_neu/en/Biosafety_concept.pdf>),
-and the Institute of Molecular Health Sciences has its own safety concept on top of
-it. Both are written for the people who run labs, not for the people who spend four
-weeks in one. They require that every new person is instructed by the group leader
-or a delegate and that the instruction is recorded in writing. This sheet is that
-instruction, condensed to what applies to you, and your signature in section 4 is
-the record. The section numbers in brackets below point into the IMHS concept for
-anyone who wants the full text; ask the course lead for a copy.
+[Biosafety concept](https://ethz.ch/content/dam/ethz/associates/services/Service/sicherheit-gesundheit-umwelt/files/biosicherheit_neu/en/Biosafety_concept.pdf)).
+The regulations require that every new person is instructed by the group leader or
+a delegate and that the instruction is recorded in writing. This sheet is that
+instruction, condensed to what applies to you, but if you have never read the
+ETH-wide regulation by the SSHE, please read it.
 
 ## 2. Specifically for this course you need to know
 
 **Where and when.** HPL, F floor. Course hours 08:00 to 17:00, Tuesdays from
-13:00; there is no work in
-the lab outside these hours and no overnight presence; overnight steps run in the
-incubator without you. The briefing walks you through the escape routes and the
-assembly point `[TODO: assembly point]`, the eyewash and emergency shower, the
-first-aid kit, the spill kit and the fire extinguisher of the floor. Doors and
-windows stay shut while you work; bags, jackets and phones stay at the desk, not on
-the bench.
+13:00; lab work outside these hours needs to be approved by the course coordinator,
+overnight presence is prohibited; overnight steps run in the incubator without you.
+The briefing walks you through the escape routes and the assembly point in front of
+the HPL building, the eyewash and emergency shower, the first-aid kit, the spill kit
+and the fire extinguisher of the floor. Doors and windows stay shut while you work;
+bags, jackets and phones stay at the desk, not on the bench.
 
 **Biosafety level.** The core programme is level 1 work: RAW 264.7 is a mouse cell
 line, not a pathogen and not a genetically modified organism, and the stimuli are
-purified molecules `[TODO: confirm the classification of the course lab on HPL F]`.
-Optional extensions that use surplus primary human or mouse material are level 2
-work. You enter a level 2 room only when the course lead has authorised you and a
-supervisor is with you; the coat you wear there stays there, gloves come off before
-you leave, hands are disinfected at the door, and the waste of that work stays in
-the room and is handled by the supervisor. Human material, cells or fluid, is
-handled as potentially infectious: in the cabinet, with eye protection, no sharps
-(IMHS 6.2.4; ETH annex 7). Before you join such an extension, tell the course lead
-whether you are vaccinated against hepatitis B; the staff decide what you handle.
-Pregnant and nursing students do not handle human material. Say so in confidence,
-and the same if you are immunocompromised or allergic to nitrile or latex; the work
-is adapted without anyone else knowing.
+purified. Optional extensions that use surplus primary mouse material are level 1
+work as well. Please let us know in confidence about pregnancies, morbidities, or
+allergies (e.g. nitrile or latex); if necessary, the work is adapted without anyone
+else knowing.
 
 **Protection and conduct.** Lab coat closed, nitrile gloves at the cabinet and with
 every chemical below, safety glasses at the bench whenever a chemical is open (not
@@ -58,7 +46,7 @@ Work so that nothing splashes and no aerosol forms: tubes closed when not in use
 centrifuge only closed tubes in a balanced rotor with the lid on, and open the lid
 after the rotor has stopped.
 
-**The biosafety cabinet.** It protects you from aerosols, not from contact and not
+**The biosafety cabinet.** It protects you from aerosols and the samples from contamination, not from contact and not
 from chemical vapours. Switch it on and let it run before you start; work only
 when the green light is on and the sash is at its mark; keep the front grille
 free; wipe the surface with 70% ethanol before and after, wiping, not spraying;
@@ -69,7 +57,7 @@ sounds, finish the step in a controlled way and call your supervisor (IMHS 6.2.2
 ETH annex 6).
 
 **Chemicals of this course**, with the one rule each that matters. The safety data
-sheets are in the lab's SDS folder `[TODO: location]`. Anything that gives off
+sheets are in the lab's SDS folder. Anything that gives off
 vapour, PFA, DAB and the MTT solubiliser, is handled in the fume hood, never in
 the biosafety cabinet.
 
@@ -92,8 +80,7 @@ the histology extension, in the hands of staff. Anything sharp, including broken
 glass, goes into the solid sharps container, never into a bag.
 
 **Spills.** Cells or medium spilled on the bench or in the cabinet: cover with paper
-towels, soak them with the lab's disinfectant `[TODO: disinfectant and contact
-time]`, wait the contact time, wipe up into the biological waste, wipe once more,
+towels, soak them with the lab's disinfectant, wait the contact time, wipe up into the biological waste, wipe once more,
 tell your supervisor. Do not spray ethanol onto a spill. A chemical from the table
 spilled: step back, tell your supervisor; PFA and DAB spills are cleared by staff.
 

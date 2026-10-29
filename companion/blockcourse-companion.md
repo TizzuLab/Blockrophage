@@ -87,9 +87,13 @@ and the analysis code.
 - Code overview
   - `code/README.md`
 - Code: R scripts
+  - `code/00_setup.R`
   - `code/elisa/elisa_standard_curve.R`
+  - `code/scrnaseq/01_load_and_qc.R`
+  - `code/scrnaseq/02_cluster.R`
 - Code: folder notes
   - `code/elisa/README.md`
+  - `code/scrnaseq/README.md`
 
 # Index (llms.txt)
 
@@ -390,8 +394,10 @@ and then, in Seurat, to score every macrophage of two single-cell datasets from
 living systems against them: injured mouse peritoneum (GSE186658) and homeostatic
 human peritoneal fluid (GSE228030). The question is descriptive: do tissue
 macrophages fall into the two states, onto a line between them, or somewhere the
-two axes do not reach? These three are the recommended datasets; the two single-cell
-datasets are preprocessed by the teaching staff, so nobody starts from raw reads. A
+two axes do not reach? These three are the recommended datasets. The mouse single-cell
+data run from the GEO count matrices on your laptop in about a minute and a half,
+with the scripts in [`code/scrnaseq`](code/scrnaseq/README.md); nobody starts from
+raw reads `[TODO: the same route for the human dataset]`. A
 group that wants to deviate and pull other public datasets is encouraged to do so,
 together with its supervisor. The code for this experiment is being worked out, and
 this description will be updated when it exists. What the picture means is something
@@ -434,8 +440,8 @@ apéro.
 
 **Dry lab, around the bench.** Every full day opens with a self-study hour, and the
 dry-lab slots sit around the bench work, with the [analysis code](code/README.md):
-week 1 the environment, week 2 scRNA-seq part 1 (Experiment 2) on the preprocessed
-object and your own flow data in FlowJo, week 3 part 2 during the challenge and the
+week 1 the environment, week 2 scRNA-seq part 1 (Experiment 2) from the GEO
+matrices and your own flow data in FlowJo, week 3 part 2 during the challenge and the
 ELISA incubations and your ELISA data on Friday, week 4 part 3 and the figures. Gaps
 are filled with the poster: the introduction is written first, then the
 significance.
@@ -455,7 +461,6 @@ non-exhaustive.
 
 | Experiment or extension | What it adds to the story |
 |---|---|
-| Pipeline from raw matrices | QC figure from the GEO matrices, not the preprocessed object; commit hash |
 | Macrophages annotated | UMAP with Gata6+, Folr2+ Selenop+ and Trem2+ Spp1+ labelled, marker dot plot, cell counts |
 | Integration with an in vitro single-cell dataset | Integrated embedding with the accession named; percentage of in vivo macrophages mapping to any in vitro state |
 | Unpredicted figure, dataset or code | A figure or table not in the answer key, with claim, n and method |
@@ -802,17 +807,15 @@ Bring one cryovial of RAW 264.7 cells into culture as your group's stock flask f
 whole course (Part A), then keep it growing and seed plates from it at a defined
 density (Part B). From this flask you plate the polarization experiment on Tuesday of
 week 2 and the challenge experiment on Tuesday of week 3, with the polarizer already
-in the seeding suspension (C2). The first time you scrape, count and split is on the
-staff culture, on the Friday morning of week 1.
+in the seeding suspension (C2). The first time you scrape, count and split is on the 
+Friday morning of week 1.
 
 Splits are counted from the thaw as course passage 0; the absolute passage of the lab
-stock is not known, and the course passage count goes on the poster. The stock is
-validated by the lab's own LPS ladder (C5, worked example) and tested for mycoplasma
-before the course.
+stock should be noted and can vary slight, so the course passage count goes on the poster. 
+The stock is tested for mycoplasma by the staff before the course.
 
-Who looks after the flask: you, on course days; the staff over the weekend and the
-Easter break (split every two to three days, backup vials frozen before the break,
-S01). After the break, passaging your stock is a background task with your supervisor
+**Who looks after the flask:** you, on course days; the staff over the
+Easter break, weekends are to negotiated (split every two to three days, backup vials frozen before the break, S01). After the break, passaging your stock is a background task with your supervisor
 at the next hood, on Tuesdays when you plate and once more on Thursday or Friday.
 
 ### Materials
@@ -894,8 +897,6 @@ at the next hood, on Tuesdays when you plate and once more on Thursday or Friday
     | 24-well | 1.2 × 10^5 | 500 µL | RNA arm, X01 |
     | 6-well | 6 × 10^5 | 2 mL | flow cytometry, C3 |
 
-    The 96-well density is the lab's. The 24- and 6-well densities are scaled from it
-    by growth area (about 6 × 10^4 cells/cm²).
 
 > [!IMPORTANT]
 > **To verify:** the 24- and 6-well densities are derived, not tested. Check in
@@ -910,7 +911,7 @@ at the next hood, on Tuesdays when you plate and once more on Thursday or Friday
     the suspension (C2). Harvest (C3) or challenge (C4) the next morning.
 16. Before the Easter break the staff freeze two or three backup vials from your
     flask (S01) and carry the flask through the break; after the break the splits
-    are yours again, with your supervisor beside you.
+    are done by you again.
 
 ### Controls
 
@@ -1557,17 +1558,13 @@ and 100 ng/mL about 320 pg/mL, with triplicate wells within 15%. The 100 ng/mL
 point is the LPS control of C4: a neat supernatant lands in the upper third of the
 curve, which is where you want it.
 
-Run it yourself from the `code/elisa` folder:
+Run it yourself: open the script in RStudio and press Source. For your own plate,
+change the file name in the `input` line.
 
-```
-Rscript elisa_standard_curve.R                      # example data
-Rscript elisa_standard_curve.R my_plate.csv output  # your own plate
-```
-
-The script subtracts the blank, fits the standard curve (4PL, with a log-log linear
-fallback that it announces), back-calculates every sample with its dilution factor,
-flags wells outside the standard range, and writes `elisa_results.csv`,
-`elisa_summary.csv` and the figure. Your CSV needs the columns `well`, `type`
+The script subtracts the blank, fits the standard curve (4PL) and reports R²,
+back-calculates every sample
+with its dilution factor, marks wells outside the standard range, and writes
+`elisa_results.csv`, `elisa_summary.csv` and the figure. Your CSV needs the columns `well`, `type`
 (standard or sample), `condition`, `standard_pg_ml`, `replicate`, `od450` and
 `dilution_factor`.
 
@@ -5326,40 +5323,28 @@ instruction for the course) and what happens with the data you produce (section 
 
 Every lab at ETH works under the ETH Zürich biosafety concept for level 1 and 2
 laboratories, published by Safety, Security, Health and Environment (SSHE,
-<https://ethz.ch/content/dam/ethz/associates/services/Service/sicherheit-gesundheit-umwelt/files/biosicherheit_neu/en/Biosafety_concept.pdf>),
-and the Institute of Molecular Health Sciences has its own safety concept on top of
-it. Both are written for the people who run labs, not for the people who spend four
-weeks in one. They require that every new person is instructed by the group leader
-or a delegate and that the instruction is recorded in writing. This sheet is that
-instruction, condensed to what applies to you, and your signature in section 4 is
-the record. The section numbers in brackets below point into the IMHS concept for
-anyone who wants the full text; ask the course lead for a copy.
+[Biosafety concept](https://ethz.ch/content/dam/ethz/associates/services/Service/sicherheit-gesundheit-umwelt/files/biosicherheit_neu/en/Biosafety_concept.pdf)).
+The regulations require that every new person is instructed by the group leader or
+a delegate and that the instruction is recorded in writing. This sheet is that
+instruction, condensed to what applies to you, but if you have never read the
+ETH-wide regulation by the SSHE, please read it.
 
 ### 2. Specifically for this course you need to know
 
 **Where and when.** HPL, F floor. Course hours 08:00 to 17:00, Tuesdays from
-13:00; there is no work in
-the lab outside these hours and no overnight presence; overnight steps run in the
-incubator without you. The briefing walks you through the escape routes and the
-assembly point `[TODO: assembly point]`, the eyewash and emergency shower, the
-first-aid kit, the spill kit and the fire extinguisher of the floor. Doors and
-windows stay shut while you work; bags, jackets and phones stay at the desk, not on
-the bench.
+13:00; lab work outside these hours needs to be approved by the course coordinator,
+overnight presence is prohibited; overnight steps run in the incubator without you.
+The briefing walks you through the escape routes and the assembly point in front of
+the HPL building, the eyewash and emergency shower, the first-aid kit, the spill kit
+and the fire extinguisher of the floor. Doors and windows stay shut while you work;
+bags, jackets and phones stay at the desk, not on the bench.
 
 **Biosafety level.** The core programme is level 1 work: RAW 264.7 is a mouse cell
 line, not a pathogen and not a genetically modified organism, and the stimuli are
-purified molecules `[TODO: confirm the classification of the course lab on HPL F]`.
-Optional extensions that use surplus primary human or mouse material are level 2
-work. You enter a level 2 room only when the course lead has authorised you and a
-supervisor is with you; the coat you wear there stays there, gloves come off before
-you leave, hands are disinfected at the door, and the waste of that work stays in
-the room and is handled by the supervisor. Human material, cells or fluid, is
-handled as potentially infectious: in the cabinet, with eye protection, no sharps
-(IMHS 6.2.4; ETH annex 7). Before you join such an extension, tell the course lead
-whether you are vaccinated against hepatitis B; the staff decide what you handle.
-Pregnant and nursing students do not handle human material. Say so in confidence,
-and the same if you are immunocompromised or allergic to nitrile or latex; the work
-is adapted without anyone else knowing.
+purified. Optional extensions that use surplus primary mouse material are level 1
+work as well. Please let us know in confidence about pregnancies, morbidities, or
+allergies (e.g. nitrile or latex); if necessary, the work is adapted without anyone
+else knowing.
 
 **Protection and conduct.** Lab coat closed, nitrile gloves at the cabinet and with
 every chemical below, safety glasses at the bench whenever a chemical is open (not
@@ -5372,7 +5357,7 @@ Work so that nothing splashes and no aerosol forms: tubes closed when not in use
 centrifuge only closed tubes in a balanced rotor with the lid on, and open the lid
 after the rotor has stopped.
 
-**The biosafety cabinet.** It protects you from aerosols, not from contact and not
+**The biosafety cabinet.** It protects you from aerosols and the samples from contamination, not from contact and not
 from chemical vapours. Switch it on and let it run before you start; work only
 when the green light is on and the sash is at its mark; keep the front grille
 free; wipe the surface with 70% ethanol before and after, wiping, not spraying;
@@ -5383,7 +5368,7 @@ sounds, finish the step in a controlled way and call your supervisor (IMHS 6.2.2
 ETH annex 6).
 
 **Chemicals of this course**, with the one rule each that matters. The safety data
-sheets are in the lab's SDS folder `[TODO: location]`. Anything that gives off
+sheets are in the lab's SDS folder. Anything that gives off
 vapour, PFA, DAB and the MTT solubiliser, is handled in the fume hood, never in
 the biosafety cabinet.
 
@@ -5406,8 +5391,7 @@ the histology extension, in the hands of staff. Anything sharp, including broken
 glass, goes into the solid sharps container, never into a bag.
 
 **Spills.** Cells or medium spilled on the bench or in the cabinet: cover with paper
-towels, soak them with the lab's disinfectant `[TODO: disinfectant and contact
-time]`, wait the contact time, wipe up into the biological waste, wipe once more,
+towels, soak them with the lab's disinfectant, wait the contact time, wipe up into the biological waste, wipe once more,
 tell your supervisor. Do not spray ethanol onto a spill. A chemical from the table
 spilled: step back, tell your supervisor; PFA and DAB spills are cleared by staff.
 
@@ -5538,9 +5522,25 @@ the course may redistribute the template in this public repository]`.
 
 > **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/Blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
-Analysis templates for the course. Every template is R unless stated, pinned with
-`renv` `[TODO: lockfile]`. You build the environment on the first day with your
-AI tool; a prebuilt fallback exists `[TODO: where]`.
+Analysis templates for the course. Every template is R, run in the RStudio project
+you cloned on the first Friday; all paths are built with `here()` from the
+repository folder.
+
+### Step 0: the packages
+
+Once, on the first Friday, open [`00_setup.R`](00_setup.R) in RStudio and press
+Source (or `source("code/00_setup.R")` in the console). It installs Seurat,
+ggplot2, dplyr, readr, patchwork and here from a dated package snapshot: the same
+versions for everyone, ready-built for Windows, macOS and Linux, nothing compiled.
+About a minute; it ends by printing the versions, which go into your notebook.
+
+- First time with R: just run it.
+- Already have R projects whose package versions you want to keep: talk to us
+  first, and we set you up with renv, which keeps the course packages separate.
+- Linux only: Seurat needs one system library, `sudo apt install libglpk40`.
+- 8 GB of memory is enough; the single-cell pipeline peaks at about 3.5 GB.
+
+### The templates
 
 The rule for all of it: run the code and look at the object, not at the AI tool's
 description of the object.
@@ -5551,7 +5551,7 @@ description of the object.
 | `griess/` | Linear nitrite standard, concentration table, plots | plate-reader export, plate map | `griess_results.csv`, figures |
 | `flow/` | Reads the population statistics exported from FlowJo and plots them. Gating is done in FlowJo, not in R | FlowJo CSV export | figures |
 | `growth_curve/` | Optional (extension, X05): doubling time from counts, with the published value as a reference line | counts table | figure, doubling time |
-| `scrnaseq/` | The in silico arm, three parts (below) | preprocessed objects shipped by the staff | figures |
+| `scrnaseq/` | The in silico arm, three parts (below). Parts 1a and 1b written; run from GEO in about 1.5 min | GEO matrices, downloaded by the script | figures, Seurat objects |
 | `qpcr/` | ΔΔCt for the X01 extension | Ct export | figures |
 
 `[TODO: write the remaining templates; each folder gets a README, an `example_data/`
@@ -5560,22 +5560,24 @@ model.]`
 
 ### The in silico arm, `scrnaseq/`
 
-The teaching staff preprocess two datasets and ship small objects, so nobody starts
-from raw reads:
+Two datasets; nobody starts from raw reads:
 
-- `GSE186658`: single-cell RNA-seq of mouse peritoneal injury sites, two conditions,
-  two mice each (Zindel et al. 2021, Nat Commun). Shipped as a Seurat object with
-  quality control, normalisation, clustering and a coarse cell-type annotation
-  already done; the macrophage subclusters are **not** annotated.
+- `GSE186658`: single-cell RNA-seq of mouse peritoneal injury sites, sterile or
+  contaminated (CLP), two mice each (Zindel et al. 2021, Nat Commun). The scripts
+  download the filtered count matrices from GEO and run quality control,
+  normalisation, clustering and the macrophage markers themselves, on a laptop, in
+  about a minute and a half ([`scrnaseq/`](scrnaseq/README.md)); the macrophage
+  subclusters are **not** annotated.
 - `GSE113836`: bulk RNA-seq of RAW 264.7 and bone marrow macrophages stimulated with
   LPS plus IFNγ or with IL-4 `[TODO: verify contents, replicates and raw counts]`.
   Shipped as a count matrix with a sample sheet.
 
 Three parts, matched to the dry-lab halves of weeks 2 and 3:
 
-1. **Load and look** (week 2). Open the single-cell object, reproduce the QC figure
-   (cells per sample before and after filtering), find the macrophages by `Adgre1`,
-   `Cd68`, `Csf1r`, `Fcgr1` and `Mertk`.
+1. **Load and look** (week 2). Download and load the data, make the QC figure
+   (cells per sample before and after filtering), cluster, and find the macrophages
+   by `Adgre1`, `Cd68`, `Csf1r`, `Fcgr1` and `Mertk` (`01_load_and_qc.R`,
+   `02_cluster.R`).
 2. **Derive the signatures** (week 3). Differential expression in the bulk data,
    M(IFNγ+LPS) versus M(-) and M(IL-4) versus M(-), in RAW 264.7 cells; take the top
    genes by a stated rule; compare with the Murray et al. 2014 table and with the
@@ -5597,174 +5599,309 @@ course.
 
 # Code: R scripts
 
+<!-- file: code/00_setup.R -->
+
+```r
+# Step 0: install the R packages for the course, once, on the first Friday.
+# Run in RStudio: open this file and press Source, or in the console:
+#   source("code/00_setup.R")
+#
+# First time with R: just run it. Already have R projects whose package versions
+# you want to keep: talk to us first, we set you up with renv instead.
+#
+# Packages come from a dated snapshot of the Posit Package Manager, so everyone
+# gets the same versions, as ready-built binaries for Windows, macOS and Linux
+# (nothing is compiled on your laptop). Change the date only between course years.
+
+snapshot <- "2026-10-01"
+
+repo <- paste0("https://packagemanager.posit.co/cran/", snapshot)
+if (Sys.info()[["sysname"]] == "Linux") {
+  codename <- system("lsb_release -cs", intern = TRUE)  # e.g. noble
+  repo <- paste0("https://packagemanager.posit.co/cran/__linux__/", codename, "/", snapshot)
+  # Linux binaries are only served when R names its version and platform.
+  options(HTTPUserAgent = sprintf("R/%s R (%s)", getRversion(),
+    paste(getRversion(), R.version$platform, R.version$arch, R.version$os)))
+}
+options(repos = c(CRAN = repo))
+
+packages <- c(
+  "Seurat",     # single-cell analysis (in silico arm)
+  "ggplot2",    # figures
+  "dplyr",      # tables
+  "readr",      # reading CSV files
+  "patchwork",  # putting figures side by side
+  "here"        # file paths from the repository folder, on every computer
+)
+
+install.packages(packages)
+
+# Check: every package loads, and print the versions for your notebook.
+for (p in packages) library(p, character.only = TRUE)
+cat("\nAll packages loaded. R", R.version$major, ".", R.version$minor, "\n", sep = "")
+print(sapply(packages, function(p) as.character(packageVersion(p))))
+```
+
+---
+
 <!-- file: code/elisa/elisa_standard_curve.R -->
 
 ```r
-#!/usr/bin/env Rscript
-# ELISA standard curve and back-calculation.
+# ELISA: standard curve and back-calculation of the samples.
 #
-# Usage:
-#   Rscript elisa_standard_curve.R [input.csv] [output_dir]
-# Defaults: example_data/il6_lps_raw264_2026-09.csv and ./output
+# Open in RStudio and press Source. Paths are built with here() from the repository
+# folder.
 #
 # Input: one row per well with the columns
 #   well, type ("standard" or "sample"), condition, standard_pg_ml (standards only),
-#   lps_ng_ml (samples; optional), replicate, od450, dilution_factor
+#   replicate, od450, dilution_factor
 # The 0 pg/mL standard is the blank.
 #
-# Output: output/elisa_results.csv (per well), output/elisa_summary.csv (per
-# condition), output/elisa_figure.png (standard curve + concentrations).
-#
-# Fit: four-parameter logistic (4PL) by nls; if that fails, a log-log linear fit
-# on the non-zero standards. The console says which was used.
+# Output in code/elisa/output/: elisa_results.csv (per well),
+# elisa_summary.csv (per condition), elisa_figure.png
 
-suppressPackageStartupMessages(library(ggplot2))
+## load packages
+library(ggplot2)
+library(dplyr)
+library(patchwork)
+library(here)
 
-args <- commandArgs(trailingOnly = TRUE)
-input <- if (length(args) >= 1) args[1] else "example_data/il6_lps_raw264_2026-09.csv"
-outdir <- if (length(args) >= 2) args[2] else "output"
-dir.create(outdir, showWarnings = FALSE, recursive = TRUE)
+# input
+# replace csv file name with your data
+input <- here("code", "elisa", "example_data", "il6_lps_raw264_2026-09.csv")
 
-d <- read.csv(input, stringsAsFactors = FALSE)
-stopifnot(all(c("well", "type", "condition", "od450") %in% names(d)))
-if (!"dilution_factor" %in% names(d)) d$dilution_factor <- 1
-d$dilution_factor[is.na(d$dilution_factor)] <- 1
+# output
+outdir <- here("code", "elisa", "output")
+dir.create(outdir, showWarnings = FALSE)
 
-# 1. Blank: mean OD of the 0 pg/mL standard wells.
-std <- d[d$type == "standard", ]
-blank <- mean(std$od450[std$standard_pg_ml == 0])
-d$od_corr <- d$od450 - blank
-std <- d[d$type == "standard", ]
-cat(sprintf("Blank (0 pg/mL standard, n = %d): OD %.4f\n", sum(std$standard_pg_ml == 0), blank))
+plate <- read.csv(input)
 
-# 2. Standard curve.
-fit_4pl <- function(x, y) {
-  # a = lower asymptote, d = upper asymptote, c = inflection (pg/mL), b = slope.
-  # Several start sets: a curve that is still linear at the top standard has its
-  # upper asymptote far above the data, and nls needs to be told so.
-  starts <- list(list(a = min(y), d = max(y) * 1.2, c = max(x), b = 1),
-                 list(a = min(y), d = max(y) * 3, c = max(x) * 3, b = 1),
-                 list(a = min(y), d = max(y), c = median(x[x > 0]), b = 1))
-  for (st in starts) {
-    m <- tryCatch(nls(y ~ d + (a - d) / (1 + (x / c)^b), start = st,
-                      control = nls.control(maxiter = 1000, warnOnly = FALSE)),
-                  error = function(e) NULL)
-    if (!is.null(m)) return(m)
-  }
-  NULL
+# 1. Blank: mean OD of the 0 pg/mL standard wells, subtracted from every well.
+blank <- mean(plate$od450[plate$type == "standard" & plate$standard_pg_ml == 0])
+plate$od_corr <- plate$od450 - blank
+std <- plate[plate$type == "standard", ]
+blank
+
+# 2. Standard curve: four-parameter logistic (4PL)
+#   OD = d + (a - d) / (1 + (conc / c)^b)
+#   a = OD without IL-6 (lower plateau), d = OD with unlimited IL-6 (upper plateau),
+#   c = concentration halfway between the plateaus, b = steepness.
+# nls finds a, b, c, d by trial and improvement and needs a first guess:
+# a = lowest OD, d = a bit above the highest OD, c = top standard, b = 1.
+model <- nls(od_corr ~ d + (a - d) / (1 + (standard_pg_ml / c)^b),
+             data = std,
+             start = list(a = min(std$od_corr), d = max(std$od_corr) * 1.2,
+                          c = max(std$standard_pg_ml), b = 1))
+p <- coef(model)
+p
+
+# The same formula solved for the concentration: OD in, pg/mL out.
+od_to_conc <- function(od) {
+  p["c"] * ((p["a"] - p["d"]) / (od - p["d"]) - 1)^(1 / p["b"])
 }
-model <- fit_4pl(std$standard_pg_ml, std$od_corr)
-if (!is.null(model)) {
-  p <- coef(model)
-  method <- "4PL"
-  predict_od <- function(x) p["d"] + (p["a"] - p["d"]) / (1 + (x / p["c"])^p["b"])
-  invert <- function(y) {
-    out <- p["c"] * ((p["a"] - p["d"]) / (y - p["d"]) - 1)^(1 / p["b"])
-    out[y <= p["a"]] <- 0            # at or below the lower asymptote
-    out[y >= p["d"]] <- NA           # at or above the upper asymptote
-    as.numeric(out)
-  }
-  cat(sprintf("Fit: 4PL  a = %.4f  d = %.4f  c = %.1f pg/mL  b = %.3f\n", p["a"], p["d"], p["c"], p["b"]))
-} else {
-  nz <- std[std$standard_pg_ml > 0 & std$od_corr > 0, ]
-  lmfit <- lm(log(od_corr) ~ log(standard_pg_ml), data = nz)
-  k <- coef(lmfit)
-  method <- "log-log linear (4PL failed)"
-  predict_od <- function(x) exp(k[1] + k[2] * log(x))
-  invert <- function(y) { out <- rep(0, length(y)); ok <- y > 0; out[ok] <- exp((log(y[ok]) - k[1]) / k[2]); as.numeric(out) }
-  cat(sprintf("Fit: log-log linear (4PL did not converge)  slope = %.3f\n", k[2]))
-}
-r2 <- 1 - sum((std$od_corr - predict_od(std$standard_pg_ml))^2) / sum((std$od_corr - mean(std$od_corr))^2)
-cat(sprintf("R^2 on standards: %.4f\n", r2))
 
-# 3. Back-calculate samples, apply dilution, flag the range.
-lo <- min(std$od_corr[std$standard_pg_ml > 0]); hi <- max(std$od_corr)
-top_std <- max(std$standard_pg_ml); bottom_std <- min(std$standard_pg_ml[std$standard_pg_ml > 0])
-d$conc_pg_ml <- NA_real_; d$flag <- ""
-s <- d$type == "sample"
-d$conc_pg_ml[s] <- invert(d$od_corr[s]) * d$dilution_factor[s]
-d$flag[s & d$od_corr < lo] <- sprintf("below lowest standard (%g pg/mL)", bottom_std)
-d$flag[s & d$od_corr > hi] <- sprintf("above top standard (%g pg/mL)", top_std)
-d$flag[s & is.na(d$conc_pg_ml)] <- "not calculable (above upper asymptote)"
-d$fit <- method
-write.csv(d, file.path(outdir, "elisa_results.csv"), row.names = FALSE)
+# How well does the curve fit the standards? R² = 1 - (spread left around the
+# curve) / (total spread of the standard ODs). 1 is a perfect fit; a good ELISA
+# standard curve is above 0.99.
+r2 <- 1 - sum(residuals(model)^2) / sum((std$od_corr - mean(std$od_corr))^2)
+r2
+# Question: how would you validate R²? A single number can hide where the curve
+# misses. Consider plotting it, e.g. residuals(model) against the standard
+# concentration, or each standard's known vs back-calculated value.
 
-samp <- d[s, ]
+# 3. Samples: concentration from the curve, times the dilution.
+# Only wells between the lowest and the top standard are trusted (in_range).
+lowest_std <- min(std$standard_pg_ml[std$standard_pg_ml > 0])
+top_std <- max(std$standard_pg_ml)
+samp <- plate[plate$type == "sample", ]
+samp$conc_pg_ml <- od_to_conc(samp$od_corr) * samp$dilution_factor
+samp$conc_pg_ml[samp$od_corr <= p["a"]] <- 0   # at or below the blank: no IL-6 detected
+samp$in_range <- samp$od_corr >= min(std$od_corr[std$standard_pg_ml == lowest_std]) &
+                 samp$od_corr <= max(std$od_corr[std$standard_pg_ml == top_std])
 samp$condition <- factor(samp$condition, levels = unique(samp$condition))
-summ <- aggregate(conc_pg_ml ~ condition, samp, function(v) c(mean = mean(v), sd = sd(v), n = length(v)))
-summ <- data.frame(condition = summ$condition, mean_pg_ml = summ$conc_pg_ml[, "mean"],
-                   sd_pg_ml = summ$conc_pg_ml[, "sd"], n = summ$conc_pg_ml[, "n"])
-summ$flagged_wells <- sapply(summ$condition, function(cc) sum(samp$flag[samp$condition == cc] != ""))
+write.csv(samp, file.path(outdir, "elisa_results.csv"), row.names = FALSE)
+
+summ <- samp |>
+  group_by(condition) |>
+  summarise(mean_pg_ml = mean(conc_pg_ml), sd_pg_ml = sd(conc_pg_ml),
+            n = n(), out_of_range = sum(!in_range))
 write.csv(summ, file.path(outdir, "elisa_summary.csv"), row.names = FALSE)
-cat("\nPer condition (pg/mL):\n"); print(summ, row.names = FALSE, digits = 4)
+summ
 
-# 4. Figure: standard curve with samples overlaid; concentration per condition.
-ink <- "#1F2933"; muted <- "#6B7280"; blue <- "#2A6EBB"; grey_pt <- "#9AA3AE"
-theme_course <- theme_minimal(base_size = 11) +
-  theme(panel.grid.minor = element_blank(), panel.grid.major = element_line(colour = "#E5E7EB", linewidth = 0.3),
-        axis.text = element_text(colour = ink), axis.title = element_text(colour = ink),
-        plot.title = element_text(colour = ink, face = "bold", size = 11),
-        plot.subtitle = element_text(colour = muted, size = 9), plot.background = element_rect(fill = "white", colour = NA))
+# 4. Figure.
+# Left: the curve drawn far beyond the standards so the whole S-shape is visible.
+# The standards (shaded) usually cover only the lower, nearly straight part.
+curve <- data.frame(standard_pg_ml = 10^seq(-1, 6, length.out = 400))
+curve$od_corr <- predict(model, newdata = curve)
 
-# The curve is drawn well beyond the standards so that the whole sigmoid is visible:
-# the kit range usually sits on the lower, nearly linear limb, and the upper plateau
-# of the 4PL often lies above what the reader can measure. The shaded band is the
-# range the standards cover; only samples inside it are trusted.
-if (method == "4PL") {
-  xmin <- min(bottom_std / 10, p["c"] / 300)
-  xmax <- max(top_std * 10, p["c"] * 300)
-} else {
-  xmin <- bottom_std / 10; xmax <- top_std * 10
-}
-curve <- data.frame(x = exp(seq(log(xmin), log(xmax), length.out = 400)))
-curve$y <- predict_od(curve$x)
-std_plot <- std[std$standard_pg_ml > 0, ]
-samp_plot <- samp[!is.na(samp$conc_pg_ml) & samp$conc_pg_ml > 0, ]
-ymax <- if (method == "4PL") max(p["d"], max(std$od_corr)) * 1.05 else max(curve$y) * 1.05
-log_breaks <- 10^seq(floor(log10(xmin)), ceiling(log10(xmax)))
 p1 <- ggplot() +
-  annotate("rect", xmin = bottom_std, xmax = top_std, ymin = -Inf, ymax = Inf, fill = "#E8F0FA", alpha = 0.6) +
-  annotate("text", x = sqrt(bottom_std * top_std), y = ymax * 0.72, label = sprintf("kit range\n%s to %s pg/mL", signif(bottom_std, 3), signif(top_std, 3)),
-           size = 3, colour = muted) +
-  geom_line(data = curve, aes(x, y), colour = ink, linewidth = 0.6) +
-  geom_point(data = std_plot, aes(standard_pg_ml, od_corr), shape = 21, fill = "white", colour = ink, size = 2.4, stroke = 0.6) +
-  geom_point(data = samp_plot, aes(conc_pg_ml, od_corr), colour = blue, size = 2.4) +
-  scale_x_log10(breaks = log_breaks, labels = function(v) format(v, big.mark = ",", scientific = FALSE, trim = TRUE)) +
-  scale_y_continuous(limits = c(0, ymax), expand = expansion(mult = c(0, 0.02))) +
+  annotate("rect", xmin = lowest_std, xmax = top_std, ymin = -Inf, ymax = Inf,
+           fill = "lightblue", alpha = 0.3) +
+  geom_hline(yintercept = c(p["a"], p["d"]), linetype = "dashed", colour = "grey50") +
+  geom_vline(xintercept = p["c"], linetype = "dashed", colour = "grey50") +
+  geom_line(data = curve, aes(standard_pg_ml, od_corr)) +
+  geom_point(data = std[std$standard_pg_ml > 0, ], aes(standard_pg_ml, od_corr), shape = 21, fill = "white") +
+  geom_point(data = samp[samp$conc_pg_ml > 0, ], aes(conc_pg_ml, od_corr), colour = "steelblue") +
+  scale_x_log10() +
   labs(x = "IL-6 (pg/mL, log scale)", y = "OD 450 nm, blank-subtracted",
-       title = "Standard curve, drawn to both plateaus",
-       subtitle = sprintf("%s fit, R² = %.3f. Open circles: standards. Blue: samples.", method, r2)) +
-  theme_course
-if (method == "4PL") {
-  p1 <- p1 +
-    geom_hline(yintercept = c(p["a"], p["d"]), linetype = "22", colour = muted, linewidth = 0.4) +
-    annotate("text", x = xmax, y = p["d"], label = sprintf("upper plateau, OD %.1f (beyond the reader)", p["d"]),
-             hjust = 1, vjust = 1.5, size = 3, colour = muted) +
-    annotate("text", x = xmax, y = p["a"], label = sprintf("lower plateau, OD %.2f", p["a"]),
-             hjust = 1, vjust = -0.5, size = 3, colour = muted) +
-    geom_vline(xintercept = p["c"], linetype = "22", colour = muted, linewidth = 0.4) +
-    annotate("text", x = p["c"], y = ymax * 0.3, label = sprintf("inflection\nc = %.0f pg/mL", p["c"]),
-             hjust = -0.08, size = 3, colour = muted)
-}
+       title = sprintf("Standard curve, 4PL, R² = %.3f", r2),
+       subtitle = "Shaded: standards. Dashed: plateaus a, d and midpoint c.\nOpen circles: standards. Blue: samples.") +
+  theme_classic()
 
-summ$x <- as.numeric(summ$condition); samp$x <- as.numeric(samp$condition)
-p2 <- ggplot() +
-  geom_col(data = summ, aes(x = condition, y = mean_pg_ml), fill = NA, colour = blue, width = 0.6, linewidth = 0.6) +
-  geom_errorbar(data = summ, aes(x = condition, ymin = mean_pg_ml - sd_pg_ml, ymax = mean_pg_ml + sd_pg_ml), width = 0.2, colour = blue, linewidth = 0.5) +
-  geom_jitter(data = samp, aes(x = condition, y = conc_pg_ml), width = 0.08, height = 0, colour = blue, size = 2.2, alpha = 0.9) +
-  geom_text(data = summ, aes(x = condition, y = mean_pg_ml + sd_pg_ml, label = sprintf("%.0f", mean_pg_ml)), vjust = -0.6, size = 3.2, colour = ink) +
-  scale_y_continuous(expand = expansion(mult = c(0, 0.12))) +
+# Right: concentration per condition, mean ± SD and the single wells.
+p2 <- ggplot(summ, aes(condition, mean_pg_ml)) +
+  geom_col(fill = NA, colour = "steelblue", width = 0.6) +
+  geom_errorbar(aes(ymin = mean_pg_ml - sd_pg_ml, ymax = mean_pg_ml + sd_pg_ml), width = 0.2) +
+  geom_jitter(data = samp, aes(condition, conc_pg_ml), width = 0.08, height = 0, colour = "steelblue") +
   labs(x = NULL, y = "IL-6 (pg/mL)", title = "IL-6 per condition",
        subtitle = "Bar: mean ± SD of triplicate wells. Points: wells.") +
-  theme_course + theme(axis.text.x = element_text(angle = 20, hjust = 1))
+  theme_classic() +
+  theme(axis.text.x = element_text(angle = 20, hjust = 1))
 
-png(file.path(outdir, "elisa_figure.png"), width = 2000, height = 850, res = 200)
-grid::grid.newpage()
-grid::pushViewport(grid::viewport(layout = grid::grid.layout(1, 2)))
-print(p1, vp = grid::viewport(layout.pos.row = 1, layout.pos.col = 1))
-print(p2, vp = grid::viewport(layout.pos.row = 1, layout.pos.col = 2))
-invisible(dev.off())
-cat(sprintf("\nWrote %s, %s and %s\n", file.path(outdir, "elisa_results.csv"), file.path(outdir, "elisa_summary.csv"), file.path(outdir, "elisa_figure.png")))
+p1 + p2
+ggsave(file.path(outdir, "elisa_figure.png"), p1 + p2, width = 10, height = 4.25)
+```
+
+---
+
+<!-- file: code/scrnaseq/01_load_and_qc.R -->
+
+```r
+#!/usr/bin/env Rscript
+# Part 1a: download, load and quality-control the single-cell data.
+#
+# Usage: open in RStudio and press Source, or Rscript code/scrnaseq/01_load_and_qc.R
+# Paths are built with here() from the repository folder; R's working directory
+# must be inside the repository (always the case in the RStudio project).
+#
+# Data: GSE186658 (Zindel et al. 2021, Nat Commun), mouse peritoneal injury sites
+# ("buttons") 24 h after surgery, sterile (B24h) or with microbial contamination by
+# cecal ligation and puncture (BCLP24h), two mice each, 10x Genomics. GEO holds the
+# filtered count matrices, 110 MB; they are downloaded once into code/scrnaseq/data/.
+#
+# Output in code/scrnaseq/output/: qc_violins.png, qc_cells_per_sample.csv,
+#         after_qc.rds (the filtered object for 02_cluster.R)
+
+library(Seurat)
+library(ggplot2)
+library(here)
+
+data_dir <- here("code", "scrnaseq", "data")
+out_dir <- here("code", "scrnaseq", "output")
+dir.create(data_dir, showWarnings = FALSE)
+dir.create(out_dir, showWarnings = FALSE)
+
+# 1. Download once and check that the file is complete.
+tar_file <- file.path(data_dir, "GSE186658_RAW.tar")
+url <- "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE186nnn/GSE186658/suppl/GSE186658_RAW.tar"
+if (!file.exists(tar_file)) {
+  options(timeout = 600)
+  download.file(url, tar_file, mode = "wb")
+}
+stopifnot(tools::md5sum(tar_file) == "f63ee50eaeccb04c07502c55d8d49a31")
+if (length(list.files(data_dir, pattern = "matrix.mtx.gz$")) < 4) {
+  untar(tar_file, exdir = data_dir, tar = "internal")
+}
+
+# 2. One Seurat object per sample, then merged into one.
+samples <- c("GSM5658643_B24h1", "GSM5658644_B24h2",
+             "GSM5658645_BCLP24h1", "GSM5658646_BCLP24h2")
+objects <- lapply(samples, function(s) {
+  counts <- ReadMtx(mtx      = file.path(data_dir, paste0(s, "_matrix.mtx.gz")),
+                    cells    = file.path(data_dir, paste0(s, "_barcodes.tsv.gz")),
+                    features = file.path(data_dir, paste0(s, "_features.tsv.gz")))
+  CreateSeuratObject(counts, project = sub("^GSM[0-9]+_", "", s), min.cells = 3)
+})
+cells <- merge(objects[[1]], objects[-1], add.cell.ids = sub("^GSM[0-9]+_", "", samples))
+cells <- JoinLayers(cells)
+cells$sample <- cells$orig.ident
+cells$condition <- ifelse(grepl("CLP", cells$sample), "contaminated (CLP)", "sterile")
+
+# 3. Quality metrics: genes and molecules per cell, and the share of mitochondrial
+# reads (high in dying cells).
+cells[["percent_mt"]] <- PercentageFeatureSet(cells, pattern = "^mt-")
+
+p <- VlnPlot(cells, features = c("nFeature_RNA", "nCount_RNA", "percent_mt"),
+             group.by = "sample", pt.size = 0, ncol = 3)
+ggsave(file.path(out_dir, "qc_violins.png"), p, width = 12, height = 4.5)
+
+# 4. Filter. Look at qc_violins.png first: these thresholds are a starting point,
+# and the choice goes into your notebook with the reason.
+min_genes <- 200
+max_genes <- 6000
+max_mt <- 10
+before <- table(cells$sample)
+cells <- subset(cells, nFeature_RNA > min_genes & nFeature_RNA < max_genes & percent_mt < max_mt)
+after <- table(cells$sample)
+
+qc <- data.frame(sample = names(before), before = as.vector(before), after = as.vector(after[names(before)]))
+write.csv(qc, file.path(out_dir, "qc_cells_per_sample.csv"), row.names = FALSE)
+print(qc)
+
+saveRDS(cells, file.path(out_dir, "after_qc.rds"))
+cat("Kept", ncol(cells), "cells. Next: 02_cluster.R\n")
+```
+
+---
+
+<!-- file: code/scrnaseq/02_cluster.R -->
+
+```r
+#!/usr/bin/env Rscript
+# Part 1b: normalise, cluster, and find the macrophages.
+#
+# Usage: open in RStudio and press Source, or Rscript code/scrnaseq/02_cluster.R
+# Input:  after_qc.rds from 01_load_and_qc.R, in code/scrnaseq/output/
+# Output in code/scrnaseq/output/: umap_clusters.png, umap_condition.png,
+#         macrophage_markers.png, clustered.rds
+
+library(Seurat)
+library(ggplot2)
+library(patchwork)
+library(here)
+
+out_dir <- here("code", "scrnaseq", "output")
+
+cells <- readRDS(file.path(out_dir, "after_qc.rds"))
+
+# 1. The standard Seurat steps. Each one is a choice; the defaults are stated.
+cells <- NormalizeData(cells)                          # counts per cell scaled to 10,000, log
+cells <- FindVariableFeatures(cells, nfeatures = 2000) # the 2,000 most variable genes
+cells <- ScaleData(cells)                              # each gene centred and scaled
+cells <- RunPCA(cells, npcs = 30)
+dims <- 1:20                                           # check ElbowPlot(cells) and say why
+cells <- FindNeighbors(cells, dims = dims)
+cells <- FindClusters(cells, resolution = 0.5)        # higher resolution, more clusters
+cells <- RunUMAP(cells, dims = dims)
+
+# To discuss once you compare with the other groups: same data, same script, but
+# your clusters or UMAP may not look exactly like your neighbour's. PCA, clustering
+# and UMAP all start from random numbers. Seurat fixes them by default (the
+# seed.use and random.seed arguments), yet package versions and computers still
+# differ. What does set.seed() do, where would you put it, and what does it mean
+# if a cluster only exists with one seed?
+
+ggsave(file.path(out_dir, "umap_clusters.png"),
+       DimPlot(cells, label = TRUE) + NoLegend(), width = 6, height = 5.5)
+ggsave(file.path(out_dir, "umap_condition.png"),
+       DimPlot(cells, group.by = "condition"), width = 7, height = 5.5)
+
+# 2. Where are the macrophages? Five markers that together mark them in the mouse.
+markers <- c("Adgre1", "Cd68", "Csf1r", "Fcgr1", "Mertk")
+p <- FeaturePlot(cells, features = markers, ncol = 3) /
+  DotPlot(cells, features = markers) + RotatedAxis()
+ggsave(file.path(out_dir, "macrophage_markers.png"), p, width = 12, height = 12)
+
+# Calling a cluster "macrophage" from five markers is manual annotation: quick and
+# transparent, but it depends on which markers you pick and on what you expect to
+# see (interpreter bias). Question: how would automated annotation compare? A
+# reference-based tool (e.g. SingleR with the ImmGen reference from celldex) labels
+# each cell by similarity to sorted, known cell types. Where do the two agree, and
+# where would you trust which?
+
+saveRDS(cells, file.path(out_dir, "clustered.rds"))
+cat("Clusters:", nlevels(cells$seurat_clusters),
+    ". Decide which clusters are macrophages from macrophage_markers.png.\n")
 ```
 
 ---
@@ -5777,12 +5914,11 @@ cat(sprintf("\nWrote %s, %s and %s\n", file.path(outdir, "elisa_results.csv"), f
 
 Template for C5. One script, one example dataset, runs end to end:
 
-```
-Rscript elisa_standard_curve.R                      # example data -> output/
-Rscript elisa_standard_curve.R my_plate.csv output  # your plate
-```
+Open the script in RStudio and press Source: it runs on the example data and writes
+to `code/elisa/output/`. For your own plate, put your CSV into `example_data/` (or
+any folder in the repository) and change the file name in the `input` line.
 
-Needs R with `ggplot2`; everything else is base R.
+Needs `ggplot2`, `dplyr`, `patchwork` and `here` from [`00_setup.R`](../00_setup.R).
 
 ### Input
 
@@ -5799,16 +5935,58 @@ plate also carried an osteopontin co-stimulation arm, which is not included.
 ### What the script does
 
 1. Blank: mean OD of the 0 pg/mL standards, subtracted from every well.
-2. Standard curve: four-parameter logistic fit (`nls`), with a log-log linear
-   fallback on the non-zero standards if the 4PL does not converge. The console
-   says which one was used and gives R² on the standards.
-3. Samples: back-calculated from the curve, multiplied by `dilution_factor`,
-   flagged when the OD is below the lowest or above the highest standard.
+2. Standard curve: four-parameter logistic fit (`nls`). The console prints the four
+   parameters and R² on the standards (above 0.99 for a good curve).
+3. Samples: back-calculated from the curve, multiplied by `dilution_factor`; wells
+   at or below the blank are set to 0; `in_range` says whether the OD lies between
+   the lowest and the top standard.
 4. Output in `output/`: `elisa_results.csv` (per well), `elisa_summary.csv` (mean,
-   SD, n per condition, number of flagged wells), `elisa_figure.png` (standard
-   curve with samples overlaid; concentration per condition).
+   SD, n and wells out of range per condition), `elisa_figure.png` (standard curve
+   with samples overlaid; concentration per condition).
 
-The `output/` folder is not tracked; the figure for the protocol page is copied to
-`protocols/figures/`.
+If `nls` stops with an error on your plate, look at the standards first and ask us:
+that is the moment to understand the curve, not to work around it.
+
+---
+
+<!-- file: code/scrnaseq/README.md -->
+
+## Single-cell RNA-seq: the in silico arm
+
+Open each script in RStudio and press Source, in order; each reads the output of
+the one before. Paths come from `here()`, so it does not matter which folder RStudio
+is in, as long as it is the course project.
+
+```
+01_load_and_qc.R   # download from GEO, load, QC, filter   (~35 s)
+02_cluster.R       # normalise, PCA, clusters, UMAP, macrophage markers   (~50 s)
+```
+
+Needs the packages from [`00_setup.R`](../00_setup.R). Times and memory
+(peak about 3.5 GB) measured on a laptop-class machine.
+
+### Data
+
+GSE186658 (Zindel et al. 2021, Nat Commun): mouse peritoneal injury sites
+("buttons") 24 h after surgery, sterile (`B24h1`, `B24h2`) or with microbial
+contamination by cecal ligation and puncture (`BCLP24h1`, `BCLP24h2`), female
+C57BL/6, 10x Genomics. GEO holds the filtered count matrices (110 MB, 13,657 cells);
+`01_load_and_qc.R` downloads them once into `data/` and checks the MD5 sum.
+`data/` and `output/` are not tracked by git.
+
+### What you decide, and write into your notebook
+
+- QC thresholds (`01`): look at `output/qc_violins.png` first. The defaults
+  (200 to 6,000 genes, less than 10% mitochondrial reads) keep 11,730 cells.
+- Number of principal components and the clustering resolution (`02`): check
+  `ElbowPlot(cells)`; the defaults (20 PCs, resolution 0.5) give 14 clusters.
+- Which clusters are macrophages (`02`): from `output/macrophage_markers.png`,
+  with the reason.
+
+### To discuss in the group
+
+- Why your UMAP may differ from your neighbour's, and what `set.seed()` does.
+- Manual annotation from a few markers versus automated, reference-based
+  annotation (e.g. SingleR with the ImmGen reference): bias, agreement, trust.
 
 ---

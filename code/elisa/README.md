@@ -2,12 +2,11 @@
 
 Template for C5. One script, one example dataset, runs end to end:
 
-```
-Rscript elisa_standard_curve.R                      # example data -> output/
-Rscript elisa_standard_curve.R my_plate.csv output  # your plate
-```
+Open the script in RStudio and press Source: it runs on the example data and writes
+to `code/elisa/output/`. For your own plate, put your CSV into `example_data/` (or
+any folder in the repository) and change the file name in the `input` line.
 
-Needs R with `ggplot2`; everything else is base R.
+Needs `ggplot2`, `dplyr`, `patchwork` and `here` from [`00_setup.R`](../00_setup.R).
 
 ## Input
 
@@ -24,14 +23,14 @@ plate also carried an osteopontin co-stimulation arm, which is not included.
 ## What the script does
 
 1. Blank: mean OD of the 0 pg/mL standards, subtracted from every well.
-2. Standard curve: four-parameter logistic fit (`nls`), with a log-log linear
-   fallback on the non-zero standards if the 4PL does not converge. The console
-   says which one was used and gives R² on the standards.
-3. Samples: back-calculated from the curve, multiplied by `dilution_factor`,
-   flagged when the OD is below the lowest or above the highest standard.
+2. Standard curve: four-parameter logistic fit (`nls`). The console prints the four
+   parameters and R² on the standards (above 0.99 for a good curve).
+3. Samples: back-calculated from the curve, multiplied by `dilution_factor`; wells
+   at or below the blank are set to 0; `in_range` says whether the OD lies between
+   the lowest and the top standard.
 4. Output in `output/`: `elisa_results.csv` (per well), `elisa_summary.csv` (mean,
-   SD, n per condition, number of flagged wells), `elisa_figure.png` (standard
-   curve with samples overlaid; concentration per condition).
+   SD, n and wells out of range per condition), `elisa_figure.png` (standard curve
+   with samples overlaid; concentration per condition).
 
-The `output/` folder is not tracked; the figure for the protocol page is copied to
-`protocols/figures/`.
+If `nls` stops with an error on your plate, look at the standards first and ask us:
+that is the moment to understand the curve, not to work around it.

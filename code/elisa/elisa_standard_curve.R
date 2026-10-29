@@ -1,165 +1,113 @@
-#!/usr/bin/env Rscript
-# ELISA standard curve and back-calculation.
+# ELISA: standard curve and back-calculation of the samples.
 #
-# Usage:
-#   Rscript elisa_standard_curve.R [input.csv] [output_dir]
-# Defaults: example_data/il6_lps_raw264_2026-09.csv and ./output
+# Open in RStudio and press Source. Paths are built with here() from the repository
+# folder.
 #
 # Input: one row per well with the columns
 #   well, type ("standard" or "sample"), condition, standard_pg_ml (standards only),
-#   lps_ng_ml (samples; optional), replicate, od450, dilution_factor
+#   replicate, od450, dilution_factor
 # The 0 pg/mL standard is the blank.
 #
-# Output: output/elisa_results.csv (per well), output/elisa_summary.csv (per
-# condition), output/elisa_figure.png (standard curve + concentrations).
-#
-# Fit: four-parameter logistic (4PL) by nls; if that fails, a log-log linear fit
-# on the non-zero standards. The console says which was used.
+# Output in code/elisa/output/: elisa_results.csv (per well),
+# elisa_summary.csv (per condition), elisa_figure.png
 
-suppressPackageStartupMessages(library(ggplot2))
+## load packages
+library(ggplot2)
+library(dplyr)
+library(patchwork)
+library(here)
 
-args <- commandArgs(trailingOnly = TRUE)
-input <- if (length(args) >= 1) args[1] else "example_data/il6_lps_raw264_2026-09.csv"
-outdir <- if (length(args) >= 2) args[2] else "output"
-dir.create(outdir, showWarnings = FALSE, recursive = TRUE)
+# input
+# replace csv file name with your data
+input <- here("code", "elisa", "example_data", "il6_lps_raw264_2026-09.csv")
 
-d <- read.csv(input, stringsAsFactors = FALSE)
-stopifnot(all(c("well", "type", "condition", "od450") %in% names(d)))
-if (!"dilution_factor" %in% names(d)) d$dilution_factor <- 1
-d$dilution_factor[is.na(d$dilution_factor)] <- 1
+# output
+outdir <- here("code", "elisa", "output")
+dir.create(outdir, showWarnings = FALSE)
 
-# 1. Blank: mean OD of the 0 pg/mL standard wells.
-std <- d[d$type == "standard", ]
-blank <- mean(std$od450[std$standard_pg_ml == 0])
-d$od_corr <- d$od450 - blank
-std <- d[d$type == "standard", ]
-cat(sprintf("Blank (0 pg/mL standard, n = %d): OD %.4f\n", sum(std$standard_pg_ml == 0), blank))
+plate <- read.csv(input)
 
-# 2. Standard curve.
-fit_4pl <- function(x, y) {
-  # a = lower asymptote, d = upper asymptote, c = inflection (pg/mL), b = slope.
-  # Several start sets: a curve that is still linear at the top standard has its
-  # upper asymptote far above the data, and nls needs to be told so.
-  starts <- list(list(a = min(y), d = max(y) * 1.2, c = max(x), b = 1),
-                 list(a = min(y), d = max(y) * 3, c = max(x) * 3, b = 1),
-                 list(a = min(y), d = max(y), c = median(x[x > 0]), b = 1))
-  for (st in starts) {
-    m <- tryCatch(nls(y ~ d + (a - d) / (1 + (x / c)^b), start = st,
-                      control = nls.control(maxiter = 1000, warnOnly = FALSE)),
-                  error = function(e) NULL)
-    if (!is.null(m)) return(m)
-  }
-  NULL
+# 1. Blank: mean OD of the 0 pg/mL standard wells, subtracted from every well.
+blank <- mean(plate$od450[plate$type == "standard" & plate$standard_pg_ml == 0])
+plate$od_corr <- plate$od450 - blank
+std <- plate[plate$type == "standard", ]
+blank
+
+# 2. Standard curve: four-parameter logistic (4PL)
+#   OD = d + (a - d) / (1 + (conc / c)^b)
+#   a = OD without IL-6 (lower plateau), d = OD with unlimited IL-6 (upper plateau),
+#   c = concentration halfway between the plateaus, b = steepness.
+# nls finds a, b, c, d by trial and improvement and needs a first guess:
+# a = lowest OD, d = a bit above the highest OD, c = top standard, b = 1.
+model <- nls(od_corr ~ d + (a - d) / (1 + (standard_pg_ml / c)^b),
+             data = std,
+             start = list(a = min(std$od_corr), d = max(std$od_corr) * 1.2,
+                          c = max(std$standard_pg_ml), b = 1))
+p <- coef(model)
+p
+
+# The same formula solved for the concentration: OD in, pg/mL out.
+od_to_conc <- function(od) {
+  p["c"] * ((p["a"] - p["d"]) / (od - p["d"]) - 1)^(1 / p["b"])
 }
-model <- fit_4pl(std$standard_pg_ml, std$od_corr)
-if (!is.null(model)) {
-  p <- coef(model)
-  method <- "4PL"
-  predict_od <- function(x) p["d"] + (p["a"] - p["d"]) / (1 + (x / p["c"])^p["b"])
-  invert <- function(y) {
-    out <- p["c"] * ((p["a"] - p["d"]) / (y - p["d"]) - 1)^(1 / p["b"])
-    out[y <= p["a"]] <- 0            # at or below the lower asymptote
-    out[y >= p["d"]] <- NA           # at or above the upper asymptote
-    as.numeric(out)
-  }
-  cat(sprintf("Fit: 4PL  a = %.4f  d = %.4f  c = %.1f pg/mL  b = %.3f\n", p["a"], p["d"], p["c"], p["b"]))
-} else {
-  nz <- std[std$standard_pg_ml > 0 & std$od_corr > 0, ]
-  lmfit <- lm(log(od_corr) ~ log(standard_pg_ml), data = nz)
-  k <- coef(lmfit)
-  method <- "log-log linear (4PL failed)"
-  predict_od <- function(x) exp(k[1] + k[2] * log(x))
-  invert <- function(y) { out <- rep(0, length(y)); ok <- y > 0; out[ok] <- exp((log(y[ok]) - k[1]) / k[2]); as.numeric(out) }
-  cat(sprintf("Fit: log-log linear (4PL did not converge)  slope = %.3f\n", k[2]))
-}
-r2 <- 1 - sum((std$od_corr - predict_od(std$standard_pg_ml))^2) / sum((std$od_corr - mean(std$od_corr))^2)
-cat(sprintf("R^2 on standards: %.4f\n", r2))
 
-# 3. Back-calculate samples, apply dilution, flag the range.
-lo <- min(std$od_corr[std$standard_pg_ml > 0]); hi <- max(std$od_corr)
-top_std <- max(std$standard_pg_ml); bottom_std <- min(std$standard_pg_ml[std$standard_pg_ml > 0])
-d$conc_pg_ml <- NA_real_; d$flag <- ""
-s <- d$type == "sample"
-d$conc_pg_ml[s] <- invert(d$od_corr[s]) * d$dilution_factor[s]
-d$flag[s & d$od_corr < lo] <- sprintf("below lowest standard (%g pg/mL)", bottom_std)
-d$flag[s & d$od_corr > hi] <- sprintf("above top standard (%g pg/mL)", top_std)
-d$flag[s & is.na(d$conc_pg_ml)] <- "not calculable (above upper asymptote)"
-d$fit <- method
-write.csv(d, file.path(outdir, "elisa_results.csv"), row.names = FALSE)
+# How well does the curve fit the standards? R² = 1 - (spread left around the
+# curve) / (total spread of the standard ODs). 1 is a perfect fit; a good ELISA
+# standard curve is above 0.99.
+r2 <- 1 - sum(residuals(model)^2) / sum((std$od_corr - mean(std$od_corr))^2)
+r2
+# Question: how would you validate R²? A single number can hide where the curve
+# misses. Consider plotting it, e.g. residuals(model) against the standard
+# concentration, or each standard's known vs back-calculated value.
 
-samp <- d[s, ]
+# 3. Samples: concentration from the curve, times the dilution.
+# Only wells between the lowest and the top standard are trusted (in_range).
+lowest_std <- min(std$standard_pg_ml[std$standard_pg_ml > 0])
+top_std <- max(std$standard_pg_ml)
+samp <- plate[plate$type == "sample", ]
+samp$conc_pg_ml <- od_to_conc(samp$od_corr) * samp$dilution_factor
+samp$conc_pg_ml[samp$od_corr <= p["a"]] <- 0   # at or below the blank: no IL-6 detected
+samp$in_range <- samp$od_corr >= min(std$od_corr[std$standard_pg_ml == lowest_std]) &
+                 samp$od_corr <= max(std$od_corr[std$standard_pg_ml == top_std])
 samp$condition <- factor(samp$condition, levels = unique(samp$condition))
-summ <- aggregate(conc_pg_ml ~ condition, samp, function(v) c(mean = mean(v), sd = sd(v), n = length(v)))
-summ <- data.frame(condition = summ$condition, mean_pg_ml = summ$conc_pg_ml[, "mean"],
-                   sd_pg_ml = summ$conc_pg_ml[, "sd"], n = summ$conc_pg_ml[, "n"])
-summ$flagged_wells <- sapply(summ$condition, function(cc) sum(samp$flag[samp$condition == cc] != ""))
+write.csv(samp, file.path(outdir, "elisa_results.csv"), row.names = FALSE)
+
+summ <- samp |>
+  group_by(condition) |>
+  summarise(mean_pg_ml = mean(conc_pg_ml), sd_pg_ml = sd(conc_pg_ml),
+            n = n(), out_of_range = sum(!in_range))
 write.csv(summ, file.path(outdir, "elisa_summary.csv"), row.names = FALSE)
-cat("\nPer condition (pg/mL):\n"); print(summ, row.names = FALSE, digits = 4)
+summ
 
-# 4. Figure: standard curve with samples overlaid; concentration per condition.
-ink <- "#1F2933"; muted <- "#6B7280"; blue <- "#2A6EBB"; grey_pt <- "#9AA3AE"
-theme_course <- theme_minimal(base_size = 11) +
-  theme(panel.grid.minor = element_blank(), panel.grid.major = element_line(colour = "#E5E7EB", linewidth = 0.3),
-        axis.text = element_text(colour = ink), axis.title = element_text(colour = ink),
-        plot.title = element_text(colour = ink, face = "bold", size = 11),
-        plot.subtitle = element_text(colour = muted, size = 9), plot.background = element_rect(fill = "white", colour = NA))
+# 4. Figure.
+# Left: the curve drawn far beyond the standards so the whole S-shape is visible.
+# The standards (shaded) usually cover only the lower, nearly straight part.
+curve <- data.frame(standard_pg_ml = 10^seq(-1, 6, length.out = 400))
+curve$od_corr <- predict(model, newdata = curve)
 
-# The curve is drawn well beyond the standards so that the whole sigmoid is visible:
-# the kit range usually sits on the lower, nearly linear limb, and the upper plateau
-# of the 4PL often lies above what the reader can measure. The shaded band is the
-# range the standards cover; only samples inside it are trusted.
-if (method == "4PL") {
-  xmin <- min(bottom_std / 10, p["c"] / 300)
-  xmax <- max(top_std * 10, p["c"] * 300)
-} else {
-  xmin <- bottom_std / 10; xmax <- top_std * 10
-}
-curve <- data.frame(x = exp(seq(log(xmin), log(xmax), length.out = 400)))
-curve$y <- predict_od(curve$x)
-std_plot <- std[std$standard_pg_ml > 0, ]
-samp_plot <- samp[!is.na(samp$conc_pg_ml) & samp$conc_pg_ml > 0, ]
-ymax <- if (method == "4PL") max(p["d"], max(std$od_corr)) * 1.05 else max(curve$y) * 1.05
-log_breaks <- 10^seq(floor(log10(xmin)), ceiling(log10(xmax)))
 p1 <- ggplot() +
-  annotate("rect", xmin = bottom_std, xmax = top_std, ymin = -Inf, ymax = Inf, fill = "#E8F0FA", alpha = 0.6) +
-  annotate("text", x = sqrt(bottom_std * top_std), y = ymax * 0.72, label = sprintf("kit range\n%s to %s pg/mL", signif(bottom_std, 3), signif(top_std, 3)),
-           size = 3, colour = muted) +
-  geom_line(data = curve, aes(x, y), colour = ink, linewidth = 0.6) +
-  geom_point(data = std_plot, aes(standard_pg_ml, od_corr), shape = 21, fill = "white", colour = ink, size = 2.4, stroke = 0.6) +
-  geom_point(data = samp_plot, aes(conc_pg_ml, od_corr), colour = blue, size = 2.4) +
-  scale_x_log10(breaks = log_breaks, labels = function(v) format(v, big.mark = ",", scientific = FALSE, trim = TRUE)) +
-  scale_y_continuous(limits = c(0, ymax), expand = expansion(mult = c(0, 0.02))) +
+  annotate("rect", xmin = lowest_std, xmax = top_std, ymin = -Inf, ymax = Inf,
+           fill = "lightblue", alpha = 0.3) +
+  geom_hline(yintercept = c(p["a"], p["d"]), linetype = "dashed", colour = "grey50") +
+  geom_vline(xintercept = p["c"], linetype = "dashed", colour = "grey50") +
+  geom_line(data = curve, aes(standard_pg_ml, od_corr)) +
+  geom_point(data = std[std$standard_pg_ml > 0, ], aes(standard_pg_ml, od_corr), shape = 21, fill = "white") +
+  geom_point(data = samp[samp$conc_pg_ml > 0, ], aes(conc_pg_ml, od_corr), colour = "steelblue") +
+  scale_x_log10() +
   labs(x = "IL-6 (pg/mL, log scale)", y = "OD 450 nm, blank-subtracted",
-       title = "Standard curve, drawn to both plateaus",
-       subtitle = sprintf("%s fit, R² = %.3f. Open circles: standards. Blue: samples.", method, r2)) +
-  theme_course
-if (method == "4PL") {
-  p1 <- p1 +
-    geom_hline(yintercept = c(p["a"], p["d"]), linetype = "22", colour = muted, linewidth = 0.4) +
-    annotate("text", x = xmax, y = p["d"], label = sprintf("upper plateau, OD %.1f (beyond the reader)", p["d"]),
-             hjust = 1, vjust = 1.5, size = 3, colour = muted) +
-    annotate("text", x = xmax, y = p["a"], label = sprintf("lower plateau, OD %.2f", p["a"]),
-             hjust = 1, vjust = -0.5, size = 3, colour = muted) +
-    geom_vline(xintercept = p["c"], linetype = "22", colour = muted, linewidth = 0.4) +
-    annotate("text", x = p["c"], y = ymax * 0.3, label = sprintf("inflection\nc = %.0f pg/mL", p["c"]),
-             hjust = -0.08, size = 3, colour = muted)
-}
+       title = sprintf("Standard curve, 4PL, R² = %.3f", r2),
+       subtitle = "Shaded: standards. Dashed: plateaus a, d and midpoint c.\nOpen circles: standards. Blue: samples.") +
+  theme_classic()
 
-summ$x <- as.numeric(summ$condition); samp$x <- as.numeric(samp$condition)
-p2 <- ggplot() +
-  geom_col(data = summ, aes(x = condition, y = mean_pg_ml), fill = NA, colour = blue, width = 0.6, linewidth = 0.6) +
-  geom_errorbar(data = summ, aes(x = condition, ymin = mean_pg_ml - sd_pg_ml, ymax = mean_pg_ml + sd_pg_ml), width = 0.2, colour = blue, linewidth = 0.5) +
-  geom_jitter(data = samp, aes(x = condition, y = conc_pg_ml), width = 0.08, height = 0, colour = blue, size = 2.2, alpha = 0.9) +
-  geom_text(data = summ, aes(x = condition, y = mean_pg_ml + sd_pg_ml, label = sprintf("%.0f", mean_pg_ml)), vjust = -0.6, size = 3.2, colour = ink) +
-  scale_y_continuous(expand = expansion(mult = c(0, 0.12))) +
+# Right: concentration per condition, mean ± SD and the single wells.
+p2 <- ggplot(summ, aes(condition, mean_pg_ml)) +
+  geom_col(fill = NA, colour = "steelblue", width = 0.6) +
+  geom_errorbar(aes(ymin = mean_pg_ml - sd_pg_ml, ymax = mean_pg_ml + sd_pg_ml), width = 0.2) +
+  geom_jitter(data = samp, aes(condition, conc_pg_ml), width = 0.08, height = 0, colour = "steelblue") +
   labs(x = NULL, y = "IL-6 (pg/mL)", title = "IL-6 per condition",
        subtitle = "Bar: mean ± SD of triplicate wells. Points: wells.") +
-  theme_course + theme(axis.text.x = element_text(angle = 20, hjust = 1))
+  theme_classic() +
+  theme(axis.text.x = element_text(angle = 20, hjust = 1))
 
-png(file.path(outdir, "elisa_figure.png"), width = 2000, height = 850, res = 200)
-grid::grid.newpage()
-grid::pushViewport(grid::viewport(layout = grid::grid.layout(1, 2)))
-print(p1, vp = grid::viewport(layout.pos.row = 1, layout.pos.col = 1))
-print(p2, vp = grid::viewport(layout.pos.row = 1, layout.pos.col = 2))
-invisible(dev.off())
-cat(sprintf("\nWrote %s, %s and %s\n", file.path(outdir, "elisa_results.csv"), file.path(outdir, "elisa_summary.csv"), file.path(outdir, "elisa_figure.png")))
+p1 + p2
+ggsave(file.path(outdir, "elisa_figure.png"), p1 + p2, width = 10, height = 4.25)
