@@ -3389,8 +3389,8 @@ platelet aggregation
                                      0.240 s      0.260 s   0.280s
 
                           60
-
 Distance to injury [um]
+
                           40
 
                           20
@@ -4686,9 +4686,7 @@ Severe Injury   https://doi.org/10.1016/j.cell.2018.01.015
              Macrophage Switch: the phenomenon
 
              Focal liver injury
-
 CCR2-RFP
-
 CX3CR1-GFP
 
                                                    https://doi.org/10.1084/jem.20141539
@@ -4696,7 +4694,6 @@ CX3CR1-GFP
                Macrophage Switch: iNKT cells and glycolipid self-antigens
 
              Focal liver injury
-
 Cxcr6GFP/+
 
                https://doi.org/10.1016/j.immuni.2017.09.016
@@ -5569,7 +5566,8 @@ Before any script, including the ELISA: once, on the first Friday, we will open
 Source (or `source("code/00_setup.R")` in the console). It installs Seurat,
 ggplot2, dplyr, readr, patchwork, here and readxl from a dated package
 snapshot: the same versions for everyone. If you already have R projects whose package versions you want to keep: talk to us and we set you up with renv, which keeps the course packages separate. If you
-work on Linux: Seurat needs one system library, `sudo apt install libglpk40`. And if your laptop has less than 8 GB of memory... never mind such a laptop probably doesn't exist anymore.
+work on Linux: Seurat needs one system library, `sudo apt install libglpk40`. And if your laptop has less than 8 GB of memory, tell us before the course: the
+single-cell part needs about 4 GB, and the lab has a few spare machines.
 
 ### The templates
 
