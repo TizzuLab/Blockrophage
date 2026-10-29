@@ -831,17 +831,15 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 > whole course (Part A), then keep it growing and seed plates from it at a defined
 > density (Part B). From this flask you plate the polarization experiment on Tuesday of
 > week 2 and the challenge experiment on Tuesday of week 3, with the polarizer already
-> in the seeding suspension (C2). The first time you scrape, count and split is on the
-> staff culture, on the Friday morning of week 1.
+> in the seeding suspension (C2). The first time you scrape, count and split is on the 
+> Friday morning of week 1.
 >
 > Splits are counted from the thaw as course passage 0; the absolute passage of the lab
-> stock is not known, and the course passage count goes on the poster. The stock is
-> validated by the lab's own LPS ladder (C5, worked example) and tested for mycoplasma
-> before the course.
+> stock should be noted and can vary slight, so the course passage count goes on the poster. 
+> The stock is tested for mycoplasma by the staff before the course.
 >
-> Who looks after the flask: you, on course days; the staff over the weekend and the
-> Easter break (split every two to three days, backup vials frozen before the break,
-> S01). After the break, passaging your stock is a background task with your supervisor
+> **Who looks after the flask:** you, on course days; the staff over the
+> Easter break, weekends are to negotiated (split every two to three days, backup vials frozen before the break, S01). After the break, passaging your stock is a background task with your supervisor
 > at the next hood, on Tuesdays when you plate and once more on Thursday or Friday.
 >
 > ### Materials
@@ -923,8 +921,6 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 >     | 24-well | 1.2 × 10^5 | 500 µL | RNA arm, X01 |
 >     | 6-well | 6 × 10^5 | 2 mL | flow cytometry, C3 |
 >
->     The 96-well density is the lab's. The 24- and 6-well densities are scaled from it
->     by growth area (about 6 × 10^4 cells/cm²).
 >
 > > [!IMPORTANT]
 > > **To verify:** the 24- and 6-well densities are derived, not tested. Check in
@@ -939,7 +935,7 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 >     the suspension (C2). Harvest (C3) or challenge (C4) the next morning.
 > 16. Before the Easter break the staff freeze two or three backup vials from your
 >     flask (S01) and carry the flask through the break; after the break the splits
->     are yours again, with your supervisor beside you.
+>     are done by you again.
 >
 > ### Controls
 >
