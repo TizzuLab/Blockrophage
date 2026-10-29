@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this course material, please cite it as below."
+type: dataset
+title: "Blockrophage: Macrophage Biology in vitro, in vivo, in silico. An open block course"
+abstract: >-
+  Open course material for a four-week block course on macrophage biology at
+  D-BIOL, ETH Zürich: course script, schedule, lab protocols, background reading,
+  analysis code and a single-file AI companion. Students polarize RAW 264.7
+  macrophages, challenge them with danger signals and compare the in vitro states
+  with tissue macrophages in a published single-cell dataset.
+authors:
+  - family-names: Zindel
+    given-names: Joel
+    affiliation: "ETH Zürich"
+license:
+  - CC-BY-4.0
+  - MIT
+repository-code: "https://github.com/TizzuLab/Blockrophage"
+url: "https://zindellab.ch/blockcourse.html"
+keywords:
+  - macrophages
+  - immunology
+  - teaching
+  - open educational resources
+  - RAW 264.7
+  - single-cell RNA sequencing
