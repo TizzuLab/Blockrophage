@@ -104,13 +104,14 @@ For practical purposes the lecture reduces this to one question (slide 10): is t
 cell of embryonic origin under homeostatic conditions? If yes, it is a tissue-resident
 macrophage of yolk-sac or fetal-liver origin that self-renews locally. If no, it is
 bone-marrow-derived: a monocyte that entered the tissue in a CCR2-dependent manner,
-is short-lived, and can expand massively when the tissue is injured or infected. Many
-niches are mixed, and the mix shifts with age. The large peritoneal macrophages of
-the peritoneal cells extension are an example: embryonic at birth, progressively replaced by
+is short-lived, and can expand massively when the tissue is injured or infected. Importantly: 
+many tissue-resident macrophages are of embryonic origin at birth or in young age, but get
+progressively replaced by identical (or near-identical) tissue macrophages from the circulation. 
+The large peritoneal macrophages of the peritoneal cells extension are an example: embryonic at birth, progressively replaced by
 monocyte-derived cells in adult life, faster in males than in females ([Bain et al.,
 2016](https://doi.org/10.1038/ncomms11852)).
 
-Now place the cells of this course on that tree. RAW 264.7 cells are none of the
+IN this course we use for practicality reasons RAW 264.7 cells which are none of the
 above. They were established in 1978 from a tumour induced in a BALB/c mouse by
 Abelson murine leukaemia virus ([Raschke et al., 1978](https://doi.org/10.1016/0092-8674%2878%2990101-0)). They are transformed,
 aneuploid, proliferate without CSF1, and have been in culture for almost fifty years.
