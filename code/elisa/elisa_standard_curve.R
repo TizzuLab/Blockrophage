@@ -69,6 +69,10 @@ samp$in_range <- samp$od_corr >= min(std$od_corr[std$standard_pg_ml == lowest_st
 samp$condition <- factor(samp$condition, levels = unique(samp$condition))
 write.csv(samp, file.path(outdir, "elisa_results.csv"), row.names = FALSE)
 
+# One row per condition: dplyr from the tidyverse, worth it for grouped summaries.
+# |> passes the table on to the next step ("and then"); in older code and many
+# tutorials you will see %>% from magrittr, which does the same here
+# (ceci n'est vraiment plus une pipe).
 summ <- samp |>
   group_by(condition) |>
   summarise(mean_pg_ml = mean(conc_pg_ml), sd_pg_ml = sd(conc_pg_ml),
