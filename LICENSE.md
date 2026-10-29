@@ -9,6 +9,3 @@
 Lecture decks in `slides/` are the lecturer's own material and are covered by the
 CC BY licence, with one exception: figures taken from the published literature are
 cited on the slide, remain the property of their owners, and are not relicensed here.
-
-`[TODO: confirm the licence choice with the department before the repository goes
-public.]`
