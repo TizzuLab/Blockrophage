@@ -7,8 +7,7 @@
 #
 # Packages come from a dated snapshot of the Posit Package Manager, so everyone
 # gets the same versions, as ready-built binaries for Windows, macOS and Linux
-# (nothing compiled, except DESeq2 on Linux). Change the date only between course
-# years.
+# (nothing is compiled on your laptop). Change the date only between course years.
 
 snapshot <- "2026-10-01"
 
@@ -29,15 +28,10 @@ packages <- c(
   "readr",      # reading CSV files
   "patchwork",  # putting figures side by side
   "here",       # file paths from the repository folder, on every computer
-  "BiocManager" # installs Bioconductor packages, next line
+  "readxl"      # reading Excel tables (published signatures)
 )
 
 install.packages(packages)
-
-# DESeq2 (bulk RNA-seq) comes from Bioconductor, which releases one fixed set of
-# packages per R version. On Linux it is compiled, about 3 minutes.
-BiocManager::install("DESeq2", update = FALSE, ask = FALSE)
-packages <- c(packages, "DESeq2")
 
 # Check: every package loads, and print the versions for your notebook.
 for (p in packages) library(p, character.only = TRUE)

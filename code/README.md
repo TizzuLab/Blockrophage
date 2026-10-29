@@ -10,10 +10,9 @@ repository folder.
 
 Once, on the first Friday, open [`00_setup.R`](00_setup.R) in RStudio and press
 Source (or `source("code/00_setup.R")` in the console). It installs Seurat,
-ggplot2, dplyr, readr, patchwork and here from a dated package snapshot, and DESeq2
-from Bioconductor: the same
-versions for everyone, ready-built for Windows, macOS and Linux (on Linux DESeq2 is
-compiled, about 3 minutes).
+ggplot2, dplyr, readr, patchwork, here and readxl from a dated package
+snapshot: the same versions for everyone, ready-built for Windows, macOS and Linux,
+nothing compiled.
 A few minutes; it ends by printing the versions, which go into your notebook.
 
 - First time with R: just run it.
@@ -33,7 +32,7 @@ description of the object.
 | `griess/` | Linear nitrite standard, concentration table, plots | plate-reader export, plate map | `griess_results.csv`, figures |
 | `flow/` | Reads the population statistics exported from FlowJo and plots them. Gating is done in FlowJo, not in R | FlowJo CSV export | figures |
 | `growth_curve/` | Optional (extension, X05): doubling time from counts, with the published value as a reference line | counts table | figure, doubling time |
-| `scrnaseq/` | The in silico arm, three parts (below). Parts 1 to 3 written; run from GEO in about 2 min | GEO matrices and count table, downloaded by the scripts | figures, Seurat objects, signatures |
+| `scrnaseq/` | The in silico arm, three parts (below), five scripts; run from GEO in about 3 min | GEO matrices and a published signature table, downloaded by the scripts | figures, Seurat objects, scores |
 | `qpcr/` | ΔΔCt for the X01 extension | Ct export | figures |
 
 `[TODO: write the remaining templates; each folder gets a README, an `example_data/`
@@ -42,18 +41,12 @@ model.]`
 
 ## The in silico arm, `scrnaseq/`
 
-Two datasets; nobody starts from raw reads:
-
-- `GSE186658`: single-cell RNA-seq of mouse peritoneal injury sites, sterile or
-  contaminated (CLP), two mice each (Zindel et al. 2021, Nat Commun). The scripts
-  download the filtered count matrices from GEO and run quality control,
-  normalisation, clustering and the macrophage markers themselves, on a laptop, in
-  about a minute and a half ([`scrnaseq/`](scrnaseq/README.md)); the macrophage
-  subclusters are **not** annotated.
-- `GSE113836`: bulk RNA-seq of RAW 264.7 and bone marrow macrophages in medium,
-  LPS plus IFNγ or IL-4, two replicates each (Huffaker et al. 2021, Nat Commun).
-  The script downloads the raw count table from GEO and writes the sample sheet
-  from the GEO sample descriptions.
+One dataset, one standard single-cell workflow; nobody starts from raw reads:
+`GSE186658`, single-cell RNA-seq of mouse peritoneal injury sites, sterile or
+contaminated (CLP), two mice each (Zindel et al. 2021, Nat Commun). The scripts
+download the filtered count matrices from GEO and run everything on a laptop, in
+about three minutes ([`scrnaseq/`](scrnaseq/README.md)); the macrophage
+subclusters are **not** annotated.
 
 Three parts, matched to the dry-lab halves of weeks 2 and 3:
 
@@ -61,20 +54,19 @@ Three parts, matched to the dry-lab halves of weeks 2 and 3:
    (cells per sample before and after filtering), cluster, and find the macrophages
    by `Adgre1`, `Cd68`, `Csf1r`, `Fcgr1` and `Mertk` (`01_load_and_qc.R`,
    `02_cluster.R`).
-2. **Derive the signatures** (week 3). Differential expression in the bulk data,
-   M(IFNγ+LPS) versus M(-) and M(IL-4) versus M(-), in RAW 264.7 cells; take the top
-   genes by a stated rule; compare with the Murray et al. 2014 table and with the
-   consolidated sets of Colombo et al. 2024 (`03_signatures.R`, DESeq2; limma-voom
-   with Glimma as the alternative).
-3. **Score the tissue** (week 3). Score every macrophage in the single-cell object
-   against both signatures (`AddModuleScore` or equivalent), plot the two scores
-   against each other and on the UMAP, and answer: how much of the tissue population
-   does either signature explain, and what do cells with both scores high mean for
-   the M1/M2 axis (`04_score.R`).
+2. **M1 or M2?** (week 3). Find the markers of the macrophage clusters and decide,
+   before any score, which cluster is M1 and which M2 (`03_markers.R`). Then score
+   every cell with the classic M1/M2 markers and with the in vitro consensus
+   signatures of Colombo et al. 2024 for IFNγ and IL-4 (`04_m1_m2_score.R`). The
+   point: the dichotomy is not wrong, it is a description made for one setting and
+   one depth of readout; in tissue it fades.
+3. **Your own signature** (week 3 to the poster). Pick a macrophage state from the
+   single-cell literature (lipid-associated, scar-associated, resident subsets,
+   cavity macrophages, ...) or build one from your markers, score it, and put it on
+   the poster (`05_own_signature.R`).
 
-Optional extensions that start from here: annotate the Gata6+, Folr2+ Selenop+ and
-Trem2+ Spp1+ populations; rerun the pipeline from the GEO matrices; integrate with a
-true in vitro single-cell dataset (Sanin et al. 2022 `[TODO: accession]`).
+Where to go from here, for groups that want more: see
+[potential extensions](scrnaseq/README.md#potential-extensions).
 
 The answer key lives in a separate private repository and is released after the
 course.

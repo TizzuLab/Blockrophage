@@ -96,7 +96,3 @@ decks in [../slides/](../slides/README.md), which list further reading on tissue
   injury, with and without caecal ligation and puncture, two female C57BL/6 mice per
   condition (Zindel et al. 2021, Nat Commun). The in vivo dataset of the core in
   silico task.
-- GSE113836: bulk RNA-seq of primary mouse bone marrow macrophages and RAW 264.7
-  cells skewed with LPS plus IFNγ or with IL-4, two replicates each, raw counts
-  (Huffaker et al. 2021, [Nat Commun](https://doi.org/10.1038/s41467-021-22923-5)).
-  Source of the in vitro signatures.

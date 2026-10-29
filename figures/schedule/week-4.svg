@@ -73,8 +73,8 @@
 <text x="90" y="360" font-size="12" fill="#1A1A1A">Never at the cost of wrapping up.</text>
 <rect x="363.0" y="256" width="279.0" height="138" fill="#D9C3E9" stroke="#BFBFBF" stroke-width="0.8"/>
 <text x="369" y="314" font-size="12" fill="#1A1A1A">Wrap up: code, figures and poster;</text>
-<text x="369" y="330" font-size="12" fill="#1A1A1A">scRNA-seq part 3, score the tissue</text>
-<text x="369" y="344" font-size="12" fill="#1A1A1A">macrophages</text>
+<text x="369" y="330" font-size="12" fill="#1A1A1A">scRNA-seq part 3, your own signature</text>
+<text x="369" y="344" font-size="12" fill="#1A1A1A">for the poster</text>
 <rect x="642.0" y="256" width="279.0" height="195" fill="#D9C3E9" stroke="#BFBFBF" stroke-width="0.8"/>
 <text x="648" y="343" font-size="12" fill="#1A1A1A">Wrap up, continued: code, figures,</text>
 <text x="648" y="358" font-size="12" fill="#1A1A1A">poster, group branch. Stock flask</text>
