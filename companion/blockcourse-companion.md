@@ -5547,11 +5547,30 @@ ELISA and for the single-cell analysis of Experiment 2 only; the rest is yours.
 
 ### Step 0: the packages
 
-Once, on the first Friday, we will open [`00_setup.R`](00_setup.R) in RStudio and press
+Remember from class: base R comes with many functions, but we often need more.
+More comes in packages, written by others and shared through CRAN. This lab works
+in the tidyverse dialect of R: `ggplot2` for figures, `dplyr` for tables, `readr`
+for reading files. A package is installed once and loaded in every session that
+uses it:
+
+```r
+install.packages(c("ggplot2", "dplyr", "readr"))   # once: downloads them to your computer
+library(ggplot2)                                   # every session: makes its functions available
+packageVersion("ggplot2")                          # which version you have
+```
+
+That is how you will add any package your own analysis needs later. But packages
+come in versions, and versions can differ in what a function does. So that we all
+work with the same packages, we install the course packages with a setup script
+instead, from a dated snapshot.
+
+Before any script, including the ELISA: once, on the first Friday, we will open
+[`00_setup.R`](00_setup.R) in RStudio and press
 Source (or `source("code/00_setup.R")` in the console). It installs Seurat,
 ggplot2, dplyr, readr, patchwork, here and readxl from a dated package
 snapshot: the same versions for everyone. If you already have R projects whose package versions you want to keep: talk to us and we set you up with renv, which keeps the course packages separate. If you
-work on Linux: Seurat needs one system library, `sudo apt install libglpk40`. And if your laptop has less than 8 GB of memory... never mind such a laptop probably doesn't exist anymore.
+work on Linux: Seurat needs one system library, `sudo apt install libglpk40`. And if your laptop has less than 8 GB of memory, tell us before the course: the
+single-cell part needs about 4 GB, and the lab has a few spare machines.
 
 ### The templates
 
