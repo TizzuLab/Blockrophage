@@ -12,7 +12,7 @@ literature are cited on the slide and remain the property of their owners.
 
 ## 5.1 A cell with many names
 
-In 1892 Ilya Mechnikov described cells that eat: small eaters, which we now call
+From 1882 onwards Ilya Mechnikov described cells that eat: small eaters, which we now call
 neutrophils, and large eaters, the macrophages. Aschoff grouped them with
 endothelial and reticular cells into a reticulo-endothelial system. In the late 1960s
 van Furth and colleagues replaced that with the mononuclear phagocyte system, built
@@ -25,10 +25,10 @@ circulation and settled. In 1973 Steinman added the dendritic cell as a third me
 *Figure 1. The historical concepts: Mechnikov's phagocytes, Aschoff's reticulo-endothelial system, van Furth's mononuclear phagocyte system and Steinman's dendritic cell (Immunology III, slide 3.)*
 
 The monocyte premise held for forty years but with the availability of fate-mapping
-experiments published between 2010 and 2013, the field showed that most tissue-resident
+experiments published between 2010 and 2013, the field showed that many tissue-resident
 macrophages are seeded during embryonic development and maintain themselves by
 local proliferation, with little or no input from blood monocytes in the steady state
-(Schulz et al. 2012; Yona et al. 2013; Hashimoto et al. 2013). The first split in
+(reviewed in [Ginhoux & Guilliams, 2016](https://doi.org/10.1016/j.immuni.2016.02.024)). The first split in
 the family is therefore by origin: embryo-derived macrophages that seed a tissue
 before birth and renew themselves there, next to monocyte-derived macrophages that
 arrive from the blood, mostly when something is wrong.
@@ -45,28 +45,30 @@ A system that sorts these cells was received with open arms.
 
 The system that stuck came from Charles Mills in 2000. Macrophages from mouse strains
 with a Th1-biased T cell response, such as C57BL/6, metabolise arginine through
-inducible nitric oxide synthase (Nos2) to nitric oxide; macrophages from Th2-biased
-strains, such as BALB/c, metabolise it through arginase 1 (Arg1) to ornithine and
-polyamines. He named the two programmes M1 and M2 in deliberate analogy to the Th1
-and Th2 helper T cells of Mosmann and Coffman (1986), and the analogy carried the
-cytokines with it: IFNγ, the Th1 cytokine, makes M1, and IL-4 with IL-13, the Th2
-cytokines, make M2 (Mills et al. 2000). Siamon Gordon had already described the
-"alternative activation" of macrophages by IL-4, with the mannose receptor CD206 as
-its marker (Stein et al. 1992; Gordon 2003), and Mantovani and colleagues adopted
-M1/M2 for tumour-associated macrophages and added the sub-types M2a, b and c
-(Mantovani et al. 2002, 2004). The scheme stuck because it fits in one sentence:
+inducible nitric oxide synthase (Nos2) to nitric oxide when stimulated with IFNγ or
+LPS; macrophages from Th2-biased strains, such as BALB/c, respond to LPS by
+metabolising it through arginase to ornithine and polyamines. The difference persisted
+in mice without T cells, so it belonged to the macrophages. He named the two
+programmes M1 and M2 in deliberate analogy to the Th1 and Th2 helper T cells of
+Mosmann and Coffman (1986) ([Mills et al., 2000](https://doi.org/10.4049/jimmunol.164.12.6166)), and the analogy soon carried
+the cytokines with it: IFNγ, the Th1 cytokine, came to define M1, and IL-4 with IL-13,
+the Th2 cytokines, M2. Siamon Gordon's group had already shown in 1992 that IL-4
+induces the mannose receptor CD206 and called this "alternative activation", and
+Mantovani and colleagues adopted M1/M2 for tumour-associated macrophages and in 2004
+split M2 into the sub-types M2a, b and c. The scheme stuck because it fits in one sentence:
 M1 kills, M2 heals. Depending on the disease, M2 were the good guys (wound healing,
 resolution of inflammation) or the bad guys (tumours, fibrosis), and M1 the other
 way round, so every field could use it.
 
 ***Spoiler alert: if you read on, the outcome of Experiment 2 will no longer
 surprise you.*** M1/M2 turned out to be an oversimplification. The first cracks were
-between species: human macrophages make almost no nitric oxide, and several mouse
-"M2" genes have no human counterpart (Murray & Wynn 2011). Then the methods caught
+between species: human macrophages make little nitric oxide in culture, and several
+mouse "M2" genes, such as Chil3 (Ym1) and Retnla (RELMα), are not expressed in humans
+([Murray & Wynn, 2011](https://doi.org/10.1038/nri3073)). Then the methods caught
 up. Flow cytometry with a dozen markers at once showed single cells carrying M1 and
 M2 markers together; Xue and colleagues stimulated human macrophages with 29
-different conditions and found not two states but a spectrum of modules (Xue et al.
-2014); and single-cell RNA sequencing of injured, fibrotic, atherosclerotic, obese or
+different conditions and found not two states but a spectrum of modules ([Xue et al.,
+2014](https://doi.org/10.1016/j.immuni.2014.01.006)); and single-cell RNA sequencing of injured, fibrotic, atherosclerotic, obese or
 tumour-bearing tissue found states that co-express genes from both ends of the old
 axis, among them the dataset of Experiment 2 (Sections 5.4 and 5.9). The two poles
 exist in a dish because someone created them; a tissue did not read the textbook.
@@ -75,7 +77,7 @@ What replaced the labels is a nomenclature proposed by Guilliams and colleagues 
 2014 and since widely adopted: a macrophage's name answers three questions, in
 order, where it came from (ontogeny), where it lives (niche), and what it is doing
 (function or programme). It is as good as any system, and in this course we stick to
-it. The lecture turned it into a decision tree (slide 5; Guilliams et al. 2014), and
+it. The lecture turned it into a decision tree (slide 5; [Guilliams et al., 2014](https://doi.org/10.1038/nri3712)), and
 the three levels structure the rest of this chapter.
 
 ![Figure 2: The nomenclature decision tree for mononuclear phagocytes, first level by ontogeny](figures/immIII_slide05.png)
@@ -93,9 +95,10 @@ Macrophages arise in waves (slide 9). At embryonic day 8.5 erythro-myeloid
 progenitors (EMPs) emerge from the yolk sac in a RUNX1-dependent manner and
 colonise the fetal liver. EMP-derived precursor macrophages spread through the
 entire embryo during organogenesis, before haematopoietic stem cells (HSCs) exist.
-HSCs then emerge from the intra-embryonic endothelium, colonise the bone marrow
-before birth, and supply erythroid, lymphoid and myeloid cells, including monocytes
-and monocyte-derived macrophages, for the rest of life.
+HSCs then emerge from the intra-embryonic endothelium, colonise the fetal liver and,
+shortly before birth, the bone marrow, and supply erythroid, lymphoid and myeloid cells,
+including monocytes and monocyte-derived macrophages, for the rest of life
+([Ginhoux & Guilliams, 2016](https://doi.org/10.1016/j.immuni.2016.02.024)).
 
 For practical purposes the lecture reduces this to one question (slide 10): is the
 cell of embryonic origin under homeostatic conditions? If yes, it is a tissue-resident
@@ -104,15 +107,15 @@ bone-marrow-derived: a monocyte that entered the tissue in a CCR2-dependent mann
 is short-lived, and can expand massively when the tissue is injured or infected. Many
 niches are mixed, and the mix shifts with age. The large peritoneal macrophages of
 the peritoneal cells extension are an example: embryonic at birth, progressively replaced by
-monocyte-derived cells in adult life, faster in males than in females (Bain et al.
-2016).
+monocyte-derived cells in adult life, faster in males than in females ([Bain et al.,
+2016](https://doi.org/10.1038/ncomms11852)).
 
 Now place the cells of this course on that tree. RAW 264.7 cells are none of the
 above. They were established in 1978 from a tumour induced in a BALB/c mouse by
-Abelson murine leukaemia virus (Raschke et al. 1978). They are transformed,
+Abelson murine leukaemia virus ([Raschke et al., 1978](https://doi.org/10.1016/0092-8674%2878%2990101-0)). They are transformed,
 aneuploid, proliferate without CSF1, and have been in culture for almost fifty years.
 They respond strongly to LPS and IFNγ, weakly to IL-4, and they lack the inflammasome
-adaptor ASC, so they cannot release mature IL-1β (Pelegrin et al. 2008). Bone
+adaptor ASC, so they cannot release mature IL-1β ([Pelegrin et al., 2008](https://doi.org/10.4049/jimmunol.180.11.7147)). Bone
 marrow-derived macrophages (BMDM) are HSC-derived cells differentiated for seven
 days in CSF1; they are the closest in vitro relative of a monocyte-derived
 macrophage, and still have never seen a niche. Keep this in mind when you compare
@@ -134,16 +137,16 @@ or peritoneal macrophages (slide 12). Most organs contain several distinct niche
 sometimes occupied by cells of different origin, which is why a name by niche is
 necessary but not sufficient.
 
-The niche model (slide 13; Guilliams et al. 2020) explains how one precursor becomes
+The niche model (slide 13; [Guilliams et al., 2020](https://doi.org/10.1016/j.immuni.2020.02.015)) explains how one precursor becomes
 many different macrophages. Precursor macrophages share a core transcriptional
 programme driven by PU.1, cMAF and IRF8. Each niche then provides three things:
 physical space, survival signals, and imprinting signals. The survival signals are
 mostly CSF1 receptor ligands, CSF1 and IL-34, and for alveolar macrophages CSF2
 (slide 14: CSF1 is M-CSF, CSF2 is GM-CSF, IL-34 is the second CSF1R ligand).
-Csf1-deficient mice lack almost all macrophages except Langerhans cells and
+Csf1-deficient mice lack many tissue macrophages but keep Langerhans cells and
 microglia, which depend on IL-34; Csf2-deficient mice lack alveolar macrophages, and
 humans without a functional CSF2 receptor develop pulmonary alveolar proteinosis
-because nobody clears the surfactant. The imprinting signals, such as TGFβ in the
+because their alveolar macrophages cannot clear the surfactant. The imprinting signals, such as TGFβ in the
 brain, RANKL in bone, retinoic acid in the peritoneum and heme in the spleen, induce
 lineage-determining transcription factors on top of the core programme: SALL1 in
 microglia, PPARγ in alveolar macrophages, SPI-C in red pulp macrophages, ID3 in
@@ -153,7 +156,7 @@ Either way, the identity of a tissue macrophage is written by the tissue.
 
 The table lists the niches you are most likely to meet in the tissue you are given
 for histology. F4/80, the product of the Adgre1 gene, has been the mouse macrophage
-marker since 1981 (Austyn & Gordon 1981). It is expressed by almost every tissue
+marker since Austyn and Gordon described the antibody in 1981. It is expressed by almost every tissue
 macrophage, but at very different levels, and that is the catch in the immunohistochemistry
 extension.
 
@@ -163,13 +166,13 @@ extension.
 | Lung alveoli | alveolar macrophages | SIGLEC-F, CD11c, PPARγ | low to intermediate |
 | Brain parenchyma | microglia | TMEM119, P2RY12, SALL1, CD45 low | positive |
 | Spleen red pulp | red pulp macrophages | SPI-C, iron, VCAM1 | high |
-| Lymph node sinus | subcapsular and medullary sinus macrophages | CD169, CD209b | low |
+| Lymph node sinus | subcapsular and medullary sinus macrophages | CD169; CD209b (medullary) | low (subcapsular), positive (medullary) |
 | Peritoneal cavity | large peritoneal macrophages | GATA6, TIM4, ICAM2 | high |
 | Peritoneal cavity | small peritoneal macrophages | MHCII high, CCR2-derived | low |
 | Adipose tissue | lipid-associated macrophages | TREM2, CD9, LPL | positive |
-| Bone | osteoclasts | multinucleated, TRAP, RANK | low |
+| Bone | osteoclasts | multinucleated, TRAP, RANK | negative |
 | Skin epidermis | Langerhans cells | CD207 (langerin), IL-34 dependent | positive |
-| Intestinal lamina propria | gut macrophages | CX3CR1 high, CD64, monocyte-derived | positive |
+| Intestinal lamina propria | gut macrophages | CX3CR1 high, CD64, mostly monocyte-derived | positive |
 
 
 ![Figure 4: Survival signals per niche: CSF1 (M-CSF), CSF2 (GM-CSF) and IL-34, the second CSF1R ligand, and the knockout phenotypes behind the rule of 1234](figures/immIII_slide14.png)
@@ -187,8 +190,8 @@ The M1/M2 scheme of Section 5.1 is mechanistically true in a dish, which is why 
 can be reproduced in Experiment 1. In the textbook version, M1, classically
 activated by IFNγ and LPS, kills microbes and tumour cells with nitric oxide, TNF,
 IL-6 and IL-1β; M2, alternatively activated by IL-4 and IL-13, expresses Arg1,
-CD206, RELMα (Retnla) and Ym1 (Chil3), and heals wounds; by 2008 Mosser and Edwards
-drew the states as a colour wheel rather than two poles (Mosser & Edwards 2008).
+CD206, RELMα (Retnla) and Ym1 (Chil3), and heals wounds; in 2008 Mosser and Edwards
+drew the states as a colour wheel rather than two poles.
 
 Underneath the labels sits a signalling map. IFNγ signals through JAK1 and JAK2 to
 STAT1, which induces IRF1, Nos2, the MHC class II transactivator CIITA, and CD86.
@@ -196,17 +199,18 @@ IL-4 signals through JAK1 and JAK3 to STAT6, which induces IRF4, Arg1, Retnla, C
 and Mrc1 (CD206). The two pathways antagonise each other through SOCS1 and SOCS3.
 LPS acts through TLR4 to NF-κB and IRF3 and induces Tnf, Il6, Il1b and type I
 interferon. Every readout of this course sits on this map: the Griess assay measures
-nitrite, the stable product of Nos2; Arg1 versus Nos2 is literally the arginine fork
+nitrite, a stable breakdown product of the nitric oxide made by Nos2; Arg1 versus Nos2 is literally the arginine fork
 Mills described; IL-6 and TNF by ELISA are the NF-κB output; MHCII and CD86 versus
 CD206 on the flow cytometer are the STAT1 versus STAT6 surface signatures. Note that
 the Griess assay is informative only in mouse cells, because human macrophages make
 very little nitric oxide; the two species also differ in several other "M1/M2" genes
 (Section 5.1).
 
-How the in vitro states are named follows Murray and colleagues, who, with most of
-the field's senior authors, published guidelines in 2014 that retire "classical" and
-"alternative" and ask every paper to state the source of the macrophages and the
-exact stimulus, as in M(IFNγ), M(IL-4) or M(LPS+IFNγ) (Murray et al. 2014). Their
+How the in vitro states are named follows Murray and two dozen colleagues from the
+field, who published guidelines in 2014 that ask every paper to state the source of
+the macrophages and to name the state by its exact stimulus, as in M(IFNγ), M(IL-4)
+or M(LPS), rather than by broad labels such as M1/M2 or "classical" and "alternative"
+([Murray et al., 2014](https://doi.org/10.1016/j.immuni.2014.06.008)). Their
 table, reproduced below, is the reference for the states you will generate.
 
 ![Figure 5: Discrete polarization in vitro: the M(stimulus) table of Murray et al. 2014 (Immunity 41:14–20, Figure 1B), the reference for the states you will generate, and why the terms classical and alternative should not be used anymore](figures/immIII_slide30.png)
@@ -236,7 +240,7 @@ studied example is a TREM2-positive, lipid-handling core programme with tissue- 
 disease-specific modifiers, variously called lipid-associated, scar-associated,
 fibrosis-associated, tumour-associated or NASH-associated macrophages. In the
 peritoneal injury dataset you will analyse, the Trem2+ Spp1+ macrophages express
-Arg1 next to Il1b. The lecture calls the replacement a modular spectrum model, and
+Arg1 next to Il1b `[TODO: check against the lab's re-analysis]`. The lecture calls the replacement a modular spectrum model, and
 the point of the in silico arm is that you see it in the data yourself.
 
 ![Figure 6: Naming by functional properties: the historic discrete polarization model next to the modular spectrum model that replaces it](figures/immIII_slide16.png)
@@ -269,8 +273,8 @@ subject of the next section and of your challenge experiment.
 **Safeguarding tissue structure.** Macrophages and fibroblasts form a reciprocal
 circuit: the tissue provides CSF1, instruction and structure, the macrophage provides
 growth factors such as PDGF, TGFβ and IGF1, proteases and their inhibitors, and
-signals for inflammation and its resolution (slide 35; Zhou et al. 2018). Mechnikov
-called macrophages sensors and healers. The tissue repair lectures showed where this
+signals for inflammation and its resolution (slide 35; [Zhou et al., 2018](https://doi.org/10.1016/j.cell.2018.01.015)).
+Mechnikov already saw phagocytes as agents of healing, not only of defence. The tissue repair lectures showed where this
 circuit sits in granulation tissue and remodelling.
 
 ![Figure 9: Safeguarding tissue structure: what the tissue provides to the macrophage and what the macrophage provides to the tissue, the reciprocal circuit of Zhou et al. 2018](figures/immIII_slide35.png)
@@ -292,7 +296,7 @@ macrophages, and an efferocytosis assay is an optional extension.
 **Metabolism.** Macrophages shape adipose tissue, support lipid storage through
 PDGF-CC, control browning of white fat, and, when monocyte-derived and recruited in
 obesity, drive insulin resistance (slide 39). The Trem2+ lipid-associated programme
-from Section 5.4 was first described here.
+from Section 5.4 got its name here, from the adipose tissue of obese mice.
 
 ![Figure 11: Metabolism: macrophages as metabolic sensors in adipose tissue, from the Csf1r-deficient rat to Trem2+ lipid-associated macrophages](figures/immIII_slide39.png)
 
@@ -309,7 +313,7 @@ Polly Matzinger added in 1994 that the immune system responds to danger, includi
 molecules released by the body's own damaged cells, not only to non-self. Both were
 right. Medzhitov and Janeway cloned a human Toll-like receptor in 1997, and in 1998
 Poltorak and colleagues showed that the LPS-unresponsive C3H/HeJ mouse carries a
-mutation in Tlr4. The ligands are now called PAMPs when they come from microbes and
+mutation in Tlr4 ([Poltorak et al., 1998](https://doi.org/10.1126/science.282.5396.2085)). The ligands are now called PAMPs when they come from microbes and
 DAMPs when they come from damaged self, and the receptors PRRs. The families you
 need are Toll-like receptors (TLR), C-type lectin receptors (CLR), NOD-like receptors
 (NLR), RIG-I-like receptors (RLR) and AIM2-like receptors, plus the cGAS–STING
@@ -320,8 +324,9 @@ membrane by LPS-binding protein, handed to CD14, and presented to the TLR4–MD-
 complex on the cell surface. TLR4 dimerises and recruits MyD88, which activates
 NF-κB and AP-1 within minutes and drives transcription of Tnf, Il6 and pro-Il1b. TLR4
 is then internalised and signals through TRIF to IRF3, which induces type I
-interferon. Pro-IL-1β is a special case: it is only released as mature IL-1β after a
-second signal activates an inflammasome, which RAW cells cannot assemble. For that
+interferon ([Fitzgerald & Kagan, 2020](https://doi.org/10.1016/j.cell.2020.02.041)). Pro-IL-1β is a special case: it is
+only released as mature IL-1β after a second signal activates an inflammasome, which
+RAW cells cannot assemble because they lack ASC. For that
 reason IL-1β is read by qPCR in the extension, not by ELISA.
 
 `[FIGURE 12: TLR4 signalling from the membrane to NF-κB and IRF3, adapted from a
@@ -345,8 +350,9 @@ is why the course uses depleted zymosan.
 
 The question each group asks is whether polarization changes the receptor, the
 output, or both. The expectation from the literature is asymmetric. IFNγ primes:
-STAT1 raises the expression of TLR4, MD-2, CD14, MyD88 and several IRFs, so the
-same dose of LPS produces more cytokine. IL-4 suppresses: STAT6 lowers TLR
+through STAT1 and IRF1 it raises the expression of TLR pathway components such as
+TLR4 and MyD88 and opens chromatin at inflammatory genes, so the same dose of LPS
+produces more cytokine. IL-4 suppresses: STAT6 lowers TLR
 responsiveness, partly through IRF4 competing with IRF5 at the MyD88 complex, so the
 same dose produces less. Whether your receptor's transcript follows the same pattern
 as the output is exactly what the qPCR extension shows, and the answer is not the
@@ -354,8 +360,8 @@ same for every receptor.
 
 Endotoxin tolerance is the reason you do not re-challenge M(IFNγ+LPS). A macrophage
 that has seen LPS reprogrammes itself within hours: a second dose produces a
-fraction of the TNF and IL-6, while some other genes stay inducible (Biswas &
-Lopez-Collazo 2009). It protects the organism from lethal cytokine release and it
+fraction of the TNF and IL-6, while some other genes stay inducible ([Biswas &
+Lopez-Collazo, 2009](https://doi.org/10.1016/j.it.2009.07.009)). It protects the organism from lethal cytokine release and it
 ruins a naive experiment.
 
 Questions. Draw the plate map for your pathway with every control you need, and say
@@ -376,13 +382,14 @@ population without any digestion.
 
 *Figure 13. The serosal cavities: peritoneum, pleura and pericardium, derived from the embryonic coelom and lined by mesothelium, in human and mouse (Immunology III, slide 17.)*
 
-Two macrophage populations live there (Ghosn et al. 2010). Large peritoneal
+Two macrophage populations live there, first separated by Ghosn and colleagues in
+2010. Large peritoneal
 macrophages (LPM) are F4/80 high, express ICAM2 (CD102) and TIM4, and depend on the
 transcription factor GATA6, which is induced by retinoic acid produced in the
-omentum (Okabe & Medzhitov 2014; Rosas et al. 2014; Gautier et al. 2014). They make
+omentum ([Okabe & Medzhitov, 2014](https://doi.org/10.1016/j.cell.2014.04.016)). They make
 up roughly a third of the lavage cells in a young adult mouse. Small peritoneal
 macrophages (SPM) are F4/80 low, MHCII high and monocyte-derived. The rest of the
-lavage is B1 B cells, a few T and NK cells, mast cells and eosinophils. In the flow
+lavage is mostly B cells, many of them B1 cells, with a few T and NK cells, mast cells and eosinophils. In the flow
 panel, CD19 removes the B cells, F4/80 against MHCII separates the two macrophage
 populations, and TIM4 with ICAM2 confirms the resident identity. No in vitro cell
 will fall into the LPM gate. If you run the peritoneal cells extension, that is
@@ -391,7 +398,7 @@ its first result, before you have looked at a single activation marker.
 What do LPMs do? In the steady state they drift through the cavity in undirected
 migration (slide 27). On injury they act as extravascular platelets: within minutes
 they aggregate on the wounded mesothelium, form clots with each other and with the
-damaged surface, and seal the defect (Zindel et al. 2021, Science). This sudden
+damaged surface, and seal the defect ([Zindel et al., 2021, Science](https://doi.org/10.1126/science.abe0595)). This sudden
 disappearance from the fluid was known for decades as the macrophage disappearance
 reaction before intravital microscopy showed where the cells went. After larger
 surgical injury, monocytes are recruited and differentiate into two states, a Folr2+
@@ -400,8 +407,8 @@ intermediate cells between them (slide 29, Figure 16). The scar-associated cells
 formation of peritoneal adhesions, the fibrous bands that are the most frequent
 long-term complication of abdominal surgery `[TODO: cite the Spp1 paper once
 published]`. Bacterial contamination of the cavity, modelled by caecal ligation and
-puncture, makes adhesions worse through EGFR signalling in the mesothelium (Zindel
-et al. 2021, Nat Commun); this is the experiment behind the dataset in Section 5.9.
+puncture, makes adhesions worse through EGFR signalling in the mesothelium ([Zindel
+et al., 2021, Nat Commun](https://doi.org/10.1038/s41467-021-27612-x)); this is the experiment behind the dataset in Section 5.9.
 
 ![Figure 14: The peritoneal niche in histology: Masson and H&E sections of the abdominal wall with the mesothelial monolayer, podoplanin staining of the mesothelium, and the GATA6+ F4/80 high CD102+ large peritoneal macrophages floating in the cavity](figures/immIII_slide19.png)
 
@@ -435,14 +442,17 @@ Which one can you not close?
 
 ## 5.9 The in silico dataset and how single-cell RNA sequencing works
 
-GSE186658 (Zindel et al. 2021, Nat Commun, PMID 34916513) contains single-cell RNA
+GSE186658 ([Zindel et al., 2021, Nat Commun](https://doi.org/10.1038/s41467-021-27612-x)) contains single-cell RNA
 sequencing of mouse peritoneal injury sites 24 h after a surgical button injury, with
 and without caecal ligation and puncture, two female C57BL/6 mice per condition. The
 data are on GEO as Cell Ranger filtered matrices, one per mouse, in the three-file
 format that Seurat reads directly: a list of barcodes, a list of genes, and a sparse
-count matrix. The published analysis identified Gata6+ resident macrophages, Folr2+
-Selenop+ repair-associated macrophages, Trem2+ Spp1+ scar-associated macrophages,
-intermediate states, monocytes and dendritic cells (slide 29, Figure 16).
+count matrix. The published analysis annotated mesothelial cells and the main immune
+populations, and found bone marrow-derived macrophages to be the main source of the
+EGFR ligands Hbegf and Areg. The lab's re-analysis shown in the lecture resolves
+Gata6+ resident macrophages, Folr2+ Selenop+ repair-associated macrophages, Trem2+
+Spp1+ scar-associated macrophages, intermediate states, monocytes and dendritic cells
+(slide 29, Figure 16).
 
 The method, in one paragraph. Tissue is digested into single cells, which are
 captured one per droplet together with a bead carrying a cell barcode and millions of
@@ -452,8 +462,8 @@ sequencing each read can be assigned to a cell and PCR duplicates can be collaps
 Cell Ranger aligns the reads and produces the count matrix: genes in rows, cells in
 columns, UMIs as values, mostly zeros.
 
-The analysis you will reproduce follows the standard Seurat workflow (Hao et al.
-2021). Quality control removes barcodes with too few genes, likely empty droplets,
+The analysis you will reproduce follows the standard Seurat workflow ([Hao et al.,
+2021](https://doi.org/10.1016/j.cell.2021.04.048)). Quality control removes barcodes with too few genes, likely empty droplets,
 and barcodes with too many or with a high fraction of mitochondrial transcripts,
 likely doublets or dying cells. Counts are normalised for sequencing depth and
 log-transformed. The few thousand most variable genes are selected and reduced by
@@ -476,15 +486,18 @@ RNA-seq dataset of RAW 264.7 cells and bone marrow-derived macrophages stimulate
 with the same reagents you use at the bench (GSE113836, `[TODO: verify contents,
 replicates and raw counts before the course]`). Every macrophage in the peritoneal
 single-cell dataset is then scored against both signatures, and the question is how
-much of the tissue population either signature explains. Integration of the tissue
-cells with a true in vitro single-cell dataset (Sanin et al. 2022, Sci Immunol,
-`[TODO: accession]`) is an extension, not the core. The teaching staff preprocess
+much of the tissue population either signature explains. Comparing the tissue cells
+with a published single-cell framework of monocyte-derived macrophage activation,
+built from 12 tissues and 25 conditions in vivo ([Sanin et al., 2022](https://doi.org/10.1126/sciimmunol.abl7482)), is an
+extension, not the core `[TODO: check: Sanin et al. is not an in vitro dataset;
+decide which dataset the extension uses and its accession]`. The teaching staff preprocess
 both datasets and ship small, ready-to-load objects, so the dry lab never starts
 from raw reads.
 
-Two limitations matter for your interpretation. Enzymatic digestion under-represents
-cells that are fragile or adherent, and large peritoneal macrophages are notoriously
-lost, which is why the Gata6+ cluster is small in the data and large in a lavage.
+Two limitations matter for your interpretation. The samples are digested injury
+sites, not lavage fluid, and enzymatic digestion under-represents cells that are
+fragile or adherent; large peritoneal macrophages are notoriously lost
+`[TODO: check]`, which is why the Gata6+ cluster is small in the data and large in a lavage.
 And the dataset describes injured tissue at a single time point, so a state that is
 absent at 24 h may dominate at day 7.
 
@@ -506,9 +519,10 @@ You will use an AI tool to install software, write and debug analysis
 code, and probably to read papers. It will be fast and mostly right, and the mostly is
 the problem. An AI tool invents functions that do not exist in a package, chooses
 default parameters silently, mis-states what a method assumes, and cites papers that
-were never written. It does all of this in confident prose. The availability of
-plausible text now outgrows the availability of verified claims by orders of magnitude
-(Bergstrom & West 2020), and a scientist's job is to tell the two apart.
+were never written. It does all of this in confident prose. Refuting a plausible but
+wrong claim takes an order of magnitude more effort than producing it, Brandolini's
+principle in the words of [Bergstrom & West (2020)](https://www.penguinrandomhouse.com/books/563882/calling-bullshit-by-carl-t-bergstrom-and-jevin-d-west/), and a scientist's job is
+to tell the plausible from the verified.
 
 Three habits protect you. Run the code and look at the object, not at the AI tool's
 description of the object. Reproduce a known result before you trust a new one, which
