@@ -1551,7 +1551,7 @@ and the analysis is [`code/elisa/elisa_standard_curve.R`](../code/elisa/elisa_st
 ![IL-6 ELISA worked example: standard curve and IL-6 per LPS dose](figures/C5_il6_worked_example.png)
 
 What you see: the curve is drawn far beyond the standards so that the whole S of the
-four-parameter logistic fit is visible (R² 0.999). The kit range, shaded, sits on the
+four-parameter logistic fit is visible. The kit range, shaded, sits on the
 lower limb, which is why it looks close to linear on this log axis; the inflection is
 at about 630 pg/mL and the upper plateau at OD 6.6 is beyond what the reader can
 measure, so a sample above the top standard cannot be back-calculated, only diluted. Vehicle and 0.1 ng/mL LPS are
@@ -1563,8 +1563,7 @@ curve, which is where you want it.
 Run it yourself: open the script in RStudio and press Source. For your own plate,
 change the file name in the `input` line.
 
-The script subtracts the blank, fits the standard curve (4PL) and reports R²,
-back-calculates every sample
+The script subtracts the blank, fits the standard curve (4PL), back-calculates every sample
 with its dilution factor, marks wells outside the standard range, and writes
 `elisa_results.csv`, `elisa_summary.csv` and the figure. Your CSV needs the columns `well`, `type`
 (standard or sample), `condition`, `standard_pg_ml`, `replicate`, `od450` and
@@ -5714,14 +5713,11 @@ od_to_conc <- function(od) {
   p["c"] * ((p["a"] - p["d"]) / (od - p["d"]) - 1)^(1 / p["b"])
 }
 
-# How well does the curve fit the standards? R² = 1 - (spread left around the
-# curve) / (total spread of the standard ODs). 1 is a perfect fit; a good ELISA
-# standard curve is above 0.99.
-r2 <- 1 - sum(residuals(model)^2) / sum((std$od_corr - mean(std$od_corr))^2)
-r2
-# Question: how would you validate R²? A single number can hide where the curve
-# misses. Consider plotting it, e.g. residuals(model) against the standard
-# concentration, or each standard's known vs back-calculated value.
+# Questions:
+# - How do you check that the curve fits the standards well? (R² is not a good
+#   measure for a non-linear fit.)
+# - How would you compare two models to decide which one fits better?
+# - Can you think of another approach than a 4PL model? (Hint: log-log.)
 
 # 3. Samples: concentration from the curve, times the dilution.
 # Only wells between the lowest and the top standard are trusted (in_range).
@@ -5758,7 +5754,7 @@ p1 <- ggplot() +
   geom_point(data = samp[samp$conc_pg_ml > 0, ], aes(conc_pg_ml, od_corr), colour = "steelblue") +
   scale_x_log10() +
   labs(x = "IL-6 (pg/mL, log scale)", y = "OD 450 nm, blank-subtracted",
-       title = sprintf("Standard curve, 4PL, R² = %.3f", r2),
+       title = "Standard curve, 4PL",
        subtitle = "Shaded: standards. Dashed: plateaus a, d and midpoint c.\nOpen circles: standards. Blue: samples.") +
   theme_classic()
 
@@ -6165,7 +6161,7 @@ plate also carried an osteopontin co-stimulation arm, which is not included.
 
 1. Blank: mean OD of the 0 pg/mL standards, subtracted from every well.
 2. Standard curve: four-parameter logistic fit (`nls`). The console prints the four
-   parameters and R² on the standards (above 0.99 for a good curve).
+   parameters; how to judge the fit is left as a question in the script.
 3. Samples: back-calculated from the curve, multiplied by `dilution_factor`; wells
    at or below the blank are set to 0; `in_range` says whether the OD lies between
    the lowest and the top standard.
