@@ -10,6 +10,7 @@ against the tutorial and against the object in front of you.
 | `01`, `02` | Seurat, [guided clustering tutorial](https://satijalab.org/seurat/articles/pbmc3k_tutorial) (Hao et al. 2024, [Nat Biotechnol](https://doi.org/10.1038/s41587-023-01767-y)) |
 | `03` | DESeq2, [vignette](https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html) (Love et al. 2014, [Genome Biol](https://doi.org/10.1186/s13059-014-0550-8)) |
 | alternative to `03` | limma-voom with Glimma, [RNAseq123 workflow](https://bioconductor.org/packages/release/workflows/vignettes/RNAseq123/inst/doc/limmaWorkflow.html) (Law et al. 2016, [F1000Research](https://doi.org/10.12688/f1000research.9005.3)) |
+| `04` | Seurat, [`AddModuleScore`](https://satijalab.org/seurat/reference/addmodulescore) and the [cell-cycle vignette](https://satijalab.org/seurat/articles/cell_cycle_vignette), same idea (Tirosh et al. 2016, [Science](https://doi.org/10.1126/science.aad0501)) |
 
 Open each script in RStudio and press Source, in order; each reads the output of
 the one before. Paths come from `here()`, so it does not matter which folder RStudio
@@ -19,6 +20,7 @@ is in, as long as it is the course project.
 01_load_and_qc.R   # download from GEO, load, QC, filter   (~35 s)
 02_cluster.R       # normalise, PCA, clusters, UMAP, macrophage markers   (~50 s)
 03_signatures.R    # bulk RNA-seq, DESeq2: M1 and M2 signatures   (~10 s)
+04_score.R         # module scores: every macrophage against both signatures   (~15 s)
 ```
 
 Needs the packages from [`00_setup.R`](../00_setup.R). Times and memory
@@ -50,11 +52,18 @@ bulk RNA-seq of RAW 264.7 and bone marrow macrophages, each in medium, LPS + IFN
 - The signature rule (`03`): the default (up at least 4-fold, adjusted p < 0.05,
   the 50 most significant) gives 50 genes for LPS + IFNγ (Acod1, Cxcl10, Cd40,
   Stat1, ...) but only 20 for IL-4 (Mrc1, Arg1, Mgl2, Il10, ...).
+- Which clusters count as macrophages in `04` (`macrophage_clusters`, default 1, 2,
+  5, 6 from `02`) and the cut-off for a "high" score (default 0: the signature genes
+  above their random control genes).
 
 ## To discuss in the group
 
 - Why your UMAP may differ from your neighbour's, and what `set.seed()` does.
 - Manual annotation from a few markers versus automated, reference-based
   annotation (e.g. SingleR with the ImmGen reference): bias, agreement, trust.
+- What a module score is relative to (random control genes of similar expression),
+  and why the neutrophils score higher on the M1 signature than any macrophage.
+  What does a macrophage high for both signatures mean for the M1/M2 axis, and does
+  the sterile versus CLP difference hold per mouse, not just per cell?
 - DESeq2 versus limma-voom: the same signature? And a cell line versus primary bone
   marrow macrophages from the same dataset.

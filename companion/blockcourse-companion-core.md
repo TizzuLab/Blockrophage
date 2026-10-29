@@ -2494,7 +2494,7 @@ description of the object.
 | `griess/` | Linear nitrite standard, concentration table, plots | plate-reader export, plate map | `griess_results.csv`, figures |
 | `flow/` | Reads the population statistics exported from FlowJo and plots them. Gating is done in FlowJo, not in R | FlowJo CSV export | figures |
 | `growth_curve/` | Optional (extension, X05): doubling time from counts, with the published value as a reference line | counts table | figure, doubling time |
-| `scrnaseq/` | The in silico arm, three parts (below). Parts 1 and 2 written; run from GEO in under 2 min | GEO matrices and count table, downloaded by the scripts | figures, Seurat objects, signatures |
+| `scrnaseq/` | The in silico arm, three parts (below). Parts 1 to 3 written; run from GEO in about 2 min | GEO matrices and count table, downloaded by the scripts | figures, Seurat objects, signatures |
 | `qpcr/` | ΔΔCt for the X01 extension | Ct export | figures |
 
 `[TODO: write the remaining templates; each folder gets a README, an `example_data/`
@@ -2531,7 +2531,7 @@ Three parts, matched to the dry-lab halves of weeks 2 and 3:
    against both signatures (`AddModuleScore` or equivalent), plot the two scores
    against each other and on the UMAP, and answer: how much of the tissue population
    does either signature explain, and what do cells with both scores high mean for
-   the M1/M2 axis.
+   the M1/M2 axis (`04_score.R`).
 
 Optional extensions that start from here: annotate the Gata6+, Folr2+ Selenop+ and
 Trem2+ Spp1+ populations; rerun the pipeline from the GEO matrices; integrate with a
