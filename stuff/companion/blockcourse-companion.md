@@ -5618,16 +5618,14 @@ course.
 <!-- file: code/00_setup.R -->
 
 ```r
-# Step 0: install the R packages for the course, once, on the first Friday.
-# Run in RStudio: open this file and press Source, or in the console:
-#   source("code/00_setup.R")
+# Step 0: install the R packages for the course.
 #
 # First time with R: just run it. Already have R projects whose package versions
 # you want to keep: talk to us first, we set you up with renv instead.
 #
 # Packages come from a dated snapshot of the Posit Package Manager, so everyone
 # gets the same versions, as ready-built binaries for Windows, macOS and Linux
-# (nothing is compiled on your laptop). Change the date only between course years.
+# Change the date only between course years.
 
 snapshot <- "2026-10-01"
 
