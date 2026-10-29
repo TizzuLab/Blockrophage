@@ -1,13 +1,15 @@
 # Single-cell RNA-seq: the in silico arm
 
-Run from this folder, in order. Each script reads the output of the one before.
+Open each script in RStudio and press Source, in order; each reads the output of
+the one before. Paths come from `here()`, so it does not matter which folder RStudio
+is in, as long as it is the course project.
 
 ```
-Rscript 01_load_and_qc.R   # download from GEO, load, QC, filter   (~35 s)
-Rscript 02_cluster.R       # normalise, PCA, clusters, UMAP, macrophage markers   (~50 s)
+01_load_and_qc.R   # download from GEO, load, QC, filter   (~35 s)
+02_cluster.R       # normalise, PCA, clusters, UMAP, macrophage markers   (~50 s)
 ```
 
-Needs the packages from [`code/setup`](../setup/README.md). Times and memory
+Needs the packages from [`00_setup.R`](../00_setup.R). Times and memory
 (peak about 3.5 GB) measured on a laptop-class machine.
 
 ## Data

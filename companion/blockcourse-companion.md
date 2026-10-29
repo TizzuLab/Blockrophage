@@ -87,14 +87,13 @@ and the analysis code.
 - Code overview
   - `code/README.md`
 - Code: R scripts
+  - `code/00_setup.R`
   - `code/elisa/elisa_standard_curve.R`
   - `code/scrnaseq/01_load_and_qc.R`
   - `code/scrnaseq/02_cluster.R`
-  - `code/setup/install.R`
 - Code: folder notes
   - `code/elisa/README.md`
   - `code/scrnaseq/README.md`
-  - `code/setup/README.md`
 
 # Index (llms.txt)
 
@@ -3392,8 +3391,8 @@ platelet aggregation
                                      0.240 s      0.260 s   0.280s
 
                           60
-
 Distance to injury [um]
+
                           40
 
                           20
@@ -4689,9 +4688,7 @@ Severe Injury   https://doi.org/10.1016/j.cell.2018.01.015
              Macrophage Switch: the phenomenon
 
              Focal liver injury
-
 CCR2-RFP
-
 CX3CR1-GFP
 
                                                    https://doi.org/10.1084/jem.20141539
@@ -4699,7 +4696,6 @@ CX3CR1-GFP
                Macrophage Switch: iNKT cells and glycolipid self-antigens
 
              Focal liver injury
-
 Cxcr6GFP/+
 
                https://doi.org/10.1016/j.immuni.2017.09.016
@@ -5527,9 +5523,25 @@ the course may redistribute the template in this public repository]`.
 
 > **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/Blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
-Analysis templates for the course. Every template is R. The packages are installed
-once on the first Friday with [`setup/install.R`](setup/README.md): a fixed list
-from a dated package snapshot, ready-built for Windows, macOS and Linux.
+Analysis templates for the course. Every template is R, run in the RStudio project
+you cloned on the first Friday; all paths are built with `here()` from the
+repository folder.
+
+### Step 0: the packages
+
+Once, on the first Friday, open [`00_setup.R`](00_setup.R) in RStudio and press
+Source (or `source("code/00_setup.R")` in the console). It installs Seurat,
+ggplot2, dplyr, readr, patchwork and here from a dated package snapshot: the same
+versions for everyone, ready-built for Windows, macOS and Linux, nothing compiled.
+About a minute; it ends by printing the versions, which go into your notebook.
+
+- First time with R: just run it.
+- Already have R projects whose package versions you want to keep: talk to us
+  first, and we set you up with renv, which keeps the course packages separate.
+- Linux only: Seurat needs one system library, `sudo apt install libglpk40`.
+- 8 GB of memory is enough; the single-cell pipeline peaks at about 3.5 GB.
+
+### The templates
 
 The rule for all of it: run the code and look at the object, not at the AI tool's
 description of the object.
@@ -5588,6 +5600,51 @@ course.
 
 # Code: R scripts
 
+<!-- file: code/00_setup.R -->
+
+```r
+# Step 0: install the R packages for the course, once, on the first Friday.
+# Run in RStudio: open this file and press Source, or in the console:
+#   source("code/00_setup.R")
+#
+# First time with R: just run it. Already have R projects whose package versions
+# you want to keep: talk to us first, we set you up with renv instead.
+#
+# Packages come from a dated snapshot of the Posit Package Manager, so everyone
+# gets the same versions, as ready-built binaries for Windows, macOS and Linux
+# (nothing is compiled on your laptop). Change the date only between course years.
+
+snapshot <- "2026-10-01"
+
+repo <- paste0("https://packagemanager.posit.co/cran/", snapshot)
+if (Sys.info()[["sysname"]] == "Linux") {
+  codename <- system("lsb_release -cs", intern = TRUE)  # e.g. noble
+  repo <- paste0("https://packagemanager.posit.co/cran/__linux__/", codename, "/", snapshot)
+  # Linux binaries are only served when R names its version and platform.
+  options(HTTPUserAgent = sprintf("R/%s R (%s)", getRversion(),
+    paste(getRversion(), R.version$platform, R.version$arch, R.version$os)))
+}
+options(repos = c(CRAN = repo))
+
+packages <- c(
+  "Seurat",     # single-cell analysis (in silico arm)
+  "ggplot2",    # figures
+  "dplyr",      # tables
+  "readr",      # reading CSV files
+  "patchwork",  # putting figures side by side
+  "here"        # file paths from the repository folder, on every computer
+)
+
+install.packages(packages)
+
+# Check: every package loads, and print the versions for your notebook.
+for (p in packages) library(p, character.only = TRUE)
+cat("\nAll packages loaded. R", R.version$major, ".", R.version$minor, "\n", sep = "")
+print(sapply(packages, function(p) as.character(packageVersion(p))))
+```
+
+---
+
 <!-- file: code/elisa/elisa_standard_curve.R -->
 
 ```r
@@ -5596,7 +5653,9 @@ course.
 #
 # Usage:
 #   Rscript elisa_standard_curve.R [input.csv] [output_dir]
-# Defaults: example_data/il6_lps_raw264_2026-09.csv and ./output
+# Defaults: code/elisa/example_data/il6_lps_raw264_2026-09.csv and code/elisa/output,
+# built with here() from the repository folder (R's working directory must be inside
+# the repository, as it always is in the RStudio project).
 #
 # Input: one row per well with the columns
 #   well, type ("standard" or "sample"), condition, standard_pg_ml (standards only),
@@ -5609,11 +5668,14 @@ course.
 # Fit: four-parameter logistic (4PL) by nls; if that fails, a log-log linear fit
 # on the non-zero standards. The console says which was used.
 
-suppressPackageStartupMessages(library(ggplot2))
+suppressPackageStartupMessages({
+  library(ggplot2)
+  library(here)
+})
 
 args <- commandArgs(trailingOnly = TRUE)
-input <- if (length(args) >= 1) args[1] else "example_data/il6_lps_raw264_2026-09.csv"
-outdir <- if (length(args) >= 2) args[2] else "output"
+input <- if (length(args) >= 1) args[1] else here("code", "elisa", "example_data", "il6_lps_raw264_2026-09.csv")
+outdir <- if (length(args) >= 2) args[2] else here("code", "elisa", "output")
 dir.create(outdir, showWarnings = FALSE, recursive = TRUE)
 
 d <- read.csv(input, stringsAsFactors = FALSE)
@@ -5766,44 +5828,48 @@ cat(sprintf("\nWrote %s, %s and %s\n", file.path(outdir, "elisa_results.csv"), f
 #!/usr/bin/env Rscript
 # Part 1a: download, load and quality-control the single-cell data.
 #
-# Usage (from this folder, or Source in RStudio with this folder as working directory):
-#   Rscript 01_load_and_qc.R
+# Usage: open in RStudio and press Source, or Rscript code/scrnaseq/01_load_and_qc.R
+# Paths are built with here() from the repository folder; R's working directory
+# must be inside the repository (always the case in the RStudio project).
 #
 # Data: GSE186658 (Zindel et al. 2021, Nat Commun), mouse peritoneal injury sites
 # ("buttons") 24 h after surgery, sterile (B24h) or with microbial contamination by
 # cecal ligation and puncture (BCLP24h), two mice each, 10x Genomics. GEO holds the
-# filtered count matrices, 110 MB; they are downloaded once into data/.
+# filtered count matrices, 110 MB; they are downloaded once into code/scrnaseq/data/.
 #
-# Output: output/qc_violins.png, output/qc_cells_per_sample.csv,
-#         output/after_qc.rds (the filtered object for 02_cluster.R)
+# Output in code/scrnaseq/output/: qc_violins.png, qc_cells_per_sample.csv,
+#         after_qc.rds (the filtered object for 02_cluster.R)
 
 suppressPackageStartupMessages({
   library(Seurat)
   library(ggplot2)
+  library(here)
 })
 
-dir.create("data", showWarnings = FALSE)
-dir.create("output", showWarnings = FALSE)
+data_dir <- here("code", "scrnaseq", "data")
+out_dir <- here("code", "scrnaseq", "output")
+dir.create(data_dir, showWarnings = FALSE)
+dir.create(out_dir, showWarnings = FALSE)
 
 # 1. Download once and check that the file is complete.
-tar_file <- "data/GSE186658_RAW.tar"
+tar_file <- file.path(data_dir, "GSE186658_RAW.tar")
 url <- "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE186nnn/GSE186658/suppl/GSE186658_RAW.tar"
 if (!file.exists(tar_file)) {
   options(timeout = 600)
   download.file(url, tar_file, mode = "wb")
 }
 stopifnot(tools::md5sum(tar_file) == "f63ee50eaeccb04c07502c55d8d49a31")
-if (length(list.files("data", pattern = "matrix.mtx.gz$")) < 4) {
-  untar(tar_file, exdir = "data", tar = "internal")
+if (length(list.files(data_dir, pattern = "matrix.mtx.gz$")) < 4) {
+  untar(tar_file, exdir = data_dir, tar = "internal")
 }
 
 # 2. One Seurat object per sample, then merged into one.
 samples <- c("GSM5658643_B24h1", "GSM5658644_B24h2",
              "GSM5658645_BCLP24h1", "GSM5658646_BCLP24h2")
 objects <- lapply(samples, function(s) {
-  counts <- ReadMtx(mtx      = file.path("data", paste0(s, "_matrix.mtx.gz")),
-                    cells    = file.path("data", paste0(s, "_barcodes.tsv.gz")),
-                    features = file.path("data", paste0(s, "_features.tsv.gz")))
+  counts <- ReadMtx(mtx      = file.path(data_dir, paste0(s, "_matrix.mtx.gz")),
+                    cells    = file.path(data_dir, paste0(s, "_barcodes.tsv.gz")),
+                    features = file.path(data_dir, paste0(s, "_features.tsv.gz")))
   CreateSeuratObject(counts, project = sub("^GSM[0-9]+_", "", s), min.cells = 3)
 })
 cells <- merge(objects[[1]], objects[-1], add.cell.ids = sub("^GSM[0-9]+_", "", samples))
@@ -5817,7 +5883,7 @@ cells[["percent_mt"]] <- PercentageFeatureSet(cells, pattern = "^mt-")
 
 p <- VlnPlot(cells, features = c("nFeature_RNA", "nCount_RNA", "percent_mt"),
              group.by = "sample", pt.size = 0, ncol = 3)
-ggsave("output/qc_violins.png", p, width = 12, height = 4.5)
+ggsave(file.path(out_dir, "qc_violins.png"), p, width = 12, height = 4.5)
 
 # 4. Filter. Look at qc_violins.png first: these thresholds are a starting point,
 # and the choice goes into your notebook with the reason.
@@ -5829,10 +5895,10 @@ cells <- subset(cells, nFeature_RNA > min_genes & nFeature_RNA < max_genes & per
 after <- table(cells$sample)
 
 qc <- data.frame(sample = names(before), before = as.vector(before), after = as.vector(after[names(before)]))
-write.csv(qc, "output/qc_cells_per_sample.csv", row.names = FALSE)
+write.csv(qc, file.path(out_dir, "qc_cells_per_sample.csv"), row.names = FALSE)
 print(qc)
 
-saveRDS(cells, "output/after_qc.rds")
+saveRDS(cells, file.path(out_dir, "after_qc.rds"))
 cat("Kept", ncol(cells), "cells. Next: 02_cluster.R\n")
 ```
 
@@ -5844,18 +5910,21 @@ cat("Kept", ncol(cells), "cells. Next: 02_cluster.R\n")
 #!/usr/bin/env Rscript
 # Part 1b: normalise, cluster, and find the macrophages.
 #
-# Usage (from this folder): Rscript 02_cluster.R
-# Input:  output/after_qc.rds from 01_load_and_qc.R
-# Output: output/umap_clusters.png, output/umap_condition.png,
-#         output/macrophage_markers.png, output/clustered.rds
+# Usage: open in RStudio and press Source, or Rscript code/scrnaseq/02_cluster.R
+# Input:  after_qc.rds from 01_load_and_qc.R, in code/scrnaseq/output/
+# Output in code/scrnaseq/output/: umap_clusters.png, umap_condition.png,
+#         macrophage_markers.png, clustered.rds
 
 suppressPackageStartupMessages({
   library(Seurat)
   library(ggplot2)
   library(patchwork)
+  library(here)
 })
 
-cells <- readRDS("output/after_qc.rds")
+out_dir <- here("code", "scrnaseq", "output")
+
+cells <- readRDS(file.path(out_dir, "after_qc.rds"))
 
 # 1. The standard Seurat steps. Each one is a choice; the defaults are stated.
 cells <- NormalizeData(cells)                          # counts per cell scaled to 10,000, log
@@ -5867,61 +5936,20 @@ cells <- FindNeighbors(cells, dims = dims)
 cells <- FindClusters(cells, resolution = 0.5)        # higher resolution, more clusters
 cells <- RunUMAP(cells, dims = dims)
 
-ggsave("output/umap_clusters.png",
+ggsave(file.path(out_dir, "umap_clusters.png"),
        DimPlot(cells, label = TRUE) + NoLegend(), width = 6, height = 5.5)
-ggsave("output/umap_condition.png",
+ggsave(file.path(out_dir, "umap_condition.png"),
        DimPlot(cells, group.by = "condition"), width = 7, height = 5.5)
 
 # 2. Where are the macrophages? Five markers that together mark them in the mouse.
 markers <- c("Adgre1", "Cd68", "Csf1r", "Fcgr1", "Mertk")
 p <- FeaturePlot(cells, features = markers, ncol = 3) /
   DotPlot(cells, features = markers) + RotatedAxis()
-ggsave("output/macrophage_markers.png", p, width = 12, height = 12)
+ggsave(file.path(out_dir, "macrophage_markers.png"), p, width = 12, height = 12)
 
-saveRDS(cells, "output/clustered.rds")
+saveRDS(cells, file.path(out_dir, "clustered.rds"))
 cat("Clusters:", nlevels(cells$seurat_clusters),
     ". Decide which clusters are macrophages from macrophage_markers.png.\n")
-```
-
----
-
-<!-- file: code/setup/install.R -->
-
-```r
-# Install the R packages for the course, once, on the first Friday.
-# Run in RStudio: open this file and press Source, or in the console:
-#   source("code/setup/install.R")
-#
-# Packages come from a dated snapshot of the Posit Package Manager, so everyone
-# gets the same versions, as ready-built binaries for Windows, macOS and Linux
-# (nothing is compiled on your laptop). Change the date only between course years.
-
-snapshot <- "2026-10-01"
-
-repo <- paste0("https://packagemanager.posit.co/cran/", snapshot)
-if (Sys.info()[["sysname"]] == "Linux") {
-  codename <- system("lsb_release -cs", intern = TRUE)  # e.g. noble
-  repo <- paste0("https://packagemanager.posit.co/cran/__linux__/", codename, "/", snapshot)
-  # Linux binaries are only served when R names its version and platform.
-  options(HTTPUserAgent = sprintf("R/%s R (%s)", getRversion(),
-    paste(getRversion(), R.version$platform, R.version$arch, R.version$os)))
-}
-options(repos = c(CRAN = repo))
-
-packages <- c(
-  "Seurat",     # single-cell analysis (in silico arm)
-  "ggplot2",    # figures
-  "dplyr",      # tables
-  "readr",      # reading CSV files
-  "patchwork"   # putting figures side by side
-)
-
-install.packages(packages)
-
-# Check: every package loads, and print the versions for your notebook.
-for (p in packages) library(p, character.only = TRUE)
-cat("\nAll packages loaded. R", R.version$major, ".", R.version$minor, "\n", sep = "")
-print(sapply(packages, function(p) as.character(packageVersion(p))))
 ```
 
 ---
@@ -5934,12 +5962,14 @@ print(sapply(packages, function(p) as.character(packageVersion(p))))
 
 Template for C5. One script, one example dataset, runs end to end:
 
+Open the script in RStudio and press Source: it runs on the example data and writes
+to `code/elisa/output/`. For your own plate, from the terminal:
+
 ```
-Rscript elisa_standard_curve.R                      # example data -> output/
-Rscript elisa_standard_curve.R my_plate.csv output  # your plate
+Rscript code/elisa/elisa_standard_curve.R my_plate.csv my_output_folder
 ```
 
-Needs R with `ggplot2`; everything else is base R.
+Needs `ggplot2` and `here` from [`00_setup.R`](../00_setup.R); everything else is base R.
 
 ### Input
 
@@ -5974,14 +6004,16 @@ The `output/` folder is not tracked; the figure for the protocol page is copied 
 
 ## Single-cell RNA-seq: the in silico arm
 
-Run from this folder, in order. Each script reads the output of the one before.
+Open each script in RStudio and press Source, in order; each reads the output of
+the one before. Paths come from `here()`, so it does not matter which folder RStudio
+is in, as long as it is the course project.
 
 ```
-Rscript 01_load_and_qc.R   # download from GEO, load, QC, filter   (~35 s)
-Rscript 02_cluster.R       # normalise, PCA, clusters, UMAP, macrophage markers   (~50 s)
+01_load_and_qc.R   # download from GEO, load, QC, filter   (~35 s)
+02_cluster.R       # normalise, PCA, clusters, UMAP, macrophage markers   (~50 s)
 ```
 
-Needs the packages from [`code/setup`](../setup/README.md). Times and memory
+Needs the packages from [`00_setup.R`](../00_setup.R). Times and memory
 (peak about 3.5 GB) measured on a laptop-class machine.
 
 ### Data
@@ -6001,28 +6033,5 @@ C57BL/6, 10x Genomics. GEO holds the filtered count matrices (110 MB, 13,657 cel
   `ElbowPlot(cells)`; the defaults (20 PCs, resolution 0.5) give 14 clusters.
 - Which clusters are macrophages (`02`): from `output/macrophage_markers.png`,
   with the reason.
-
----
-
-<!-- file: code/setup/README.md -->
-
-## Setup: the R packages for the course
-
-Install R and RStudio first (February email). Then, once, on the first Friday:
-
-```r
-source("code/setup/install.R")
-```
-
-It installs Seurat, ggplot2, dplyr, readr and patchwork from a dated snapshot of the
-Posit Package Manager: the same versions for everyone, as ready-built binaries for
-Windows, macOS and Linux, so nothing is compiled on your laptop. It takes about a
-minute (tested: 144 packages, 415 MB) and ends by printing the versions; copy them
-into your notebook.
-
-Linux only: Seurat's clustering needs one system library, installed once with
-`sudo apt install libglpk40` (Ubuntu/Debian). Windows and macOS need nothing else.
-
-Laptop: 8 GB of memory is enough; the single-cell pipeline peaks at about 3.5 GB.
 
 ---

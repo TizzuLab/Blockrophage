@@ -1,6 +1,9 @@
-# Install the R packages for the course, once, on the first Friday.
+# Step 0: install the R packages for the course, once, on the first Friday.
 # Run in RStudio: open this file and press Source, or in the console:
-#   source("code/setup/install.R")
+#   source("code/00_setup.R")
+#
+# First time with R: just run it. Already have R projects whose package versions
+# you want to keep: talk to us first, we set you up with renv instead.
 #
 # Packages come from a dated snapshot of the Posit Package Manager, so everyone
 # gets the same versions, as ready-built binaries for Windows, macOS and Linux
@@ -23,7 +26,8 @@ packages <- c(
   "ggplot2",    # figures
   "dplyr",      # tables
   "readr",      # reading CSV files
-  "patchwork"   # putting figures side by side
+  "patchwork",  # putting figures side by side
+  "here"        # file paths from the repository folder, on every computer
 )
 
 install.packages(packages)

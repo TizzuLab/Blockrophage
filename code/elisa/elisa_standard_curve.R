@@ -3,7 +3,9 @@
 #
 # Usage:
 #   Rscript elisa_standard_curve.R [input.csv] [output_dir]
-# Defaults: example_data/il6_lps_raw264_2026-09.csv and ./output
+# Defaults: code/elisa/example_data/il6_lps_raw264_2026-09.csv and code/elisa/output,
+# built with here() from the repository folder (R's working directory must be inside
+# the repository, as it always is in the RStudio project).
 #
 # Input: one row per well with the columns
 #   well, type ("standard" or "sample"), condition, standard_pg_ml (standards only),
@@ -16,11 +18,14 @@
 # Fit: four-parameter logistic (4PL) by nls; if that fails, a log-log linear fit
 # on the non-zero standards. The console says which was used.
 
-suppressPackageStartupMessages(library(ggplot2))
+suppressPackageStartupMessages({
+  library(ggplot2)
+  library(here)
+})
 
 args <- commandArgs(trailingOnly = TRUE)
-input <- if (length(args) >= 1) args[1] else "example_data/il6_lps_raw264_2026-09.csv"
-outdir <- if (length(args) >= 2) args[2] else "output"
+input <- if (length(args) >= 1) args[1] else here("code", "elisa", "example_data", "il6_lps_raw264_2026-09.csv")
+outdir <- if (length(args) >= 2) args[2] else here("code", "elisa", "output")
 dir.create(outdir, showWarnings = FALSE, recursive = TRUE)
 
 d <- read.csv(input, stringsAsFactors = FALSE)

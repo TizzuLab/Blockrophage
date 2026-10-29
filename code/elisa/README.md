@@ -2,12 +2,14 @@
 
 Template for C5. One script, one example dataset, runs end to end:
 
+Open the script in RStudio and press Source: it runs on the example data and writes
+to `code/elisa/output/`. For your own plate, from the terminal:
+
 ```
-Rscript elisa_standard_curve.R                      # example data -> output/
-Rscript elisa_standard_curve.R my_plate.csv output  # your plate
+Rscript code/elisa/elisa_standard_curve.R my_plate.csv my_output_folder
 ```
 
-Needs R with `ggplot2`; everything else is base R.
+Needs `ggplot2` and `here` from [`00_setup.R`](../00_setup.R); everything else is base R.
 
 ## Input
 
