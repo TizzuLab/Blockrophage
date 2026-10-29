@@ -16,3 +16,6 @@ renv/library/
 Thumbs.db
 ~$*
 __pycache__/
+
+# Local drafts and one-off material (emails, Word drafts); never pushed, delete when done.
+_local/
