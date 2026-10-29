@@ -22,7 +22,7 @@ if (Sys.info()[["sysname"]] == "Linux") {
 options(repos = c(CRAN = repo))
 
 packages <- c(
-  "Seurat",     # single-cell analysis (in silico arm)
+  "Seurat",     # single-cell analysis (Experiment 2)
   "ggplot2",    # figures
   "dplyr",      # tables
   "readr",      # reading CSV files

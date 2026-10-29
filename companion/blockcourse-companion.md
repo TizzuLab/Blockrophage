@@ -3389,8 +3389,8 @@ platelet aggregation
                                      0.240 s      0.260 s   0.280s
 
                           60
-
 Distance to injury [um]
+
                           40
 
                           20
@@ -4686,9 +4686,7 @@ Severe Injury   https://doi.org/10.1016/j.cell.2018.01.015
              Macrophage Switch: the phenomenon
 
              Focal liver injury
-
 CCR2-RFP
-
 CX3CR1-GFP
 
                                                    https://doi.org/10.1084/jem.20141539
@@ -4696,7 +4694,6 @@ CX3CR1-GFP
                Macrophage Switch: iNKT cells and glycolipid self-antigens
 
              Focal liver injury
-
 Cxcr6GFP/+
 
                https://doi.org/10.1016/j.immuni.2017.09.016
@@ -5520,22 +5517,38 @@ the course may redistribute the template in this public repository]`.
 
 <!-- file: code/README.md -->
 
-## Code
+## Code: the in silico arm
 
 > **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/Blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
 This course emphasizes reproducible data analysis using a scripted approach in R. 
 Most of us use RStudio and we will show you how to clone a project and get started; 
-Since the paths are all realtive (using  the `here()` package) you can in principle
+Since the paths are all relative (using the `here()` package) you can in principle
 source (or "run") the scripts directly in your local repo.
+
+### The idea: from a tidy CSV to a paper figure
+
+The ELISA analysis is the example. It starts from a tidy CSV, one row per well as
+it comes off the plate reader, and ends with a figure as it would go into a paper:
+the standard curve, the concentrations, the plot by condition. Everything in
+between is code, nothing is done by hand, so the analysis is 100% reproducible:
+anyone with the same data and the same code gets the same figure. That is not
+always the case in science.
+
+Everyone does the ELISA analysis in the course, on their own plate, and we look at
+this code in depth together. For your other assays, qPCR, Griess, or even flow
+cytometry, you are encouraged to do the same in R, and we support you. AI tools are
+perfect to get started; but you will need to read the code and explain what it
+does, and for that the AI tools are a great help too. We provide templates for the
+ELISA and for the single-cell analysis of Experiment 2 only; the rest is yours.
 
 ### Step 0: the packages
 
 Once, on the first Friday, we will open [`00_setup.R`](00_setup.R) in RStudio and press
 Source (or `source("code/00_setup.R")` in the console). It installs Seurat,
 ggplot2, dplyr, readr, patchwork, here and readxl from a dated package
-snapshot: the same versions for everyone. If you lready have R projects whose package versions you want to keep: talk to us and we set you up with renv, which keeps the course packages separate. If your
-work on Linux only: Seurat needs one system library, `sudo apt install libglpk40`. And if your laptop has less than 8 GB of memory... never mind such a laptop probably doesn't exist anymore.
+snapshot: the same versions for everyone. If you already have R projects whose package versions you want to keep: talk to us and we set you up with renv, which keeps the course packages separate. If you
+work on Linux: Seurat needs one system library, `sudo apt install libglpk40`. And if your laptop has less than 8 GB of memory... never mind such a laptop probably doesn't exist anymore.
 
 ### The templates
 
@@ -5545,16 +5558,10 @@ introduced a couple bugs for teaching purposes.
 
 | Folder | Purpose | Input | Output |
 |---|---|---|---|
-| `elisa/` | Four-parameter logistic standard curve, concentration table, plots by condition. Written; runs on the lab's IL-6 example data | tidy CSV (one row per well) | `elisa_results.csv`, `elisa_summary.csv`, figure |
-| `griess/` | Linear nitrite standard, concentration table, plots | plate-reader export, plate map | `griess_results.csv`, figures |
-| `flow/` | Reads the population statistics exported from FlowJo and plots them. Gating is done in FlowJo, not in R | FlowJo CSV export | figures |
-| `growth_curve/` | Optional (extension, X05): doubling time from counts, with the published value as a reference line | counts table | figure, doubling time |
-| `scrnaseq/` | The in silico arm, three parts (below), five scripts; run from GEO in about 3 min | GEO matrices and a published signature table, downloaded by the scripts | figures, Seurat objects, scores |
-| `qpcr/` | ΔΔCt for the X01 extension | Ct export | figures |
+| [`elisa/`](elisa/README.md) | Four-parameter logistic standard curve, concentration table, plots by condition (C5). Runs on the lab's IL-6 example data | tidy CSV (one row per well) | `elisa_results.csv`, `elisa_summary.csv`, figure |
+| [`scrnaseq/`](scrnaseq/README.md) | Experiment 2, three parts (below), five scripts; run from GEO in about 3 min | GEO matrices and a published signature table, downloaded by the scripts | figures, Seurat objects, scores |
 
-
-
-### The in silico arm, `scrnaseq/`
+### Single-cell RNA-seq (Experiment 2), `scrnaseq/`
 
 One dataset, one standard single-cell workflow; nobody starts from raw reads:
 `GSE186658`, single-cell RNA-seq of mouse peritoneal injury sites, sterile or
@@ -5617,7 +5624,7 @@ if (Sys.info()[["sysname"]] == "Linux") {
 options(repos = c(CRAN = repo))
 
 packages <- c(
-  "Seurat",     # single-cell analysis (in silico arm)
+  "Seurat",     # single-cell analysis (Experiment 2)
   "ggplot2",    # figures
   "dplyr",      # tables
   "readr",      # reading CSV files
@@ -6131,7 +6138,7 @@ that is the moment to understand the curve, not to work around it.
 
 <!-- file: code/scrnaseq/README.md -->
 
-## Single-cell RNA-seq: the in silico arm
+## Single-cell RNA-seq (Experiment 2)
 
 One standard single-cell workflow, from the count matrices to your own signature.
 Every script follows the published Seurat tutorial; read it alongside the script:

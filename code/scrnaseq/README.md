@@ -1,4 +1,4 @@
-# Single-cell RNA-seq: the in silico arm
+# Single-cell RNA-seq (Experiment 2)
 
 One standard single-cell workflow, from the count matrices to your own signature.
 Every script follows the published Seurat tutorial; read it alongside the script:
