@@ -265,7 +265,9 @@ def main(xlsx=XLSX, readme=README):
     out.append(END)
     TEXT.write_text("\n".join(text), encoding="utf-8")
     readme_text = Path(readme).read_text(encoding="utf-8")
-    a, b = readme_text.index(BEGIN), readme_text.index(END) + len(END)
+    # the markers at the start of a line: the companion block quotes them after "> "
+    a = readme_text.index("\n" + BEGIN) + 1
+    b = readme_text.index("\n" + END, a) + 1 + len(END)
     Path(readme).write_text(readme_text[:a] + "\n".join(out) + readme_text[b:], encoding="utf-8")
     print(f"wrote {n_svg} drawings to {FIG_DIR}, the schedule block of {readme}, and {TEXT}")
 

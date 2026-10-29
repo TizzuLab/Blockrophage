@@ -320,23 +320,23 @@ with your supervisor's agreement.
 F27.2, where each group has its own laminar flow hood reserved all day, every day.
 
 <!-- schedule:begin -->
-<!-- Generated from tools/schedule/Blockcourse_Gantt_FS2027.xlsx by tools/schedule/gantt2readme.py. Do not edit by hand: edit the workbook and rerun. -->
+<!-- Generated from stuff/tools/schedule/Blockcourse_Gantt_FS2027.xlsx by stuff/tools/schedule/gantt2readme.py. Do not edit by hand: edit the workbook and rerun. -->
 
 #### Week 1: orientation (Thu 18 - Fri 19 March 2027)
 
-![Week 1: orientation (Thu 18 - Fri 19 March 2027)](figures/schedule/week-1.svg?v=4be57bd7)
+![Week 1: orientation (Thu 18 - Fri 19 March 2027)](stuff/figures/schedule/week-1.svg?v=f413a645)
 
 #### Week 2: polarize and characterize (Tue 23 - Thu 25 March 2027)
 
-![Week 2: polarize and characterize (Tue 23 - Thu 25 March 2027)](figures/schedule/week-2.svg?v=5c993004)
+![Week 2: polarize and characterize (Tue 23 - Thu 25 March 2027)](stuff/figures/schedule/week-2.svg?v=a860d9a9)
 
 #### Week 3: polarize and challenge (Tue 6 - Fri 9 April 2027)
 
-![Week 3: polarize and challenge (Tue 6 - Fri 9 April 2027)](figures/schedule/week-3.svg?v=aab2d8c0)
+![Week 3: polarize and challenge (Tue 6 - Fri 9 April 2027)](stuff/figures/schedule/week-3.svg?v=c2e0e2bc)
 
 #### Week 4: close the story (Tue 13 - Fri 16 April 2027)
 
-![Week 4: close the story (Tue 13 - Fri 16 April 2027)](figures/schedule/week-4.svg?v=abda94d4)
+![Week 4: close the story (Tue 13 - Fri 16 April 2027)](stuff/figures/schedule/week-4.svg?v=3b0647a7)
 
 <!-- schedule:end -->
 
