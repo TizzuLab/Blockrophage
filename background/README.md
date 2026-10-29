@@ -484,8 +484,8 @@ M(IL-4)-like it is.
 The core in silico task is built on that last step. The M(IFNγ+LPS) and M(IL-4)
 signatures are not taken from a textbook list; you derive them from a public bulk
 RNA-seq dataset of RAW 264.7 cells and bone marrow-derived macrophages stimulated
-with the same reagents you use at the bench (GSE113836, `[TODO: verify contents,
-replicates and raw counts before the course]`). Every macrophage in the peritoneal
+with the same reagents you use at the bench (GSE113836, Huffaker et al. 2021: medium, LPS plus IFNγ or
+IL-4, two replicates each, raw counts). Every macrophage in the peritoneal
 single-cell dataset is then scored against both signatures, and the question is how
 much of the tissue population either signature explains. Comparing the tissue cells
 with a published single-cell framework of monocyte-derived macrophage activation,

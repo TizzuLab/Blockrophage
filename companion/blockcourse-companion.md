@@ -91,6 +91,7 @@ and the analysis code.
   - `code/elisa/elisa_standard_curve.R`
   - `code/scrnaseq/01_load_and_qc.R`
   - `code/scrnaseq/02_cluster.R`
+  - `code/scrnaseq/03_signatures.R`
 - Code: folder notes
   - `code/elisa/README.md`
   - `code/scrnaseq/README.md`
@@ -2842,8 +2843,8 @@ M(IL-4)-like it is.
 The core in silico task is built on that last step. The M(IFNγ+LPS) and M(IL-4)
 signatures are not taken from a textbook list; you derive them from a public bulk
 RNA-seq dataset of RAW 264.7 cells and bone marrow-derived macrophages stimulated
-with the same reagents you use at the bench (GSE113836, `[TODO: verify contents,
-replicates and raw counts before the course]`). Every macrophage in the peritoneal
+with the same reagents you use at the bench (GSE113836, Huffaker et al. 2021: medium, LPS plus IFNγ or
+IL-4, two replicates each, raw counts). Every macrophage in the peritoneal
 single-cell dataset is then scored against both signatures, and the question is how
 much of the tissue population either signature explains. Comparing the tissue cells
 with a published single-cell framework of monocyte-derived macrophage activation,
@@ -2998,8 +2999,9 @@ decks in [../slides/](../slides/README.md), which list further reading on tissue
   condition (Zindel et al. 2021, Nat Commun). The in vivo dataset of the core in
   silico task.
 - GSE113836: bulk RNA-seq of primary mouse bone marrow macrophages and RAW 264.7
-  cells skewed with LPS plus IFNγ or with IL-4. Source of the in vitro signatures
-  `[TODO: verify contents, replicates and raw counts before the course]`.
+  cells skewed with LPS plus IFNγ or with IL-4, two replicates each, raw counts
+  (Huffaker et al. 2021, [Nat Commun](https://doi.org/10.1038/s41467-021-22923-5)).
+  Source of the in vitro signatures.
 
 ---
 
@@ -3387,8 +3389,8 @@ platelet aggregation
                                      0.240 s      0.260 s   0.280s
 
                           60
-
 Distance to injury [um]
+
                           40
 
                           20
@@ -4684,9 +4686,7 @@ Severe Injury   https://doi.org/10.1016/j.cell.2018.01.015
              Macrophage Switch: the phenomenon
 
              Focal liver injury
-
 CCR2-RFP
-
 CX3CR1-GFP
 
                                                    https://doi.org/10.1084/jem.20141539
@@ -4694,7 +4694,6 @@ CX3CR1-GFP
                Macrophage Switch: iNKT cells and glycolipid self-antigens
 
              Focal liver injury
-
 Cxcr6GFP/+
 
                https://doi.org/10.1016/j.immuni.2017.09.016
@@ -5530,9 +5529,11 @@ repository folder.
 
 Once, on the first Friday, open [`00_setup.R`](00_setup.R) in RStudio and press
 Source (or `source("code/00_setup.R")` in the console). It installs Seurat,
-ggplot2, dplyr, readr, patchwork and here from a dated package snapshot: the same
-versions for everyone, ready-built for Windows, macOS and Linux, nothing compiled.
-About a minute; it ends by printing the versions, which go into your notebook.
+ggplot2, dplyr, readr, patchwork and here from a dated package snapshot, and DESeq2
+from Bioconductor: the same
+versions for everyone, ready-built for Windows, macOS and Linux (on Linux DESeq2 is
+compiled, about 3 minutes).
+A few minutes; it ends by printing the versions, which go into your notebook.
 
 - First time with R: just run it.
 - Already have R projects whose package versions you want to keep: talk to us
@@ -5551,7 +5552,7 @@ description of the object.
 | `griess/` | Linear nitrite standard, concentration table, plots | plate-reader export, plate map | `griess_results.csv`, figures |
 | `flow/` | Reads the population statistics exported from FlowJo and plots them. Gating is done in FlowJo, not in R | FlowJo CSV export | figures |
 | `growth_curve/` | Optional (extension, X05): doubling time from counts, with the published value as a reference line | counts table | figure, doubling time |
-| `scrnaseq/` | The in silico arm, three parts (below). Parts 1a and 1b written; run from GEO in about 1.5 min | GEO matrices, downloaded by the script | figures, Seurat objects |
+| `scrnaseq/` | The in silico arm, three parts (below). Parts 1 and 2 written; run from GEO in under 2 min | GEO matrices and count table, downloaded by the scripts | figures, Seurat objects, signatures |
 | `qpcr/` | ΔΔCt for the X01 extension | Ct export | figures |
 
 `[TODO: write the remaining templates; each folder gets a README, an `example_data/`
@@ -5568,9 +5569,10 @@ Two datasets; nobody starts from raw reads:
   normalisation, clustering and the macrophage markers themselves, on a laptop, in
   about a minute and a half ([`scrnaseq/`](scrnaseq/README.md)); the macrophage
   subclusters are **not** annotated.
-- `GSE113836`: bulk RNA-seq of RAW 264.7 and bone marrow macrophages stimulated with
-  LPS plus IFNγ or with IL-4 `[TODO: verify contents, replicates and raw counts]`.
-  Shipped as a count matrix with a sample sheet.
+- `GSE113836`: bulk RNA-seq of RAW 264.7 and bone marrow macrophages in medium,
+  LPS plus IFNγ or IL-4, two replicates each (Huffaker et al. 2021, Nat Commun).
+  The script downloads the raw count table from GEO and writes the sample sheet
+  from the GEO sample descriptions.
 
 Three parts, matched to the dry-lab halves of weeks 2 and 3:
 
@@ -5581,7 +5583,8 @@ Three parts, matched to the dry-lab halves of weeks 2 and 3:
 2. **Derive the signatures** (week 3). Differential expression in the bulk data,
    M(IFNγ+LPS) versus M(-) and M(IL-4) versus M(-), in RAW 264.7 cells; take the top
    genes by a stated rule; compare with the Murray et al. 2014 table and with the
-   consolidated sets of Colombo et al. 2024.
+   consolidated sets of Colombo et al. 2024 (`03_signatures.R`, DESeq2; limma-voom
+   with Glimma as the alternative).
 3. **Score the tissue** (week 3). Score every macrophage in the single-cell object
    against both signatures (`AddModuleScore` or equivalent), plot the two scores
    against each other and on the UMAP, and answer: how much of the tissue population
@@ -5611,7 +5614,8 @@ course.
 #
 # Packages come from a dated snapshot of the Posit Package Manager, so everyone
 # gets the same versions, as ready-built binaries for Windows, macOS and Linux
-# (nothing is compiled on your laptop). Change the date only between course years.
+# (nothing compiled, except DESeq2 on Linux). Change the date only between course
+# years.
 
 snapshot <- "2026-10-01"
 
@@ -5631,10 +5635,16 @@ packages <- c(
   "dplyr",      # tables
   "readr",      # reading CSV files
   "patchwork",  # putting figures side by side
-  "here"        # file paths from the repository folder, on every computer
+  "here",       # file paths from the repository folder, on every computer
+  "BiocManager" # installs Bioconductor packages, next line
 )
 
 install.packages(packages)
+
+# DESeq2 (bulk RNA-seq) comes from Bioconductor, which releases one fixed set of
+# packages per R version. On Linux it is compiled, about 3 minutes.
+BiocManager::install("DESeq2", update = FALSE, ask = FALSE)
+packages <- c(packages, "DESeq2")
 
 # Check: every package loads, and print the versions for your notebook.
 for (p in packages) library(p, character.only = TRUE)
@@ -5770,9 +5780,12 @@ ggsave(file.path(outdir, "elisa_figure.png"), p1 + p2, width = 10, height = 4.25
 #!/usr/bin/env Rscript
 # Part 1a: download, load and quality-control the single-cell data.
 #
-# Usage: open in RStudio and press Source, or Rscript code/scrnaseq/01_load_and_qc.R
-# Paths are built with here() from the repository folder; R's working directory
-# must be inside the repository (always the case in the RStudio project).
+# Usage: open in RStudio and press Source. Paths are built with here() from the
+# repository folder.
+#
+# The steps follow the Seurat tutorial, read it alongside:
+#   https://satijalab.org/seurat/articles/pbmc3k_tutorial
+#   Hao et al. 2024, Nat Biotechnol, https://doi.org/10.1038/s41587-023-01767-y
 #
 # Data: GSE186658 (Zindel et al. 2021, Nat Commun), mouse peritoneal injury sites
 # ("buttons") 24 h after surgery, sterile (B24h) or with microbial contamination by
@@ -5791,15 +5804,12 @@ out_dir <- here("code", "scrnaseq", "output")
 dir.create(data_dir, showWarnings = FALSE)
 dir.create(out_dir, showWarnings = FALSE)
 
-# 1. Download once and check that the file is complete.
+# 1. Download once (110 MB) and unpack.
 tar_file <- file.path(data_dir, "GSE186658_RAW.tar")
 url <- "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE186nnn/GSE186658/suppl/GSE186658_RAW.tar"
 if (!file.exists(tar_file)) {
-  options(timeout = 600)
+  options(timeout = 600)   # the default of 60 s is too short for 110 MB
   download.file(url, tar_file, mode = "wb")
-}
-stopifnot(tools::md5sum(tar_file) == "f63ee50eaeccb04c07502c55d8d49a31")
-if (length(list.files(data_dir, pattern = "matrix.mtx.gz$")) < 4) {
   untar(tar_file, exdir = data_dir, tar = "internal")
 }
 
@@ -5850,7 +5860,9 @@ cat("Kept", ncol(cells), "cells. Next: 02_cluster.R\n")
 #!/usr/bin/env Rscript
 # Part 1b: normalise, cluster, and find the macrophages.
 #
-# Usage: open in RStudio and press Source, or Rscript code/scrnaseq/02_cluster.R
+# Usage: open in RStudio and press Source.
+# The steps follow the Seurat tutorial, read it alongside:
+#   https://satijalab.org/seurat/articles/pbmc3k_tutorial
 # Input:  after_qc.rds from 01_load_and_qc.R, in code/scrnaseq/output/
 # Output in code/scrnaseq/output/: umap_clusters.png, umap_condition.png,
 #         macrophage_markers.png, clustered.rds
@@ -5906,6 +5918,120 @@ cat("Clusters:", nlevels(cells$seurat_clusters),
 
 ---
 
+<!-- file: code/scrnaseq/03_signatures.R -->
+
+```r
+#!/usr/bin/env Rscript
+# Part 2: derive the M(IFNγ+LPS) and M(IL-4) signatures from bulk RNA-seq of RAW 264.7.
+#
+# Usage: open in RStudio and press Source. Run 01_load_and_qc.R first: this script
+# uses its gene table to turn Ensembl IDs into gene names.
+#
+# The steps follow the DESeq2 vignette, read it alongside:
+#   https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html
+#   Love, Huber & Anders 2014, Genome Biology, https://doi.org/10.1186/s13059-014-0550-8
+#
+# Data: GSE113836 (Huffaker et al. 2021, Nat Commun,
+# https://doi.org/10.1038/s41467-021-22923-5). RAW 264.7 and bone marrow macrophages,
+# each in medium, LPS + IFNγ ("M1") or IL-4 ("M2"), two replicates each; raw counts.
+#
+# Output in code/scrnaseq/output/: pca_bulk.png, ma_plots.png,
+#         deg_M1_vs_medium.csv, deg_M2_vs_medium.csv,
+#         signature_M1.txt, signature_M2.txt (for part 3)
+
+library(DESeq2)
+library(ggplot2)
+library(here)
+
+data_dir <- here("code", "scrnaseq", "data")
+out_dir <- here("code", "scrnaseq", "output")
+
+# 1. Download the count table once.
+counts_file <- file.path(data_dir, "GSE113836_counts_10625R.txt.gz")
+url <- "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE113nnn/GSE113836/suppl/GSE113836_counts_10625R.txt.gz"
+if (!file.exists(counts_file)) download.file(url, counts_file, mode = "wb")
+
+counts <- as.matrix(read.delim(counts_file, row.names = 1, check.names = FALSE))
+
+# 2. The sample sheet, written from the GEO sample descriptions (GSM3120946-57).
+samples <- data.frame(row.names = colnames(counts),
+                      cells = rep(c("RAW", "BMM"), each = 6),
+                      treatment = rep(rep(c("medium", "M1", "M2"), each = 2), times = 2))
+samples$treatment <- factor(samples$treatment, levels = c("medium", "M1", "M2"))
+samples
+
+# The course works with RAW 264.7, so only those six samples.
+raw <- samples$cells == "RAW"
+dds <- DESeqDataSetFromMatrix(countData = counts[, raw],
+                              colData = samples[raw, ],
+                              design = ~ treatment)
+
+# Pre-filtering as in the vignette: keep genes with at least 10 reads in at least
+# as many samples as the smallest group (here 2).
+keep <- rowSums(counts(dds) >= 10) >= 2
+dds <- dds[keep, ]
+
+# 3. Look before you test: do the replicates sit together?
+vsd <- vst(dds)
+ggsave(file.path(out_dir, "pca_bulk.png"),
+       plotPCA(vsd, intgroup = "treatment") + theme_classic(), width = 5.5, height = 4)
+
+# 4. Differential expression, each stimulus against medium.
+dds <- DESeq(dds)
+res_m1 <- results(dds, contrast = c("treatment", "M1", "medium"), alpha = 0.05)
+res_m2 <- results(dds, contrast = c("treatment", "M2", "medium"), alpha = 0.05)
+summary(res_m1)
+summary(res_m2)
+
+png(file.path(out_dir, "ma_plots.png"), width = 2000, height = 900, res = 200)
+par(mfrow = c(1, 2))
+plotMA(res_m1, ylim = c(-8, 8), main = "LPS + IFNγ vs medium")
+plotMA(res_m2, ylim = c(-8, 8), main = "IL-4 vs medium")
+dev.off()
+
+# Gene names from the 10x gene table downloaded in part 1 (same names as in the
+# single-cell object, which matters for scoring in part 3).
+genes <- read.delim(file.path(data_dir, "GSM5658643_B24h1_features.tsv.gz"), header = FALSE)
+res_m1$gene <- genes$V2[match(rownames(res_m1), genes$V1)]
+res_m2$gene <- genes$V2[match(rownames(res_m2), genes$V1)]
+
+write.csv(as.data.frame(res_m1[order(res_m1$padj), ]), file.path(out_dir, "deg_M1_vs_medium.csv"))
+write.csv(as.data.frame(res_m2[order(res_m2$padj), ]), file.path(out_dir, "deg_M2_vs_medium.csv"))
+
+# 5. The signature: a stated rule. Here: up-regulated at least 4-fold
+# (log2 fold change > 2) with adjusted p < 0.05, the 50 with the smallest adjusted
+# p-value. Change the rule, say why in your notebook, and see what it does in part 3.
+signature <- function(res, n = 50) {
+  up <- res[which(res$padj < 0.05 & res$log2FoldChange > 2 & !is.na(res$gene)), ]
+  head(up$gene[order(up$padj)], n)
+}
+sig_m1 <- signature(res_m1)
+sig_m2 <- signature(res_m2)
+sig_m1
+sig_m2
+writeLines(sig_m1, file.path(out_dir, "signature_M1.txt"))
+writeLines(sig_m2, file.path(out_dir, "signature_M2.txt"))
+
+# Compare with the literature: which of your genes are in the Murray et al. 2014
+# table and in the consolidated sets of Colombo et al. 2024 (background reading)?
+
+# Questions:
+# - Two replicates per group is the minimum. What does that do to the adjusted
+#   p-values, and to how far you trust a single gene?
+# - The vignette shrinks the fold changes before ranking genes (lfcShrink). Why,
+#   and does it change your top 50?
+# - The same data contain bone marrow macrophages (BMM). Derive the signatures there
+#   too: how much do a cell line and primary cells agree?
+# - The other standard: limma-voom, with Glimma for interactive plots you can click
+#   through in the browser (glimmaMDS, glimmaMA). Follow the RNA-seq workflow
+#   "RNA-seq analysis is easy as 1-2-3 with limma, Glimma and edgeR"
+#   (Law et al. 2016, F1000Research, https://doi.org/10.12688/f1000research.9005.3):
+#   https://bioconductor.org/packages/release/workflows/vignettes/RNAseq123/inst/doc/limmaWorkflow.html
+#   Do DESeq2 and limma-voom give you the same signature?
+```
+
+---
+
 # Code: folder notes
 
 <!-- file: code/elisa/README.md -->
@@ -5951,7 +6077,18 @@ that is the moment to understand the curve, not to work around it.
 
 <!-- file: code/scrnaseq/README.md -->
 
-## Single-cell RNA-seq: the in silico arm
+## Single-cell and bulk RNA-seq: the in silico arm
+
+Every script follows the published tutorial of its package. Read the tutorial
+alongside the script: it is the conventional way, written by the people who built
+the method. Use your AI tool to explain a step or an error, then check what it says
+against the tutorial and against the object in front of you.
+
+| Script | Follows |
+|---|---|
+| `01`, `02` | Seurat, [guided clustering tutorial](https://satijalab.org/seurat/articles/pbmc3k_tutorial) (Hao et al. 2024, [Nat Biotechnol](https://doi.org/10.1038/s41587-023-01767-y)) |
+| `03` | DESeq2, [vignette](https://bioconductor.org/packages/release/bioc/vignettes/DESeq2/inst/doc/DESeq2.html) (Love et al. 2014, [Genome Biol](https://doi.org/10.1186/s13059-014-0550-8)) |
+| alternative to `03` | limma-voom with Glimma, [RNAseq123 workflow](https://bioconductor.org/packages/release/workflows/vignettes/RNAseq123/inst/doc/limmaWorkflow.html) (Law et al. 2016, [F1000Research](https://doi.org/10.12688/f1000research.9005.3)) |
 
 Open each script in RStudio and press Source, in order; each reads the output of
 the one before. Paths come from `here()`, so it does not matter which folder RStudio
@@ -5960,6 +6097,7 @@ is in, as long as it is the course project.
 ```
 01_load_and_qc.R   # download from GEO, load, QC, filter   (~35 s)
 02_cluster.R       # normalise, PCA, clusters, UMAP, macrophage markers   (~50 s)
+03_signatures.R    # bulk RNA-seq, DESeq2: M1 and M2 signatures   (~10 s)
 ```
 
 Needs the packages from [`00_setup.R`](../00_setup.R). Times and memory
@@ -5971,7 +6109,13 @@ GSE186658 (Zindel et al. 2021, Nat Commun): mouse peritoneal injury sites
 ("buttons") 24 h after surgery, sterile (`B24h1`, `B24h2`) or with microbial
 contamination by cecal ligation and puncture (`BCLP24h1`, `BCLP24h2`), female
 C57BL/6, 10x Genomics. GEO holds the filtered count matrices (110 MB, 13,657 cells);
-`01_load_and_qc.R` downloads them once into `data/` and checks the MD5 sum.
+`01_load_and_qc.R` downloads them once into `data/`.
+
+GSE113836 (Huffaker et al. 2021, [Nat Commun](https://doi.org/10.1038/s41467-021-22923-5)):
+bulk RNA-seq of RAW 264.7 and bone marrow macrophages, each in medium, LPS + IFNγ
+("M1") or IL-4 ("M2"), two replicates each, as a raw count table (300 kB).
+`03_signatures.R` downloads it and uses the six RAW 264.7 samples.
+
 `data/` and `output/` are not tracked by git.
 
 ### What you decide, and write into your notebook
@@ -5982,11 +6126,16 @@ C57BL/6, 10x Genomics. GEO holds the filtered count matrices (110 MB, 13,657 cel
   `ElbowPlot(cells)`; the defaults (20 PCs, resolution 0.5) give 14 clusters.
 - Which clusters are macrophages (`02`): from `output/macrophage_markers.png`,
   with the reason.
+- The signature rule (`03`): the default (up at least 4-fold, adjusted p < 0.05,
+  the 50 most significant) gives 50 genes for LPS + IFNγ (Acod1, Cxcl10, Cd40,
+  Stat1, ...) but only 20 for IL-4 (Mrc1, Arg1, Mgl2, Il10, ...).
 
 ### To discuss in the group
 
 - Why your UMAP may differ from your neighbour's, and what `set.seed()` does.
 - Manual annotation from a few markers versus automated, reference-based
   annotation (e.g. SingleR with the ImmGen reference): bias, agreement, trust.
+- DESeq2 versus limma-voom: the same signature? And a cell line versus primary bone
+  marrow macrophages from the same dataset.
 
 ---

@@ -1,7 +1,9 @@
 #!/usr/bin/env Rscript
 # Part 1b: normalise, cluster, and find the macrophages.
 #
-# Usage: open in RStudio and press Source, or Rscript code/scrnaseq/02_cluster.R
+# Usage: open in RStudio and press Source.
+# The steps follow the Seurat tutorial, read it alongside:
+#   https://satijalab.org/seurat/articles/pbmc3k_tutorial
 # Input:  after_qc.rds from 01_load_and_qc.R, in code/scrnaseq/output/
 # Output in code/scrnaseq/output/: umap_clusters.png, umap_condition.png,
 #         macrophage_markers.png, clustered.rds
