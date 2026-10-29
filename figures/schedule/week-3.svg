@@ -44,7 +44,7 @@
 <text x="927" y="44" font-size="12" fill="#5A5A5A">Self-study: reading for the day,</text>
 <text x="927" y="59" font-size="12" fill="#5A5A5A">notebook, group branch</text>
 <rect x="363.0" y="72" width="279.0" height="149" fill="#BDD7EE" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="369" y="106" font-size="12" fill="#1A1A1A">P05 Challenge: your stimulus, optional</text>
+<text x="369" y="106" font-size="12" fill="#1A1A1A">C4 Challenge: your stimulus, optional</text>
 <text x="369" y="121" font-size="12" fill="#1A1A1A">inhibitor (TAK-242 1 h before,</text>
 <text x="369" y="136" font-size="12" fill="#1A1A1A">polymyxin B premixed), LPS on M(-) as</text>
 <text x="369" y="151" font-size="12" fill="#1A1A1A">everyone&#x27;s control. Default: overnight,</text>
@@ -52,7 +52,7 @@
 <text x="369" y="181" font-size="12" fill="#1A1A1A">15:00. Wet-lab goal: stimulate with</text>
 <text x="369" y="196" font-size="12" fill="#1A1A1A">inhibitor logic.</text>
 <rect x="642.0" y="72" width="279.0" height="57" fill="#BDD7EE" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="648" y="90" font-size="12" fill="#1A1A1A">P05 Harvest (overnight groups):</text>
+<text x="648" y="90" font-size="12" fill="#1A1A1A">C4 Harvest (overnight groups):</text>
 <text x="648" y="105" font-size="12" fill="#1A1A1A">supernatants in aliquots, cells as RNA</text>
 <text x="648" y="120" font-size="12" fill="#1A1A1A">or protein lysate to the freezer</text>
 <rect x="921.0" y="72" width="279.0" height="149" fill="#FFE699" stroke="#BFBFBF" stroke-width="0.8"/>
@@ -61,8 +61,8 @@
 <text x="927" y="158" font-size="12" fill="#1A1A1A">week 2 in R. scRNA-seq part 2</text>
 <text x="927" y="174" font-size="12" fill="#1A1A1A">continued.</text>
 <rect x="642.0" y="129" width="279.0" height="92" fill="#BDD7EE" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="648" y="172" font-size="12" fill="#1A1A1A">P06 ELISA: blocking, standards,</text>
-<text x="648" y="187" font-size="12" fill="#1A1A1A">samples; dry lab in the incubations</text>
+<text x="648" y="172" font-size="12" fill="#1A1A1A">C5 ELISA: blocking, standards, samples;</text>
+<text x="648" y="187" font-size="12" fill="#1A1A1A">dry lab in the incubations</text>
 <rect x="84.0" y="221" width="279.0" height="46" fill="#EDEDED" stroke="#BFBFBF" stroke-width="0.8"/>
 <text x="90" y="239" font-size="12" fill="#5A5A5A">Lunch</text>
 <rect x="363.0" y="221" width="279.0" height="46" fill="#EDEDED" stroke="#BFBFBF" stroke-width="0.8"/>
@@ -72,7 +72,7 @@
 <rect x="921.0" y="221" width="279.0" height="46" fill="#EDEDED" stroke="#BFBFBF" stroke-width="0.8"/>
 <text x="927" y="239" font-size="12" fill="#5A5A5A">Lunch</text>
 <rect x="84.0" y="267" width="279.0" height="154" fill="#BDD7EE" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="90" y="311" font-size="12" fill="#1A1A1A">P02 and P04: plate from your stock</text>
+<text x="90" y="311" font-size="12" fill="#1A1A1A">C1 and C2: plate from your stock</text>
 <text x="90" y="326" font-size="12" fill="#1A1A1A">(carried over the break) with the</text>
 <text x="90" y="341" font-size="12" fill="#1A1A1A">chosen polarizer, own approach or the</text>
 <text x="90" y="356" font-size="12" fill="#1A1A1A">standard that worked. 96-well for</text>
@@ -101,17 +101,17 @@
 <text x="369" y="392" font-size="12" fill="#1A1A1A">15:00, supernatants and lysates to the</text>
 <text x="369" y="407" font-size="12" fill="#1A1A1A">freezer.</text>
 <rect x="642.0" y="375" width="279.0" height="103" fill="#BDD7EE" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="648" y="408" font-size="12" fill="#1A1A1A">P06 ELISA: detection and read-out;</text>
-<text x="648" y="424" font-size="12" fill="#1A1A1A">first look at the numbers. Passage the</text>
-<text x="648" y="438" font-size="12" fill="#1A1A1A">stock. Wet-lab goal: an ELISA from</text>
-<text x="648" y="454" font-size="12" fill="#1A1A1A">coating to concentration.</text>
+<text x="648" y="408" font-size="12" fill="#1A1A1A">C5 ELISA: detection and read-out; first</text>
+<text x="648" y="424" font-size="12" fill="#1A1A1A">look at the numbers. Passage the stock.</text>
+<text x="648" y="438" font-size="12" fill="#1A1A1A">Wet-lab goal: an ELISA from coating to</text>
+<text x="648" y="454" font-size="12" fill="#1A1A1A">concentration.</text>
 <rect x="84.0" y="421" width="279.0" height="57" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
 <text x="90" y="439" font-size="12" fill="#FFFFFF" font-weight="bold">Cutting Edge Immunology Seminar</text>
 <text x="90" y="454" font-size="12" fill="#FFFFFF" font-weight="bold">16:30-17:30 (tbd)</text>
 <rect x="363.0" y="421" width="279.0" height="57" fill="#BDD7EE" stroke="#BFBFBF" stroke-width="0.8"/>
 <text x="369" y="439" font-size="12" fill="#1A1A1A">16:30: coat the ELISA plates with</text>
 <text x="369" y="454" font-size="12" fill="#1A1A1A">capture antibody, overnight at 4 °C</text>
-<text x="369" y="469" font-size="12" fill="#1A1A1A">(P06), 30 min at the bench</text>
+<text x="369" y="469" font-size="12" fill="#1A1A1A">(C5), 30 min at the bench</text>
 <rect x="921.0" y="421" width="279.0" height="57" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
 <text x="927" y="439" font-size="12" fill="#FFFFFF" font-weight="bold">Debrief Exp 3: results and week 4</text>
 <text x="927" y="454" font-size="12" fill="#FFFFFF" font-weight="bold">decisions</text>

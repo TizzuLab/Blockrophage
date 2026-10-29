@@ -11,10 +11,10 @@
 |---|---|
 | ID | X02 |
 | Used in | Extension |
-| Hands-on time | 30 min receiving, counting and lysis, then staining as P08 |
+| Hands-on time | 30 min receiving, counting and lysis, then staining as C3 |
 | Wall-clock time | half a day, coordinated with a cytometer slot |
 | Resources | ice, cooled centrifuge, counter, cytometer slot |
-| Depends on | P08 panel and a reserved cytometer slot; polarized RAW cells ready on the same day; a surplus peritoneal cell suspension provided by staff |
+| Depends on | C3 panel and a reserved cytometer slot; polarized RAW cells ready on the same day; a surplus peritoneal cell suspension provided by staff |
 | Lab SOP | Zindel lab "Flow cytometry" (v1.2) and "Flow cytometry antibody titration" for the staining; the SOP wins over this page. |
 
 ## Purpose
@@ -31,25 +31,29 @@ macrophage gate.
 - 15 mL or 50 mL tubes, labelled, on ice
 - ACK erythrocyte lysis buffer if the suspension is bloody (recipe in the protocol
   index)
-- Counter, FACS reagents as in P08
+- Counter, FACS reagents as in C3
 
 ## Before you start
 
 - Confirm with your supervisor that a surplus suspension is available on a day
   with a cytometer slot, and that your polarized RAW cells are ready the same day.
-- P08 staining plan extended with the peritoneal samples, CD19 and Ly6C.
+- C3 staining plan extended with the peritoneal samples, CD19 and Ly6C.
 - Record what the staff tell you about the sample: source of the material, date,
   volume, any treatment it carries over from the experiment it came from.
 
 ## Procedure
 
-1. Receive the suspension on ice. Keep it cold from here on; peritoneal
-   macrophages adhere to plastic within minutes at room temperature.
-2. Centrifuge 300 × g, 5 min, 4 °C. If the pellet is red, resuspend in 1 mL ACK
-   buffer for 2 min at room temperature, top up with buffer and centrifuge again.
+1. Receive the suspension on ice.
+
+> [!WARNING]
+> Keep it cold from here on; peritoneal macrophages adhere to plastic within
+> minutes at room temperature.
+
+2. Centrifuge **`300 × g, 5 min, 4 °C`**. If the pellet is red, resuspend in 1 mL ACK
+   buffer, **`room temperature, 2 min`**, top up with buffer and centrifuge again.
 3. Resuspend in FACS buffer and count. Expect large peritoneal macrophages to be
    roughly a third of the cells in a healthy sample.
-4. Stain with the course panel (P08), including CD19 and Ly6C, and acquire in the
+4. Stain with the course panel (C3), including CD19 and Ly6C, and acquire in the
    same session as the polarized RAW cells.
 5. Gate: CD19 out, then F4/80 against MHCII for large (F4/80 high, MHCII low) and
    small (F4/80 low, MHCII high) peritoneal macrophages; ICAM2 and Gata6 confirm the
@@ -59,7 +63,7 @@ macrophage gate.
 
 - CD19 gate removes B cells; F4/80 against MHCII separates large and small
   peritoneal macrophages; ICAM2 and Gata6 confirm resident identity.
-- Same single-stain and fluorescence-minus-one controls as P08; the peritoneal
+- Same single-stain and fluorescence-minus-one controls as C3; the peritoneal
   sample and the RAW cells share the compensation.
 
 ## Checkpoints

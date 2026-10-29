@@ -74,14 +74,14 @@ the biosafety cabinet.
 
 | Reagent | Where | Hazard | Rule |
 |---|---|---|---|
-| DMSO (freezing medium) | P03 | carries whatever is dissolved in it through skin | gloves; change them at once on contact |
-| MTT | P09 | suspected mutagen, light sensitive | weigh in the fume hood, gloves, solid and liquid waste as chemical waste |
-| Acid isopropanol (0.04 M HCl) | P09 | flammable, mildly corrosive | pour in the fume hood, closed bottle, no flame, chemical waste |
-| Trypan blue | P01, P02 | suspected carcinogen | gloves; chemical waste, not the sink |
-| Liquid nitrogen | P03 | cold burns; vials can burst on thawing | cryo gloves and face shield when a vial leaves the tank |
-| Griess reagent (sulfanilamide, NED, phosphoric acid) | P07 | irritant, acidic | gloves, safety glasses, chemical waste |
-| ELISA stop solution (acid) | P06 | corrosive | gloves, safety glasses, multichannel pipette, chemical waste |
-| LPS and PRR ligands | P04, P05 | endotoxin; no hazard at the microgram amounts used | do not aerosolise; gloves |
+| DMSO (freezing medium) | S01 | carries whatever is dissolved in it through skin | gloves; change them at once on contact |
+| MTT | X05 | suspected mutagen, light sensitive | weigh in the fume hood, gloves, solid and liquid waste as chemical waste |
+| Acid isopropanol (0.04 M HCl) | X05 | flammable, mildly corrosive | pour in the fume hood, closed bottle, no flame, chemical waste |
+| Trypan blue | C1 | suspected carcinogen | gloves; chemical waste, not the sink |
+| Liquid nitrogen | S01 | cold burns; vials can burst on thawing | cryo gloves and face shield when a vial leaves the tank |
+| Griess reagent (sulfanilamide, NED, phosphoric acid) | X04 | irritant, acidic | gloves, safety glasses, chemical waste |
+| ELISA stop solution (acid) | C5 | corrosive | gloves, safety glasses, multichannel pipette, chemical waste |
+| LPS and PRR ligands | C2, C4 | endotoxin; no hazard at the microgram amounts used | do not aerosolise; gloves |
 | 70% ethanol | everywhere | flammable | wipe, do not spray; away from flames and hot plates |
 | PFA 4% | X03 | toxic fixative | fume hood only, PFA waste container, staff handle it |
 | DAB | X03 | suspected carcinogen | staff handle it; DAB waste container |

@@ -1,22 +1,22 @@
-# P04 Polarization of RAW 264.7: the menu
+# C2 Polarization of RAW 264.7: the menu
 
 > **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/Blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
 | | |
 |---|---|
-| ID | P04 |
+| ID | C2 |
 | Used in | Exp 1 (week 2, polarize and characterize) and Exp 3 (week 3, polarize and challenge) |
-| Hands-on time | 30 min to prepare the stimuli; the plating itself is P02 |
+| Hands-on time | 30 min to prepare the stimuli; the plating itself is C1 |
 | Wall-clock time | about 19 h, Tuesday 14:00 to Wednesday 09:00, in both weeks |
 | Resources | hood, incubator shelf, vortex |
-| Depends on | the group's stock flask (P01) at 60 to 80% confluence, counted |
+| Depends on | the group's stock flask (C1) at 60 to 80% confluence, counted |
 | Lab SOP | Zindel lab "RAW 264.7 polarisation" (v1.0, 2025-12-08): 96-well format, 100× stimulus stocks, master mixes. The SOP wins over this page. |
 
 ## Purpose
 
 Give your cells one defined signal and ask whether it changes what they are (week 2,
-read by flow cytometry, P08) and how they answer danger (week 3, read by ELISA after
-the challenge of P05). Your group picks one polarizer from the menu below. The
+read by flow cytometry, C3) and how they answer danger (week 3, read by ELISA after
+the challenge of C4). Your group picks one polarizer from the menu below. The
 polarizer goes into the seeding suspension: plate and polarize in one step on Tuesday
 afternoon, harvest or challenge on Wednesday morning. LPS is not a polarizer in this
 course; it is the technical positive control on every plate, beside the vehicle
@@ -30,7 +30,7 @@ problem.
 | IFNγ | 20 ng/mL | MHC-II and CD86 up, iNOS primed, TNF and IL-6 amplified with LPS. This is M(IFNγ) | flow (MHC-II, CD86) and ELISA | low |
 | IL-10 | 20 ng/mL | TNF and IL-6 suppressed through STAT3 and SOCS3 | ELISA (suppression, week 3) | low; nothing to see by flow, by design |
 | Dexamethasone | 100 nM | TNF, IL-6 and NO suppressed through the glucocorticoid receptor; the drug every patient on steroids gets | ELISA (suppression, week 3) | low; cheap and stable; needs a vehicle control |
-| IL-4 | 20 ng/mL | Arg1, Chil3, Retnla and Mrc1 mRNA up, LPS response dampened. This is M(IL-4) | qPCR Arg1 (X01); ELISA (suppression) | medium: CD206 by flow is weak in this line; intracellular Arg1 (P08) is the high-risk flow option |
+| IL-4 | 20 ng/mL | Arg1, Chil3, Retnla and Mrc1 mRNA up, LPS response dampened. This is M(IL-4) | qPCR Arg1 (X01); ELISA (suppression) | medium: CD206 by flow is weak in this line; intracellular Arg1 (C3) is the high-risk flow option |
 | PGE2 | 1 µM | IL-10 up and TNF down through cAMP | ELISA | medium; less canonical; vehicle control |
 | ATRA, all-trans retinoic acid | 1 µM, from a DMSO stock, in the dark | In vivo the signal that induces GATA6 and the peritoneal macrophage identity; in vitro it dampens TNF and NO and helps IL-4 induce Arg1. Whether it induces Gata6 in RAW 264.7 is not known | qPCR Gata6, Arg1, Icam2 (X01) | high: the lab's wild card, outcome unknown; for a group that takes the qPCR extension |
 
@@ -39,8 +39,9 @@ unknown, and IL-10, dexamethasone and PGE2 show nothing by design, because their
 readout is the suppressed cytokine response in week 3. "No change and good viability"
 is the expected week 2 result for a dampener, not a reason to pivot.
 
+> [!IMPORTANT]
 > **To verify:** LPS is the only stimulus validated in the lab (100 ng/mL, 16 h, on
-> the current stock, see P06). Every row above is a literature dose; working
+> the current stock, see C5). Every row above is a literature dose; working
 > concentrations, suppliers and catalogue numbers `[TODO]`. A group that wants
 > robust data takes IFNγ. Everything else extends the data for the next iteration of
 > the course, and that is said on the poster.
@@ -56,7 +57,7 @@ is the expected week 2 result for a dampener, not a reason to pivot.
   are the same well.
 - LPS, E. coli O111:B4, ultrapure, lab stock 2.5 mg/mL `[TODO: supplier and
   catalogue number of the lab's stock]`
-- Complete medium, warm (recipe in P01); DPBS, warm
+- Complete medium, warm (recipe in C1); DPBS, warm
 - 1.5 mL tubes for the 100× stocks, 5 mL or 15 mL tubes for the master mixes
 - Vortex
 
@@ -64,7 +65,7 @@ is the expected week 2 result for a dampener, not a reason to pivot.
 
 - The plate map is drawn in the notebook before anything is pipetted. Week 2 (flow
   plate, 6- or 12-well): vehicle, M(pol), LPS control, one well each, a second set if
-  you run intracellular Arg1. Week 3 (96-well, P05): the six conditions of the
+  you run intracellular Arg1. Week 3 (96-well, C4): the six conditions of the
   challenge in triplicate plus the inhibitor wells.
 - Stimuli are added as 100× stocks to the seeding suspension, 1 part in 100, so
   every well gets the same volume of additive and no medium change is needed.
@@ -76,25 +77,31 @@ is the expected week 2 result for a dampener, not a reason to pivot.
 
 1. LPS 100× stock. Dilute the lab stock stepwise in complete medium, as the lab SOP
    does:
+
    | Tube | From | Add | Result | 100× for |
    |---|---|---|---|---|
    | L1 | LPS stock (2.5 mg/mL) | 2 µL + 498 µL medium | 10,000 ng/mL | 100 ng/mL |
    | L2 | L1 | 50 µL + 450 µL medium | 1,000 ng/mL | 10 ng/mL |
-   L1 is the tube used here and in P05; the full ladder (L3, L4) is for the
+
+   L1 is the tube used here and in C4; the full ladder (L3, L4) is for the
    dose-response extension.
 2. Polarizer 100× stock in complete medium: IFNγ, IL-4 or IL-10 at 2 µg/mL (100× of
    20 ng/mL); dexamethasone at 10 µM; PGE2 at 100 µM; ATRA at 100 µM. Vehicle 100×:
    10% DMSO or ethanol in medium, for a final 0.1% `[TODO: check against the
    supplier's recommended range]`.
-3. Seeding suspensions, one per condition: count the stock flask (P02, steps 1 to
-   5), dilute to the working density of the plate format (P02, step 7), and add
+3. Seeding suspensions, one per condition: count the stock flask (C1, steps 1 to
+   5), dilute to the working density of the plate format (C1, step 7), and add
    10 µL of 100× stock per mL of suspension (polarizer, LPS, or vehicle). Mix by
    inverting; do not vortex cells.
-4. Plate according to the map (P02, step 7). Record the clock time: this is the start
-   of the polarization. Rock the plate in a cross pattern; do not swirl.
-5. Incubate overnight at 37 °C, 5% CO2, about 19 h.
-6. Wednesday 09:00, week 2: harvest for flow cytometry (P08). Week 3: the challenge
-   goes onto the polarized cells (P05); the polarizer stays in the well.
+4. Plate according to the map (C1, step 7). Record the clock time: this is the start
+   of the polarization.
+
+> [!TIP]
+> Rock the plate in a cross pattern; do not swirl.
+
+5. Incubate overnight at **`37 °C, 5% CO2, about 19 h`**.
+6. Wednesday 09:00, week 2: harvest for flow cytometry (C3). Week 3: the challenge
+   goes onto the polarized cells (C4); the polarizer stays in the well.
 
 ## Controls
 

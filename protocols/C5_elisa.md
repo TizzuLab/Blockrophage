@@ -1,15 +1,15 @@
-# P06 ELISA for IL-6 or TNF
+# C5 ELISA for IL-6 or TNF
 
 > **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/Blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
 | | |
 |---|---|
-| ID | P06 |
+| ID | C5 |
 | Used in | Exp 3 |
 | Hands-on time | 3–4 h, with incubation waits, plus coating the day before |
 | Wall-clock time | 2 days (coating overnight) |
 | Resources | plate reader (450 nm; the lab uses a Promega GloMax Discover), multichannel pipette, plate washer or wash bottle, bench space |
-| Depends on | P05 supernatants (overnight default, 6 h alternative); plates coated on Wednesday 16:30 |
+| Depends on | C4 supernatants (overnight default, 6 h alternative); plates coated on Wednesday 16:30 |
 | Lab SOP | Zindel lab "RAW 264.7 polarisation" (v1.0, 2025-12-08), harvesting section, and the kit insert of the Invitrogen Mouse IL-6 Uncoated ELISA Kit (88-7064-88). The kit insert wins over this page. |
 
 ## Purpose
@@ -22,7 +22,7 @@ response. Your group chooses one, and the choice is part of the plan:
   It is the cytokine the lab validated (worked example below).
 - TNF peaks 4 to 6 h after the stimulus; the overnight supernatant still contains
   it, but less. A group that picks TNF either accepts a decayed signal or adds a
-  6 h arm (P04, step 6) and harvests it the same afternoon.
+  6 h arm (C2, step 6) and harvests it the same afternoon.
 
 A group that wants robust data picks IL-6. The mouse IL-6 kit is in stock, the TNF kit
 is pre-bought; another cytokine can be ordered if its kit arrives in time.
@@ -40,7 +40,7 @@ read-out follow from 15:00.
 - Mouse TNF ELISA kit `[TODO: the lab has run IL-6 only; choose the matching
   uncoated TNF kit of the same series]`
 - High-binding 96-well ELISA plates (Nunc MaxiSorp or as the kit recommends)
-- Supernatants from P05, cleared at 900 × g, or thawed aliquots on ice
+- Supernatants from C4, cleared at 900 × g, or thawed aliquots on ice
 - Complete medium for diluting samples where needed
 - Plate reader at 450 nm. The kit recommends subtracting a 570 nm reading; the lab's
   GloMax Discover reads 450 nm without a reference filter, which worked for the
@@ -49,11 +49,11 @@ read-out follow from 15:00.
 ## Before you start
 
 - Kit insert read once completely. Coat the plate with capture antibody the day
-  before (overnight at 4 °C), block it in the morning while P05 harvests.
+  before (overnight at 4 °C), block it in the morning while C4 harvests.
 - Plate map for the ELISA plate drawn in the notebook: standard curve in duplicate
   (7 points, 2-fold from 500 pg/mL, plus blank), samples in the layout of the
   culture plate, dilutions.
-- Dilution: with the 96-well format of P05 (2 × 10^4 cells, 200 µL, 16 h) the neat
+- Dilution: with the 96-well format of C4 (2 × 10^4 cells, 200 µL, 16 h) the neat
   supernatant of LPS-challenged M(-) lands inside the standard range (about
   300 pg/mL at 100 ng/mL LPS in the lab's hands). Run every sample neat on the
   first plate; add a 1:5 dilution in assay diluent for the M(IFNγ)-primed LPS wells,
@@ -62,11 +62,15 @@ read-out follow from 15:00.
 ## Procedure
 
 1. Follow the kit insert step by step. In outline: coat 100 µL capture antibody
-   per well overnight at 4 °C; wash; block 1 h at room temperature; wash; add
-   100 µL standard or sample per well, 2 h at room temperature; wash; detection
-   antibody 1 h; wash; streptavidin-HRP 30 min; wash; TMB about 15 min in the dark;
-   stop solution. Washes are 3 to 5 times with the kit's wash buffer; do not let
-   wells dry.
+   per well **`4 °C, overnight`**; wash; block **`room temperature, 1 h`**; wash; add
+   100 µL standard or sample per well, **`room temperature, 2 h`**; wash; detection
+   antibody **`1 h`**; wash; streptavidin-HRP **`30 min`**; wash; TMB
+   **`about 15 min, dark`**; stop solution. Washes are 3 to 5 times with the kit's
+   wash buffer.
+
+> [!WARNING]
+> Do not let wells dry.
+
 2. Standard curve: 2-fold series from 500 pg/mL in assay diluent, duplicate,
    7 points plus blank (0 pg/mL).
 3. Samples at the dilutions from the plate map.
@@ -79,7 +83,7 @@ read-out follow from 15:00.
 
 - Blank (0 pg/mL standard): background, subtracted from every well.
 - LPS on M(-): the positive control shared by all groups.
-- Medium-only well from P02 run as a sample: detects reagent contamination.
+- Medium-only well from C1 run as a sample: detects reagent contamination.
 
 ## Checkpoints
 
@@ -106,7 +110,7 @@ duplicate, read at 450 nm. The raw ODs are in
 [`code/elisa/example_data/il6_lps_raw264_2026-09.csv`](../code/elisa/example_data/il6_lps_raw264_2026-09.csv)
 and the analysis is [`code/elisa/elisa_standard_curve.R`](../code/elisa/elisa_standard_curve.R).
 
-![IL-6 ELISA worked example: standard curve and IL-6 per LPS dose](figures/P06_il6_worked_example.png)
+![IL-6 ELISA worked example: standard curve and IL-6 per LPS dose](figures/C5_il6_worked_example.png)
 
 What you see: the curve is drawn far beyond the standards so that the whole S of the
 four-parameter logistic fit is visible (R² 0.999). The kit range, shaded, sits on the
@@ -115,7 +119,7 @@ at about 630 pg/mL and the upper plateau at OD 6.6 is beyond what the reader can
 measure, so a sample above the top standard cannot be back-calculated, only diluted. Vehicle and 0.1 ng/mL LPS are
 below the lowest standard, 1 ng/mL gives about 30 pg/mL, 10 ng/mL about 140 pg/mL
 and 100 ng/mL about 320 pg/mL, with triplicate wells within 15%. The 100 ng/mL
-point is the LPS control of P05: a neat supernatant lands in the upper third of the
+point is the LPS control of C4: a neat supernatant lands in the upper third of the
 curve, which is where you want it.
 
 Run it yourself from the `code/elisa` folder:

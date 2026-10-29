@@ -42,10 +42,10 @@
 <text x="462" y="90" font-size="12" fill="#FFFFFF" font-weight="bold">Facility lecture: flow cytometry and FlowJo</text>
 <text x="462" y="105" font-size="12" fill="#FFFFFF" font-weight="bold">(Florian Mair) [TODO: confirm slot]</text>
 <rect x="828.0" y="72" width="372.0" height="138" fill="#8B1E3F" stroke="#1A1A1A" stroke-width="2"/>
-<text x="834" y="138" font-size="12" fill="#FFFFFF" font-weight="bold">P08 Acquisition at the facility, two batches of</text>
+<text x="834" y="138" font-size="12" fill="#FFFFFF" font-weight="bold">C3 Acquisition at the facility, two batches of</text>
 <text x="834" y="153" font-size="12" fill="#FFFFFF" font-weight="bold">1.5 h, two groups each [TODO: reservation]</text>
 <rect x="456.0" y="118" width="372.0" height="92" fill="#C6E0B4" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="462" y="161" font-size="12" fill="#1A1A1A">P08 Harvest the adherent cells, count, viability dye,</text>
+<text x="462" y="161" font-size="12" fill="#1A1A1A">C3 Harvest the adherent cells, count, viability dye,</text>
 <text x="462" y="176" font-size="12" fill="#1A1A1A">Fc block, surface stain</text>
 <rect x="84.0" y="210" width="372.0" height="46" fill="#EDEDED" stroke="#BFBFBF" stroke-width="0.8"/>
 <text x="90" y="228" font-size="12" fill="#5A5A5A">Lunch</text>
@@ -54,14 +54,14 @@
 <rect x="828.0" y="210" width="372.0" height="46" fill="#EDEDED" stroke="#BFBFBF" stroke-width="0.8"/>
 <text x="834" y="228" font-size="12" fill="#5A5A5A">Lunch</text>
 <rect x="84.0" y="256" width="372.0" height="102" fill="#C6E0B4" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="90" y="274" font-size="12" fill="#1A1A1A">P02 and P04: plate cells from your stock with the</text>
+<text x="90" y="274" font-size="12" fill="#1A1A1A">C1 and C2: plate cells from your stock with the</text>
 <text x="90" y="289" font-size="12" fill="#1A1A1A">polarizer already in the seeding suspension. Vehicle</text>
 <text x="90" y="304" font-size="12" fill="#1A1A1A">control, M(pol) and LPS control on the flow plate (6-</text>
 <text x="90" y="319" font-size="12" fill="#1A1A1A">or 12-well). Plate-and-polarize in one step, about 19</text>
 <text x="90" y="334" font-size="12" fill="#1A1A1A">h. Wet-lab goal: plate at a defined density with a</text>
 <text x="90" y="349" font-size="12" fill="#1A1A1A">stimulus.</text>
 <rect x="456.0" y="256" width="372.0" height="102" fill="#C6E0B4" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="462" y="289" font-size="12" fill="#1A1A1A">P08 continued: optional Arg1 fix and perm, fix, store</text>
+<text x="462" y="289" font-size="12" fill="#1A1A1A">C3 continued: optional Arg1 fix and perm, fix, store</text>
 <text x="462" y="304" font-size="12" fill="#1A1A1A">at 4 °C until acquisition. Wet-lab goal: harvest,</text>
 <text x="462" y="319" font-size="12" fill="#1A1A1A">staining, fixation. Staining plan and FMOs in the</text>
 <text x="462" y="334" font-size="12" fill="#1A1A1A">notebook.</text>

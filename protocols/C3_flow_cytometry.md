@@ -1,15 +1,15 @@
-# P08 Flow cytometry of polarized RAW 264.7
+# C3 Flow cytometry of polarized RAW 264.7
 
 > **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/Blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
 | | |
 |---|---|
-| ID | P08 |
+| ID | C3 |
 | Used in | Exp 1 (core: polarized RAW cells, week 2); X02 (extension: peritoneal cells on the same panel) |
 | Hands-on time | 2 h staining, 1 h acquisition (plus 2.5 h if the intranuclear option is run) |
 | Wall-clock time | half a day; fixed samples can be acquired the next day |
 | Resources | hood, cooled centrifuge with plate rotor, heating block, cytometer slot reserved by the facility `[TODO: instrument, slot dates]`, FlowJo seat |
-| Depends on | P04 unchallenged 6-well per state, 24 h after polarization |
+| Depends on | C2 unchallenged 6-well per state, 24 h after polarization |
 | Lab SOP | Zindel lab "Flow cytometry" (v2.0, 2026-02-16) and "Flow cytometry antibody titration" (v1.0, 2025-08-22); panels in the lab's panel workbook. The SOP wins over this page. |
 
 ## Purpose
@@ -47,6 +47,7 @@ on peritoneal cells (dilution factors from the lab's panel workbook, titrated wi
 | Arg1 (intracellular) | M(IL-4); optional, high risk | PE or APC, clone A1exF5, with isotype `[TODO: order and titrate]` | |
 | Intracellular Nos2 | optional | `[TODO: not in the lab panel]` | |
 
+> [!IMPORTANT]
 > **To verify:** the fluorochrome choices come from a panel built for the lab's
 > 5-laser instrument at Bern (BD LSRII SORP, with a spectral option). Rebuild the
 > panel with the ETH flow facility for the instrument the course gets, and keep the
@@ -80,28 +81,31 @@ on peritoneal cells (dilution factors from the lab's panel workbook, titrated wi
 
 1. Harvest the 6-well of each condition (vehicle, polarizer, LPS control) by
    scraping into cold FACS buffer.
-   Count. Centrifuge 300 × g, 5 min, 4 °C.
+   Count. Centrifuge **`300 × g, 5 min, 4 °C`**.
 2. Resuspend each sample in 200 µL PBS and transfer to the V-bottom plate.
-3. Live/dead control: take 100 µL of one sample into a tube, 95 °C for 5 min, then
-   on ice 5 min, and add it back to the remaining 100 µL of live cells of that
+3. Live/dead control: take 100 µL of one sample into a tube, **`95 °C, 5 min`**, then
+   **`on ice, 5 min`**, and add it back to the remaining 100 µL of live cells of that
    well. This well is stained with the viability dye only.
-4. Wash all wells with 200 µL PBS; centrifuge 300 × g, 5 min, 4 °C; flick the plate
+4. Wash all wells with 200 µL PBS; centrifuge **`300 × g, 5 min, 4 °C`**; flick the plate
    to discard the supernatant (the same wash from here on).
-5. Viability dye plus Fc block, 50 µL per well in PBS (not in buffer: serum
-   quenches the dye), 20 min, 4 °C, dark. Unstained well gets 50 µL PBS. Wash with
-   PBS.
-6. Surface stain: antibody mix in FACS buffer, 50 µL per well, 20 min, 4 °C, dark.
+5. Viability dye plus Fc block, 50 µL per well in PBS, **`20 min, 4 °C, dark`**.
+   Unstained well gets 50 µL PBS. Wash with PBS.
+
+> [!NOTE]
+> In PBS, not in buffer: serum quenches the dye.
+
+6. Surface stain: antibody mix in FACS buffer, 50 µL per well, **`20 min, 4 °C, dark`**.
    Unstained and live/dead wells get buffer only. FMO wells get the mix minus one
    antibody.
 7. Single stains for compensation on beads, in parallel: vortex the beads 30 s, one
    drop (about 30 µL) made up to 400 µL with buffer serves four wells of 100 µL;
    add 1 µL of one antibody per well, plus one well of beads without antibody.
-   20 min, 4 °C, dark.
+   **`20 min, 4 °C, dark`**.
 8. Wash all wells twice with FACS buffer.
 9. Optional intranuclear stain (Gata6, Nos2, Arg1): fixation/permeabilisation
-   working solution (1 part concentrate in 4 parts diluent), 50 µL per well, 60 min,
-   4 °C, dark; wash with 1× permeabilisation buffer; intranuclear mix in
-   permeabilisation buffer, 50 µL, 90 min, 4 °C, dark; wash with permeabilisation
+   working solution (1 part concentrate in 4 parts diluent), 50 µL per well,
+   **`60 min, 4 °C, dark`**; wash with 1× permeabilisation buffer; intranuclear mix in
+   permeabilisation buffer, 50 µL, **`90 min, 4 °C, dark`**; wash with permeabilisation
    buffer. Include the isotype control for Gata6.
 10. Resuspend in 200 µL FACS buffer and filter through the strainer cap into flow
     tubes. Keep on ice in the dark; fixed samples can be acquired the next day.
@@ -113,8 +117,8 @@ on peritoneal cells (dilution factors from the lab's panel workbook, titrated wi
 ### Optional: intracellular Arg1, the high-risk arm
 
 Arg1 is cytoplasmic, so it is stained after the surface stain and after fixation and
-permeabilization with the Foxp3 buffer set, following the kit insert: fix 30 min,
-wash twice in permeabilization buffer, Fc block, stain Arg1 and its isotype 30 min in
+permeabilization with the Foxp3 buffer set, following the kit insert: fix **`30 min`**,
+wash twice in permeabilization buffer, Fc block, stain Arg1 and its isotype **`30 min`** in
 permeabilization buffer, wash twice, resuspend in FACS buffer. Permeabilization costs
 some surface signal, so the surface markers go on first and the FMOs are run on
 permeabilized cells too. Expect a small shift in M(IL-4) at best: the induction is

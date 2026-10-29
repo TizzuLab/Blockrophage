@@ -1,6 +1,6 @@
 # ELISA: standard curve and concentrations
 
-Template for P06. One script, one example dataset, runs end to end:
+Template for C5. One script, one example dataset, runs end to end:
 
 ```
 Rscript elisa_standard_curve.R                      # example data -> output/

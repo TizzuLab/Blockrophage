@@ -50,8 +50,10 @@ sections, with an H&E serial section for orientation.
   positive control whenever one is available.
 - Record what the staff tell you about the sample: tissue, fixation date, and the
   experiment it came from.
-- Formaldehyde and xylene handled in the fume hood.
 - Slides labelled with pencil (solvent-proof).
+
+> [!CAUTION]
+> Formaldehyde and xylene handled in the fume hood.
 
 ## Procedure
 
@@ -59,26 +61,27 @@ sections, with an H&E serial section for orientation.
    the cassettes to the histology facility for processing, paraffin embedding and
    3.5 µm sections. Ask for serial sections: one for F4/80, one for the no-primary
    control, one for H&E. Blocks that arrive already embedded skip to sectioning.
-2. Deparaffinise: 2 × xylene 3 min, 2 × 100% ethanol 5 min, 95% ethanol 3 min,
-   70% ethanol 3 min, distilled water 5 min.
-3. Antigen retrieval in 1× citrate buffer pH 6 in the pressure cooker, 110 °C for
-   15 min; let cool 25–30 min. Rinse in TBS 4 min.
-4. Block with protein blocking solution, 30 min, room temperature.
-5. Primary F4/80 in antibody diluent, overnight at 4 °C. The no-primary section
+2. Deparaffinise: 2 × xylene **`3 min`**, 2 × 100% ethanol **`5 min`**, 95% ethanol
+   **`3 min`**, 70% ethanol **`3 min`**, distilled water **`5 min`**.
+3. Antigen retrieval in 1× citrate buffer pH 6 in the pressure cooker,
+   **`110 °C, 15 min`**; let cool **`25–30 min`**. Rinse in TBS **`4 min`**.
+4. Block with protein blocking solution, **`30 min, room temperature`**.
+5. Primary F4/80 in antibody diluent, **`4 °C, overnight`**. The no-primary section
    gets diluent only.
-6. Day 2: rinse in cold TBST 4 min. Quench endogenous peroxidase with 3% H2O2 in
-   TBS, 10 min. Rinse TBST 4 min.
-7. Biotinylated secondary 1:200 in diluent, 1 h, room temperature. Rinse TBST 4 min.
-8. ABC-HRP reagent, 30 min, room temperature. Rinse TBST 4 min.
+6. Day 2: rinse in cold TBST **`4 min`**. Quench endogenous peroxidase with 3% H2O2 in
+   TBS, **`10 min`**. Rinse TBST **`4 min`**.
+7. Biotinylated secondary 1:200 in diluent, **`1 h, room temperature`**. Rinse TBST
+   **`4 min`**.
+8. ABC-HRP reagent, **`30 min, room temperature`**. Rinse TBST **`4 min`**.
 9. Develop with DAB, watching under the microscope until the positive control is
    brown and the no-primary section is still clean; rinse in distilled water.
-10. Counterstain: Mayer's haematoxylin 7 min, rinse in running tap water until
+10. Counterstain: Mayer's haematoxylin **`7 min`**, rinse in running tap water until
     clear, differentiate with 1–2 dips of HCl-ethanol, blue under running tap water
-    10 min.
-11. Dehydrate: 70% ethanol 1 min, 2 × 95% 1 min, 3 × 100% 1 min, ethanol/xylene 1:1
-    1 min, 3 × xylene 1 min. Mount with Eukitt.
-12. H&E on the serial section per the lab SOP: haematoxylin as above, eosin 1 min
-    15 s, 1–3 dips 70% ethanol, dehydrate, mount.
+    **`10 min`**.
+11. Dehydrate: 70% ethanol **`1 min`**, 2 × 95% **`1 min`**, 3 × 100% **`1 min`**,
+    ethanol/xylene 1:1 **`1 min`**, 3 × xylene **`1 min`**. Mount with Eukitt.
+12. H&E on the serial section per the lab SOP: haematoxylin as above, eosin
+    **`1 min 15 s`**, 1–3 dips 70% ethanol, dehydrate, mount.
 13. Image on the slide scanner. Submit the scan and a short legend to the atlas.
 
 ## Controls

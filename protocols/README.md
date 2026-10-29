@@ -6,36 +6,51 @@ One file per protocol, all on the same template (00_TEMPLATE.md): header table,
 purpose, materials, before you start, procedure, controls, checkpoints, known failure
 modes, output. Values the lab has not yet confirmed are marked `[TODO]`; things
 the lab has a protocol for but has not run in the course format carry a
-`> **To verify:**` callout. Where the lab has a validated SOP, the SOP wins and the
+`> [!IMPORTANT] **To verify:**` callout. Where the lab has a validated SOP, the SOP wins and the
 protocol names it (lab SOP number, version and date; the SOPs themselves are
-internal documents). Figures live in `figures/`.
+internal documents). Figures live in `figures/`. Every incubation and centrifugation
+you set or time is bold and boxed, like **`37 °C, 5% CO2, 16 h`**; the formatting
+rules are at the top of the template.
 
-P-files are the core programme, X-files are optional extensions (Section 5 of the script, Extensions).
+Five core protocols (C) carry the course, in the order you meet them: cells,
+polarization, phenotype, challenge, readout. X-files are optional extensions
+(Section 5 of the script, Extensions). The S-file is for the staff.
+
+**Core**
 
 | ID | Title | Used in | Hands-on time | Wall-clock time | Resources |
 |---|---|---|---|---|---|
-| P01 | RAW 264.7: thaw and seed the group's stock flask | week 1 Friday; stock for Exp 1 and 3 | 45 min, then 20 min per split | the whole course | hood, incubator, centrifuge, counter, microscope |
-| P02 | RAW 264.7: scrape, count, split, seed | week 1 hands-on, Exp 1, Exp 3, passaging | 45 min | polarized at seeding, harvested or challenged next morning | hood, incubator, centrifuge, counter |
-| P03 | RAW 264.7: backup vials and the stock over the break (staff) | Thu of week 2, Easter break | 45 min + 20 min per split | overnight at −80 °C, then −140 °C | hood, centrifuge, freezing container, −80 °C, −140 °C |
-| P04 | Polarization: the menu | Exp 1, Exp 3 | 30 min, at seeding | about 19 h, Tue to Wed | hood, incubator, vortex |
-| P05 | Danger-signal challenge: PAMPs, DAMPs, inhibitors | Exp 3 (week 3 Wed) | 45 min + 45 min harvest | 16 h overnight (default) or 6 h | hood, incubator, plate centrifuge, −20 °C, −80 °C |
-| P06 | ELISA IL-6 (default) or TNF | Exp 3 (week 3 Thu) | 3–4 h + coating the day before | 2 days | plate reader (450 nm), multichannel pipette |
-| P07 | Griess assay | Extension | 1 h | 1 h | plate reader |
-| P08 | Flow cytometry of polarized RAW cells | Exp 1 (week 2), X02 | 2 h stain + 1 h acquisition | half day | hood, cooled plate centrifuge, heating block, cytometer slot, FlowJo seat |
-| P09 | MTT assay: metabolic activity as a proxy for cell number | optional, extension | 40 min + 20 min per read day | 3.5 h per read, same day | hood, incubator, plate reader (560 or 570 nm plus reference), multichannel pipette |
-| X01 | RNA isolation and qPCR | Extension | 1 h + 1.5 days | 6 h arm, then 2 days | hood, −80 °C, RNA bench, NanoDrop, thermal cycler, LightCycler 480 II |
-| X02 | Peritoneal cells on the shared flow panel | Extension | 30 min + staining | half day, with cytometer slot | surplus peritoneal cell suspension provided by staff, ice, cooled centrifuge, cytometer slot |
-| X03 | F4/80 IHC on tissue sections | Extension | 1 h + 2 × 3 h | about 5 days | surplus fixed tissue or blocks provided by staff, histology facility (paraffin), pressure cooker, histology bench, slide scanner |
+| [C1](C1_raw264_culture.md) | RAW 264.7 culture: thaw, split, seed | week 1 Friday (thaw the stock flask); Exp 1 and 3 plating; passaging | 45 min for the thaw, 45 min per split or seeding | the flask lives the whole course; a seeded plate is used the next morning | hood, incubator, centrifuge, counter, microscope |
+| [C2](C2_polarization.md) | Polarization: the menu | Exp 1, Exp 3 | 30 min, at seeding | about 19 h, Tue to Wed | hood, incubator, vortex |
+| [C3](C3_flow_cytometry.md) | Flow cytometry of polarized RAW cells | Exp 1 (week 2), X02 | 2 h stain + 1 h acquisition | half day | hood, cooled plate centrifuge, heating block, cytometer slot, FlowJo seat |
+| [C4](C4_prr_challenge.md) | Danger-signal challenge: PAMPs, DAMPs, inhibitors | Exp 3 (week 3 Wed) | 45 min + 45 min harvest | 16 h overnight (default) or 6 h | hood, incubator, plate centrifuge, −20 °C, −80 °C |
+| [C5](C5_elisa.md) | ELISA IL-6 (default) or TNF | Exp 3 (week 3 Thu) | 3–4 h + coating the day before | 2 days | plate reader (450 nm), multichannel pipette |
+
+**Extensions**
+
+| ID | Title | Used in | Hands-on time | Wall-clock time | Resources |
+|---|---|---|---|---|---|
+| [X01](X01_qpcr.md) | RNA isolation and qPCR | Extension | 1 h + 1.5 days | 6 h arm, then 2 days | hood, −80 °C, RNA bench, NanoDrop, thermal cycler, LightCycler 480 II |
+| [X02](X02_peritoneal_cells_flow.md) | Peritoneal cells on the shared flow panel | Extension | 30 min + staining | half day, with cytometer slot | surplus peritoneal cell suspension provided by staff, ice, cooled centrifuge, cytometer slot |
+| [X03](X03_tissue_sections_ihc.md) | F4/80 IHC on tissue sections | Extension | 1 h + 2 × 3 h | about 5 days | surplus fixed tissue or blocks provided by staff, histology facility (paraffin), pressure cooker, histology bench, slide scanner |
+| [X04](X04_griess.md) | Griess assay | Extension, on the Exp 3 supernatants | 1 h | 1 h | plate reader |
+| [X05](X05_mtt.md) | MTT assay: metabolic activity as a proxy for cell number | Extension | 40 min + 20 min per read day | 3.5 h per read, same day | hood, incubator, plate reader (560 or 570 nm plus reference), multichannel pipette |
+
+**Staff**
+
+| ID | Title | Used in | Hands-on time | Wall-clock time | Resources |
+|---|---|---|---|---|---|
+| [S01](S01_raw264_freeze.md) | RAW 264.7: backup vials and the stock over the break | Thu of week 2, Easter break | 45 min + 20 min per split | overnight at −80 °C, then −140 °C | hood, centrifuge, freezing container, −80 °C, −140 °C |
 
 ## Dependencies in time
 
-- P01: the group's stock flask is thawed on Friday of week 1 and lives until the
-  end of the course; the staff carry it over the weekend and the break (P03).
-- Exp 1 (week 2): P02 plates on Tuesday 13:00 with the polarizer in the suspension
-  (P04); P08 harvests, stains and fixes on Wednesday, acquires on Thursday morning.
-- Exp 3 (week 3): P02 plates on Tuesday 13:00 with the polarizer (P04); P05
-  challenges on Wednesday 09:00, overnight (default) or 6 h; P06 plates are coated
-  on Wednesday 16:30 and run on Thursday. P07 (extension) runs on the same
+- C1: the group's stock flask is thawed on Friday of week 1 and lives until the
+  end of the course; the staff carry it over the weekend and the break (S01).
+- Exp 1 (week 2): C1 plates on Tuesday 13:00 with the polarizer in the suspension
+  (C2); C3 harvests, stains and fixes on Wednesday, acquires on Thursday morning.
+- Exp 3 (week 3): C1 plates on Tuesday 13:00 with the polarizer (C2); C4
+  challenges on Wednesday 09:00, overnight (default) or 6 h; C5 plates are coated
+  on Wednesday 16:30 and run on Thursday. X04 (extension) runs on the same
   supernatants.
 - X02 needs a cytometer slot on the day the peritoneal cells are available; X03
   tissue must reach the facility in week 1. Both depend on surplus primary material
@@ -43,7 +58,7 @@ P-files are the core programme, X-files are optional extensions (Section 5 of th
 
 ## Plate formats
 
-One seeding density, scaled by growth area (P02): 96-well plates (2 × 10^4 cells,
+One seeding density, scaled by growth area (C1): 96-well plates (2 × 10^4 cells,
 200 µL) for everything that ends in a supernatant assay, 6-well plates for flow
 cytometry, 24-well plates for the RNA extension.
 

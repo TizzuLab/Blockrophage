@@ -1,21 +1,21 @@
-# P09 MTT assay: metabolic activity as a proxy for cell number
+# X05 MTT assay: metabolic activity as a proxy for cell number
 
 > **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/Blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
 | | |
 |---|---|
-| ID | P09 |
+| ID | X05 |
 | Used in | Optional, extension: a growth curve of the stock, or a viability check on wells whose supernatant has been harvested. Not part of the core since the 2026-10-28 revision |
 | Hands-on time | 20 min to seed, 40 min for the standard curve and the first read, 20 min per read after that |
 | Wall-clock time | 3.5 h per read (3 h MTT, 15 min solubilisation, read), same day |
 | Resources | hood, incubator shelf, plate reader with a 560 or 570 nm filter and a reference filter, multichannel pipette, orbital shaker (optional), microscope |
-| Depends on | a counted live-cell suspension from P01 step 5 (thaw day) or P02 step 5 |
+| Depends on | a counted live-cell suspension from C1 step 5 (thaw day) or C1 step 5 |
 | Lab SOP | none yet `[TODO]`. This page is built from three published sources, listed at the end; the lab has not run an MTT assay in this format. |
 
 ## Purpose
 
 A second, independent growth curve of RAW 264.7 next to the daily flask counts of
-P01, and a standard curve that shows what the assay can and cannot resolve. MTT
+C1, and a standard curve that shows what the assay can and cannot resolve. MTT
 (3-(4,5-dimethylthiazol-2-yl)-2,5-diphenyltetrazolium bromide) is a yellow,
 water-soluble salt that living cells reduce to a purple, insoluble formazan; the
 reduction is done by NAD(P)H-dependent oxidoreductases, largely outside the
@@ -24,14 +24,18 @@ number of metabolically active cells, as long as every cell reduces MTT at the
 same rate. That condition is the whole lesson of this protocol: the assay counts
 metabolic activity, not cells, and the two diverge whenever the metabolic state
 changes, for example in freshly thawed cells, in overgrown wells or in polarized
-macrophages. The doubling time from P09 is compared with the one from P01 counts;
+macrophages. The doubling time from X05 is compared with the one from C1 counts;
 where they differ, the notebook says which one is trusted and why.
 
 ## Materials
 
 - MTT powder `[TODO: order; not in the lab's protocol collection as of 2026-10]`:
-  Thermo M6494 (1 g) or Sigma M5655 (500 mg). Light sensitive. MTT is a suspected
-  mutagen: gloves, weigh in a hood or with a mask, solid waste as chemical waste.
+  Thermo M6494 (1 g) or Sigma M5655 (500 mg). Light sensitive.
+
+> [!CAUTION]
+> MTT is a suspected mutagen: gloves, weigh in a hood or with a mask, solid waste
+> as chemical waste.
+
 - MTT stock, 5 mg/mL in DPBS (12 mM): 50 mg MTT in 10 mL sterile DPBS, vortex until
   dissolved, filter through 0.22 µm, 1 mL aliquots in amber or foil-wrapped tubes,
   4 °C in the dark for up to 4 weeks (or −20 °C for longer). A stock that has
@@ -41,7 +45,7 @@ where they differ, the notebook says which one is trusted and why.
   bottle, flammable. 100 µL per well; 10 mL serves one plate.
   Alternative when the plate can wait until the next morning: SDS-HCl, 1 g SDS in
   10 mL 0.01 M HCl, 100 µL per well, 4 to 18 h at 37 °C (see Sources).
-- Complete medium, warm (recipe in P01). Phenol-red-free DMEM for the MTT step is
+- Complete medium, warm (recipe in C1). Phenol-red-free DMEM for the MTT step is
   cleaner but not required with the acid solubiliser `[TODO: Gibco 21063029 if the
   lab stocks it]`.
 - DPBS (Gibco 14190144) for the outer wells
@@ -54,10 +58,10 @@ where they differ, the notebook says which one is trusted and why.
 ## Before you start
 
 - Plate map drawn in the notebook (template below). Outer wells get 200 µL DPBS
-  as an evaporation guard (P02, known failure modes).
+  as an evaporation guard (C1, known failure modes).
 - Live count of the suspension done (trypan blue), dilutions calculated so that
   every well receives 100 µL. The whole plate needs about 7 × 10^5 live cells, a
-  quarter of a vial; the rest goes into the P01 flask.
+  quarter of a vial; the rest goes into the C1 flask.
 - MTT stock and solubiliser at room temperature. Cold solubiliser does not dissolve
   the crystals.
 - Plate reader booked at 12:30, 14:30 and 16:00 on the read days, with the filter
@@ -75,36 +79,40 @@ Plate map, 100 µL per well:
 | 8, 9, 10 | E to G | 1 × 10^4 cells, spare set (repeat or microscope check) | as needed |
 | 5 to 11 | A and H; column 11 B to G | DPBS, 200 µL | never |
 
-The t = 0 point of the growth curve is the seeded cell number, taken from the P01
+The t = 0 point of the growth curve is the seeded cell number, taken from the C1
 count on Tuesday. The standard curve, seeded on Wednesday morning from the counted
 staff suspension, converts OD into cell number.
 
 ## Procedure
 
-Tuesday 13:00 (growth-curve columns, from the P01 thaw suspension or the staff stock
+Tuesday 13:00 (growth-curve columns, from the C1 thaw suspension or the staff stock
 flask)
 
 1. Prepare the two growth-curve suspensions in complete medium: 2.5 × 10^4 cells/mL
    (1.2 mL) and 1 × 10^5 cells/mL (2.2 mL).
 2. Fill the outer wells with 200 µL DPBS. Plate 100 µL per well into columns 5 to 7
-   and medium only into columns 8 to 10 according to the map. Rock the plate in a
-   cross pattern; do not swirl. Back into the incubator; nothing is read today.
+   and medium only into columns 8 to 10 according to the map. Back into the
+   incubator; nothing is read today.
+
+> [!TIP]
+> Rock the plate in a cross pattern; do not swirl.
+
 
 Wednesday 09:00 (standard curve and read 1)
 
 3. Prepare 2.6 mL of 8 × 10^5 live cells/mL from the counted staff suspension, then
    a 1:2 series in complete medium down to 1.25 × 10^4 cells/mL (seven tubes, 1.3 mL
-   each is enough). Plate 100 µL per well into columns 2 to 4. Incubate 2 h at
-   37 °C, 5% CO2, so that the cells attach
+   each is enough). Plate 100 µL per well into columns 2 to 4. Incubate
+   **`37 °C, 5% CO2, 2 h`**, so that the cells attach
    `[TODO: confirm 2 h is enough for RAW 264.7 to attach; the source figure used 4 h]`.
 4. Add 10 µL MTT stock straight into the medium: at 09:00 to every well of columns
    5 and 8 (read 1), at 11:00 to every well of columns 2 to 4, including the
-   medium-only row. Tap the plate gently. Incubate 3 h at 37 °C in the dark (plate
+   medium-only row. Tap the plate gently. Incubate **`37 °C, 3 h, dark`** (plate
    in the incubator is dark enough).
 5. Look at a high-density well under the microscope: purple needle-shaped crystals
    in and around the cells, none in the medium-only wells.
 6. Without removing the medium, add 100 µL acid isopropanol to each well that
-   received MTT. Cover with foil and shake 15 min on the orbital shaker, or
+   received MTT. Cover with foil and shake **`15 min`** on the orbital shaker, or
    pipette up and down ten times per well with the multichannel pipette. Check one
    well under the microscope: no crystals left, uniform purple.
 7. Read within 1 h at 570 nm (or 560 nm) with the reference filter: 12:30 for read
@@ -122,14 +130,16 @@ Thursday (reads 2 and 3)
 
 Optional, Experiments 2 and 4 (viability after supernatant harvest)
 
-10. After the supernatant has been taken off for ELISA and Griess (P05), add
+10. After the supernatant has been taken off for ELISA and Griess (C4), add
     100 µL warm complete medium and 10 µL MTT stock to the emptied wells and
     continue from step 4. Blanks are medium-only wells of the same plate. Read
-    the result as metabolic activity per well, not as a cell count: IFNγ and LPS
-    change macrophage metabolism, and nitric oxide inhibits mitochondrial
-    respiration, so a lower OD in M(IFNγ+LPS) wells is expected even with no cell
-    death. A trypan blue count of a scraped parallel well is the viability
-    control.
+    the result as metabolic activity per well, not as a cell count. A trypan blue
+    count of a scraped parallel well is the viability control.
+
+> [!NOTE]
+> IFNγ and LPS change macrophage metabolism, and nitric oxide inhibits
+> mitochondrial respiration, so a lower OD in M(IFNγ+LPS) wells is expected even
+> with no cell death.
 
 ## Controls
 
@@ -140,7 +150,7 @@ Optional, Experiments 2 and 4 (viability after supernatant harvest)
   10^4 cells, the lowest density the assay distinguishes from blank, and the
   density at which the curve bends. Every later OD is converted to a cell number
   with this curve, and the conversion is only trusted inside its linear range.
-- The P01 flask count of the same day: the independent readout. Two curves, two
+- The C1 flask count of the same day: the independent readout. Two curves, two
   doubling times; both go on the poster.
 - Known interferences, from the sources: reducing compounds (ascorbic acid,
   glutathione, dithiothreitol, coenzyme A, polyphenols) reduce MTT without cells;
@@ -170,7 +180,7 @@ Optional, Experiments 2 and 4 (viability after supernatant harvest)
   Fresh medium, sterile tips, a new MTT aliquot.
 - Doubling time from MTT shorter than from the counts: per-cell MTT reduction
   rises as the thawed cells recover, which inflates the slope. Say so, and use the
-  P01 counts for the number on the poster.
+  C1 counts for the number on the poster.
 - Doubling time from MTT longer than from the counts: high-density wells left the
   linear range, or the medium turned acidic. Use the low-density wells only.
 - Edge effect: unequal ODs across a replicate column with the outermost well off.
@@ -178,10 +188,10 @@ Optional, Experiments 2 and 4 (viability after supernatant harvest)
 
 ## Output
 
-Raw reader exports (one file per read day, named group_date_P09), the plate map,
+Raw reader exports (one file per read day, named group_date_X05), the plate map,
 blank-subtracted ODs, the standard-curve fit (slope, intercept, R², linear range),
 cell numbers per well, the plot of log cell number against time for both densities,
-the doubling time with the formula, and the same plot next to the P01 counts
+the doubling time with the formula, and the same plot next to the C1 counts
 `[TODO: growth-curve template in code/]`. Every deviation from this page in the
 notebook.
 
@@ -225,7 +235,7 @@ What was taken from where:
 | Solubiliser | 0.04 M HCl in isopropanol, 100 µL, medium not removed | Mosmann |
 | Mixing | 15 min orbital shaker under foil, or pipetting | Abcam |
 | Read | within 1 h, 570 nm, reference 630 nm | Mosmann (Abcam kit reads 590 nm) |
-| Reader | GloMax Discover, filters to confirm | lab, P06 |
+| Reader | GloMax Discover, filters to confirm | lab, C5 |
 | Seeding guidance | 5,000 to 10,000 cells per well for 48 to 72 h | Abcam; Thermo |
 | Course densities | 2.5 × 10^3 and 1 × 10^4 per well | this page: chosen so that the wells stay well below 3 × 10^5 at 48 h with a 15 to 24 h doubling time (lab SOP 0203) |
 | Standard curve range | 1.25 × 10^3 to 8 × 10^4 per well | this page, inside the Thermo linearity statement |
@@ -234,4 +244,4 @@ What was taken from where:
 | Interfering compounds | ascorbate, glutathione, DTT, coenzyme A, polyphenols | Abcam FAQ |
 | Warm solvent | never cold | Abcam |
 | Polarized cells caveat | metabolic state changes MTT reduction | Berridge and Tan 1993, Liu 1997, via Thermo; the NO and respiration point is textbook macrophage biology, see background section 5.4 |
-| Complete medium, DPBS, plate, outer-well guard | lab recipes | P01, P02 |
+| Complete medium, DPBS, plate, outer-well guard | lab recipes | C1 |
