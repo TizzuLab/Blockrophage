@@ -1,5 +1,7 @@
 # Single-cell RNA-seq (Experiment 2)
 
+← Back to the [course script](../../README.md#readme)
+
 One standard single-cell workflow, from the count matrices to your own signature.
 Every script follows the published Seurat tutorial; read it alongside the script:
 it is the conventional way, written by the people who built the method. Use your AI

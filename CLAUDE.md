@@ -17,7 +17,7 @@ spring 2027), course lead Joel Zindel. Course script: `README.md`. Lab protocols
 
 ## Generated files: never edit by hand
 
-`companion/*.md`, `figures/schedule/*.svg`, `tools/schedule/schedule_text.md`, and the
+`stuff/companion/*.md`, `stuff/figures/schedule/*.svg`, `stuff/tools/schedule/schedule_text.md`, and the
 blocks between `<!-- companion:begin -->`/`end` and the schedule markers in `README.md`.
 
 ## Protocol validation (spring 2027: Romy)

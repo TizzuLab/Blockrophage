@@ -36,7 +36,7 @@ where to check it. Never invent a value; [TODO] means unconfirmed, ask the
 supervisor. The course is under construction and the protocols are not validated.
 If a question needs more depth than this file gives, say that the full companion
 with the background reading, the lecture text and the analysis code is at
-https://raw.githubusercontent.com/TizzuLab/Blockrophage/main/companion/blockcourse-companion.md
+https://raw.githubusercontent.com/TizzuLab/Blockrophage/main/stuff/companion/blockcourse-companion.md
 and can be pasted in the same way.
 
 This is the core companion: the script, the schedule, the protocols, the notebook
@@ -52,7 +52,7 @@ full file from the repository and attach it to the session.
 - Course script, including the schedule
   - `README.md`
 - Schedule, text version of the drawings
-  - `tools/schedule/schedule_text.md`
+  - `stuff/tools/schedule/schedule_text.md`
 - Protocol index
   - `protocols/README.md`
 - Core protocols
@@ -99,13 +99,13 @@ full file from the repository and attach it to the session.
 
 ### How to use this repository as a model
 
-- The single file `companion/blockcourse-companion.md` contains every document below,
+- The single file `stuff/companion/blockcourse-companion.md` contains every document below,
   concatenated, with a table of contents. If you have that file, you have everything.
 - Protocols carry IDs (C1 to C5 core, X01 to X05 extension, S01 staff). When a user asks about
   a step, quote the protocol ID and the step number. Never invent a volume,
   concentration or time that is not in the protocol; values marked `[TODO]` are
   unconfirmed and you must say so.
-- The schedule is Section 4 of the script: one drawing per week (SVG in figures/schedule/) with a folded text table per day underneath, generated from the workbook in tools/schedule/.
+- The schedule is Section 4 of the script: one drawing per week (SVG in stuff/figures/schedule/) with a folded text table per day underneath, generated from the workbook in stuff/tools/schedule/.
   Sessions in bold are plenary and mandatory; the wet-lab times listed for a group
   are guaranteed; everything else is orientation and a group may shift work with
   its supervisor's agreement.
@@ -146,7 +146,7 @@ full file from the repository and attach it to the session.
 
 ### Slides
 
-- [Slides index](slides/README.md): five lecture decks (PDF), optional further reading; the course has no prerequisites.
+- [Lecture slides](background/slides/): five lecture decks (PDF), optional further reading, listed in the background chapter; the course has no prerequisites.
 
 ### Code
 
@@ -156,11 +156,11 @@ full file from the repository and attach it to the session.
 
 ### Optional
 
-- [Companion prompt](companion/prompt.md): the instructions at the top of the
+- [Companion prompt](stuff/companion/prompt.md): the instructions at the top of the
   companion files. The student copies the core companion from the collapsible block
   in the README and pastes it into a new session of their AI tool.
-- [Companion file](https://raw.githubusercontent.com/TizzuLab/Blockrophage/main/companion/blockcourse-companion.md): the whole repository as one file.
-- [Core companion](https://raw.githubusercontent.com/TizzuLab/Blockrophage/main/companion/blockcourse-companion-core.md): script, schedule and protocols only, for sessions that
+- [Companion file](https://raw.githubusercontent.com/TizzuLab/Blockrophage/main/stuff/companion/blockcourse-companion.md): the whole repository as one file.
+- [Core companion](https://raw.githubusercontent.com/TizzuLab/Blockrophage/main/stuff/companion/blockcourse-companion-core.md): script, schedule and protocols only, for sessions that
   have to start from a link.
 - [Licence](LICENSE.md): CC BY 4.0 for text, MIT for code.
 
@@ -215,7 +215,7 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 >
 > </details>
 
-No prior knowledge; the [lectures](slides/) are optional reading.
+No prior knowledge; the [lectures](background/slides/) are optional reading.
 
 ### 1. Concept
 
@@ -227,7 +227,7 @@ peritoneum, and test whether the M1/M2 heuristic survives (spoiler: it does not)
 we discover how models (such as the M1/M2 heuristic) can be wrong yet useful, for example 
 in explaining how macrophages differ in their response to danger molecules.
 The [background reading](background/README.md) tells that
-story and condenses the optional [lectures](slides/).
+story and condenses the optional [lectures](background/slides/).
 
 Teaching principles.
 
@@ -535,11 +535,11 @@ model, read [llms.txt](llms.txt).
 
 # Schedule, text version of the drawings
 
-<!-- file: tools/schedule/schedule_text.md -->
+<!-- file: stuff/tools/schedule/schedule_text.md -->
 
 ## Schedule, text version
 
-Generated from `tools/schedule/Blockcourse_Gantt_FS2027.xlsx` by `tools/schedule/gantt2readme.py` for the
+Generated from `stuff/tools/schedule/Blockcourse_Gantt_FS2027.xlsx` by `stuff/tools/schedule/gantt2readme.py` for the
 companion; the drawings in README Section 4 are the same content. Activity blocks in brackets;
 dark (plenary) blocks are mandatory, everything else is the default plan for all four groups.
 
@@ -689,6 +689,8 @@ dark (plenary) blocks are mandatory, everything else is the default plan for all
 <!-- file: protocols/README.md -->
 
 ## Protocols
+
+← Back to the [course script](../README.md#readme)
 
 > **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/Blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
@@ -2214,6 +2216,8 @@ What was taken from where:
 
 ## Notebooks
 
+← Back to the [course script](../README.md#readme)
+
 > **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/Blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
 Your lab notebook lives here, one file per person, on your group's branch. On main
@@ -2251,6 +2255,8 @@ this folder holds only this page.
 <!-- file: safety/README.md -->
 
 ## Admission sheet for the Blockrophage course: safety and data
+
+← Back to the [course script](../README.md#readme)
 
 > **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/Blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
@@ -2414,6 +2420,8 @@ file with the staff confirmations.
 
 ## Poster
 
+← Back to the [course script](../README.md#readme)
+
 > **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/Blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
 One poster per group, in the ETH corporate design, printed for the poster session on
@@ -2460,6 +2468,8 @@ the course may redistribute the template in this public repository]`.
 <!-- file: code/README.md -->
 
 ## Code: the in silico arm
+
+← Back to the [course script](../README.md#readme)
 
 > **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/Blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 

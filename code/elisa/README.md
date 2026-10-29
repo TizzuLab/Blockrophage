@@ -1,5 +1,7 @@
 # ELISA: standard curve and concentrations
 
+← Back to the [course script](../../README.md#readme)
+
 Template for C5. One script, one example dataset, runs end to end:
 
 Open the script in RStudio and press Source: it runs on the example data and writes

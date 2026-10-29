@@ -1,6 +1,6 @@
 # Schedule, text version
 
-Generated from `tools/schedule/Blockcourse_Gantt_FS2027.xlsx` by `tools/schedule/gantt2readme.py` for the
+Generated from `stuff/tools/schedule/Blockcourse_Gantt_FS2027.xlsx` by `stuff/tools/schedule/gantt2readme.py` for the
 companion; the drawings in README Section 4 are the same content. Activity blocks in brackets;
 dark (plenary) blocks are mandatory, everything else is the default plan for all four groups.
 

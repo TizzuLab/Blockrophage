@@ -4,7 +4,8 @@
 
 References for the background chapter and the experiments. Every DOI below has been
 checked to resolve to the paper named. Papers marked (slides) are cited in the lecture
-decks in [../slides/](../slides/README.md), which list further reading on tissue repair.
+decks ([listed in the background chapter](README.md#background-macrophage-biology)),
+which list further reading on tissue repair.
 
 ## Nomenclature, ontogeny and niche
 
