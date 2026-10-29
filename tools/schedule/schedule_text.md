@@ -10,11 +10,11 @@ dark (plenary) blocks are mandatory, everything else is the default plan for all
 
 - 08:00-09:00: Self-study: reading for the day, notebook, group branch
 - 09:00-11:00: [Plenary, lecture, debrief] Welcome address and introductory lecture: macrophages, why they matter, why we do what we do (Joel Zindel), 09:00-10:15
-- 11:00-12:00: [Plenary, lecture, debrief] Working in the lab and biosafety (Tea Kocijan), 10:30-12:00: Q&A, then the safety sheet is signed
+- 11:00-12:00: [Plenary, lecture, debrief] Working in the lab and biosafety (Tea Kocijan), 10:30-12:00: Q&A, then the admission sheet (safety and data) is signed
 - 12:00-13:00: Lunch
 - 13:00-14:00: [Plenary, lecture, debrief] Introduction of the supervisors (what they do and why) and group formation
 - 14:00-17:00: [Dry lab and desk work] Experiment planning with your supervisors: hand-draw the pathway you will test (ligand, receptor, output, how an inhibitor proves it, where the polarizer acts), pick your polarizer, stimulus and cytokine (C2, C4, C5) and your extension. Read C1 and C3 for Friday and Tuesday.
-- Staff: Rooms, safety officer. Signed safety sheets collected at 12:00. Supervisors sit with their group from 14:00.
+- Staff: Rooms, safety officer. Signed admission sheets collected at 12:00. Supervisors sit with their group from 14:00.
 - Resources: Conference room HPL F22 for lectures and dry lab.
 
 #### Fri 19 Mar

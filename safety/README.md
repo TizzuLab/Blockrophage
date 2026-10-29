@@ -1,11 +1,12 @@
-# Safety sheet for the Blockrophage course
+# Admission sheet for the Blockrophage course: safety and data
 
 > **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/Blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
-Two pages. Read them before the first day, bring them to the safety briefing on
-Thursday 18 March 2027, 09:00, and sign the last section after the briefing. The
-signed sheet is your admission to the bench. This sheet and the briefing are your
-safety instruction for the course; there is nothing else to read.
+Read this sheet before the first day, bring it to the safety briefing on Thursday
+18 March 2027, 09:00, and sign the last section after the briefing. The signed
+sheet is your admission to the bench. It covers two things: the safety rules
+(sections 1 and 2; together with the briefing they are your whole safety
+instruction for the course) and what happens with the data you produce (section 3).
 
 ## 1. Where these rules come from
 
@@ -16,7 +17,7 @@ and the Institute of Molecular Health Sciences has its own safety concept on top
 it. Both are written for the people who run labs, not for the people who spend four
 weeks in one. They require that every new person is instructed by the group leader
 or a delegate and that the instruction is recorded in writing. This sheet is that
-instruction, condensed to what applies to you, and your signature in section 3 is
+instruction, condensed to what applies to you, and your signature in section 4 is
 the record. The section numbers in brackets below point into the IMHS concept for
 anyone who wants the full text; ask the course lead for a copy.
 
@@ -120,11 +121,43 @@ first aid, chemicals), **0-144** for the ambulance, **0-118** for the fire briga
 from a mobile the Emergency Desk is **044 342 11 88**. Alarm first, then the
 supervisor, then the course lead.
 
-## 3. Confirmation
+## 3. Your data
 
-I confirm that I have read this safety sheet, that I attended the safety briefing
-of the Blockrophage course on the date below, that my questions were answered, and
-that I will follow these rules and ask my supervisor whenever I am not sure.
+`[TODO: wording to be checked by the ETH Legal Office before the first run]`
+
+**What this covers.** Everything you produce in the course: raw instrument files
+(FCS files, plate reader exports), counts, images, plate maps, analysis code and
+results, your notebook and the poster.
+
+**Who it belongs to.** The experiments run on the lab's cells, reagents and
+instruments, under the lab's supervision. The data belong to the Zindel lab at ETH
+Zürich, also after you leave the course. Where you hold rights in what you produce,
+for example copyright in a text, a figure or code, you transfer them to ETH Zürich
+as far as the law allows.
+
+**Open access.** The lab may publish the data, in full or in part, open access under
+the CC BY 4.0 licence: in the course repository and in the Zenodo record of your
+course year. The lab may also use them in teaching, in later runs of the course and
+in scientific publications.
+
+**Your name.** You are listed as a contributor in the Zenodo record of your year,
+unless you tick the box in section 4. Your commits in the public repository show
+your GitHub username in any case.
+
+**What you keep.** You may use your own results for your poster, the exam, your CV
+and a later thesis, citing the record of your year.
+
+**What does not go in.** No personal data: notebooks and files contain nothing about
+your health or anyone else's, and nothing you told the course lead in confidence.
+
+## 4. Confirmation
+
+I confirm that I have read this sheet, that I attended the safety briefing of the
+Blockrophage course on the date below, that my questions were answered, and that I
+will follow these rules and ask my supervisor whenever I am not sure. I agree to the
+data terms of section 3.
+
+- [ ] Please do not list my name as a contributor in the Zenodo record.
 
 | Name | Date | Signature |
 |---|---|---|

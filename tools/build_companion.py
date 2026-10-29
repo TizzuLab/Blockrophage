@@ -36,7 +36,7 @@ ORDER = [
     ("background/reading_list.md", "Reading list"),
     ("slides/README.md", "Slides index"),
     ("slides/*.pdf", "Slides: extracted text"),
-    ("safety/README.md", "Safety sheet"),
+    ("safety/README.md", "Admission sheet: safety and data"),
     ("poster/README.md", "Poster guide"),
     ("code/README.md", "Code overview"),
     ("code/**/*.R", "Code: R scripts"),
@@ -47,7 +47,7 @@ SKIP_PARTS = {"example_data", "output", "renv", "__pycache__"}
 # The core companion: what a session started from a link needs, a third of the size.
 CORE_TITLES = {"Index (llms.txt)", "Course script, including the schedule",
                "Schedule, text version of the drawings", "Protocol index", "Core protocols",
-               "Extension protocols", "Notebooks: the lab notebook rules", "Safety sheet",
+               "Extension protocols", "Notebooks: the lab notebook rules", "Admission sheet: safety and data",
                "Poster guide", "Code overview"}
 CORE_OUT = ROOT / "companion" / "blockcourse-companion-core.md"
 FENCE = {".R": "r", ".py": "python"}
@@ -182,7 +182,7 @@ def main():
         companion_prompt(),
         "",
         *(["This is the core companion: the script, the schedule, the protocols, the notebook",
-           "rules, the safety sheet and the poster guide. The full companion adds the",
+           "rules, the admission sheet and the poster guide. The full companion adds the",
            "background reading, the lecture text and the analysis code:",
            f"https://raw.githubusercontent.com/TizzuLab/Blockrophage/main/companion/blockcourse-companion.md . When a question needs that depth, tell the student to download the",
            "full file from the repository and attach it to the session."] if args.core else

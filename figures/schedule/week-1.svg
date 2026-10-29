@@ -41,7 +41,7 @@
 <text x="648" y="160" font-size="12" fill="#1A1A1A">seed your group&#x27;s stock flask (course passage 0). Lab tour.</text>
 <rect x="84.0" y="164" width="558.0" height="46" fill="#1F4E5F" stroke="#1A1A1A" stroke-width="2"/>
 <text x="90" y="182" font-size="12" fill="#FFFFFF" font-weight="bold">Working in the lab and biosafety (Tea Kocijan), 10:30-12:00: Q&amp;A, then</text>
-<text x="90" y="197" font-size="12" fill="#FFFFFF" font-weight="bold">the safety sheet is signed</text>
+<text x="90" y="197" font-size="12" fill="#FFFFFF" font-weight="bold">the admission sheet (safety and data) is signed</text>
 <rect x="84.0" y="210" width="558.0" height="46" fill="#EDEDED" stroke="#BFBFBF" stroke-width="0.8"/>
 <text x="90" y="228" font-size="12" fill="#5A5A5A">Lunch</text>
 <rect x="642.0" y="210" width="558.0" height="46" fill="#EDEDED" stroke="#BFBFBF" stroke-width="0.8"/>
@@ -63,8 +63,8 @@
 <text x="90" y="383" font-size="12" fill="#1A1A1A">pick your polarizer, stimulus and cytokine (C2, C4, C5) and your extension. Read</text>
 <text x="90" y="398" font-size="12" fill="#1A1A1A">C1 and C3 for Friday and Tuesday.</text>
 <rect x="84.0" y="440" width="558.0" height="72" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="90" y="458" font-size="12" fill="#1A1A1A">Rooms, safety officer. Signed safety sheets collected at 12:00. Supervisors sit</text>
-<text x="90" y="473" font-size="12" fill="#1A1A1A">with their group from 14:00.</text>
+<text x="90" y="458" font-size="12" fill="#1A1A1A">Rooms, safety officer. Signed admission sheets collected at 12:00. Supervisors</text>
+<text x="90" y="473" font-size="12" fill="#1A1A1A">sit with their group from 14:00.</text>
 <rect x="642.0" y="440" width="558.0" height="72" fill="#FAFAFA" stroke="#BFBFBF" stroke-width="0.8"/>
 <text x="648" y="458" font-size="12" fill="#1A1A1A">One low-passage vial per group. Supervisors carry the stock flasks over the</text>
 <text x="648" y="473" font-size="12" fill="#1A1A1A">weekend and the break: split every 2 to 3 days, course passage counted from this</text>

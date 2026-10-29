@@ -68,7 +68,7 @@
 
 ## Code
 
-- [Safety sheet](safety/README.md): the whole safety instruction for the course in two pages; rules sourced from the ETH and IMHS biosafety concepts; chemicals table, waste, incidents; confirmation signed after the day-1 briefing.
+- [Admission sheet](safety/README.md): safety and data. The whole safety instruction for the course, and the data terms students sign (data belong to the lab, published open access under CC BY 4.0); rules sourced from the ETH and IMHS biosafety concepts; chemicals table, waste, incidents; confirmation signed after the day-1 briefing.
 - [Poster guide](poster/README.md): ETH scientific poster template (link, not hosted), A3 scaled to A0, what the course expects on the poster.
 - [Code overview](code/README.md): analysis templates and the single-cell workflow.
 
