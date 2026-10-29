@@ -29,9 +29,10 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
    [github.com](https://github.com) before the first day; the username is sent to
    us. You will work in a public repository, where your edits and your name are
    visible to anyone, which is worth keeping in mind when the account is created.
-2. **The safety sheet**, please read before the first day and signed after the briefing on
-   the first morning ([safety](safety/README.md)). The signed sheet is your
-   admission to the bench.
+2. **The admission sheet**, please read before the first day and signed after the
+   briefing on the first morning ([safety and data](safety/README.md)). It holds the
+   safety rules and the data terms: what you produce belongs to the lab and may be
+   published open access. The signed sheet is your admission to the bench.
 > [!TIP]
 > **Your AI companion for the course.** Copy this prompt to your AI tool.
 >
@@ -82,7 +83,7 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 > and can be pasted in the same way.
 >
 > This is the core companion: the script, the schedule, the protocols, the notebook
-> rules, the safety sheet and the poster guide. The full companion adds the
+> rules, the admission sheet and the poster guide. The full companion adds the
 > background reading, the lecture text and the analysis code:
 > https://raw.githubusercontent.com/TizzuLab/Blockrophage/main/companion/blockcourse-companion.md . When a question needs that depth, tell the student to download the
 > full file from the repository and attach it to the session.
@@ -111,7 +112,7 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 >   - `protocols/X05_mtt.md`
 > - Notebooks: the lab notebook rules
 >   - `notebooks/README.md`
-> - Safety sheet
+> - Admission sheet: safety and data
 >   - `safety/README.md`
 > - Poster guide
 >   - `poster/README.md`
@@ -192,7 +193,7 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 >
 > ### Code
 >
-> - [Safety sheet](safety/README.md): the whole safety instruction for the course in two pages; rules sourced from the ETH and IMHS biosafety concepts; chemicals table, waste, incidents; confirmation signed after the day-1 briefing.
+> - [Admission sheet](safety/README.md): safety and data. The whole safety instruction for the course, and the data terms students sign (data belong to the lab, published open access under CC BY 4.0); rules sourced from the ETH and IMHS biosafety concepts; chemicals table, waste, incidents; confirmation signed after the day-1 briefing.
 > - [Poster guide](poster/README.md): ETH scientific poster template (link, not hosted), A3 scaled to A0, what the course expects on the poster.
 > - [Code overview](code/README.md): analysis templates and the single-cell workflow.
 >
@@ -243,9 +244,10 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 >    [github.com](https://github.com) before the first day; the username is sent to
 >    us. You will work in a public repository, where your edits and your name are
 >    visible to anyone, which is worth keeping in mind when the account is created.
-> 2. **The safety sheet**, please read before the first day and signed after the briefing on
->    the first morning ([safety](safety/README.md)). The signed sheet is your
->    admission to the bench.
+> 2. **The admission sheet**, please read before the first day and signed after the
+>    briefing on the first morning ([safety and data](safety/README.md)). It holds the
+>    safety rules and the data terms: what you produce belongs to the lab and may be
+>    published open access. The signed sheet is your admission to the bench.
 > > [!TIP]
 > > **Your AI companion for the course.** Copy this prompt to your AI tool.
 > >
@@ -317,8 +319,8 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 > **Failure rounds.** A failed experiment that is properly analysed is worth as much as one
 > that worked.
 >
-> **Safety.** The [safety rules](safety/README.md) need to be read and signed before experimental
-> work can start.
+> **Safety and data.** The [admission sheet](safety/README.md), with the safety rules and the
+> data terms, needs to be read and signed before experimental work can start.
 >
 > **Attendance.** We have to check with the department whether you need to show up all the time, 
 > would be nice though we invest a lot of energy in this course.
@@ -512,12 +514,31 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 >
 > ### 8. Safety
 >
-> The [safety sheet](safety/README.md) is two pages and is the whole safety
-> instruction for this course: where the rules come from, and what you need to know
-> here: biosafety level, protection and conduct, the cabinet, the chemicals of this
-> course with one rule each, sharps, waste, incidents and emergency numbers. It ends
-> with the confirmation you sign after the briefing on the first morning, which is
-> the written record the ETH biosafety concept asks for.
+> The [admission sheet](safety/README.md) is the whole safety instruction for this
+> course: where the rules come from, and what you need to know here: biosafety level,
+> protection and conduct, the cabinet, the chemicals of this course with one rule
+> each, sharps, waste, incidents and emergency numbers. It also holds the data terms
+> (Section 9). It ends with the confirmation you sign after the briefing on the first
+> morning, which is the written record the ETH biosafety concept asks for.
+>
+> ### 9. Data
+>
+> The course keeps its data where each kind lasts best, so that the repository stays
+> small and the whole course can be rerun anywhere, at ETH or at another university.
+>
+> | Data | Where |
+> |---|---|
+> | Plate reader exports (ELISA, Griess, MTT), counts, plate maps, processed tables such as FlowJo statistics or ΔCt values | in this repository, next to the code that reads them |
+> | FCS files, the prepared single-cell object and any other large file | [Zenodo](https://zenodo.org), one record with a DOI per course year |
+> | Sequencing raw data | GEO |
+>
+> GitHub rejects files above 100 MB and slows down well before that, so nothing
+> larger than a few MB goes into git. The code fetches the large files from their DOI,
+> so a clone of this repository plus the download is the complete course.
+>
+> The data you produce belong to the lab and are published open access under CC BY
+> 4.0 in the record of your year, with your name as a contributor unless you opt out.
+> You agree to this with the [admission sheet](safety/README.md) (section 3).
 >
 > ### Appendix: open items before submission
 >
@@ -539,9 +560,12 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 > - Plate-and-polarize in one step and the polarizer doses: run once on the course
 >   stock before March.
 > - February email to the enrolled students: install R, RStudio and Git, create a
->   GitHub account and send the username, read the safety sheet, confirm the public
->   repository. Assume some will not have done it; Friday afternoon of week 1 starts
+>   GitHub account and send the username, read the admission sheet (safety and data
+>   terms), confirm the public repository. Assume some will not have done it; Friday afternoon of week 1 starts
 >   from scratch.
+> - Data: the ETH Legal Office checks the data terms of the admission sheet; set up
+>   the Zenodo record for FS2027 and a download script in `code/` that fetches the
+>   large files by DOI and checks them.
 >
 > ---
 >
@@ -566,11 +590,11 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 >
 > - 08:00-09:00: Self-study: reading for the day, notebook, group branch
 > - 09:00-11:00: [Plenary, lecture, debrief] Welcome address and introductory lecture: macrophages, why they matter, why we do what we do (Joel Zindel), 09:00-10:15
-> - 11:00-12:00: [Plenary, lecture, debrief] Working in the lab and biosafety (Tea Kocijan), 10:30-12:00: Q&A, then the safety sheet is signed
+> - 11:00-12:00: [Plenary, lecture, debrief] Working in the lab and biosafety (Tea Kocijan), 10:30-12:00: Q&A, then the admission sheet (safety and data) is signed
 > - 12:00-13:00: Lunch
 > - 13:00-14:00: [Plenary, lecture, debrief] Introduction of the supervisors (what they do and why) and group formation
 > - 14:00-17:00: [Dry lab and desk work] Experiment planning with your supervisors: hand-draw the pathway you will test (ligand, receptor, output, how an inhibitor proves it, where the polarizer acts), pick your polarizer, stimulus and cytokine (C2, C4, C5) and your extension. Read C1 and C3 for Friday and Tuesday.
-> - Staff: Rooms, safety officer. Signed safety sheets collected at 12:00. Supervisors sit with their group from 14:00.
+> - Staff: Rooms, safety officer. Signed admission sheets collected at 12:00. Supervisors sit with their group from 14:00.
 > - Resources: Conference room HPL F22 for lectures and dry lab.
 >
 > ##### Fri 19 Mar
@@ -2272,18 +2296,19 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 >
 > ---
 >
-> # Safety sheet
+> # Admission sheet: safety and data
 >
 > <!-- file: safety/README.md -->
 >
-> ## Safety sheet for the Blockrophage course
+> ## Admission sheet for the Blockrophage course: safety and data
 >
 > > **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/Blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 >
-> Two pages. Read them before the first day, bring them to the safety briefing on
-> Thursday 18 March 2027, 09:00, and sign the last section after the briefing. The
-> signed sheet is your admission to the bench. This sheet and the briefing are your
-> safety instruction for the course; there is nothing else to read.
+> Read this sheet before the first day, bring it to the safety briefing on Thursday
+> 18 March 2027, 09:00, and sign the last section after the briefing. The signed
+> sheet is your admission to the bench. It covers two things: the safety rules
+> (sections 1 and 2; together with the briefing they are your whole safety
+> instruction for the course) and what happens with the data you produce (section 3).
 >
 > ### 1. Where these rules come from
 >
@@ -2294,7 +2319,7 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 > it. Both are written for the people who run labs, not for the people who spend four
 > weeks in one. They require that every new person is instructed by the group leader
 > or a delegate and that the instruction is recorded in writing. This sheet is that
-> instruction, condensed to what applies to you, and your signature in section 3 is
+> instruction, condensed to what applies to you, and your signature in section 4 is
 > the record. The section numbers in brackets below point into the IMHS concept for
 > anyone who wants the full text; ask the course lead for a copy.
 >
@@ -2398,11 +2423,43 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 > from a mobile the Emergency Desk is **044 342 11 88**. Alarm first, then the
 > supervisor, then the course lead.
 >
-> ### 3. Confirmation
+> ### 3. Your data
 >
-> I confirm that I have read this safety sheet, that I attended the safety briefing
-> of the Blockrophage course on the date below, that my questions were answered, and
-> that I will follow these rules and ask my supervisor whenever I am not sure.
+> `[TODO: wording to be checked by the ETH Legal Office before the first run]`
+>
+> **What this covers.** Everything you produce in the course: raw instrument files
+> (FCS files, plate reader exports), counts, images, plate maps, analysis code and
+> results, your notebook and the poster.
+>
+> **Who it belongs to.** The experiments run on the lab's cells, reagents and
+> instruments, under the lab's supervision. The data belong to the Zindel lab at ETH
+> Zürich, also after you leave the course. Where you hold rights in what you produce,
+> for example copyright in a text, a figure or code, you transfer them to ETH Zürich
+> as far as the law allows.
+>
+> **Open access.** The lab may publish the data, in full or in part, open access under
+> the CC BY 4.0 licence: in the course repository and in the Zenodo record of your
+> course year. The lab may also use them in teaching, in later runs of the course and
+> in scientific publications.
+>
+> **Your name.** You are listed as a contributor in the Zenodo record of your year,
+> unless you tick the box in section 4. Your commits in the public repository show
+> your GitHub username in any case.
+>
+> **What you keep.** You may use your own results for your poster, the exam, your CV
+> and a later thesis, citing the record of your year.
+>
+> **What does not go in.** No personal data: notebooks and files contain nothing about
+> your health or anyone else's, and nothing you told the course lead in confidence.
+>
+> ### 4. Confirmation
+>
+> I confirm that I have read this sheet, that I attended the safety briefing of the
+> Blockrophage course on the date below, that my questions were answered, and that I
+> will follow these rules and ask my supervisor whenever I am not sure. I agree to the
+> data terms of section 3.
+>
+> - [ ] Please do not list my name as a contributor in the Zenodo record.
 >
 > | Name | Date | Signature |
 > |---|---|---|
@@ -2591,8 +2648,8 @@ experiments and extensions (Section 5, Extensions). What your group adds is your
 **Failure rounds.** A failed experiment that is properly analysed is worth as much as one
 that worked.
 
-**Safety.** The [safety rules](safety/README.md) need to be read and signed before experimental
-work can start.
+**Safety and data.** The [admission sheet](safety/README.md), with the safety rules and the
+data terms, needs to be read and signed before experimental work can start.
 
 **Attendance.** We have to check with the department whether you need to show up all the time, 
 would be nice though we invest a lot of energy in this course.
@@ -2786,12 +2843,31 @@ Corporate Design page and lists what the course expects on the poster.
 
 ## 8. Safety
 
-The [safety sheet](safety/README.md) is two pages and is the whole safety
-instruction for this course: where the rules come from, and what you need to know
-here: biosafety level, protection and conduct, the cabinet, the chemicals of this
-course with one rule each, sharps, waste, incidents and emergency numbers. It ends
-with the confirmation you sign after the briefing on the first morning, which is
-the written record the ETH biosafety concept asks for.
+The [admission sheet](safety/README.md) is the whole safety instruction for this
+course: where the rules come from, and what you need to know here: biosafety level,
+protection and conduct, the cabinet, the chemicals of this course with one rule
+each, sharps, waste, incidents and emergency numbers. It also holds the data terms
+(Section 9). It ends with the confirmation you sign after the briefing on the first
+morning, which is the written record the ETH biosafety concept asks for.
+
+## 9. Data
+
+The course keeps its data where each kind lasts best, so that the repository stays
+small and the whole course can be rerun anywhere, at ETH or at another university.
+
+| Data | Where |
+|---|---|
+| Plate reader exports (ELISA, Griess, MTT), counts, plate maps, processed tables such as FlowJo statistics or ΔCt values | in this repository, next to the code that reads them |
+| FCS files, the prepared single-cell object and any other large file | [Zenodo](https://zenodo.org), one record with a DOI per course year |
+| Sequencing raw data | GEO |
+
+GitHub rejects files above 100 MB and slows down well before that, so nothing
+larger than a few MB goes into git. The code fetches the large files from their DOI,
+so a clone of this repository plus the download is the complete course.
+
+The data you produce belong to the lab and are published open access under CC BY
+4.0 in the record of your year, with your name as a contributor unless you opt out.
+You agree to this with the [admission sheet](safety/README.md) (section 3).
 
 ## Appendix: open items before submission
 
@@ -2813,9 +2889,12 @@ the written record the ETH biosafety concept asks for.
 - Plate-and-polarize in one step and the polarizer doses: run once on the course
   stock before March.
 - February email to the enrolled students: install R, RStudio and Git, create a
-  GitHub account and send the username, read the safety sheet, confirm the public
-  repository. Assume some will not have done it; Friday afternoon of week 1 starts
+  GitHub account and send the username, read the admission sheet (safety and data
+  terms), confirm the public repository. Assume some will not have done it; Friday afternoon of week 1 starts
   from scratch.
+- Data: the ETH Legal Office checks the data terms of the admission sheet; set up
+  the Zenodo record for FS2027 and a download script in `code/` that fetches the
+  large files by DOI and checks them.
 
 ---
 

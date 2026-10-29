@@ -61,10 +61,10 @@ F22 = "Conference room HPL F22 for lectures and dry lab."
 SPEC = [
  dict(n=1, title="Week 1: orientation (Thu 18 - Fri 19 March 2027)", days=[
   ("Thu 18 Mar", False, [(9,2,"Welcome address and introductory lecture: macrophages, why they matter, why we do what we do (Joel Zindel), 09:00-10:15","PLENARY"),
-   (11,1,"Working in the lab and biosafety (Tea Kocijan), 10:30-12:00: Q&A, then the safety sheet is signed","PLENARY"),LUNCH,
+   (11,1,"Working in the lab and biosafety (Tea Kocijan), 10:30-12:00: Q&A, then the admission sheet (safety and data) is signed","PLENARY"),LUNCH,
    (13,1,"Introduction of the supervisors (what they do and why) and group formation","PLENARY"),
    (14,3,"Experiment planning with your supervisors: hand-draw the pathway you will test (ligand, receptor, output, how an inhibitor proves it, where the polarizer acts), pick your polarizer, stimulus and cytokine (C2, C4, C5) and your extension. Read C1 and C3 for Friday and Tuesday.","DRY")],
-   "Rooms, safety officer. Signed safety sheets collected at 12:00. Supervisors sit with their group from 14:00.", F22),
+   "Rooms, safety officer. Signed admission sheets collected at 12:00. Supervisors sit with their group from 14:00.", F22),
   ("Fri 19 Mar", False, [(9,3,"Hands-on cell culture with the staff culture: hood and sterile technique, microscope, C1 scrape, count, split and seed, cell counter. Then C1: thaw and seed your group's stock flask (course passage 0). Lab tour.","EXP1"),LUNCH,
    (13,4,"Working with git and RStudio, step by step with the supervisors: GitHub account, install R, RStudio and Git if you did not at home, token, clone the course repository from RStudio, switch to your group's branch, open the ELISA script and run it. Then the first commit: a new text file in notebooks/ with your first notes, saved under a name you like, committed as \"hello world\" and pushed to your branch. Then the rest of the environment with your AI tool. Group plan (the drawing and your menu choices) committed to the group branch at 17:00.","DRY")],
    "One low-passage vial per group. Supervisors carry the stock flasks over the weekend and the break: split every 2 to 3 days, course passage counted from this thaw. Afternoon: one supervisor per two laptops; the 08:00 slot is the installation help desk for latecomers. Collect the plans at 17:00.",
