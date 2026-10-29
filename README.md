@@ -1582,17 +1582,13 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 > point is the LPS control of C4: a neat supernatant lands in the upper third of the
 > curve, which is where you want it.
 >
-> Run it yourself from the `code/elisa` folder:
+> Run it yourself: open the script in RStudio and press Source. For your own plate,
+> change the file name in the `input` line.
 >
-> ```
-> Rscript elisa_standard_curve.R                      # example data
-> Rscript elisa_standard_curve.R my_plate.csv output  # your own plate
-> ```
->
-> The script subtracts the blank, fits the standard curve (4PL, with a log-log linear
-> fallback that it announces), back-calculates every sample with its dilution factor,
-> flags wells outside the standard range, and writes `elisa_results.csv`,
-> `elisa_summary.csv` and the figure. Your CSV needs the columns `well`, `type`
+> The script subtracts the blank, fits the standard curve (4PL), reads the standards
+> back off the curve as a check (recovery 80 to 120%), back-calculates every sample
+> with its dilution factor, marks wells outside the standard range, and writes
+> `elisa_results.csv`, `elisa_summary.csv` and the figure. Your CSV needs the columns `well`, `type`
 > (standard or sample), `condition`, `standard_pg_ml`, `replicate`, `od450` and
 > `dilution_factor`.
 >

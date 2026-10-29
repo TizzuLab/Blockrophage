@@ -1,32 +1,16 @@
-"well","plate_row","plate_col","type","condition","lps_ng_ml","standard_pg_ml","replicate","od450","dilution_factor","od_corr","conc_pg_ml","flag","fit"
-"A1","A",1,"sample","vehicle",0,NA,1,0.081,1,-0.0082,0,"below lowest standard (7.8125 pg/mL)","4PL"
-"A3","A",3,"sample","LPS 0.1 ng/mL",0.1,NA,1,0.0821,1,-0.0071,0,"below lowest standard (7.8125 pg/mL)","4PL"
-"A4","A",4,"sample","LPS 0.1 ng/mL",0.1,NA,2,0.0806,1,-0.0086,0,"below lowest standard (7.8125 pg/mL)","4PL"
-"A5","A",5,"sample","LPS 0.1 ng/mL",0.1,NA,3,0.086,1,-0.00320000000000001,0,"below lowest standard (7.8125 pg/mL)","4PL"
-"A9","A",9,"standard","standard",NA,500,1,2.9897,1,2.9005,NA,"","4PL"
-"A10","A",10,"standard","standard",NA,500,2,2.8709,1,2.7817,NA,"","4PL"
-"B1","B",1,"sample","vehicle",0,NA,2,0.0803,1,-0.00890000000000001,0,"below lowest standard (7.8125 pg/mL)","4PL"
-"B3","B",3,"sample","LPS 1 ng/mL",1,NA,1,0.2592,1,0.17,29.9416397017865,"","4PL"
-"B4","B",4,"sample","LPS 1 ng/mL",1,NA,2,0.2722,1,0.183,31.957755251829,"","4PL"
-"B5","B",5,"sample","LPS 1 ng/mL",1,NA,3,0.267,1,0.1778,31.1535374954695,"","4PL"
-"B9","B",9,"standard","standard",NA,250,1,1.7099,1,1.6207,NA,"","4PL"
-"B10","B",10,"standard","standard",NA,250,2,1.734,1,1.6448,NA,"","4PL"
-"C1","C",1,"sample","vehicle",0,NA,3,0.0858,1,-0.0034,0,"below lowest standard (7.8125 pg/mL)","4PL"
-"C3","C",3,"sample","LPS 10 ng/mL",10,NA,1,1.1359,1,1.0467,157.15135146599,"","4PL"
-"C4","C",4,"sample","LPS 10 ng/mL",10,NA,2,0.9616,1,0.8724,131.52710021777,"","4PL"
-"C5","C",5,"sample","LPS 10 ng/mL",10,NA,3,1.0309,1,0.9417,141.637230561242,"","4PL"
-"C9","C",9,"standard","standard",NA,125,1,0.9084,1,0.8192,NA,"","4PL"
-"C10","C",10,"standard","standard",NA,125,2,0.9361,1,0.8469,NA,"","4PL"
-"D3","D",3,"sample","LPS 100 ng/mL",100,NA,1,2.3176,1,2.2284,360.1711312898,"","4PL"
-"D4","D",4,"sample","LPS 100 ng/mL",100,NA,2,2.2039,1,2.1147,337.505418489156,"","4PL"
-"D5","D",5,"sample","LPS 100 ng/mL",100,NA,3,1.8516,1,1.7624,272.269917058735,"","4PL"
-"D9","D",9,"standard","standard",NA,62.5,1,0.4645,1,0.3753,NA,"","4PL"
-"D10","D",10,"standard","standard",NA,62.5,2,0.4645,1,0.3753,NA,"","4PL"
-"E9","E",9,"standard","standard",NA,31.25,1,0.2617,1,0.1725,NA,"","4PL"
-"E10","E",10,"standard","standard",NA,31.25,2,0.2906,1,0.2014,NA,"","4PL"
-"F9","F",9,"standard","standard",NA,15.625,1,0.1781,1,0.0889,NA,"","4PL"
-"F10","F",10,"standard","standard",NA,15.625,2,0.1756,1,0.0864,NA,"","4PL"
-"G9","G",9,"standard","standard",NA,7.8125,1,0.13,1,0.0408,NA,"","4PL"
-"G10","G",10,"standard","standard",NA,7.8125,2,0.1307,1,0.0415,NA,"","4PL"
-"H9","H",9,"standard","standard",NA,0,1,0.0907,1,0.0015,NA,"","4PL"
-"H10","H",10,"standard","standard",NA,0,2,0.0877,1,-0.0015,NA,"","4PL"
+"well","plate_row","plate_col","type","condition","lps_ng_ml","standard_pg_ml","replicate","od450","dilution_factor","od_corr","conc_pg_ml","in_range"
+"A1","A",1,"sample","vehicle",0,NA,1,0.081,1,-0.0082,0,FALSE
+"A3","A",3,"sample","LPS 0.1 ng/mL",0.1,NA,1,0.0821,1,-0.0071,0,FALSE
+"A4","A",4,"sample","LPS 0.1 ng/mL",0.1,NA,2,0.0806,1,-0.0086,0,FALSE
+"A5","A",5,"sample","LPS 0.1 ng/mL",0.1,NA,3,0.086,1,-0.00320000000000001,0,FALSE
+"B1","B",1,"sample","vehicle",0,NA,2,0.0803,1,-0.00890000000000001,0,FALSE
+"B3","B",3,"sample","LPS 1 ng/mL",1,NA,1,0.2592,1,0.17,29.9416397017865,TRUE
+"B4","B",4,"sample","LPS 1 ng/mL",1,NA,2,0.2722,1,0.183,31.957755251829,TRUE
+"B5","B",5,"sample","LPS 1 ng/mL",1,NA,3,0.267,1,0.1778,31.1535374954695,TRUE
+"C1","C",1,"sample","vehicle",0,NA,3,0.0858,1,-0.0034,0,FALSE
+"C3","C",3,"sample","LPS 10 ng/mL",10,NA,1,1.1359,1,1.0467,157.15135146599,TRUE
+"C4","C",4,"sample","LPS 10 ng/mL",10,NA,2,0.9616,1,0.8724,131.52710021777,TRUE
+"C5","C",5,"sample","LPS 10 ng/mL",10,NA,3,1.0309,1,0.9417,141.637230561242,TRUE
+"D3","D",3,"sample","LPS 100 ng/mL",100,NA,1,2.3176,1,2.2284,360.1711312898,TRUE
+"D4","D",4,"sample","LPS 100 ng/mL",100,NA,2,2.2039,1,2.1147,337.505418489156,TRUE
+"D5","D",5,"sample","LPS 100 ng/mL",100,NA,3,1.8516,1,1.7624,272.269917058735,TRUE

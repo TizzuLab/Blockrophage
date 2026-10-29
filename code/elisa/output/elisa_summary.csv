@@ -1,4 +1,4 @@
-"condition","mean_pg_ml","sd_pg_ml","n","flagged_wells"
+"condition","mean_pg_ml","sd_pg_ml","n","out_of_range"
 "vehicle",0,0,3,3
 "LPS 0.1 ng/mL",0,0,3,3
 "LPS 1 ng/mL",31.017644149695,1.01490429541417,3,0
