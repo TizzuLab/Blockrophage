@@ -4,11 +4,11 @@
 Reads every sheet whose name starts with "Week", resolves merged cells and fill
 colours (mapped back to activity blocks via the Legend sheet) and writes:
 
-- figures/schedule/week-N.svg: one colour-coded calendar per week (days as
+- stuff/figures/schedule/week-N.svg: one colour-coded calendar per week (days as
   columns, hours as rows, staff and resources rows below the grid),
 - the block between <!-- schedule:begin --> and <!-- schedule:end --> in README.md:
   the drawings,
-- tools/schedule/schedule_text.md: a text version per day, which is what the
+- stuff/tools/schedule/schedule_text.md: a text version per day, which is what the
   companion reads.
 
 Sheet layout (see gantt_build.py): row 1 title, row 2 subtitle, row 3 day headers
@@ -18,7 +18,7 @@ Sheet layout (see gantt_build.py): row 1 title, row 2 subtitle, row 3 day header
 The workbook is the single source for the schedule; the drawings and the README
 block are regenerated, never edited by hand.
 
-Usage: python3 tools/schedule/gantt2readme.py
+Usage: python3 stuff/tools/schedule/gantt2readme.py
 """
 from __future__ import annotations
 
@@ -31,10 +31,10 @@ from pathlib import Path
 from openpyxl import load_workbook
 
 HERE = Path(__file__).resolve().parent
-ROOT = HERE.parents[1]
+ROOT = HERE.parents[2]
 XLSX = HERE / "Blockcourse_Gantt_FS2027.xlsx"
 README = ROOT / "README.md"
-FIG_DIR = ROOT / "figures" / "schedule"
+FIG_DIR = ROOT / "stuff" / "figures" / "schedule"
 TEXT = HERE / "schedule_text.md"
 BEGIN = "<!-- schedule:begin -->"
 END = "<!-- schedule:end -->"
@@ -244,10 +244,10 @@ def main(xlsx=XLSX, readme=README):
     items = legend_items(wb)
     FIG_DIR.mkdir(parents=True, exist_ok=True)
     out = [BEGIN,
-           f"<!-- Generated from tools/schedule/{Path(xlsx).name} by tools/schedule/gantt2readme.py. "
+           f"<!-- Generated from stuff/tools/schedule/{Path(xlsx).name} by stuff/tools/schedule/gantt2readme.py. "
            "Do not edit by hand: edit the workbook and rerun. -->", ""]
     text = ["# Schedule, text version", "",
-            f"Generated from `tools/schedule/{Path(xlsx).name}` by `tools/schedule/gantt2readme.py` for the",
+            f"Generated from `stuff/tools/schedule/{Path(xlsx).name}` by `stuff/tools/schedule/gantt2readme.py` for the",
             "companion; the drawings in README Section 4 are the same content. Activity blocks in brackets;",
             "dark (plenary) blocks are mandatory, everything else is the default plan for all four groups.", ""]
     n_svg = 0
@@ -260,12 +260,14 @@ def main(xlsx=XLSX, readme=README):
             # content hash in the link: GitHub and browsers cache images by URL
             digest = hashlib.md5(svg.encode("utf-8")).hexdigest()[:8]
             title = str(ws["A1"].value)
-            out += [f"### {title}", "", f"![{title}](figures/schedule/week-{n}.svg?v={digest})", ""]
+            out += [f"### {title}", "", f"![{title}](stuff/figures/schedule/week-{n}.svg?v={digest})", ""]
             text += week_to_md(ws, legend)
     out.append(END)
     TEXT.write_text("\n".join(text), encoding="utf-8")
     readme_text = Path(readme).read_text(encoding="utf-8")
-    a, b = readme_text.index(BEGIN), readme_text.index(END) + len(END)
+    # the markers at the start of a line: the companion block quotes them after "> "
+    a = readme_text.index("\n" + BEGIN) + 1
+    b = readme_text.index("\n" + END, a) + 1 + len(END)
     Path(readme).write_text(readme_text[:a] + "\n".join(out) + readme_text[b:], encoding="utf-8")
     print(f"wrote {n_svg} drawings to {FIG_DIR}, the schedule block of {readme}, and {TEXT}")
 

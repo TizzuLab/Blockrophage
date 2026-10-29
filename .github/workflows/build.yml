@@ -37,22 +37,22 @@ jobs:
           sudo apt-get install -y -qq poppler-utils || (sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils)
           pip install -q openpyxl
       - name: Regenerate schedule drawings
-        run: python tools/schedule/gantt2readme.py
+        run: python stuff/tools/schedule/gantt2readme.py
       - name: Build companion
         run: |
-          python tools/build_companion.py --max-tokens 150000
-          python tools/build_companion.py --core
+          python stuff/tools/build_companion.py --max-tokens 150000
+          python stuff/tools/build_companion.py --core
       - name: Upload companion as artifact
         uses: actions/upload-artifact@v4
         with:
           name: blockcourse-companion
-          path: companion/blockcourse-companion.md
+          path: stuff/companion/blockcourse-companion.md
       - name: Commit regenerated files to dev
         if: github.event_name == 'push' && github.ref == 'refs/heads/dev'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md figures/schedule tools/schedule/schedule_text.md companion/
+          git add README.md stuff/figures/schedule stuff/tools/schedule/schedule_text.md stuff/companion/
           if git diff --cached --quiet; then
             echo "Nothing to regenerate."
             exit 0
@@ -63,7 +63,7 @@ jobs:
       - name: Verify that nothing is stale
         if: github.event_name == 'pull_request' || github.ref == 'refs/heads/main'
         run: |
-          if ! git diff --quiet -- README.md figures/schedule tools/schedule/schedule_text.md companion/; then
+          if ! git diff --quiet -- README.md stuff/figures/schedule stuff/tools/schedule/schedule_text.md stuff/companion/; then
             echo "::error::Generated files are stale. Push to dev, wait about a minute for the regeneration commit, then the pull request updates itself."
             git status --short
             exit 1

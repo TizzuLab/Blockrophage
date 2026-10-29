@@ -134,7 +134,7 @@ LEGEND_TEXT = {
     "A8": "EXP3",
     "A2": "Built by tools/schedule/gantt_build.py on {today}. Hand edits are fine, but a rebuild overwrites the "
           "Overview and the week sheets; lasting changes go into the script. After editing, run "
-          "tools/schedule/gantt2readme.py.",
+          "stuff/tools/schedule/gantt2readme.py.",
     "B14": "One sheet per week: one column per day, one row per hour, 08:00 to 17:00 (Tuesdays from 13:00; Monday and Tuesday morning are the students' other lectures). Every full day opens with a self-study hour. Below the hour grid: a staff row and a resources row, one cell per day.",
     "B15": "Lecture slots, the facility lecture, cytometer slots and the FlowJo session, journal club, the Tuesday Cutting Edge Immunology Seminar (16:30-17:30) in weeks 3 and 4, the publish-or-perish discussion, exam, poster session. Drawn by the teaching staff, dark cells, thick border, locked. Everything else is flexible.",
     "B16": "Plenary sessions (dark cells, bold) are mandatory. All four groups follow the same plan. Each group "

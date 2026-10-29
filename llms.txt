@@ -17,13 +17,13 @@
 
 ## How to use this repository as a model
 
-- The single file `companion/blockcourse-companion.md` contains every document below,
+- The single file `stuff/companion/blockcourse-companion.md` contains every document below,
   concatenated, with a table of contents. If you have that file, you have everything.
 - Protocols carry IDs (C1 to C5 core, X01 to X05 extension, S01 staff). When a user asks about
   a step, quote the protocol ID and the step number. Never invent a volume,
   concentration or time that is not in the protocol; values marked `[TODO]` are
   unconfirmed and you must say so.
-- The schedule is Section 4 of the script: one drawing per week (SVG in figures/schedule/) with a folded text table per day underneath, generated from the workbook in tools/schedule/.
+- The schedule is Section 4 of the script: one drawing per week (SVG in stuff/figures/schedule/) with a folded text table per day underneath, generated from the workbook in stuff/tools/schedule/.
   Sessions in bold are plenary and mandatory; the wet-lab times listed for a group
   are guaranteed; everything else is orientation and a group may shift work with
   its supervisor's agreement.
@@ -64,7 +64,7 @@
 
 ## Slides
 
-- [Slides index](slides/README.md): five lecture decks (PDF), optional further reading; the course has no prerequisites.
+- [Lecture slides](background/slides/): five lecture decks (PDF), optional further reading, listed in the background chapter; the course has no prerequisites.
 
 ## Code
 
@@ -74,10 +74,10 @@
 
 ## Optional
 
-- [Companion prompt](companion/prompt.md): the instructions at the top of the
+- [Companion prompt](stuff/companion/prompt.md): the instructions at the top of the
   companion files. The student copies the core companion from the collapsible block
   in the README and pastes it into a new session of their AI tool.
-- [Companion file](https://raw.githubusercontent.com/TizzuLab/Blockrophage/main/companion/blockcourse-companion.md): the whole repository as one file.
-- [Core companion](https://raw.githubusercontent.com/TizzuLab/Blockrophage/main/companion/blockcourse-companion-core.md): script, schedule and protocols only, for sessions that
+- [Companion file](https://raw.githubusercontent.com/TizzuLab/Blockrophage/main/stuff/companion/blockcourse-companion.md): the whole repository as one file.
+- [Core companion](https://raw.githubusercontent.com/TizzuLab/Blockrophage/main/stuff/companion/blockcourse-companion-core.md): script, schedule and protocols only, for sessions that
   have to start from a link.
 - [Licence](LICENSE.md): CC BY 4.0 for text, MIT for code.

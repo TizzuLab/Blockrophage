@@ -19,14 +19,14 @@ import subprocess
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "companion" / "blockcourse-companion.md"
+ROOT = Path(__file__).resolve().parents[2]
+OUT = ROOT / "stuff" / "companion" / "blockcourse-companion.md"
 
 # Reading order. Globs are sorted. A tuple (path, title) names a section.
 ORDER = [
     ("llms.txt", "Index (llms.txt)"),
     ("README.md", "Course script, including the schedule"),
-    ("tools/schedule/schedule_text.md", "Schedule, text version of the drawings"),
+    ("stuff/tools/schedule/schedule_text.md", "Schedule, text version of the drawings"),
     ("protocols/README.md", "Protocol index"),
     ("protocols/C*.md", "Core protocols"),
     ("protocols/X*.md", "Extension protocols"),
@@ -34,8 +34,7 @@ ORDER = [
     ("notebooks/README.md", "Notebooks: the lab notebook rules"),
     ("background/README.md", "Background reading"),
     ("background/reading_list.md", "Reading list"),
-    ("slides/README.md", "Slides index"),
-    ("slides/*.pdf", "Slides: extracted text"),
+    ("background/slides/*.pdf", "Slides: extracted text"),
     ("safety/README.md", "Admission sheet: safety and data"),
     ("poster/README.md", "Poster guide"),
     ("code/README.md", "Code overview"),
@@ -49,7 +48,7 @@ CORE_TITLES = {"Index (llms.txt)", "Course script, including the schedule",
                "Schedule, text version of the drawings", "Protocol index", "Core protocols",
                "Extension protocols", "Notebooks: the lab notebook rules", "Admission sheet: safety and data",
                "Poster guide", "Code overview"}
-CORE_OUT = ROOT / "companion" / "blockcourse-companion-core.md"
+CORE_OUT = ROOT / "stuff" / "companion" / "blockcourse-companion-core.md"
 FENCE = {".R": "r", ".py": "python"}
 PDF_MAX_CHARS = 60_000  # per deck, keeps the bundle inside common context windows
 
@@ -64,7 +63,7 @@ def git_rev():
 
 def companion_prompt():
     """The companion prompt, kept in companion/prompt.md inside its code fence."""
-    text = (ROOT / "companion" / "prompt.md").read_text(encoding="utf-8")
+    text = (ROOT / "stuff" / "companion" / "prompt.md").read_text(encoding="utf-8")
     text = text.split("\n---\n", 1)[1] if "\n---\n" in text else text
     return "\n".join(ln for ln in text.strip().splitlines() if not ln.startswith("```")).strip()
 

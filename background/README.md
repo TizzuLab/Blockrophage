@@ -1,14 +1,28 @@
 # Background: macrophage biology
 
+← Back to the [course script](../README.md#readme)
+
 > **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/Blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
 This is the background reading for the course based on Immunology III (1 December 2025)
 and the tissue repair lectures. It adds the history of the ideas underlying this course. 
 
-References and the two public datasets are in [reading_list.md](reading_list.md); the
-lecture decks are in [../slides/](../slides/README.md). The figures are the lecture
-slides themselves, extracted to `figures/`; figures taken from the published
-literature are cited on the slide and remain the property of their owners.
+References and the datasets are in [reading_list.md](reading_list.md). The figures
+are the lecture slides themselves, extracted to `figures/`; figures taken from the
+published literature are cited on the slide and remain the property of their owners.
+
+**The lecture slides.** The lectures given at ETH Zürich, as presented, for anyone
+who wants to read further. None of them is a prerequisite: the course starts from
+scratch, and this chapter condenses what the experiments need. The CC BY licence of
+this repository covers the lecturer's own material only.
+
+| File | Lecture |
+|---|---|
+| [01_ImmunologyIII_TissueMacrophages.pdf](slides/01_ImmunologyIII_TissueMacrophages.pdf) | Immunology III: tissue macrophages (1 December 2025). The slide numbers in this chapter refer to this deck. |
+| [02_TissueRepair_Part1.pdf](slides/02_TissueRepair_Part1.pdf) | Tissue repair, part 1 |
+| [03_TissueRepair_Part2.pdf](slides/03_TissueRepair_Part2.pdf) | Tissue repair, part 2 |
+| [04_TissueRepair_Part3_GranulationTissue.pdf](slides/04_TissueRepair_Part3_GranulationTissue.pdf) | Tissue repair, part 3: granulation tissue |
+| [05_TissueRepair_Part4_Remodelling.pdf](slides/05_TissueRepair_Part4_Remodelling.pdf) | Tissue repair, part 4: remodelling |
 
 ## 5.1 A cell with many names
 
