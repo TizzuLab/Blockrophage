@@ -13,11 +13,9 @@
 # Output in code/scrnaseq/output/: qc_violins.png, qc_cells_per_sample.csv,
 #         after_qc.rds (the filtered object for 02_cluster.R)
 
-suppressPackageStartupMessages({
-  library(Seurat)
-  library(ggplot2)
-  library(here)
-})
+library(Seurat)
+library(ggplot2)
+library(here)
 
 data_dir <- here("code", "scrnaseq", "data")
 out_dir <- here("code", "scrnaseq", "output")

@@ -5782,11 +5782,9 @@ ggsave(file.path(outdir, "elisa_figure.png"), p1 + p2, width = 10, height = 4.25
 # Output in code/scrnaseq/output/: qc_violins.png, qc_cells_per_sample.csv,
 #         after_qc.rds (the filtered object for 02_cluster.R)
 
-suppressPackageStartupMessages({
-  library(Seurat)
-  library(ggplot2)
-  library(here)
-})
+library(Seurat)
+library(ggplot2)
+library(here)
 
 data_dir <- here("code", "scrnaseq", "data")
 out_dir <- here("code", "scrnaseq", "output")
@@ -5857,12 +5855,10 @@ cat("Kept", ncol(cells), "cells. Next: 02_cluster.R\n")
 # Output in code/scrnaseq/output/: umap_clusters.png, umap_condition.png,
 #         macrophage_markers.png, clustered.rds
 
-suppressPackageStartupMessages({
-  library(Seurat)
-  library(ggplot2)
-  library(patchwork)
-  library(here)
-})
+library(Seurat)
+library(ggplot2)
+library(patchwork)
+library(here)
 
 out_dir <- here("code", "scrnaseq", "output")
 
@@ -5878,6 +5874,13 @@ cells <- FindNeighbors(cells, dims = dims)
 cells <- FindClusters(cells, resolution = 0.5)        # higher resolution, more clusters
 cells <- RunUMAP(cells, dims = dims)
 
+# To discuss once you compare with the other groups: same data, same script, but
+# your clusters or UMAP may not look exactly like your neighbour's. PCA, clustering
+# and UMAP all start from random numbers. Seurat fixes them by default (the seed.use
+# and random.seed arguments), yet package versions and computers still differ. What does set.seed() do,
+# where would you put it, and what does it mean if a cluster only exists with one
+# seed?
+
 ggsave(file.path(out_dir, "umap_clusters.png"),
        DimPlot(cells, label = TRUE) + NoLegend(), width = 6, height = 5.5)
 ggsave(file.path(out_dir, "umap_condition.png"),
@@ -5888,6 +5891,13 @@ markers <- c("Adgre1", "Cd68", "Csf1r", "Fcgr1", "Mertk")
 p <- FeaturePlot(cells, features = markers, ncol = 3) /
   DotPlot(cells, features = markers) + RotatedAxis()
 ggsave(file.path(out_dir, "macrophage_markers.png"), p, width = 12, height = 12)
+
+# Calling a cluster "macrophage" from five markers is manual annotation: quick and
+# transparent, but it depends on which markers you pick and on what you expect to
+# see (interpreter bias). Question: how would automated annotation compare? A
+# reference-based tool (e.g. SingleR with the ImmGen reference from celldex) labels
+# each cell by similarity to sorted, known cell types. Where do the two agree, and
+# where would you trust which?
 
 saveRDS(cells, file.path(out_dir, "clustered.rds"))
 cat("Clusters:", nlevels(cells$seurat_clusters),
@@ -5972,5 +5982,11 @@ C57BL/6, 10x Genomics. GEO holds the filtered count matrices (110 MB, 13,657 cel
   `ElbowPlot(cells)`; the defaults (20 PCs, resolution 0.5) give 14 clusters.
 - Which clusters are macrophages (`02`): from `output/macrophage_markers.png`,
   with the reason.
+
+### To discuss in the group
+
+- Why your UMAP may differ from your neighbour's, and what `set.seed()` does.
+- Manual annotation from a few markers versus automated, reference-based
+  annotation (e.g. SingleR with the ImmGen reference): bias, agreement, trust.
 
 ---

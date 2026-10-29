@@ -29,3 +29,9 @@ C57BL/6, 10x Genomics. GEO holds the filtered count matrices (110 MB, 13,657 cel
   `ElbowPlot(cells)`; the defaults (20 PCs, resolution 0.5) give 14 clusters.
 - Which clusters are macrophages (`02`): from `output/macrophage_markers.png`,
   with the reason.
+
+## To discuss in the group
+
+- Why your UMAP may differ from your neighbour's, and what `set.seed()` does.
+- Manual annotation from a few markers versus automated, reference-based
+  annotation (e.g. SingleR with the ImmGen reference): bias, agreement, trust.
