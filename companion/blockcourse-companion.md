@@ -3387,8 +3387,8 @@ platelet aggregation
                                      0.240 s      0.260 s   0.280s
 
                           60
-
 Distance to injury [um]
+
                           40
 
                           20
@@ -4684,9 +4684,7 @@ Severe Injury   https://doi.org/10.1016/j.cell.2018.01.015
              Macrophage Switch: the phenomenon
 
              Focal liver injury
-
 CCR2-RFP
-
 CX3CR1-GFP
 
                                                    https://doi.org/10.1084/jem.20141539
@@ -4694,7 +4692,6 @@ CX3CR1-GFP
                Macrophage Switch: iNKT cells and glycolipid self-antigens
 
              Focal liver injury
-
 Cxcr6GFP/+
 
                https://doi.org/10.1016/j.immuni.2017.09.016
@@ -5705,6 +5702,9 @@ od_to_conc <- function(od) {
 # standard curve is above 0.99.
 r2 <- 1 - sum(residuals(model)^2) / sum((std$od_corr - mean(std$od_corr))^2)
 r2
+# Question: how would you validate R²? A single number can hide where the curve
+# misses. Consider plotting it, e.g. residuals(model) against the standard
+# concentration, or each standard's known vs back-calculated value.
 
 # 3. Samples: concentration from the curve, times the dilution.
 # Only wells between the lowest and the top standard are trusted (in_range).

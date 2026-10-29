@@ -56,6 +56,9 @@ od_to_conc <- function(od) {
 # standard curve is above 0.99.
 r2 <- 1 - sum(residuals(model)^2) / sum((std$od_corr - mean(std$od_corr))^2)
 r2
+# Question: how would you validate R²? A single number can hide where the curve
+# misses. Consider plotting it, e.g. residuals(model) against the standard
+# concentration, or each standard's known vs back-calculated value.
 
 # 3. Samples: concentration from the curve, times the dilution.
 # Only wells between the lowest and the top standard are trusted (in_range).
