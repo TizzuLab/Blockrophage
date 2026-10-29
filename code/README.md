@@ -1,12 +1,12 @@
 # Code
 
-> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage-course/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
+> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/Blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
 Analysis templates for the course. Every template is R unless stated, pinned with
 `renv` `[TODO: lockfile]`. You build the environment on the first day with your
-chatty; a prebuilt fallback exists `[TODO: where]`.
+AI tool; a prebuilt fallback exists `[TODO: where]`.
 
-The rule for all of it: run the code and look at the object, not at the chatty's
+The rule for all of it: run the code and look at the object, not at the AI tool's
 description of the object.
 
 | Folder | Purpose | Input | Output |
@@ -14,7 +14,7 @@ description of the object.
 | `elisa/` | Four-parameter logistic standard curve, concentration table, plots by condition. Written; runs on the lab's IL-6 example data | tidy CSV (one row per well) | `elisa_results.csv`, `elisa_summary.csv`, figure |
 | `griess/` | Linear nitrite standard, concentration table, plots | plate-reader export, plate map | `griess_results.csv`, figures |
 | `flow/` | Reads the population statistics exported from FlowJo and plots them. Gating is done in FlowJo, not in R | FlowJo CSV export | figures |
-| `growth_curve/` | Optional (extension, P09): doubling time from counts, with the published value as a reference line | counts table | figure, doubling time |
+| `growth_curve/` | Optional (extension, X05): doubling time from counts, with the published value as a reference line | counts table | figure, doubling time |
 | `scrnaseq/` | The in silico arm, three parts (below) | preprocessed objects shipped by the staff | figures |
 | `qpcr/` | ΔΔCt for the X01 extension | Ct export | figures |
 

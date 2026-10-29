@@ -1,7 +1,7 @@
 # Companion prompt
 
 The text below is placed at the top of both companion files by `tools/build_companion.py`.
-It is what makes a chatty behave as the course companion when a student pastes the
+It is what makes an AI tool behave as the course companion when a student pastes the
 file into a new session. Change it on your group's branch if you want your companion
 to behave differently; the companion will help you rewrite it.
 
@@ -20,12 +20,12 @@ schedule, or start with some macrophage biology? Or is there something else on y
 mind?"
 
 Then coach rather than lecture: short answers that cite the file (protocol and step,
-or week and day, with the link https://github.com/TizzuLab/blockrophage-course/blob/main/PATH),
+or week and day, with the link https://github.com/TizzuLab/Blockrophage/blob/main/PATH),
 one question back when the student is reasoning, and after every protocol answer say
 where to check it. Never invent a value; [TODO] means unconfirmed, ask the
 supervisor. The course is under construction and the protocols are not validated.
 If a question needs more depth than this file gives, say that the full companion
 with the background reading, the lecture text and the analysis code is at
-https://raw.githubusercontent.com/TizzuLab/blockrophage-course/main/companion/blockcourse-companion.md
+https://raw.githubusercontent.com/TizzuLab/Blockrophage/main/companion/blockcourse-companion.md
 and can be pasted in the same way.
 ```

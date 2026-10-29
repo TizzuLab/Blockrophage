@@ -1,18 +1,19 @@
-# P07 Griess assay (nitrite)
+# X04 Griess assay (nitrite)
 
-> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage-course/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
+> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/Blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
+> [!IMPORTANT]
 > **To verify:** the lab has no Griess SOP yet. This page is a literature protocol
 > and has not been run on course samples.
 
 | | |
 |---|---|
-| ID | P07 |
-| Used in | Exp 3 (extension, on the P05 supernatants) |
+| ID | X04 |
+| Used in | Exp 3 (extension, on the C4 supernatants) |
 | Hands-on time | 1 h |
 | Wall-clock time | 1 h |
 | Resources | plate reader (540 nm), multichannel pipette |
-| Depends on | P05 supernatants (16 h arm) |
+| Depends on | C4 supernatants (16 h arm) |
 | Lab SOP | none yet `[TODO: write and validate a lab SOP, or adopt a commercial kit]` |
 
 ## Purpose
@@ -34,16 +35,16 @@ assay is informative in mouse cells only.
 ## Before you start
 
 - Plate map: standards in duplicate, samples in duplicate, medium blank.
-- Use the 50 µL aliquot set aside at the P05 harvest (cleared at 900 × g), or thaw
+- Use the 50 µL aliquot set aside at the C4 harvest (cleared at 900 × g), or thaw
   the reserve aliquot on ice and spin briefly.
 
 ## Procedure
 
 1. Pipette 50 µL supernatant or standard per well.
-2. Add 50 µL reagent A. Incubate 10 min at room temperature in the dark.
-3. Add 50 µL reagent B. Incubate 10 min at room temperature in the dark.
+2. Add 50 µL reagent A. Incubate **`room temperature, 10 min, dark`**.
+3. Add 50 µL reagent B. Incubate **`room temperature, 10 min, dark`**.
 4. Read absorbance at 540 nm within 30 min.
-5. Export the raw table and write a tidy CSV as in P06.
+5. Export the raw table and write a tidy CSV as in C5.
 
 ## Controls
 
@@ -56,9 +57,10 @@ assay is informative in mouse cells only.
 - Standards form a pink gradient visible by eye; the blank is pale.
 - M(IFNγ+LPS) wells are visibly pinker than M(-) before the plate is read.
 
-   > **To verify:** with 2 × 10^4 cells in 200 µL for 16 h, nitrite may stay near the
-   > detection limit (about 1–2 µM). If the first run reads flat, the Griess arm
-   > needs the 24-well format or a longer challenge.
+> [!IMPORTANT]
+> **To verify:** with 2 × 10^4 cells in 200 µL for 16 h, nitrite may stay near the
+> detection limit (about 1–2 µM). If the first run reads flat, the Griess arm
+> needs the 24-well format or a longer challenge.
 
 ## Known failure modes
 
