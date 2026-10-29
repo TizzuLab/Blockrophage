@@ -481,19 +481,21 @@ comparing the mean expression of the signature genes with a matched random contr
 set; this is how you will ask every in vivo macrophage how M(IFNγ)-like and how
 M(IL-4)-like it is.
 
-The core in silico task is built on that last step. The M(IFNγ+LPS) and M(IL-4)
-signatures are not taken from a textbook list; you derive them from a public bulk
-RNA-seq dataset of RAW 264.7 cells and bone marrow-derived macrophages stimulated
-with the same reagents you use at the bench (GSE113836, `[TODO: verify contents,
-replicates and raw counts before the course]`). Every macrophage in the peritoneal
-single-cell dataset is then scored against both signatures, and the question is how
-much of the tissue population either signature explains. Comparing the tissue cells
-with a published single-cell framework of monocyte-derived macrophage activation,
-built from 12 tissues and 25 conditions in vivo ([Sanin et al., 2022](https://doi.org/10.1126/sciimmunol.abl7482)), is an
-extension, not the core `[TODO: check: Sanin et al. is not an in vitro dataset;
-decide which dataset the extension uses and its accession]`. The teaching staff preprocess
-both datasets and ship small, ready-to-load objects, so the dry lab never starts
-from raw reads.
+The core in silico task is built on that last step, with two kinds of signature.
+The classic M1 and M2 markers come from before sequencing: a handful of genes
+each, such as Nos2, Tnf and Il12b against Arg1, Mrc1 and Chil3. The consensus
+signatures rank the genes induced by IFNγ and by IL-4 across the published in vitro
+RNA-seq experiments of mouse macrophages
+([Colombo et al., 2024](https://doi.org/10.1371/journal.pone.0297872)). Every cell
+of the peritoneal single-cell dataset is scored against both, and the question is
+how much of the tissue population either explains, and why the answer depends on
+the list. Single-cell studies since describe tissue macrophages by states found in
+tissues rather than in dishes; choosing one of them for your own data is the last
+step. Comparing the tissue cells with the single-cell framework of monocyte-derived
+macrophage activation, built from 12 tissues and 25 conditions in vivo
+([Sanin et al., 2022](https://doi.org/10.1126/sciimmunol.abl7482)), is an extension.
+The scripts download the count matrices from GEO, so the dry lab never starts from
+raw reads.
 
 Two limitations matter for your interpretation. The samples are digested injury
 sites, not lavage fluid, and enzymatic digestion under-represents cells that are

@@ -33,7 +33,7 @@ dark (plenary) blocks are mandatory, everything else is the default plan for all
 - 08:00-12:00: Your other lectures (not course time)
 - 12:00-13:00: Lunch
 - 13:00-15:00: [Wet lab Exp 1] C1 and C2: plate cells from your stock with the polarizer already in the seeding suspension. Vehicle control, M(pol) and LPS control on the flow plate (6- or 12-well). Plate-and-polarize in one step, about 19 h. Wet-lab goal: plate at a defined density with a stimulus.
-- 15:00-17:00: [Dry lab and desk work] Dry lab: scRNA-seq part 1, load the preprocessed object, QC figure. If the bench runs over, the dry lab moves home.
+- 15:00-17:00: [Dry lab and desk work] Dry lab: scRNA-seq part 1, download and load the data, QC figure. If the bench runs over, the dry lab moves home.
 - Staff: Stock flasks counted per group at 12:30. Polarizers, vehicle and LPS at working concentration; plate maps checked before anyone pipettes.
 - Resources: 4 hoods HPL F27.2, one per group, available at all times. Cell counter.
 
@@ -75,7 +75,7 @@ dark (plenary) blocks are mandatory, everything else is the default plan for all
 - 09:00-12:00: [Wet lab Exp 3] C4 Challenge: your stimulus, optional inhibitor (TAK-242 1 h before, polymyxin B premixed), LPS on M(-) as everyone's control. Default: overnight, IL-6. Alternative: 6 h, TNF, harvest 15:00. Wet-lab goal: stimulate with inhibitor logic.
 - 12:00-13:00: Lunch
 - 13:00-14:00: [Plenary, lecture, debrief] Lecture: single-cell transcriptomics for immunologists, what a signature score means (tbd)
-- 14:00-16:00: [Dry lab and desk work] Dry lab during the challenge: scRNA-seq part 2, signatures from the bulk RAW 264.7 dataset. TNF groups: harvest at 15:00, supernatants and lysates to the freezer.
+- 14:00-16:00: [Dry lab and desk work] Dry lab during the challenge: scRNA-seq part 2, markers of the macrophage clusters and the M1/M2 scores. TNF groups: harvest at 15:00, supernatants and lysates to the freezer.
 - 16:00-17:00: [Wet lab Exp 3] 16:30: coat the ELISA plates with capture antibody, overnight at 4 °C (C5), 30 min at the bench
 - Staff: Ligands, inhibitors and vehicle ready; -20 space and labelled tubes. Lysis buffers for RNA and protein.
 - Resources: 4 hoods HPL F27.2, one per group, available at all times. Conference room HPL F22 for lectures and dry lab.
@@ -117,7 +117,7 @@ dark (plenary) blocks are mandatory, everything else is the default plan for all
 - 08:00-09:00: Self-study: reading for the day, notebook, group branch
 - 09:00-12:00: [Extension / nerd factor] Optional harvest and ELISA for groups at the bench; otherwise poster: figures and legends
 - 12:00-13:00: Lunch
-- 13:00-16:00: [Poster and writing] Wrap up: code, figures and poster; scRNA-seq part 3, score the tissue macrophages
+- 13:00-16:00: [Poster and writing] Wrap up: code, figures and poster; scRNA-seq part 3, your own signature for the poster
 - 16:00-17:00: [Plenary, lecture, debrief] Publish or perish: a critical discussion on scientific integrity and output metrics
 - Staff: Poster template distributed. Plate reader for the groups that ran an ELISA.
 - Resources: 4 hoods HPL F27.2, one per group, available at all times. Conference room HPL F22 for lectures and dry lab.

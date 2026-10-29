@@ -51,14 +51,11 @@ od_to_conc <- function(od) {
   p["c"] * ((p["a"] - p["d"]) / (od - p["d"]) - 1)^(1 / p["b"])
 }
 
-# How well does the curve fit the standards? R² = 1 - (spread left around the
-# curve) / (total spread of the standard ODs). 1 is a perfect fit; a good ELISA
-# standard curve is above 0.99.
-r2 <- 1 - sum(residuals(model)^2) / sum((std$od_corr - mean(std$od_corr))^2)
-r2
-# Question: how would you validate R²? A single number can hide where the curve
-# misses. Consider plotting it, e.g. residuals(model) against the standard
-# concentration, or each standard's known vs back-calculated value.
+# Questions:
+# - How do you check that the curve fits the standards well? (R² is not a good
+#   measure for a non-linear fit.)
+# - How would you compare two models to decide which one fits better?
+# - Can you think of another approach than a 4PL model? (Hint: log-log.)
 
 # 3. Samples: concentration from the curve, times the dilution.
 # Only wells between the lowest and the top standard are trusted (in_range).
@@ -95,7 +92,7 @@ p1 <- ggplot() +
   geom_point(data = samp[samp$conc_pg_ml > 0, ], aes(conc_pg_ml, od_corr), colour = "steelblue") +
   scale_x_log10() +
   labs(x = "IL-6 (pg/mL, log scale)", y = "OD 450 nm, blank-subtracted",
-       title = sprintf("Standard curve, 4PL, R² = %.3f", r2),
+       title = "Standard curve, 4PL",
        subtitle = "Shaded: standards. Dashed: plateaus a, d and midpoint c.\nOpen circles: standards. Blue: samples.") +
   theme_classic()
 

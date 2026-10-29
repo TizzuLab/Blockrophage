@@ -91,6 +91,9 @@ and the analysis code.
   - `code/elisa/elisa_standard_curve.R`
   - `code/scrnaseq/01_load_and_qc.R`
   - `code/scrnaseq/02_cluster.R`
+  - `code/scrnaseq/03_markers.R`
+  - `code/scrnaseq/04_m1_m2_score.R`
+  - `code/scrnaseq/05_own_signature.R`
 - Code: folder notes
   - `code/elisa/README.md`
   - `code/scrnaseq/README.md`
@@ -388,20 +391,21 @@ of the course, and the poster says so.
 
 **Experiment 2: Comparison in vitro versus in vivo polarization** (dry lab, weeks 2
 to 4) A dish has two states because two were created; a tissue did not read the
-textbook. The plan is to derive the M(IFNγ+LPS) and M(IL-4) gene signatures from a
-public bulk RNA-seq dataset of RAW 264.7 cells under the same stimuli (GSE113836)
-and then, in Seurat, to score every macrophage of two single-cell datasets from
-living systems against them: injured mouse peritoneum (GSE186658) and homeostatic
-human peritoneal fluid (GSE228030). The question is descriptive: do tissue
-macrophages fall into the two states, onto a line between them, or somewhere the
-two axes do not reach? These three are the recommended datasets. The mouse single-cell
-data run from the GEO count matrices on your laptop in about a minute and a half,
-with the scripts in [`code/scrnaseq`](code/scrnaseq/README.md); nobody starts from
-raw reads `[TODO: the same route for the human dataset]`. A
-group that wants to deviate and pull other public datasets is encouraged to do so,
-together with its supervisor. The code for this experiment is being worked out, and
-this description will be updated when it exists. What the picture means is something
-we will work out together at the debriefs. Background sections on
+textbook. M1 and M2 were defined in a dish, with a handful of markers. In Seurat,
+you work through a published single-cell dataset of injured mouse peritoneum
+(GSE186658): find the macrophages, look at what distinguishes their clusters, and
+decide which one is M1 and which M2 before you see any score. Then you score every
+cell with the classic markers and with a consensus of the published in vitro
+RNA-seq experiments for IFNγ and IL-4 (Colombo et al. 2024), the two polarizers of
+your bench work. The question is descriptive: does the dichotomy hold in tissue,
+and for which readout? Finally you choose a signature from the single-cell
+literature that describes your macrophages better, and that goes on the poster.
+The data run from the GEO count matrices on your laptop in a few minutes, with the
+scripts in [`code/scrnaseq`](code/scrnaseq/README.md); nobody starts from raw
+reads. As an extension, a group can take the same workflow to an organ or a disease
+of its own choice, mouse or human, from a published dataset: macrophages are
+everywhere. Choose it together with your supervisor. What the picture means is something we will work out together
+at the debriefs. Background sections on
 [why a dish is not a body](background/README.md#58-why-a-dish-is-not-a-body)
 and [the dataset](background/README.md#59-the-in-silico-dataset-and-how-single-cell-rna-sequencing-works);
 [analysis code](code/README.md).
@@ -462,7 +466,7 @@ non-exhaustive.
 | Experiment or extension | What it adds to the story |
 |---|---|
 | Macrophages annotated | UMAP with Gata6+, Folr2+ Selenop+ and Trem2+ Spp1+ labelled, marker dot plot, cell counts |
-| Integration with an in vitro single-cell dataset | Integrated embedding with the accession named; percentage of in vivo macrophages mapping to any in vitro state |
+| Macrophages in your field ([extensions](code/scrnaseq/README.md#potential-extensions)) | A published single-cell dataset of an organ or disease of your choice through the same workflow; its macrophages, their M1/M2 scores and a signature from that field |
 | Unpredicted figure, dataset or code | A figure or table not in the answer key, with claim, n and method |
 | qPCR (X01) | ΔΔCt of outputs and the receptor of your pathway across states, with housekeepers named |
 | Primary peritoneal cells on the shared panel (X02) | Primary cells and polarized RAW cells in one gating figure; frequency of LPM and SPM with n samples |
@@ -522,12 +526,12 @@ You agree to this with the [admission sheet](safety/README.md) (section 3).
 - Final title (the three arms are now in vitro, in silico, challenge; the working
   title still says in vivo), course number, ECTS, student number, rooms, supervisor
   names.
-- Human dataset for arm 2 (GSE228030 via the lab's HuMac pipeline): core or extension.
+- Human data: no fixed human dataset; groups may choose one for the "your field" extension.
 - GitHub organisation setup: student accounts, group branches, branch rulesets with
   the supervisor as required reviewer; a short git training for the supervisors.
 - Flow facility: cytometer slots, facility lecture slot, FlowJo seats and where they run.
 - qPCR: extension (current plan) or core.
-- Datasets: verify GSE113836 contents and preprocess both datasets; answer-key repository.
+- Datasets: core and extension run from GEO (done); answer-key repository.
 - Surplus primary material for the extensions.
 - Pinned environment, fallback environment, AI tool licensing for students.
 - Recognition of extensions (points or otherwise), atlas platform, prize and funding,
@@ -590,7 +594,7 @@ dark (plenary) blocks are mandatory, everything else is the default plan for all
 - 08:00-12:00: Your other lectures (not course time)
 - 12:00-13:00: Lunch
 - 13:00-15:00: [Wet lab Exp 1] C1 and C2: plate cells from your stock with the polarizer already in the seeding suspension. Vehicle control, M(pol) and LPS control on the flow plate (6- or 12-well). Plate-and-polarize in one step, about 19 h. Wet-lab goal: plate at a defined density with a stimulus.
-- 15:00-17:00: [Dry lab and desk work] Dry lab: scRNA-seq part 1, load the preprocessed object, QC figure. If the bench runs over, the dry lab moves home.
+- 15:00-17:00: [Dry lab and desk work] Dry lab: scRNA-seq part 1, download and load the data, QC figure. If the bench runs over, the dry lab moves home.
 - Staff: Stock flasks counted per group at 12:30. Polarizers, vehicle and LPS at working concentration; plate maps checked before anyone pipettes.
 - Resources: 4 hoods HPL F27.2, one per group, available at all times. Cell counter.
 
@@ -632,7 +636,7 @@ dark (plenary) blocks are mandatory, everything else is the default plan for all
 - 09:00-12:00: [Wet lab Exp 3] C4 Challenge: your stimulus, optional inhibitor (TAK-242 1 h before, polymyxin B premixed), LPS on M(-) as everyone's control. Default: overnight, IL-6. Alternative: 6 h, TNF, harvest 15:00. Wet-lab goal: stimulate with inhibitor logic.
 - 12:00-13:00: Lunch
 - 13:00-14:00: [Plenary, lecture, debrief] Lecture: single-cell transcriptomics for immunologists, what a signature score means (tbd)
-- 14:00-16:00: [Dry lab and desk work] Dry lab during the challenge: scRNA-seq part 2, signatures from the bulk RAW 264.7 dataset. TNF groups: harvest at 15:00, supernatants and lysates to the freezer.
+- 14:00-16:00: [Dry lab and desk work] Dry lab during the challenge: scRNA-seq part 2, markers of the macrophage clusters and the M1/M2 scores. TNF groups: harvest at 15:00, supernatants and lysates to the freezer.
 - 16:00-17:00: [Wet lab Exp 3] 16:30: coat the ELISA plates with capture antibody, overnight at 4 °C (C5), 30 min at the bench
 - Staff: Ligands, inhibitors and vehicle ready; -20 space and labelled tubes. Lysis buffers for RNA and protein.
 - Resources: 4 hoods HPL F27.2, one per group, available at all times. Conference room HPL F22 for lectures and dry lab.
@@ -674,7 +678,7 @@ dark (plenary) blocks are mandatory, everything else is the default plan for all
 - 08:00-09:00: Self-study: reading for the day, notebook, group branch
 - 09:00-12:00: [Extension / nerd factor] Optional harvest and ELISA for groups at the bench; otherwise poster: figures and legends
 - 12:00-13:00: Lunch
-- 13:00-16:00: [Poster and writing] Wrap up: code, figures and poster; scRNA-seq part 3, score the tissue macrophages
+- 13:00-16:00: [Poster and writing] Wrap up: code, figures and poster; scRNA-seq part 3, your own signature for the poster
 - 16:00-17:00: [Plenary, lecture, debrief] Publish or perish: a critical discussion on scientific integrity and output metrics
 - Staff: Poster template distributed. Plate reader for the groups that ran an ELISA.
 - Resources: 4 hoods HPL F27.2, one per group, available at all times. Conference room HPL F22 for lectures and dry lab.
@@ -1549,7 +1553,7 @@ and the analysis is [`code/elisa/elisa_standard_curve.R`](../code/elisa/elisa_st
 ![IL-6 ELISA worked example: standard curve and IL-6 per LPS dose](figures/C5_il6_worked_example.png)
 
 What you see: the curve is drawn far beyond the standards so that the whole S of the
-four-parameter logistic fit is visible (R² 0.999). The kit range, shaded, sits on the
+four-parameter logistic fit is visible. The kit range, shaded, sits on the
 lower limb, which is why it looks close to linear on this log axis; the inflection is
 at about 630 pg/mL and the upper plateau at OD 6.6 is beyond what the reader can
 measure, so a sample above the top standard cannot be back-calculated, only diluted. Vehicle and 0.1 ng/mL LPS are
@@ -1561,8 +1565,7 @@ curve, which is where you want it.
 Run it yourself: open the script in RStudio and press Source. For your own plate,
 change the file name in the `input` line.
 
-The script subtracts the blank, fits the standard curve (4PL) and reports R²,
-back-calculates every sample
+The script subtracts the blank, fits the standard curve (4PL), back-calculates every sample
 with its dilution factor, marks wells outside the standard range, and writes
 `elisa_results.csv`, `elisa_summary.csv` and the figure. Your CSV needs the columns `well`, `type`
 (standard or sample), `condition`, `standard_pg_ml`, `replicate`, `od450` and
@@ -2839,19 +2842,21 @@ comparing the mean expression of the signature genes with a matched random contr
 set; this is how you will ask every in vivo macrophage how M(IFNγ)-like and how
 M(IL-4)-like it is.
 
-The core in silico task is built on that last step. The M(IFNγ+LPS) and M(IL-4)
-signatures are not taken from a textbook list; you derive them from a public bulk
-RNA-seq dataset of RAW 264.7 cells and bone marrow-derived macrophages stimulated
-with the same reagents you use at the bench (GSE113836, `[TODO: verify contents,
-replicates and raw counts before the course]`). Every macrophage in the peritoneal
-single-cell dataset is then scored against both signatures, and the question is how
-much of the tissue population either signature explains. Comparing the tissue cells
-with a published single-cell framework of monocyte-derived macrophage activation,
-built from 12 tissues and 25 conditions in vivo ([Sanin et al., 2022](https://doi.org/10.1126/sciimmunol.abl7482)), is an
-extension, not the core `[TODO: check: Sanin et al. is not an in vitro dataset;
-decide which dataset the extension uses and its accession]`. The teaching staff preprocess
-both datasets and ship small, ready-to-load objects, so the dry lab never starts
-from raw reads.
+The core in silico task is built on that last step, with two kinds of signature.
+The classic M1 and M2 markers come from before sequencing: a handful of genes
+each, such as Nos2, Tnf and Il12b against Arg1, Mrc1 and Chil3. The consensus
+signatures rank the genes induced by IFNγ and by IL-4 across the published in vitro
+RNA-seq experiments of mouse macrophages
+([Colombo et al., 2024](https://doi.org/10.1371/journal.pone.0297872)). Every cell
+of the peritoneal single-cell dataset is scored against both, and the question is
+how much of the tissue population either explains, and why the answer depends on
+the list. Single-cell studies since describe tissue macrophages by states found in
+tissues rather than in dishes; choosing one of them for your own data is the last
+step. Comparing the tissue cells with the single-cell framework of monocyte-derived
+macrophage activation, built from 12 tissues and 25 conditions in vivo
+([Sanin et al., 2022](https://doi.org/10.1126/sciimmunol.abl7482)), is an extension.
+The scripts download the count matrices from GEO, so the dry lab never starts from
+raw reads.
 
 Two limitations matter for your interpretation. The samples are digested injury
 sites, not lavage fluid, and enzymatic digestion under-represents cells that are
@@ -2997,9 +3002,6 @@ decks in [../slides/](../slides/README.md), which list further reading on tissue
   injury, with and without caecal ligation and puncture, two female C57BL/6 mice per
   condition (Zindel et al. 2021, Nat Commun). The in vivo dataset of the core in
   silico task.
-- GSE113836: bulk RNA-seq of primary mouse bone marrow macrophages and RAW 264.7
-  cells skewed with LPS plus IFNγ or with IL-4. Source of the in vitro signatures
-  `[TODO: verify contents, replicates and raw counts before the course]`.
 
 ---
 
@@ -5518,59 +5520,58 @@ the course may redistribute the template in this public repository]`.
 
 <!-- file: code/README.md -->
 
-## Code
+## Code: the in silico arm
 
 > **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/Blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
-Analysis templates for the course. Every template is R, run in the RStudio project
-you cloned on the first Friday; all paths are built with `here()` from the
-repository folder.
+This course emphasizes reproducible data analysis using a scripted approach in R. 
+Most of us use RStudio and we will show you how to clone a project and get started; 
+Since the paths are all relative (using the `here()` package) you can in principle
+source (or "run") the scripts directly in your local repo.
+
+### The idea: from a tidy CSV to a paper figure
+
+The ELISA analysis is the example. It starts from a tidy CSV, one row per well as
+it comes off the plate reader, and ends with a figure as it would go into a paper:
+the standard curve, the concentrations, the plot by condition. Everything in
+between is code, nothing is done by hand, so the analysis is 100% reproducible:
+anyone with the same data and the same code gets the same figure. That is not
+always the case in science.
+
+Everyone does the ELISA analysis in the course, on their own plate, and we look at
+this code in depth together. For your other assays, qPCR, Griess, or even flow
+cytometry, you are encouraged to do the same in R, and we support you. AI tools are
+perfect to get started; but you will need to read the code and explain what it
+does, and for that the AI tools are a great help too. We provide templates for the
+ELISA and for the single-cell analysis of Experiment 2 only; the rest is yours.
 
 ### Step 0: the packages
 
-Once, on the first Friday, open [`00_setup.R`](00_setup.R) in RStudio and press
+Once, on the first Friday, we will open [`00_setup.R`](00_setup.R) in RStudio and press
 Source (or `source("code/00_setup.R")` in the console). It installs Seurat,
-ggplot2, dplyr, readr, patchwork and here from a dated package snapshot: the same
-versions for everyone, ready-built for Windows, macOS and Linux, nothing compiled.
-About a minute; it ends by printing the versions, which go into your notebook.
-
-- First time with R: just run it.
-- Already have R projects whose package versions you want to keep: talk to us
-  first, and we set you up with renv, which keeps the course packages separate.
-- Linux only: Seurat needs one system library, `sudo apt install libglpk40`.
-- 8 GB of memory is enough; the single-cell pipeline peaks at about 3.5 GB.
+ggplot2, dplyr, readr, patchwork, here and readxl from a dated package
+snapshot: the same versions for everyone. If you already have R projects whose package versions you want to keep: talk to us and we set you up with renv, which keeps the course packages separate. If you
+work on Linux: Seurat needs one system library, `sudo apt install libglpk40`. And if your laptop has less than 8 GB of memory... never mind such a laptop probably doesn't exist anymore.
 
 ### The templates
 
-The rule for all of it: run the code and look at the object, not at the AI tool's
-description of the object.
+We provide templates but expect the students to look at the code, not at the AI tool's
+description of the object, and we'll discuss what the code does. And who knows, maybe we 
+introduced a couple bugs for teaching purposes.
 
 | Folder | Purpose | Input | Output |
 |---|---|---|---|
-| `elisa/` | Four-parameter logistic standard curve, concentration table, plots by condition. Written; runs on the lab's IL-6 example data | tidy CSV (one row per well) | `elisa_results.csv`, `elisa_summary.csv`, figure |
-| `griess/` | Linear nitrite standard, concentration table, plots | plate-reader export, plate map | `griess_results.csv`, figures |
-| `flow/` | Reads the population statistics exported from FlowJo and plots them. Gating is done in FlowJo, not in R | FlowJo CSV export | figures |
-| `growth_curve/` | Optional (extension, X05): doubling time from counts, with the published value as a reference line | counts table | figure, doubling time |
-| `scrnaseq/` | The in silico arm, three parts (below). Parts 1a and 1b written; run from GEO in about 1.5 min | GEO matrices, downloaded by the script | figures, Seurat objects |
-| `qpcr/` | ΔΔCt for the X01 extension | Ct export | figures |
+| [`elisa/`](elisa/README.md) | Four-parameter logistic standard curve, concentration table, plots by condition (C5). Runs on the lab's IL-6 example data | tidy CSV (one row per well) | `elisa_results.csv`, `elisa_summary.csv`, figure |
+| [`scrnaseq/`](scrnaseq/README.md) | Experiment 2, three parts (below), five scripts; run from GEO in about 3 min | GEO matrices and a published signature table, downloaded by the scripts | figures, Seurat objects, scores |
 
-`[TODO: write the remaining templates; each folder gets a README, an `example_data/`
-subfolder and one script that runs end to end on the example data. `elisa/` is the
-model.]`
+### Single-cell RNA-seq (Experiment 2), `scrnaseq/`
 
-### The in silico arm, `scrnaseq/`
-
-Two datasets; nobody starts from raw reads:
-
-- `GSE186658`: single-cell RNA-seq of mouse peritoneal injury sites, sterile or
-  contaminated (CLP), two mice each (Zindel et al. 2021, Nat Commun). The scripts
-  download the filtered count matrices from GEO and run quality control,
-  normalisation, clustering and the macrophage markers themselves, on a laptop, in
-  about a minute and a half ([`scrnaseq/`](scrnaseq/README.md)); the macrophage
-  subclusters are **not** annotated.
-- `GSE113836`: bulk RNA-seq of RAW 264.7 and bone marrow macrophages stimulated with
-  LPS plus IFNγ or with IL-4 `[TODO: verify contents, replicates and raw counts]`.
-  Shipped as a count matrix with a sample sheet.
+One dataset, one standard single-cell workflow; nobody starts from raw reads:
+`GSE186658`, single-cell RNA-seq of mouse peritoneal injury sites, sterile or
+contaminated (CLP), two mice each (Zindel et al. 2021, Nat Commun). The scripts
+download the filtered count matrices from GEO and run everything on a laptop, in
+about three minutes ([`scrnaseq/`](scrnaseq/README.md)); the macrophage
+subclusters are **not** annotated.
 
 Three parts, matched to the dry-lab halves of weeks 2 and 3:
 
@@ -5578,19 +5579,19 @@ Three parts, matched to the dry-lab halves of weeks 2 and 3:
    (cells per sample before and after filtering), cluster, and find the macrophages
    by `Adgre1`, `Cd68`, `Csf1r`, `Fcgr1` and `Mertk` (`01_load_and_qc.R`,
    `02_cluster.R`).
-2. **Derive the signatures** (week 3). Differential expression in the bulk data,
-   M(IFNγ+LPS) versus M(-) and M(IL-4) versus M(-), in RAW 264.7 cells; take the top
-   genes by a stated rule; compare with the Murray et al. 2014 table and with the
-   consolidated sets of Colombo et al. 2024.
-3. **Score the tissue** (week 3). Score every macrophage in the single-cell object
-   against both signatures (`AddModuleScore` or equivalent), plot the two scores
-   against each other and on the UMAP, and answer: how much of the tissue population
-   does either signature explain, and what do cells with both scores high mean for
-   the M1/M2 axis.
+2. **M1 or M2?** (week 3). Find the markers of the macrophage clusters and decide,
+   before any score, which cluster is M1 and which M2 (`03_markers.R`). Then score
+   every cell with the classic M1/M2 markers and with the in vitro consensus
+   signatures of Colombo et al. 2024 for IFNγ and IL-4 (`04_m1_m2_score.R`). The
+   point: the dichotomy is not wrong, it is a description made for one setting and
+   one depth of readout; in tissue it fades.
+3. **Your own signature** (week 3 to the poster). Pick a macrophage state from the
+   single-cell literature (lipid-associated, scar-associated, resident subsets,
+   cavity macrophages, ...) or build one from your markers, score it, and put it on
+   the poster (`05_own_signature.R`).
 
-Optional extensions that start from here: annotate the Gata6+, Folr2+ Selenop+ and
-Trem2+ Spp1+ populations; rerun the pipeline from the GEO matrices; integrate with a
-true in vitro single-cell dataset (Sanin et al. 2022 `[TODO: accession]`).
+Where to go from here, for groups that want more: see
+[potential extensions](scrnaseq/README.md#potential-extensions).
 
 The answer key lives in a separate private repository and is released after the
 course.
@@ -5626,12 +5627,13 @@ if (Sys.info()[["sysname"]] == "Linux") {
 options(repos = c(CRAN = repo))
 
 packages <- c(
-  "Seurat",     # single-cell analysis (in silico arm)
+  "Seurat",     # single-cell analysis (Experiment 2)
   "ggplot2",    # figures
   "dplyr",      # tables
   "readr",      # reading CSV files
   "patchwork",  # putting figures side by side
-  "here"        # file paths from the repository folder, on every computer
+  "here",       # file paths from the repository folder, on every computer
+  "readxl"      # reading Excel tables (published signatures)
 )
 
 install.packages(packages)
@@ -5700,14 +5702,11 @@ od_to_conc <- function(od) {
   p["c"] * ((p["a"] - p["d"]) / (od - p["d"]) - 1)^(1 / p["b"])
 }
 
-# How well does the curve fit the standards? R² = 1 - (spread left around the
-# curve) / (total spread of the standard ODs). 1 is a perfect fit; a good ELISA
-# standard curve is above 0.99.
-r2 <- 1 - sum(residuals(model)^2) / sum((std$od_corr - mean(std$od_corr))^2)
-r2
-# Question: how would you validate R²? A single number can hide where the curve
-# misses. Consider plotting it, e.g. residuals(model) against the standard
-# concentration, or each standard's known vs back-calculated value.
+# Questions:
+# - How do you check that the curve fits the standards well? (R² is not a good
+#   measure for a non-linear fit.)
+# - How would you compare two models to decide which one fits better?
+# - Can you think of another approach than a 4PL model? (Hint: log-log.)
 
 # 3. Samples: concentration from the curve, times the dilution.
 # Only wells between the lowest and the top standard are trusted (in_range).
@@ -5744,7 +5743,7 @@ p1 <- ggplot() +
   geom_point(data = samp[samp$conc_pg_ml > 0, ], aes(conc_pg_ml, od_corr), colour = "steelblue") +
   scale_x_log10() +
   labs(x = "IL-6 (pg/mL, log scale)", y = "OD 450 nm, blank-subtracted",
-       title = sprintf("Standard curve, 4PL, R² = %.3f", r2),
+       title = "Standard curve, 4PL",
        subtitle = "Shaded: standards. Dashed: plateaus a, d and midpoint c.\nOpen circles: standards. Blue: samples.") +
   theme_classic()
 
@@ -5770,9 +5769,12 @@ ggsave(file.path(outdir, "elisa_figure.png"), p1 + p2, width = 10, height = 4.25
 #!/usr/bin/env Rscript
 # Part 1a: download, load and quality-control the single-cell data.
 #
-# Usage: open in RStudio and press Source, or Rscript code/scrnaseq/01_load_and_qc.R
-# Paths are built with here() from the repository folder; R's working directory
-# must be inside the repository (always the case in the RStudio project).
+# Usage: open in RStudio and press Source. Paths are built with here() from the
+# repository folder.
+#
+# The steps follow the Seurat tutorial, read it alongside:
+#   https://satijalab.org/seurat/articles/pbmc3k_tutorial
+#   Hao et al. 2024, Nat Biotechnol, https://doi.org/10.1038/s41587-023-01767-y
 #
 # Data: GSE186658 (Zindel et al. 2021, Nat Commun), mouse peritoneal injury sites
 # ("buttons") 24 h after surgery, sterile (B24h) or with microbial contamination by
@@ -5791,15 +5793,12 @@ out_dir <- here("code", "scrnaseq", "output")
 dir.create(data_dir, showWarnings = FALSE)
 dir.create(out_dir, showWarnings = FALSE)
 
-# 1. Download once and check that the file is complete.
+# 1. Download once (110 MB) and unpack.
 tar_file <- file.path(data_dir, "GSE186658_RAW.tar")
 url <- "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE186nnn/GSE186658/suppl/GSE186658_RAW.tar"
 if (!file.exists(tar_file)) {
-  options(timeout = 600)
+  options(timeout = 600)   # the default of 60 s is too short for 110 MB
   download.file(url, tar_file, mode = "wb")
-}
-stopifnot(tools::md5sum(tar_file) == "f63ee50eaeccb04c07502c55d8d49a31")
-if (length(list.files(data_dir, pattern = "matrix.mtx.gz$")) < 4) {
   untar(tar_file, exdir = data_dir, tar = "internal")
 }
 
@@ -5850,7 +5849,9 @@ cat("Kept", ncol(cells), "cells. Next: 02_cluster.R\n")
 #!/usr/bin/env Rscript
 # Part 1b: normalise, cluster, and find the macrophages.
 #
-# Usage: open in RStudio and press Source, or Rscript code/scrnaseq/02_cluster.R
+# Usage: open in RStudio and press Source.
+# The steps follow the Seurat tutorial, read it alongside:
+#   https://satijalab.org/seurat/articles/pbmc3k_tutorial
 # Input:  after_qc.rds from 01_load_and_qc.R, in code/scrnaseq/output/
 # Output in code/scrnaseq/output/: umap_clusters.png, umap_condition.png,
 #         macrophage_markers.png, clustered.rds
@@ -5906,6 +5907,195 @@ cat("Clusters:", nlevels(cells$seurat_clusters),
 
 ---
 
+<!-- file: code/scrnaseq/03_markers.R -->
+
+```r
+#!/usr/bin/env Rscript
+# Part 3: what makes each macrophage cluster different?
+#
+# Usage: open in RStudio and press Source. Run 02_cluster.R first.
+# The step follows the Seurat tutorial, "Finding differentially expressed features
+# (cluster biomarkers)":
+#   https://satijalab.org/seurat/articles/pbmc3k_tutorial
+#
+# Input:  clustered.rds from 02_cluster.R, in code/scrnaseq/output/
+# Output in code/scrnaseq/output/: macrophage_markers.csv, macrophage_top_markers.png
+
+library(Seurat)
+library(ggplot2)
+library(dplyr)
+library(here)
+
+out_dir <- here("code", "scrnaseq", "output")
+
+cells <- readRDS(file.path(out_dir, "clustered.rds"))
+
+# Your decision from 02_cluster.R: which clusters are macrophages.
+macrophage_clusters <- c(1, 2, 5, 6)
+macs <- subset(cells, idents = macrophage_clusters)
+
+# Markers: genes higher in one macrophage cluster than in the other macrophage
+# clusters, expressed in at least a quarter of its cells.
+markers <- FindAllMarkers(macs, only.pos = TRUE, min.pct = 0.25, logfc.threshold = 0.5)
+write.csv(markers, file.path(out_dir, "macrophage_markers.csv"), row.names = FALSE)
+
+top <- markers |>
+  group_by(cluster) |>
+  slice_max(avg_log2FC, n = 10)
+top
+
+ggsave(file.path(out_dir, "macrophage_top_markers.png"),
+       DotPlot(macs, features = unique(top$gene)) + RotatedAxis(),
+       width = 14, height = 4)
+
+# Before you run 04: which of your macrophage clusters is M1 and which is M2?
+# Write it into your notebook, with the genes that made you decide.
+
+# Questions:
+# - Look up the top genes of each cluster. What do they tell you about where the
+#   cells come from (resident or recruited from the blood) and what they do?
+# - Did you have to choose an M1 and an M2 cluster? How sure are you?
+```
+
+---
+
+<!-- file: code/scrnaseq/04_m1_m2_score.R -->
+
+```r
+#!/usr/bin/env Rscript
+# Part 4: score every cell against M1 and M2 signatures.
+#
+# Usage: open in RStudio and press Source. Run 02_cluster.R first.
+#
+# Two kinds of signature:
+# - the classic markers, from before sequencing (see Murray et al. 2014, Immunity,
+#   https://doi.org/10.1016/j.immuni.2014.06.008),
+# - a consensus ranking across the public RNA-seq experiments of mouse macrophages
+#   stimulated in vitro (Colombo et al. 2024, PLOS ONE, https://doi.org/10.1371/journal.pone.0297872),
+#   downloaded from the paper's supplementary table S1. We take the 30 top-ranked
+#   genes for IFNγ (as in your M(IFNγ) wells) and for IL-4 (as in your M(IL-4) wells).
+#
+# A module score is the mean expression of the signature genes in a cell minus that
+# of random control genes of similar expression (Tirosh et al. 2016, Science,
+# https://doi.org/10.1126/science.aad0501; Seurat: https://satijalab.org/seurat/reference/addmodulescore).
+#
+# Input:  clustered.rds from 02_cluster.R, in code/scrnaseq/output/
+# Output in code/scrnaseq/output/: scores_violin.png, scores_umap.png
+
+library(Seurat)
+library(ggplot2)
+library(readxl)
+library(here)
+
+data_dir <- here("code", "scrnaseq", "data")
+out_dir <- here("code", "scrnaseq", "output")
+
+cells <- readRDS(file.path(out_dir, "clustered.rds"))
+
+# 1. The classic markers.
+classic_m1 <- c("Nos2", "Tnf", "Il1b", "Il6", "Il12b", "Cxcl9", "Cxcl10", "Cd86")
+classic_m2 <- c("Arg1", "Mrc1", "Chil3", "Retnla", "Ccl17", "Ccl24", "Mgl2")
+
+# 2. The consensus signatures, downloaded once.
+colombo_file <- file.path(data_dir, "Colombo2024_S1.xlsx")
+url <- "https://journals.plos.org/plosone/article/file?type=supplementary&id=10.1371/journal.pone.0297872.s001"
+if (!file.exists(colombo_file)) download.file(url, colombo_file, mode = "wb")
+ifng <- head(read_excel(colombo_file, sheet = "IFN UP")$Name, 30)
+il4 <- head(read_excel(colombo_file, sheet = "IL4 UP")$Name, 30)
+ifng
+il4
+
+# 3. Score every cell, not only the macrophages: the other cells are your control.
+cells <- AddModuleScore(cells, features = list(classic_m1, classic_m2, ifng, il4), name = "score")
+cells$M1_classic <- cells$score1
+cells$M2_classic <- cells$score2
+cells$IFNg_consensus <- cells$score3
+cells$IL4_consensus <- cells$score4
+scores <- c("M1_classic", "M2_classic", "IFNg_consensus", "IL4_consensus")
+
+ggsave(file.path(out_dir, "scores_violin.png"),
+       VlnPlot(cells, features = scores, pt.size = 0, ncol = 2),
+       width = 12, height = 8)
+ggsave(file.path(out_dir, "scores_umap.png"),
+       FeaturePlot(cells, features = scores, ncol = 2, order = TRUE),
+       width = 10, height = 9)
+
+# Median score per cluster.
+aggregate(cells@meta.data[scores], list(cluster = cells$seurat_clusters), median)
+
+# Questions:
+# - Compare with your notebook: are your M1 and M2 clusters from 03 the ones that
+#   score highest here?
+# - With the classic markers, which cluster is the most "M1"? Is it a macrophage
+#   cluster at all (look back at 02)? Which genes of the classic list make that happen?
+# - Classic markers versus consensus: why does the picture change? What does a list
+#   of 7 genes measure that a list of 30 does not, and the other way round?
+# - At the bench your RAW 264.7 cells were polarized with IFNγ or IL-4. Do the
+#   tissue macrophages look like either of them? Where would they need to be?
+# - You split subpopulations into two poles. Does that fit what you found in 03?
+```
+
+---
+
+<!-- file: code/scrnaseq/05_own_signature.R -->
+
+```r
+#!/usr/bin/env Rscript
+# Part 5: your own signature, for the poster.
+#
+# Usage: open in RStudio, fill in your signature below, and press Source.
+# Run 02_cluster.R first.
+#
+# M1 and M2 were defined in a dish. Since single-cell RNA-seq, macrophages are also
+# described by the states found in tissues. Starting points (find the gene lists in
+# the papers and their supplementary tables, or build your own from 03):
+# - lipid-associated macrophages: Jaitin et al. 2019, Cell,
+#   https://doi.org/10.1016/j.cell.2019.05.054
+# - scar-associated macrophages: Ramachandran et al. 2019, Nature,
+#   https://doi.org/10.1038/s41586-019-1631-3
+# - three resident subsets across organs: Dick et al. 2022, Sci Immunol,
+#   https://doi.org/10.1126/sciimmunol.abf7777
+# - cavity macrophages and Gata6: Rosas et al. 2014, Science,
+#   https://doi.org/10.1126/science.1251414
+# - the injured peritoneum of this dataset: Zindel et al. 2021, Nat Commun,
+#   https://doi.org/10.1038/s41467-021-27612-x
+#
+# Output in code/scrnaseq/output/: own_signature.png
+
+library(Seurat)
+library(ggplot2)
+library(patchwork)
+library(here)
+
+out_dir <- here("code", "scrnaseq", "output")
+
+cells <- readRDS(file.path(out_dir, "clustered.rds"))
+
+# Your signature: mouse gene names, and where they come from.
+my_signature <- c()      # e.g. c("Gene1", "Gene2", "Gene3")
+signature_name <- ""     # e.g. "lipid-associated, Jaitin 2019"
+
+table(my_signature %in% rownames(cells))
+
+cells <- AddModuleScore(cells, features = list(my_signature), name = "own")
+
+p <- FeaturePlot(cells, features = "own1", order = TRUE) + ggtitle(signature_name) |
+  VlnPlot(cells, features = "own1", pt.size = 0) + NoLegend() + ggtitle(signature_name)
+ggsave(file.path(out_dir, "own_signature.png"), p, width = 12, height = 5)
+
+aggregate(cells$own1, list(cluster = cells$seurat_clusters), median)
+
+# Questions:
+# - Which clusters carry your signature? Does it differ between sterile and
+#   contaminated (CLP) sites, per mouse?
+# - Your signature came from another tissue, another disease, maybe another
+#   species. What does it mean if it fits here, and what if it does not?
+# - Compared with M1 and M2 in 04: which description of these macrophages would
+#   you put on your poster, and why?
+```
+
+---
+
 # Code: folder notes
 
 <!-- file: code/elisa/README.md -->
@@ -5936,7 +6126,7 @@ plate also carried an osteopontin co-stimulation arm, which is not included.
 
 1. Blank: mean OD of the 0 pg/mL standards, subtracted from every well.
 2. Standard curve: four-parameter logistic fit (`nls`). The console prints the four
-   parameters and R² on the standards (above 0.99 for a good curve).
+   parameters; how to judge the fit is left as a question in the script.
 3. Samples: back-calculated from the curve, multiplied by `dilution_factor`; wells
    at or below the blank are set to 0; `in_range` says whether the OD lies between
    the lowest and the top standard.
@@ -5951,15 +6141,29 @@ that is the moment to understand the curve, not to work around it.
 
 <!-- file: code/scrnaseq/README.md -->
 
-## Single-cell RNA-seq: the in silico arm
+## Single-cell RNA-seq (Experiment 2)
 
-Open each script in RStudio and press Source, in order; each reads the output of
-the one before. Paths come from `here()`, so it does not matter which folder RStudio
-is in, as long as it is the course project.
+One standard single-cell workflow, from the count matrices to your own signature.
+Every script follows the published Seurat tutorial; read it alongside the script:
+it is the conventional way, written by the people who built the method. Use your AI
+tool to explain a step or an error, then check what it says against the tutorial
+and against the object in front of you.
+
+| Script | Follows |
+|---|---|
+| `01` to `03` | Seurat, [guided clustering tutorial](https://satijalab.org/seurat/articles/pbmc3k_tutorial) (Hao et al. 2024, [Nat Biotechnol](https://doi.org/10.1038/s41587-023-01767-y)) |
+| `04`, `05` | Seurat, [`AddModuleScore`](https://satijalab.org/seurat/reference/addmodulescore) and the [cell-cycle vignette](https://satijalab.org/seurat/articles/cell_cycle_vignette), same idea (Tirosh et al. 2016, [Science](https://doi.org/10.1126/science.aad0501)) |
+
+Open each script in RStudio and press Source, in order. Paths come from `here()`,
+so it does not matter which folder RStudio is in, as long as it is the course
+project.
 
 ```
-01_load_and_qc.R   # download from GEO, load, QC, filter   (~35 s)
-02_cluster.R       # normalise, PCA, clusters, UMAP, macrophage markers   (~50 s)
+01_load_and_qc.R    # download from GEO, load, QC, filter   (~35 s)
+02_cluster.R        # normalise, PCA, clusters, UMAP: which cells are macrophages   (~50 s)
+03_markers.R        # markers of the macrophage clusters: which is M1, which M2?   (~25 s)
+04_m1_m2_score.R    # score: classic M1/M2 markers and the in vitro consensus   (~15 s)
+05_own_signature.R  # your own signature from the single-cell literature, for the poster
 ```
 
 Needs the packages from [`00_setup.R`](../00_setup.R). Times and memory
@@ -5971,7 +6175,15 @@ GSE186658 (Zindel et al. 2021, Nat Commun): mouse peritoneal injury sites
 ("buttons") 24 h after surgery, sterile (`B24h1`, `B24h2`) or with microbial
 contamination by cecal ligation and puncture (`BCLP24h1`, `BCLP24h2`), female
 C57BL/6, 10x Genomics. GEO holds the filtered count matrices (110 MB, 13,657 cells);
-`01_load_and_qc.R` downloads them once into `data/` and checks the MD5 sum.
+`01_load_and_qc.R` downloads them once into `data/`.
+
+The consensus signatures in `04` come from Colombo et al. 2024
+([PLOS ONE](https://doi.org/10.1371/journal.pone.0297872)), who ranked the genes
+induced by IFNγ, LPS, IFNγ + LPS and IL-4 across the public RNA-seq experiments of
+mouse macrophages in vitro. `04` downloads their supplementary table S1 and takes
+the 30 top-ranked genes for IFNγ and for IL-4, the two polarizers of your bench
+work.
+
 `data/` and `output/` are not tracked by git.
 
 ### What you decide, and write into your notebook
@@ -5982,11 +6194,89 @@ C57BL/6, 10x Genomics. GEO holds the filtered count matrices (110 MB, 13,657 cel
   `ElbowPlot(cells)`; the defaults (20 PCs, resolution 0.5) give 14 clusters.
 - Which clusters are macrophages (`02`): from `output/macrophage_markers.png`,
   with the reason.
+- Which macrophage cluster is M1 and which is M2 (`03`), from their markers,
+  **before** you run `04`.
+- Your own signature (`05`): which paper, which genes, and why.
 
 ### To discuss in the group
 
 - Why your UMAP may differ from your neighbour's, and what `set.seed()` does.
 - Manual annotation from a few markers versus automated, reference-based
   annotation (e.g. SingleR with the ImmGen reference): bias, agreement, trust.
+- Your M1 and M2 clusters from `03` against the scores in `04`. Why do the
+  neutrophils come out most "M1" with the classic markers, and why does the picture
+  fade with the 30-gene consensus?
+- M1/M2 was defined in a dish, with a few markers. Is it wrong, or a description
+  that fits one setting and one depth of readout? Compare with your RAW 264.7
+  cells at the bench.
+- What a module score is relative to (random control genes of similar
+  expression), and whether the sterile versus CLP difference holds per mouse.
+
+### Potential extensions
+
+No ready-made scripts here: you start from a paper, the way analyses start in a
+lab, and adapt the pipeline yourself. The snippets show the core pieces, not the
+whole way. Talk to your supervisor first.
+
+#### Macrophages are everywhere: take the workflow to your field
+
+Every organ has its macrophages: microglia in the brain, Kupffer cells in the
+liver, alveolar macrophages in the lung, Langerhans cells in the skin, osteoclasts
+in bone, and many more in tumours, infection, fibrosis and atherosclerosis. Pick an
+organ or a disease that interests you, find a published single-cell study, and run
+`01` to `05` on its data.
+
+- Where to look: the paper's "Data availability" section, then
+  [GEO](https://www.ncbi.nlm.nih.gov/gds) or
+  [CELLxGENE](https://cellxgene.cziscience.com/datasets). Prefer count matrices
+  (`matrix.mtx`, `barcodes.tsv`, `features.tsv`, or a 10x `.h5` file): Seurat reads
+  them directly. Check the size first: 8 GB of memory holds about 20,000 cells.
+
+  ```r
+  counts <- Read10X_h5(here("code", "scrnaseq", "data", "my_sample.h5"))
+  cells <- CreateSeuratObject(counts, min.cells = 3)
+  cells <- cells[, sample(colnames(cells), 15000)]   # too many cells? subsample
+  ```
+
+- What changes: the QC thresholds (another lab, another tissue), the markers that
+  find the macrophages (which hold in your organ?), and, in a human dataset, the
+  gene names.
+
+  ```r
+  cells[["percent_mt"]] <- PercentageFeatureSet(cells, pattern = "^MT-")   # human genes are upper case
+  ```
+
+- Then go further with the tools of the field (installed from GitHub, not from
+  CRAN: ask us for help):
+  - who talks to whom: [CellChat](https://github.com/jinworks/CellChat) (Jin et al.
+    2021, [Nat Commun](https://doi.org/10.1038/s41467-021-21246-9)), ligands and
+    receptors between your macrophages and their neighbours;
+  - which signal drives a state: [NicheNet](https://github.com/saeyslab/nichenetr)
+    (Browaeys et al. 2020, [Nat Methods](https://doi.org/10.1038/s41592-019-0667-5)),
+    the ligands that best explain the genes up in your macrophages;
+  - from monocyte to macrophage: [monocle3](https://cole-trapnell-lab.github.io/monocle3/docs/trajectories/)
+    (Cao et al. 2019, [Nature](https://doi.org/10.1038/s41586-019-0969-x)), cells
+    ordered along a path in pseudotime.
+
+  ```r
+  cds <- SeuratWrappers::as.cell_data_set(macs)   # monocle3 starts from your Seurat object
+  cds <- cluster_cells(cds) |> learn_graph()
+  cds <- order_cells(cds)                         # you choose where the path starts, and why
+  ```
+
+- Questions: are the M1/M2 scores of `04` any more convincing in your organ? Which
+  signature from your field describes the macrophages better (`05`)? If your
+  dataset is human: what would it take to compare it with mouse, and what could go
+  wrong?
+
+#### More
+
+- **Annotation by a reference instead of by eye.** SingleR with the ImmGen
+  reference ([SingleR book](https://bioconductor.org/books/release/SingleRBook/);
+  Aran et al. 2019, [Nat Immunol](https://doi.org/10.1038/s41590-018-0276-y)): does
+  it agree with your clusters from `02` and `03`?
+- **Activation in vivo.** Compare your macrophages with the monocyte-derived
+  activation paths that Sanin et al. 2022 found across tissues and diseases
+  ([Sci Immunol](https://doi.org/10.1126/sciimmunol.abl7482)).
 
 ---

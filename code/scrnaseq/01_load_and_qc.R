@@ -1,9 +1,12 @@
 #!/usr/bin/env Rscript
 # Part 1a: download, load and quality-control the single-cell data.
 #
-# Usage: open in RStudio and press Source, or Rscript code/scrnaseq/01_load_and_qc.R
-# Paths are built with here() from the repository folder; R's working directory
-# must be inside the repository (always the case in the RStudio project).
+# Usage: open in RStudio and press Source. Paths are built with here() from the
+# repository folder.
+#
+# The steps follow the Seurat tutorial, read it alongside:
+#   https://satijalab.org/seurat/articles/pbmc3k_tutorial
+#   Hao et al. 2024, Nat Biotechnol, https://doi.org/10.1038/s41587-023-01767-y
 #
 # Data: GSE186658 (Zindel et al. 2021, Nat Commun), mouse peritoneal injury sites
 # ("buttons") 24 h after surgery, sterile (B24h) or with microbial contamination by
@@ -22,15 +25,12 @@ out_dir <- here("code", "scrnaseq", "output")
 dir.create(data_dir, showWarnings = FALSE)
 dir.create(out_dir, showWarnings = FALSE)
 
-# 1. Download once and check that the file is complete.
+# 1. Download once (110 MB) and unpack.
 tar_file <- file.path(data_dir, "GSE186658_RAW.tar")
 url <- "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE186nnn/GSE186658/suppl/GSE186658_RAW.tar"
 if (!file.exists(tar_file)) {
-  options(timeout = 600)
+  options(timeout = 600)   # the default of 60 s is too short for 110 MB
   download.file(url, tar_file, mode = "wb")
-}
-stopifnot(tools::md5sum(tar_file) == "f63ee50eaeccb04c07502c55d8d49a31")
-if (length(list.files(data_dir, pattern = "matrix.mtx.gz$")) < 4) {
   untar(tar_file, exdir = data_dir, tar = "internal")
 }
 

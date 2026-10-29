@@ -96,10 +96,10 @@
 <text x="927" y="371" font-size="12" fill="#1A1A1A">up)</text>
 <rect x="363.0" y="324" width="279.0" height="97" fill="#FFE699" stroke="#BFBFBF" stroke-width="0.8"/>
 <text x="369" y="347" font-size="12" fill="#1A1A1A">Dry lab during the challenge: scRNA-seq</text>
-<text x="369" y="362" font-size="12" fill="#1A1A1A">part 2, signatures from the bulk RAW</text>
-<text x="369" y="377" font-size="12" fill="#1A1A1A">264.7 dataset. TNF groups: harvest at</text>
-<text x="369" y="392" font-size="12" fill="#1A1A1A">15:00, supernatants and lysates to the</text>
-<text x="369" y="407" font-size="12" fill="#1A1A1A">freezer.</text>
+<text x="369" y="362" font-size="12" fill="#1A1A1A">part 2, markers of the macrophage</text>
+<text x="369" y="377" font-size="12" fill="#1A1A1A">clusters and the M1/M2 scores. TNF</text>
+<text x="369" y="392" font-size="12" fill="#1A1A1A">groups: harvest at 15:00, supernatants</text>
+<text x="369" y="407" font-size="12" fill="#1A1A1A">and lysates to the freezer.</text>
 <rect x="642.0" y="375" width="279.0" height="103" fill="#BDD7EE" stroke="#BFBFBF" stroke-width="0.8"/>
 <text x="648" y="408" font-size="12" fill="#1A1A1A">C5 ELISA: detection and read-out; first</text>
 <text x="648" y="424" font-size="12" fill="#1A1A1A">look at the numbers. Passage the stock.</text>

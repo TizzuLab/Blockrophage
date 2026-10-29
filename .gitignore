@@ -15,6 +15,7 @@ renv/library/
 .DS_Store
 Thumbs.db
 ~$*
+*:Zone.Identifier
 __pycache__/
 
 # Local drafts and one-off material (emails, Word drafts); never pushed, delete when done.

@@ -71,9 +71,9 @@
 <text x="834" y="342" font-size="12" fill="#FFFFFF" font-weight="bold">the available teaching seats]. Wet-lab goal:</text>
 <text x="834" y="357" font-size="12" fill="#FFFFFF" font-weight="bold">acquisition and gating.</text>
 <rect x="84.0" y="358" width="372.0" height="118" fill="#FFE699" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="90" y="406" font-size="12" fill="#1A1A1A">Dry lab: scRNA-seq part 1, load the preprocessed</text>
-<text x="90" y="422" font-size="12" fill="#1A1A1A">object, QC figure. If the bench runs over, the dry</text>
-<text x="90" y="436" font-size="12" fill="#1A1A1A">lab moves home.</text>
+<text x="90" y="406" font-size="12" fill="#1A1A1A">Dry lab: scRNA-seq part 1, download and load the</text>
+<text x="90" y="422" font-size="12" fill="#1A1A1A">data, QC figure. If the bench runs over, the dry lab</text>
+<text x="90" y="436" font-size="12" fill="#1A1A1A">moves home.</text>
 <rect x="456.0" y="358" width="372.0" height="118" fill="#FFE699" stroke="#BFBFBF" stroke-width="0.8"/>
 <text x="462" y="406" font-size="12" fill="#1A1A1A">Dry lab: scRNA-seq part 1 continued; poster: draft</text>
 <text x="462" y="422" font-size="12" fill="#1A1A1A">the introduction. If the bench runs over, the dry lab</text>

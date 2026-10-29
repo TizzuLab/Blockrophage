@@ -113,7 +113,7 @@ and the analysis is [`code/elisa/elisa_standard_curve.R`](../code/elisa/elisa_st
 ![IL-6 ELISA worked example: standard curve and IL-6 per LPS dose](figures/C5_il6_worked_example.png)
 
 What you see: the curve is drawn far beyond the standards so that the whole S of the
-four-parameter logistic fit is visible (R² 0.999). The kit range, shaded, sits on the
+four-parameter logistic fit is visible. The kit range, shaded, sits on the
 lower limb, which is why it looks close to linear on this log axis; the inflection is
 at about 630 pg/mL and the upper plateau at OD 6.6 is beyond what the reader can
 measure, so a sample above the top standard cannot be back-calculated, only diluted. Vehicle and 0.1 ng/mL LPS are
@@ -125,8 +125,7 @@ curve, which is where you want it.
 Run it yourself: open the script in RStudio and press Source. For your own plate,
 change the file name in the `input` line.
 
-The script subtracts the blank, fits the standard curve (4PL) and reports R²,
-back-calculates every sample
+The script subtracts the blank, fits the standard curve (4PL), back-calculates every sample
 with its dilution factor, marks wells outside the standard range, and writes
 `elisa_results.csv`, `elisa_summary.csv` and the figure. Your CSV needs the columns `well`, `type`
 (standard or sample), `condition`, `standard_pg_ml`, `replicate`, `od450` and

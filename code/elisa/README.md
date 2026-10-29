@@ -24,7 +24,7 @@ plate also carried an osteopontin co-stimulation arm, which is not included.
 
 1. Blank: mean OD of the 0 pg/mL standards, subtracted from every well.
 2. Standard curve: four-parameter logistic fit (`nls`). The console prints the four
-   parameters and R² on the standards (above 0.99 for a good curve).
+   parameters; how to judge the fit is left as a question in the script.
 3. Samples: back-calculated from the curve, multiplied by `dilution_factor`; wells
    at or below the blank are set to 0; `in_range` says whether the OD lies between
    the lowest and the top standard.

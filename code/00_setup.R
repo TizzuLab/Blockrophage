@@ -22,12 +22,13 @@ if (Sys.info()[["sysname"]] == "Linux") {
 options(repos = c(CRAN = repo))
 
 packages <- c(
-  "Seurat",     # single-cell analysis (in silico arm)
+  "Seurat",     # single-cell analysis (Experiment 2)
   "ggplot2",    # figures
   "dplyr",      # tables
   "readr",      # reading CSV files
   "patchwork",  # putting figures side by side
-  "here"        # file paths from the repository folder, on every computer
+  "here",       # file paths from the repository folder, on every computer
+  "readxl"      # reading Excel tables (published signatures)
 )
 
 install.packages(packages)
