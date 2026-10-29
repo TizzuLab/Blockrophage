@@ -1,6 +1,6 @@
 # X03 F4/80 immunohistochemistry on tissue sections (extension)
 
-> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/blockrophage-course/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
+> **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/Blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
 > Extension. Depends on primary material: we may be able to provide fixed tissue or
 > paraffin blocks that are surplus from ongoing experimental work in the lab. Plan

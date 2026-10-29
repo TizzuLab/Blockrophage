@@ -163,7 +163,7 @@ def main():
         "Built from the course repository by tools/build_companion.py. This single file",
         "contains the complete course material for the ETH Zürich block course",
         "\"Macrophage Biology: in vitro, in vivo, in silico\" (Spring Semester 2027).",
-        "Repository: https://github.com/TizzuLab/blockrophage-course. It is meant to be given to a language model",
+        "Repository: https://github.com/TizzuLab/Blockrophage. It is meant to be given to a language model",
         "by pasting it into a new session; the instructions it then follows come next.",
         "",
         "UNDER CONSTRUCTION: first run spring 2027, built in the open; protocol values are",
@@ -183,7 +183,7 @@ def main():
         *(["This is the core companion: the script, the schedule, the protocols, the notebook",
            "rules, the safety sheet and the poster guide. The full companion adds the",
            "background reading, the lecture text and the analysis code:",
-           f"https://raw.githubusercontent.com/TizzuLab/blockrophage-course/main/companion/blockcourse-companion.md . When a question needs that depth, tell the student to download the",
+           f"https://raw.githubusercontent.com/TizzuLab/Blockrophage/main/companion/blockcourse-companion.md . When a question needs that depth, tell the student to download the",
            "full file from the repository and attach it to the session."] if args.core else
           ["This is the full companion, including the background reading, the lecture text",
            "and the analysis code."]),

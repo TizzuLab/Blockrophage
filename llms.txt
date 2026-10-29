@@ -5,7 +5,7 @@
 > and analysis code. Students culture and polarize RAW 264.7 macrophages, challenge
 > them through pattern-recognition receptors, read out cytokines, nitrite and surface
 > phenotype, and compare the in vitro states with tissue macrophages in a published
-> single-cell dataset. Repository: https://github.com/TizzuLab/blockrophage-course. This file follows the llms.txt convention: it tells a language
+> single-cell dataset. Repository: https://github.com/TizzuLab/Blockrophage. This file follows the llms.txt convention: it tells a language
 > model what is here and in which order to read it.
 
 ## Status
@@ -78,7 +78,7 @@
 - [Companion prompt](companion/prompt.md): the instructions at the top of the
   companion files. The student copies the core companion from the collapsible block
   in the README and pastes it into a new session of their AI tool.
-- [Companion file](https://raw.githubusercontent.com/TizzuLab/blockrophage-course/main/companion/blockcourse-companion.md): the whole repository as one file.
-- [Core companion](https://raw.githubusercontent.com/TizzuLab/blockrophage-course/main/companion/blockcourse-companion-core.md): script, schedule and protocols only, for sessions that
+- [Companion file](https://raw.githubusercontent.com/TizzuLab/Blockrophage/main/companion/blockcourse-companion.md): the whole repository as one file.
+- [Core companion](https://raw.githubusercontent.com/TizzuLab/Blockrophage/main/companion/blockcourse-companion-core.md): script, schedule and protocols only, for sessions that
   have to start from a link.
 - [Licence](LICENSE.md): CC BY 4.0 for text, MIT for code.
