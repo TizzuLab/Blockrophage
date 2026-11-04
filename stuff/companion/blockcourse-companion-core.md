@@ -182,6 +182,8 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 > these protocols in the lab yet.** Values are unverified until this notice is gone;
 > items marked `[TODO]` are open.
 
+THIS IS A TEST
+
 | | |
 |---|---|
 | Course title | Blockrophage course: the block course about macrophage polarization and their response to danger molecules |
