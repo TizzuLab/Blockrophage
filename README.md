@@ -296,13 +296,13 @@ this course.
 >
 > Teaching principles.
 >
-> - **Experiential learning.** direct experience, reflection, and active experimentation (David Kolb).
-> - **Fallibilism** We adhere to fallibilism, acknowledging the inherent uncertainty and revisability of knowledge
-> (Karl Popper). In order words: half of what we teach is wrong, but we don’t know which half(precise origin unknown).
-> - **Humans are cybors** and the blurring boundaries between human and machine facilitate
+> - **Experiential learning:** direct experience, reflection, and active experimentation (David Kolb).
+> - **Fallibilism.** We adhere to fallibilism, acknowledging the inherent uncertainty and revisability of knowledge
+> (Karl Popper). In other words: half of what we teach is wrong, but we don’t know which half (precise origin unknown).
+> - **Humans are cyborgs,** and the blurring boundaries between human and machine facilitate
 > ubiquitous access to information of variable quality (Donna Haraway, Elon Musk).
-> - **bullshit** exponentially outgrows the availability of substantiated claims (Carl T.
-> Bergstrom, Jevin D. West). In order words: information is cheap, validation is not.
+> - **Bullshit** exponentially outgrows the availability of substantiated claims (Carl T.
+> Bergstrom, Jevin D. West). In other words: information is cheap, validation is not.
 >
 > ### 2. Learning objectives
 >
