@@ -217,14 +217,25 @@ Zürich, Spring Semester 2027. Zindel lab (TizzuLab).
 
 ### What you need for this course
 
-1. **A laptop**, any operating system, and **a GitHub account**, created at
-   [github.com](https://github.com) before the first day; the username is sent to
-   us. You will work in a public repository, where your edits and your name are
-   visible to anyone, which is worth keeping in mind when the account is created.
-2. **The admission sheet**, please read before the first day and signed after the
-   briefing on the first morning ([safety and data](safety/README.md)). It holds the
+Bring a laptop (any operating system) and, if you can, do these four steps at home
+before the first day:
+
+1. **Install Git:** [git-scm.com/downloads](https://git-scm.com/downloads).
+2. **Install R, then RStudio:** R from [cran.r-project.org](https://cran.r-project.org),
+   RStudio Desktop from [posit.co](https://posit.co/download/rstudio-desktop/).
+3. **Create a GitHub account** at [github.com/signup](https://github.com/signup) and
+   send us the username. You will work in a public repository, where your edits and
+   your name are visible to anyone; keep that in mind when you choose the name.
+4. **Read the admission sheet** ([safety and data](safety/README.md)). It holds the
    safety rules and the data terms: what you produce belongs to the lab and may be
-   published open access. The signed sheet is your admission to the bench.
+   published open access. You sign it after the briefing on the first morning; the
+   signed sheet is your admission to the bench.
+
+**Stuck?** Paste the companion prompt below into your AI tool and ask it to talk you
+through the step. Still stuck? No problem: on Friday afternoon of week 1 the
+supervisors set up git and RStudio with everyone, step by step, from scratch.
+Coming prepared buys you time, and with git and an AI tool you can go quite far in
+this course.
 > [!TIP]
 > **Your AI companion for the course.** Copy this prompt to your AI tool.
 >
@@ -281,7 +292,22 @@ After this course, students will be able to:
 ### 3. How the course works
 
 **Git and group branches.** This repository **is** the course, and each group works in
-its own branch of it, named by year and group (for example `2027/group-a`). 
+its own branch of it, named by year and group (for example `2027/group-a`). Your
+notebooks, data, analysis and poster are commits on that branch; your supervisors
+read along with every push. At the end, after review, all group branches merge back
+into `main`, and that becomes the course for 2028.
+
+![Each group works on its own branch; together they become the next course](stuff/figures/how-we-work/branches.svg)
+
+**AI tools and git.** AI tools come in many forms: a chat in the browser, an
+assistant in your editor (RStudio, Positron, VS Code), an agent that works directly in your copy of the
+repository, and new ones every few months. Which one you use is open; we explore
+them together during the course. What stays fixed is the layer underneath: git is
+our shared review and version control. Whatever you or your AI tool write lands
+there as a commit, and people read it, the same way whether a person or a tool
+wrote it.
+
+![Many AI tools, one shared layer: git](stuff/figures/how-we-work/git-and-ai-tools.svg)
 
 **Groups and supervisors.** On day 1 we build 3-4 groups of 2-3 students with 1-2 supervisors 
 from the lab.
@@ -5618,16 +5644,14 @@ course.
 <!-- file: code/00_setup.R -->
 
 ```r
-# Step 0: install the R packages for the course, once, on the first Friday.
-# Run in RStudio: open this file and press Source, or in the console:
-#   source("code/00_setup.R")
+# Step 0: install the R packages for the course.
 #
 # First time with R: just run it. Already have R projects whose package versions
 # you want to keep: talk to us first, we set you up with renv instead.
 #
 # Packages come from a dated snapshot of the Posit Package Manager, so everyone
 # gets the same versions, as ready-built binaries for Windows, macOS and Linux
-# (nothing is compiled on your laptop). Change the date only between course years.
+# Change the date only between course years.
 
 snapshot <- "2026-10-01"
 
@@ -5666,8 +5690,6 @@ print(sapply(packages, function(p) as.character(packageVersion(p))))
 ```r
 # ELISA: standard curve and back-calculation of the samples.
 #
-# Open in RStudio and press Source. Paths are built with here() from the repository
-# folder.
 #
 # Input: one row per well with the columns
 #   well, type ("standard" or "sample"), condition, standard_pg_ml (standards only),
@@ -5684,7 +5706,7 @@ library(patchwork)
 library(here)
 
 # input
-# replace csv file name with your data
+# replace csv file name with your data (path)
 input <- here("code", "elisa", "example_data", "il6_lps_raw264_2026-09.csv")
 
 # output
@@ -5693,7 +5715,9 @@ dir.create(outdir, showWarnings = FALSE)
 
 plate <- read.csv(input)
 
-# 1. Blank: mean OD of the 0 pg/mL standard wells, subtracted from every well.
+# 1. Blank: mean OD of the 0 pg/mL standard wells is subtracted from every well.
+# change if you have other/additional blanks
+
 blank <- mean(plate$od450[plate$type == "standard" & plate$standard_pg_ml == 0])
 plate$od_corr <- plate$od450 - blank
 std <- plate[plate$type == "standard", ]
@@ -5718,8 +5742,7 @@ od_to_conc <- function(od) {
 }
 
 # Questions:
-# - How do you check that the curve fits the standards well? (R² is not a good
-#   measure for a non-linear fit.)
+# - How do you check that the curve fits the standards well?
 # - How would you compare two models to decide which one fits better?
 # - Can you think of another approach than a 4PL model? (Hint: log-log.)
 
@@ -5734,6 +5757,11 @@ samp$in_range <- samp$od_corr >= min(std$od_corr[std$standard_pg_ml == lowest_st
                  samp$od_corr <= max(std$od_corr[std$standard_pg_ml == top_std])
 samp$condition <- factor(samp$condition, levels = unique(samp$condition))
 write.csv(samp, file.path(outdir, "elisa_results.csv"), row.names = FALSE)
+
+
+
+# Do you know what this sign does: |> (ceci n'est vraiment plus une pipe).
+# in older code and many tutorials you will see %>% from magrittr, which does the same here
 
 summ <- samp |>
   group_by(condition) |>

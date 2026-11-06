@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" font-family="Arial, Helvetica, sans-serif">
+<rect x="0" y="0" width="1200" height="560" fill="#ffffff"/>
+<g stroke="#000" stroke-width="3" fill="none">
+  <line x1="60" y1="460" x2="1100" y2="460"/>
+  <path d="M 170 460 C 200 420, 220 140, 260 140 L 880 140 C 930 140, 970 420, 990 460"/>
+  <path d="M 170 460 C 200 420, 220 215, 260 215 L 880 215 C 930 215, 970 420, 990 460"/>
+  <path d="M 170 460 C 200 420, 220 290, 260 290 L 880 290 C 930 290, 970 420, 990 460"/>
+  <path d="M 170 460 C 200 420, 220 365, 260 365 L 880 365 C 930 365, 970 420, 990 460"/>
+</g>
+<g stroke="#000" stroke-width="3" fill="#fff">
+  <circle cx="60" cy="460" r="15"/>
+  <circle cx="170" cy="460" r="15"/>
+  <circle cx="1100" cy="460" r="15"/>
+  <circle cx="300" cy="140" r="13"/>
+  <circle cx="440" cy="140" r="13"/>
+  <circle cx="580" cy="140" r="13"/>
+  <circle cx="720" cy="140" r="13"/>
+  <circle cx="320" cy="215" r="13"/>
+  <circle cx="470" cy="215" r="13"/>
+  <circle cx="610" cy="215" r="13"/>
+  <circle cx="760" cy="215" r="13"/>
+  <circle cx="290" cy="290" r="13"/>
+  <circle cx="420" cy="290" r="13"/>
+  <circle cx="560" cy="290" r="13"/>
+  <circle cx="700" cy="290" r="13"/>
+  <circle cx="330" cy="365" r="13"/>
+  <circle cx="480" cy="365" r="13"/>
+  <circle cx="640" cy="365" r="13"/>
+  <circle cx="780" cy="365" r="13"/>
+</g>
+<circle cx="860" cy="140" r="15" fill="#000"/>
+<circle cx="860" cy="215" r="15" fill="#000"/>
+<circle cx="860" cy="290" r="15" fill="#000"/>
+<circle cx="860" cy="365" r="15" fill="#000"/>
+<circle cx="990" cy="460" r="22" fill="#000"/>
+<g font-family="DejaVu Sans Mono, Consolas, monospace" font-size="14" font-weight="bold" fill="#000">
+  <text x="180" y="145" text-anchor="end">2027/group-a</text>
+  <text x="180" y="220" text-anchor="end">2027/group-b</text>
+  <text x="180" y="295" text-anchor="end">2027/group-c</text>
+  <text x="180" y="370" text-anchor="end">2027/group-d</text>
+</g>
+<g font-size="14" fill="#1A1A1A" text-anchor="middle">
+  <text x="300" y="116">hello world</text>
+  <text x="440" y="116">plan</text>
+  <text x="580" y="116">FACS data</text>
+  <text x="720" y="116">ELISA curve</text>
+  <text x="860" y="116" font-weight="bold">poster</text>
+</g>
+<g font-family="DejaVu Sans Mono, Consolas, monospace" font-size="17" font-weight="bold" text-anchor="middle">
+  <rect x="1060" y="398" width="80" height="32" rx="6" fill="#fff" stroke="#000" stroke-width="2"/>
+  <text x="1100" y="420">main</text>
+</g>
+<g font-size="15" fill="#1A1A1A" text-anchor="middle">
+  <text x="60" y="432" fill="#666">course 2027</text>
+  <text x="170" y="500">day 1: each group</text>
+  <text x="170" y="519">branches off</text>
+  <text x="990" y="504" font-size="18" font-weight="bold" fill="#000">course 2028</text>
+  <text x="990" y="524">all groups merge, after review</text>
+</g>
+<text x="40" y="44" font-size="24" font-weight="bold" fill="#000">Each group works on its own branch; together they become the next course</text>
+<text x="40" y="74" font-size="17" fill="#666">Every push is a snapshot your supervisors can read. At the end, the groups merge into main: the course for 2028.</text>
+</svg>

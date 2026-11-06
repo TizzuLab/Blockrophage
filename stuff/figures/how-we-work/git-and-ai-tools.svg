@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" font-family="Arial, Helvetica, sans-serif">
+<rect x="0" y="0" width="1200" height="560" fill="#ffffff"/>
+<text x="40" y="48" font-size="24" font-weight="bold" fill="#000">Many AI tools, one shared layer</text>
+<text x="40" y="78" font-size="17" fill="#666">Use the AI tool that suits you; we explore them together. Whatever it writes lands in git, where people review it.</text>
+
+<!-- row 1: AI tools in many forms -->
+<g stroke="#000" stroke-width="2.5" fill="#fff">
+  <rect x="40" y="110" width="250" height="150" rx="10"/>
+  <rect x="330" y="110" width="250" height="150" rx="10"/>
+  <rect x="620" y="110" width="250" height="150" rx="10"/>
+  <rect x="910" y="110" width="250" height="150" rx="10" stroke-dasharray="9 7"/>
+</g>
+<!-- icon: chat bubbles -->
+<g stroke="#000" stroke-width="2.5" fill="#fff">
+  <rect x="105" y="130" width="90" height="40" rx="14"/>
+  <rect x="140" y="178" width="80" height="34" rx="12"/>
+</g>
+<!-- icon: editor window -->
+<g stroke="#000" stroke-width="2.5" fill="#fff">
+  <rect x="395" y="128" width="120" height="86" rx="6"/>
+  <line x1="395" y1="146" x2="515" y2="146"/>
+  <line x1="440" y1="146" x2="440" y2="214"/>
+</g>
+<g stroke="#000" stroke-width="2.5">
+  <line x1="452" y1="164" x2="500" y2="164"/>
+  <line x1="452" y1="180" x2="490" y2="180"/>
+  <line x1="452" y1="196" x2="505" y2="196"/>
+</g>
+<!-- icon: terminal -->
+<rect x="680" y="128" width="130" height="86" rx="6" fill="#000"/>
+<text x="694" y="160" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="15" fill="#fff">$ plot</text>
+<text x="694" y="182" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="15" fill="#fff">  figure 2</text>
+<!-- icon: question -->
+<text x="1035" y="200" font-size="64" font-weight="bold" fill="#000" text-anchor="middle">?</text>
+<!-- tool captions -->
+<g font-size="16" fill="#1A1A1A" text-anchor="middle">
+  <text x="165" y="240">chat in the browser</text>
+  <text x="455" y="240">assistant in your editor</text>
+  <text x="745" y="240">agent in your repo</text>
+  <text x="1035" y="240">the one you find</text>
+</g>
+
+<!-- arrows down into the git layer -->
+<g stroke="#000" stroke-width="2.5">
+  <line x1="165" y1="268" x2="165" y2="318"/>
+  <line x1="455" y1="268" x2="455" y2="318"/>
+  <line x1="745" y1="268" x2="745" y2="318"/>
+  <line x1="1035" y1="268" x2="1035" y2="318" stroke-dasharray="6 5"/>
+</g>
+<g fill="#000">
+  <polygon points="165,328 157,314 173,314"/>
+  <polygon points="455,328 447,314 463,314"/>
+  <polygon points="745,328 737,314 753,314"/>
+  <polygon points="1035,328 1027,314 1043,314"/>
+</g>
+
+<!-- git layer -->
+<rect x="40" y="332" width="1120" height="110" rx="12" fill="#F2F2F2" stroke="#000" stroke-width="3"/>
+<text x="70" y="372" font-family="DejaVu Sans Mono, Consolas, monospace" font-size="28" font-weight="bold" fill="#000">git</text>
+<text x="70" y="400" font-size="15" fill="#1A1A1A">shared review and</text>
+<text x="70" y="419" font-size="15" fill="#1A1A1A">version control</text>
+<g stroke="#000" stroke-width="3">
+  <line x1="260" y1="387" x2="1110" y2="387"/>
+</g>
+<g stroke="#000" stroke-width="3" fill="#fff">
+  <circle cx="260" cy="387" r="13"/>
+  <circle cx="400" cy="387" r="13"/>
+  <circle cx="540" cy="387" r="13"/>
+  <circle cx="680" cy="387" r="13"/>
+  <circle cx="820" cy="387" r="13"/>
+  <circle cx="960" cy="387" r="13"/>
+</g>
+<circle cx="1100" cy="387" r="15" fill="#000"/>
+<text x="680" y="428" font-size="15" fill="#666" text-anchor="middle">every change is a commit: who, when, what, why</text>
+
+<!-- people review -->
+<g stroke="#000" stroke-width="2.5" fill="#fff">
+  <circle cx="470" cy="478" r="12"/>
+  <path d="M 450 520 A 20 20 0 0 1 490 520 Z"/>
+  <circle cx="530" cy="478" r="12"/>
+  <path d="M 510 520 A 20 20 0 0 1 550 520 Z"/>
+  <circle cx="575" cy="498" r="11"/>
+</g>
+<line x1="583" y1="506" x2="595" y2="518" stroke="#000" stroke-width="4"/>
+<g stroke="#000" stroke-width="2.5">
+  <line x1="500" y1="462" x2="500" y2="450"/>
+</g>
+<polygon points="500,444 493,456 507,456" fill="#000"/>
+<text x="620" y="497" font-size="17" font-weight="bold" fill="#000">You and your supervisors read every change.</text>
+<text x="620" y="520" font-size="15" fill="#666">Same review, whether a person or a tool wrote it.</text>
+</svg>
