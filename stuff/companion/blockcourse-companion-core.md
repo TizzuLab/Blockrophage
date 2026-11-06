@@ -280,7 +280,7 @@ into `main`, and that becomes the course for 2028.
 ![Each group works on its own branch; together they become the next course](stuff/figures/how-we-work/branches.svg)
 
 **AI tools and git.** AI tools come in many forms: a chat in the browser, an
-assistant inside RStudio, an agent that works directly in your copy of the
+assistant in your editor (RStudio, Positron, VS Code), an agent that works directly in your copy of the
 repository, and new ones every few months. Which one you use is open; we explore
 them together during the course. What stays fixed is the layer underneath: git is
 our shared review and version control. Whatever you or your AI tool write lands
