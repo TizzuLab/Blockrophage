@@ -294,10 +294,10 @@ After this course, students will be able to:
 **Git and group branches.** This repository **is** the course, and each group works in
 its own branch of it, named by year and group (for example `2027/group-a`). Your
 notebooks, data, analysis and poster are commits on that branch; your supervisors
-read along with every push. A fix to the course itself goes back to `main` by pull
-request, after review.
+read along with every push. At the end, after review, all group branches merge back
+into `main`, and that becomes the course for 2028.
 
-![Each group works on its own branch of the course](stuff/figures/how-we-work/branches.svg)
+![Each group works on its own branch; together they become the next course](stuff/figures/how-we-work/branches.svg)
 
 **AI tools and git.** AI tools come in many forms: a chat in the browser, an
 assistant inside RStudio, an agent that works directly in your copy of the
