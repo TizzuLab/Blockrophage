@@ -27,14 +27,25 @@ THIS IS A TEST
 
 ## What you need for this course
 
-1. **A laptop**, any operating system, and **a GitHub account**, created at
-   [github.com](https://github.com) before the first day; the username is sent to
-   us. You will work in a public repository, where your edits and your name are
-   visible to anyone, which is worth keeping in mind when the account is created.
-2. **The admission sheet**, please read before the first day and signed after the
-   briefing on the first morning ([safety and data](safety/README.md)). It holds the
+Bring a laptop (any operating system) and, if you can, do these four steps at home
+before the first day:
+
+1. **Install Git:** [git-scm.com/downloads](https://git-scm.com/downloads).
+2. **Install R, then RStudio:** R from [cran.r-project.org](https://cran.r-project.org),
+   RStudio Desktop from [posit.co](https://posit.co/download/rstudio-desktop/).
+3. **Create a GitHub account** at [github.com/signup](https://github.com/signup) and
+   send us the username. You will work in a public repository, where your edits and
+   your name are visible to anyone; keep that in mind when you choose the name.
+4. **Read the admission sheet** ([safety and data](safety/README.md)). It holds the
    safety rules and the data terms: what you produce belongs to the lab and may be
-   published open access. The signed sheet is your admission to the bench.
+   published open access. You sign it after the briefing on the first morning; the
+   signed sheet is your admission to the bench.
+
+**Stuck?** Paste the companion prompt below into your AI tool and ask it to talk you
+through the step. Still stuck? No problem: on Friday afternoon of week 1 the
+supervisors set up git and RStudio with everyone, step by step, from scratch.
+Coming prepared buys you time, and with git and an AI tool you can go quite far in
+this course.
 > [!TIP]
 > **Your AI companion for the course.** Copy this prompt to your AI tool.
 >
@@ -2663,7 +2674,22 @@ After this course, students will be able to:
 ## 3. How the course works
 
 **Git and group branches.** This repository **is** the course, and each group works in
-its own branch of it, named by year and group (for example `2027/group-a`). 
+its own branch of it, named by year and group (for example `2027/group-a`). Your
+notebooks, data, analysis and poster are commits on that branch; your supervisors
+read along with every push. A fix to the course itself goes back to `main` by pull
+request, after review.
+
+![Each group works on its own branch of the course](stuff/figures/how-we-work/branches.svg)
+
+**AI tools and git.** AI tools come in many forms: a chat in the browser, an
+assistant inside RStudio, an agent that works directly in your copy of the
+repository, and new ones every few months. Which one you use is open; we explore
+them together during the course. What stays fixed is the layer underneath: git is
+our shared review and version control. Whatever you or your AI tool write lands
+there as a commit, and people read it, the same way whether a person or a tool
+wrote it.
+
+![Many AI tools, one shared layer: git](stuff/figures/how-we-work/git-and-ai-tools.svg)
 
 **Groups and supervisors.** On day 1 we build 3-4 groups of 2-3 students with 1-2 supervisors 
 from the lab.

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" width="1200" height="500" font-family="Arial, Helvetica, sans-serif">
+<rect x="0" y="0" width="1200" height="500" fill="#ffffff"/>
+<g stroke="#000" stroke-width="3" fill="none">
+  <!-- main -->
+  <line x1="70" y1="400" x2="1040" y2="400"/>
+  <!-- group-a: branch off, commits -->
+  <path d="M 190 400 C 220 300, 230 150, 280 150 L 900 150"/>
+  <!-- group-b: branch off -->
+  <path d="M 190 400 C 220 330, 240 275, 280 275 L 900 275"/>
+  <!-- pull request back to main (dashed) -->
+  <path d="M 700 275 C 760 280, 800 330, 836 388" stroke-dasharray="10 8"/>
+</g>
+<polygon points="840,395 826,378 846,377" fill="#000"/>
+<!-- commits on main -->
+<g stroke="#000" stroke-width="3" fill="#fff">
+  <circle cx="70" cy="400" r="15"/>
+  <circle cx="190" cy="400" r="15"/>
+  <circle cx="420" cy="400" r="15"/>
+  <circle cx="620" cy="400" r="15"/>
+  <circle cx="1040" cy="400" r="15"/>
+</g>
+<circle cx="845" cy="400" r="17" fill="#000"/>
+<!-- commits on group-a -->
+<g stroke="#000" stroke-width="3" fill="#fff">
+  <circle cx="280" cy="150" r="15"/>
+  <circle cx="400" cy="150" r="15"/>
+  <circle cx="520" cy="150" r="15"/>
+  <circle cx="660" cy="150" r="15"/>
+  <circle cx="780" cy="150" r="15"/>
+</g>
+<circle cx="900" cy="150" r="17" fill="#000"/>
+<!-- commits on group-b -->
+<g stroke="#000" stroke-width="3" fill="#fff">
+  <circle cx="280" cy="275" r="15"/>
+  <circle cx="420" cy="275" r="15"/>
+  <circle cx="560" cy="275" r="15"/>
+  <circle cx="700" cy="275" r="15"/>
+  <circle cx="820" cy="275" r="15"/>
+</g>
+<circle cx="900" cy="275" r="17" fill="#000"/>
+<!-- branch labels -->
+<g font-family="DejaVu Sans Mono, Consolas, monospace" font-size="17" font-weight="bold" text-anchor="middle">
+  <rect x="940" y="133" width="170" height="34" rx="6" fill="#fff" stroke="#000" stroke-width="2"/>
+  <text x="1025" y="156">2027/group-a</text>
+  <rect x="940" y="258" width="170" height="34" rx="6" fill="#fff" stroke="#000" stroke-width="2"/>
+  <text x="1025" y="281">2027/group-b</text>
+  <rect x="1075" y="383" width="80" height="34" rx="6" fill="#fff" stroke="#000" stroke-width="2"/>
+  <text x="1115" y="406">main</text>
+  <text x="1115" y="440" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="normal" fill="#666">the course</text>
+</g>
+<!-- commit labels, group-a -->
+<g font-size="15" fill="#1A1A1A" text-anchor="middle">
+  <text x="280" y="122">hello world</text>
+  <text x="400" y="122">plan</text>
+  <text x="520" y="122">FACS data</text>
+  <text x="660" y="122">ELISA curve</text>
+  <text x="780" y="122">notebook</text>
+  <text x="900" y="122" font-weight="bold">poster</text>
+</g>
+<text x="1025" y="320" font-size="15" fill="#666" text-anchor="middle">… group-c, group-d</text>
+<!-- main labels -->
+<g font-size="15" fill="#1A1A1A" text-anchor="middle">
+  <text x="190" y="440">day 1: each group</text>
+  <text x="190" y="459">branches off</text>
+  <text x="845" y="440">a fix to the course,</text>
+  <text x="845" y="459">reviewed</text>
+</g>
+<text x="805" y="325" font-size="15" fill="#1A1A1A" text-anchor="start" font-style="italic">pull request</text>
+<!-- title lines -->
+<text x="40" y="48" font-size="24" font-weight="bold" fill="#000">Each group works on its own branch of the course</text>
+<text x="40" y="78" font-size="17" fill="#666">Every push is a snapshot your supervisors can read. Poster and history together are the group grade.</text>
+</svg>
