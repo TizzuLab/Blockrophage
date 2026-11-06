@@ -35,7 +35,7 @@
 <!-- tool captions -->
 <g font-size="16" fill="#1A1A1A" text-anchor="middle">
   <text x="165" y="240">chat in the browser</text>
-  <text x="455" y="240">assistant in RStudio</text>
+  <text x="455" y="240">assistant in your editor</text>
   <text x="745" y="240">agent in your repo</text>
   <text x="1035" y="240">the one you find</text>
 </g>
