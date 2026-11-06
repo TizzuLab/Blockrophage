@@ -55,8 +55,8 @@
   <text x="170" y="500">day 1: each group</text>
   <text x="170" y="519">branches off</text>
   <text x="990" y="504" font-size="18" font-weight="bold" fill="#000">course 2028</text>
-  <text x="990" y="524">all groups merge, after review</text>
+  <text x="990" y="524">the best of each group merges</text>
 </g>
 <text x="40" y="44" font-size="24" font-weight="bold" fill="#000">Each group works on its own branch; together they become the next course</text>
-<text x="40" y="74" font-size="17" fill="#666">Every push is a snapshot your supervisors can read. At the end, the groups merge into main: the course for 2028.</text>
+<text x="40" y="74" font-size="17" fill="#666">Every push is a snapshot your supervisors can read. At the end, the best of each group merges into main: the course for 2028.</text>
 </svg>
