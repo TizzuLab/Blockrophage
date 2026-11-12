@@ -16,7 +16,7 @@ A tidy CSV with one row per well. Columns: `well`, `type` (`standard` or
 `sample`), `condition`, `standard_pg_ml` (standards; the 0 pg/mL rows are the
 blank), `lps_ng_ml` (optional), `replicate`, `od450`, `dilution_factor`.
 
-`example_data/il6_lps_raw264_2026-09.csv`: RAW 264.7, 2 × 10^4 cells per 96-well,
+`example_data/il6_lps_raw264_2026-09.csv`: RAW 264.7 (the line the course was first planned with), 2 × 10^4 cells per 96-well,
 LPS 0, 0.1, 1, 10, 100 ng/mL for 16 h in triplicate, mouse IL-6 ELISA (Invitrogen
 uncoated kit), standard 500 to 7.8 pg/mL in duplicate, read at 450 nm without
 reference filter on a Promega GloMax Discover, Zindel lab, September 2026. The

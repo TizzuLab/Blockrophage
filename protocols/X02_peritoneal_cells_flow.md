@@ -14,13 +14,13 @@
 | Hands-on time | 30 min receiving, counting and lysis, then staining as C3 |
 | Wall-clock time | half a day, coordinated with a cytometer slot |
 | Resources | ice, cooled centrifuge, counter, cytometer slot |
-| Depends on | C3 panel and a reserved cytometer slot; polarized RAW cells ready on the same day; a surplus peritoneal cell suspension provided by staff |
+| Depends on | C3 panel and a reserved cytometer slot; polarized J774A.1 cells ready on the same day; a surplus peritoneal cell suspension provided by staff |
 | Lab SOP | Zindel lab "Flow cytometry" (v1.2) and "Flow cytometry antibody titration" for the staining; the SOP wins over this page. |
 
 ## Purpose
 
 Run resident tissue macrophages, obtained without digestion, on the shared panel in
-the same session as the polarized RAW cells. The first result, before any
+the same session as the polarized J774A.1 cells. The first result, before any
 activation marker, is that no in vitro cell falls into the large-peritoneal-
 macrophage gate.
 
@@ -36,7 +36,7 @@ macrophage gate.
 ## Before you start
 
 - Confirm with your supervisor that a surplus suspension is available on a day
-  with a cytometer slot, and that your polarized RAW cells are ready the same day.
+  with a cytometer slot, and that your polarized J774A.1 cells are ready the same day.
 - C3 staining plan extended with the peritoneal samples, CD19 and Ly6C.
 - Record what the staff tell you about the sample: source of the material, date,
   volume, any treatment it carries over from the experiment it came from.
@@ -54,17 +54,17 @@ macrophage gate.
 3. Resuspend in FACS buffer and count. Expect large peritoneal macrophages to be
    roughly a third of the cells in a healthy sample.
 4. Stain with the course panel (C3), including CD19 and Ly6C, and acquire in the
-   same session as the polarized RAW cells.
+   same session as the polarized J774A.1 cells.
 5. Gate: CD19 out, then F4/80 against MHCII for large (F4/80 high, MHCII low) and
    small (F4/80 low, MHCII high) peritoneal macrophages; ICAM2 and Gata6 confirm the
-   resident identity. Overlay the polarized RAW cells on the same gates.
+   resident identity. Overlay the polarized J774A.1 cells on the same gates.
 
 ## Controls
 
 - CD19 gate removes B cells; F4/80 against MHCII separates large and small
   peritoneal macrophages; ICAM2 and Gata6 confirm resident identity.
 - Same single-stain and fluorescence-minus-one controls as C3; the peritoneal
-  sample and the RAW cells share the compensation.
+  sample and the J774A.1 cells share the compensation.
 
 ## Checkpoints
 
@@ -82,4 +82,4 @@ macrophage gate.
 ## Output
 
 Cell counts, sample metadata as provided by staff, FCS files, and the gated
-statistics side by side with the RAW samples.
+statistics side by side with the J774A.1 samples.

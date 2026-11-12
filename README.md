@@ -2780,15 +2780,16 @@ signals. The dry-lab experiment runs alongside the bench work from week 2 to wee
 A menu of extensions closes this section.
 
 **Experiment 1: Polarization** (wet lab, week 2) Primary macrophages do not divide
-in a dish and die within days, so the field works with a model. RAW 264.7 is a line
-established in 1978 from a tumour induced in a BALB/c mouse by Abelson leukaemia
-virus: it divides without growth factor, adheres, responds strongly to LPS and IFNγ,
-and has been in culture for almost fifty years. What that does and does not make it
+in a dish and die within days, so the field works with a model. J774A.1 is a line
+isolated in 1968 from a sarcoma of a BALB/c mouse: it divides without growth factor,
+adheres, phagocytoses, responds to LPS and IFNγ, and has been in culture for more
+than fifty years. A group may run the core on bone marrow-derived macrophages (BMDM)
+instead, primary cells from surplus mice that need a week in CSF1 before week 2. What that does and does not make it
 is in the [background](background/README.md#52-level-i-ontogeny). On the Friday of
 week 1 your group thaws its own stock flask from a provided vial, and that flask
 carries the whole course: the staff look after it over the weekend and the Easter
 break, and after the break passaging it is your background task
-([C1](protocols/C1_raw264_culture.md); staff: [S01](protocols/S01_raw264_freeze.md)). The textbook states were defined by what is
+([C1](protocols/C1_j774_culture.md); staff: [S01](protocols/S01_j774_freeze.md)). The textbook states were defined by what is
 added: IFNγ, IL-4, or IFNγ with LPS, named M(IFNγ), M(IL-4) and M(IFNγ+LPS) after
 the stimulus since the 2014 nomenclature
 ([background](background/README.md#54-level-iii-function-and-activation-state)).
@@ -2897,12 +2898,13 @@ non-exhaustive.
 | Macrophages in your field ([extensions](code/scrnaseq/README.md#potential-extensions)) | A published single-cell dataset of an organ or disease of your choice through the same workflow; its macrophages, their M1/M2 scores and a signature from that field |
 | Unpredicted figure, dataset or code | A figure or table not in the answer key, with claim, n and method |
 | qPCR (X01) | ΔΔCt of outputs and the receptor of your pathway across states, with housekeepers named |
-| Primary peritoneal cells on the shared panel (X02) | Primary cells and polarized RAW cells in one gating figure; frequency of LPM and SPM with n samples |
+| Primary peritoneal cells on the shared panel (X02) | Primary cells and polarized J774A.1 cells in one gating figure; frequency of LPM and SPM with n samples |
 | F4/80 immunohistochemistry (X03) | Image with scale bar, controls named, tissue and expected F4/80 level stated |
-| Ex vivo LPS on primary peritoneal cells versus RAW | IL-6 bar plot with unstimulated controls for both cell types; n wells and samples |
+| Ex vivo LPS on primary peritoneal cells versus J774A.1 | IL-6 bar plot with unstimulated controls for both cell types; n wells and samples |
 | Endotoxin tolerance | IL-6 or TNF after re-challenge, M(IFNγ+LPS) versus M(IFNγ), with statistics |
 | Tissue digestion flow | Gating figure and frequency of F4/80+ cells in the tissue, with n |
-| BMDM versus RAW | One figure comparing the two in at least two polarization states |
+| BMDM versus J774A.1 | One figure comparing the two in at least two polarization states |
+| RAW 264.7 versus J774A.1 (level 2 laboratory, at most two groups) | The two classic lines side by side in at least two polarization states; RAW 264.7 releases infectious murine leukaemia virus and lacks ASC, so the group also says on the poster what that means for the data |
 | Phagocytosis or efferocytosis | Percentage of uptake-positive cells per state, with n |
 | Double immunofluorescence | Two-channel image with scale bar; markers named |
 | Atlas contribution | List of accepted atlas entry IDs with a QR code `[TODO: atlas platform]` |

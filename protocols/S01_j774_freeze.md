@@ -1,4 +1,4 @@
-# S01 RAW 264.7: backup vials and the stock over the break (staff page)
+# S01 J774A.1: backup vials and the stock over the break (staff page)
 
 > **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/Blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
@@ -10,7 +10,7 @@
 | Wall-clock time | overnight at −80 °C, then −140 °C |
 | Resources | hood, centrifuge, slow-cooling box (Mr. Frosty), −80 °C freezer, −140 °C freezer slot |
 | Depends on | the group's stock flask (C1) at 60 to 80% confluence |
-| Lab SOP | Zindel lab 0203 "RAW 264.7 – adherent cells" (v1.0, 2025-12-01), freezing section. The SOP wins over this page. |
+| Lab SOP | Zindel lab 0203 "RAW 264.7 – adherent cells" (v1.0, 2025-12-01), freezing section; written for RAW 264.7 and applied to J774A.1 until the lab SOP is updated `[TODO: J774A.1 SOP]`. The SOP wins over this page. |
 
 ## Purpose
 
@@ -71,7 +71,7 @@ Materials
 
 - Vials warm up during dispensing: DMSO toxicity, low viability on re-thaw. Keep
   the FCS cold and the box ready before step 5.
-- Flask overgrown over a long weekend: split before, not after; RAW cells change
+- Flask overgrown over a long weekend: split before, not after; the cells change
   behaviour when overgrown.
 
 ## Output

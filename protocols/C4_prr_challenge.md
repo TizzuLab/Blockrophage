@@ -10,7 +10,7 @@
 | Wall-clock time | overnight, about 16 h (default, IL-6 readout) or 6 h (alternative, TNF readout) |
 | Resources | hood, incubator shelf, plate centrifuge, −20 °C and −80 °C freezers |
 | Depends on | the 96-well plate seeded with the polarizer on Tuesday (C1, C2); ELISA plates coated on Wednesday afternoon (C5) |
-| Lab SOP | Zindel lab "RAW 264.7 polarisation" (v1.0, 2025-12-08), stimulation and harvesting sections. The SOP wins over this page. |
+| Lab SOP | Zindel lab "RAW 264.7 polarisation" (v1.0, 2025-12-08), stimulation and harvesting sections; written for RAW 264.7 and applied to J774A.1 until the lab SOP is updated `[TODO: J774A.1 SOP]`. The SOP wins over this page. |
 
 ## Purpose
 
@@ -25,7 +25,8 @@ a slot in the facility's regular booking calendar.
 ## The menu
 
 PAMPs. All of these are known to work in RAW 264.7, which expresses TLR2, TLR3,
-TLR4, TLR7, TLR9 and Dectin-1.
+TLR4, TLR7, TLR9 and Dectin-1; on J774A.1 they are tested before the course
+`[TODO: confirm each PAMP on J774A.1]`.
 
 | Stimulus | Receptor | Working concentration | Note |
 |---|---|---|---|
@@ -37,7 +38,7 @@ TLR4, TLR7, TLR9 and Dectin-1.
 | Zymosan, depleted | Dectin-1 | 10 µg/mL | particulate; TNF and IL-6 moderate |
 | Heat-killed bacteria (HKLM or HKEB) | TLR2 and others | 10^8 cells/mL | the whole-pathogen contrast; cheap and robust |
 
-Not on the menu: flagellin, because RAW 264.7 cells express little TLR5, and MDP
+Not on the menu: flagellin, because macrophage lines such as RAW 264.7 express little TLR5, and MDP
 alone, because NOD2 needs a TLR signal beside it.
 
 DAMPs. The honest situation: most DAMPs speak through IL-1β, which needs priming and
@@ -46,7 +47,7 @@ option is in the core, the rest only with qPCR.
 
 | Stimulus | Receptor | Working concentration | Note |
 |---|---|---|---|
-| Necrotic lysate of your own RAW cells | TLR2, TLR4, RAGE and others | lysate of 10^6 cells/mL, three freeze-thaw cycles, cleared, 1:10 | the only DAMP whose signal needs no priming and carries no reagent risk; expect a small IL-6 and TNF signal; test it with polymyxin B |
+| Necrotic lysate of your own J774A.1 cells | TLR2, TLR4, RAGE and others | lysate of 10^6 cells/mL, three freeze-thaw cycles, cleared, 1:10 | the only DAMP whose signal needs no priming and carries no reagent risk; expect a small IL-6 and TNF signal; test it with polymyxin B |
 | HMGB1, disulfide form, endotoxin-free | TLR4, RAGE | 1 µg/mL | extension with X01 only; small signal, redox-form dependent |
 | ATP, MSU crystals, nigericin | P2X7, NLRP3 | 1 to 5 mM; 100 µg/mL; 10 µM | extension with X01 only; need LPS priming and read IL-1β |
 

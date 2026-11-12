@@ -22,9 +22,9 @@ polarization, phenotype, challenge, readout. X-files are optional extensions
 
 | ID | Title | Used in | Hands-on time | Wall-clock time | Resources |
 |---|---|---|---|---|---|
-| [C1](C1_raw264_culture.md) | RAW 264.7 culture: thaw, split, seed | week 1 Friday (thaw the stock flask); Exp 1 and 3 plating; passaging | 45 min for the thaw, 45 min per split or seeding | the flask lives the whole course; a seeded plate is used the next morning | hood, incubator, centrifuge, counter, microscope |
+| [C1](C1_j774_culture.md) | J774A.1 culture: thaw, split, seed | week 1 Friday (thaw the stock flask); Exp 1 and 3 plating; passaging | 45 min for the thaw, 45 min per split or seeding | the flask lives the whole course; a seeded plate is used the next morning | hood, incubator, centrifuge, counter, microscope |
 | [C2](C2_polarization.md) | Polarization: the menu | Exp 1, Exp 3 | 30 min, at seeding | about 19 h, Tue to Wed | hood, incubator, vortex |
-| [C3](C3_flow_cytometry.md) | Flow cytometry of polarized RAW cells | Exp 1 (week 2), X02 | 2 h stain + 1 h acquisition | half day | hood, cooled plate centrifuge, heating block, cytometer slot, FlowJo seat |
+| [C3](C3_flow_cytometry.md) | Flow cytometry of polarized J774A.1 cells | Exp 1 (week 2), X02 | 2 h stain + 1 h acquisition | half day | hood, cooled plate centrifuge, heating block, cytometer slot, FlowJo seat |
 | [C4](C4_prr_challenge.md) | Danger-signal challenge: PAMPs, DAMPs, inhibitors | Exp 3 (week 3 Wed) | 45 min + 45 min harvest | 16 h overnight (default) or 6 h | hood, incubator, plate centrifuge, −20 °C, −80 °C |
 | [C5](C5_elisa.md) | ELISA IL-6 (default) or TNF | Exp 3 (week 3 Thu) | 3–4 h + coating the day before | 2 days | plate reader (450 nm), multichannel pipette |
 
@@ -42,7 +42,7 @@ polarization, phenotype, challenge, readout. X-files are optional extensions
 
 | ID | Title | Used in | Hands-on time | Wall-clock time | Resources |
 |---|---|---|---|---|---|
-| [S01](S01_raw264_freeze.md) | RAW 264.7: backup vials and the stock over the break | Thu of week 2, Easter break | 45 min + 20 min per split | overnight at −80 °C, then −140 °C | hood, centrifuge, freezing container, −80 °C, −140 °C |
+| [S01](S01_j774_freeze.md) | J774A.1: backup vials and the stock over the break | Thu of week 2, Easter break | 45 min + 20 min per split | overnight at −80 °C, then −140 °C | hood, centrifuge, freezing container, −80 °C, −140 °C |
 
 ## Dependencies in time
 

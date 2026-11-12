@@ -66,6 +66,6 @@ aggregate(cells@meta.data[scores], list(cluster = cells$seurat_clusters), median
 #   cluster at all (look back at 02)? Which genes of the classic list make that happen?
 # - Classic markers versus consensus: why does the picture change? What does a list
 #   of 7 genes measure that a list of 30 does not, and the other way round?
-# - At the bench your RAW 264.7 cells were polarized with IFNγ or IL-4. Do the
+# - At the bench your J774A.1 cells were polarized with IFNγ or IL-4. Do the
 #   tissue macrophages look like either of them? Where would they need to be?
 # - You split subpopulations into two poles. Does that fit what you found in 03?

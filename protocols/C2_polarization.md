@@ -1,4 +1,4 @@
-# C2 Polarization of RAW 264.7: the menu
+# C2 Polarization of J774A.1: the menu
 
 > **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/Blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
@@ -10,7 +10,7 @@
 | Wall-clock time | about 19 h, Tuesday 14:00 to Wednesday 09:00, in both weeks |
 | Resources | hood, incubator shelf, vortex |
 | Depends on | the group's stock flask (C1) at 60 to 80% confluence, counted |
-| Lab SOP | Zindel lab "RAW 264.7 polarisation" (v1.0, 2025-12-08): 96-well format, 100× stimulus stocks, master mixes. The SOP wins over this page. |
+| Lab SOP | Zindel lab "RAW 264.7 polarisation" (v1.0, 2025-12-08): 96-well format, 100× stimulus stocks, master mixes; written for RAW 264.7 and applied to J774A.1 until the lab SOP is updated `[TODO: J774A.1 SOP]`. The SOP wins over this page. |
 
 ## Purpose
 
@@ -25,14 +25,17 @@ problem.
 
 ## The menu
 
-| Polarizer | Working concentration | What it does in RAW 264.7 | Safe readout | Risk |
+| Polarizer | Working concentration | What it does (mostly shown in RAW 264.7) | Safe readout | Risk |
 |---|---|---|---|---|
 | IFNγ | 20 ng/mL | MHC-II and CD86 up, iNOS primed, TNF and IL-6 amplified with LPS. This is M(IFNγ) | flow (MHC-II, CD86) and ELISA | low |
 | IL-10 | 20 ng/mL | TNF and IL-6 suppressed through STAT3 and SOCS3 | ELISA (suppression, week 3) | low; nothing to see by flow, by design |
 | Dexamethasone | 100 nM | TNF, IL-6 and NO suppressed through the glucocorticoid receptor; the drug every patient on steroids gets | ELISA (suppression, week 3) | low; cheap and stable; needs a vehicle control |
 | IL-4 | 20 ng/mL | Arg1, Chil3, Retnla and Mrc1 mRNA up, LPS response dampened. This is M(IL-4) | qPCR Arg1 (X01); ELISA (suppression) | medium: CD206 by flow is weak in this line; intracellular Arg1 (C3) is the high-risk flow option |
 | PGE2 | 1 µM | IL-10 up and TNF down through cAMP | ELISA | medium; less canonical; vehicle control |
-| ATRA, all-trans retinoic acid | 1 µM, from a DMSO stock, in the dark | In vivo the signal that induces GATA6 and the peritoneal macrophage identity; in vitro it dampens TNF and NO and helps IL-4 induce Arg1. Whether it induces Gata6 in RAW 264.7 is not known | qPCR Gata6, Arg1, Icam2 (X01) | high: the lab's wild card, outcome unknown; for a group that takes the qPCR extension |
+| ATRA, all-trans retinoic acid | 1 µM, from a DMSO stock, in the dark | In vivo the signal that induces GATA6 and the peritoneal macrophage identity; in vitro it dampens TNF and NO and helps IL-4 induce Arg1. Whether it induces Gata6 in a macrophage line is not known | qPCR Gata6, Arg1, Icam2 (X01) | high: the lab's wild card, outcome unknown; for a group that takes the qPCR extension |
+
+The effects in the table were mostly described in RAW 264.7, the line this course was
+first planned with; they are tested on J774A.1 before the course `[TODO: J774A.1 menu test]`.
 
 What to expect in week 2, by flow: IFNγ shows, IL-4 shows weakly at best, ATRA is
 unknown, and IL-10, dexamethasone and PGE2 show nothing by design, because their

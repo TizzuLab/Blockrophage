@@ -1,11 +1,11 @@
-# C3 Flow cytometry of polarized RAW 264.7
+# C3 Flow cytometry of polarized J774A.1
 
 > **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/Blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
 | | |
 |---|---|
 | ID | C3 |
-| Used in | Exp 1 (core: polarized RAW cells, week 2); X02 (extension: peritoneal cells on the same panel) |
+| Used in | Exp 1 (core: polarized J774A.1 cells, week 2); X02 (extension: peritoneal cells on the same panel) |
 | Hands-on time | 2 h staining, 1 h acquisition (plus 2.5 h if the intranuclear option is run) |
 | Wall-clock time | half a day; fixed samples can be acquired the next day |
 | Resources | hood, cooled centrifuge with plate rotor, heating block, cytometer slot reserved by the facility `[TODO: instrument, slot dates]`, FlowJo seat |
@@ -22,7 +22,7 @@ scatter up and the vehicle control must not; only then does the polarizer's resu
 count. Flow on challenged cells (week 3) is an extension and needs a slot from the
 facility's regular booking calendar. The panel is shared
 with the peritoneal cells extension (X02) so that in vitro and tissue cells can be compared
-directly in the same session. In the core it is run on RAW cells only.
+directly in the same session. In the core it is run on J774A.1 cells only.
 
 ## Materials
 
@@ -122,7 +122,7 @@ wash twice in permeabilization buffer, Fc block, stain Arg1 and its isotype **`3
 permeabilization buffer, wash twice, resuspend in FACS buffer. Permeabilization costs
 some surface signal, so the surface markers go on first and the FMOs are run on
 permeabilized cells too. Expect a small shift in M(IL-4) at best: the induction is
-reliable at the mRNA level in RAW 264.7 and modest as protein. The group that takes
+reliable at the mRNA level in RAW 264.7 and modest as protein; J774A.1 still has to show it. The group that takes
 this arm learns fixation and permeabilization, and says on the poster that the arm
 was high risk by design `[TODO: titrate the clone before the course]`.
 
@@ -146,12 +146,12 @@ was high risk by design `[TODO: titrate the clone before the course]`.
 
 ## Known failure modes
 
-- RAW cells clump after scraping: the EDTA in the buffer helps; filter through the
+- The cells clump after scraping: the EDTA in the buffer helps; filter through the
   strainer cap and pipette gently.
 - Autofluorescence in activated cells: use the FMOs, not the unstained control, to
   set gates.
 - Dim viability stain: dye diluted in buffer instead of PBS.
-- ICAM2 and Gata6 negative on every RAW sample: expected. No in vitro cell falls
+- ICAM2 and Gata6 negative on every J774A.1 sample: expected. No in vitro cell falls
   into the large-peritoneal-macrophage gate; that is a result.
 
 ## Output
