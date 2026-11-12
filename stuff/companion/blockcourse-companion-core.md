@@ -56,7 +56,7 @@ full file from the repository and attach it to the session.
 - Protocol index
   - `protocols/README.md`
 - Core protocols
-  - `protocols/C1_raw264_culture.md`
+  - `protocols/C1_j774_culture.md`
   - `protocols/C2_polarization.md`
   - `protocols/C3_flow_cytometry.md`
   - `protocols/C4_prr_challenge.md`
@@ -84,7 +84,7 @@ full file from the repository and attach it to the session.
 
 > Teaching material for a four-week laboratory block course on macrophage biology:
 > a short script, background reading, step-by-step protocols, a day-by-day schedule
-> and analysis code. Students culture and polarize RAW 264.7 macrophages, challenge
+> and analysis code. Students culture and polarize J774A.1 macrophages, challenge
 > them through pattern-recognition receptors, read out cytokines, nitrite and surface
 > phenotype, and compare the in vitro states with tissue macrophages in a published
 > single-cell dataset. Repository: https://github.com/TizzuLab/Blockrophage. This file follows the llms.txt convention: it tells a language
@@ -124,7 +124,7 @@ full file from the repository and attach it to the session.
 - [Protocol index](protocols/README.md): table of all protocols with hands-on time,
   wall-clock time and resources.
 - Core, cell culture for Exp 1 and Exp 3:
-  [C1 RAW 264.7 culture: thaw, split, seed](protocols/C1_raw264_culture.md).
+  [C1 J774A.1 culture: thaw, split, seed](protocols/C1_j774_culture.md).
 - Core, Exp 1 (polarization): [C2 polarization](protocols/C2_polarization.md),
   [C3 flow cytometry](protocols/C3_flow_cytometry.md).
 - Core, Exp 3 (challenge): [C4 PRR challenge](protocols/C4_prr_challenge.md),
@@ -134,7 +134,7 @@ full file from the repository and attach it to the session.
   [X02 peritoneal cells on the shared flow panel](protocols/X02_peritoneal_cells_flow.md),
   [X03 F4/80 IHC on tissue sections](protocols/X03_tissue_sections_ihc.md),
   [X04 Griess](protocols/X04_griess.md), [X05 MTT assay](protocols/X05_mtt.md).
-- Staff: [S01 backup vials and the stock over the break](protocols/S01_raw264_freeze.md).
+- Staff: [S01 backup vials and the stock over the break](protocols/S01_j774_freeze.md).
 
 ### Background
 
@@ -356,15 +356,16 @@ signals. The dry-lab experiment runs alongside the bench work from week 2 to wee
 A menu of extensions closes this section.
 
 **Experiment 1: Polarization** (wet lab, week 2) Primary macrophages do not divide
-in a dish and die within days, so the field works with a model. RAW 264.7 is a line
-established in 1978 from a tumour induced in a BALB/c mouse by Abelson leukaemia
-virus: it divides without growth factor, adheres, responds strongly to LPS and IFNγ,
-and has been in culture for almost fifty years. What that does and does not make it
+in a dish and die within days, so the field works with a model. J774A.1 is a line
+isolated in 1968 from a sarcoma of a BALB/c mouse: it divides without growth factor,
+adheres, phagocytoses, responds to LPS and IFNγ, and has been in culture for more
+than fifty years. A group may run the core on bone marrow-derived macrophages (BMDM)
+instead, primary cells from surplus mice that need a week in CSF1 before week 2. What that does and does not make it
 is in the [background](background/README.md#52-level-i-ontogeny). On the Friday of
 week 1 your group thaws its own stock flask from a provided vial, and that flask
 carries the whole course: the staff look after it over the weekend and the Easter
 break, and after the break passaging it is your background task
-([C1](protocols/C1_raw264_culture.md); staff: [S01](protocols/S01_raw264_freeze.md)). The textbook states were defined by what is
+([C1](protocols/C1_j774_culture.md); staff: [S01](protocols/S01_j774_freeze.md)). The textbook states were defined by what is
 added: IFNγ, IL-4, or IFNγ with LPS, named M(IFNγ), M(IL-4) and M(IFNγ+LPS) after
 the stimulus since the 2014 nomenclature
 ([background](background/README.md#54-level-iii-function-and-activation-state)).
@@ -473,12 +474,13 @@ non-exhaustive.
 | Macrophages in your field ([extensions](code/scrnaseq/README.md#potential-extensions)) | A published single-cell dataset of an organ or disease of your choice through the same workflow; its macrophages, their M1/M2 scores and a signature from that field |
 | Unpredicted figure, dataset or code | A figure or table not in the answer key, with claim, n and method |
 | qPCR (X01) | ΔΔCt of outputs and the receptor of your pathway across states, with housekeepers named |
-| Primary peritoneal cells on the shared panel (X02) | Primary cells and polarized RAW cells in one gating figure; frequency of LPM and SPM with n samples |
+| Primary peritoneal cells on the shared panel (X02) | Primary cells and polarized J774A.1 cells in one gating figure; frequency of LPM and SPM with n samples |
 | F4/80 immunohistochemistry (X03) | Image with scale bar, controls named, tissue and expected F4/80 level stated |
-| Ex vivo LPS on primary peritoneal cells versus RAW | IL-6 bar plot with unstimulated controls for both cell types; n wells and samples |
+| Ex vivo LPS on primary peritoneal cells versus J774A.1 | IL-6 bar plot with unstimulated controls for both cell types; n wells and samples |
 | Endotoxin tolerance | IL-6 or TNF after re-challenge, M(IFNγ+LPS) versus M(IFNγ), with statistics |
 | Tissue digestion flow | Gating figure and frequency of F4/80+ cells in the tissue, with n |
-| BMDM versus RAW | One figure comparing the two in at least two polarization states |
+| BMDM versus J774A.1 | One figure comparing the two in at least two polarization states |
+| RAW 264.7 versus J774A.1 (level 2 laboratory, at most two groups) | The two classic lines side by side in at least two polarization states; RAW 264.7 releases infectious murine leukaemia virus and lacks ASC, so the group also says on the poster what that means for the data |
 | Phagocytosis or efferocytosis | Percentage of uptake-positive cells per state, with n |
 | Double immunofluorescence | Two-channel image with scale bar; markers named |
 | Atlas contribution | List of accepted atlas entry IDs with a QR code `[TODO: atlas platform]` |
@@ -738,9 +740,9 @@ polarization, phenotype, challenge, readout. X-files are optional extensions
 
 | ID | Title | Used in | Hands-on time | Wall-clock time | Resources |
 |---|---|---|---|---|---|
-| [C1](C1_raw264_culture.md) | RAW 264.7 culture: thaw, split, seed | week 1 Friday (thaw the stock flask); Exp 1 and 3 plating; passaging | 45 min for the thaw, 45 min per split or seeding | the flask lives the whole course; a seeded plate is used the next morning | hood, incubator, centrifuge, counter, microscope |
+| [C1](C1_j774_culture.md) | J774A.1 culture: thaw, split, seed | week 1 Friday (thaw the stock flask); Exp 1 and 3 plating; passaging | 45 min for the thaw, 45 min per split or seeding | the flask lives the whole course; a seeded plate is used the next morning | hood, incubator, centrifuge, counter, microscope |
 | [C2](C2_polarization.md) | Polarization: the menu | Exp 1, Exp 3 | 30 min, at seeding | about 19 h, Tue to Wed | hood, incubator, vortex |
-| [C3](C3_flow_cytometry.md) | Flow cytometry of polarized RAW cells | Exp 1 (week 2), X02 | 2 h stain + 1 h acquisition | half day | hood, cooled plate centrifuge, heating block, cytometer slot, FlowJo seat |
+| [C3](C3_flow_cytometry.md) | Flow cytometry of polarized J774A.1 cells | Exp 1 (week 2), X02 | 2 h stain + 1 h acquisition | half day | hood, cooled plate centrifuge, heating block, cytometer slot, FlowJo seat |
 | [C4](C4_prr_challenge.md) | Danger-signal challenge: PAMPs, DAMPs, inhibitors | Exp 3 (week 3 Wed) | 45 min + 45 min harvest | 16 h overnight (default) or 6 h | hood, incubator, plate centrifuge, −20 °C, −80 °C |
 | [C5](C5_elisa.md) | ELISA IL-6 (default) or TNF | Exp 3 (week 3 Thu) | 3–4 h + coating the day before | 2 days | plate reader (450 nm), multichannel pipette |
 
@@ -758,7 +760,7 @@ polarization, phenotype, challenge, readout. X-files are optional extensions
 
 | ID | Title | Used in | Hands-on time | Wall-clock time | Resources |
 |---|---|---|---|---|---|
-| [S01](S01_raw264_freeze.md) | RAW 264.7: backup vials and the stock over the break | Thu of week 2, Easter break | 45 min + 20 min per split | overnight at −80 °C, then −140 °C | hood, centrifuge, freezing container, −80 °C, −140 °C |
+| [S01](S01_j774_freeze.md) | J774A.1: backup vials and the stock over the break | Thu of week 2, Easter break | 45 min + 20 min per split | overnight at −80 °C, then −140 °C | hood, centrifuge, freezing container, −80 °C, −140 °C |
 
 ### Dependencies in time
 
@@ -795,9 +797,9 @@ cytometry, 24-well plates for the RNA extension.
 
 # Core protocols
 
-<!-- file: protocols/C1_raw264_culture.md -->
+<!-- file: protocols/C1_j774_culture.md -->
 
-## C1 RAW 264.7 culture: thaw, split, seed
+## C1 J774A.1 culture: thaw, split, seed
 
 > **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/Blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
@@ -809,11 +811,11 @@ cytometry, 24-well plates for the RNA extension.
 | Wall-clock time | the flask lives until the end of the course; the staff carry it when you are away. A seeded plate is polarized at seeding (C2) and harvested or challenged the next morning |
 | Resources | hood, incubator shelf (37 °C, 5% CO2), centrifuge, Neubauer chamber or Countess III, microscope |
 | Depends on | Part A: the hands-on introduction of the same morning. Part B: the group's stock flask at 60–80% confluence |
-| Lab SOP | Zindel lab 0203 "RAW 264.7 – adherent cells" (v1.0, 2025-12-01), and the lab's RAW 264.7 polarisation protocol (v1.0, 2025-12-08), seeding section. The SOP wins over this page. |
+| Lab SOP | Zindel lab 0203 "RAW 264.7 – adherent cells" (v1.0, 2025-12-01), and the lab's RAW 264.7 polarisation protocol (v1.0, 2025-12-08), seeding section; written for RAW 264.7 and applied to J774A.1 until the lab SOP is updated `[TODO: J774A.1 SOP]`. The SOP wins over this page. |
 
 ### Purpose
 
-Bring one cryovial of RAW 264.7 cells into culture as your group's stock flask for the
+Bring one cryovial of J774A.1 cells (ATCC TIB-67) into culture as your group's stock flask for the
 whole course (Part A), then keep it growing and seed plates from it at a defined
 density (Part B). From this flask you plate the polarization experiment on Tuesday of
 week 2 and the challenge experiment on Tuesday of week 3, with the polarizer already
@@ -830,7 +832,7 @@ at the next hood, on Tuesdays when you plate and once more on Thursday or Friday
 
 ### Materials
 
-- RAW 264.7 cryovial, one per group, from the staff stock `[TODO: mycoplasma test
+- J774A.1 cryovial, one per group, from the staff stock `[TODO: mycoplasma test
   date]`
 - Complete medium, 50 mL: 44.5 mL DMEM high glucose with GlutaMAX (Gibco 31966021),
   5 mL heat-inactivated FCS (Gibco A5256801), 0.5 mL penicillin-streptomycin
@@ -888,28 +890,28 @@ at the next hood, on Tuesdays when you plate and once more on Thursday or Friday
     with steady strokes, including the edges.
 
 > [!NOTE]
-> RAW 264.7 are passaged by scraping, not trypsin.
+> J774A.1 are passaged by scraping, not trypsin.
 
 11. With a serological pipette, wash the walls of the flask with the medium so that
     every cell is in suspension, then pipette up and down 3–5 times to break clumps.
     Transfer to a 15 mL tube.
 12. Count with trypan blue. Record total, live, viability.
 13. Split: seed 1:3 to 1:5 of the suspension into a fresh flask (3 mL final in a T25,
-    10 mL in a T75); move from the T25 to a T75 at the first split. RAW 264.7 double
-    every 15–24 h (lab SOP). Record the split with the date and the course passage
+    10 mL in a T75); move from the T25 to a T75 at the first split. Doubling time
+    `[TODO: J774A.1 doubling time in our hands; RAW 264.7 doubled every 15–24 h]`. Record the split with the date and the course passage
     count, counted from the Friday thaw.
 14. Seed for an experiment: centrifuge the needed cells **`300 × g, 5 min`**,
     resuspend in fresh medium at the working density and plate
 
     | Format | Cells per well | Volume per well | Use |
     |---|---|---|---|
-    | 96-well | 2 × 10^4 | 200 µL | supernatant for ELISA (lab-validated) |
+    | 96-well | 2 × 10^4 | 200 µL | supernatant for ELISA (validated on RAW 264.7; to verify on J774A.1) |
     | 24-well | 1.2 × 10^5 | 500 µL | RNA arm, X01 |
     | 6-well | 6 × 10^5 | 2 mL | flow cytometry, C3 |
 
 
 > [!IMPORTANT]
-> **To verify:** the 24- and 6-well densities are derived, not tested. Check in
+> **To verify:** all densities come from RAW 264.7 and are not yet tested on J774A.1; the 24- and 6-well densities are derived, not tested. Check in
 > the first run that a 6-well seeded this way yields at least 1 × 10^6 cells per
 > well 48 h later for C3.
 
@@ -939,7 +941,7 @@ at the next hood, on Tuesdays when you plate and once more on Thursday or Friday
 - Tuesday of week 2, before plating: cells attached, spreading, 60 to 80% confluent.
 
 > [!WARNING]
-> Beyond 90% confluence, split first: RAW cells change behaviour when overgrown.
+> Beyond 90% confluence, split first: macrophage lines change behaviour when overgrown.
 
 - Next morning after seeding: an even monolayer, about 40–60% confluent in the
   96-well `[TODO: confirm expected confluence at stimulation in the first run]`.
@@ -972,7 +974,7 @@ is the file every later analysis is joined to.
 
 <!-- file: protocols/C2_polarization.md -->
 
-## C2 Polarization of RAW 264.7: the menu
+## C2 Polarization of J774A.1: the menu
 
 > **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/Blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
@@ -984,7 +986,7 @@ is the file every later analysis is joined to.
 | Wall-clock time | about 19 h, Tuesday 14:00 to Wednesday 09:00, in both weeks |
 | Resources | hood, incubator shelf, vortex |
 | Depends on | the group's stock flask (C1) at 60 to 80% confluence, counted |
-| Lab SOP | Zindel lab "RAW 264.7 polarisation" (v1.0, 2025-12-08): 96-well format, 100× stimulus stocks, master mixes. The SOP wins over this page. |
+| Lab SOP | Zindel lab "RAW 264.7 polarisation" (v1.0, 2025-12-08): 96-well format, 100× stimulus stocks, master mixes; written for RAW 264.7 and applied to J774A.1 until the lab SOP is updated `[TODO: J774A.1 SOP]`. The SOP wins over this page. |
 
 ### Purpose
 
@@ -999,14 +1001,17 @@ problem.
 
 ### The menu
 
-| Polarizer | Working concentration | What it does in RAW 264.7 | Safe readout | Risk |
+| Polarizer | Working concentration | What it does (mostly shown in RAW 264.7) | Safe readout | Risk |
 |---|---|---|---|---|
 | IFNγ | 20 ng/mL | MHC-II and CD86 up, iNOS primed, TNF and IL-6 amplified with LPS. This is M(IFNγ) | flow (MHC-II, CD86) and ELISA | low |
 | IL-10 | 20 ng/mL | TNF and IL-6 suppressed through STAT3 and SOCS3 | ELISA (suppression, week 3) | low; nothing to see by flow, by design |
 | Dexamethasone | 100 nM | TNF, IL-6 and NO suppressed through the glucocorticoid receptor; the drug every patient on steroids gets | ELISA (suppression, week 3) | low; cheap and stable; needs a vehicle control |
 | IL-4 | 20 ng/mL | Arg1, Chil3, Retnla and Mrc1 mRNA up, LPS response dampened. This is M(IL-4) | qPCR Arg1 (X01); ELISA (suppression) | medium: CD206 by flow is weak in this line; intracellular Arg1 (C3) is the high-risk flow option |
 | PGE2 | 1 µM | IL-10 up and TNF down through cAMP | ELISA | medium; less canonical; vehicle control |
-| ATRA, all-trans retinoic acid | 1 µM, from a DMSO stock, in the dark | In vivo the signal that induces GATA6 and the peritoneal macrophage identity; in vitro it dampens TNF and NO and helps IL-4 induce Arg1. Whether it induces Gata6 in RAW 264.7 is not known | qPCR Gata6, Arg1, Icam2 (X01) | high: the lab's wild card, outcome unknown; for a group that takes the qPCR extension |
+| ATRA, all-trans retinoic acid | 1 µM, from a DMSO stock, in the dark | In vivo the signal that induces GATA6 and the peritoneal macrophage identity; in vitro it dampens TNF and NO and helps IL-4 induce Arg1. Whether it induces Gata6 in a macrophage line is not known | qPCR Gata6, Arg1, Icam2 (X01) | high: the lab's wild card, outcome unknown; for a group that takes the qPCR extension |
+
+The effects in the table were mostly described in RAW 264.7, the line this course was
+first planned with; they are tested on J774A.1 before the course `[TODO: J774A.1 menu test]`.
 
 What to expect in week 2, by flow: IFNγ shows, IL-4 shows weakly at best, ATRA is
 unknown, and IL-10, dexamethasone and PGE2 show nothing by design, because their
@@ -1112,14 +1117,14 @@ the photograph of each condition on Wednesday morning.
 
 <!-- file: protocols/C3_flow_cytometry.md -->
 
-## C3 Flow cytometry of polarized RAW 264.7
+## C3 Flow cytometry of polarized J774A.1
 
 > **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/Blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
 | | |
 |---|---|
 | ID | C3 |
-| Used in | Exp 1 (core: polarized RAW cells, week 2); X02 (extension: peritoneal cells on the same panel) |
+| Used in | Exp 1 (core: polarized J774A.1 cells, week 2); X02 (extension: peritoneal cells on the same panel) |
 | Hands-on time | 2 h staining, 1 h acquisition (plus 2.5 h if the intranuclear option is run) |
 | Wall-clock time | half a day; fixed samples can be acquired the next day |
 | Resources | hood, cooled centrifuge with plate rotor, heating block, cytometer slot reserved by the facility `[TODO: instrument, slot dates]`, FlowJo seat |
@@ -1136,7 +1141,7 @@ scatter up and the vehicle control must not; only then does the polarizer's resu
 count. Flow on challenged cells (week 3) is an extension and needs a slot from the
 facility's regular booking calendar. The panel is shared
 with the peritoneal cells extension (X02) so that in vitro and tissue cells can be compared
-directly in the same session. In the core it is run on RAW cells only.
+directly in the same session. In the core it is run on J774A.1 cells only.
 
 ### Materials
 
@@ -1236,7 +1241,7 @@ wash twice in permeabilization buffer, Fc block, stain Arg1 and its isotype **`3
 permeabilization buffer, wash twice, resuspend in FACS buffer. Permeabilization costs
 some surface signal, so the surface markers go on first and the FMOs are run on
 permeabilized cells too. Expect a small shift in M(IL-4) at best: the induction is
-reliable at the mRNA level in RAW 264.7 and modest as protein. The group that takes
+reliable at the mRNA level in RAW 264.7 and modest as protein; J774A.1 still has to show it. The group that takes
 this arm learns fixation and permeabilization, and says on the poster that the arm
 was high risk by design `[TODO: titrate the clone before the course]`.
 
@@ -1260,12 +1265,12 @@ was high risk by design `[TODO: titrate the clone before the course]`.
 
 ### Known failure modes
 
-- RAW cells clump after scraping: the EDTA in the buffer helps; filter through the
+- The cells clump after scraping: the EDTA in the buffer helps; filter through the
   strainer cap and pipette gently.
 - Autofluorescence in activated cells: use the FMOs, not the unstained control, to
   set gates.
 - Dim viability stain: dye diluted in buffer instead of PBS.
-- ICAM2 and Gata6 negative on every RAW sample: expected. No in vitro cell falls
+- ICAM2 and Gata6 negative on every J774A.1 sample: expected. No in vitro cell falls
   into the large-peritoneal-macrophage gate; that is a result.
 
 ### Output
@@ -1290,7 +1295,7 @@ gated population statistics as CSV into the notebook. Do not try to gate in R.
 | Wall-clock time | overnight, about 16 h (default, IL-6 readout) or 6 h (alternative, TNF readout) |
 | Resources | hood, incubator shelf, plate centrifuge, −20 °C and −80 °C freezers |
 | Depends on | the 96-well plate seeded with the polarizer on Tuesday (C1, C2); ELISA plates coated on Wednesday afternoon (C5) |
-| Lab SOP | Zindel lab "RAW 264.7 polarisation" (v1.0, 2025-12-08), stimulation and harvesting sections. The SOP wins over this page. |
+| Lab SOP | Zindel lab "RAW 264.7 polarisation" (v1.0, 2025-12-08), stimulation and harvesting sections; written for RAW 264.7 and applied to J774A.1 until the lab SOP is updated `[TODO: J774A.1 SOP]`. The SOP wins over this page. |
 
 ### Purpose
 
@@ -1305,7 +1310,8 @@ a slot in the facility's regular booking calendar.
 ### The menu
 
 PAMPs. All of these are known to work in RAW 264.7, which expresses TLR2, TLR3,
-TLR4, TLR7, TLR9 and Dectin-1.
+TLR4, TLR7, TLR9 and Dectin-1; on J774A.1 they are tested before the course
+`[TODO: confirm each PAMP on J774A.1]`.
 
 | Stimulus | Receptor | Working concentration | Note |
 |---|---|---|---|
@@ -1317,7 +1323,7 @@ TLR4, TLR7, TLR9 and Dectin-1.
 | Zymosan, depleted | Dectin-1 | 10 µg/mL | particulate; TNF and IL-6 moderate |
 | Heat-killed bacteria (HKLM or HKEB) | TLR2 and others | 10^8 cells/mL | the whole-pathogen contrast; cheap and robust |
 
-Not on the menu: flagellin, because RAW 264.7 cells express little TLR5, and MDP
+Not on the menu: flagellin, because macrophage lines such as RAW 264.7 express little TLR5, and MDP
 alone, because NOD2 needs a TLR signal beside it.
 
 DAMPs. The honest situation: most DAMPs speak through IL-1β, which needs priming and
@@ -1326,7 +1332,7 @@ option is in the core, the rest only with qPCR.
 
 | Stimulus | Receptor | Working concentration | Note |
 |---|---|---|---|
-| Necrotic lysate of your own RAW cells | TLR2, TLR4, RAGE and others | lysate of 10^6 cells/mL, three freeze-thaw cycles, cleared, 1:10 | the only DAMP whose signal needs no priming and carries no reagent risk; expect a small IL-6 and TNF signal; test it with polymyxin B |
+| Necrotic lysate of your own J774A.1 cells | TLR2, TLR4, RAGE and others | lysate of 10^6 cells/mL, three freeze-thaw cycles, cleared, 1:10 | the only DAMP whose signal needs no priming and carries no reagent risk; expect a small IL-6 and TNF signal; test it with polymyxin B |
 | HMGB1, disulfide form, endotoxin-free | TLR4, RAGE | 1 µg/mL | extension with X01 only; small signal, redox-form dependent |
 | ATP, MSU crystals, nigericin | P2X7, NLRP3 | 1 to 5 mM; 100 µg/mL; 10 µM | extension with X01 only; need LPS priming and read IL-1β |
 
@@ -1456,7 +1462,7 @@ positions of supernatants and lysates, and the photograph before harvest.
 | Wall-clock time | 2 days (coating overnight) |
 | Resources | plate reader (450 nm; the lab uses a Promega GloMax Discover), multichannel pipette, plate washer or wash bottle, bench space |
 | Depends on | C4 supernatants (overnight default, 6 h alternative); plates coated on Wednesday 16:30 |
-| Lab SOP | Zindel lab "RAW 264.7 polarisation" (v1.0, 2025-12-08), harvesting section, and the kit insert of the Invitrogen Mouse IL-6 Uncoated ELISA Kit (88-7064-88). The kit insert wins over this page. |
+| Lab SOP | Zindel lab "RAW 264.7 polarisation" (v1.0, 2025-12-08), harvesting section (written for RAW 264.7, applied to J774A.1), and the kit insert of the Invitrogen Mouse IL-6 Uncoated ELISA Kit (88-7064-88). The kit insert wins over this page. |
 
 ### Purpose
 
@@ -1549,7 +1555,8 @@ read-out follow from 15:00.
 
 ### Worked example: IL-6 after an LPS dose ladder
 
-In September 2026 the lab stimulated RAW 264.7 (2 × 10^4 cells per 96-well, 200 µL,
+In September 2026 the lab stimulated RAW 264.7, the line the course was first
+planned with `[TODO: repeat the ladder on J774A.1]` (2 × 10^4 cells per 96-well, 200 µL,
 16 h) with vehicle or 0.1, 1, 10 and 100 ng/mL LPS in triplicate, cleared the
 supernatants and ran the IL-6 kit above with a 500 to 7.8 pg/mL standard in
 duplicate, read at 450 nm. The raw ODs are in
@@ -1714,13 +1721,13 @@ state and stimulus, housekeepers named.
 | Hands-on time | 30 min receiving, counting and lysis, then staining as C3 |
 | Wall-clock time | half a day, coordinated with a cytometer slot |
 | Resources | ice, cooled centrifuge, counter, cytometer slot |
-| Depends on | C3 panel and a reserved cytometer slot; polarized RAW cells ready on the same day; a surplus peritoneal cell suspension provided by staff |
+| Depends on | C3 panel and a reserved cytometer slot; polarized J774A.1 cells ready on the same day; a surplus peritoneal cell suspension provided by staff |
 | Lab SOP | Zindel lab "Flow cytometry" (v1.2) and "Flow cytometry antibody titration" for the staining; the SOP wins over this page. |
 
 ### Purpose
 
 Run resident tissue macrophages, obtained without digestion, on the shared panel in
-the same session as the polarized RAW cells. The first result, before any
+the same session as the polarized J774A.1 cells. The first result, before any
 activation marker, is that no in vitro cell falls into the large-peritoneal-
 macrophage gate.
 
@@ -1736,7 +1743,7 @@ macrophage gate.
 ### Before you start
 
 - Confirm with your supervisor that a surplus suspension is available on a day
-  with a cytometer slot, and that your polarized RAW cells are ready the same day.
+  with a cytometer slot, and that your polarized J774A.1 cells are ready the same day.
 - C3 staining plan extended with the peritoneal samples, CD19 and Ly6C.
 - Record what the staff tell you about the sample: source of the material, date,
   volume, any treatment it carries over from the experiment it came from.
@@ -1754,17 +1761,17 @@ macrophage gate.
 3. Resuspend in FACS buffer and count. Expect large peritoneal macrophages to be
    roughly a third of the cells in a healthy sample.
 4. Stain with the course panel (C3), including CD19 and Ly6C, and acquire in the
-   same session as the polarized RAW cells.
+   same session as the polarized J774A.1 cells.
 5. Gate: CD19 out, then F4/80 against MHCII for large (F4/80 high, MHCII low) and
    small (F4/80 low, MHCII high) peritoneal macrophages; ICAM2 and Gata6 confirm the
-   resident identity. Overlay the polarized RAW cells on the same gates.
+   resident identity. Overlay the polarized J774A.1 cells on the same gates.
 
 ### Controls
 
 - CD19 gate removes B cells; F4/80 against MHCII separates large and small
   peritoneal macrophages; ICAM2 and Gata6 confirm resident identity.
 - Same single-stain and fluorescence-minus-one controls as C3; the peritoneal
-  sample and the RAW cells share the compensation.
+  sample and the J774A.1 cells share the compensation.
 
 ### Checkpoints
 
@@ -1782,7 +1789,7 @@ macrophage gate.
 ### Output
 
 Cell counts, sample metadata as provided by staff, FCS files, and the gated
-statistics side by side with the RAW samples.
+statistics side by side with the J774A.1 samples.
 
 ---
 
@@ -2002,7 +2009,7 @@ R template.
 
 ### Purpose
 
-A second, independent growth curve of RAW 264.7 next to the daily flask counts of
+A second, independent growth curve of J774A.1 next to the daily flask counts of
 C1, and a standard curve that shows what the assay can and cannot resolve. MTT
 (3-(4,5-dimethylthiazol-2-yl)-2,5-diphenyltetrazolium bromide) is a yellow,
 water-soluble salt that living cells reduce to a purple, insoluble formazan; the
@@ -2092,7 +2099,7 @@ Wednesday 09:00 (standard curve and read 1)
    a 1:2 series in complete medium down to 1.25 × 10^4 cells/mL (seven tubes, 1.3 mL
    each is enough). Plate 100 µL per well into columns 2 to 4. Incubate
    **`37 °C, 5% CO2, 2 h`**, so that the cells attach
-   `[TODO: confirm 2 h is enough for RAW 264.7 to attach; the source figure used 4 h]`.
+   `[TODO: confirm 2 h is enough for J774A.1 to attach; the source figure used 4 h]`.
 4. Add 10 µL MTT stock straight into the medium: at 09:00 to every well of columns
    5 and 8 (read 1), at 11:00 to every well of columns 2 to 4, including the
    medium-only row. Tap the plate gently. Incubate **`37 °C, 3 h, dark`** (plate
@@ -2312,10 +2319,15 @@ the HPL building, the eyewash and emergency shower, the first-aid kit, the spill
 and the fire extinguisher of the floor. Doors and windows stay shut while you work;
 bags, jackets and phones stay at the desk, not on the bench.
 
-**Biosafety level.** The core programme is level 1 work: RAW 264.7 is a mouse cell
-line, not a pathogen and not a genetically modified organism, and the stimuli are
-purified. Optional extensions that use surplus primary mouse material are level 1
-work as well. Please let us know in confidence about pregnancies, morbidities, or
+**Biosafety level.** The core programme is level 1 work: J774A.1 is a mouse
+macrophage line classified as biosafety level 1 (ATCC TIB-67), not a genetically
+modified organism, and the stimuli are purified. Optional extensions that use surplus
+primary mouse material, bone marrow-derived macrophages included, are level 1 work as
+well. The one exception is the RAW 264.7 extension: RAW 264.7 releases infectious
+murine leukaemia virus ([Hartley et al., 2008](https://doi.org/10.1186/1742-4690-5-1))
+and is level 2 work. It runs in the lab's level 2 laboratory for at most two groups,
+after a separate level 2 instruction, and nothing leaves that laboratory
+uninactivated. Please let us know in confidence about pregnancies, morbidities, or
 allergies (e.g. nitrile or latex); if necessary, the work is adapted without anyone
 else knowing.
 
