@@ -125,12 +125,16 @@ The large peritoneal macrophages of the peritoneal cells extension are an exampl
 monocyte-derived cells in adult life, faster in males than in females ([Bain et al.,
 2016](https://doi.org/10.1038/ncomms11852)).
 
-IN this course we use for practicality reasons RAW 264.7 cells which are none of the
-above. They were established in 1978 from a tumour induced in a BALB/c mouse by
-Abelson murine leukaemia virus ([Raschke et al., 1978](https://doi.org/10.1016/0092-8674%2878%2990101-0)). They are transformed,
-aneuploid, proliferate without CSF1, and have been in culture for almost fifty years.
-They respond strongly to LPS and IFNγ, weakly to IL-4, and they lack the inflammasome
-adaptor ASC, so they cannot release mature IL-1β ([Pelegrin et al., 2008](https://doi.org/10.4049/jimmunol.180.11.7147)). Bone
+IN this course we use for practicality reasons J774A.1 cells which are none of the
+above. They were isolated in 1968 from the ascites of a BALB/c mouse with a
+reticulum cell sarcoma and cloned as a line in 1975 ([Ralph & Nakoinz, 1975](https://doi.org/10.1038/257393a0)).
+They are transformed, proliferate without CSF1, and have been in culture for more than
+fifty years. They phagocytose, respond to LPS and IFNγ with TNF, IL-6 and nitric
+oxide, and, unlike RAW 264.7, express the inflammasome adaptor ASC. RAW 264.7, the
+other classic mouse macrophage line, was established in 1978 from a tumour induced by
+Abelson murine leukaemia virus ([Raschke et al., 1978](https://doi.org/10.1016/0092-8674%2878%2990101-0)), lacks ASC ([Pelegrin et al., 2008](https://doi.org/10.4049/jimmunol.180.11.7147)),
+and releases infectious murine leukaemia virus ([Hartley et al., 2008](https://doi.org/10.1186/1742-4690-5-1)), which is
+why it is a level 2 extension here and not the core line. Bone
 marrow-derived macrophages (BMDM) are HSC-derived cells differentiated for seven
 days in CSF1; they are the closest in vitro relative of a monocyte-derived
 macrophage, and still have never seen a niche. Keep this in mind when you compare
@@ -264,7 +268,7 @@ the point of the in silico arm is that you see it in the data yourself.
 
 Questions. Name one gene that is "M1" in mouse and not in human. If a paper calls
 tumour macrophages "M2", what exactly has it measured, and what has it assumed?
-What would you call a RAW cell treated with IL-4 for 24 h, in the Murray
+What would you call a J774A.1 cell treated with IL-4 for 24 h, in the Murray
 nomenclature?
 
 ## 5.5 What macrophages do all day
@@ -340,9 +344,10 @@ complex on the cell surface. TLR4 dimerises and recruits MyD88, which activates
 NF-κB and AP-1 within minutes and drives transcription of Tnf, Il6 and pro-Il1b. TLR4
 is then internalised and signals through TRIF to IRF3, which induces type I
 interferon ([Fitzgerald & Kagan, 2020](https://doi.org/10.1016/j.cell.2020.02.041)). Pro-IL-1β is a special case: it is
-only released as mature IL-1β after a second signal activates an inflammasome, which
-RAW cells cannot assemble because they lack ASC. For that
-reason IL-1β is read by qPCR in the extension, not by ELISA.
+only released as mature IL-1β after a second signal activates an inflammasome.
+J774A.1 cells have the adaptor ASC and can assemble one, RAW 264.7 cannot. In the core
+IL-1β is read by qPCR in the extension; mature IL-1β after a second signal is a
+high-risk extension, because reports on J774A.1 are mixed.
 
 `[FIGURE 12: TLR4 signalling from the membrane to NF-κB and IRF3, adapted from a
 review, e.g. Fitzgerald & Kagan 2020, Cell 180:1044.]`

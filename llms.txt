@@ -2,7 +2,7 @@
 
 > Teaching material for a four-week laboratory block course on macrophage biology:
 > a short script, background reading, step-by-step protocols, a day-by-day schedule
-> and analysis code. Students culture and polarize RAW 264.7 macrophages, challenge
+> and analysis code. Students culture and polarize J774A.1 macrophages, challenge
 > them through pattern-recognition receptors, read out cytokines, nitrite and surface
 > phenotype, and compare the in vitro states with tissue macrophages in a published
 > single-cell dataset. Repository: https://github.com/TizzuLab/Blockrophage. This file follows the llms.txt convention: it tells a language
@@ -42,7 +42,7 @@
 - [Protocol index](protocols/README.md): table of all protocols with hands-on time,
   wall-clock time and resources.
 - Core, cell culture for Exp 1 and Exp 3:
-  [C1 RAW 264.7 culture: thaw, split, seed](protocols/C1_raw264_culture.md).
+  [C1 J774A.1 culture: thaw, split, seed](protocols/C1_j774_culture.md).
 - Core, Exp 1 (polarization): [C2 polarization](protocols/C2_polarization.md),
   [C3 flow cytometry](protocols/C3_flow_cytometry.md).
 - Core, Exp 3 (challenge): [C4 PRR challenge](protocols/C4_prr_challenge.md),
@@ -52,7 +52,7 @@
   [X02 peritoneal cells on the shared flow panel](protocols/X02_peritoneal_cells_flow.md),
   [X03 F4/80 IHC on tissue sections](protocols/X03_tissue_sections_ihc.md),
   [X04 Griess](protocols/X04_griess.md), [X05 MTT assay](protocols/X05_mtt.md).
-- Staff: [S01 backup vials and the stock over the break](protocols/S01_raw264_freeze.md).
+- Staff: [S01 backup vials and the stock over the break](protocols/S01_j774_freeze.md).
 
 ## Background
 

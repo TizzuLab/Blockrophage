@@ -14,7 +14,7 @@
 
 ## Purpose
 
-A second, independent growth curve of RAW 264.7 next to the daily flask counts of
+A second, independent growth curve of J774A.1 next to the daily flask counts of
 C1, and a standard curve that shows what the assay can and cannot resolve. MTT
 (3-(4,5-dimethylthiazol-2-yl)-2,5-diphenyltetrazolium bromide) is a yellow,
 water-soluble salt that living cells reduce to a purple, insoluble formazan; the
@@ -104,7 +104,7 @@ Wednesday 09:00 (standard curve and read 1)
    a 1:2 series in complete medium down to 1.25 × 10^4 cells/mL (seven tubes, 1.3 mL
    each is enough). Plate 100 µL per well into columns 2 to 4. Incubate
    **`37 °C, 5% CO2, 2 h`**, so that the cells attach
-   `[TODO: confirm 2 h is enough for RAW 264.7 to attach; the source figure used 4 h]`.
+   `[TODO: confirm 2 h is enough for J774A.1 to attach; the source figure used 4 h]`.
 4. Add 10 µL MTT stock straight into the medium: at 09:00 to every well of columns
    5 and 8 (read 1), at 11:00 to every well of columns 2 to 4, including the
    medium-only row. Tap the plate gently. Incubate **`37 °C, 3 h, dark`** (plate

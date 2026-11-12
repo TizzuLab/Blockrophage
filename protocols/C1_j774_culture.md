@@ -1,4 +1,4 @@
-# C1 RAW 264.7 culture: thaw, split, seed
+# C1 J774A.1 culture: thaw, split, seed
 
 > **Under construction.** This course runs for the first time in spring 2027 and is being built in the open. Interested students are welcome to apply and to give input ([contact](https://zindellab.ch/contact.html), [issues](https://github.com/TizzuLab/Blockrophage/issues)). **Please do not use these protocols in the lab yet.** Values are unverified until this notice is gone.
 
@@ -10,11 +10,11 @@
 | Wall-clock time | the flask lives until the end of the course; the staff carry it when you are away. A seeded plate is polarized at seeding (C2) and harvested or challenged the next morning |
 | Resources | hood, incubator shelf (37 °C, 5% CO2), centrifuge, Neubauer chamber or Countess III, microscope |
 | Depends on | Part A: the hands-on introduction of the same morning. Part B: the group's stock flask at 60–80% confluence |
-| Lab SOP | Zindel lab 0203 "RAW 264.7 – adherent cells" (v1.0, 2025-12-01), and the lab's RAW 264.7 polarisation protocol (v1.0, 2025-12-08), seeding section. The SOP wins over this page. |
+| Lab SOP | Zindel lab 0203 "RAW 264.7 – adherent cells" (v1.0, 2025-12-01), and the lab's RAW 264.7 polarisation protocol (v1.0, 2025-12-08), seeding section; written for RAW 264.7 and applied to J774A.1 until the lab SOP is updated `[TODO: J774A.1 SOP]`. The SOP wins over this page. |
 
 ## Purpose
 
-Bring one cryovial of RAW 264.7 cells into culture as your group's stock flask for the
+Bring one cryovial of J774A.1 cells (ATCC TIB-67) into culture as your group's stock flask for the
 whole course (Part A), then keep it growing and seed plates from it at a defined
 density (Part B). From this flask you plate the polarization experiment on Tuesday of
 week 2 and the challenge experiment on Tuesday of week 3, with the polarizer already
@@ -31,7 +31,7 @@ at the next hood, on Tuesdays when you plate and once more on Thursday or Friday
 
 ## Materials
 
-- RAW 264.7 cryovial, one per group, from the staff stock `[TODO: mycoplasma test
+- J774A.1 cryovial, one per group, from the staff stock `[TODO: mycoplasma test
   date]`
 - Complete medium, 50 mL: 44.5 mL DMEM high glucose with GlutaMAX (Gibco 31966021),
   5 mL heat-inactivated FCS (Gibco A5256801), 0.5 mL penicillin-streptomycin
@@ -89,28 +89,28 @@ at the next hood, on Tuesdays when you plate and once more on Thursday or Friday
     with steady strokes, including the edges.
 
 > [!NOTE]
-> RAW 264.7 are passaged by scraping, not trypsin.
+> J774A.1 are passaged by scraping, not trypsin.
 
 11. With a serological pipette, wash the walls of the flask with the medium so that
     every cell is in suspension, then pipette up and down 3–5 times to break clumps.
     Transfer to a 15 mL tube.
 12. Count with trypan blue. Record total, live, viability.
 13. Split: seed 1:3 to 1:5 of the suspension into a fresh flask (3 mL final in a T25,
-    10 mL in a T75); move from the T25 to a T75 at the first split. RAW 264.7 double
-    every 15–24 h (lab SOP). Record the split with the date and the course passage
+    10 mL in a T75); move from the T25 to a T75 at the first split. Doubling time
+    `[TODO: J774A.1 doubling time in our hands; RAW 264.7 doubled every 15–24 h]`. Record the split with the date and the course passage
     count, counted from the Friday thaw.
 14. Seed for an experiment: centrifuge the needed cells **`300 × g, 5 min`**,
     resuspend in fresh medium at the working density and plate
 
     | Format | Cells per well | Volume per well | Use |
     |---|---|---|---|
-    | 96-well | 2 × 10^4 | 200 µL | supernatant for ELISA (lab-validated) |
+    | 96-well | 2 × 10^4 | 200 µL | supernatant for ELISA (validated on RAW 264.7; to verify on J774A.1) |
     | 24-well | 1.2 × 10^5 | 500 µL | RNA arm, X01 |
     | 6-well | 6 × 10^5 | 2 mL | flow cytometry, C3 |
 
 
 > [!IMPORTANT]
-> **To verify:** the 24- and 6-well densities are derived, not tested. Check in
+> **To verify:** all densities come from RAW 264.7 and are not yet tested on J774A.1; the 24- and 6-well densities are derived, not tested. Check in
 > the first run that a 6-well seeded this way yields at least 1 × 10^6 cells per
 > well 48 h later for C3.
 
@@ -140,7 +140,7 @@ at the next hood, on Tuesdays when you plate and once more on Thursday or Friday
 - Tuesday of week 2, before plating: cells attached, spreading, 60 to 80% confluent.
 
 > [!WARNING]
-> Beyond 90% confluence, split first: RAW cells change behaviour when overgrown.
+> Beyond 90% confluence, split first: macrophage lines change behaviour when overgrown.
 
 - Next morning after seeding: an even monolayer, about 40–60% confluent in the
   96-well `[TODO: confirm expected confluence at stimulation in the first run]`.

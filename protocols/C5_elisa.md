@@ -10,7 +10,7 @@
 | Wall-clock time | 2 days (coating overnight) |
 | Resources | plate reader (450 nm; the lab uses a Promega GloMax Discover), multichannel pipette, plate washer or wash bottle, bench space |
 | Depends on | C4 supernatants (overnight default, 6 h alternative); plates coated on Wednesday 16:30 |
-| Lab SOP | Zindel lab "RAW 264.7 polarisation" (v1.0, 2025-12-08), harvesting section, and the kit insert of the Invitrogen Mouse IL-6 Uncoated ELISA Kit (88-7064-88). The kit insert wins over this page. |
+| Lab SOP | Zindel lab "RAW 264.7 polarisation" (v1.0, 2025-12-08), harvesting section (written for RAW 264.7, applied to J774A.1), and the kit insert of the Invitrogen Mouse IL-6 Uncoated ELISA Kit (88-7064-88). The kit insert wins over this page. |
 
 ## Purpose
 
@@ -103,7 +103,8 @@ read-out follow from 15:00.
 
 ## Worked example: IL-6 after an LPS dose ladder
 
-In September 2026 the lab stimulated RAW 264.7 (2 × 10^4 cells per 96-well, 200 µL,
+In September 2026 the lab stimulated RAW 264.7, the line the course was first
+planned with `[TODO: repeat the ladder on J774A.1]` (2 × 10^4 cells per 96-well, 200 µL,
 16 h) with vehicle or 0.1, 1, 10 and 100 ng/mL LPS in triplicate, cleared the
 supernatants and ran the IL-6 kit above with a 500 to 7.8 pg/mL standard in
 duplicate, read at 450 nm. The raw ODs are in

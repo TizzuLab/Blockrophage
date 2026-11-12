@@ -66,7 +66,7 @@ work.
   neutrophils come out most "M1" with the classic markers, and why does the picture
   fade with the 30-gene consensus?
 - M1/M2 was defined in a dish, with a few markers. Is it wrong, or a description
-  that fits one setting and one depth of readout? Compare with your RAW 264.7
+  that fits one setting and one depth of readout? Compare with your J774A.1
   cells at the bench.
 - What a module score is relative to (random control genes of similar
   expression), and whether the sterile versus CLP difference holds per mouse.

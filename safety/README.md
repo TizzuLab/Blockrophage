@@ -30,10 +30,15 @@ the HPL building, the eyewash and emergency shower, the first-aid kit, the spill
 and the fire extinguisher of the floor. Doors and windows stay shut while you work;
 bags, jackets and phones stay at the desk, not on the bench.
 
-**Biosafety level.** The core programme is level 1 work: RAW 264.7 is a mouse cell
-line, not a pathogen and not a genetically modified organism, and the stimuli are
-purified. Optional extensions that use surplus primary mouse material are level 1
-work as well. Please let us know in confidence about pregnancies, morbidities, or
+**Biosafety level.** The core programme is level 1 work: J774A.1 is a mouse
+macrophage line classified as biosafety level 1 (ATCC TIB-67), not a genetically
+modified organism, and the stimuli are purified. Optional extensions that use surplus
+primary mouse material, bone marrow-derived macrophages included, are level 1 work as
+well. The one exception is the RAW 264.7 extension: RAW 264.7 releases infectious
+murine leukaemia virus ([Hartley et al., 2008](https://doi.org/10.1186/1742-4690-5-1))
+and is level 2 work. It runs in the lab's level 2 laboratory for at most two groups,
+after a separate level 2 instruction, and nothing leaves that laboratory
+uninactivated. Please let us know in confidence about pregnancies, morbidities, or
 allergies (e.g. nitrile or latex); if necessary, the work is adapted without anyone
 else knowing.
 
