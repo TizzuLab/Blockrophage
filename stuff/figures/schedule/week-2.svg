@@ -61,10 +61,10 @@
 <text x="90" y="334" font-size="12" fill="#1A1A1A">h. Wet-lab goal: plate at a defined density with a</text>
 <text x="90" y="349" font-size="12" fill="#1A1A1A">stimulus.</text>
 <rect x="456.0" y="256" width="372.0" height="102" fill="#C6E0B4" stroke="#BFBFBF" stroke-width="0.8"/>
-<text x="462" y="289" font-size="12" fill="#1A1A1A">C3 continued: optional Arg1 fix and perm, fix, store</text>
-<text x="462" y="304" font-size="12" fill="#1A1A1A">at 4 °C until acquisition. Wet-lab goal: harvest,</text>
-<text x="462" y="319" font-size="12" fill="#1A1A1A">staining, fixation. Staining plan and FMOs in the</text>
-<text x="462" y="334" font-size="12" fill="#1A1A1A">notebook.</text>
+<text x="462" y="289" font-size="12" fill="#1A1A1A">C3 continued: fix and perm, intracellular CD206 and</text>
+<text x="462" y="304" font-size="12" fill="#1A1A1A">Arg1, store at 4 °C until acquisition. Wet-lab goal:</text>
+<text x="462" y="319" font-size="12" fill="#1A1A1A">harvest, staining, fixation. Staining plan and FMOs</text>
+<text x="462" y="334" font-size="12" fill="#1A1A1A">in the notebook.</text>
 <rect x="828.0" y="256" width="372.0" height="148" fill="#8B1E3F" stroke="#1A1A1A" stroke-width="2"/>
 <text x="834" y="312" font-size="12" fill="#FFFFFF" font-weight="bold">FlowJo session: gating, FMOs, export statistics;</text>
 <text x="834" y="327" font-size="12" fill="#FFFFFF" font-weight="bold">the first figure [TODO: check with Florian Mair</text>
