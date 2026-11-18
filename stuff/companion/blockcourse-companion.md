@@ -87,6 +87,7 @@ and the analysis code.
 - Code: R scripts
   - `code/00_setup.R`
   - `code/elisa/elisa_standard_curve.R`
+  - `code/flow/panel_spectra.R`
   - `code/scrnaseq/01_load_and_qc.R`
   - `code/scrnaseq/02_cluster.R`
   - `code/scrnaseq/03_markers.R`
@@ -1145,7 +1146,7 @@ the photograph of each condition on Wednesday morning.
 | | |
 |---|---|
 | ID | C3 |
-| Used in | Exp 1 (core: polarized J774A.1 cells on the minimal panel, week 2); X02 (extension: peritoneal cells on the full panel) |
+| Used in | Exp 1 (core: polarized J774A.1 cells on the minimal panel, week 2); X02 (extension: peritoneal cells on the full panel, listed in X02) |
 | Hands-on time | 3 h staining including fixation and permeabilization, 1 h acquisition |
 | Wall-clock time | half a day; fixed samples can be acquired the next day |
 | Resources | hood, cooled centrifuge with plate rotor, heating block, BD FACSymphony A5 SE slot reserved by the facility `[TODO: slot dates]`, FlowJo seat |
@@ -1162,78 +1163,54 @@ control must not; only then does the polarizer's result count. Flow on challenge
 cells (week 3) is an extension and needs a slot from the facility's regular booking
 calendar.
 
-There are two panels. The core runs the **minimal panel** (five colours) on
-J774A.1 cells: a pure macrophage line needs no lineage markers. The **full panel**
-(sixteen colours) is for primary peritoneal cells in the extension X02. It carries
-the five colours of the minimal panel on the same fluorochromes, so in vitro and
-tissue cells can be compared directly in the same session.
+The core runs a **minimal panel** of five colours on J774A.1 cells: a pure
+macrophage line needs no lineage markers. Primary peritoneal cells in the extension
+X02 run a sixteen-colour full panel, listed there; it carries these five colours on
+the same fluorochromes, so in vitro and tissue cells can be compared directly in the
+same session.
 
 ### Materials
 
-Two antibody panels, collapsed below: click a panel to open it. Copy a table
-straight into Excel, or download both as one workbook:
-[C3_panels.xlsx](C3_panels.xlsx). **lab** = in the lab's stock, dilution from the
-lab's panel workbook (titrated with 1 × 10^6 cells in 50 µL); **order** = to order
-and titrate before the course. Detectors are for the BD FACSymphony A5 SE.
+Click the panel to open it. Copy the table straight into Excel, or download both
+course panels as one workbook: [flow_panels.xlsx](flow_panels.xlsx). **lab** = in
+the lab's stock, dilution from the lab's panel workbook (titrated with 1 × 10^6
+cells in 50 µL); **order** = to order and titrate before the course. Detectors are
+for the BD FACSymphony A5 SE.
 
-<!-- The tables below are the source. After editing them, rebuild the workbook:
-     python3 stuff/tools/panels/c3_panels_xlsx.py -->
+<!-- The panel tables in C3 and X02 are the source. After editing them, rebuild the
+     workbook: python3 stuff/tools/panels/flow_panels_xlsx.py
+     and the spectra: Rscript code/flow/panel_spectra.R -->
 
 <details>
 <summary><b>Minimal panel</b>: core, J774A.1, 5 colours + Fc block</summary>
 
-| Fluorochrome | Detector | Target | Purpose | Clone | Cat. no. | Compartment | Dilution | Status |
-|---|---|---|---|---|---|---|---|---|
-| eFluor 506 | V510 | live/dead | exclude dead cells | n/a | Thermo 65-0866-18 | before fixation | 1:700 | lab |
-| BV421 | V450 | CD86 | M(IFNγ), LPS | GL-1 | BioLegend 105031 | surface | titrate | order |
-| BV650 | V655 | CD206 (MMR) | M(IL-4) | C068C2 | BioLegend 141723 | intracellular | titrate | order |
-| AF700 | R730 | MHCII (I-A/I-E) | M(IFNγ) | M5/114 | Thermo 56-5321-82 | surface | 1:100 | lab |
-| PE-Cy7 | YG780 | Arginase 1 | M(IL-4) | A1exF5 | Thermo 25-3697-82 | intracellular | titrate | order |
-| none | n/a | CD16/32 (Fc block) | block Fc receptors | n/a | BioLegend 101302 | surface | 1:100 | lab |
+Rows by laser: ⬛ UV 355 nm, 🟪 violet 405 nm, 🟦 blue 488 nm, 🟨 yellow-green 561 nm, 🟥 red 637 nm.
 
-</details>
+| Laser | Fluorochrome | Detector | Target | Purpose | Clone | Cat. no. | Compartment | Dilution | Status |
+|---|---|---|---|---|---|---|---|---|---|
+| 🟪 Violet 405 | BV421 | V450 | CD86 | M(IFNγ), LPS | GL-1 | BioLegend 105031 | surface | titrate | order |
+| 🟪 Violet 405 | eFluor 506 | V510 | live/dead | exclude dead cells | n/a | Thermo 65-0866-18 | before fixation | 1:700 | lab |
+| 🟪 Violet 405 | BV650 | V655 | CD206 (MMR) | M(IL-4) | C068C2 | BioLegend 141723 | intracellular | titrate | order |
+| 🟨 YG 561 | PE-Cy7 | YG780 | Arginase 1 | M(IL-4) | A1exF5 | Thermo 25-3697-82 | intracellular | titrate | order |
+| 🟥 Red 637 | AF700 | R730 | MHCII (I-A/I-E) | M(IFNγ) | M5/114 | Thermo 56-5321-82 | surface | 1:100 | lab |
+| n/a | none | n/a | CD16/32 (Fc block) | block Fc receptors | n/a | BioLegend 101302 | surface | 1:100 | lab |
 
-<details>
-<summary><b>Full panel</b>: extension X02, primary peritoneal cells, 16 colours + Fc block</summary>
+![Emission spectra of the minimal panel by laser](figures/C3_minimal_panel_spectra.png)
 
-| Fluorochrome | Detector | Target | Purpose | Clone | Cat. no. | Compartment | Dilution | Status |
-|---|---|---|---|---|---|---|---|---|
-| BUV395 | UV379 | F4/80 | macrophages | T45-2342 | BD 565614 | surface | 1:150 | lab |
-| BUV496 | UV515 | CD45 | leukocytes | I3/2 | BD 752411 | surface | 1:300 | lab |
-| BUV563 | UV585 | CD11c | dendritic cells | N418 | BD 749040 | surface | 1:200 | lab |
-| BV421 | V450 | CD86 | M(IFNγ), LPS | GL-1 | BioLegend 105031 | surface | titrate | order |
-| eFluor 506 | V510 | live/dead | exclude dead cells | n/a | Thermo 65-0866-18 | before fixation | 1:700 | lab |
-| BV605 | V585 | CD3 | T cells (exclude) | 17A2 | BioLegend 100237 | surface | 1:100 | lab |
-| BV650 | V655 | CD206 (MMR) | M(IL-4) | C068C2 | BioLegend 141723 | intracellular | titrate | order |
-| BV786 | V785 | CD117 (c-Kit) | mast cells (exclude) | ACK2 | BD 752699 | surface | 1:200 | lab |
-| AF488 | B510 | Ly-6G | neutrophils (exclude) | 1A8 | BioLegend 127625 | surface | titrate | order |
-| Spark Blue 550 | B537 | CD19 | B cells (exclude) | `[TODO]` | BioLegend 115566 | surface | 1:400 | lab |
-| PerCP-Cy5.5 | B710 | Ly-6C | monocytes | HK1.4 | Thermo 45-5932-82 | surface | 1:200 | lab |
-| PE-Dazzle 594 | PE-Texas Red | CD170 (Siglec-F) | eosinophils (exclude) | S17007L | BioLegend 155529 | surface | 1:300 | lab |
-| PE-Cy7 | YG780 | Arginase 1 | M(IL-4) | A1exF5 | Thermo 25-3697-82 | intracellular | titrate | order |
-| AF700 | R730 | MHCII (I-A/I-E) | M(IFNγ); small peritoneal macrophages | M5/114 | Thermo 56-5321-82 | surface | 1:100 | lab |
-| APC-Cy7 | R780 | CD11b | myeloid cells | M1/70 | BioLegend 101226 | surface | 1:400 | lab |
-| none | n/a | CD16/32 (Fc block) | block Fc receptors | n/a | BioLegend 101302 | surface | 1:100 | lab |
-
-Changes from the lab's earlier sheet: Ly-6G moves from PE-Cy7 to AF488 and from
-clone RB6-8C5 (Gr-1, binds Ly-6G and Ly-6C) to the Ly-6G-specific 1A8, the better
-partner for Ly-6C HK1.4; Arg1 takes PE-Cy7, CD86 BV421, CD206 BV650. The PE
-detector stays empty.
+Spectra from [FPbase](https://www.fpbase.org), plotted by
+[code/flow/panel_spectra.R](../code/flow/panel_spectra.R).
 
 </details>
 
 > [!IMPORTANT]
 > **To verify:** check every detector name against the facility's configuration of
-> the A5 SE (BV605 in particular: the lab sheet says V585, but BV605 is normally
-> read near 605 nm), and confirm that it resolves AF488 (Ly-6G) and Spark Blue 550
-> (CD19) in separate detectors before Ly-6G is ordered. Titrate CD86, CD206, Arg1
-> and Ly-6G before the course by stain index on a positive and a negative
-> population (Arg1 and CD206 after fixation and permeabilization); the vendor
-> suggests 0.5 µg per test for Arg1. CD86 GL-1 and CD206 C068C2 have been used on
-> J774A.1 by flow (J Neuroinflammation 2020, doi:10.1186/s12974-020-01860-y); for
-> Arg1 A1exF5 no J774A.1 flow data were found, so the IL-4 control decides.
-> Pack sizes: CD86 105031 (125 µL) or 105032 (50 µg); Arg1 25-3697-82 (100 µg) or
-> 25-3697-80 (25 µg); Ly-6G 127625 (25 µg) or 127626 (100 µg).
+> the A5 SE. Titrate CD86, CD206 and Arg1 before the course by stain index on a
+> positive and a negative population (CD206 and Arg1 after fixation and
+> permeabilization); the vendor suggests 0.5 µg per test for Arg1. CD86 GL-1 and
+> CD206 C068C2 have been used on J774A.1 by flow (J Neuroinflammation 2020,
+> doi:10.1186/s12974-020-01860-y); for Arg1 A1exF5 no J774A.1 flow data were found,
+> so the IL-4 control decides. Pack sizes: CD86 105031 (125 µL) or 105032 (50 µg);
+> Arg1 25-3697-82 (100 µg) or 25-3697-80 (25 µg).
 
 Reagents:
 
@@ -1803,7 +1780,7 @@ state and stimulus, housekeepers named.
 | Hands-on time | 30 min receiving, counting and lysis, then staining as C3 |
 | Wall-clock time | half a day, coordinated with a cytometer slot |
 | Resources | ice, cooled centrifuge, counter, cytometer slot |
-| Depends on | C3 full panel and a reserved cytometer slot; polarized J774A.1 cells ready on the same day; a surplus peritoneal cell suspension provided by staff |
+| Depends on | C3 staining procedure, the full panel below and a reserved cytometer slot; polarized J774A.1 cells ready on the same day; a surplus peritoneal cell suspension provided by staff |
 | Lab SOP | Zindel lab "Flow cytometry" (v1.2) and "Flow cytometry antibody titration" for the staining; the SOP wins over this page. |
 
 ### Purpose
@@ -1821,6 +1798,57 @@ macrophage gate.
 - ACK erythrocyte lysis buffer if the suspension is bloody (recipe in the protocol
   index)
 - Counter, FACS reagents as in C3
+
+Full panel: the five colours of the C3 minimal panel on the same fluorochromes,
+plus lineage markers. Click to open; copy into Excel or download
+[flow_panels.xlsx](flow_panels.xlsx). **lab** = in the lab's stock, dilution from
+the lab's panel workbook; **order** = to order and titrate before the course.
+Detectors are for the BD FACSymphony A5 SE.
+
+<details>
+<summary><b>Full panel</b>: primary peritoneal cells, 16 colours + Fc block</summary>
+
+Rows by laser: ⬛ UV 355 nm, 🟪 violet 405 nm, 🟦 blue 488 nm, 🟨 yellow-green 561 nm, 🟥 red 637 nm.
+
+| Laser | Fluorochrome | Detector | Target | Purpose | Clone | Cat. no. | Compartment | Dilution | Status |
+|---|---|---|---|---|---|---|---|---|---|
+| ⬛ UV 355 | BUV395 | UV379 | F4/80 | macrophages | T45-2342 | BD 565614 | surface | 1:150 | lab |
+| ⬛ UV 355 | BUV496 | UV515 | CD45 | leukocytes | I3/2 | BD 752411 | surface | 1:300 | lab |
+| ⬛ UV 355 | BUV563 | UV585 | CD11c | dendritic cells | N418 | BD 749040 | surface | 1:200 | lab |
+| 🟪 Violet 405 | BV421 | V450 | CD86 | M(IFNγ), LPS | GL-1 | BioLegend 105031 | surface | titrate | order |
+| 🟪 Violet 405 | eFluor 506 | V510 | live/dead | exclude dead cells | n/a | Thermo 65-0866-18 | before fixation | 1:700 | lab |
+| 🟪 Violet 405 | BV605 | V585 | CD3 | T cells (exclude) | 17A2 | BioLegend 100237 | surface | 1:100 | lab |
+| 🟪 Violet 405 | BV650 | V655 | CD206 (MMR) | M(IL-4) | C068C2 | BioLegend 141723 | intracellular | titrate | order |
+| 🟪 Violet 405 | BV786 | V785 | CD117 (c-Kit) | mast cells (exclude) | ACK2 | BD 752699 | surface | 1:200 | lab |
+| 🟦 Blue 488 | AF488 | B510 | Ly-6G | neutrophils (exclude) | 1A8 | BioLegend 127625 | surface | titrate | order |
+| 🟦 Blue 488 | Spark Blue 550 | B537 | CD19 | B cells (exclude) | `[TODO]` | BioLegend 115566 | surface | 1:400 | lab |
+| 🟦 Blue 488 | PerCP-Cy5.5 | B710 | Ly-6C | monocytes | HK1.4 | Thermo 45-5932-82 | surface | 1:200 | lab |
+| 🟨 YG 561 | PE-Dazzle 594 | PE-Texas Red | CD170 (Siglec-F) | eosinophils (exclude) | S17007L | BioLegend 155529 | surface | 1:300 | lab |
+| 🟨 YG 561 | PE-Cy7 | YG780 | Arginase 1 | M(IL-4) | A1exF5 | Thermo 25-3697-82 | intracellular | titrate | order |
+| 🟥 Red 637 | AF700 | R730 | MHCII (I-A/I-E) | M(IFNγ); small peritoneal macrophages | M5/114 | Thermo 56-5321-82 | surface | 1:100 | lab |
+| 🟥 Red 637 | APC-Cy7 | R780 | CD11b | myeloid cells | M1/70 | BioLegend 101226 | surface | 1:400 | lab |
+| n/a | none | n/a | CD16/32 (Fc block) | block Fc receptors | n/a | BioLegend 101302 | surface | 1:100 | lab |
+
+![Emission spectra of the full panel by laser](figures/X02_full_panel_spectra.png)
+
+Spectra from [FPbase](https://www.fpbase.org), plotted by
+[code/flow/panel_spectra.R](../code/flow/panel_spectra.R). AF488 and Spark Blue 550
+peak 15 nm apart on the same laser: the reason for the warning below.
+
+Changes from the lab's earlier sheet: Ly-6G moves from PE-Cy7 to AF488 and from
+clone RB6-8C5 (Gr-1, binds Ly-6G and Ly-6C) to the Ly-6G-specific 1A8, the better
+partner for Ly-6C HK1.4; Arg1 takes PE-Cy7, CD86 BV421, CD206 BV650. The PE
+detector stays empty.
+
+</details>
+
+> [!IMPORTANT]
+> **To verify:** check every detector name against the facility's configuration of
+> the A5 SE (BV605 in particular: the lab sheet says V585, but BV605 is normally
+> read near 605 nm), and confirm that it resolves AF488 (Ly-6G) and Spark Blue 550
+> (CD19) in separate detectors before Ly-6G is ordered. Titrate Ly-6G on cells with
+> neutrophils (pack sizes 127625, 25 µg, or 127626, 100 µg); CD86, CD206 and Arg1
+> are titrated for C3.
 
 ### Before you start
 
@@ -1844,7 +1872,7 @@ macrophage gate.
    buffer, **`room temperature, 2 min`**, top up with buffer and centrifuge again.
 3. Resuspend in FACS buffer and count. Expect large peritoneal macrophages to be
    roughly a third of the cells in a healthy sample.
-4. Stain with the full panel (C3), surface first, then fixation, permeabilization
+4. Stain with the full panel (below; procedure as in C3), surface first, then fixation, permeabilization
    and the intracellular CD206 and Arg1 stain, and acquire in the same session as
    the polarized J774A.1 cells.
 5. Gate: live single CD45+ cells; remove T cells (CD3), B cells (CD19),
@@ -5698,6 +5726,7 @@ introduced a couple bugs for teaching purposes.
 | Folder | Purpose | Input | Output |
 |---|---|---|---|
 | [`elisa/`](elisa/README.md) | Four-parameter logistic standard curve, concentration table, plots by condition (C5). Runs on the lab's IL-6 example data | tidy CSV (one row per well) | `elisa_results.csv`, `elisa_summary.csv`, figure |
+| [`flow/`](flow/panel_spectra.R) | Emission spectra of the flow panels by laser (C3, X02), to see where dyes spill into each other | public spectra from FPbase, downloaded by the script | two figures in `protocols/figures/` |
 | [`scrnaseq/`](scrnaseq/README.md) | Experiment 2, three parts (below), five scripts; run from GEO in about 3 min | GEO matrices and a published signature table, downloaded by the scripts | figures, Seurat objects, scores |
 
 ### Single-cell RNA-seq (Experiment 2), `scrnaseq/`
@@ -5897,6 +5926,155 @@ p2 <- ggplot(summ, aes(condition, mean_pg_ml)) +
 
 p1 + p2
 ggsave(file.path(outdir, "elisa_figure.png"), p1 + p2, width = 10, height = 4.25)
+```
+
+---
+
+<!-- file: code/flow/panel_spectra.R -->
+
+```r
+# Flow panels: emission spectra of every dye, one row per laser.
+#
+# Why: two dyes excited by the same laser and emitting close together spill into
+# each other's detectors. Seeing the curves on top of each other shows where
+# compensation will matter (C3 minimal panel, X02 full panel).
+#
+# Data: public spectra from FPbase (https://www.fpbase.org; Lambert, Nat Methods
+# 2019), downloaded when you run the script, so you need internet. Nothing is
+# stored in the repository.
+#
+# Output: protocols/figures/C3_minimal_panel_spectra.png and
+#         protocols/figures/X02_full_panel_spectra.png
+
+## load packages
+library(ggplot2)
+library(dplyr)
+library(here)
+
+# 1. The panels. One row per dye: the laser that excites it, the target, and the
+#    FPbase spectrum id of its emission spectrum (look ids up on fpbase.org,
+#    "Spectra viewer", or ask us). Keep this in step with the panel tables in
+#    protocols/C3_flow_cytometry.md and protocols/X02_peritoneal_cells_flow.md.
+#    BV786 (BD) is plotted with the spectrum of BV785 (BioLegend), the same dye.
+
+panel <- tribble(
+  ~dye,             ~target,      ~laser,          ~fpbase_em, ~minimal,
+  "BUV395",         "F4/80",      "UV 355 nm",      4727,      FALSE,
+  "BUV496",         "CD45",       "UV 355 nm",      4729,      FALSE,
+  "BUV563",         "CD11c",      "UV 355 nm",      4731,      FALSE,
+  "BV421",          "CD86",       "Violet 405 nm",  4739,      TRUE,
+  "eFluor 506",     "live/dead",  "Violet 405 nm",  4205,      TRUE,
+  "BV605",          "CD3",        "Violet 405 nm",  4745,      FALSE,
+  "BV650",          "CD206",      "Violet 405 nm",  4747,      TRUE,
+  "BV786",          "CD117",      "Violet 405 nm",  4753,      FALSE,
+  "AF488",          "Ly-6G",      "Blue 488 nm",    205,       FALSE,
+  "Spark Blue 550", "CD19",       "Blue 488 nm",    6632,      FALSE,
+  "PerCP-Cy5.5",    "Ly-6C",      "Blue 488 nm",    4545,      FALSE,
+  "PE-Dazzle 594",  "Siglec-F",   "YG 561 nm",      4799,      FALSE,
+  "PE-Cy7",         "Arg1",       "YG 561 nm",      4336,      TRUE,
+  "AF700",          "MHCII",      "Red 637 nm",     197,       TRUE,
+  "APC-Cy7",        "CD11b",      "Red 637 nm",     4715,      FALSE
+)
+
+lasers <- c("UV 355 nm" = 355, "Violet 405 nm" = 405, "Blue 488 nm" = 488,
+            "YG 561 nm" = 561, "Red 637 nm" = 637)
+
+# 2. Download the spectra: one CSV, a wavelength column plus one column per dye.
+url <- paste0("https://www.fpbase.org/spectra_csv/?q=",
+              paste(panel$fpbase_em, collapse = ","))
+wide <- read.csv(url, check.names = FALSE)
+
+# The columns are named after FPbase's dye names plus " em", in no fixed order;
+# this lookup maps them back to the names we use in the panel.
+fpbase_names <- c(
+  "BD Horizon BUV395" = "BUV395", "BD Horizon BUV496" = "BUV496",
+  "BD Horizon BUV563" = "BUV563", "Brilliant Violet 421" = "BV421",
+  "Fixable Viability Dye eFluor 506" = "eFluor 506",
+  "Brilliant Violet 605" = "BV605", "Brilliant Violet 650" = "BV650",
+  "Brilliant Violet 785" = "BV786", "Alexa Fluor 488" = "AF488",
+  "Spark Blue 550" = "Spark Blue 550", "PerCP-Cy5.5" = "PerCP-Cy5.5",
+  "PE/Dazzle 594" = "PE-Dazzle 594", "PE-Cy7" = "PE-Cy7",
+  "Alexa Fluor 700" = "AF700", "APC/Cy7" = "APC-Cy7")
+
+# 3. Long format: one row per dye and wavelength, emission scaled to a peak of 1.
+spectra <- bind_rows(lapply(names(wide)[-1], function(col) {
+  data.frame(dye = fpbase_names[[sub(" em$", "", col)]],
+             wavelength = wide$wavelength,
+             emission = wide[[col]])
+})) |>
+  filter(!is.na(emission), wavelength <= 850) |>
+  group_by(dye) |>
+  mutate(emission = emission / max(emission)) |>
+  ungroup() |>
+  left_join(panel, by = "dye") |>
+  mutate(laser = factor(laser, levels = names(lasers)),
+         label = paste0(dye, "\n", target))
+
+# 4. Colour every dye by the colour of light at its emission peak (what the eye
+#    would see), dark red for the far red and infrared it cannot see.
+wavelength_colour <- function(nm) {
+  r <- g <- b <- 0
+  if (nm < 440)      { r <- (440 - nm) / 60; b <- 1 }
+  else if (nm < 490) { g <- (nm - 440) / 50; b <- 1 }
+  else if (nm < 510) { g <- 1; b <- (510 - nm) / 20 }
+  else if (nm < 580) { r <- (nm - 510) / 70; g <- 1 }
+  else if (nm < 645) { r <- 1; g <- (645 - nm) / 65 }
+  else               { r <- 1 }
+  dim <- if (nm < 420) 0.4 + 0.6 * (nm - 380) / 40 else if (nm > 700) max(0.35, 1 - (nm - 700) / 150) else 1
+  rgb(max(r, 0) * dim, max(g, 0) * dim, max(b, 0) * dim)
+}
+
+peaks <- spectra |>
+  group_by(dye, label, laser, minimal) |>
+  slice_max(emission, n = 1, with_ties = FALSE) |>
+  ungroup()
+
+# Labels sit above the peak; when two peaks of one laser are closer than 40 nm,
+# the second label goes one step higher so they do not overlap.
+stagger <- function(pk) {
+  pk |>
+    arrange(laser, wavelength) |>
+    group_by(laser) |>
+    mutate(label_y = ifelse(c(Inf, diff(wavelength)) < 40, 1.45, 1.03)) |>
+    ungroup()
+}
+dye_colours <- setNames(sapply(pmax(peaks$wavelength, 380), wavelength_colour), peaks$dye)
+
+# 5. The figure: one row per laser, the laser line dashed, each dye labelled at
+#    its peak.
+plot_panel <- function(spec, pk, title) {
+  laser_lines <- data.frame(laser = factor(names(lasers), levels = names(lasers)),
+                            nm = lasers) |>
+    filter(laser %in% spec$laser)
+  ggplot(spec, aes(wavelength, emission, fill = dye, colour = dye)) +
+    geom_vline(data = laser_lines, aes(xintercept = nm), linetype = "dashed",
+               colour = "grey40", inherit.aes = FALSE) +
+    geom_area(alpha = 0.35, position = "identity", linewidth = 0.6) +
+    geom_text(data = stagger(pk), aes(y = label_y, label = label), vjust = 0, size = 2.8,
+              lineheight = 0.9, show.legend = FALSE) +
+    facet_wrap(~ laser, ncol = 1, drop = TRUE) +
+    scale_fill_manual(values = dye_colours, guide = "none") +
+    scale_colour_manual(values = dye_colours, guide = "none") +
+    scale_x_continuous(breaks = seq(350, 850, 50)) +
+    scale_y_continuous(breaks = c(0, 0.5, 1)) +
+    coord_cartesian(xlim = c(340, 850), ylim = c(0, 1.8)) +
+    labs(title = title, x = "Wavelength (nm)", y = "Emission (normalized)",
+         caption = "Spectra: FPbase.org. Dashed line: excitation laser.") +
+    theme_minimal(base_size = 10) +
+    theme(panel.grid.minor = element_blank(),
+          strip.text = element_text(face = "bold", hjust = 0))
+}
+
+figdir <- here("protocols", "figures")
+
+minimal <- plot_panel(filter(spectra, minimal), filter(peaks, minimal),
+                      "C3 minimal panel: emission spectra by laser")
+ggsave(file.path(figdir, "C3_minimal_panel_spectra.png"), minimal,
+       width = 7, height = 4, dpi = 200, bg = "white")
+
+full <- plot_panel(spectra, peaks, "X02 full panel: emission spectra by laser")
+ggsave(file.path(figdir, "X02_full_panel_spectra.png"), full,
+       width = 7, height = 8, dpi = 200, bg = "white")
 ```
 
 ---
