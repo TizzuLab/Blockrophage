@@ -1181,7 +1181,7 @@ course. Detectors are for the BD FACSymphony A5 SE.
 | eFluor 506 | V510 | live/dead | exclude dead cells | n/a | Thermo 65-0866-18 | before fixation | 1:700 | lab |
 | BV421 | V450 `[TODO: check detector]` | CD86 | M(IFNγ), LPS | GL-1 | BioLegend 105031 (125 µL) / 105032 (50 µg) | surface | `[TODO: titrate]` | order |
 | BV650 | V655 `[TODO: check detector]` | CD206 (MMR) | M(IL-4) | C068C2 | BioLegend 141723 (50 µg) | intracellular | `[TODO: titrate]` | order |
-| AF700 | R730 | MHCII (I-A/I-E) | M(IFNγ) | M5/114 | Thermo 56-5321-82 | surface | 1:150 `[TODO: workbook gives factor 150 but ratio 1:100; confirm]` | lab |
+| AF700 | R730 | MHCII (I-A/I-E) | M(IFNγ) | M5/114 | Thermo 56-5321-82 | surface | 1:100 | lab |
 | PE-Cy7 | YG780 | Arginase 1 | M(IL-4) | A1exF5 | Thermo 25-3697-82 (100 µg) / 25-3697-80 (25 µg) | intracellular | `[TODO: titrate; vendor: 0.5 µg/test]` | order |
 | none | n/a | CD16/32 (Fc block) | block Fc receptors | n/a | BioLegend 101302 | surface | 1:100 | lab |
 
@@ -1204,10 +1204,10 @@ detector stays empty.
 | BV786 | V785 | CD117 (c-Kit) | ACK2 | BD 752699 | surface | 1:200 | lab |
 | AF488 | B510 `[TODO: check detector]` | Ly-6G | 1A8 | BioLegend 127625 (25 µg) / 127626 (100 µg) | surface | `[TODO: titrate]` | order |
 | Spark Blue 550 | B537 | CD19 | `[TODO: clone as on the lab sheet]` | BioLegend 115566 | surface | 1:400 | lab |
-| RB705 | B710 | Ly-6C | HK1.4 | Thermo 45-5932-82 `[TODO: this number is the PerCP-Cy5.5 conjugate; confirm the fluorochrome]` | surface | 1:200 | lab |
+| PerCP-Cy5.5 | B710 | Ly-6C | HK1.4 | Thermo 45-5932-82 | surface | 1:200 | lab |
 | PE-Dazzle 594 | PE-Texas Red | CD170 (Siglec-F) | S17007L | BioLegend 155529 | surface | 1:300 | lab |
 | PE-Cy7 | YG780 | Arginase 1 | A1exF5 | Thermo 25-3697-82 / 25-3697-80 | intracellular | `[TODO: titrate; vendor: 0.5 µg/test]` | order |
-| AF700 | R730 | MHCII (I-A/I-E) | M5/114 | Thermo 56-5321-82 | surface | 1:150 `[TODO: confirm, as above]` | lab |
+| AF700 | R730 | MHCII (I-A/I-E) | M5/114 | Thermo 56-5321-82 | surface | 1:100 | lab |
 | APC-Cy7 | R780 | CD11b | M1/70 | BioLegend 101226 | surface | 1:400 | lab |
 | none | n/a | CD16/32 (Fc block) | n/a | BioLegend 101302 | surface | 1:100 | lab |
 
