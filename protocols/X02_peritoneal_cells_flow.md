@@ -65,9 +65,15 @@ Rows by laser: ⬛ UV 355 nm, 🟪 violet 405 nm, 🟦 blue 488 nm, 🟨 yellow-
 
 ![Emission spectra of the full panel by laser](figures/X02_full_panel_spectra.png)
 
-Spectra from [FPbase](https://www.fpbase.org), plotted by
-[code/flow/panel_spectra.R](../code/flow/panel_spectra.R). AF488 and Spark Blue 550
-peak 15 nm apart on the same laser: the reason for the warning below.
+![Theoretical spillover matrix of the full panel](figures/X02_full_panel_spillover.png)
+
+Spectra from [FPbase](https://www.fpbase.org) and filters of a published A5 SE
+configuration, plotted by [code/flow/panel_spectra.R](../code/flow/panel_spectra.R).
+The matrix is theoretical (no laser power, no voltages); the one you compensate with
+comes from the single stains of the day. Read it for the hot spots: AF488 puts more
+light into B537 (Spark Blue 550) than into its own B510, BV605 spills 62% into V660
+(BV650, CD206), APC-Cy7 shows up in YG780 (PE-Cy7, Arg1), and eFluor 506 is excited
+by the UV laser and lands in UV515 (BUV496, CD45).
 
 Changes from the lab's earlier sheet: Ly-6G moves from PE-Cy7 to AF488 and from
 clone RB6-8C5 (Gr-1, binds Ly-6G and Ly-6C) to the Ly-6G-specific 1A8, the better
@@ -83,7 +89,7 @@ detector stays empty.
 > BV650 to V660 (660/30) and PE-Dazzle 594 to YG602 (602/40). Before Ly-6G is
 > ordered, look hard at AF488 against Spark Blue 550: with B510 at 510/20 and B537
 > at 537/32, more AF488 light falls into B537 than into its own detector
-> (theoretical, from the spectra; `code/flow/panel_spectra.R` prints the table).
+> (theoretical, see the spillover matrix above).
 > They mark different cells and both serve as exclusion gates, so it can work, but
 > a Ly-6G dye on another laser may be the cleaner choice. Titrate Ly-6G on cells with
 > neutrophils (pack sizes 127625, 25 µg, or 127626, 100 µg); CD86, CD206 and Arg1

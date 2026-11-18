@@ -9,8 +9,10 @@
 # stored in the repository.
 #
 # Output: protocols/figures/C3_minimal_panel_spectra.png and
-#         protocols/figures/X02_full_panel_spectra.png, and in the console a table
-#         of how much of each dye lands in the other detectors of its laser.
+#         protocols/figures/X02_full_panel_spectra.png (spectra), and
+#         protocols/figures/C3_minimal_panel_spillover.png and
+#         protocols/figures/X02_full_panel_spillover.png (theoretical spillover
+#         matrix), with the matrices as CSV in code/flow/output/.
 
 ## load packages
 library(ggplot2)
@@ -18,7 +20,7 @@ library(dplyr)
 library(here)
 
 # 1. The panels. One row per dye: the laser that excites it, the target, and the
-#    FPbase spectrum id of its emission spectrum (look ids up on fpbase.org,
+#    FPbase spectrum ids of its emission and excitation spectra (look ids up on fpbase.org,
 #    "Spectra viewer", or ask us). Keep this in step with the panel tables in
 #    protocols/C3_flow_cytometry.md and protocols/X02_peritoneal_cells_flow.md.
 #    BV786 (BD) is plotted with the spectrum of BV785 (BioLegend), the same dye.
@@ -31,22 +33,22 @@ library(here)
 #    V585), BV650 in V660 (sheet: V655), PE-Dazzle 594 in YG602 (sheet: PE-Texas Red).
 
 panel <- tribble(
-  ~dye,             ~target,      ~laser,          ~fpbase_em, ~minimal, ~detector, ~bp_centre, ~bp_width,
-  "BUV395",         "F4/80",      "UV 355 nm",      4727,      FALSE,    "UV379",   379,        34,
-  "BUV496",         "CD45",       "UV 355 nm",      4729,      FALSE,    "UV515",   515,        60,
-  "BUV563",         "CD11c",      "UV 355 nm",      4731,      FALSE,    "UV585",   585,        30,
-  "BV421",          "CD86",       "Violet 405 nm",  4739,      TRUE,     "V450",    450,        40,
-  "eFluor 506",     "live/dead",  "Violet 405 nm",  4205,      TRUE,     "V510",    510,        40,
-  "BV605",          "CD3",        "Violet 405 nm",  4745,      FALSE,    "V615",    615,        25,
-  "BV650",          "CD206",      "Violet 405 nm",  4747,      TRUE,     "V660",    660,        30,
-  "BV786",          "CD117",      "Violet 405 nm",  4753,      FALSE,    "V785",    785,        50,
-  "AF488",          "Ly-6G",      "Blue 488 nm",    205,       FALSE,    "B510",    510,        20,
-  "Spark Blue 550", "CD19",       "Blue 488 nm",    6632,      FALSE,    "B537",    537,        32,
-  "PerCP-Cy5.5",    "Ly-6C",      "Blue 488 nm",    4545,      FALSE,    "B710",    710,        50,
-  "PE-Dazzle 594",  "Siglec-F",   "YG 561 nm",      4799,      FALSE,    "YG602",   602,        40,
-  "PE-Cy7",         "Arg1",       "YG 561 nm",      4336,      TRUE,     "YG780",   780,        60,
-  "AF700",          "MHCII",      "Red 637 nm",     197,       TRUE,     "R730",    730,        50,
-  "APC-Cy7",        "CD11b",      "Red 637 nm",     4715,      FALSE,    "R780",    780,        60
+  ~dye,             ~target,      ~laser,          ~fpbase_em, ~fpbase_ex, ~minimal, ~detector, ~bp_centre, ~bp_width,
+  "BUV395",         "F4/80",      "UV 355 nm",      4727,      4726,  FALSE,    "UV379",   379,        34,
+  "BUV496",         "CD45",       "UV 355 nm",      4729,      4728,  FALSE,    "UV515",   515,        60,
+  "BUV563",         "CD11c",      "UV 355 nm",      4731,      4730,  FALSE,    "UV585",   585,        30,
+  "BV421",          "CD86",       "Violet 405 nm",  4739,      4738,  TRUE,     "V450",    450,        40,
+  "eFluor 506",     "live/dead",  "Violet 405 nm",  4205,      4204,  TRUE,     "V510",    510,        40,
+  "BV605",          "CD3",        "Violet 405 nm",  4745,      4744,  FALSE,    "V615",    615,        25,
+  "BV650",          "CD206",      "Violet 405 nm",  4747,      4746,  TRUE,     "V660",    660,        30,
+  "BV786",          "CD117",      "Violet 405 nm",  4753,      4752,  FALSE,    "V785",    785,        50,
+  "AF488",          "Ly-6G",      "Blue 488 nm",    205,       204,   FALSE,    "B510",    510,        20,
+  "Spark Blue 550", "CD19",       "Blue 488 nm",    6632,      6631,  FALSE,    "B537",    537,        32,
+  "PerCP-Cy5.5",    "Ly-6C",      "Blue 488 nm",    4545,      4544,  FALSE,    "B710",    710,        50,
+  "PE-Dazzle 594",  "Siglec-F",   "YG 561 nm",      4799,      4798,  FALSE,    "YG602",   602,        40,
+  "PE-Cy7",         "Arg1",       "YG 561 nm",      4336,      4335,  TRUE,     "YG780",   780,        60,
+  "AF700",          "MHCII",      "Red 637 nm",     197,       196,   TRUE,     "R730",    730,        50,
+  "APC-Cy7",        "CD11b",      "Red 637 nm",     4715,      4714,  FALSE,    "R780",    780,        60
 )
 
 lasers <- c("UV 355 nm" = 355, "Violet 405 nm" = 405, "Blue 488 nm" = 488,
@@ -161,22 +163,88 @@ full <- plot_panel(spectra, peaks, "X02 full panel: emission spectra by laser")
 ggsave(file.path(figdir, "X02_full_panel_spectra.png"), full,
        width = 7, height = 8, dpi = 200, bg = "white")
 
-# 6. Theoretical spillover: the share of each dye's emission that falls into each
-#    detector of the same laser, relative to its own detector. Only emission is
-#    counted, not how strongly each laser excites the dye, so this is the shape of
-#    the problem, not the compensation matrix; that one comes from the single stains.
-in_band <- function(d, centre, width) {
-  sum(d$emission[abs(d$wavelength - centre) <= width / 2])
-}
-spill <- bind_rows(lapply(split(spectra, spectra$dye), function(d) {
-  own <- panel[panel$dye == d$dye[1], ]
-  others <- panel[panel$laser == own$laser & panel$dye != own$dye, ]
-  data.frame(from = own$dye, into = paste0(others$detector, " (", others$dye, ")"),
-             percent = round(100 * sapply(seq_len(nrow(others)), function(i)
-               in_band(d, others$bp_centre[i], others$bp_width[i])) /
-               in_band(d, own$bp_centre, own$bp_width)))
+# 6. Theoretical spillover matrix, the table FlowJo shows when you compensate.
+#    Row: the dye on a single-stained sample. Column: a detector. Value: the
+#    signal in that detector as % of the signal in the dye's own detector (100%).
+#    Signal = how well the detector's laser excites the dye (excitation spectrum
+#    at the laser line) x how much of the dye's emission passes the detector's
+#    bandpass filter. This includes cross-laser excitation, e.g. PE-Cy7 on the
+#    blue laser.
+#    What it leaves out: laser power, detector voltages, brightness of the
+#    antibody, and the filter sets of the ETH instrument. So it predicts where
+#    the problems are, not the numbers: the real matrix comes from the single
+#    stains on the day, recorded with the same settings as the samples.
+
+ex_url <- paste0("https://www.fpbase.org/spectra_csv/?q=",
+                 paste(panel$fpbase_ex, collapse = ","))
+ex_wide <- read.csv(ex_url, check.names = FALSE)
+excitation <- bind_rows(lapply(names(ex_wide)[-1], function(col) {
+  data.frame(dye = fpbase_names[[sub(" (ex|ab)$", "", col)]],
+             wavelength = ex_wide$wavelength,
+             excitation = ex_wide[[col]])
 })) |>
-  filter(percent >= 5) |>
-  arrange(desc(percent))
-cat("\nEmission of one dye in another dye's detector, % of its own (>= 5%):\n")
-print(spill, row.names = FALSE)
+  filter(!is.na(excitation)) |>
+  group_by(dye) |>
+  mutate(excitation = excitation / max(excitation)) |>
+  ungroup()
+
+# excitation of a dye at a laser line; 0 where FPbase has no data (far outside
+# the dye's absorption)
+excite_at <- function(d, nm) {
+  e <- excitation$excitation[excitation$dye == d & excitation$wavelength == nm]
+  if (length(e) == 0) 0 else e
+}
+in_band <- function(d, centre, width) {
+  sum(spectra$emission[spectra$dye == d & abs(spectra$wavelength - centre) <= width / 2])
+}
+signal <- function(d, det) {
+  row <- panel[panel$detector == det, ]
+  excite_at(d, lasers[[row$laser]]) * in_band(d, row$bp_centre, row$bp_width)
+}
+
+spillover <- function(p) {
+  m <- sapply(p$detector, function(det) sapply(p$dye, signal, det = det))
+  m <- 100 * m / diag(m)          # every row divided by its own detector
+  dimnames(m) <- list(p$dye, p$detector)
+  m
+}
+
+plot_spillover <- function(m, title) {
+  long <- data.frame(dye = rep(rownames(m), ncol(m)),
+                     detector = rep(colnames(m), each = nrow(m)),
+                     percent = as.vector(m))
+  long$dye <- factor(long$dye, levels = rev(rownames(m)))
+  long$detector <- factor(long$detector, levels = colnames(m))
+  ggplot(long, aes(detector, dye, fill = pmin(percent, 100))) +
+    geom_tile(colour = "white") +
+    geom_text(aes(label = ifelse(percent >= 0.5, round(percent), "")),
+              size = 2.8, colour = ifelse(long$percent > 60, "white", "grey20")) +
+    scale_fill_gradientn(colours = c("white", "#FDD49E", "#EF6548", "#7F0000"),
+                         values = c(0, 0.05, 0.3, 1), limits = c(0, 100),
+                         name = "% of own\ndetector") +
+    labs(title = title, x = "Detector", y = "Single-stained dye",
+         caption = paste("Theoretical: FPbase spectra x bandpass filters of a published A5 SE",
+                         "configuration;\nno laser power or voltages. The real matrix comes",
+                         "from the single stains.")) +
+    theme_minimal(base_size = 10) +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1),
+          panel.grid = element_blank(),
+          plot.caption.position = "plot", plot.title.position = "plot")
+}
+
+outdir <- here("code", "flow", "output")
+dir.create(outdir, showWarnings = FALSE)
+
+m_min <- spillover(filter(panel, minimal))
+m_full <- spillover(panel)
+write.csv(round(m_min, 1), file.path(outdir, "C3_minimal_panel_spillover.csv"))
+write.csv(round(m_full, 1), file.path(outdir, "X02_full_panel_spillover.csv"))
+
+ggsave(file.path(figdir, "C3_minimal_panel_spillover.png"),
+       plot_spillover(m_min, "C3 minimal panel: theoretical spillover (%)"),
+       width = 6, height = 3.8, dpi = 200, bg = "white")
+ggsave(file.path(figdir, "X02_full_panel_spillover.png"),
+       plot_spillover(m_full, "X02 full panel: theoretical spillover (%)"),
+       width = 8, height = 6.5, dpi = 200, bg = "white")
+
+round(m_full)   # print the full matrix

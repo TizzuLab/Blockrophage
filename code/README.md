@@ -61,7 +61,7 @@ introduced a couple bugs for teaching purposes.
 | Folder | Purpose | Input | Output |
 |---|---|---|---|
 | [`elisa/`](elisa/README.md) | Four-parameter logistic standard curve, concentration table, plots by condition (C5). Runs on the lab's IL-6 example data | tidy CSV (one row per well) | `elisa_results.csv`, `elisa_summary.csv`, figure |
-| [`flow/`](flow/panel_spectra.R) | Emission spectra of the flow panels by laser (C3, X02), to see where dyes spill into each other | public spectra from FPbase, downloaded by the script | two figures in `protocols/figures/` |
+| [`flow/`](flow/panel_spectra.R) | Emission spectra of the flow panels by laser with the detector filters, and a theoretical spillover matrix (C3, X02) | public spectra from FPbase, downloaded by the script | four figures in `protocols/figures/`, matrices as CSV in `flow/output/` |
 | [`scrnaseq/`](scrnaseq/README.md) | Experiment 2, three parts (below), five scripts; run from GEO in about 3 min | GEO matrices and a published signature table, downloaded by the scripts | figures, Seurat objects, scores |
 
 ## Single-cell RNA-seq (Experiment 2), `scrnaseq/`

@@ -56,8 +56,13 @@ Rows by laser: ⬛ UV 355 nm, 🟪 violet 405 nm, 🟦 blue 488 nm, 🟨 yellow-
 
 ![Emission spectra of the minimal panel by laser](figures/C3_minimal_panel_spectra.png)
 
-Spectra from [FPbase](https://www.fpbase.org), plotted by
-[code/flow/panel_spectra.R](../code/flow/panel_spectra.R).
+![Theoretical spillover matrix of the minimal panel](figures/C3_minimal_panel_spillover.png)
+
+Spectra from [FPbase](https://www.fpbase.org) and filters of a published A5 SE
+configuration, plotted by [code/flow/panel_spectra.R](../code/flow/panel_spectra.R).
+The matrix is theoretical (no laser power, no voltages): it shows where to expect
+spillover, BV421 into the live/dead detector here. The matrix you compensate with
+comes from the single stains of the day.
 
 </details>
 
