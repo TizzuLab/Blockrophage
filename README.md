@@ -1204,55 +1204,70 @@ this course.
 >
 > ### Materials
 >
-> Status: **lab** = in the lab's stock, dilution from the lab's panel workbook
-> (titrated with 1 × 10^6 cells in 50 µL); **order** = to order and titrate before the
-> course. Detectors are for the BD FACSymphony A5 SE.
+> Two antibody panels, collapsed below: click a panel to open it. Copy a table
+> straight into Excel, or download both as one workbook:
+> [C3_panels.xlsx](C3_panels.xlsx). **lab** = in the lab's stock, dilution from the
+> lab's panel workbook (titrated with 1 × 10^6 cells in 50 µL); **order** = to order
+> and titrate before the course. Detectors are for the BD FACSymphony A5 SE.
 >
-> #### Minimal panel (core, J774A.1)
+> <!-- The tables below are the source. After editing them, rebuild the workbook:
+>      python3 stuff/tools/panels/c3_panels_xlsx.py -->
 >
-> | Fluorochrome | Detector | Target | Purpose | Clone | Catalogue number | Compartment | Dilution | Status |
+> <details>
+> <summary><b>Minimal panel</b>: core, J774A.1, 5 colours + Fc block</summary>
+>
+> | Fluorochrome | Detector | Target | Purpose | Clone | Cat. no. | Compartment | Dilution | Status |
 > |---|---|---|---|---|---|---|---|---|
 > | eFluor 506 | V510 | live/dead | exclude dead cells | n/a | Thermo 65-0866-18 | before fixation | 1:700 | lab |
-> | BV421 | V450 `[TODO: check detector]` | CD86 | M(IFNγ), LPS | GL-1 | BioLegend 105031 (125 µL) / 105032 (50 µg) | surface | `[TODO: titrate]` | order |
-> | BV650 | V655 `[TODO: check detector]` | CD206 (MMR) | M(IL-4) | C068C2 | BioLegend 141723 (50 µg) | intracellular | `[TODO: titrate]` | order |
+> | BV421 | V450 | CD86 | M(IFNγ), LPS | GL-1 | BioLegend 105031 | surface | titrate | order |
+> | BV650 | V655 | CD206 (MMR) | M(IL-4) | C068C2 | BioLegend 141723 | intracellular | titrate | order |
 > | AF700 | R730 | MHCII (I-A/I-E) | M(IFNγ) | M5/114 | Thermo 56-5321-82 | surface | 1:100 | lab |
-> | PE-Cy7 | YG780 | Arginase 1 | M(IL-4) | A1exF5 | Thermo 25-3697-82 (100 µg) / 25-3697-80 (25 µg) | intracellular | `[TODO: titrate; vendor: 0.5 µg/test]` | order |
+> | PE-Cy7 | YG780 | Arginase 1 | M(IL-4) | A1exF5 | Thermo 25-3697-82 | intracellular | titrate | order |
 > | none | n/a | CD16/32 (Fc block) | block Fc receptors | n/a | BioLegend 101302 | surface | 1:100 | lab |
 >
-> #### Full panel (extension X02, primary peritoneal cells)
+> </details>
+>
+> <details>
+> <summary><b>Full panel</b>: extension X02, primary peritoneal cells, 16 colours + Fc block</summary>
+>
+> | Fluorochrome | Detector | Target | Purpose | Clone | Cat. no. | Compartment | Dilution | Status |
+> |---|---|---|---|---|---|---|---|---|
+> | BUV395 | UV379 | F4/80 | macrophages | T45-2342 | BD 565614 | surface | 1:150 | lab |
+> | BUV496 | UV515 | CD45 | leukocytes | I3/2 | BD 752411 | surface | 1:300 | lab |
+> | BUV563 | UV585 | CD11c | dendritic cells | N418 | BD 749040 | surface | 1:200 | lab |
+> | BV421 | V450 | CD86 | M(IFNγ), LPS | GL-1 | BioLegend 105031 | surface | titrate | order |
+> | eFluor 506 | V510 | live/dead | exclude dead cells | n/a | Thermo 65-0866-18 | before fixation | 1:700 | lab |
+> | BV605 | V585 | CD3 | T cells (exclude) | 17A2 | BioLegend 100237 | surface | 1:100 | lab |
+> | BV650 | V655 | CD206 (MMR) | M(IL-4) | C068C2 | BioLegend 141723 | intracellular | titrate | order |
+> | BV786 | V785 | CD117 (c-Kit) | mast cells (exclude) | ACK2 | BD 752699 | surface | 1:200 | lab |
+> | AF488 | B510 | Ly-6G | neutrophils (exclude) | 1A8 | BioLegend 127625 | surface | titrate | order |
+> | Spark Blue 550 | B537 | CD19 | B cells (exclude) | `[TODO]` | BioLegend 115566 | surface | 1:400 | lab |
+> | PerCP-Cy5.5 | B710 | Ly-6C | monocytes | HK1.4 | Thermo 45-5932-82 | surface | 1:200 | lab |
+> | PE-Dazzle 594 | PE-Texas Red | CD170 (Siglec-F) | eosinophils (exclude) | S17007L | BioLegend 155529 | surface | 1:300 | lab |
+> | PE-Cy7 | YG780 | Arginase 1 | M(IL-4) | A1exF5 | Thermo 25-3697-82 | intracellular | titrate | order |
+> | AF700 | R730 | MHCII (I-A/I-E) | M(IFNγ); small peritoneal macrophages | M5/114 | Thermo 56-5321-82 | surface | 1:100 | lab |
+> | APC-Cy7 | R780 | CD11b | myeloid cells | M1/70 | BioLegend 101226 | surface | 1:400 | lab |
+> | none | n/a | CD16/32 (Fc block) | block Fc receptors | n/a | BioLegend 101302 | surface | 1:100 | lab |
 >
 > Changes from the lab's earlier sheet: Ly-6G moves from PE-Cy7 to AF488 and from
 > clone RB6-8C5 (Gr-1, binds Ly-6G and Ly-6C) to the Ly-6G-specific 1A8, the better
 > partner for Ly-6C HK1.4; Arg1 takes PE-Cy7, CD86 BV421, CD206 BV650. The PE
 > detector stays empty.
 >
-> | Fluorochrome | Detector | Target | Clone | Catalogue number | Compartment | Dilution | Status |
-> |---|---|---|---|---|---|---|---|
-> | BUV395 | UV379 | F4/80 | T45-2342 | BD 565614 | surface | 1:150 | lab |
-> | BUV496 | UV515 | CD45 | I3/2 | BD 752411 | surface | 1:300 | lab |
-> | BUV563 | UV585 | CD11c | N418 | BD 749040 | surface | 1:200 | lab |
-> | BV421 | V450 `[TODO: check detector]` | CD86 | GL-1 | BioLegend 105031 / 105032 | surface | `[TODO: titrate]` | order |
-> | eFluor 506 | V510 | live/dead | n/a | Thermo 65-0866-18 | before fixation | 1:700 | lab |
-> | BV605 | V585 `[TODO: detector as on the lab sheet; BV605 is normally read near 605 nm]` | CD3 | 17A2 | BioLegend 100237 | surface | 1:100 | lab |
-> | BV650 | V655 `[TODO: check detector]` | CD206 (MMR) | C068C2 | BioLegend 141723 | intracellular | `[TODO: titrate]` | order |
-> | BV786 | V785 | CD117 (c-Kit) | ACK2 | BD 752699 | surface | 1:200 | lab |
-> | AF488 | B510 `[TODO: check detector]` | Ly-6G | 1A8 | BioLegend 127625 (25 µg) / 127626 (100 µg) | surface | `[TODO: titrate]` | order |
-> | Spark Blue 550 | B537 | CD19 | `[TODO: clone as on the lab sheet]` | BioLegend 115566 | surface | 1:400 | lab |
-> | PerCP-Cy5.5 | B710 | Ly-6C | HK1.4 | Thermo 45-5932-82 | surface | 1:200 | lab |
-> | PE-Dazzle 594 | PE-Texas Red | CD170 (Siglec-F) | S17007L | BioLegend 155529 | surface | 1:300 | lab |
-> | PE-Cy7 | YG780 | Arginase 1 | A1exF5 | Thermo 25-3697-82 / 25-3697-80 | intracellular | `[TODO: titrate; vendor: 0.5 µg/test]` | order |
-> | AF700 | R730 | MHCII (I-A/I-E) | M5/114 | Thermo 56-5321-82 | surface | 1:100 | lab |
-> | APC-Cy7 | R780 | CD11b | M1/70 | BioLegend 101226 | surface | 1:400 | lab |
-> | none | n/a | CD16/32 (Fc block) | n/a | BioLegend 101302 | surface | 1:100 | lab |
+> </details>
 >
 > > [!IMPORTANT]
 > > **To verify:** check every detector name against the facility's configuration of
-> > the A5 SE, and confirm that it resolves AF488 (Ly-6G) and Spark Blue 550 (CD19)
-> > in separate detectors before Ly-6G is ordered. Titrate CD86, CD206 and Arg1 before
-> > the course; the activation readout rests on them. CD86 GL-1 and CD206 C068C2 have
-> > been used on J774A.1 by flow (J Neuroinflammation 2020,
-> > doi:10.1186/s12974-020-01860-y); for Arg1 A1exF5 no J774A.1 flow data were found,
-> > so the IL-4 control decides.
+> > the A5 SE (BV605 in particular: the lab sheet says V585, but BV605 is normally
+> > read near 605 nm), and confirm that it resolves AF488 (Ly-6G) and Spark Blue 550
+> > (CD19) in separate detectors before Ly-6G is ordered. Titrate CD86, CD206, Arg1
+> > and Ly-6G before the course by stain index on a positive and a negative
+> > population (Arg1 and CD206 after fixation and permeabilization); the vendor
+> > suggests 0.5 µg per test for Arg1. CD86 GL-1 and CD206 C068C2 have been used on
+> > J774A.1 by flow (J Neuroinflammation 2020, doi:10.1186/s12974-020-01860-y); for
+> > Arg1 A1exF5 no J774A.1 flow data were found, so the IL-4 control decides.
+> > Pack sizes: CD86 105031 (125 µL) or 105032 (50 µg); Arg1 25-3697-82 (100 µg) or
+> > 25-3697-80 (25 µg); Ly-6G 127625 (25 µg) or 127626 (100 µg).
 >
 > Reagents:
 >
