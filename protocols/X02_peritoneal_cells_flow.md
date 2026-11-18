@@ -78,9 +78,14 @@ detector stays empty.
 
 > [!IMPORTANT]
 > **To verify:** check every detector name against the facility's configuration of
-> the A5 SE (BV605 in particular: the lab sheet says V585, but BV605 is normally
-> read near 605 nm), and confirm that it resolves AF488 (Ly-6G) and Spark Blue 550
-> (CD19) in separate detectors before Ly-6G is ordered. Titrate Ly-6G on cells with
+> the A5 SE. The published A5 SE configuration used for the figure has no V585,
+> V655 or "PE-Texas Red" detector: there BV605 goes to V615 (615/25) or V595,
+> BV650 to V660 (660/30) and PE-Dazzle 594 to YG602 (602/40). Before Ly-6G is
+> ordered, look hard at AF488 against Spark Blue 550: with B510 at 510/20 and B537
+> at 537/32, more AF488 light falls into B537 than into its own detector
+> (theoretical, from the spectra; `code/flow/panel_spectra.R` prints the table).
+> They mark different cells and both serve as exclusion gates, so it can work, but
+> a Ly-6G dye on another laser may be the cleaner choice. Titrate Ly-6G on cells with
 > neutrophils (pack sizes 127625, 25 µg, or 127626, 100 µg); CD86, CD206 and Arg1
 > are titrated for C3.
 

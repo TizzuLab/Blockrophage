@@ -63,7 +63,9 @@ Spectra from [FPbase](https://www.fpbase.org), plotted by
 
 > [!IMPORTANT]
 > **To verify:** check every detector name against the facility's configuration of
-> the A5 SE. Titrate CD86, CD206 and Arg1 before the course by stain index on a
+> the A5 SE. A published A5 SE configuration (Cornell BRC, used for the shaded
+> filter bands in the figure) has no V655; BV650 is read in V660 (660/30) there.
+> Titrate CD86, CD206 and Arg1 before the course by stain index on a
 > positive and a negative population (CD206 and Arg1 after fixation and
 > permeabilization); the vendor suggests 0.5 µg per test for Arg1. CD86 GL-1 and
 > CD206 C068C2 have been used on J774A.1 by flow (J Neuroinflammation 2020,
