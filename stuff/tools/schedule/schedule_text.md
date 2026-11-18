@@ -43,7 +43,7 @@ dark (plenary) blocks are mandatory, everything else is the default plan for all
 - 09:00-10:00: [Facility slot] Facility lecture: flow cytometry and FlowJo (Florian Mair) [TODO: confirm slot]
 - 10:00-12:00: [Wet lab Exp 1] C3 Harvest the adherent cells, count, viability dye, Fc block, surface stain
 - 12:00-13:00: Lunch
-- 13:00-15:00: [Wet lab Exp 1] C3 continued: optional Arg1 fix and perm, fix, store at 4 °C until acquisition. Wet-lab goal: harvest, staining, fixation. Staining plan and FMOs in the notebook.
+- 13:00-15:00: [Wet lab Exp 1] C3 continued: fix and perm, intracellular CD206 and Arg1, store at 4 °C until acquisition. Wet-lab goal: harvest, staining, fixation. Staining plan and FMOs in the notebook.
 - 15:00-17:00: [Dry lab and desk work] Dry lab: scRNA-seq part 1 continued; poster: draft the introduction. If the bench runs over, the dry lab moves home.
 - Staff: Antibody panel, viability dye, fix/perm buffers, compensation beads. Nothing in the incubator but the stock flasks.
 - Resources: 4 hoods HPL F27.2, one per group, available at all times. Cooled centrifuge. Fridge. Conference room HPL F22 for lectures and dry lab.

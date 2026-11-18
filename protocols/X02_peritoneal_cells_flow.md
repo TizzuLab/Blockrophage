@@ -14,7 +14,7 @@
 | Hands-on time | 30 min receiving, counting and lysis, then staining as C3 |
 | Wall-clock time | half a day, coordinated with a cytometer slot |
 | Resources | ice, cooled centrifuge, counter, cytometer slot |
-| Depends on | C3 panel and a reserved cytometer slot; polarized J774A.1 cells ready on the same day; a surplus peritoneal cell suspension provided by staff |
+| Depends on | C3 full panel and a reserved cytometer slot; polarized J774A.1 cells ready on the same day; a surplus peritoneal cell suspension provided by staff |
 | Lab SOP | Zindel lab "Flow cytometry" (v1.2) and "Flow cytometry antibody titration" for the staining; the SOP wins over this page. |
 
 ## Purpose
@@ -37,7 +37,9 @@ macrophage gate.
 
 - Confirm with your supervisor that a surplus suspension is available on a day
   with a cytometer slot, and that your polarized J774A.1 cells are ready the same day.
-- C3 staining plan extended with the peritoneal samples, CD19 and Ly6C.
+- C3 staining plan extended with the peritoneal samples on the full panel, and one
+  well of each polarized J774A.1 state stained with the full panel too, so the
+  overlay has F4/80 and the lineage markers.
 - Record what the staff tell you about the sample: source of the material, date,
   volume, any treatment it carries over from the experiment it came from.
 
@@ -53,16 +55,24 @@ macrophage gate.
    buffer, **`room temperature, 2 min`**, top up with buffer and centrifuge again.
 3. Resuspend in FACS buffer and count. Expect large peritoneal macrophages to be
    roughly a third of the cells in a healthy sample.
-4. Stain with the course panel (C3), including CD19 and Ly6C, and acquire in the
-   same session as the polarized J774A.1 cells.
-5. Gate: CD19 out, then F4/80 against MHCII for large (F4/80 high, MHCII low) and
-   small (F4/80 low, MHCII high) peritoneal macrophages; ICAM2 and Gata6 confirm the
-   resident identity. Overlay the polarized J774A.1 cells on the same gates.
+4. Stain with the full panel (C3), surface first, then fixation, permeabilization
+   and the intracellular CD206 and Arg1 stain, and acquire in the same session as
+   the polarized J774A.1 cells.
+5. Gate: live single CD45+ cells; remove T cells (CD3), B cells (CD19),
+   neutrophils (Ly-6G), eosinophils (Siglec-F) and mast cells (CD117); then
+   CD11b+ cells, F4/80 against MHCII for large (F4/80 high, MHCII low) and small
+   (F4/80 low, MHCII high) peritoneal macrophages; Ly-6C marks monocytes and CD11c
+   dendritic cells. Read CD86, CD206 and Arg1 on the macrophage gates, and overlay
+   the polarized J774A.1 cells on the same gates.
+
+> [!WARNING]
+> Neutrophils express Arg1 too. Gate Ly-6G+ cells out before you read Arg1 on
+> macrophages.
 
 ## Controls
 
-- CD19 gate removes B cells; F4/80 against MHCII separates large and small
-  peritoneal macrophages; ICAM2 and Gata6 confirm resident identity.
+- The lineage gates (CD3, CD19, Ly-6G, Siglec-F, CD117) remove non-macrophages;
+  F4/80 against MHCII separates large and small peritoneal macrophages.
 - Same single-stain and fluorescence-minus-one controls as C3; the peritoneal
   sample and the J774A.1 cells share the compensation.
 
@@ -76,6 +86,12 @@ macrophage gate.
 - Low cell number: the suspension was small or lost cells on the way; stain what
   you have and reduce the panel rather than the cell number per tube.
 - Bloody suspension: lyse the erythrocytes and note it.
+- Ly-6G and CD19 smear into each other: AF488 and Spark Blue 550 overlap on the
+  blue laser. They mark different cells, so both work as exclusion gates; check
+  the single stains and the compensation before blaming the sample.
+- AF700 (MHCII) and APC-Cy7 (CD11b) are both bright on macrophages and neighbours
+  on the red laser: compensate with care, and set the F4/80 against MHCII gate on
+  FMOs.
 - Few large peritoneal macrophages: prior inflammation in the experiment the sample
   came from; record the sample history and treat the result as a finding.
 

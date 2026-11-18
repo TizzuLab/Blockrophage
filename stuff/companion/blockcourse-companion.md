@@ -354,7 +354,7 @@ F27.2, where each group has its own laminar flow hood reserved all day, every da
 
 #### Week 2: polarize and characterize (Tue 23 - Thu 25 March 2027)
 
-![Week 2: polarize and characterize (Tue 23 - Thu 25 March 2027)](stuff/figures/schedule/week-2.svg?v=a860d9a9)
+![Week 2: polarize and characterize (Tue 23 - Thu 25 March 2027)](stuff/figures/schedule/week-2.svg?v=048d8869)
 
 #### Week 3: polarize and challenge (Tue 6 - Fri 9 April 2027)
 
@@ -402,8 +402,9 @@ belongs to the challenge week and is run on the supernatants of Experiment 3. A
 group may read TNF instead of IL-6, and a group that prefers another readout, a
 western blot or qPCR ([X01](protocols/X01_qpcr.md)) for example, brainstorms it with
 its supervisor. On Wednesday the cells are harvested, stained and fixed (C3), on
-Thursday acquired at the facility and gated in a FlowJo session, with intracellular
-Arg1 as a high-risk option for a group that wants to learn permeabilization. By
+Thursday acquired at the facility and gated in a FlowJo session. Every group fixes
+and permeabilizes, because CD206 and Arg1 are stained intracellularly; Arg1 is the
+high-risk marker of the panel. By
 Thursday 16:00 you know whether your polarizer did what the menu says on this
 readout, and you decide to stick with it or to pivot to one that worked, before the
 break. For the dampeners IL-10, dexamethasone and PGE2, "no change and good
@@ -630,7 +631,7 @@ dark (plenary) blocks are mandatory, everything else is the default plan for all
 - 09:00-10:00: [Facility slot] Facility lecture: flow cytometry and FlowJo (Florian Mair) [TODO: confirm slot]
 - 10:00-12:00: [Wet lab Exp 1] C3 Harvest the adherent cells, count, viability dye, Fc block, surface stain
 - 12:00-13:00: Lunch
-- 13:00-15:00: [Wet lab Exp 1] C3 continued: optional Arg1 fix and perm, fix, store at 4 °C until acquisition. Wet-lab goal: harvest, staining, fixation. Staining plan and FMOs in the notebook.
+- 13:00-15:00: [Wet lab Exp 1] C3 continued: fix and perm, intracellular CD206 and Arg1, store at 4 °C until acquisition. Wet-lab goal: harvest, staining, fixation. Staining plan and FMOs in the notebook.
 - 15:00-17:00: [Dry lab and desk work] Dry lab: scRNA-seq part 1 continued; poster: draft the introduction. If the bench runs over, the dry lab moves home.
 - Staff: Antibody panel, viability dye, fix/perm buffers, compensation beads. Nothing in the incubator but the stock flasks.
 - Resources: 4 hoods HPL F27.2, one per group, available at all times. Cooled centrifuge. Fridge. Conference room HPL F22 for lectures and dry lab.
@@ -1026,7 +1027,7 @@ problem.
 | IFNγ | 20 ng/mL | MHC-II and CD86 up, iNOS primed, TNF and IL-6 amplified with LPS. This is M(IFNγ) | flow (MHC-II, CD86) and ELISA | low |
 | IL-10 | 20 ng/mL | TNF and IL-6 suppressed through STAT3 and SOCS3 | ELISA (suppression, week 3) | low; nothing to see by flow, by design |
 | Dexamethasone | 100 nM | TNF, IL-6 and NO suppressed through the glucocorticoid receptor; the drug every patient on steroids gets | ELISA (suppression, week 3) | low; cheap and stable; needs a vehicle control |
-| IL-4 | 20 ng/mL | Arg1, Chil3, Retnla and Mrc1 mRNA up, LPS response dampened. This is M(IL-4) | qPCR Arg1 (X01); ELISA (suppression) | medium: CD206 by flow is weak in this line; intracellular Arg1 (C3) is the high-risk flow option |
+| IL-4 | 20 ng/mL | Arg1, Chil3, Retnla and Mrc1 mRNA up, LPS response dampened. This is M(IL-4) | qPCR Arg1 (X01); ELISA (suppression) | medium: CD206 by flow is weak in this line, so C3 stains it intracellularly; intracellular Arg1 (C3) is the high-risk marker of the flow panel |
 | PGE2 | 1 µM | IL-10 up and TNF down through cAMP | ELISA | medium; less canonical; vehicle control |
 | ATRA, all-trans retinoic acid | 1 µM, from a DMSO stock, in the dark | In vivo the signal that induces GATA6 and the peritoneal macrophage identity; in vitro it dampens TNF and NO and helps IL-4 induce Arg1. Whether it induces Gata6 in a macrophage line is not known | qPCR Gata6, Arg1, Icam2 (X01) | high: the lab's wild card, outcome unknown; for a group that takes the qPCR extension |
 
@@ -1063,8 +1064,8 @@ is the expected week 2 result for a dampener, not a reason to pivot.
 ### Before you start
 
 - The plate map is drawn in the notebook before anything is pipetted. Week 2 (flow
-  plate, 6- or 12-well): vehicle, M(pol), LPS control, one well each, a second set if
-  you run intracellular Arg1. Week 3 (96-well, C4): the six conditions of the
+  plate, 6- or 12-well): vehicle, M(pol), LPS control, one well each, and a second set
+  for the FMOs and the unstained and live/dead controls of C3. Week 3 (96-well, C4): the six conditions of the
   challenge in triplicate plus the inhibitor wells.
 - Stimuli are added as 100× stocks to the seeding suspension, 1 part in 100, so
   every well gets the same volume of additive and no medium change is needed.
@@ -1144,62 +1145,104 @@ the photograph of each condition on Wednesday morning.
 | | |
 |---|---|
 | ID | C3 |
-| Used in | Exp 1 (core: polarized J774A.1 cells, week 2); X02 (extension: peritoneal cells on the same panel) |
-| Hands-on time | 2 h staining, 1 h acquisition (plus 2.5 h if the intranuclear option is run) |
+| Used in | Exp 1 (core: polarized J774A.1 cells on the minimal panel, week 2); X02 (extension: peritoneal cells on the full panel) |
+| Hands-on time | 3 h staining including fixation and permeabilization, 1 h acquisition |
 | Wall-clock time | half a day; fixed samples can be acquired the next day |
-| Resources | hood, cooled centrifuge with plate rotor, heating block, cytometer slot reserved by the facility `[TODO: instrument, slot dates]`, FlowJo seat |
+| Resources | hood, cooled centrifuge with plate rotor, heating block, BD FACSymphony A5 SE slot reserved by the facility `[TODO: slot dates]`, FlowJo seat |
 | Depends on | C2 unchallenged 6-well per state, 24 h after polarization |
-| Lab SOP | Zindel lab "Flow cytometry" (v2.0, 2026-02-16) and "Flow cytometry antibody titration" (v1.0, 2025-08-22); panels in the lab's panel workbook. The SOP wins over this page. |
+| Lab SOP | Zindel lab "Flow cytometry" (v2.0, 2026-02-16) and "Flow cytometry antibody titration" (v1.0, 2025-08-22); panels in the lab's panel workbook (macrophage polarization panels, version 18.11.2026). The SOP wins over this page. |
 
 ### Purpose
 
-Phenotype your group's polarization on the course antibody panel, in week 2: the
-vehicle control, M(polarizer) and the LPS control, harvested on Wednesday morning
-after about 19 h, stained and fixed the same day, acquired on Thursday morning and
-gated in the FlowJo session on Thursday afternoon. The LPS control must show CD86 and
-scatter up and the vehicle control must not; only then does the polarizer's result
-count. Flow on challenged cells (week 3) is an extension and needs a slot from the
-facility's regular booking calendar. The panel is shared
-with the peritoneal cells extension (X02) so that in vitro and tissue cells can be compared
-directly in the same session. In the core it is run on J774A.1 cells only.
+Phenotype your group's polarization in week 2: the vehicle control, M(polarizer)
+and the LPS control, harvested on Wednesday morning after about 19 h, stained and
+fixed the same day, acquired on Thursday morning and gated in the FlowJo session on
+Thursday afternoon. The LPS control must show CD86 and scatter up and the vehicle
+control must not; only then does the polarizer's result count. Flow on challenged
+cells (week 3) is an extension and needs a slot from the facility's regular booking
+calendar.
+
+There are two panels. The core runs the **minimal panel** (five colours) on
+J774A.1 cells: a pure macrophage line needs no lineage markers. The **full panel**
+(sixteen colours) is for primary peritoneal cells in the extension X02. It carries
+the five colours of the minimal panel on the same fluorochromes, so in vitro and
+tissue cells can be compared directly in the same session.
 
 ### Materials
 
-Course panel. The rows with a clone are antibodies the lab runs and has titrated
-on peritoneal cells (dilution factors from the lab's panel workbook, titrated with
-1 × 10^6 cells in 50 µL). The others are not in the lab's stock yet.
+Two antibody panels, collapsed below: click a panel to open it. Copy a table
+straight into Excel, or download both as one workbook:
+[C3_panels.xlsx](C3_panels.xlsx). **lab** = in the lab's stock, dilution from the
+lab's panel workbook (titrated with 1 × 10^6 cells in 50 µL); **order** = to order
+and titrate before the course. Detectors are for the BD FACSymphony A5 SE.
 
-| Marker | Purpose | Lab reagent (fluorochrome, clone, catalogue number) | Dilution |
-|---|---|---|---|
-| Viability dye | exclude dead cells | Fixable Viability Dye eFluor 506 (Thermo 65-0866-18) | 1:500–1:700 |
-| CD45 | haematopoietic | BUV496, clone I3/2 (BD 752411) | 1:300 |
-| CD11b | myeloid | APC-Cy7, clone M1/70 (BioLegend 101226) | 1:400 |
-| F4/80 | macrophage; hi on LPM, lo on SPM | BUV395, clone T45-2342 (BD 565614) | 1:150 |
-| MHCII (I-A/I-E) | M(IFNγ) in vitro; SPM in vivo | AF700, clone M5/114 (56-5321-82) | 1:150 |
-| ICAM2 (CD102) | resident LPM | FITC, clone 3C4 (116129) | 1:200 |
-| Gata6 (intranuclear) | resident LPM transcription factor | PE, clone D61E4 (Cell Signaling 26452S), with isotype control | 1:100 |
-| Ly6C | monocytes | PerCP-Cy5.5, clone HK1.4 (Thermo 45-5932-82) | 1:400 |
-| CD19 | B cells in peritoneal samples | Spark Blue 550 (BioLegend 115566) | 1:800 |
-| CD86 | M(IFNγ) | `[TODO: not in the lab panel; order and titrate]` | |
-| CD206 | M(IL-4) | `[TODO: not in the lab panel for mouse; order and titrate]` | |
-| Tim4 | resident LPM, optional beside Gata6 | `[TODO: not in the lab panel]` | |
-| Arg1 (intracellular) | M(IL-4); optional, high risk | PE or APC, clone A1exF5, with isotype `[TODO: order and titrate]` | |
-| Intracellular Nos2 | optional | `[TODO: not in the lab panel]` | |
+<!-- The tables below are the source. After editing them, rebuild the workbook:
+     python3 stuff/tools/panels/c3_panels_xlsx.py -->
+
+<details>
+<summary><b>Minimal panel</b>: core, J774A.1, 5 colours + Fc block</summary>
+
+| Fluorochrome | Detector | Target | Purpose | Clone | Cat. no. | Compartment | Dilution | Status |
+|---|---|---|---|---|---|---|---|---|
+| eFluor 506 | V510 | live/dead | exclude dead cells | n/a | Thermo 65-0866-18 | before fixation | 1:700 | lab |
+| BV421 | V450 | CD86 | M(IFNγ), LPS | GL-1 | BioLegend 105031 | surface | titrate | order |
+| BV650 | V655 | CD206 (MMR) | M(IL-4) | C068C2 | BioLegend 141723 | intracellular | titrate | order |
+| AF700 | R730 | MHCII (I-A/I-E) | M(IFNγ) | M5/114 | Thermo 56-5321-82 | surface | 1:100 | lab |
+| PE-Cy7 | YG780 | Arginase 1 | M(IL-4) | A1exF5 | Thermo 25-3697-82 | intracellular | titrate | order |
+| none | n/a | CD16/32 (Fc block) | block Fc receptors | n/a | BioLegend 101302 | surface | 1:100 | lab |
+
+</details>
+
+<details>
+<summary><b>Full panel</b>: extension X02, primary peritoneal cells, 16 colours + Fc block</summary>
+
+| Fluorochrome | Detector | Target | Purpose | Clone | Cat. no. | Compartment | Dilution | Status |
+|---|---|---|---|---|---|---|---|---|
+| BUV395 | UV379 | F4/80 | macrophages | T45-2342 | BD 565614 | surface | 1:150 | lab |
+| BUV496 | UV515 | CD45 | leukocytes | I3/2 | BD 752411 | surface | 1:300 | lab |
+| BUV563 | UV585 | CD11c | dendritic cells | N418 | BD 749040 | surface | 1:200 | lab |
+| BV421 | V450 | CD86 | M(IFNγ), LPS | GL-1 | BioLegend 105031 | surface | titrate | order |
+| eFluor 506 | V510 | live/dead | exclude dead cells | n/a | Thermo 65-0866-18 | before fixation | 1:700 | lab |
+| BV605 | V585 | CD3 | T cells (exclude) | 17A2 | BioLegend 100237 | surface | 1:100 | lab |
+| BV650 | V655 | CD206 (MMR) | M(IL-4) | C068C2 | BioLegend 141723 | intracellular | titrate | order |
+| BV786 | V785 | CD117 (c-Kit) | mast cells (exclude) | ACK2 | BD 752699 | surface | 1:200 | lab |
+| AF488 | B510 | Ly-6G | neutrophils (exclude) | 1A8 | BioLegend 127625 | surface | titrate | order |
+| Spark Blue 550 | B537 | CD19 | B cells (exclude) | `[TODO]` | BioLegend 115566 | surface | 1:400 | lab |
+| PerCP-Cy5.5 | B710 | Ly-6C | monocytes | HK1.4 | Thermo 45-5932-82 | surface | 1:200 | lab |
+| PE-Dazzle 594 | PE-Texas Red | CD170 (Siglec-F) | eosinophils (exclude) | S17007L | BioLegend 155529 | surface | 1:300 | lab |
+| PE-Cy7 | YG780 | Arginase 1 | M(IL-4) | A1exF5 | Thermo 25-3697-82 | intracellular | titrate | order |
+| AF700 | R730 | MHCII (I-A/I-E) | M(IFNγ); small peritoneal macrophages | M5/114 | Thermo 56-5321-82 | surface | 1:100 | lab |
+| APC-Cy7 | R780 | CD11b | myeloid cells | M1/70 | BioLegend 101226 | surface | 1:400 | lab |
+| none | n/a | CD16/32 (Fc block) | block Fc receptors | n/a | BioLegend 101302 | surface | 1:100 | lab |
+
+Changes from the lab's earlier sheet: Ly-6G moves from PE-Cy7 to AF488 and from
+clone RB6-8C5 (Gr-1, binds Ly-6G and Ly-6C) to the Ly-6G-specific 1A8, the better
+partner for Ly-6C HK1.4; Arg1 takes PE-Cy7, CD86 BV421, CD206 BV650. The PE
+detector stays empty.
+
+</details>
 
 > [!IMPORTANT]
-> **To verify:** the fluorochrome choices come from a panel built for the lab's
-> 5-laser instrument at Bern (BD LSRII SORP, with a spectral option). Rebuild the
-> panel with the ETH flow facility for the instrument the course gets, and keep the
-> clones. Titrate CD86 and CD206 before the course; the activation readout rests on
-> them.
+> **To verify:** check every detector name against the facility's configuration of
+> the A5 SE (BV605 in particular: the lab sheet says V585, but BV605 is normally
+> read near 605 nm), and confirm that it resolves AF488 (Ly-6G) and Spark Blue 550
+> (CD19) in separate detectors before Ly-6G is ordered. Titrate CD86, CD206, Arg1
+> and Ly-6G before the course by stain index on a positive and a negative
+> population (Arg1 and CD206 after fixation and permeabilization); the vendor
+> suggests 0.5 µg per test for Arg1. CD86 GL-1 and CD206 C068C2 have been used on
+> J774A.1 by flow (J Neuroinflammation 2020, doi:10.1186/s12974-020-01860-y); for
+> Arg1 A1exF5 no J774A.1 flow data were found, so the IL-4 control decides.
+> Pack sizes: CD86 105031 (125 µL) or 105032 (50 µg); Arg1 25-3697-82 (100 µg) or
+> 25-3697-80 (25 µg); Ly-6G 127625 (25 µg) or 127626 (100 µg).
+
+Reagents:
 
 - FACS buffer (the lab calls it "MACS buffer"), 500 mL: 478 mL PBS, 15 mL FCS
   (3%), 2 mL 0.5 M EDTA (2 mM), 5 mL 1 M HEPES (10 mM). Buffer recipes are in the
   protocol index.
-- Fc block: anti-mouse CD16/32 (BioLegend 101302), 1:100
 - UltraComp eBeads compensation beads (Thermo 01-2222-42)
 - eBioscience Foxp3 / Transcription Factor Staining Buffer Set (Thermo 00-5523-00)
-  for the Gata6 and other intranuclear options
+  for fixation and permeabilization before the CD206 and Arg1 stain
 - 96-well V-bottom plate (Faust 6091901), flow tubes with cell-strainer cap
 - Trypan blue (Sigma T8154), Neubauer chamber or Countess III with slides (Thermo
   C10228)
@@ -1210,13 +1253,17 @@ on peritoneal cells (dilution factors from the lab's panel workbook, titrated wi
   each `[TODO: facility reservation]`. FlowJo session the same afternoon, teaching
   seats `[TODO: check with Florian Mair]`.
 - Staining plan in the notebook: samples, unstained, live/dead control, single
-  stains on beads, FMOs for MHCII, CD86 and CD206.
+  stains on beads, FMOs for CD86 and Arg1 (and for MHCII and CD206 if the wells
+  allow).
 - Cells harvested by scraping into cold FACS buffer and counted: at least
   0.5 × 10^6 cells per stain (the antibodies were titrated with 1 × 10^6).
 - Work on ice or at 4 °C until fixation; heating block at 95 °C for the live/dead
   control.
 
 ### Procedure
+
+Staining order: Fc block and live/dead, then the surface antibodies (CD86, MHCII),
+then fixation and permeabilization, then the intracellular antibodies (CD206, Arg1).
 
 1. Harvest the 6-well of each condition (vehicle, polarizer, LPS control) by
    scraping into cold FACS buffer.
@@ -1233,44 +1280,52 @@ on peritoneal cells (dilution factors from the lab's panel workbook, titrated wi
 > [!NOTE]
 > In PBS, not in buffer: serum quenches the dye.
 
-6. Surface stain: antibody mix in FACS buffer, 50 µL per well, **`20 min, 4 °C, dark`**.
-   Unstained and live/dead wells get buffer only. FMO wells get the mix minus one
-   antibody.
+6. Surface stain: CD86 and MHCII in FACS buffer, 50 µL per well,
+   **`20 min, 4 °C, dark`**. Unstained and live/dead wells get buffer only. FMO wells
+   get the mix minus one antibody.
 7. Single stains for compensation on beads, in parallel: vortex the beads 30 s, one
    drop (about 30 µL) made up to 400 µL with buffer serves four wells of 100 µL;
    add 1 µL of one antibody per well, plus one well of beads without antibody.
-   **`20 min, 4 °C, dark`**.
+   **`20 min, 4 °C, dark`**. The viability dye is compensated on the heat-killed
+   live/dead well, not on beads.
 8. Wash all wells twice with FACS buffer.
-9. Optional intranuclear stain (Gata6, Nos2, Arg1): fixation/permeabilisation
-   working solution (1 part concentrate in 4 parts diluent), 50 µL per well,
-   **`60 min, 4 °C, dark`**; wash with 1× permeabilisation buffer; intranuclear mix in
-   permeabilisation buffer, 50 µL, **`90 min, 4 °C, dark`**; wash with permeabilisation
-   buffer. Include the isotype control for Gata6.
-10. Resuspend in 200 µL FACS buffer and filter through the strainer cap into flow
+9. Fix and permeabilize with the Foxp3 buffer set, following the kit insert:
+   fixation/permeabilization working solution (1 part concentrate in 4 parts
+   diluent), 100 µL per well, **`30 min, 4 °C, dark`**; wash twice with 1×
+   permeabilization buffer. Put the PE-Cy7 (Arg1) single-stain beads through the
+   same fixation and permeabilization.
+
+> [!WARNING]
+> PE-Cy7 is a tandem dye: fixation and light change its spillover. Compensate it
+> with the same A1exF5 lot treated exactly like the samples, and keep everything
+> dark from here on.
+
+10. Intracellular stain: CD206 and Arg1 in permeabilization buffer, 50 µL per well,
+    **`30 min, 4 °C, dark`** `[TODO: times from the kit insert; confirm at titration]`.
+    FMO wells get the mix minus one antibody. Wash twice with permeabilization
+    buffer.
+
+> [!NOTE]
+> CD206 is stained after permeabilization on purpose: surface levels on mouse
+> macrophages are low, and the intracellular stain catches the surface and the
+> intracellular pool together.
+
+11. Resuspend in 200 µL FACS buffer and filter through the strainer cap into flow
     tubes. Keep on ice in the dark; fixed samples can be acquired the next day.
-11. Acquire on the facility cytometer with the compensation controls recorded in
-    the same session. Record at least 10,000 live single cells per sample
+12. Acquire on the A5 SE with the compensation controls recorded in the same
+    session. Record at least 10,000 live single cells per sample
     `[TODO: confirm with the facility]`.
-12. Export FCS files named with group, date, sample.
-
-#### Optional: intracellular Arg1, the high-risk arm
-
-Arg1 is cytoplasmic, so it is stained after the surface stain and after fixation and
-permeabilization with the Foxp3 buffer set, following the kit insert: fix **`30 min`**,
-wash twice in permeabilization buffer, Fc block, stain Arg1 and its isotype **`30 min`** in
-permeabilization buffer, wash twice, resuspend in FACS buffer. Permeabilization costs
-some surface signal, so the surface markers go on first and the FMOs are run on
-permeabilized cells too. Expect a small shift in M(IL-4) at best: the induction is
-reliable at the mRNA level in RAW 264.7 and modest as protein; J774A.1 still has to show it. The group that takes
-this arm learns fixation and permeabilization, and says on the poster that the arm
-was high risk by design `[TODO: titrate the clone before the course]`.
+13. Export FCS files named with group, date, sample.
 
 ### Controls
 
-- Unstained and single-stain beads for compensation; the heat-killed live/dead well
-  for the viability gate.
-- FMO for MHCII, CD86 and CD206: the markers that carry the result.
-- Isotype control and FMO for Gata6 or Arg1 if an intracellular option is run.
+- Unstimulated vs IL-4 (Arg1 and CD206 up) vs LPS/IFN-γ (CD86 and MHCII up).
+- Unstained and single-stain beads for compensation; the PE-Cy7 beads fixed and
+  permeabilized like the samples; the heat-killed live/dead well for the viability
+  gate.
+- FMO for CD86 and Arg1: the markers that carry the result. FMO for MHCII and
+  CD206 if the wells allow; FMOs for the intracellular markers are permeabilized
+  like the samples.
 - M(-) as the reference state.
 
 ### Checkpoints
@@ -1280,8 +1335,9 @@ was high risk by design `[TODO: titrate the clone before the course]`.
   staining or the cells failed and the polarizer is not judged on this run.
 - MHCII and CD86 higher in M(IFNγ) than M(-), CD206 higher in M(IL-4): if neither
   moves, check the stimulation before the staining.
-- Arg1 by intracellular stain shows at most a small shift in M(IL-4); the FMO and
-  the isotype decide whether it is real. No shift is a result, not a failure.
+- Arg1 shows at most a small shift in M(IL-4): the induction is reliable at the
+  mRNA level and modest as protein, and J774A.1 still has to show it. The FMO
+  decides whether it is real. No shift is a result, not a failure.
 
 ### Known failure modes
 
@@ -1290,8 +1346,14 @@ was high risk by design `[TODO: titrate the clone before the course]`.
 - Autofluorescence in activated cells: use the FMOs, not the unstained control, to
   set gates.
 - Dim viability stain: dye diluted in buffer instead of PBS.
-- ICAM2 and Gata6 negative on every J774A.1 sample: expected. No in vitro cell falls
-  into the large-peritoneal-macrophage gate; that is a result.
+- BV421 (CD86) spills into V510 (live/dead): minor, the live/dead separation
+  tolerates it. No dye sits in the PE or AF488 detectors in the minimal panel, so
+  the PE-Cy7 leak into PE and the blue autofluorescence of macrophages do not
+  touch any marker.
+- Surface signal drops after permeabilization: expected to a degree; set the CD86
+  and MHCII gates on FMOs that went through the same fixation.
+- Arg1 compensation off: the PE-Cy7 single stain was not fixed and permeabilized,
+  or came from another lot.
 
 ### Output
 
@@ -1741,7 +1803,7 @@ state and stimulus, housekeepers named.
 | Hands-on time | 30 min receiving, counting and lysis, then staining as C3 |
 | Wall-clock time | half a day, coordinated with a cytometer slot |
 | Resources | ice, cooled centrifuge, counter, cytometer slot |
-| Depends on | C3 panel and a reserved cytometer slot; polarized J774A.1 cells ready on the same day; a surplus peritoneal cell suspension provided by staff |
+| Depends on | C3 full panel and a reserved cytometer slot; polarized J774A.1 cells ready on the same day; a surplus peritoneal cell suspension provided by staff |
 | Lab SOP | Zindel lab "Flow cytometry" (v1.2) and "Flow cytometry antibody titration" for the staining; the SOP wins over this page. |
 
 ### Purpose
@@ -1764,7 +1826,9 @@ macrophage gate.
 
 - Confirm with your supervisor that a surplus suspension is available on a day
   with a cytometer slot, and that your polarized J774A.1 cells are ready the same day.
-- C3 staining plan extended with the peritoneal samples, CD19 and Ly6C.
+- C3 staining plan extended with the peritoneal samples on the full panel, and one
+  well of each polarized J774A.1 state stained with the full panel too, so the
+  overlay has F4/80 and the lineage markers.
 - Record what the staff tell you about the sample: source of the material, date,
   volume, any treatment it carries over from the experiment it came from.
 
@@ -1780,16 +1844,24 @@ macrophage gate.
    buffer, **`room temperature, 2 min`**, top up with buffer and centrifuge again.
 3. Resuspend in FACS buffer and count. Expect large peritoneal macrophages to be
    roughly a third of the cells in a healthy sample.
-4. Stain with the course panel (C3), including CD19 and Ly6C, and acquire in the
-   same session as the polarized J774A.1 cells.
-5. Gate: CD19 out, then F4/80 against MHCII for large (F4/80 high, MHCII low) and
-   small (F4/80 low, MHCII high) peritoneal macrophages; ICAM2 and Gata6 confirm the
-   resident identity. Overlay the polarized J774A.1 cells on the same gates.
+4. Stain with the full panel (C3), surface first, then fixation, permeabilization
+   and the intracellular CD206 and Arg1 stain, and acquire in the same session as
+   the polarized J774A.1 cells.
+5. Gate: live single CD45+ cells; remove T cells (CD3), B cells (CD19),
+   neutrophils (Ly-6G), eosinophils (Siglec-F) and mast cells (CD117); then
+   CD11b+ cells, F4/80 against MHCII for large (F4/80 high, MHCII low) and small
+   (F4/80 low, MHCII high) peritoneal macrophages; Ly-6C marks monocytes and CD11c
+   dendritic cells. Read CD86, CD206 and Arg1 on the macrophage gates, and overlay
+   the polarized J774A.1 cells on the same gates.
+
+> [!WARNING]
+> Neutrophils express Arg1 too. Gate Ly-6G+ cells out before you read Arg1 on
+> macrophages.
 
 ### Controls
 
-- CD19 gate removes B cells; F4/80 against MHCII separates large and small
-  peritoneal macrophages; ICAM2 and Gata6 confirm resident identity.
+- The lineage gates (CD3, CD19, Ly-6G, Siglec-F, CD117) remove non-macrophages;
+  F4/80 against MHCII separates large and small peritoneal macrophages.
 - Same single-stain and fluorescence-minus-one controls as C3; the peritoneal
   sample and the J774A.1 cells share the compensation.
 
@@ -1803,6 +1875,12 @@ macrophage gate.
 - Low cell number: the suspension was small or lost cells on the way; stain what
   you have and reduce the panel rather than the cell number per tube.
 - Bloody suspension: lyse the erythrocytes and note it.
+- Ly-6G and CD19 smear into each other: AF488 and Spark Blue 550 overlap on the
+  blue laser. They mark different cells, so both work as exclusion gates; check
+  the single stains and the compensation before blaming the sample.
+- AF700 (MHCII) and APC-Cy7 (CD11b) are both bright on macrophages and neighbours
+  on the red laser: compensate with care, and set the F4/80 against MHCII gate on
+  FMOs.
 - Few large peritoneal macrophages: prior inflammation in the experiment the sample
   came from; record the sample history and treat the result as a finding.
 
