@@ -30,7 +30,7 @@ problem.
 | IFNγ | 20 ng/mL | MHC-II and CD86 up, iNOS primed, TNF and IL-6 amplified with LPS. This is M(IFNγ) | flow (MHC-II, CD86) and ELISA | low |
 | IL-10 | 20 ng/mL | TNF and IL-6 suppressed through STAT3 and SOCS3 | ELISA (suppression, week 3) | low; nothing to see by flow, by design |
 | Dexamethasone | 100 nM | TNF, IL-6 and NO suppressed through the glucocorticoid receptor; the drug every patient on steroids gets | ELISA (suppression, week 3) | low; cheap and stable; needs a vehicle control |
-| IL-4 | 20 ng/mL | Arg1, Chil3, Retnla and Mrc1 mRNA up, LPS response dampened. This is M(IL-4) | qPCR Arg1 (X01); ELISA (suppression) | medium: CD206 by flow is weak in this line; intracellular Arg1 (C3) is the high-risk flow option |
+| IL-4 | 20 ng/mL | Arg1, Chil3, Retnla and Mrc1 mRNA up, LPS response dampened. This is M(IL-4) | qPCR Arg1 (X01); ELISA (suppression) | medium: CD206 by flow is weak in this line, so C3 stains it intracellularly; intracellular Arg1 (C3) is the high-risk marker of the flow panel |
 | PGE2 | 1 µM | IL-10 up and TNF down through cAMP | ELISA | medium; less canonical; vehicle control |
 | ATRA, all-trans retinoic acid | 1 µM, from a DMSO stock, in the dark | In vivo the signal that induces GATA6 and the peritoneal macrophage identity; in vitro it dampens TNF and NO and helps IL-4 induce Arg1. Whether it induces Gata6 in a macrophage line is not known | qPCR Gata6, Arg1, Icam2 (X01) | high: the lab's wild card, outcome unknown; for a group that takes the qPCR extension |
 
@@ -67,8 +67,8 @@ is the expected week 2 result for a dampener, not a reason to pivot.
 ## Before you start
 
 - The plate map is drawn in the notebook before anything is pipetted. Week 2 (flow
-  plate, 6- or 12-well): vehicle, M(pol), LPS control, one well each, a second set if
-  you run intracellular Arg1. Week 3 (96-well, C4): the six conditions of the
+  plate, 6- or 12-well): vehicle, M(pol), LPS control, one well each, and a second set
+  for the FMOs and the unstained and live/dead controls of C3. Week 3 (96-well, C4): the six conditions of the
   challenge in triplicate plus the inhibitor wells.
 - Stimuli are added as 100× stocks to the seeding suspension, 1 part in 100, so
   every well gets the same volume of additive and no medium change is needed.

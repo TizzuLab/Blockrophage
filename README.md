@@ -2818,8 +2818,9 @@ belongs to the challenge week and is run on the supernatants of Experiment 3. A
 group may read TNF instead of IL-6, and a group that prefers another readout, a
 western blot or qPCR ([X01](protocols/X01_qpcr.md)) for example, brainstorms it with
 its supervisor. On Wednesday the cells are harvested, stained and fixed (C3), on
-Thursday acquired at the facility and gated in a FlowJo session, with intracellular
-Arg1 as a high-risk option for a group that wants to learn permeabilization. By
+Thursday acquired at the facility and gated in a FlowJo session. Every group fixes
+and permeabilizes, because CD206 and Arg1 are stained intracellularly; Arg1 is the
+high-risk marker of the panel. By
 Thursday 16:00 you know whether your polarizer did what the menu says on this
 readout, and you decide to stick with it or to pivot to one that worked, before the
 break. For the dampeners IL-10, dexamethasone and PGE2, "no change and good
