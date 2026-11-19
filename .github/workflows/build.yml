@@ -3,7 +3,7 @@ name: Build companion
 # Branch model (since 2026-10-28):
 # - dev is the workshop, unprotected. On every push to dev this job rebuilds the
 #   generated files (schedule drawings, README schedule and companion blocks,
-#   schedule_text.md, both companion files) and commits them back to dev.
+#   schedule_text.md, both companion files, the admission sheet PDF) and commits them back to dev.
 # - main is the published, student-facing branch, protected: changes arrive only
 #   through a pull request (normally dev -> main) and this job must pass. On a
 #   pull request and on main the job only verifies that nothing is stale.
@@ -42,6 +42,12 @@ jobs:
         run: |
           python stuff/tools/build_companion.py --max-tokens 150000
           python stuff/tools/build_companion.py --core
+      - name: Rebuild admission sheet PDF if safety/README.md changed
+        run: |
+          if ! python stuff/tools/build_safety_pdf.py --check; then
+            sudo apt-get install -y -qq pandoc texlive-xetex texlive-latex-recommended texlive-fonts-recommended lmodern fonts-dejavu-core || (sudo apt-get update -qq && sudo apt-get install -y -qq pandoc texlive-xetex texlive-latex-recommended texlive-fonts-recommended lmodern fonts-dejavu-core)
+            python stuff/tools/build_safety_pdf.py
+          fi
       - name: Upload companion as artifact
         uses: actions/upload-artifact@v4
         with:
@@ -52,7 +58,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md stuff/figures/schedule stuff/tools/schedule/schedule_text.md stuff/companion/
+          git add README.md stuff/figures/schedule stuff/tools/schedule/schedule_text.md stuff/companion/ safety/Blockrophage_admission_sheet.pdf
           if git diff --cached --quiet; then
             echo "Nothing to regenerate."
             exit 0
@@ -63,7 +69,7 @@ jobs:
       - name: Verify that nothing is stale
         if: github.event_name == 'pull_request' || github.ref == 'refs/heads/main'
         run: |
-          if ! git diff --quiet -- README.md stuff/figures/schedule stuff/tools/schedule/schedule_text.md stuff/companion/; then
+          if ! git diff --quiet -- README.md stuff/figures/schedule stuff/tools/schedule/schedule_text.md stuff/companion/ safety/Blockrophage_admission_sheet.pdf; then
             echo "::error::Generated files are stale. Push to dev, wait about a minute for the regeneration commit, then the pull request updates itself."
             git status --short
             exit 1
