@@ -5,6 +5,8 @@
 From zero to one branch per student group. All commands go into the Ubuntu
 terminal: copy with **Ctrl+Shift+C**, paste with **Ctrl+Shift+V**.
 
+`[TODO: guide needs to be tried on Mac, Windows and Linux and adjusted accordingly]`
+
 ## 1. GitHub account
 
 Sign up at https://github.com/signup, confirm your email, turn on two-factor
