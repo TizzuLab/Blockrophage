@@ -66,6 +66,31 @@ comes from the single stains of the day.
 
 </details>
 
+<details>
+<summary>Proposed main panel, 7 colours (proposal, not yet the course panel)</summary>
+
+> [!NOTE]
+> **Proposal for the course lead to decide.** Compared with the minimal panel:
+> CD86 moves to RB705, live/dead to Near-IR, iNOS (BUV737) and F4/80 (PE) are new.
+> RB705 and Near-IR would share detectors with Ly-6C PerCP-Cy5.5 and CD11b APC-Cy7
+> in the X02 full panel. Dilutions and detectors `[TODO]`; compensation on beads
+> `[TODO]`; Ly-6C open; no Fc block listed yet.
+
+| Fluorochrome | Target | Clone | Isotype | Cat. no. | Compartment | Antigen density | Pack | Cost, small pack | Cost, large pack | Status |
+|---|---|---|---|---|---|---|---|---|---|---|
+| LIVE/DEAD Fixable Near-IR | live/dead | n/a | n/a | BioLegend 423105 `[TODO: check supplier and cat. no.]` | invasive | | 100 tests | 72 | 72 | order |
+| BUV737 | iNOS | CXNFT | rat IgG2a, κ | Thermo 367-5920-82 | cytoplasm | | 100 µg | 283 | 283 | order |
+| RB705 | CD86 | GL1 | rat LOU/M IgG2a, κ | BD 570689 | cell membrane | | 25 µg / 100 µg | 163 | 441 | order |
+| BV650 | CD206 (MMR) | C068C2 | rat IgG2a, κ | BioLegend 141723 | endosome and cell membrane | 2 | 50 µg | 243 | 243 | order |
+| PE | F4/80 | BM8 | rat IgG2a, κ | BioLegend 123110 | surface | | | 0 | 0 | lab |
+| PE-Cy7 | Arginase 1 | A1exF5 | rat IgG2a, κ | Thermo 25-3697-82 | cytoplasm | 3 | 25 µg / 100 µg | 156.31 | 444 | order |
+| AF700 | MHCII (I-A/I-E) | M5/114 | rat IgG2b, κ | BioLegend 56-5321-82 `[TODO: check supplier]` | surface | 2 | | 0 | 0 | lab |
+| | **Total** | | | | | | | **917.31** | **1483** | |
+
+Costs `[TODO: currency]`; antigen density as given in the proposal `[TODO: scale]`.
+
+</details>
+
 > [!IMPORTANT]
 > **To verify:** check every detector name against the facility's configuration of
 > the A5 SE. A published A5 SE configuration (Cornell BRC, used for the shaded
